@@ -838,9 +838,9 @@ full_name_speech
  .word	0100DH,64,1620	;ANDERSON,    kenny
  .word	0100DH,76,1736	;CHILDRESS,   randolph
 
- .word	0100DH,74,1564	;OWENS,       billy		( SACRAMENTO )
+ .word	0100DH,82,1744	;RICHMOND,    mitch		( SACRAMENTO )
+ .word	0100DH,74,1564	;OWENS,       billy
  .word	0100DH,89,1420	;ABDUL-RAUF,  mahmoud
- .word	0100DH,82,1744	;RICHMOND,    mitch
  .word	0100DH,85,1748	;GRANT,       brian
  .word	0100DH,50,1756	;EDNEY,       tyus
 
@@ -1031,9 +1031,9 @@ pass_speech		;'TO player name'
  .word	0100DH,43,1623	;to ANDERSON,    kenny
  .word	0100DH,48,1739	;to CHILDRESS,   randolph
 
- .word	0100DH,51,1567	;to OWENS,       billy		( SACRAMENTO )
+ .word	0100DH,51,1747	;to RICHMOND,    mitch		( SACRAMENTO )
+ .word	0100DH,51,1567	;to OWENS,       billy
  .word	0100DH,61,1423	;to ABDUL-RAUF,  mahmoud
- .word	0100DH,51,1747	;to RICHMOND,    mitch
  .word	0100DH,43,1751	;to GRANT,       brian
  .word	0100DH,36,1759	;to EDNEY,       tyus
 
@@ -1224,9 +1224,9 @@ name_speech 		;(last name only, excited)
  .word	0100DH,33,1621	;ANDERSON,    kenny
  .word	0100DH,38,1737	;CHILDRESS,   randolph
 
- .word	0100DH,41,1565	;OWENS,       billy		( SACRAMENTO )
+ .word	0100DH,41,1745	;RICHMOND,    mitch		( SACRAMENTO )
+ .word	0100DH,41,1565	;OWENS,       billy
  .word	0100DH,51,1421	;ABDUL-RAUF,  mahmoud
- .word	0100DH,41,1745	;RICHMOND,    mitch
  .word	0100DH,34,1749	;GRANT,       brian
  .word	0100DH,27,1757	;EDNEY,       tyus
 
