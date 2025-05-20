@@ -788,9 +788,9 @@ full_name_speech
  .word	0,0,0
 
  .word	0100DH,70,1580	;BAKER,       vin		( MILWAUKEE )
+ .word	0100DH,93,1584	;ROBINSON,    glen
  .word	0100DH,60,2930	;ALLEN,       ray
  .word	0100DH,72,1955	;LANG,        andrew
- .word	0100DH,93,1584	;ROBINSON,    glen
  .word	0100DH,77,1588	;RESPERT,     shawn
 
  .word	0100DH,72,1616	;GARNETT,     kevin		( MINNESOTTA )
@@ -981,9 +981,9 @@ pass_speech		;'TO player name'
  .word	0,0,0
 
  .word	0100DH,49,1583	;to BAKER,       vin		( MILWAUKEE )
+ .word	0100DH,70,1587	;to ROBINSON,    glen
  .word	0100DH,44,2932	;to ALLEN,       ray
  .word	0100DH,45,1957	;to LANG,        andrew
- .word	0100DH,70,1587	;to ROBINSON,    glen
  .word	0100DH,51,1591	;to RESPERT,     shawn
 
  .word	0100DH,50,1619	;to GARNETT,     kevin		( MINNESOTTA )
@@ -1174,9 +1174,9 @@ name_speech 		;(last name only, excited)
  .word	0,0,0
 
  .word	0100DH,39,1581	;BAKER,       vin		( MILWAUKEE )
+ .word	0100DH,61,1585	;ROBINSON,    glen
  .word	0100DH,35,2931	;ALLEN,       ray
  .word	0100DH,36,1956	;LANG,        andrew
- .word	0100DH,61,1585	;ROBINSON,    glen
  .word	0100DH,41,1589	;RESPERT,     shawn
 
  .word	0100DH,41,1617	;GARNETT,     kevin		( MINNESOTTA )
