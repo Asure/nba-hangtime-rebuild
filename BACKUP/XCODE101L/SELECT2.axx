@@ -5768,20 +5768,20 @@ LAL_t
 
 ;25 TORONTO RAPTORS
 
-	.word  06,08,05,05
-	.word  06,04,05,01	;CARLOS ROGERS		_______________
-;new
-	.word  07,07,08,08
-	.word  04,09,05,07	;MARCUS CAMBY		_______________
-
 	.word  10,01,07,00
 	.word  08,01,09,08	;DAMON STOUDAMIRE	_______________
+
+	.word  08,06,07,07
+	.word  05,08,06,03	;WALT WILLIAMS		6'8"	230 reg
+
+	.word  07,07,08,08
+	.word  04,09,05,07	;MARCUS CAMBY		_______________
 
 	.word  05,08,04,07
 	.word  04,06,03,03	;POPEYE JONES		6'8"	250 reg
 
-	.word  08,06,07,07
-	.word  05,08,06,03	;WALT WILLIAMS		6'8"	230 reg
+	.word  06,08,05,05
+	.word  06,04,05,01	;CARLOS ROGERS		_______________
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5917,7 +5917,7 @@ name_sort
  .long	RICH,BOWENS,ABDULRAU,BGRANT,EDNEY			;22 KINGS
  .long	ELLIOT2,DROBINSON,VMAXWELL,AJOHNSON,DELNEGRO		;23 SPURS
  .long	KEMP,PAYTON,SCHREMPF,HAWKINS,SFORD			;24 SUPERSONICS
- .long	CROGERS, CAMBY ,STOUDAMI,PJONES,WWILLIAM	;new	;25 RAPTORS
+ .long	STOUDAMI,WWILLIAM, CAMBY ,PJONES,CROGERS	;new	;25 RAPTORS
  .long	STOCKTON,MALONE_K,HORNACEK,CMORRIS, CMORRIS	;kill	;26 JAZZ
  .long	ANTHONY,EDWARDS,BREEVES, BREEVES , BREEVES	;kill,kill ;27 GRIZZLIES
  .long	STRICKLA,WEBBER,JHOWARD,MURESAN,CHEANEY			;28 BULLETS

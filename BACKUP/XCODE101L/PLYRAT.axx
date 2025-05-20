@@ -1381,26 +1381,26 @@ SEA_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 TORONTO_t
-	LWWWWWW	scale611t_t,BV6,SHT5,DNK5,DEF4,SDEF6,DSKL5
-	.long	CROGER_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Crogers_h
-	.word	5,8,1,0
+	LWWWWWW	scale510_t,BV10,SHT7,DNK0,DEF1,SDEF8,DSKL5
+	.long	STOUD_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Stoudamire_h
+	.word	9,1,8,19
+	.long	SW_TORP_P,SW_TORS_P,VP_TORP_P,VP_TORS_P
+	LWWWWWW	scale68_t,BV8,SHT7,DNK7,DEF8,SDEF5,DSKL5
+	.long	WWILLI_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Wwilliams_h
+	.word	6,6,3,3
 	.long	SW_TORP_P,SW_TORS_P,VP_TORP_P,VP_TORS_P
 ;new
 	LWWWWWW	scale610t_t,BV7,SHT8,DNK8,DEF9,SDEF4,DSKL5
 	.long	CAMB_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,camb_h
 	.word	5,7,7,9
 	.long	SW_TORP_P,SW_TORS_P,VP_TORP_P,VP_TORS_P
-	LWWWWWW	scale510_t,BV10,SHT7,DNK0,DEF1,SDEF8,DSKL5
-	.long	STOUD_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Stoudamire_h
-	.word	9,1,8,19
-	.long	SW_TORP_P,SW_TORS_P,VP_TORP_P,VP_TORS_P
 	LWWWWWW	scale68f_t,BV5,SHT4,DNK7,DEF6,SDEF4,DSKL5
 	.long	PJONES_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Pjones_h
 	.word	3,8,3,5
 	.long	SW_TORP_P,SW_TORS_P,VP_TORP_P,VP_TORS_P
-	LWWWWWW	scale68_t,BV8,SHT7,DNK7,DEF8,SDEF5,DSKL5
-	.long	WWILLI_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Wwilliams_h
-	.word	6,6,3,3
+	LWWWWWW	scale611t_t,BV6,SHT5,DNK5,DEF4,SDEF6,DSKL5
+	.long	CROGER_F, UN_TORP_P,UN_TORS_P, TR_TORP_P,TR_TORS_P,Crogers_h
+	.word	5,8,1,0
 	.long	SW_TORP_P,SW_TORS_P,VP_TORP_P,VP_TORS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
