@@ -4589,21 +4589,21 @@ player_heads
 	.long	0,0
 
 ;08 GOLDEN STATE
-	.long	SPR_GLD,KON_ORL
-	.long	SPR_GLD,SMI_GLD
 	.long	SPR_GLD,MUL_GLD
-			
-	.long	KON_ORL,SPR_GLD
-	.long	KON_ORL,SMI_GLD
-	.long	KON_ORL,MUL_GLD
-
-	.long	SMI_GLD,SPR_GLD
-	.long	SMI_GLD,KON_ORL
-	.long	SMI_GLD,MUL_GLD
+	.long	SPR_GLD,SMI_GLD
+	.long	SPR_GLD,KON_ORL
 			
 	.long	MUL_GLD,SPR_GLD
-	.long	MUL_GLD,KON_ORL
 	.long	MUL_GLD,SMI_GLD
+	.long	MUL_GLD,KON_ORL
+
+	.long	SMI_GLD,SPR_GLD
+	.long	SMI_GLD,MUL_GLD
+	.long	SMI_GLD,KON_ORL
+			
+	.long	KON_ORL,SPR_GLD
+	.long	KON_ORL,MUL_GLD
+	.long	KON_ORL,SMI_GLD
 			
 	.long	0,0			;REMOVE!!!
 	.long	0,0
@@ -5408,21 +5408,21 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;08 GOLDEN STATE
-	.long	SPREWELL,KONCAK
-	.long	SPREWELL,JSMITH
 	.long	SPREWELL,MULLIN
-			
-	.long	KONCAK,SPREWELL
-	.long	KONCAK,JSMITH
-	.long	KONCAK,MULLIN
-
-	.long	JSMITH,SPREWELL
-	.long	JSMITH,KONCAK
-	.long	JSMITH,MULLIN
+	.long	SPREWELL,JSMITH
+	.long	SPREWELL,KONCAK
 			
 	.long	MULLIN,SPREWELL
-	.long	MULLIN,KONCAK
 	.long	MULLIN,JSMITH
+	.long	MULLIN,KONCAK
+
+	.long	JSMITH,SPREWELL
+	.long	JSMITH,MULLIN
+	.long	JSMITH,KONCAK
+			
+	.long	KONCAK,SPREWELL
+	.long	KONCAK,MULLIN
+	.long	KONCAK,JSMITH
 
 	.long	0,0			;REMOVE!!!
 	.long	0,0
