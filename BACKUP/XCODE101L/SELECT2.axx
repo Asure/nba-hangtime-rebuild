@@ -5497,9 +5497,9 @@ player_attribs
 ;12 L.A. LAKERS
 
 LAL_t
-;Added: Kobe Bryant (N64 stats)	
-	.word  07,03,06,06
-	.word  05,05,08,08	;KOBE BRYANT
+;Added: Kobe Bryant
+	.word  07,03,05,07
+	.word  05,03,05,05	;KOBE BRYANT
 
 ;Added: Shaq (NBA Jam TE stats)	
 	.word  07,09,00,10 
