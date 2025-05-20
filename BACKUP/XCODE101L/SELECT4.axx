@@ -4773,14 +4773,14 @@ player_heads
 	.long	RES_MLW,ROB_MLW
 
 ;15 MINNESOTTA
-	.long	GUG_MIN,MAR_COL
-	.long	GUG_MIN,GAR_MIN
-
-	.long	MAR_COL,GUG_MIN		;new
-	.long	MAR_COL,GAR_MIN
-
 	.long	GAR_MIN,GUG_MIN
 	.long	GAR_MIN,MAR_COL
+
+	.long	GUG_MIN,GAR_MIN
+	.long	GUG_MIN,MAR_COL
+
+	.long	MAR_COL,GAR_MIN		;new
+	.long	MAR_COL,GUG_MIN
 
 	.long	0,0			;REMOVE!!!
 	.long	0,0
@@ -5590,14 +5590,14 @@ WALLACE	.equ	11
 	.long	RESPERT,GROBINSO
 
 ;15 MINNESOTTA
-	.long	GUGLI2,MARBURY
-	.long	GUGLI2,GARNETT
-
-	.long	MARBURY,GUGLI2		;new
-	.long	MARBURY,GARNETT
-
 	.long	GARNETT,GUGLI2
 	.long	GARNETT,MARBURY
+
+	.long	GUGLI2,GARNETT
+	.long	GUGLI2,MARBURY
+
+	.long	MARBURY,GARNETT		;new
+	.long	MARBURY,GUGLI2
 
 	.long	0,0			;REMOVE!!!
 	.long	0,0
