@@ -1002,10 +1002,10 @@ LAC_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 LAL_t
-;Added: Kobe Bryant (N64 stats)
-	LWWWWWW	scale66_t,BV7,SHT6,DNK6,DEF6,SDEF5,DSKL_4	;Can not shatter!!
+;Added: Kobe Bryant
+	LWWWWWW	scale66_t,BV7,SHT5,DNK7,DEF3,SDEF5,DSKL_4
 	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,kobe_h
-	.word	8,3,8,17
+	.word	5,3,5,17
 	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P	
 
 ;Added: Shaq (NBA Jam TE stats)
