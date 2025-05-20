@@ -717,10 +717,10 @@ full_name_speech
  .word	0100DH,78,1372	;LONGLEY,     luke
 ;.word	0100DH,68,1376	;KERR,        steve
 
- .word	0100DH,75,1380	;HILL,        tyrone		( CLEVELAND )
+ .word	0100DH,69,1392	;BRANDON,     terrell		( CLEVELAND )
  .word	0100DH,76,1384	;MILLS,       chris
  .word	0100DH,70,1388	;PHILLS,      bobby
- .word	0100DH,69,1392	;BRANDON,     terrell
+ .word	0100DH,75,1380	;HILL,        tyrone
  .word	0100DH,65,1396	;FERRY,       danny
 
  .word	0100DH,68,1404	;KIDD,        jason		( DALLAS )
@@ -912,10 +912,10 @@ pass_speech		;'TO player name'
  .word	0100DH,56,1375	;to LONGLEY,     luke
 ;.word	0100DH,44,1379	;to KERR,        steve
 
- .word	0100DH,42,1383	;to HILL,        tyrone		( CLEVELAND )
+ .word	0100DH,39,1395	;to BRANDON,     terrell		( CLEVELAND )
  .word	0100DH,51,1387	;to MILLS,       chris
  .word	0100DH,44,1391	;to PHILLS,      bobby
- .word	0100DH,39,1395	;to BRANDON,     terrell
+ .word	0100DH,42,1383	;to HILL,        tyrone
  .word	0100DH,38,1399	;to FERRY,       danny
 
  .word	0100DH,41,1407	;to KIDD,        jason		( DALLAS )
@@ -1105,10 +1105,10 @@ name_speech 		;(last name only, excited)
  .word	0100DH,47,1373	;LONGLEY,     luke
 ;.word	0100DH,35,1377	;KERR,        steve
 
- .word	0100DH,33,1381	;HILL,        tyrone		( CLEVELAND )
+ .word	0100DH,30,1393	;BRANDON,     terrell		( CLEVELAND )
  .word	0100DH,42,1385	;MILLS,       chris
  .word	0100DH,35,1389	;PHILLS,      bobby
- .word	0100DH,30,1393	;BRANDON,     terrell
+ .word	0100DH,33,1381	;HILL,        tyrone
  .word	0100DH,28,1397	;FERRY,       danny
 
  .word	0100DH,32,1405	;KIDD,        jason		( DALLAS )
