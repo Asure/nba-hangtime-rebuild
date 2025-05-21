@@ -801,9 +801,13 @@ CLEV_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 DAL_t
-	LWWWWWW	scale64_t,BV9,SHT4,DNK5,DEF6,SDEF6,DSKL5
-	.long	KIDD_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,Kidd_h
-	.word	8,4,8,0
+;	LWWWWWW	scale64_t,BV9,SHT4,DNK5,DEF6,SDEF6,DSKL5
+;	.long	KIDD_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,Kidd_h
+;	.word	8,4,8,0
+;	.long	SW_DALP_P,SW_DALS_P,VP_DALP_P,VP_DALS_P
+	LWWWWWW	scale67_t,BV9,SHT7,DNK9,DEF2,SDEF7,DSKL_8
+	.long	FINLEY_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,Finley_h
+	.word	4,2,9,19
 	.long	SW_DALP_P,SW_DALS_P,VP_DALP_P,VP_DALS_P
 	LWWWWWW	scale64f_t,BV6,SHT6,DNK1,DEF1,SDEF7,DSKL5
 	.long	DHARP_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,DHarper_h

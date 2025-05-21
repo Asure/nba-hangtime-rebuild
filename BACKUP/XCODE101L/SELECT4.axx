@@ -4502,27 +4502,27 @@ player_heads
 	.long	FER_CLE,HIL_CLE
 
 ;05 DALLAS
-	.long	KID_DAL,HPR_NEY
-	.long	KID_DAL,JAC_DAL
-	.long	KID_DAL,MON_BOS
-	.long	KID_DAL,MAS_DAL
+	.long	FIN_PHX,HPR_NEY
+	.long	FIN_PHX,JAC_DAL
+	.long	FIN_PHX,MON_BOS
+	.long	FIN_PHX,MAS_DAL
 	
-	.long	HPR_NEY,KID_DAL
+	.long	HPR_NEY,FIN_PHX
 	.long	HPR_NEY,JAC_DAL
 	.long	HPR_NEY,MON_BOS
 	.long	HPR_NEY,MAS_DAL
 
-	.long	JAC_DAL,KID_DAL
+	.long	JAC_DAL,FIN_PHX
 	.long	JAC_DAL,HPR_NEY
 	.long	JAC_DAL,MON_BOS
 	.long	JAC_DAL,MAS_DAL
 
-	.long	MON_BOS,KID_DAL
+	.long	MON_BOS,FIN_PHX
 	.long	MON_BOS,HPR_NEY
 	.long	MON_BOS,JAC_DAL
 	.long	MON_BOS,MAS_DAL
 
-	.long	MAS_DAL,KID_DAL
+	.long	MAS_DAL,FIN_PHX
 	.long	MAS_DAL,HPR_NEY
 	.long	MAS_DAL,JAC_DAL
 	.long	MAS_DAL,MON_BOS
@@ -5321,27 +5321,27 @@ WALLACE	.equ	11
 	.long	FERRY,THILL
 
 ;05 DALLAS
-	.long	KIDD,HARPER_D
-	.long	KIDD,JACK
-	.long	KIDD,MONTROSS
-	.long	KIDD,MASH
+	.long	FINLEY,HARPER_D
+	.long	FINLEY,JACK
+	.long	FINLEY,MONTROSS
+	.long	FINLEY,MASH
 
-	.long	HARPER_D,KIDD
+	.long	HARPER_D,FINLEY
 	.long	HARPER_D,JACK
 	.long	HARPER_D,MONTROSS
 	.long	HARPER_D,MASH
 	
-	.long	JACK,KIDD
+	.long	JACK,FINLEY
 	.long	JACK,HARPER_D
 	.long	JACK,MONTROSS
 	.long	JACK,MASH
 
-	.long	MONTROSS,KIDD
+	.long	MONTROSS,FINLEY
 	.long	MONTROSS,HARPER_D
 	.long	MONTROSS,JACK
 	.long	MONTROSS,MASH
 
-	.long	MASH,KIDD
+	.long	MASH,FINLEY
 	.long	MASH,HARPER_D
 	.long	MASH,JACK
 	.long	MASH,MONTROSS

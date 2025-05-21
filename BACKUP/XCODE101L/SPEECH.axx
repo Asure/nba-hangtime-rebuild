@@ -723,7 +723,8 @@ full_name_speech
  .word	0100DH,75,1380	;HILL,        tyrone
  .word	0100DH,65,1396	;FERRY,       danny
 
- .word	0100DH,68,1404	;KIDD,        jason		( DALLAS )
+; .word	0100DH,68,1404	;KIDD,        jason		( DALLAS )
+ .word	0100DH,95,1716		;FINLEY
  .word	0100DH,71,1648	;HARPER,      derek
  .word	0100DH,84,1400	;JACKSON,     jim
  .word	0100DH,79,1328	;MONTROSS,    eric
@@ -918,7 +919,8 @@ pass_speech		;'TO player name'
  .word	0100DH,42,1383	;to HILL,        tyrone
  .word	0100DH,38,1399	;to FERRY,       danny
 
- .word	0100DH,41,1407	;to KIDD,        jason		( DALLAS )
+; .word	0100DH,41,1407	;to KIDD,        jason		( DALLAS )
+ .word	0100DH,40,1719		;TO FINLEY
  .word	0100DH,46,1651	;to HARPER,      derek
  .word	0100DH,57,1403	;to JACKSON,     jim
  .word	0100DH,62,1331	;to MONTROSS,    eric
@@ -1111,7 +1113,8 @@ name_speech 		;(last name only, excited)
  .word	0100DH,33,1381	;HILL,        tyrone
  .word	0100DH,28,1397	;FERRY,       danny
 
- .word	0100DH,32,1405	;KIDD,        jason		( DALLAS )
+; .word	0100DH,32,1405	;KIDD,        jason		( DALLAS )
+ .word	0100DH,40,1717		;FINLEY
  .word	0100DH,37,1649	;HARPER,      derek
  .word	0100DH,48,1401	;JACKSON,     jim
  .word	0100DH,53,1329	;MONTROSS,    eric
