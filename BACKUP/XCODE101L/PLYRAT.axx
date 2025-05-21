@@ -1065,13 +1065,14 @@ MILW_t
 	.long	ALLEN_F, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,allen_h
 	.word	5,2,8,11
 	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P
+	LWWWWWW	scale61f_t,BV6,SHT6,DNK0,DEF1,SDEF6,DSKL_2
+	.long	DOUGLA_F, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,Douglas_h
+	.word	6,3,3,18
+	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P		;S. DOUGLAS
+;kill
 	LWWWWWW	scale611_t,BV6,SHT5,DNK6,DEF9,SDEF4,DSKL5
 	.long	Lang_f, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,Lang_h
 	.word	2,8,4,19
-	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P
-	LWWWWWW	scale62_t,BV9,SHT6,DNK0,DEF1,SDEF7,DSKL5
-	.long	RESPER_F, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,Respert_h
-	.word	7,1,9,10
 	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill

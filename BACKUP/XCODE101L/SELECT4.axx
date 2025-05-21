@@ -4748,28 +4748,28 @@ player_heads
 ;14 MILWAUKEE
 	.long	BAK_MLW,ROB_MLW
 	.long	BAK_MLW,ALL_COL
-	.long	BAK_MLW,LNG_MIN
-	.long	BAK_MLW,RES_MLW
+	.long	BAK_MLW,DOU_MLW
 
 	.long	ROB_MLW,BAK_MLW
 	.long	ROB_MLW,ALL_COL
-	.long	ROB_MLW,LNG_MIN
-	.long	ROB_MLW,RES_MLW
+	.long	ROB_MLW,DOU_MLW
 
 	.long	ALL_COL,BAK_MLW
 	.long	ALL_COL,ROB_MLW
-	.long	ALL_COL,LNG_MIN
-	.long	ALL_COL,RES_MLW
+	.long	ALL_COL,DOU_MLW
 
-	.long	LNG_MIN,BAK_MLW
-	.long	LNG_MIN,ROB_MLW
-	.long	LNG_MIN,ALL_COL
-	.long	LNG_MIN,RES_MLW
+	.long	DOU_MLW,BAK_MLW
+	.long	DOU_MLW,ROB_MLW
+	.long	DOU_MLW,ALL_COL
 
-	.long	RES_MLW,BAK_MLW
-	.long	RES_MLW,ROB_MLW
-	.long	RES_MLW,ALL_COL
-	.long	RES_MLW,LNG_MIN
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;15 MINNESOTTA
 	.long	GAR_MIN,GUG_MIN
@@ -5563,28 +5563,28 @@ WALLACE	.equ	11
 ;14 MILWAUKEE
 	.long	BAKER,GROBINSO
 	.long	BAKER,ALLEN
-	.long	BAKER,LANG
-	.long	BAKER,RESPERT
+	.long	BAKER,DOUGLAS
 
 	.long	GROBINSO,BAKER
 	.long	GROBINSO,ALLEN
-	.long	GROBINSO,LANG
-	.long	GROBINSO,RESPERT
+	.long	GROBINSO,DOUGLAS
 
 	.long	ALLEN,BAKER
 	.long	ALLEN,GROBINSO
-	.long	ALLEN,LANG
-	.long	ALLEN,RESPERT
+	.long	ALLEN,DOUGLAS
 
-	.long	LANG,BAKER
-	.long	LANG,GROBINSO
-	.long	LANG,ALLEN
-	.long	LANG,RESPERT
+	.long	DOUGLAS,BAKER
+	.long	DOUGLAS,GROBINSO
+	.long	DOUGLAS,ALLEN
 
-	.long	RESPERT,BAKER
-	.long	RESPERT,GROBINSO
-	.long	RESPERT,ALLEN
-	.long	RESPERT,LANG
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;15 MINNESOTTA
 	.long	GARNETT,GUGLI2
