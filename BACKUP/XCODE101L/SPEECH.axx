@@ -828,10 +828,10 @@ full_name_speech
  .word	0100DH,66,1708	;MANNING,     danny
  .word	0100DH,83,1548	;CEBALLOS,    cedric
 
- .word	0100DH,94,1724	;ROBINSON,    cliff		( PORTLAND )
- .word	0100DH,94,1600	;RIDER,       isaiah
- .word	0100DH,93,1728	;SABONIS,     arvydas
+ .word	0100DH,93,1728	;SABONIS,     arvydas		( PORTLAND )
  .word	0100DH,64,1620	;ANDERSON,    kenny
+ .word	0100DH,94,1724	;ROBINSON,    cliff
+ .word	0100DH,94,1600	;RIDER,       isaiah
  .word	0100DH,76,1736	;CHILDRESS,   randolph
 
  .word	0100DH,82,1744	;RICHMOND,    mitch		( SACRAMENTO )
@@ -1019,10 +1019,10 @@ pass_speech		;'TO player name'
  .word	0100DH,38,1711	;to MANNING,     danny
  .word	0100DH,54,1551	;to CEBALLOS,    cedric
 
- .word	0100DH,70,1727	;to ROBINSON,    cliff		( PORTLAND )
- .word	0100DH,53,1603	;to RIDER,       isaiah
- .word	0100DH,49,1731	;to SABONIS,     arvydas
+ .word	0100DH,49,1731	;to SABONIS,     arvydas		( PORTLAND )
  .word	0100DH,43,1623	;to ANDERSON,    kenny
+ .word	0100DH,70,1727	;to ROBINSON,    cliff
+ .word	0100DH,53,1603	;to RIDER,       isaiah
  .word	0100DH,48,1739	;to CHILDRESS,   randolph
 
  .word	0100DH,51,1747	;to RICHMOND,    mitch		( SACRAMENTO )
@@ -1210,10 +1210,10 @@ name_speech 		;(last name only, excited)
  .word	0100DH,28,1709	;MANNING,     danny
  .word	0100DH,44,1549	;CEBALLOS,    cedric
 
- .word	0100DH,61,1725	;ROBINSON,    cliff		( PORTLAND )
- .word	0100DH,43,1601	;RIDER,       isaiah
- .word	0100DH,40,1729	;SABONIS,     arvydas
+ .word	0100DH,40,1729	;SABONIS,     arvydas		( PORTLAND )
  .word	0100DH,33,1621	;ANDERSON,    kenny
+ .word	0100DH,61,1725	;ROBINSON,    cliff
+ .word	0100DH,43,1601	;RIDER,       isaiah
  .word	0100DH,38,1737	;CHILDRESS,   randolph
 
  .word	0100DH,41,1745	;RICHMOND,    mitch		( SACRAMENTO )
