@@ -5372,17 +5372,17 @@ player_attribs
 
 ;06 DENVER NUGGETS
 
+	.word  07,06,08,02
+	.word  06,01,05,08	;DALE ELLIS		6'7"	215 reg
+
 	.word  07,01,06,07
 	.word  05,07,03,07	;ANTONIO McDYESS	_______________
 
 	.word  04,05,08,01
 	.word  08,01,02,07	;SARUNAS MARCIULIONIS	6'5"	215 reg
-
-	.word  07,04,06,01
-	.word  09,04,09,04	;MARK JACKSON		6'3"	192 fat
-
-	.word  07,06,08,02
-	.word  06,01,05,08	;DALE ELLIS		6'7"	215 reg
+;kill
+	.word  00,00,00,00
+	.word  00,00,00,00
 ;kill
 	.word  00,00,00,00
 	.word  00,00,00,00
@@ -5455,21 +5455,21 @@ player_attribs
 ;Steal, Block, Pass ability, Clutch
 
 ;10 INDIANA PACERS
-;LOOK!!!
+
 	.word  07,04,09,06
 	.word  06,05,05,10	;REGGIE MILLER		6'7"	185 ex thin
-;new
-	.word  04,08,07,07
-	.word  03,07,04,02	;ERICK DAMPIER		_______________
 
-	.word  09,04,06,06
-	.word  08,06,08,09	;JALEN ROSE		_______________
+	.word  07,04,06,01
+	.word  09,04,09,04	;MARK JACKSON		6'3"	192 fat
 
 	.word  06,09,07,03
 	.word  04,06,02,09	;RIK SMITS		7'4"	265 ex thin
 
 	.word  05,06,04,06
 	.word  05,08,02,02	;DALE DAVIS		6'11"	230 reg
+
+	.word  09,04,06,06
+	.word  08,06,08,09	;JALEN ROSE		_______________
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5889,11 +5889,11 @@ name_sort
  .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY			;03 BULLS
  .long	BRANDON,CMILLS,PHILLS,THILL,FERRY			;04 CAVALIERS
  .long	FINLEY,HARPER_D,JACK,MONTROSS,MASH			;05 MAVERICKS
- .long	MCDYESS,MARCIULO,MJACKSON,DELLIS, DELLIS	;kill	;06 NUGGETS
+ .long	DELLIS,MCDYESS,MARCIULO, DELLIS	, DELLIS	;kill	;06 NUGGETS
  .long	GHILL,DUMARS,THORPE,AUGMON, RILEY 		;kill:new ;07 PISTONS
  .long	SPREWELL,MULLIN,JSMITH,KONCAK, MULLIN		;kill	;08 WARRIORS
  .long	OLAJUWON, HRNGTON ,DREXLER,WILLIS, WILLIS	;new,kill ;09 ROCKETS
- .long	MILLER, DAMPIER ,ROSE,SMITS,DDAVIS		;new	;10 PACERS
+ .long	MILLER,MJACKSON,SMITS,DDAVIS,ROSE		;new	;10 PACERS
  .long	VAUGHT,RROGERS,LMURRAY,PRICHARD,BBARRY			;11 CLIPPERS
  .long	ONEAL,EJONES,VANEXEL,HORRY,BRYANT			;12 LAKERS
  .long	MOURN,THARDAWAY,DANILOVI, DANILOVI , DANILOVI	;kill,kill ;13 HEAT
@@ -5961,7 +5961,7 @@ team_sqaud_cnts
 	.word	20	;CHICAGO
 	.word	20	;CLEVELAND
 	.word	20	;DALLAS
-	.word	12	;DENVER
+	.word	6	;DENVER
 	.word	12 ;20	;DETROIT
 	.word	12	;GOLDEN STATE
 	.word	12	;HOUSTON

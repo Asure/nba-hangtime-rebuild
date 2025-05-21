@@ -4528,23 +4528,22 @@ player_heads
 	.long	MAS_DAL,MON_BOS
 
 ;06 DENVER
-	.long	MCD_DEN,MAR_SAC
-	.long	MCD_DEN,JAC_IND
-	.long	MCD_DEN,ELL_DEN
-
-	.long	MAR_SAC,MCD_DEN
-	.long	MAR_SAC,JAC_IND
-	.long	MAR_SAC,ELL_DEN
-
-	.long	JAC_IND,MCD_DEN
-	.long	JAC_IND,MAR_SAC
-	.long	JAC_IND,ELL_DEN
-
 	.long	ELL_DEN,MCD_DEN
 	.long	ELL_DEN,MAR_SAC
-	.long	ELL_DEN,JAC_IND
 
-	.long	0,0			;REMOVE!!!
+	.long	MCD_DEN,ELL_DEN
+	.long	MCD_DEN,MAR_SAC
+
+	.long	MAR_SAC,ELL_DEN
+	.long	MAR_SAC,MCD_DEN
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -4641,30 +4640,30 @@ player_heads
 	.long	0,0
 
 ;10 INDIANA
-	.long	MIL_IND,DAM_COL
-	.long	MIL_IND,ROS_DEN
+	.long	MIL_IND,JAC_IND
 	.long	MIL_IND,SMI_IND
 	.long	MIL_IND,DAV_IND
+	.long	MIL_IND,ROS_DEN
 
-	.long	DAM_COL,MIL_IND		;new
-	.long	DAM_COL,ROS_DEN
-	.long	DAM_COL,SMI_IND
-	.long	DAM_COL,DAV_IND
-
-	.long	ROS_DEN,MIL_IND
-	.long	ROS_DEN,DAM_COL
-	.long	ROS_DEN,SMI_IND
-	.long	ROS_DEN,DAV_IND
+	.long	JAC_IND,MIL_IND
+	.long	JAC_IND,SMI_IND
+	.long	JAC_IND,DAV_IND
+	.long	JAC_IND,ROS_DEN
 
 	.long	SMI_IND,MIL_IND
-	.long	SMI_IND,DAM_COL
-	.long	SMI_IND,ROS_DEN
+	.long	SMI_IND,JAC_IND
 	.long	SMI_IND,DAV_IND
+	.long	SMI_IND,ROS_DEN
 
 	.long	DAV_IND,MIL_IND
-	.long	DAV_IND,DAM_COL
-	.long	DAV_IND,ROS_DEN
+	.long	DAV_IND,JAC_IND
 	.long	DAV_IND,SMI_IND
+	.long	DAV_IND,ROS_DEN
+
+	.long	ROS_DEN,MIL_IND
+	.long	ROS_DEN,JAC_IND
+	.long	ROS_DEN,SMI_IND
+	.long	ROS_DEN,DAV_IND
 
 ;11 L.A. CLIPPERS
 	.long	VAU_CLP,ROG_CLP
@@ -5347,23 +5346,22 @@ WALLACE	.equ	11
 	.long	MASH,MONTROSS
 
 ;06 DENVER
-	.long	MCDYESS,MARCIULO
-	.long	MCDYESS,MJACKSON
-	.long	MCDYESS,DELLIS
-
-	.long	MARCIULO,MCDYESS
-	.long	MARCIULO,MJACKSON
-	.long	MARCIULO,DELLIS
-
-	.long	MJACKSON,MCDYESS
-	.long	MJACKSON,MARCIULO
-	.long	MJACKSON,DELLIS
-
 	.long	DELLIS,MCDYESS
 	.long	DELLIS,MARCIULO
-	.long	DELLIS,MJACKSON
 
-	.long	0,0			;REMOVE!!!
+	.long	MCDYESS,DELLIS
+	.long	MCDYESS,MARCIULO
+
+	.long	MARCIULO,DELLIS
+	.long	MARCIULO,MCDYESS
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5460,30 +5458,30 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;10 INDIANA
-	.long	MILLER,DAMPIER
-	.long	MILLER,ROSE
+	.long	MILLER,MJACKSON
 	.long	MILLER,SMITS
 	.long	MILLER,DDAVIS
+	.long	MILLER,ROSE
 
-	.long	DAMPIER,MILLER		;new
-	.long	DAMPIER,ROSE
-	.long	DAMPIER,SMITS
-	.long	DAMPIER,DDAVIS
-
-	.long	ROSE,MILLER
-	.long	ROSE,DAMPIER
-	.long	ROSE,SMITS
-	.long	ROSE,DDAVIS
+	.long	MJACKSON,MILLER
+	.long	MJACKSON,SMITS
+	.long	MJACKSON,DDAVIS
+	.long	MJACKSON,ROSE
 
 	.long	SMITS,MILLER
-	.long	SMITS,DAMPIER
-	.long	SMITS,ROSE
+	.long	SMITS,MJACKSON
 	.long	SMITS,DDAVIS
+	.long	SMITS,ROSE
 
 	.long	DDAVIS,MILLER
-	.long	DDAVIS,DAMPIER
-	.long	DDAVIS,ROSE
+	.long	DDAVIS,MJACKSON
 	.long	DDAVIS,SMITS
+	.long	DDAVIS,ROSE
+
+	.long	ROSE,MILLER
+	.long	ROSE,MJACKSON
+	.long	ROSE,SMITS
+	.long	ROSE,DDAVIS
 
 ;11 L.A. CLIPPERS
 	.long	VAUGHT,RROGERS
@@ -5548,7 +5546,7 @@ WALLACE	.equ	11
 	.long	DANILOVI,MOURN
 	.long	DANILOVI,THARDAWAY
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0

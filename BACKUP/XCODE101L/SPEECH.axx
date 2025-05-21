@@ -729,11 +729,10 @@ full_name_speech
  .word	0100DH,79,1328	;MONTROSS,    eric
  .word	0100DH,88,1408	;MASHBURN,    jamal
 
- .word	0100DH,96,1428	;McDYESS,     antonio		( DENVER )
+ .word	0100DH,64,1436	;ELLIS,       dale		( DENVER )
+ .word	0100DH,96,1428	;McDYESS,     antonio
  .word	0100DH,100,1752	;MARCIULIONIS,sarunas
- .word	0100DH,78,1516	;JACKSON,     mark
- .word	0100DH,64,1436	;ELLIS,       dale
-;REMOVE!!!
+ .word	0,0,0
  .word	0,0,0
 
  .word	0100DH,63,1444	;HILL,        grant		( DETROIT )
@@ -759,10 +758,10 @@ full_name_speech
  .word	0,0,0
 
  .word	0100DH,85,1500	;MILLER,      reggie		( INDIANA )
- .word	0100DH,66,2936	;DAMPIER,     erick
- .word	0100DH,70,1432	;ROSE,        jalen
+ .word	0100DH,78,1516	;JACKSON,     mark
  .word	0100DH,71,1508	;SMITS,       rik
  .word	0100DH,71,1504	;DAVIS,       dale
+ .word	0100DH,70,1432	;ROSE,        jalen
 
  .word	0100DH,45,1520	;VAUGHT,      loy		( CLIPPERS )
  .word	0100DH,64,1524	;ROGERS,      rodney
@@ -920,11 +919,10 @@ pass_speech		;'TO player name'
  .word	0100DH,62,1331	;to MONTROSS,    eric
  .word	0100DH,59,1411	;to MASHBURN,    jamal
 
- .word	0100DH,58,1431	;to McDYESS,     antonio	( DENVER )
+ .word	0100DH,38,1439	;to ELLIS,       dale	( DENVER )
+ .word	0100DH,58,1431	;to McDYESS,     antonio
  .word	0100DH,58,1755	;to MARCIULIONIS,sarunas
- .word	0100DH,57,1519	;to JACKSON,     mark
- .word	0100DH,38,1439	;to ELLIS,       dale
-;REMOVE!!!
+ .word	0,0,0
  .word	0,0,0
 
  .word	0100DH,42,1447	;to HILL,        grant		( DETROIT )
@@ -950,10 +948,10 @@ pass_speech		;'TO player name'
  .word	0,0,0
 
  .word	0100DH,48,1503	;to MILLER,      reggie		( INDIANA )
- .word	0100DH,48,2938	;to DAMPIER,     erick
- .word	0100DH,38,1435	;to ROSE,        jalen
+ .word	0100DH,57,1519	;to JACKSON,     mark
  .word	0100DH,55,1511	;to SMITS,       rik
  .word	0100DH,43,1507	;to DAVIS,       dale
+ .word	0100DH,38,1435	;to ROSE,        jalen
 
  .word	0100DH,36,1523	;to VAUGHT,      loy		( CLIPPERS )
  .word	0100DH,43,1527	;to ROGERS,      rodney
@@ -1111,11 +1109,10 @@ name_speech 		;(last name only, excited)
  .word	0100DH,53,1329	;MONTROSS,    eric
  .word	0100DH,50,1409	;MASHBURN,    jamal
 
- .word	0100DH,49,1429	;McDYESS,     antonio		( DENVER )
+ .word	0100DH,28,1437	;ELLIS,       dale		( DENVER )
+ .word	0100DH,49,1429	;McDYESS,     antonio
  .word	0100DH,49,1753	;MARCIULIONIS,sarunas
- .word	0100DH,48,1517	;JACKSON,     mark
- .word	0100DH,28,1437	;ELLIS,       dale
-;REMOVE!!!
+ .word	0,0,0
  .word	0,0,0
 
  .word	0100DH,33,1445	;HILL,        grant		( DETROIT )
@@ -1141,10 +1138,10 @@ name_speech 		;(last name only, excited)
  .word	0,0,0
 
  .word	0100DH,39,1501	;MILLER,      reggie		( INDIANA )
- .word	0100DH,39,2937	;DAMPIER,     erick
- .word	0100DH,29,1433	;ROSE,        jalen
+ .word	0100DH,48,1517	;JACKSON,     mark
  .word	0100DH,46,1509	;SMITS,       rik
  .word	0100DH,34,1505	;DAVIS,       dale
+ .word	0100DH,29,1433	;ROSE,        jalen
 
  .word	0100DH,27,1521	;VAUGHT,      loy		( CLIPPERS )
  .word	0100DH,34,1525	;ROGERS,      rodney
