@@ -1142,23 +1142,22 @@ NY_t
 	.long	ewing_f, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,Ewing_h
 	.word	2,10,8,20
 	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P
-;new
-	LWWWWWW	scale69f_t,BV5,SHT7,DNK6,DEF7,SDEF4,DSKL5
-	.long	WAL_F, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,wal_h
-	.word	5,7,2,19
-	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P
 	LWWWWWW	scale67f_t,BV7,SHT7,DNK8,DEF5,SDEF4,DSKL5
 	.long	johnson_f, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,LJohnson_h
 	.word	7,8,8,19
-	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P
-	LWWWWWW	scale65t_t,BV9,SHT8,DNK2,DEF2,SDEF7,DSKL5
-	.long	STARKS_F, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,Starks_h
-	.word	8,5,8,5
 	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P
 	LWWWWWW	scale66_t,BV8,SHT10,DNK2,DEF3,SDEF4,DSKL5
 	.long	HOUSTO_F, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,Houston_h
 	.word	5,1,7,19
 	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P
+	LWWWWWW	scale65t_t,BV9,SHT8,DNK2,DEF2,SDEF7,DSKL5
+	.long	STARKS_F, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,Starks_h
+	.word	8,5,8,5
+	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P
+	LWWWWWW	scale69f_t,BV5,SHT5,DNK7,DEF2,SDEF5,DSKL2
+	.long	Oakley_f, UN_NEYP_P,UN_NEYS_P, TR_NEYP_P,TR_NEYS_P,Oakley_h
+	.word	4,8,2,19
+	.long	SW_NEYP_P,SW_NEYS_P,VP_NEYP_P,VP_NEYS_P		;C. OAKLEY
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head

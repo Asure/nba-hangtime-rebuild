@@ -5600,18 +5600,18 @@ LAL_t
 
 	.word  06,10,07,08
 	.word  04,10,02,08	;PATRICK EWING		7'0"	240 reg
-;new
-	.word  05,07,07,06
-	.word  04,07,05,02	;JOHN WALLACE		_______________
 
 	.word  07,08,07,08
 	.word  04,05,07,08	;LARRY JOHNSON		6'7"	250 fat
 
+	.word  08,01,10,02
+	.word  04,03,05,07	;ALAN HOUSTON		6'6"	200 thin
+
 	.word  09,05,08,02
 	.word  07,02,08,08	;JOHN STARKS		6'5"	185 thin
 
-	.word  08,01,10,02
-	.word  04,03,05,07	;ALAN HOUSTON		6'6"	200 thin
+	.word  05,08,05,07
+	.word  05,02,04,02	 ;CHARLES OAKLEY    6'9" 245 fat
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5900,7 +5900,7 @@ name_sort
  .long	BAKER,GROBINSO, ALLEN ,LANG,RESPERT		;new	;14 BUCKS
  .long	GARNETT,GUGLI2, MARBURY , MARBURY , MARBURY	;new,kill,kill ;15 TIMBERWOLVES
  .long	GILL, KITTLES ,PACK,BRADLEY,OBANNON		;new	;16 NETS
- .long	EWING, WALLACE ,JOHNSN_L,STARKS,HOUSTON		;new	;17 KNICKS
+ .long	EWING,JOHNSN_L,HOUSTON,STARKS,OAKLEY		;new	;17 KNICKS
  .long	AHARDAWAY,GRANT_HC,NANDERSON,SEIKALY,DSCOTT		;18 MAGIC
  .long	IVERSON ,STACKHOU,COLEMAN,WEATHSPN, MINOR 	;new,kill:new ;19 76ers
  .long	KJOHNSON,KIDD,WPERSON,MANNING,CEBALLOS			;20 SUNS

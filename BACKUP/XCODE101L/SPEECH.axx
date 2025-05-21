@@ -802,10 +802,10 @@ full_name_speech
  .word	0100DH,61,1632	;O'BANNON,    ed
 
  .word	0100DH,82,1640	;EWING,       patrick		( NEW YORK )
- .word	0100DH,65,2906	;WALLACE,     john
  .word	0100DH,74,1344	;JOHNSON,     larry
- .word	0100DH,70,1656	;STARKS,      john
  .word	0100DH,76,1456	;HOUSTON,     allan
+ .word	0100DH,70,1656	;STARKS,      john
+ .word	0100DH,81,1652	;OAKLEY,      charles
 
  .word	0100DH,95,1660	;HARDAWAY,    anfernee		( ORLANDO )
  .word	0100DH,76,1664	;GRANT,       horace
@@ -992,10 +992,10 @@ pass_speech		;'TO player name'
  .word	0100DH,45,1635	;to O'BANNON,    ed
 
  .word	0100DH,43,1643	;to EWING,       patrick	( NEW YORK )
- .word	0100DH,39,2908	;to WALLACE,     john
  .word	0100DH,48,1347	;to JOHNSON,     larry
- .word	0100DH,45,1659	;to STARKS,      john
  .word	0100DH,54,1459	;to HOUSTON,     allan
+ .word	0100DH,45,1659	;to STARKS,      john
+ .word	0100DH,40,1655	;to OAKLEY,      charles
 
  .word	0100DH,56,1663	;to HARDAWAY,    anfernee	( ORLANDO )
  .word	0100DH,43,1667	;to GRANT,       horace
@@ -1182,10 +1182,10 @@ name_speech 		;(last name only, excited)
  .word	0100DH,36,1633	;O'BANNON,    ed
 
  .word	0100DH,42,1641	;EWING,       patrick		( NEW YORK )
- .word	0100DH,30,2907	;WALLACE,     john
  .word	0100DH,38,1345	;JOHNSON,     larry
- .word	0100DH,36,1657	;STARKS,      john
  .word	0100DH,44,1457	;HOUSTON,     allan
+ .word	0100DH,36,1657	;STARKS,      john
+ .word	0100DH,34,1653	;OAKLEY,      charles
 
  .word	0100DH,47,1661	;HARDAWAY,    anfernee		( ORLANDO )
  .word	0100DH,34,1665	;GRANT,       horace
