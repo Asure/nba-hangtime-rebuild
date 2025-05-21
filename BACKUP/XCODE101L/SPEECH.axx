@@ -855,7 +855,7 @@ full_name_speech
  .word	0100DH,78,1740	;WILLIAMS,    walt
  .word	0100DH,72,2927	;CAMBY,       marcus
  .word	0100DH,74,1412	;JONES,       popeye
- .word	0100DH,59,1800	;ROGERS,      carlos
+ .word	0,0,0
 
  .word	0100DH,79,1820	;STOCKTON,    john		( UTAH )
  .word	0100DH,68,1824	;MALONE,      karl
@@ -1045,7 +1045,7 @@ pass_speech		;'TO player name'
  .word	0100DH,45,1743	;to WILLIAMS,    walt
  .word	0100DH,45,2929	;to CAMBY,       marcus
  .word	0100DH,49,1415	;to JONES,       popeye
- .word	0100DH,43,1803	;to ROGERS,      carlos
+ .word	0,0,0
 
  .word	0100DH,53,1823	;to STOCKTON,    john		( UTAH )
  .word	0100DH,51,1827	;to MALONE,      karl
@@ -1235,7 +1235,7 @@ name_speech 		;(last name only, excited)
  .word	0100DH,36,1741	;WILLIAMS,    walt
  .word	0100DH,36,2928	;CAMBY,       marcus
  .word	0100DH,40,1413	;JONES,       popeye
- .word	0100DH,34,1801	;ROGERS,      carlos
+ .word	0,0,0
 
  .word	0100DH,44,1821	;STOCKTON,    john		( UTAH )
  .word	0100DH,42,1825	;MALONE,      karl
