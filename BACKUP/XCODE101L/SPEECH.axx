@@ -770,15 +770,11 @@ full_name_speech
  .word	0100DH,75,1532	;RICHARDSON,  pooh
  .word	0100DH,72,1536	;BARRY,       brent
 
-;.word	0100DH,56,1958	;SCOTT,       byron
-;Kobe Bryant - Full Name Speech
+ .word	0100DH,68,0bbch	;ONEAL,       shaquille		( LAKERS )
+ .word	0100DH,68,1556	;JONES,       eddie
+ .word	0100DH,76,1540	;VAN EXEL,    nick
+ .word	0100DH,80,1488	;HORRY,       robert
  .word	0100DH,56,0bbah	;BRYANT,      kobe
-;Shaquille O'Neal - Full Name Speech 
- .word	0100DH,68,0bbch	;ONEAL,       shaquille
- .word	0100DH,76,1540	;VAN EXEL,    nick		( LAKERS )
- .word	0100DH,83,1548	;CEBALLOS,    cedric
- .word	0100DH,62,1552	;CAMPBELL,    elden
-;.word	0100DH,68,1556	;JONES,       eddie
 
  .word	0100DH,97,1560	;MOURNING,    alonzo		( MIAMI )
  .word	0100DH,80,1460	;HARDAWAY,    tim		
@@ -828,9 +824,9 @@ full_name_speech
 
  .word	0100DH,69,1700	;JOHNSON,     kevin		( PHOENIX )
  .word	0100DH,68,1404	;KIDD,        jason
+ .word	0100DH,77,1712	;PERSON,      wesley
  .word	0100DH,66,1708	;MANNING,     danny
- .word	0100DH,80,1488	;HORRY,       robert
- .word	0100DH,70,1492	;CASSELL,     sam
+ .word	0100DH,83,1548	;CEBALLOS,    cedric
 
  .word	0100DH,94,1724	;ROBINSON,    cliff		( PORTLAND )
  .word	0100DH,94,1600	;RIDER,       isaiah
@@ -965,13 +961,11 @@ pass_speech		;'TO player name'
  .word	0100DH,54,1535	;to RICHARDSON,  pooh
  .word	0100DH,43,1539	;to BARRY,       brent
 
-;.word	0100DH,40,1960	;to SCOTT,       byron
+ .word	0100DH,49,07C1h	;to ONEAL,       shaquille		( LAKERS )
+ .word	0100DH,49,1559	;to JONES,       eddie
+ .word	0100DH,54,1543	;to VAN EXEL,    nick
+ .word	0100DH,51,1491	;to HORRY,       robert
  .word	0100DH,40,07C0h	;to BRYANT,      kobe
- .word	0100DH,49,07C1h	;to ONEAL,       shaquille
- .word	0100DH,54,1543	;to VAN EXEL,    nick		( LAKERS )
- .word	0100DH,54,1551	;to CEBALLOS,    cedric
- .word	0100DH,46,1555	;to CAMPBELL,    elden
-;.word	0100DH,49,1559	;to JONES,       eddie
 
  .word	0100DH,44,1563	;to MOURNING,    alonzo		( MIAMI )
  .word	0100DH,56,1463	;to HARDAWAY,    tim		
@@ -1021,9 +1015,9 @@ pass_speech		;'TO player name'
 
  .word	0100DH,48,1703	;to JOHNSON,     kevin		( PHOENIX )
  .word	0100DH,41,1407	;to KIDD,        jason
+ .word	0100DH,40,1715	;to PERSON,      wesley
  .word	0100DH,38,1711	;to MANNING,     danny
- .word	0100DH,51,1491	;to HORRY,       robert
- .word	0100DH,48,1495	;to CASSELL,     sam
+ .word	0100DH,54,1551	;to CEBALLOS,    cedric
 
  .word	0100DH,70,1727	;to ROBINSON,    cliff		( PORTLAND )
  .word	0100DH,53,1603	;to RIDER,       isaiah
@@ -1158,13 +1152,11 @@ name_speech 		;(last name only, excited)
  .word	0100DH,44,1533	;RICHARDSON,  pooh
  .word	0100DH,33,1537	;BARRY,       brent
 
-;.word	0100DH,32,1959	;SCOTT,       byron
+ .word	0100DH,40,0bbbh	;ONEAL,       shaquille		( LAKERS )
+ .word	0100DH,40,1557	;JONES,       eddie
+ .word	0100DH,44,1541	;VAN EXEL,    nick
+ .word	0100DH,42,1489	;HORRY,       robert
  .word	0100DH,32,0bb9h	;BRYANT,      kobe
- .word	0100DH,40,0bbbh	;ONEAL,       shaquille
- .word	0100DH,44,1541	;VAN EXEL,    nick		( LAKERS )
- .word	0100DH,44,1549	;CEBALLOS,    cedric
- .word	0100DH,37,1553	;CAMPBELL,    elden
-;.word	0100DH,40,1557	;JONES,       eddie
 
  .word	0100DH,35,1561	;MOURNING,    alonzo		( MIAMI )
  .word	0100DH,47,1461	;HARDAWAY,    tim		
@@ -1214,9 +1206,9 @@ name_speech 		;(last name only, excited)
 
  .word	0100DH,38,1701	;JOHNSON,     kevin		( PHOENIX )
  .word	0100DH,32,1405	;KIDD,        jason
+ .word	0100DH,34,1713	;PERSON,      wesley
  .word	0100DH,28,1709	;MANNING,     danny
- .word	0100DH,42,1489	;HORRY,       robert
- .word	0100DH,38,1493	;CASSELL,     sam
+ .word	0100DH,44,1549	;CEBALLOS,    cedric
 
  .word	0100DH,61,1725	;ROBINSON,    cliff		( PORTLAND )
  .word	0100DH,43,1601	;RIDER,       isaiah
