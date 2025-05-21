@@ -723,8 +723,7 @@ full_name_speech
  .word	0100DH,75,1380	;HILL,        tyrone
  .word	0100DH,65,1396	;FERRY,       danny
 
-; .word	0100DH,68,1404	;KIDD,        jason		( DALLAS )
- .word	0100DH,95,1716		;FINLEY
+ .word	0100DH,95,1716	;FINLEY,      michael		( DALLAS )
  .word	0100DH,71,1648	;HARPER,      derek
  .word	0100DH,84,1400	;JACKSON,     jim
  .word	0100DH,79,1328	;MONTROSS,    eric
@@ -828,7 +827,7 @@ full_name_speech
  .word	0,0,0
 
  .word	0100DH,69,1700	;JOHNSON,     kevin		( PHOENIX )
- .word	0100DH,101,1704	;TISDALE,     wayman
+ .word	0100DH,68,1404	;KIDD,        jason
  .word	0100DH,66,1708	;MANNING,     danny
  .word	0100DH,80,1488	;HORRY,       robert
  .word	0100DH,70,1492	;CASSELL,     sam
@@ -919,8 +918,7 @@ pass_speech		;'TO player name'
  .word	0100DH,42,1383	;to HILL,        tyrone
  .word	0100DH,38,1399	;to FERRY,       danny
 
-; .word	0100DH,41,1407	;to KIDD,        jason		( DALLAS )
- .word	0100DH,40,1719		;TO FINLEY
+ .word	0100DH,40,1719	;to FINLEY,      michael		( DALLAS )
  .word	0100DH,46,1651	;to HARPER,      derek
  .word	0100DH,57,1403	;to JACKSON,     jim
  .word	0100DH,62,1331	;to MONTROSS,    eric
@@ -1022,7 +1020,7 @@ pass_speech		;'TO player name'
  .word	0,0,0
 
  .word	0100DH,48,1703	;to JOHNSON,     kevin		( PHOENIX )
- .word	0100DH,61,1707	;to TISDALE,     wayman
+ .word	0100DH,41,1407	;to KIDD,        jason
  .word	0100DH,38,1711	;to MANNING,     danny
  .word	0100DH,51,1491	;to HORRY,       robert
  .word	0100DH,48,1495	;to CASSELL,     sam
@@ -1113,8 +1111,7 @@ name_speech 		;(last name only, excited)
  .word	0100DH,33,1381	;HILL,        tyrone
  .word	0100DH,28,1397	;FERRY,       danny
 
-; .word	0100DH,32,1405	;KIDD,        jason		( DALLAS )
- .word	0100DH,40,1717		;FINLEY
+ .word	0100DH,40,1717	;FINLEY,      michael		( DALLAS )
  .word	0100DH,37,1649	;HARPER,      derek
  .word	0100DH,48,1401	;JACKSON,     jim
  .word	0100DH,53,1329	;MONTROSS,    eric
@@ -1216,7 +1213,7 @@ name_speech 		;(last name only, excited)
  .word	0,0,0
 
  .word	0100DH,38,1701	;JOHNSON,     kevin		( PHOENIX )
- .word	0100DH,51,1705	;TISDALE,     wayman
+ .word	0100DH,32,1405	;KIDD,        jason
  .word	0100DH,28,1709	;MANNING,     danny
  .word	0100DH,42,1489	;HORRY,       robert
  .word	0100DH,38,1493	;CASSELL,     sam
