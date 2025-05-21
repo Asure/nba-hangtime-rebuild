@@ -809,9 +809,9 @@ full_name_speech
  .word	0100DH,76,1456	;HOUSTON,     allan
 
  .word	0100DH,95,1660	;HARDAWAY,    anfernee		( ORLANDO )
- .word	0100DH,84,1468	;SEIKALY,     rony
  .word	0100DH,76,1664	;GRANT,       horace
  .word	0100DH,65,1668	;ANDERSON,    nick
+ .word	0100DH,84,1468	;SEIKALY,     rony
  .word	0100DH,67,1672	;SCOTT,       dennis
 
  .word	0100DH,72,2942	;IVERSON,     allen		( PHILADELPHIA )
@@ -1000,9 +1000,9 @@ pass_speech		;'TO player name'
  .word	0100DH,54,1459	;to HOUSTON,     allan
 
  .word	0100DH,56,1663	;to HARDAWAY,    anfernee	( ORLANDO )
- .word	0100DH,55,1471	;to SEIKALY,     rony
  .word	0100DH,43,1667	;to GRANT,       horace
  .word	0100DH,43,1671	;to ANDERSON,    nick
+ .word	0100DH,55,1471	;to SEIKALY,     rony
  .word	0100DH,45,1675	;to SCOTT,       dennis
 
  .word	0100DH,53,2944	;to IVERSON,     allen		( PHILADELPHIA )
@@ -1191,9 +1191,9 @@ name_speech 		;(last name only, excited)
  .word	0100DH,44,1457	;HOUSTON,     allan
 
  .word	0100DH,47,1661	;HARDAWAY,    anfernee		( ORLANDO )
- .word	0100DH,46,1469	;SEIKALY,     rony
  .word	0100DH,34,1665	;GRANT,       horace
  .word	0100DH,33,1669	;ANDERSON,    nick
+ .word	0100DH,46,1469	;SEIKALY,     rony
  .word	0100DH,36,1673	;SCOTT,       dennis
 
  .word	0100DH,44,2943	;IVERSON,     allen		( PHILADELPHIA )
