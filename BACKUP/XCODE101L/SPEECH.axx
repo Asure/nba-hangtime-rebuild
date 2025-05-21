@@ -791,7 +791,6 @@ full_name_speech
  .word	0100DH,72,1616	;GARNETT,     kevin		( MINNESOTTA )
  .word	0100DH,73,1612	;GUGLIOTTA,   tom
  .word	0100DH,75,2951	;MARBURY,     stephon
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
@@ -836,8 +835,8 @@ full_name_speech
  .word	0100DH,82,1744	;RICHMOND,    mitch		( SACRAMENTO )
  .word	0100DH,74,1564	;OWENS,       billy
  .word	0100DH,89,1420	;ABDUL-RAUF,  mahmoud
- .word	0100DH,85,1748	;GRANT,       brian
- .word	0100DH,50,1756	;EDNEY,       tyus
+ .word	0,0,0
+ .word	0,0,0
 
  .word	0100DH,69,1760	;ELLIOTT,     sean		( SAN ANTONIO )
  .word	0100DH,92,1764	;ROBINSON,    david
@@ -1026,8 +1025,8 @@ pass_speech		;'TO player name'
  .word	0100DH,51,1747	;to RICHMOND,    mitch		( SACRAMENTO )
  .word	0100DH,51,1567	;to OWENS,       billy
  .word	0100DH,61,1423	;to ABDUL-RAUF,  mahmoud
- .word	0100DH,43,1751	;to GRANT,       brian
- .word	0100DH,36,1759	;to EDNEY,       tyus
+ .word	0,0,0
+ .word	0,0,0
 
  .word	0100DH,41,1763	;to ELLIOTT,     sean		( SAN ANTONIO )
  .word	0100DH,70,1767	;to ROBINSON,    david
@@ -1216,8 +1215,8 @@ name_speech 		;(last name only, excited)
  .word	0100DH,41,1745	;RICHMOND,    mitch		( SACRAMENTO )
  .word	0100DH,41,1565	;OWENS,       billy
  .word	0100DH,51,1421	;ABDUL-RAUF,  mahmoud
- .word	0100DH,34,1749	;GRANT,       brian
- .word	0100DH,27,1757	;EDNEY,       tyus
+ .word	0,0,0
+ .word	0,0,0
 
  .word	0100DH,32,1761	;ELLIOTT,     sean		( SAN ANTONIO )
  .word	0100DH,61,1765	;ROBINSON,    david

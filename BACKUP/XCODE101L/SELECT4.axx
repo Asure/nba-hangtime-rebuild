@@ -4781,7 +4781,7 @@ player_heads
 	.long	MAR_COL,GAR_MIN		;new
 	.long	MAR_COL,GUG_MIN
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -4964,28 +4964,27 @@ player_heads
 ;22 SACRAMENTO
 	.long	RIC_SAC,OWE_SAC
 	.long	RIC_SAC,RAF_DEN
-	.long	RIC_SAC,GRA_SAC
-	.long	RIC_SAC,EDN_SAC
 
 	.long	OWE_SAC,RIC_SAC
 	.long	OWE_SAC,RAF_DEN
-	.long	OWE_SAC,GRA_SAC
-	.long	OWE_SAC,EDN_SAC
 
 	.long	RAF_DEN,RIC_SAC
 	.long	RAF_DEN,OWE_SAC
-	.long	RAF_DEN,GRA_SAC
-	.long	RAF_DEN,EDN_SAC
 
-	.long	GRA_SAC,RIC_SAC
-	.long	GRA_SAC,OWE_SAC
-	.long	GRA_SAC,RAF_DEN
-	.long	GRA_SAC,EDN_SAC
-
-	.long	EDN_SAC,RIC_SAC
-	.long	EDN_SAC,OWE_SAC
-	.long	EDN_SAC,RAF_DEN
-	.long	EDN_SAC,GRA_SAC
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;23 SAN ANTONIO
 	.long	ELL_SAN,ROB_SAN
@@ -5597,7 +5596,7 @@ WALLACE	.equ	11
 	.long	MARBURY,GARNETT		;new
 	.long	MARBURY,GUGLI2
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5780,28 +5779,27 @@ WALLACE	.equ	11
 ;22 SACRAMENTO
 	.long	RICH,BOWENS
 	.long	RICH,ABDULRAU
-	.long	RICH,BGRANT
-	.long	RICH,EDNEY
 
 	.long	BOWENS,RICH
 	.long	BOWENS,ABDULRAU
-	.long	BOWENS,BGRANT
-	.long	BOWENS,EDNEY
 
 	.long	ABDULRAU,RICH
 	.long	ABDULRAU,BOWENS
-	.long	ABDULRAU,BGRANT
-	.long	ABDULRAU,EDNEY
 
-	.long	BGRANT,RICH
-	.long	BGRANT,BOWENS
-	.long	BGRANT,ABDULRAU
-	.long	BGRANT,EDNEY
-
-	.long	EDNEY,RICH
-	.long	EDNEY,BOWENS
-	.long	EDNEY,ABDULRAU
-	.long	EDNEY,BGRANT
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;23 SAN ANTONIO
 	.long	ELLIOT2,DROBINSON
