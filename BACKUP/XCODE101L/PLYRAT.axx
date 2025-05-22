@@ -726,13 +726,14 @@ CHAR_t
 	.long	divac_f, UN_CHAP_P,UN_CHAS_P, TR_CHAP_P,TR_CHAS_P,Divac_h
 	.word	6,8,2,18
 	.long	SW_CHAP_P,SW_CHAS_P,VP_CHAP_P,VP_CHAS_P
-	LWWWWWW	scale70f_t,BV3,SHT4,DNK4,DEF7,SDEF2,DSKL5
-	.long	ZIDEK_F, UN_CHAP_P,UN_CHAS_P, TR_CHAP_P,TR_CHAS_P,Zidek_h
-	.word	3,8,2,18
-	.long	SW_CHAP_P,SW_CHAS_P,VP_CHAP_P,VP_CHAS_P
 	LWWWWWW	scale65_t,BV8,SHT7,DNK1,DEF1,SDEF8,DSKL5
 	.long	CURRY_F, UN_CHAP_P,UN_CHAS_P, TR_CHAP_P,TR_CHAS_P,Curry_h
 	.word	4,2,7,15
+	.long	SW_CHAP_P,SW_CHAS_P,VP_CHAP_P,VP_CHAS_P
+;kill
+	LWWWWWW	scale70f_t,BV3,SHT4,DNK4,DEF7,SDEF2,DSKL5
+	.long	ZIDEK_F, UN_CHAP_P,UN_CHAS_P, TR_CHAP_P,TR_CHAS_P,Zidek_h
+	.word	3,8,2,18
 	.long	SW_CHAP_P,SW_CHAS_P,VP_CHAP_P,VP_CHAS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill

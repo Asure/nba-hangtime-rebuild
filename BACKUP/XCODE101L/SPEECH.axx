@@ -706,8 +706,8 @@ full_name_speech
  .word	0100DH,65,1348	;RICE,        glen			( CHARLOTTE )
  .word	0100DH,80,1644	;MASON,       anthony
  .word	0100DH,78,1544	;DIVAC,       vlade
- .word	0100DH,70,1352	;ZIDEK,       george
  .word	0100DH,58,1356	;CURRY,       del
+ .word	0,0,0
 
  .word	0100DH,68,0bb8h ;JORDAN,      michael		( CHICAGO )
  .word	0100DH,72,1360	;PIPPEN,      scottie
@@ -885,8 +885,8 @@ pass_speech		;'TO player name'
  .word	0100DH,42,1351	;to RICE,        glen		( CHARLOTTE )
  .word	0100DH,60,1647	;to MASON,       anthony
  .word	0100DH,49,1547	;to DIVAC,       vlade
- .word	0100DH,41,1355	;to ZIDEK,       george
  .word	0100DH,36,1359	;to CURRY,       del
+ .word	0,0,0
 
  .word	0100DH,44,07bfh ;to JORDAN,      michael	( CHICAGO )
  .word	0100DH,41,1363	;to PIPPEN,      scottie
@@ -1064,8 +1064,8 @@ name_speech 		;(last name only, excited)
  .word	0100DH,33,1349	;RICE,        glen			( CHARLOTTE )
  .word	0100DH,51,1645	;MASON,       anthony
  .word	0100DH,39,1545	;DIVAC,       vlade
- .word	0100DH,32,1353	;ZIDEK,       george
  .word	0100DH,27,1357	;CURRY,       del
+ .word	0,0,0
 
  .word	0100DH,35,0B56h ;JORDAN,      michael		( CHICAGO )
  .word	0100DH,31,1361	;PIPPEN,      scottie

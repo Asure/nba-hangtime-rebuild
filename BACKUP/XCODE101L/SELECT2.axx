@@ -5298,11 +5298,11 @@ player_attribs
 	.word  05,08,04,04
 	.word  05,09,06,02	;VLADE DIVAC		7'1"	260 thin
 
-	.word  03,08,04,04
-	.word  02,07,03,02	;GEORGE ZIDEK		_______________
-
 	.word  08,02,07,01
 	.word  08,01,04,07	;DELL CURRY		6'5"	200 thin
+
+	.word  00,00,00,00
+	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5875,7 +5875,7 @@ LAL_t
 name_sort
  .long	BLAYLOCK,MUTUMBO,LAETTNER,SSMITH, KNORMAN		;00 HAWKS
  .long	BROWN, HAMER ,BARROS,RADJA,FOX					;01 CELTICS
- .long	RICE,MASON,DIVAC,ZIDEK,CURRY					;02 HORNETS
+ .long	RICE,MASON,DIVAC,CURRY, ZIDEK					;02 HORNETS
  .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY				;03 BULLS
  .long	BRANDON,CMILLS,PHILLS,THILL,FERRY				;04 CAVALIERS
  .long	FINLEY,BRADLEY,DANILOVI,PACK,HARPER_D			;05 MAVERICKS
@@ -5947,7 +5947,7 @@ team_sqaud_cnts
 ;DJT Start
 	.word	12	;ATLANTA
 	.word	20	;BOSTON
-	.word	20	;CHARLOTTE
+	.word	12	;CHARLOTTE
 	.word	20	;CHICAGO
 	.word	20	;CLEVELAND
 	.word	20	;DALLAS

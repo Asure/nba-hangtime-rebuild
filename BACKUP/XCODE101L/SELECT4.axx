@@ -4424,28 +4424,28 @@ player_heads
 ;02 CHARLOTTE
 	.long	RCE_CHA,MAS_NEY
 	.long	RCE_CHA,DIV_LAK
-	.long	RCE_CHA,ZID_CHA
 	.long	RCE_CHA,CUR_CHA
 
 	.long	MAS_NEY,RCE_CHA
 	.long	MAS_NEY,DIV_LAK
-	.long	MAS_NEY,ZID_CHA
 	.long	MAS_NEY,CUR_CHA
 
 	.long	DIV_LAK,RCE_CHA
 	.long	DIV_LAK,MAS_NEY
-	.long	DIV_LAK,ZID_CHA
 	.long	DIV_LAK,CUR_CHA
-
-	.long	ZID_CHA,RCE_CHA
-	.long	ZID_CHA,MAS_NEY
-	.long	ZID_CHA,DIV_LAK
-	.long	ZID_CHA,CUR_CHA
 
 	.long	CUR_CHA,RCE_CHA
 	.long	CUR_CHA,MAS_NEY
 	.long	CUR_CHA,DIV_LAK
-	.long	CUR_CHA,ZID_CHA
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;03 CHICAGO
 	.global	ROD_CHI
@@ -5223,28 +5223,28 @@ WALLACE	.equ	11
 ;02 CHARLOTTE
 	.long	RICE,MASON
 	.long	RICE,DIVAC
-	.long	RICE,ZIDEK
 	.long	RICE,CURRY
 
 	.long	MASON,RICE
 	.long	MASON,DIVAC
-	.long	MASON,ZIDEK
 	.long	MASON,CURRY
 
 	.long	DIVAC,RICE
 	.long	DIVAC,MASON
-	.long	DIVAC,ZIDEK
 	.long	DIVAC,CURRY
-
-	.long	ZIDEK,RICE
-	.long	ZIDEK,MASON
-	.long	ZIDEK,DIVAC
-	.long	ZIDEK,CURRY
 
 	.long	CURRY,RICE
 	.long	CURRY,MASON
 	.long	CURRY,DIVAC
-	.long	CURRY,ZIDEK
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;03 CHICAGO
 	.long	JORDAN,PIPPEN
