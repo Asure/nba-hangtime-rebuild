@@ -4657,29 +4657,29 @@ player_heads
 
 ;11 L.A. CLIPPERS
 	.long	VAU_CLP,ROG_CLP
-	.long	VAU_CLP,MUR_CLP
-	.long	VAU_CLP,RCH_CLP
 	.long	VAU_CLP,BAR_CLP
+	.long	VAU_CLP,RCH_CLP
 
 	.long	ROG_CLP,VAU_CLP
-	.long	ROG_CLP,MUR_CLP
-	.long	ROG_CLP,RCH_CLP
 	.long	ROG_CLP,BAR_CLP
-
-	.long	MUR_CLP,VAU_CLP
-	.long	MUR_CLP,ROG_CLP
-	.long	MUR_CLP,RCH_CLP
-	.long	MUR_CLP,BAR_CLP
-
-	.long	RCH_CLP,VAU_CLP
-	.long	RCH_CLP,ROG_CLP
-	.long	RCH_CLP,MUR_CLP
-	.long	RCH_CLP,BAR_CLP
+	.long	ROG_CLP,RCH_CLP
 
 	.long	BAR_CLP,VAU_CLP
 	.long	BAR_CLP,ROG_CLP
-	.long	BAR_CLP,MUR_CLP
 	.long	BAR_CLP,RCH_CLP
+
+	.long	RCH_CLP,VAU_CLP
+	.long	RCH_CLP,ROG_CLP
+	.long	RCH_CLP,BAR_CLP
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;12 L.A. LAKERS
 	.long	ONE_LAL,JON_LAK
@@ -5453,29 +5453,30 @@ WALLACE	.equ	11
 
 ;11 L.A. CLIPPERS
 	.long	VAUGHT,RROGERS
-	.long	VAUGHT,LMURRAY
-	.long	VAUGHT,PRICHARD
 	.long	VAUGHT,BBARRY
+	.long	VAUGHT,PRICHARD
 
 	.long	RROGERS,VAUGHT
-	.long	RROGERS,LMURRAY
-	.long	RROGERS,PRICHARD
 	.long	RROGERS,BBARRY
-
-	.long	LMURRAY,VAUGHT
-	.long	LMURRAY,RROGERS
-	.long	LMURRAY,PRICHARD
-	.long	LMURRAY,BBARRY
-
-	.long	PRICHARD,VAUGHT
-	.long	PRICHARD,RROGERS
-	.long	PRICHARD,LMURRAY
-	.long	PRICHARD,BBARRY
+	.long	RROGERS,PRICHARD
 
 	.long	BBARRY,VAUGHT
 	.long	BBARRY,RROGERS
-	.long	BBARRY,LMURRAY
 	.long	BBARRY,PRICHARD
+
+	.long	PRICHARD,VAUGHT
+	.long	PRICHARD,RROGERS
+	.long	PRICHARD,BBARRY
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+
 
 ;12 L.A. LAKERS
 

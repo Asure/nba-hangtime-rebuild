@@ -5475,14 +5475,14 @@ player_attribs
 	.word  06,08,05,05
 	.word  02,03,02,05	;RODNEY ROGERS		_______________
 
-	.word  08,05,06,05
-	.word  08,04,06,09	;LAMOND MURRAY		_______________
+	.word  08,05,06,09
+	.word  06,04,05,08	;BRENT BARRY		_______________
 
 	.word  08,01,04,01
 	.word  08,01,08,02	;POOH RICHARDS		_______________
 
-	.word  08,05,06,09
-	.word  06,04,05,08	;BRENT BARRY		_______________
+	.word  00,00,00,00
+	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5884,7 +5884,7 @@ name_sort
  .long	SPREWELL,MULLIN,JSMITH,KONCAK, MULLIN			;08 WARRIORS
  .long	OLAJUWON,DREXLER,WILLIS, WILLIS , WILLIS		;09 ROCKETS
  .long	MILLER,MJACKSON,SMITS,DDAVIS,ROSE				;10 PACERS
- .long	VAUGHT,RROGERS,LMURRAY,PRICHARD,BBARRY			;11 CLIPPERS
+ .long	VAUGHT,RROGERS,BBARRY,PRICHARD, LMURRAY			;11 CLIPPERS
  .long	ONEAL,EJONES,VANEXEL,HORRY,BRYANT				;12 LAKERS
  .long	MOURN,THARDAWAY,MASH, MASH , MASH				;13 HEAT
  .long	BAKER,GROBINSO, ALLEN ,DOUGLAS,GILLIAM			;14 BUCKS
@@ -5956,7 +5956,7 @@ team_sqaud_cnts
 	.word	12	;GOLDEN STATE
 	.word	6	;HOUSTON
 	.word	20	;INDIANA
-	.word	20	;L.A. CLIPPERS
+	.word	12	;L.A. CLIPPERS
 	.word	20	;L.A. LAKERS
 	.word	6	;MIAMI
 	.word	20	;MILWAUKEE

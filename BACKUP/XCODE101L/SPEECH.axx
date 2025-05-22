@@ -759,9 +759,9 @@ full_name_speech
 
  .word	0100DH,45,1520	;VAUGHT,      loy			( CLIPPERS )
  .word	0100DH,64,1524	;ROGERS,      rodney
- .word	0100DH,80,1528	;MURRAY,      lamond
- .word	0100DH,75,1532	;RICHARDSON,  pooh
  .word	0100DH,72,1536	;BARRY,       brent
+ .word	0100DH,75,1532	;RICHARDSON,  pooh
+ .word	0,0,0
 
  .word	0100DH,68,0bbch	;ONEAL,       shaquille		( LAKERS )
  .word	0100DH,68,1556	;JONES,       eddie
@@ -938,9 +938,9 @@ pass_speech		;'TO player name'
 
  .word	0100DH,36,1523	;to VAUGHT,      loy		( CLIPPERS )
  .word	0100DH,43,1527	;to ROGERS,      rodney
- .word	0100DH,39,1531	;to MURRAY,      lamond
- .word	0100DH,54,1535	;to RICHARDSON,  pooh
  .word	0100DH,43,1539	;to BARRY,       brent
+ .word	0100DH,54,1535	;to RICHARDSON,  pooh
+ .word	0,0,0
 
  .word	0100DH,49,07C1h	;to ONEAL,       shaquille	( LAKERS )
  .word	0100DH,49,1559	;to JONES,       eddie
@@ -1117,9 +1117,9 @@ name_speech 		;(last name only, excited)
 
  .word	0100DH,27,1521	;VAUGHT,      loy			( CLIPPERS )
  .word	0100DH,34,1525	;ROGERS,      rodney
- .word	0100DH,30,1529	;MURRAY,      lamond
- .word	0100DH,44,1533	;RICHARDSON,  pooh
  .word	0100DH,33,1537	;BARRY,       brent
+ .word	0100DH,44,1533	;RICHARDSON,  pooh
+ .word	0,0,0
 
  .word	0100DH,40,0bbbh	;ONEAL,       shaquille		( LAKERS )
  .word	0100DH,40,1557	;JONES,       eddie
