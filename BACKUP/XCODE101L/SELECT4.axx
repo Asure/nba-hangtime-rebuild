@@ -4740,27 +4740,27 @@ player_heads
 	.long	BAK_MLW,ROB_MLW
 	.long	BAK_MLW,ALL_COL
 	.long	BAK_MLW,DOU_MLW
+	.long	BAK_MLW,GIL_NEJ
 
 	.long	ROB_MLW,BAK_MLW
 	.long	ROB_MLW,ALL_COL
 	.long	ROB_MLW,DOU_MLW
+	.long	ROB_MLW,GIL_NEJ
 
 	.long	ALL_COL,BAK_MLW
 	.long	ALL_COL,ROB_MLW
 	.long	ALL_COL,DOU_MLW
+	.long	ALL_COL,GIL_NEJ
 
 	.long	DOU_MLW,BAK_MLW
 	.long	DOU_MLW,ROB_MLW
 	.long	DOU_MLW,ALL_COL
+	.long	DOU_MLW,GIL_NEJ
 
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+	.long	GIL_NEJ,BAK_MLW
+	.long	GIL_NEJ,ROB_MLW
+	.long	GIL_NEJ,ALL_COL
+	.long	GIL_NEJ,DOU_MLW
 
 ;15 MINNESOTTA
 	.long	GAR_MIN,GUG_MIN
@@ -5546,27 +5546,27 @@ WALLACE	.equ	11
 	.long	BAKER,GROBINSO
 	.long	BAKER,ALLEN
 	.long	BAKER,DOUGLAS
+	.long	BAKER,GILLIAM
 
 	.long	GROBINSO,BAKER
 	.long	GROBINSO,ALLEN
 	.long	GROBINSO,DOUGLAS
+	.long	GROBINSO,GILLIAM
 
 	.long	ALLEN,BAKER
 	.long	ALLEN,GROBINSO
 	.long	ALLEN,DOUGLAS
+	.long	ALLEN,GILLIAM
 
 	.long	DOUGLAS,BAKER
 	.long	DOUGLAS,GROBINSO
 	.long	DOUGLAS,ALLEN
+	.long	DOUGLAS,GILLIAM
 
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+	.long	GILLIAM,BAKER
+	.long	GILLIAM,GROBINSO
+	.long	GILLIAM,ALLEN
+	.long	GILLIAM,DOUGLAS
 
 ;15 MINNESOTTA
 	.long	GARNETT,GUGLI2

@@ -784,7 +784,7 @@ full_name_speech
  .word	0100DH,93,1584	;ROBINSON,    glen
  .word	0100DH,60,2930	;ALLEN,       ray
  .word	0100DH,71,1596	;DOUGLAS,     sherman
- .word	0,0,0
+ .word	0100DH,54,1628	;GILLIAM,     armen
 
  .word	0100DH,72,1616	;GARNETT,     kevin		( MINNESOTTA )
  .word	0100DH,73,1612	;GUGLIOTTA,   tom
@@ -971,7 +971,7 @@ pass_speech		;'TO player name'
  .word	0100DH,70,1587	;to ROBINSON,    glen
  .word	0100DH,44,2932	;to ALLEN,       ray
  .word	0100DH,40,1599	;to DOUGLAS,     sherman
- .word	0,0,0
+ .word	0100DH,40,1631	;to GILLIAM,     armen
 
  .word	0100DH,50,1619	;to GARNETT,     kevin		( MINNESOTTA )
  .word	0100DH,52,1615	;to GUGLIOTTA,   tom
@@ -1159,7 +1159,7 @@ name_speech 		;(last name only, excited)
  .word	0100DH,61,1585	;ROBINSON,    glen
  .word	0100DH,35,2931	;ALLEN,       ray
  .word	0100DH,29,1597	;DOUGLAS,     sherman
- .word	0,0,0
+ .word	0100DH,29,1629	;GILLIAM,     armen
 
  .word	0100DH,41,1617	;GARNETT,     kevin		( MINNESOTTA )
  .word	0100DH,43,1613	;GUGLIOTTA,   tom

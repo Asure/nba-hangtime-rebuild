@@ -1064,11 +1064,10 @@ MILW_t
 	.long	DOUGLA_F, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,Douglas_h
 	.word	6,3,3,18
 	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P		;S. DOUGLAS
-;kill
-	LWWWWWW	scale611_t,BV6,SHT5,DNK6,DEF9,SDEF4,DSKL5
-	.long	Lang_f, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,Lang_h
-	.word	2,8,4,19
-	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P
+	LWWWWWW	scale69f_t,BV6,SHT7,DNK6,DEF6,SDEF7,DSKL0
+	.long	GILLIA_F, UN_MILP_P,UN_MILS_P, TR_MILP_P,TR_MILS_P,Gilliam_h
+	.word	4,8,2,3
+	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P		;A. GILLIAM
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head

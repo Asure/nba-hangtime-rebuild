@@ -5546,9 +5546,9 @@ LAL_t
 
 	.word  06,03,06,00
 	.word  06,01,06,03	;SHERMAN DOUGLAS    6'1"  180  fat
-;kill
-	.word  06,08,05,06
-	.word  04,09,02,04	;ANDREW LANG		6'11"	235 reg
+
+	.word  06,08,07,06
+	.word  07,06,04,02	;ARMON GILLIAM      6'9" 245  fat
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5894,7 +5894,7 @@ name_sort
  .long	VAUGHT,RROGERS,LMURRAY,PRICHARD,BBARRY			;11 CLIPPERS
  .long	ONEAL,EJONES,VANEXEL,HORRY,BRYANT			;12 LAKERS
  .long	MOURN,THARDAWAY,DANILOVI, DANILOVI , DANILOVI	;kill,kill ;13 HEAT
- .long	BAKER,GROBINSO, ALLEN ,DOUGLAS, LANG 		;new	;14 BUCKS
+ .long	BAKER,GROBINSO, ALLEN ,DOUGLAS,GILLIAM			;14 BUCKS
  .long	GARNETT,GUGLI2, MARBURY , MARBURY , MARBURY	;new,kill,kill ;15 TIMBERWOLVES
  .long	GILL, KITTLES ,PACK,BRADLEY,OBANNON		;new	;16 NETS
  .long	EWING,JOHNSN_L,HOUSTON,STARKS,OAKLEY		;new	;17 KNICKS
@@ -5966,7 +5966,7 @@ team_sqaud_cnts
 	.word	20	;L.A. CLIPPERS
 	.word	20	;L.A. LAKERS
 	.word	6	;MIAMI
-	.word	12	;MILWAUKEE
+	.word	20	;MILWAUKEE
 	.word	6	;MINNESOTTA
 	.word	20	;NEW JERSEY
 	.word	20	;NEW YORK
