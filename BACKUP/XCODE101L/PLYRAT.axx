@@ -810,9 +810,9 @@ DAL_t
 	.long	MONTRO_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,Montross_h
 	.word	3,8,3,14
 	.long	SW_DALP_P,SW_DALS_P,VP_DALP_P,VP_DALS_P
-	LWWWWWW	scale68f_t,BV8,SHT9,DNK8,DEF7,SDEF4,DSKL5
-	.long	MASH_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,Mash_h
-	.word	5,3,9,10
+	LWWWWWW	scale66f_t,BV5,SHT8,DNK2,DEF5,SDEF4,DSKL5
+	.long	DANILO_F, UN_DALP_P,UN_DALS_P, TR_DALP_P,TR_DALS_P,Danilovic_h
+	.word	5,5,4,6
 	.long	SW_DALP_P,SW_DALS_P,VP_DALP_P,VP_DALS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
@@ -1018,9 +1018,9 @@ MIAMI_t
 	.long	Hrdaway_f, UN_MIAP_P,UN_MIAS_P, TR_MIAP_P,TR_MIAS_P,Hardaway_h
 	.word	8,5,6,5
 	.long	SW_MIAP_P,SW_MIAS_P,VP_MIAP_P,VP_MIAS_P
-	LWWWWWW	scale66f_t,BV5,SHT8,DNK2,DEF5,SDEF4,DSKL5
-	.long	DANILO_F, UN_MIAP_P,UN_MIAS_P, TR_MIAP_P,TR_MIAS_P,Danilovic_h
-	.word	5,5,4,6
+	LWWWWWW	scale68f_t,BV8,SHT9,DNK8,DEF7,SDEF4,DSKL5
+	.long	MASH_F, UN_MIAP_P,UN_MIAS_P, TR_MIAP_P,TR_MIAS_P,Mash_h
+	.word	5,3,9,10
 	.long	SW_MIAP_P,SW_MIAS_P,VP_MIAP_P,VP_MIAS_P
 ;kill
 	LWWWWWW	scale68_t,BV8,SHT7,DNK7,DEF8,SDEF5,DSKL5
