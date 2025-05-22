@@ -5352,17 +5352,17 @@ player_attribs
 	.word  09,02,07,09
 	.word  07,02,04,09	;MICHAEL FINLEY   ____________
 
-	.word  06,05,06,01
-	.word  07,01,05,05	;DEREK HARPER		6'4"	206 reg
-
-	.word  07,04,07,05
-	.word  05,04,05,07	;JIM JACKSON		6'6"	220 reg
-
-	.word  04,08,03,07
-	.word  01,06,03,03	;ERIC MONTROSS		_______________
+	.word  05,03,05,08
+	.word  04,10,03,04	;SHAWN BRADLEY		7'6"	248 ex thin
 
 	.word  05,05,08,02
 	.word  04,05,05,04	;SASHA DANILOVIC	_______________
+
+	.word  09,03,06,00
+	.word  09,00,09,02	;ROBERT PACK		6'2"	180 thin
+
+	.word  06,05,06,01
+	.word  07,01,05,05	;DEREK HARPER		6'4"	206 reg
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5577,14 +5577,14 @@ LAL_t
 	.word  06,06,07,07
 	.word  03,07,05,02	;KERRY KITTLES		_______________
 
-	.word  09,03,06,00
-	.word  09,00,09,02	;ROBERT PACK		6'2"	180 thin
+	.word  09,01,06,01
+	.word  04,01,06,02	;SAM CASSELL		6'3"	195 thin
 
-	.word  05,03,05,08
-	.word  04,10,03,04	;SHAWN BRADLEY		7'6"	248 ex thin
+	.word  07,04,07,05
+	.word  05,04,05,07	;JIM JACKSON		6'6"	220 reg
 
-	.word  08,04,05,06
-	.word  09,05,05,08	;ED O'BANNON		_______________
+	.word  04,08,03,07
+	.word  01,06,03,03	;ERIC MONTROSS		_______________
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5878,7 +5878,7 @@ name_sort
  .long	RICE,MASON,DIVAC,ZIDEK,CURRY					;02 HORNETS
  .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY				;03 BULLS
  .long	BRANDON,CMILLS,PHILLS,THILL,FERRY				;04 CAVALIERS
- .long	FINLEY,HARPER_D,JACK,MONTROSS,DANILOVI			;05 MAVERICKS
+ .long	FINLEY,BRADLEY,DANILOVI,PACK,HARPER_D			;05 MAVERICKS
  .long	DELLIS,MCDYESS,MARCIULO, DELLIS	, DELLIS		;06 NUGGETS
  .long	GHILL,DUMARS,THORPE,TMILLS, AUGMON 				;07 PISTONS
  .long	SPREWELL,MULLIN,JSMITH,KONCAK, MULLIN			;08 WARRIORS
@@ -5889,7 +5889,7 @@ name_sort
  .long	MOURN,THARDAWAY,MASH, MASH , MASH				;13 HEAT
  .long	BAKER,GROBINSO, ALLEN ,DOUGLAS,GILLIAM			;14 BUCKS
  .long	GARNETT,GUGLI2, MARBURY , MARBURY , MARBURY		;15 TIMBERWOLVES
- .long	GILL, KITTLES ,PACK,BRADLEY,OBANNON				;16 NETS
+ .long	GILL, KITTLES ,CASSELL,JACK,MONTROSS			;16 NETS
  .long	EWING,JOHNSN_L,HOUSTON,STARKS,OAKLEY			;17 KNICKS
  .long	AHARDAWAY,GRANT_HC,NANDERSON,SEIKALY,DSCOTT		;18 MAGIC
  .long	IVERSON ,STACKHOU,COLEMAN,WEATHSPN, MINOR		;19 76ers
