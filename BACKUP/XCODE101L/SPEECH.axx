@@ -806,8 +806,8 @@ full_name_speech
  .word	0100DH,67,1672	;SCOTT,       dennis
 
  .word	0100DH,72,2942	;IVERSON,     allen			( PHILADELPHIA )
- .word	0100DH,96,1680	;STACKHOUSE,  jerry
  .word	0100DH,71,1684	;COLEMAN,     derrick
+ .word	0100DH,96,1680	;STACKHOUSE,  jerry
  .word	0100DH,113,1688	;WEATHERSPOON,clarence
  .word	0,0,0
 
@@ -985,8 +985,8 @@ pass_speech		;'TO player name'
  .word	0100DH,45,1675	;to SCOTT,       dennis
 
  .word	0100DH,53,2944	;to IVERSON,     allen		( PHILADELPHIA )
- .word	0100DH,69,1683	;to STACKHOUSE,  jerry
  .word	0100DH,46,1687	;to COLEMAN,     derrick
+ .word	0100DH,69,1683	;to STACKHOUSE,  jerry
  .word	0100DH,75,1691	;to WEATHERSPOON,clarence
  .word	0,0,0
 
@@ -1164,8 +1164,8 @@ name_speech 		;(last name only, excited)
  .word	0100DH,36,1673	;SCOTT,       dennis
 
  .word	0100DH,44,2943	;IVERSON,     allen			( PHILADELPHIA )
- .word	0100DH,59,1681	;STACKHOUSE,  jerry
  .word	0100DH,37,1685	;COLEMAN,     derrick
+ .word	0100DH,59,1681	;STACKHOUSE,  jerry
  .word	0100DH,66,1689	;WEATHERSPOON,clarence
  .word	0,0,0
 
