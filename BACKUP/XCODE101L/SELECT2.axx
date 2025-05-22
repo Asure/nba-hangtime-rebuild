@@ -5269,20 +5269,17 @@ player_attribs
 
 ;01 BOSTON CELTICS
 
-	.word  08,02,05,07 
-	.word  07,01,05,02	;DEE BROWN		6'1"	161 reg
-
-	.word  06,07,07,05
-	.word  03,07,06,01	;STEVE HAMER		_______________
-
-	.word  09,01,09,01
-	.word  07,01,06,05	;DANA BARROS		5'11"	165 reg
+	.word  05,09,07,05
+	.word  08,05,07,07	;RICK FOX		6'7"	231 reg
 
 	.word  07,08,07,07
 	.word  07,09,01,06	;DINO RADJA		6'11"	225 thin 
 
-	.word  05,09,07,05
-	.word  08,05,07,07	;RICK FOX		6'7"	231 reg
+	.word  09,01,09,01
+	.word  07,01,06,05	;DANA BARROS		5'11"	165 reg
+
+	.word  08,02,05,07 
+	.word  07,01,05,02	;DEE BROWN		6'1"	161 reg
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5874,7 +5871,7 @@ LAL_t
 
 name_sort
  .long	BLAYLOCK,MUTUMBO,LAETTNER,SSMITH, KNORMAN		;00 HAWKS
- .long	BROWN, HAMER ,BARROS,RADJA,FOX					;01 CELTICS
+ .long	FOX,RADJA,BARROS,BROWN, HAMER					;01 CELTICS
  .long	RICE,MASON,DIVAC,CURRY, ZIDEK					;02 HORNETS
  .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY				;03 BULLS
  .long	BRANDON,CMILLS,PHILLS,THILL,FERRY				;04 CAVALIERS
@@ -5946,7 +5943,7 @@ hnrxxtbl	.word	57,148,251,342
 team_sqaud_cnts
 ;DJT Start
 	.word	12	;ATLANTA
-	.word	20	;BOSTON
+	.word	12	;BOSTON
 	.word	12	;CHARLOTTE
 	.word	20	;CHICAGO
 	.word	20	;CLEVELAND

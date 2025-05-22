@@ -4396,30 +4396,30 @@ player_heads
 	.long	0,0
 
 ;01 BOSTON
-	.long	BRO_BOS,HAM_COL
-	.long	BRO_BOS,BAR_BOS
-	.long	BRO_BOS,RAD_BOS
-	.long	BRO_BOS,FOX_BOS
-
-	.long	HAM_COL,BRO_BOS
-	.long	HAM_COL,BAR_BOS
-	.long	HAM_COL,RAD_BOS
-	.long	HAM_COL,FOX_BOS
-
-	.long	BAR_BOS,BRO_BOS
-	.long	BAR_BOS,HAM_COL
-	.long	BAR_BOS,RAD_BOS
-	.long	BAR_BOS,FOX_BOS
-
-	.long	RAD_BOS,BRO_BOS
-	.long	RAD_BOS,HAM_COL
-	.long	RAD_BOS,BAR_BOS
-	.long	RAD_BOS,FOX_BOS
-
-	.long	FOX_BOS,BRO_BOS
-	.long	FOX_BOS,HAM_COL
-	.long	FOX_BOS,BAR_BOS
 	.long	FOX_BOS,RAD_BOS
+	.long	FOX_BOS,BAR_BOS
+	.long	FOX_BOS,BRO_BOS
+
+	.long	RAD_BOS,FOX_BOS
+	.long	RAD_BOS,BAR_BOS
+	.long	RAD_BOS,BRO_BOS
+
+	.long	BAR_BOS,FOX_BOS
+	.long	BAR_BOS,RAD_BOS
+	.long	BAR_BOS,BRO_BOS
+
+	.long	BRO_BOS,FOX_BOS
+	.long	BRO_BOS,RAD_BOS
+	.long	BRO_BOS,BAR_BOS
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;02 CHARLOTTE
 	.long	RCE_CHA,MAS_NEY
@@ -5194,30 +5194,30 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;01 BOSTON
-	.long	BROWN,HAMER
-	.long	BROWN,BARROS
-	.long	BROWN,RADJA
-	.long	BROWN,FOX
-
-	.long	HAMER,BROWN
-	.long	HAMER,BARROS
-	.long	HAMER,RADJA
-	.long	HAMER,FOX
-
-	.long	BARROS,BROWN
-	.long	BARROS,HAMER
-	.long	BARROS,RADJA
-	.long	BARROS,FOX
-
-	.long	RADJA,BROWN
-	.long	RADJA,HAMER
-	.long	RADJA,BARROS
-	.long	RADJA,FOX
-
-	.long	FOX,BROWN
-	.long	FOX,HAMER
-	.long	FOX,BARROS
 	.long	FOX,RADJA
+	.long	FOX,BARROS
+	.long	FOX,BROWN
+
+	.long	RADJA,FOX
+	.long	RADJA,BARROS
+	.long	RADJA,BROWN
+
+	.long	BARROS,FOX
+	.long	BARROS,RADJA
+	.long	BARROS,BROWN
+
+	.long	BROWN,FOX
+	.long	BROWN,RADJA
+	.long	BROWN,BARROS
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;02 CHARLOTTE
 	.long	RICE,MASON

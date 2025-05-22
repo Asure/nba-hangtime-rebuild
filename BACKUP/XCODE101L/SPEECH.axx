@@ -697,11 +697,11 @@ full_name_speech
  .word	0100DH,64,1308	;SMITH,       steve
  .word	0,0,0
 
- .word	0100DH,61,1320	;BROWN,       dee			( BOSTON )
- .word	0100DH,57,2912	;HAMER,       steve
- .word	0100DH,66,1324	;BARROS,      dana
+ .word	0100DH,59,1336	;FOX,         rick			( BOSTON )
  .word	0100DH,66,1332	;RADJA,       dino
- .word	0100DH,59,1336	;FOX,         rick
+ .word	0100DH,66,1324	;BARROS,      dana
+ .word	0100DH,61,1320	;BROWN,       dee
+ .word	0,0,0
 
  .word	0100DH,65,1348	;RICE,        glen			( CHARLOTTE )
  .word	0100DH,80,1644	;MASON,       anthony
@@ -876,11 +876,11 @@ pass_speech		;'TO player name'
  .word	0100DH,43,1311	;to SMITH,       steve
  .word	0,0,0
 
- .word	0100DH,42,1323	;to BROWN,       dee		( BOSTON )
- .word	0100DH,35,2914	;to HAMER,       steve
- .word	0100DH,40,1327	;to BARROS,      dana
+ .word	0100DH,43,1339	;to FOX,         rick		( BOSTON )
  .word	0100DH,44,1335	;to RADJA,       dino
- .word	0100DH,43,1339	;to FOX,         rick
+ .word	0100DH,40,1327	;to BARROS,      dana
+ .word	0100DH,42,1323	;to BROWN,       dee
+ .word	0,0,0
 
  .word	0100DH,42,1351	;to RICE,        glen		( CHARLOTTE )
  .word	0100DH,60,1647	;to MASON,       anthony
@@ -1055,11 +1055,11 @@ name_speech 		;(last name only, excited)
  .word	0100DH,33,1309	;SMITH,       steve
  .word	0,0,0
 
- .word	0100DH,36,1321	;BROWN,       dee			( BOSTON )
- .word	0100DH,26,2913	;HAMER,       steve
- .word	0100DH,31,1325	;BARROS,      dana
+ .word	0100DH,33,1337	;FOX,         rick			( BOSTON )
  .word	0100DH,35,1333	;RADJA,       dino
- .word	0100DH,33,1337	;FOX,         rick
+ .word	0100DH,31,1325	;BARROS,      dana
+ .word	0100DH,36,1321	;BROWN,       dee
+ .word	0,0,0
 
  .word	0100DH,33,1349	;RICE,        glen			( CHARLOTTE )
  .word	0100DH,51,1645	;MASON,       anthony
