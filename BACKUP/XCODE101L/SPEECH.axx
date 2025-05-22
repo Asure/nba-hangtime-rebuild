@@ -859,11 +859,11 @@ full_name_speech
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,77,1720	;STRICKLAND,  rod			( WASHINGTON )
- .word	0100DH,53,1864	;WEBBER,      chris
+ .word	0100DH,53,1864	;WEBBER,      chris			( WASHINGTON )
+ .word	0100DH,77,1720	;STRICKLAND,  rod
  .word	0100DH,74,1860	;HOWARD,      juwan
  .word	0100DH,92,1876	;MURESAN,     gheorge
- .word	0100DH,69,1868	;CHEANEY,     calbert
+ .word	0100DH,53,1816	;MURRAY,      tracy
 
 
 ***********
@@ -1038,11 +1038,11 @@ pass_speech		;'TO player name'
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,51,1723	;to STRICKLAND,  rod		( WASHINGTON )
- .word	0100DH,28,1867	;to WEBBER,      chris
+ .word	0100DH,28,1867	;to WEBBER,      chris		( WASHINGTON )
+ .word	0100DH,51,1723	;to STRICKLAND,  rod
  .word	0100DH,43,1863	;to HOWARD,      juwan
  .word	0100DH,63,1879	;to MURESAN,     gheorge
- .word	0100DH,43,1871	;to CHEANEY,     calbert
+ .word	0100DH,40,1819	;to MURRAY,      tracy
 
 
 ***********
@@ -1217,11 +1217,11 @@ name_speech 		;(last name only, excited)
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,42,1721	;STRICKLAND,  rod			( WASHINGTON )
- .word	0100DH,18,1865	;WEBBER,      chris
+ .word	0100DH,18,1865	;WEBBER,      chris			( WASHINGTON )
+ .word	0100DH,42,1721	;STRICKLAND,  rod
  .word	0100DH,34,1861	;HOWARD,      juwan
  .word	0100DH,54,1877	;MURESAN,     gheorge
- .word	0100DH,34,1869	;CHEANEY,     calbert
+ .word	0100DH,29,1817	;MURRAY,      tracy
 
 
 ;FIX!!!

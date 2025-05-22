@@ -1430,13 +1430,13 @@ VANCOU_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 WASH_t
-	LWWWWWW	scale63_t,BV8,SHT7,DNK0,DEF1,SDEF7,DSKL5
-	.long	STRICK_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Strickland_h
-	.word	10,3,6,9
-	.long	SW_WASP_P,SW_WASS_P,VP_WASP_P,VP_WASS_P
 	LWWWWWW	scale610f_t,BV8,SHT8,DNK8,DEF4,SDEF6,DSKL5
 	.long	WEBBER_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Webber_h
 	.word	6,8,7,4
+	.long	SW_WASP_P,SW_WASS_P,VP_WASP_P,VP_WASS_P
+	LWWWWWW	scale63_t,BV8,SHT7,DNK0,DEF1,SDEF7,DSKL5
+	.long	STRICK_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Strickland_h
+	.word	10,3,6,9
 	.long	SW_WASP_P,SW_WASS_P,VP_WASP_P,VP_WASS_P
 	LWWWWWW	scale69f_t,BV7,SHT8,DNK6,DEF3,SDEF5,DSKL5
 	.long	JHOW_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Jhoward_h
@@ -1446,10 +1446,10 @@ WASH_t
 	.long	MURESA_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Muresan_h
 	.word	1,9,4,4
 	.long	SW_WASP_P,SW_WASS_P,VP_WASP_P,VP_WASS_P
-	LWWWWWW	scale67_t,BV7,SHT6,DNK6,DEF2,SDEF6,DSKL5
-	.long	CHEAN_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Cheaney_h
-	.word	2,5,8,20
-	.long	SW_WASP_P,SW_WASS_P,VP_WASP_P,VP_WASS_P
+	LWWWWWW	scale67_t,BV4,SHT7,DNK5,DEF3,SDEF3,DSKL_6
+	.long	MURRAY_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,TMurray_h
+	.word	2,5,7,8
+	.long	SW_WASP_P,SW_WASS_P,VP_WASP_P,VP_WASS_P		;T. MURRAY
 
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
