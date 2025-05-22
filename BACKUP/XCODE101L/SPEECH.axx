@@ -742,7 +742,7 @@ full_name_speech
  .word	0100DH,76,1464	;SPREWELL,    latrell		( GOLDEN STATE )
  .word	0100DH,77,1476	;MULLIN,      chris
  .word	0100DH,65,1472	;SMITH,       joe
- .word	0100DH,72,1676	;KONCAK,      jon
+ .word	0,0,0
  .word	0,0,0
 
  .word	0100DH,118,1480	;OLAJUWAN,    hakeem		( HOUSTON )
@@ -921,7 +921,7 @@ pass_speech		;'TO player name'
  .word	0100DH,52,1467	;to SPREWELL,    latrell	( GOLDEN STATE )
  .word	0100DH,52,1479	;to MULLIN,      chris
  .word	0100DH,43,1475	;to SMITH,       joe
- .word	0100DH,46,1679	;to KONCAK,      jon
+ .word	0,0,0
  .word	0,0,0
 
  .word	0100DH,64,1483	;to OLAJUWAN,    hakeem		( HOUSTON )
@@ -1100,7 +1100,7 @@ name_speech 		;(last name only, excited)
  .word	0100DH,43,1465	;SPREWELL,    latrell		( GOLDEN STATE )
  .word	0100DH,43,1477	;MULLIN,      chris
  .word	0100DH,33,1473	;SMITH,       joe
- .word	0100DH,37,1677	;KONCAK,      jon
+ .word	0,0,0
  .word	0,0,0
 
  .word	0100DH,55,1482	;OLAJUWAN,    hakeem		( HOUSTON )
