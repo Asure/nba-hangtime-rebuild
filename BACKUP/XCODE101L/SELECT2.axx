@@ -5281,6 +5281,9 @@ player_attribs
 	.word  08,02,05,07 
 	.word  07,01,05,02	;DEE BROWN		6'1"	161 reg
 
+	.word  00,00,00,00
+	.word  00,00,00,00
+
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
 
