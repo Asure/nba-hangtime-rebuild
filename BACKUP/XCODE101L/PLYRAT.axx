@@ -1319,22 +1319,23 @@ SANANT_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 SEA_t
-	LWWWWWW	scale610_t,BV8,SHT8,DNK10,DEF9,SDEF6,DSKL5
-	.long	kemp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Kemp_h
-	.word	3,7,7,5
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
 	LWWWWWW	scale64_t,BV10,SHT7,DNK0,DEF2,SDEF10,DSKL5
 	.long	PAYTON_F, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Payton_h
 	.word	8,3,8,2
 	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
-	LWWWWWW	scale610t_t,BV5,SHT8,DNK5,DEF4,SDEF2,DSKL5
-	.long	schremp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Schrempf_h
-	.word	4,6,2,14
+	LWWWWWW	scale610_t,BV8,SHT8,DNK10,DEF9,SDEF6,DSKL5
+	.long	kemp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Kemp_h
+	.word	3,7,7,5
 	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
 	LWWWWWW	scale63_t,BV6,SHT7,DNK0,DEF4,SDEF6,DSKL5
 	.long	hawkins_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Hawkins_h
 	.word	5,3,7,0
 	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+	LWWWWWW	scale610t_t,BV5,SHT8,DNK5,DEF4,SDEF2,DSKL5
+	.long	schremp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Schrempf_h
+	.word	4,6,2,14
+	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+;kill
 	LWWWWWW	scale67t_t,BV7,SHT4,DNK4,DEF4,SDEF4,DSKL5
 	.long	FORD_F, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Sford_h
 	.word	6,3,4,1

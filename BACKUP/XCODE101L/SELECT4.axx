@@ -4992,30 +4992,30 @@ player_heads
 	.long	MAX_PHL,DEL_SAN
 
 ;24 SEATTLE
-	.long	KMP_SEA,PAY_SEA
-	.long	KMP_SEA,SCH_SEA
-	.long	KMP_SEA,HWK_SEA
-	.long	KMP_SEA,FOR_SEA
-
 	.long	PAY_SEA,KMP_SEA
-	.long	PAY_SEA,SCH_SEA
 	.long	PAY_SEA,HWK_SEA
-	.long	PAY_SEA,FOR_SEA
+	.long	PAY_SEA,SCH_SEA
 
-	.long	SCH_SEA,KMP_SEA
-	.long	SCH_SEA,PAY_SEA
-	.long	SCH_SEA,HWK_SEA
-	.long	SCH_SEA,FOR_SEA
+	.long	KMP_SEA,PAY_SEA
+	.long	KMP_SEA,HWK_SEA
+	.long	KMP_SEA,SCH_SEA
 
-	.long	HWK_SEA,KMP_SEA
 	.long	HWK_SEA,PAY_SEA
+	.long	HWK_SEA,KMP_SEA
 	.long	HWK_SEA,SCH_SEA
-	.long	HWK_SEA,FOR_SEA
 
-	.long	FOR_SEA,KMP_SEA
-	.long	FOR_SEA,PAY_SEA
-	.long	FOR_SEA,SCH_SEA
-	.long	FOR_SEA,HWK_SEA
+	.long	SCH_SEA,PAY_SEA
+	.long	SCH_SEA,KMP_SEA
+	.long	SCH_SEA,HWK_SEA
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;25 TORONTO
 	.long	STO_TOR,WIL_MIA
@@ -5790,30 +5790,30 @@ WALLACE	.equ	11
 	.long	VMAXWELL,DELNEGRO
 
 ;24 SEATTLE
-	.long	KEMP,PAYTON
-	.long	KEMP,SCHREMPF
-	.long	KEMP,HAWKINS
-	.long	KEMP,SFORD
-
 	.long	PAYTON,KEMP
-	.long	PAYTON,SCHREMPF
 	.long	PAYTON,HAWKINS
-	.long	PAYTON,SFORD
+	.long	PAYTON,SCHREMPF
 
-	.long	SCHREMPF,KEMP
-	.long	SCHREMPF,PAYTON
-	.long	SCHREMPF,HAWKINS
-	.long	SCHREMPF,SFORD
+	.long	KEMP,PAYTON
+	.long	KEMP,HAWKINS
+	.long	KEMP,SCHREMPF
 
-	.long	HAWKINS,KEMP
 	.long	HAWKINS,PAYTON
+	.long	HAWKINS,KEMP
 	.long	HAWKINS,SCHREMPF
-	.long	HAWKINS,SFORD
 
-	.long	SFORD,KEMP
-	.long	SFORD,PAYTON
-	.long	SFORD,SCHREMPF
-	.long	SFORD,HAWKINS
+	.long	SCHREMPF,PAYTON
+	.long	SCHREMPF,KEMP
+	.long	SCHREMPF,HAWKINS
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;25 TORONTO
 	.long	STOUDAMI,WWILLIAM
