@@ -4605,22 +4605,21 @@ player_heads
 	.long	0,0
 
 ;09 HOUSTON
-	.long	OLA_HOU,HAR_COL
 	.long	OLA_HOU,DRX_HOU
 	.long	OLA_HOU,WLS_GLD
 
-	.long	HAR_COL,OLA_HOU
-	.long	HAR_COL,DRX_HOU
-	.long	HAR_COL,WLS_GLD
-
 	.long	DRX_HOU,OLA_HOU
-	.long	DRX_HOU,HAR_COL
 	.long	DRX_HOU,WLS_GLD
 
 	.long	WLS_GLD,OLA_HOU
-	.long	WLS_GLD,HAR_COL
 	.long	WLS_GLD,DRX_HOU
 
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5402,22 +5401,21 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;09 HOUSTON
-	.long	OLAJUWON,HRNGTON
 	.long	OLAJUWON,DREXLER
 	.long	OLAJUWON,WILLIS
 
-	.long	HRNGTON,OLAJUWON
-	.long	HRNGTON,DREXLER
-	.long	HRNGTON,WILLIS
-
 	.long	DREXLER,OLAJUWON
-	.long	DREXLER,HRNGTON
 	.long	DREXLER,WILLIS
 
 	.long	WILLIS,OLAJUWON
-	.long	WILLIS,HRNGTON
 	.long	WILLIS,DREXLER
 
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
