@@ -4955,19 +4955,20 @@ player_heads
 ;22 SACRAMENTO
 	.long	RIC_SAC,OWE_SAC
 	.long	RIC_SAC,RAF_DEN
+	.long	RIC_SAC,EDN_SAC
 
 	.long	OWE_SAC,RIC_SAC
 	.long	OWE_SAC,RAF_DEN
+	.long	OWE_SAC,EDN_SAC
 
 	.long	RAF_DEN,RIC_SAC
 	.long	RAF_DEN,OWE_SAC
+	.long	RAF_DEN,EDN_SAC
 
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+	.long	EDN_SAC,RIC_SAC
+	.long	EDN_SAC,OWE_SAC
+	.long	EDN_SAC,RAF_DEN
+
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5761,19 +5762,20 @@ WALLACE	.equ	11
 ;22 SACRAMENTO
 	.long	RICH,BOWENS
 	.long	RICH,ABDULRAU
+	.long	RICH,EDNEY
 
 	.long	BOWENS,RICH
 	.long	BOWENS,ABDULRAU
+	.long	BOWENS,EDNEY
 
 	.long	ABDULRAU,RICH
 	.long	ABDULRAU,BOWENS
+	.long	ABDULRAU,EDNEY
 
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+	.long	EDNEY,RICH
+	.long	EDNEY,BOWENS
+	.long	EDNEY,ABDULRAU
+
 	.long	0,0
 	.long	0,0
 	.long	0,0

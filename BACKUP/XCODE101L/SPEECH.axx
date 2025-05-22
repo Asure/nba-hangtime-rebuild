@@ -833,7 +833,7 @@ full_name_speech
  .word	0100DH,82,1744	;RICHMOND,    mitch		( SACRAMENTO )
  .word	0100DH,74,1564	;OWENS,       billy
  .word	0100DH,89,1420	;ABDUL-RAUF,  mahmoud
- .word	0,0,0
+ .word	0100DH,50,1756	;EDNEY,       tyus
  .word	0,0,0
 
  .word	0100DH,69,1760	;ELLIOTT,     sean		( SAN ANTONIO )
@@ -1021,7 +1021,7 @@ pass_speech		;'TO player name'
  .word	0100DH,51,1747	;to RICHMOND,    mitch		( SACRAMENTO )
  .word	0100DH,51,1567	;to OWENS,       billy
  .word	0100DH,61,1423	;to ABDUL-RAUF,  mahmoud
- .word	0,0,0
+ .word	0100DH,36,1759	;to EDNEY,       tyus
  .word	0,0,0
 
  .word	0100DH,41,1763	;to ELLIOTT,     sean		( SAN ANTONIO )
@@ -1209,7 +1209,7 @@ name_speech 		;(last name only, excited)
  .word	0100DH,41,1745	;RICHMOND,    mitch		( SACRAMENTO )
  .word	0100DH,41,1565	;OWENS,       billy
  .word	0100DH,51,1421	;ABDUL-RAUF,  mahmoud
- .word	0,0,0
+ .word	0100DH,27,1757	;EDNEY,       tyus
  .word	0,0,0
 
  .word	0100DH,32,1761	;ELLIOTT,     sean		( SAN ANTONIO )

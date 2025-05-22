@@ -1287,15 +1287,14 @@ SAC_t
 	.long	RAUF_F, UN_SACP_P,UN_SACS_P, TR_SACP_P,TR_SACS_P,Rauf_h
 	.word	8,2,9,0
 	.long	SW_SACP_P,SW_SACS_P,VP_SACP_P,VP_SACS_P
+	LWWWWWW	scale510et_t,BV10,SHT6,DNK0,DEF0,SDEF8,DSKL5
+	.long	EDNEY_F, UN_SACP_P,UN_SACS_P, TR_SACP_P,TR_SACS_P,Edney_h
+	.word	8,1,4,1
+	.long	SW_SACP_P,SW_SACS_P,VP_SACP_P,VP_SACS_P
 ;kill
 	LWWWWWW	scale69f_t,BV5,SHT5,DNK6,DEF9,SDEF2,DSKL5
 	.long	BGRANT_F, UN_SACP_P,UN_SACS_P, TR_SACP_P,TR_SACS_P,Bgrant_h
 	.word	1,6,6,6
-	.long	SW_SACP_P,SW_SACS_P,VP_SACP_P,VP_SACS_P
-;kill
-	LWWWWWW	scale510et_t,BV10,SHT6,DNK0,DEF0,SDEF8,DSKL5
-	.long	EDNEY_F, UN_SACP_P,UN_SACS_P, TR_SACP_P,TR_SACS_P,Edney_h
-	.word	8,1,4,1
 	.long	SW_SACP_P,SW_SACS_P,VP_SACP_P,VP_SACS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
