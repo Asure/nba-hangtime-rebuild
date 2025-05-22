@@ -693,9 +693,9 @@ full_name_speech
 
  .word	0100DH,83,1304	;BLAYLOCK,    mookie		( ALTANTA HAWKS )
  .word	0100DH,103,1424	;MUTUMBO,     dekembe
- .word	0100DH,64,1308	;SMITH,       steve
  .word	0100DH,71,1604	;LAETNER,     christian
- .word	0100DH,63,1316	;NORMAN,      ken
+ .word	0100DH,64,1308	;SMITH,       steve
+ .word	0,0,0
 
  .word	0100DH,61,1320	;BROWN,       dee			( BOSTON )
  .word	0100DH,57,2912	;HAMER,       steve
@@ -872,9 +872,9 @@ pass_speech		;'TO player name'
 
  .word	0100DH,54,1307	;to BLAYLOCK,    mookie		( ALTANTA HAWKS )
  .word	0100DH,67,1427	;to MUTUMBO,     dekembe
- .word	0100DH,43,1311	;to SMITH,       steve
  .word	0100DH,43,1607	;to LAETNER,     christian
- .word	0100DH,43,1319	;to NORMAN,      ken
+ .word	0100DH,43,1311	;to SMITH,       steve
+ .word	0,0,0
 
  .word	0100DH,42,1323	;to BROWN,       dee		( BOSTON )
  .word	0100DH,35,2914	;to HAMER,       steve
@@ -1051,9 +1051,9 @@ name_speech 		;(last name only, excited)
 
  .word	0100DH,44,1305	;BLAYLOCK,    mookie		( ALTANTA HAWKS )
  .word	0100DH,58,1425	;MUTUMBO,     dekembe
- .word	0100DH,33,1309	;SMITH,       steve
  .word	0100DH,33,1605	;LAETNER,     christian
- .word	0100DH,34,1317	;NORMAN,      ken
+ .word	0100DH,33,1309	;SMITH,       steve
+ .word	0,0,0
 
  .word	0100DH,36,1321	;BROWN,       dee			( BOSTON )
  .word	0100DH,26,2913	;HAMER,       steve

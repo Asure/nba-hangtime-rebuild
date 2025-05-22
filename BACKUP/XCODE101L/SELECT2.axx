@@ -5255,14 +5255,14 @@ player_attribs
 	.word  06,09,04,08
 	.word  05,10,03,07	;DIKEMBE MUTOMBO	7'2"	245 reg
 
-	.word  07,05,08,05
-	.word  05,02,04,06	;STEVE SMITH		6'8"	208 reg
-
 	.word  07,06,07,03
 	.word  05,05,05,08	;CHRISTIAN LAETTNER	6'11"	235 reg
 
-	.word  07,04,06,06
-	.word  04,05,04,02	;KEN NORMAN		6'8"	223 reg
+	.word  07,05,08,05
+	.word  05,02,04,06	;STEVE SMITH		6'8"	208 reg
+
+	.word  00,00,00,00
+	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5873,7 +5873,7 @@ LAL_t
 	.ref	MARBURY,MINOR,RILEY,WALLACE
 
 name_sort
- .long	BLAYLOCK,MUTUMBO,SSMITH,LAETTNER,KNORMAN		;00 HAWKS
+ .long	BLAYLOCK,MUTUMBO,LAETTNER,SSMITH, KNORMAN		;00 HAWKS
  .long	BROWN, HAMER ,BARROS,RADJA,FOX					;01 CELTICS
  .long	RICE,MASON,DIVAC,ZIDEK,CURRY					;02 HORNETS
  .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY				;03 BULLS
@@ -5945,7 +5945,7 @@ hnrxxtbl	.word	57,148,251,342
 ;-----------------------------------------------------------------------------
 team_sqaud_cnts
 ;DJT Start
-	.word	20	;ATLANTA
+	.word	12	;ATLANTA
 	.word	20	;BOSTON
 	.word	20	;CHARLOTTE
 	.word	20	;CHICAGO

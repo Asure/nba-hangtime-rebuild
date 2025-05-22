@@ -4371,29 +4371,29 @@ player_heads
 ;DJT Start
 ;00 ATLANTA
 	.long	BLY_ATL,MUT_DEN
-	.long	BLY_ATL,SMI_ATL
 	.long	BLY_ATL,LAE_ATL
-	.long	BLY_ATL,NOR_ATL
+	.long	BLY_ATL,SMI_ATL
 
 	.long	MUT_DEN,BLY_ATL
-	.long	MUT_DEN,SMI_ATL
 	.long	MUT_DEN,LAE_ATL
-	.long	MUT_DEN,NOR_ATL
-
-	.long	SMI_ATL,BLY_ATL
-	.long	SMI_ATL,MUT_DEN
-	.long	SMI_ATL,LAE_ATL
-	.long	SMI_ATL,NOR_ATL
+	.long	MUT_DEN,SMI_ATL
 
 	.long	LAE_ATL,BLY_ATL
 	.long	LAE_ATL,MUT_DEN
 	.long	LAE_ATL,SMI_ATL
-	.long	LAE_ATL,NOR_ATL
 
-	.long	NOR_ATL,BLY_ATL
-	.long	NOR_ATL,MUT_DEN
-	.long	NOR_ATL,SMI_ATL
-	.long	NOR_ATL,LAE_ATL
+	.long	SMI_ATL,BLY_ATL
+	.long	SMI_ATL,MUT_DEN
+	.long	SMI_ATL,LAE_ATL
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;01 BOSTON
 	.long	BRO_BOS,HAM_COL
@@ -5170,29 +5170,29 @@ WALLACE	.equ	11
 
 ;00 ATLANTA
 	.long	BLAYLOCK,MUTUMBO
-	.long	BLAYLOCK,SSMITH
 	.long	BLAYLOCK,LAETTNER
-	.long	BLAYLOCK,KNORMAN
+	.long	BLAYLOCK,SSMITH
 
 	.long	MUTUMBO,BLAYLOCK
-	.long	MUTUMBO,SSMITH
 	.long	MUTUMBO,LAETTNER
-	.long	MUTUMBO,KNORMAN
-
-	.long	SSMITH,BLAYLOCK
-	.long	SSMITH,MUTUMBO
-	.long	SSMITH,LAETTNER
-	.long	SSMITH,KNORMAN
+	.long	MUTUMBO,SSMITH
 
 	.long	LAETTNER,BLAYLOCK
 	.long	LAETTNER,MUTUMBO
 	.long	LAETTNER,SSMITH
-	.long	LAETTNER,KNORMAN
 
-	.long	KNORMAN,BLAYLOCK
-	.long	KNORMAN,MUTUMBO
-	.long	KNORMAN,SSMITH
-	.long	KNORMAN,LAETTNER
+	.long	SSMITH,BLAYLOCK
+	.long	SSMITH,MUTUMBO
+	.long	SSMITH,LAETTNER
+
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
+	.long	0,0
 
 ;01 BOSTON
 	.long	BROWN,HAMER
