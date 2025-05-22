@@ -5070,14 +5070,14 @@ player_heads
 	.long	0,0
 
 ;27 VANCOUVER
-	.long	ANT_VAN,EDW_VAN
-	.long	ANT_VAN,REV_VAN
-
-	.long	EDW_VAN,ANT_VAN
-	.long	EDW_VAN,REV_VAN
-
 	.long	REV_VAN,ANT_VAN
 	.long	REV_VAN,EDW_VAN
+
+	.long	ANT_VAN,REV_VAN
+	.long	ANT_VAN,EDW_VAN
+
+	.long	EDW_VAN,REV_VAN
+	.long	EDW_VAN,ANT_VAN
 
 	.long	0,0
 	.long	0,0
@@ -5868,14 +5868,14 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;27 VANCOUVER
-	.long	ANTHONY,EDWARDS
-	.long	ANTHONY,BREEVES
-
-	.long	EDWARDS,ANTHONY
-	.long	EDWARDS,BREEVES
-
 	.long	BREEVES,ANTHONY
 	.long	BREEVES,EDWARDS
+
+	.long	ANTHONY,BREEVES
+	.long	ANTHONY,EDWARDS
+
+	.long	EDWARDS,BREEVES
+	.long	EDWARDS,ANTHONY
 
 	.long	0,0
 	.long	0,0
