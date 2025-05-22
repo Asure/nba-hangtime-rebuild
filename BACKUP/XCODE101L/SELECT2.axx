@@ -5394,9 +5394,6 @@ player_attribs
 
 	.word  09,05,08,08
 	.word  08,05,08,09	;GRANT HILL		_______________
-;new
-;;	.word  07,03,08,03
-;;	.word  07,05,06,02	;RON RILEY		_______________
 
 	.word  06,04,08,00
 	.word  06,01,08,09	;JOE DUMARS		6'3"	195 thin
@@ -5404,11 +5401,11 @@ player_attribs
 	.word  07,09,05,07
 	.word  04,07,05,02	;OTIS THORPE		6'10"	246 reg
 
+	.word  04,06,06,02
+	.word  04,02,05,08	;TERRY MILLS          6'10" 250 fat
+;kill
 	.word  08,03,05,07
 	.word  06,02,04,08	;STACEY AUGMON		6'8"	205 thin
-;kill
-	.word  00,00,00,00
-	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5890,7 +5887,7 @@ name_sort
  .long	BRANDON,CMILLS,PHILLS,THILL,FERRY			;04 CAVALIERS
  .long	FINLEY,HARPER_D,JACK,MONTROSS,MASH			;05 MAVERICKS
  .long	DELLIS,MCDYESS,MARCIULO, DELLIS	, DELLIS	;kill	;06 NUGGETS
- .long	GHILL,DUMARS,THORPE,AUGMON, RILEY 		;kill:new ;07 PISTONS
+ .long	GHILL,DUMARS,THORPE,TMILLS, AUGMON 		;kill:new ;07 PISTONS
  .long	SPREWELL,MULLIN,JSMITH,KONCAK, MULLIN		;kill	;08 WARRIORS
  .long	OLAJUWON, HRNGTON ,DREXLER,WILLIS, WILLIS	;new,kill ;09 ROCKETS
  .long	MILLER,MJACKSON,SMITS,DDAVIS,ROSE		;new	;10 PACERS
@@ -5962,7 +5959,7 @@ team_sqaud_cnts
 	.word	20	;CLEVELAND
 	.word	20	;DALLAS
 	.word	6	;DENVER
-	.word	12 ;20	;DETROIT
+	.word	12	;DETROIT
 	.word	12	;GOLDEN STATE
 	.word	12	;HOUSTON
 	.word	20	;INDIANA

@@ -736,11 +736,9 @@ full_name_speech
  .word	0,0,0
 
  .word	0100DH,63,1444	;HILL,        grant		( DETROIT )
-;; .word	0100DH,54,2954	;RILEY,       ron
  .word	0100DH,74,1440	;DUMARS,      joe
  .word	0100DH,56,1452	;THORPE,      otis
- .word	0100DH,77,1300	;AUGMON,      stacey
-;REMOVE!!!
+ .word	0100DH,76,1448	;MILLS,       terry
  .word	0,0,0
 
  .word	0100DH,76,1464	;SPREWELL,    latrell		( GOLDEN STATE )
@@ -925,11 +923,9 @@ pass_speech		;'TO player name'
  .word	0,0,0
 
  .word	0100DH,42,1447	;to HILL,        grant		( DETROIT )
-;; .word	0100DH,41,2956	;to RILEY,       ron
  .word	0100DH,61,1443	;to DUMARS,      joe
  .word	0100DH,34,1455	;to THORPE,      otis
- .word	0100DH,44,1303	;to AUGMON,      stacey
-;REMOVE!!!
+ .word	0100DH,40,1451	;to MILLS,       terry
  .word	0,0,0
 
  .word	0100DH,52,1467	;to SPREWELL,    latrell	( GOLDEN STATE )
@@ -1115,11 +1111,9 @@ name_speech 		;(last name only, excited)
  .word	0,0,0
 
  .word	0100DH,33,1445	;HILL,        grant		( DETROIT )
-;; .word	0100DH,31,2955	;RILEY,       ron
  .word	0100DH,46,1441	;DUMARS,      joe
  .word	0100DH,25,1453	;THORPE,      otis
- .word	0100DH,34,1301	;AUGMON,      stacey
-;REMOVE!!!
+ .word	0100DH,40,1449	;MILLS,       terry
  .word	0,0,0
 
  .word	0100DH,43,1465	;SPREWELL,    latrell		( GOLDEN STATE )

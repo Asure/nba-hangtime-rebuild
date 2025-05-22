@@ -4553,32 +4553,23 @@ player_heads
 	.long	0,0
 
 ;07 DETROIT
-;;	.long	HIL_DET,RIL_COL
 	.long	HIL_DET,DUM_DET
 	.long	HIL_DET,THR_DET
-	.long	HIL_DET,AUG_ATL
-
-;;	.long	RIL_COL,HIL_DET		;new
-;;	.long	RIL_COL,DUM_DET
-;;	.long	RIL_COL,THR_DET
-;;	.long	RIL_COL,AUG_ATL
+	.long	HIL_DET,MLS_DET
 
 	.long	DUM_DET,HIL_DET
-;;	.long	DUM_DET,RIL_COL
 	.long	DUM_DET,THR_DET
-	.long	DUM_DET,AUG_ATL
+	.long	DUM_DET,MLS_DET
 
 	.long	THR_DET,HIL_DET
-;;	.long	THR_DET,RIL_COL
 	.long	THR_DET,DUM_DET
-	.long	THR_DET,AUG_ATL
+	.long	THR_DET,MLS_DET
 
-	.long	AUG_ATL,HIL_DET
-;;	.long	AUG_ATL,RIL_COL
-	.long	AUG_ATL,DUM_DET
-	.long	AUG_ATL,THR_DET
+	.long	MLS_DET,HIL_DET
+	.long	MLS_DET,DUM_DET
+	.long	MLS_DET,THR_DET
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5370,32 +5361,23 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;07 DETROIT
-;;	.long	GHILL,RILEY
 	.long	GHILL,DUMARS
 	.long	GHILL,THORPE
-	.long	GHILL,AUGMON
-
-;;	.long	RILEY,GHILL		;new
-;;	.long	RILEY,DUMARS
-;;	.long	RILEY,THORPE
-;;	.long	RILEY,AUGMON
+	.long	GHILL,TMILLS
 
 	.long	DUMARS,GHILL
-;;	.long	DUMARS,RILEY
 	.long	DUMARS,THORPE
-	.long	DUMARS,AUGMON
+	.long	DUMARS,TMILLS
 
 	.long	THORPE,GHILL
-;;	.long	THORPE,RILEY
 	.long	THORPE,DUMARS
-	.long	THORPE,AUGMON
+	.long	THORPE,TMILLS
 
-	.long	AUGMON,GHILL
-;;	.long	AUGMON,RILEY
-	.long	AUGMON,DUMARS
-	.long	AUGMON,THORPE
+	.long	TMILLS,GHILL
+	.long	TMILLS,DUMARS
+	.long	TMILLS,THORPE
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
