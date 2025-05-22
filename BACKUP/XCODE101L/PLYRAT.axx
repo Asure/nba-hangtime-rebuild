@@ -1375,13 +1375,13 @@ TORONTO_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 UTAH_t
-	LWWWWWW	scale61_t,BV7,SHT8,DNK0,DEF1,SDEF10,DSKL5
-	.long	stock_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Stockton_h
-	.word	10,2,8,2
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
 	LWWWWWW	scale69ef_t,BV7,SHT8,DNK8,DEF5,SDEF8,DSKL5
 	.long	kmalone_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,KMalone_h
 	.word	6,10,7,18
+	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
+	LWWWWWW	scale61_t,BV7,SHT8,DNK0,DEF1,SDEF10,DSKL5
+	.long	stock_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Stockton_h
+	.word	10,2,8,2
 	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
 	LWWWWWW	scale64_t,BV5,SHT7,DNK2,DEF2,SDEF7,DSKL5
 	.long	Horna_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Hornacek_h

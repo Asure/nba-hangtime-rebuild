@@ -847,8 +847,8 @@ full_name_speech
  .word	0100DH,74,1412	;JONES,       popeye
  .word	0,0,0
 
- .word	0100DH,79,1820	;STOCKTON,    john			( UTAH )
- .word	0100DH,68,1824	;MALONE,      karl
+ .word	0100DH,68,1824	;MALONE,      karl			( UTAH )
+ .word	0100DH,79,1820	;STOCKTON,    john
  .word	0100DH,70,1828	;HORNACEK,    jeff
  .word	0100DH,64,1836	;MORRIS,      chris
  .word	0,0,0
@@ -1026,8 +1026,8 @@ pass_speech		;'TO player name'
  .word	0100DH,49,1415	;to JONES,       popeye
  .word	0,0,0
 
- .word	0100DH,53,1823	;to STOCKTON,    john		( UTAH )
- .word	0100DH,51,1827	;to MALONE,      karl
+ .word	0100DH,51,1827	;to MALONE,      karl		( UTAH )
+ .word	0100DH,53,1823	;to STOCKTON,    john
  .word	0100DH,49,1831	;to HORNACEK,    jeff
  .word	0100DH,39,1839	;to MORRIS,      chris
  .word	0,0,0
@@ -1205,8 +1205,8 @@ name_speech 		;(last name only, excited)
  .word	0100DH,40,1413	;JONES,       popeye
  .word	0,0,0
 
- .word	0100DH,44,1821	;STOCKTON,    john			( UTAH )
- .word	0100DH,42,1825	;MALONE,      karl
+ .word	0100DH,42,1825	;MALONE,      karl			( UTAH )
+ .word	0100DH,44,1821	;STOCKTON,    john
  .word	0100DH,40,1829	;HORNACEK,    jeff
  .word	0100DH,30,1837	;MORRIS,      chris
  .word	0,0,0
