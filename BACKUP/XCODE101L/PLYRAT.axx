@@ -1292,17 +1292,13 @@ SAC_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 SANANT_t
-	LWWWWWW	scale68_t,BV8,SHT8,DNK7,DEF5,SDEF4,DSKL5
-	.long	Elliot_f, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,Elliot_h
-	.word	2,4,8,0
-	.long	SW_SANP_P,SW_SANS_P,VP_SANP_P,VP_SANS_P
 	LWWWWWW	scale71_t,BV8,SHT8,DNK6,DEF10,SDEF5,DSKL5
 	.long	Robins_f, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,DRobinson_h
 	.word	4,9,6,5
 	.long	SW_SANP_P,SW_SANS_P,VP_SANP_P,VP_SANS_P
-	LWWWWWW	scale64t_t,BV7,SHT8,DNK3,DEF3,SDEF5,DSKL5
-	.long	VMAX_F, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,VMaxwell_h
-	.word	6,4,4,3
+	LWWWWWW	scale68_t,BV8,SHT8,DNK7,DEF5,SDEF4,DSKL5
+	.long	Elliot_f, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,Elliot_h
+	.word	2,4,8,0
 	.long	SW_SANP_P,SW_SANS_P,VP_SANP_P,VP_SANS_P
 	LWWWWWW	scale511_t,BV10,SHT5,DNK0,DEF1,SDEF8,DSKL5
 	.long	AJOHN_F, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,Ajohnson_h
@@ -1311,6 +1307,10 @@ SANANT_t
 	LWWWWWW	scale64_t,BV7,SHT6,DNK1,DEF1,SDEF7,DSKL5
 	.long	DELNEG_F, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,Delnegro_h
 	.word	3,3,2,13
+	.long	SW_SANP_P,SW_SANS_P,VP_SANP_P,VP_SANS_P
+	LWWWWWW	scale64t_t,BV7,SHT8,DNK3,DEF3,SDEF5,DSKL5
+	.long	VMAX_F, UN_SANP_P,UN_SANS_P, TR_SANP_P,TR_SANS_P,VMaxwell_h
+	.word	6,4,4,3
 	.long	SW_SANP_P,SW_SANS_P,VP_SANP_P,VP_SANS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
