@@ -4401,7 +4401,7 @@ player_heads
 	.long	BRO_BOS,RAD_BOS
 	.long	BRO_BOS,FOX_BOS
 
-	.long	HAM_COL,BRO_BOS		;new
+	.long	HAM_COL,BRO_BOS
 	.long	HAM_COL,BAR_BOS
 	.long	HAM_COL,RAD_BOS
 	.long	HAM_COL,FOX_BOS
@@ -4595,7 +4595,7 @@ player_heads
 	.long	KON_ORL,MUL_GLD
 	.long	KON_ORL,SMI_GLD
 			
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -4609,7 +4609,7 @@ player_heads
 	.long	OLA_HOU,DRX_HOU
 	.long	OLA_HOU,WLS_GLD
 
-	.long	HAR_COL,OLA_HOU		;new
+	.long	HAR_COL,OLA_HOU
 	.long	HAR_COL,DRX_HOU
 	.long	HAR_COL,WLS_GLD
 
@@ -4621,7 +4621,7 @@ player_heads
 	.long	WLS_GLD,HAR_COL
 	.long	WLS_GLD,DRX_HOU
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -4683,9 +4683,6 @@ player_heads
 	.long	BAR_CLP,RCH_CLP
 
 ;12 L.A. LAKERS
-;Replaced SCO_VAN with KOB_MUG
-;Replaced JON_LAK with ONE_LAL
-
 	.long	ONE_LAL,JON_LAK
 	.long	ONE_LAL,VAN_LAK
 	.long	ONE_LAL,HOR_HOU
@@ -4721,7 +4718,7 @@ player_heads
 	.long	DAN_MIA,MOU_MIA
 	.long	DAN_MIA,HRD_MIA
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -4769,7 +4766,7 @@ player_heads
 	.long	GUG_MIN,GAR_MIN
 	.long	GUG_MIN,MAR_COL
 
-	.long	MAR_COL,GAR_MIN		;new
+	.long	MAR_COL,GAR_MIN
 	.long	MAR_COL,GUG_MIN
 
 	.long	0,0
@@ -4793,7 +4790,7 @@ player_heads
 	.long	GLL_NEJ,BRA_NEJ
 	.long	GLL_NEJ,OBA_NEJ
 
-	.long	KIT_COL,GLL_NEJ		;new
+	.long	KIT_COL,GLL_NEJ
 	.long	KIT_COL,PAC_WAS
 	.long	KIT_COL,BRA_NEJ
 	.long	KIT_COL,OBA_NEJ
@@ -4866,32 +4863,23 @@ player_heads
 	.long	SCO_ORL,SKL_GLD
 
 ;19 PHILADELPHIA
-;;	.long	IVE_COL,MIN_COL		;new
 	.long	IVE_COL,STA_PHL
 	.long	IVE_COL,COL_PHL
 	.long	IVE_COL,WEA_PHL
 
-;;	.long	MIN_COL,IVE_COL		;new
-;;	.long	MIN_COL,STA_PHL
-;;	.long	MIN_COL,COL_PHL
-;;	.long	MIN_COL,WEA_PHL
-
 	.long	STA_PHL,IVE_COL
-;;	.long	STA_PHL,MIN_COL
 	.long	STA_PHL,COL_PHL
 	.long	STA_PHL,WEA_PHL
 
 	.long	COL_PHL,IVE_COL
-;;	.long	COL_PHL,MIN_COL
 	.long	COL_PHL,STA_PHL
 	.long	COL_PHL,WEA_PHL
 
 	.long	WEA_PHL,IVE_COL
-;;	.long	WEA_PHL,MIN_COL
 	.long	WEA_PHL,STA_PHL
 	.long	WEA_PHL,COL_PHL
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5073,7 +5061,7 @@ player_heads
 	.long	MOR_UTA,MLN_UTA
 	.long	MOR_UTA,HRN_UTA
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5092,7 +5080,7 @@ player_heads
 	.long	REV_VAN,ANT_VAN
 	.long	REV_VAN,EDW_VAN
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5212,7 +5200,7 @@ WALLACE	.equ	11
 	.long	BROWN,RADJA
 	.long	BROWN,FOX
 
-	.long	HAMER,BROWN		;new
+	.long	HAMER,BROWN
 	.long	HAMER,BARROS
 	.long	HAMER,RADJA
 	.long	HAMER,FOX
@@ -5404,7 +5392,7 @@ WALLACE	.equ	11
 	.long	KONCAK,MULLIN
 	.long	KONCAK,JSMITH
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5418,7 +5406,7 @@ WALLACE	.equ	11
 	.long	OLAJUWON,DREXLER
 	.long	OLAJUWON,WILLIS
 
-	.long	HRNGTON,OLAJUWON	;new
+	.long	HRNGTON,OLAJUWON
 	.long	HRNGTON,DREXLER
 	.long	HRNGTON,WILLIS
 
@@ -5430,7 +5418,7 @@ WALLACE	.equ	11
 	.long	WILLIS,HRNGTON
 	.long	WILLIS,DREXLER
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5576,7 +5564,7 @@ WALLACE	.equ	11
 	.long	GUGLI2,GARNETT
 	.long	GUGLI2,MARBURY
 
-	.long	MARBURY,GARNETT		;new
+	.long	MARBURY,GARNETT
 	.long	MARBURY,GUGLI2
 
 	.long	0,0
@@ -5600,7 +5588,7 @@ WALLACE	.equ	11
 	.long	GILL,BRADLEY
 	.long	GILL,OBANNON
 
-	.long	KITTLES,GILL		;new
+	.long	KITTLES,GILL
 	.long	KITTLES,PACK
 	.long	KITTLES,BRADLEY
 	.long	KITTLES,OBANNON
@@ -5673,32 +5661,23 @@ WALLACE	.equ	11
 	.long	DSCOTT,SEIKALY
 
 ;19 PHILADELPHIA
-;;	.long	IVERSON,MINOR		;new
 	.long	IVERSON,STACKHOU
 	.long	IVERSON,COLEMAN
 	.long	IVERSON,WEATHSPN
 
-;;	.long	MINOR,IVERSON		;new
-;;	.long	MINOR,STACKHOU
-;;	.long	MINOR,COLEMAN
-;;	.long	MINOR,WEATHSPN
-
 	.long	STACKHOU,IVERSON
-;;	.long	STACKHOU,MINOR
 	.long	STACKHOU,COLEMAN
 	.long	STACKHOU,WEATHSPN
 
 	.long	COLEMAN,IVERSON
-;;	.long	COLEMAN,MINOR
 	.long	COLEMAN,STACKHOU
 	.long	COLEMAN,WEATHSPN
 
 	.long	WEATHSPN,IVERSON
-;;	.long	WEATHSPN,MINOR
 	.long	WEATHSPN,STACKHOU
 	.long	WEATHSPN,COLEMAN
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5880,7 +5859,7 @@ WALLACE	.equ	11
 	.long	CMORRIS,MALONE_K
 	.long	CMORRIS,HORNACEK
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5899,7 +5878,7 @@ WALLACE	.equ	11
 	.long	BREEVES,ANTHONY
 	.long	BREEVES,EDWARDS
 
-	.long	0,0			;REMOVE!!!
+	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0

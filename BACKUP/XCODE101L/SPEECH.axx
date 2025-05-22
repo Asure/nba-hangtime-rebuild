@@ -697,25 +697,23 @@ full_name_speech
  .word	0100DH,71,1604	;LAETNER,     christian
  .word	0100DH,63,1316	;NORMAN,      ken
 
- .word	0100DH,61,1320	;BROWN,       dee		( BOSTON )
+ .word	0100DH,61,1320	;BROWN,       dee			( BOSTON )
  .word	0100DH,57,2912	;HAMER,       steve
  .word	0100DH,66,1324	;BARROS,      dana
  .word	0100DH,66,1332	;RADJA,       dino
  .word	0100DH,59,1336	;FOX,         rick
 
- .word	0100DH,65,1348	;RICE,        glen		( CHARLOTTE )
+ .word	0100DH,65,1348	;RICE,        glen			( CHARLOTTE )
  .word	0100DH,80,1644	;MASON,       anthony
  .word	0100DH,78,1544	;DIVAC,       vlade
  .word	0100DH,70,1352	;ZIDEK,       george
  .word	0100DH,58,1356	;CURRY,       del
 
-;Michael Jordan - Full Name Speech
- .word	0100DH,68,0bb8h ;Jordan
- .word	0100DH,72,1360	;PIPPEN,      scottie		( CHICAGO )
+ .word	0100DH,68,0bb8h ;JORDAN,      michael		( CHICAGO )
+ .word	0100DH,72,1360	;PIPPEN,      scottie
  .word	0100DH,60,1364	;RODMAN,      dennis
  .word	0100DH,70,1368	;KUKOC,       toni
  .word	0100DH,78,1372	;LONGLEY,     luke
-;.word	0100DH,68,1376	;KERR,        steve
 
  .word	0100DH,69,1392	;BRANDON,     terrell		( CLEVELAND )
  .word	0100DH,76,1384	;MILLS,       chris
@@ -729,13 +727,13 @@ full_name_speech
  .word	0100DH,79,1328	;MONTROSS,    eric
  .word	0100DH,88,1408	;MASHBURN,    jamal
 
- .word	0100DH,64,1436	;ELLIS,       dale		( DENVER )
+ .word	0100DH,64,1436	;ELLIS,       dale			( DENVER )
  .word	0100DH,96,1428	;McDYESS,     antonio
  .word	0100DH,100,1752	;MARCIULIONIS,sarunas
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,63,1444	;HILL,        grant		( DETROIT )
+ .word	0100DH,63,1444	;HILL,        grant			( DETROIT )
  .word	0100DH,74,1440	;DUMARS,      joe
  .word	0100DH,56,1452	;THORPE,      otis
  .word	0100DH,76,1448	;MILLS,       terry
@@ -745,14 +743,12 @@ full_name_speech
  .word	0100DH,77,1476	;MULLIN,      chris
  .word	0100DH,65,1472	;SMITH,       joe
  .word	0100DH,72,1676	;KONCAK,      jon
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,118,1480	;OLAJUWAN,    hakeem		( HOUSTON )
  .word	0100DH,66,2909	;HARRINGTON,  othella
  .word	0100DH,80,1484	;DREXLER,     clyde
  .word	0100DH,61,1568	;WILLIS,      kevin
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,85,1500	;MILLER,      reggie		( INDIANA )
@@ -761,7 +757,7 @@ full_name_speech
  .word	0100DH,71,1504	;DAVIS,       dale
  .word	0100DH,70,1432	;ROSE,        jalen
 
- .word	0100DH,45,1520	;VAUGHT,      loy		( CLIPPERS )
+ .word	0100DH,45,1520	;VAUGHT,      loy			( CLIPPERS )
  .word	0100DH,64,1524	;ROGERS,      rodney
  .word	0100DH,80,1528	;MURRAY,      lamond
  .word	0100DH,75,1532	;RICHARDSON,  pooh
@@ -776,17 +772,16 @@ full_name_speech
  .word	0100DH,97,1560	;MOURNING,    alonzo		( MIAMI )
  .word	0100DH,80,1460	;HARDAWAY,    tim		
  .word	0100DH,84,1572	;DANILOVIC,   sasha
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,70,1580	;BAKER,       vin		( MILWAUKEE )
+ .word	0100DH,70,1580	;BAKER,       vin			( MILWAUKEE )
  .word	0100DH,93,1584	;ROBINSON,    glen
  .word	0100DH,60,2930	;ALLEN,       ray
  .word	0100DH,71,1596	;DOUGLAS,     sherman
  .word	0100DH,54,1628	;GILLIAM,     armen
 
- .word	0100DH,72,1616	;GARNETT,     kevin		( MINNESOTTA )
+ .word	0100DH,72,1616	;GARNETT,     kevin			( MINNESOTTA )
  .word	0100DH,73,1612	;GUGLIOTTA,   tom
  .word	0100DH,75,2951	;MARBURY,     stephon
  .word	0,0,0
@@ -810,15 +805,13 @@ full_name_speech
  .word	0100DH,84,1468	;SEIKALY,     rony
  .word	0100DH,67,1672	;SCOTT,       dennis
 
- .word	0100DH,72,2942	;IVERSON,     allen		( PHILADELPHIA )
-;; .word	0100DH,56,2915	;MINOR,       ryan
+ .word	0100DH,72,2942	;IVERSON,     allen			( PHILADELPHIA )
  .word	0100DH,96,1680	;STACKHOUSE,  jerry
  .word	0100DH,71,1684	;COLEMAN,     derrick
  .word	0100DH,113,1688	;WEATHERSPOON,clarence
-;REMOVE!!!
  .word	0,0,0
 
- .word	0100DH,69,1700	;JOHNSON,     kevin		( PHOENIX )
+ .word	0100DH,69,1700	;JOHNSON,     kevin			( PHOENIX )
  .word	0100DH,68,1404	;KIDD,        jason
  .word	0100DH,77,1712	;PERSON,      wesley
  .word	0100DH,66,1708	;MANNING,     danny
@@ -830,45 +823,43 @@ full_name_speech
  .word	0100DH,94,1600	;RIDER,       isaiah
  .word	0100DH,76,1736	;CHILDRESS,   randolph
 
- .word	0100DH,82,1744	;RICHMOND,    mitch		( SACRAMENTO )
+ .word	0100DH,82,1744	;RICHMOND,    mitch			( SACRAMENTO )
  .word	0100DH,74,1564	;OWENS,       billy
  .word	0100DH,89,1420	;ABDUL-RAUF,  mahmoud
  .word	0100DH,50,1756	;EDNEY,       tyus
  .word	0,0,0
 
- .word	0100DH,69,1760	;ELLIOTT,     sean		( SAN ANTONIO )
+ .word	0100DH,69,1760	;ELLIOTT,     sean			( SAN ANTONIO )
  .word	0100DH,92,1764	;ROBINSON,    david
  .word	0100DH,90,1696	;MAXWELL,     vernon
  .word	0100DH,74,1768	;JOHNSON,     avery
  .word	0100DH,82,1776	;DEL NEGRO,   vinny
  
- .word	0100DH,64,1780	;KEMP,        shawn		( SEATTLE )
+ .word	0100DH,64,1780	;KEMP,        shawn			( SEATTLE )
  .word	0100DH,74,1784	;PAYTON,      gary
  .word	0100DH,57,1788	;SCHREMPF,    detlef
  .word	0100DH,59,1792	;HAWKINS,     hersey
  .word	0100DH,56,1796	;FORD,        sherell
 
- .word	0100DH,92,1804	;STOUDAMIRE,  damon		( TORONTO )
+ .word	0100DH,92,1804	;STOUDAMIRE,  damon			( TORONTO )
  .word	0100DH,78,1740	;WILLIAMS,    walt
  .word	0100DH,72,2927	;CAMBY,       marcus
  .word	0100DH,74,1412	;JONES,       popeye
  .word	0,0,0
 
- .word	0100DH,79,1820	;STOCKTON,    john		( UTAH )
+ .word	0100DH,79,1820	;STOCKTON,    john			( UTAH )
  .word	0100DH,68,1824	;MALONE,      karl
  .word	0100DH,70,1828	;HORNACEK,    jeff
  .word	0100DH,64,1836	;MORRIS,      chris
-;REMOVE!!!
  .word	0,0,0
 
- .word	0100DH,78,1840	;ANTHONY,     greg		( VANCOUVER )
+ .word	0100DH,78,1840	;ANTHONY,     greg			( VANCOUVER )
  .word	0100DH,66,1844	;EDWARDS,     blue
  .word	0100DH,74,1852	;REEVES,      bryant
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,77,1720	;STRICKLAND,  rod		( WASHINGTON )
+ .word	0100DH,77,1720	;STRICKLAND,  rod			( WASHINGTON )
  .word	0100DH,53,1864	;WEBBER,      chris
  .word	0100DH,74,1860	;HOWARD,      juwan
  .word	0100DH,92,1876	;MURESAN,     gheorge
@@ -897,26 +888,25 @@ pass_speech		;'TO player name'
  .word	0100DH,41,1355	;to ZIDEK,       george
  .word	0100DH,36,1359	;to CURRY,       del
 
- .word	0100DH,44,07bfh ;to Jordan
- .word	0100DH,41,1363	;to PIPPEN,      scottie	( CHICAGO )
+ .word	0100DH,44,07bfh ;to JORDAN,      michael	( CHICAGO )
+ .word	0100DH,41,1363	;to PIPPEN,      scottie
  .word	0100DH,38,1367	;to RODMAN,      dennis
  .word	0100DH,47,1371	;to KUKOC,       toni
  .word	0100DH,56,1375	;to LONGLEY,     luke
-;.word	0100DH,44,1379	;to KERR,        steve
 
- .word	0100DH,39,1395	;to BRANDON,     terrell		( CLEVELAND )
+ .word	0100DH,39,1395	;to BRANDON,     terrell	( CLEVELAND )
  .word	0100DH,51,1387	;to MILLS,       chris
  .word	0100DH,44,1391	;to PHILLS,      bobby
  .word	0100DH,42,1383	;to HILL,        tyrone
  .word	0100DH,38,1399	;to FERRY,       danny
 
- .word	0100DH,40,1719	;to FINLEY,      michael		( DALLAS )
+ .word	0100DH,40,1719	;to FINLEY,      michael	( DALLAS )
  .word	0100DH,46,1651	;to HARPER,      derek
  .word	0100DH,57,1403	;to JACKSON,     jim
  .word	0100DH,62,1331	;to MONTROSS,    eric
  .word	0100DH,59,1411	;to MASHBURN,    jamal
 
- .word	0100DH,38,1439	;to ELLIS,       dale	( DENVER )
+ .word	0100DH,38,1439	;to ELLIS,       dale		( DENVER )
  .word	0100DH,58,1431	;to McDYESS,     antonio
  .word	0100DH,58,1755	;to MARCIULIONIS,sarunas
  .word	0,0,0
@@ -932,14 +922,12 @@ pass_speech		;'TO player name'
  .word	0100DH,52,1479	;to MULLIN,      chris
  .word	0100DH,43,1475	;to SMITH,       joe
  .word	0100DH,46,1679	;to KONCAK,      jon
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,64,1483	;to OLAJUWAN,    hakeem		( HOUSTON )
  .word	0100DH,45,2911	;to HARRINGTON,  othella
  .word	0100DH,51,1487	;to DREXLER,     clyde
  .word	0100DH,40,1571	;to WILLIS,      kevin
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,48,1503	;to MILLER,      reggie		( INDIANA )
@@ -954,7 +942,7 @@ pass_speech		;'TO player name'
  .word	0100DH,54,1535	;to RICHARDSON,  pooh
  .word	0100DH,43,1539	;to BARRY,       brent
 
- .word	0100DH,49,07C1h	;to ONEAL,       shaquille		( LAKERS )
+ .word	0100DH,49,07C1h	;to ONEAL,       shaquille	( LAKERS )
  .word	0100DH,49,1559	;to JONES,       eddie
  .word	0100DH,54,1543	;to VAN EXEL,    nick
  .word	0100DH,51,1491	;to HORRY,       robert
@@ -963,7 +951,6 @@ pass_speech		;'TO player name'
  .word	0100DH,44,1563	;to MOURNING,    alonzo		( MIAMI )
  .word	0100DH,56,1463	;to HARDAWAY,    tim		
  .word	0100DH,58,1575	;to DANILOVIC,   sasha
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
@@ -976,7 +963,6 @@ pass_speech		;'TO player name'
  .word	0100DH,50,1619	;to GARNETT,     kevin		( MINNESOTTA )
  .word	0100DH,52,1615	;to GUGLIOTTA,   tom
  .word	0100DH,40,2953	;to MARBURY,     stephon
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
@@ -999,11 +985,9 @@ pass_speech		;'TO player name'
  .word	0100DH,45,1675	;to SCOTT,       dennis
 
  .word	0100DH,53,2944	;to IVERSON,     allen		( PHILADELPHIA )
-;; .word	0100DH,38,2917	;to MINOR,       ryan
  .word	0100DH,69,1683	;to STACKHOUSE,  jerry
  .word	0100DH,46,1687	;to COLEMAN,     derrick
  .word	0100DH,75,1691	;to WEATHERSPOON,clarence
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,48,1703	;to JOHNSON,     kevin		( PHOENIX )
@@ -1012,7 +996,7 @@ pass_speech		;'TO player name'
  .word	0100DH,38,1711	;to MANNING,     danny
  .word	0100DH,54,1551	;to CEBALLOS,    cedric
 
- .word	0100DH,49,1731	;to SABONIS,     arvydas		( PORTLAND )
+ .word	0100DH,49,1731	;to SABONIS,     arvydas	( PORTLAND )
  .word	0100DH,43,1623	;to ANDERSON,    kenny
  .word	0100DH,70,1727	;to ROBINSON,    cliff
  .word	0100DH,53,1603	;to RIDER,       isaiah
@@ -1046,13 +1030,11 @@ pass_speech		;'TO player name'
  .word	0100DH,51,1827	;to MALONE,      karl
  .word	0100DH,49,1831	;to HORNACEK,    jeff
  .word	0100DH,39,1839	;to MORRIS,      chris
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,40,1843	;to ANTHONY,     greg		( VANCOUVER )
  .word	0100DH,38,1847	;to EDWARDS,     blue
  .word	0100DH,48,1855	;to REEVES,      bryant
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
@@ -1073,24 +1055,23 @@ name_speech 		;(last name only, excited)
  .word	0100DH,33,1605	;LAETNER,     christian
  .word	0100DH,34,1317	;NORMAN,      ken
 
- .word	0100DH,36,1321	;BROWN,       dee		( BOSTON )
+ .word	0100DH,36,1321	;BROWN,       dee			( BOSTON )
  .word	0100DH,26,2913	;HAMER,       steve
  .word	0100DH,31,1325	;BARROS,      dana
  .word	0100DH,35,1333	;RADJA,       dino
  .word	0100DH,33,1337	;FOX,         rick
 
- .word	0100DH,33,1349	;RICE,        glen		( CHARLOTTE )
+ .word	0100DH,33,1349	;RICE,        glen			( CHARLOTTE )
  .word	0100DH,51,1645	;MASON,       anthony
  .word	0100DH,39,1545	;DIVAC,       vlade
  .word	0100DH,32,1353	;ZIDEK,       george
  .word	0100DH,27,1357	;CURRY,       del
 
- .word	0100DH,35,0B56h ;Jordan
- .word	0100DH,31,1361	;PIPPEN,      scottie		( CHICAGO )
+ .word	0100DH,35,0B56h ;JORDAN,      michael		( CHICAGO )
+ .word	0100DH,31,1361	;PIPPEN,      scottie
  .word	0100DH,28,1365	;RODMAN,      dennis
  .word	0100DH,38,1369	;KUKOC,       toni
  .word	0100DH,47,1373	;LONGLEY,     luke
-;.word	0100DH,35,1377	;KERR,        steve
 
  .word	0100DH,30,1393	;BRANDON,     terrell		( CLEVELAND )
  .word	0100DH,42,1385	;MILLS,       chris
@@ -1104,13 +1085,13 @@ name_speech 		;(last name only, excited)
  .word	0100DH,53,1329	;MONTROSS,    eric
  .word	0100DH,50,1409	;MASHBURN,    jamal
 
- .word	0100DH,28,1437	;ELLIS,       dale		( DENVER )
+ .word	0100DH,28,1437	;ELLIS,       dale			( DENVER )
  .word	0100DH,49,1429	;McDYESS,     antonio
  .word	0100DH,49,1753	;MARCIULIONIS,sarunas
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,33,1445	;HILL,        grant		( DETROIT )
+ .word	0100DH,33,1445	;HILL,        grant			( DETROIT )
  .word	0100DH,46,1441	;DUMARS,      joe
  .word	0100DH,25,1453	;THORPE,      otis
  .word	0100DH,40,1449	;MILLS,       terry
@@ -1120,14 +1101,12 @@ name_speech 		;(last name only, excited)
  .word	0100DH,43,1477	;MULLIN,      chris
  .word	0100DH,33,1473	;SMITH,       joe
  .word	0100DH,37,1677	;KONCAK,      jon
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,55,1482	;OLAJUWAN,    hakeem		( HOUSTON )
  .word	0100DH,36,2910	;HARRINGTON,  othella
  .word	0100DH,41,1485	;DREXLER,     clyde
  .word	0100DH,31,1569	;WILLIS,      kevin
-;REMOVE!!!
  .word	0,0,0
 
  .word	0100DH,39,1501	;MILLER,      reggie		( INDIANA )
@@ -1136,7 +1115,7 @@ name_speech 		;(last name only, excited)
  .word	0100DH,34,1505	;DAVIS,       dale
  .word	0100DH,29,1433	;ROSE,        jalen
 
- .word	0100DH,27,1521	;VAUGHT,      loy		( CLIPPERS )
+ .word	0100DH,27,1521	;VAUGHT,      loy			( CLIPPERS )
  .word	0100DH,34,1525	;ROGERS,      rodney
  .word	0100DH,30,1529	;MURRAY,      lamond
  .word	0100DH,44,1533	;RICHARDSON,  pooh
@@ -1151,20 +1130,18 @@ name_speech 		;(last name only, excited)
  .word	0100DH,35,1561	;MOURNING,    alonzo		( MIAMI )
  .word	0100DH,47,1461	;HARDAWAY,    tim		
  .word	0100DH,49,1573	;DANILOVIC,   sasha
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,39,1581	;BAKER,       vin		( MILWAUKEE )
+ .word	0100DH,39,1581	;BAKER,       vin			( MILWAUKEE )
  .word	0100DH,61,1585	;ROBINSON,    glen
  .word	0100DH,35,2931	;ALLEN,       ray
  .word	0100DH,29,1597	;DOUGLAS,     sherman
  .word	0100DH,29,1629	;GILLIAM,     armen
 
- .word	0100DH,41,1617	;GARNETT,     kevin		( MINNESOTTA )
+ .word	0100DH,41,1617	;GARNETT,     kevin			( MINNESOTTA )
  .word	0100DH,43,1613	;GUGLIOTTA,   tom
  .word	0100DH,31,2952	;MARBURY,     stephon
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
@@ -1186,15 +1163,13 @@ name_speech 		;(last name only, excited)
  .word	0100DH,46,1469	;SEIKALY,     rony
  .word	0100DH,36,1673	;SCOTT,       dennis
 
- .word	0100DH,44,2943	;IVERSON,     allen		( PHILADELPHIA )
-;; .word	0100DH,28,2916	;MINOR,       ryan
+ .word	0100DH,44,2943	;IVERSON,     allen			( PHILADELPHIA )
  .word	0100DH,59,1681	;STACKHOUSE,  jerry
  .word	0100DH,37,1685	;COLEMAN,     derrick
  .word	0100DH,66,1689	;WEATHERSPOON,clarence
-;REMOVE!!!
  .word	0,0,0
 
- .word	0100DH,38,1701	;JOHNSON,     kevin		( PHOENIX )
+ .word	0100DH,38,1701	;JOHNSON,     kevin			( PHOENIX )
  .word	0100DH,32,1405	;KIDD,        jason
  .word	0100DH,34,1713	;PERSON,      wesley
  .word	0100DH,28,1709	;MANNING,     danny
@@ -1206,45 +1181,43 @@ name_speech 		;(last name only, excited)
  .word	0100DH,43,1601	;RIDER,       isaiah
  .word	0100DH,38,1737	;CHILDRESS,   randolph
 
- .word	0100DH,41,1745	;RICHMOND,    mitch		( SACRAMENTO )
+ .word	0100DH,41,1745	;RICHMOND,    mitch			( SACRAMENTO )
  .word	0100DH,41,1565	;OWENS,       billy
  .word	0100DH,51,1421	;ABDUL-RAUF,  mahmoud
  .word	0100DH,27,1757	;EDNEY,       tyus
  .word	0,0,0
 
- .word	0100DH,32,1761	;ELLIOTT,     sean		( SAN ANTONIO )
+ .word	0100DH,32,1761	;ELLIOTT,     sean			( SAN ANTONIO )
  .word	0100DH,61,1765	;ROBINSON,    david
  .word	0100DH,56,1697	;MAXWELL,     vernon
  .word	0100DH,38,1769	;JOHNSON,     avery
  .word	0100DH,45,1777	;DEL NEGRO,   vinny
  
- .word	0100DH,28,1781	;KEMP,        shawn		( SEATTLE )
+ .word	0100DH,28,1781	;KEMP,        shawn			( SEATTLE )
  .word	0100DH,33,1785	;PAYTON,      gary
  .word	0100DH,32,1789	;SCHREMPF,    detlef
  .word	0100DH,35,1793	;HAWKINS,     hersey
  .word	0100DH,31,1797	;FORD,        sherell
 
- .word	0100DH,54,1805	;STOUDAMIRE,  damon		( TORONTO )
+ .word	0100DH,54,1805	;STOUDAMIRE,  damon			( TORONTO )
  .word	0100DH,36,1741	;WILLIAMS,    walt
  .word	0100DH,36,2928	;CAMBY,       marcus
  .word	0100DH,40,1413	;JONES,       popeye
  .word	0,0,0
 
- .word	0100DH,44,1821	;STOCKTON,    john		( UTAH )
+ .word	0100DH,44,1821	;STOCKTON,    john			( UTAH )
  .word	0100DH,42,1825	;MALONE,      karl
  .word	0100DH,40,1829	;HORNACEK,    jeff
  .word	0100DH,30,1837	;MORRIS,      chris
-;REMOVE!!!
  .word	0,0,0
 
- .word	0100DH,31,1841	;ANTHONY,     greg		( VANCOUVER )
+ .word	0100DH,31,1841	;ANTHONY,     greg			( VANCOUVER )
  .word	0100DH,29,1845	;EDWARDS,     blue
  .word	0100DH,39,1853	;REEVES,      bryant
-;REMOVE!!!
  .word	0,0,0
  .word	0,0,0
 
- .word	0100DH,42,1721	;STRICKLAND,  rod		( WASHINGTON )
+ .word	0100DH,42,1721	;STRICKLAND,  rod			( WASHINGTON )
  .word	0100DH,18,1865	;WEBBER,      chris
  .word	0100DH,34,1861	;HOWARD,      juwan
  .word	0100DH,54,1877	;MURESAN,     gheorge

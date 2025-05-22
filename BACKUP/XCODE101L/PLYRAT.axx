@@ -690,7 +690,6 @@ BOST_t
 	.long	BROWN_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Brown_h
 	.word	5,2,2,18
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
-;new
 	LWWWWWW	scale69f_t,BV6,SHT7,DNK5,DEF7,SDEF3,DSKL5
 	.long	HAM_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,ham_h
 	.word	6,7,1,14
@@ -741,7 +740,6 @@ CHAR_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 CHI_t
-;Addded: Jordan
 	LWWWWWW	scale66_t,BV8,SHT6,DNK10,DEF7,SDEF7,DSKL5
 	.long	Mutumbo_f, UN_CHIP_P,UN_CHIS_P, TR_CHIP_P,TR_CHIS_P,jordan_h
 	.word	8,8,7,6
@@ -762,11 +760,6 @@ CHI_t
 	.long	LONG_F, UN_CHIP_P,UN_CHIS_P, TR_CHIP_P,TR_CHIS_P,Longley_h
 	.word	6,8,2,18
 	.long	SW_CHIP_P,SW_CHIS_P,VP_CHIP_P,VP_CHIS_P
-;Removed: Kerr
-;	LWWWWWW	scale63_t,BV6,SHT9,DNK0,DEF1,SDEF6,DSKL5
-;	.long	KERR_F, UN_CHIP_P,UN_CHIS_P, TR_CHIP_P,TR_CHIS_P,Kerr_h
-;	.word	4,2,8,11
-;	.long	SW_CHIP_P,SW_CHIS_P,VP_CHIP_P,VP_CHIS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
@@ -917,7 +910,6 @@ HOU_t
 	.long	Hakeem_f, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,Olajuwon_h
 	.word	7,10,7,0
 	.long	SW_HOUP_P,SW_HOUS_P,VP_HOUP_P,VP_HOUS_P
-;new
 	LWWWWWW	scale610f_t,BV4,SHT4,DNK6,DEF8,SDEF2,DSKL5
 	.long	HARR_F, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,harr_h
 	.word	4,9,2,5
@@ -930,8 +922,7 @@ HOU_t
 	.long	WILLIS_F, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,Willis_h
 	.word	1,9,4,18
 	.long	SW_HOUP_P,SW_HOUS_P,VP_HOUP_P,VP_HOUS_P
-;kill (MAYBE!!!)
-;Kenny Smith
+;kill
 	LWWWWWW	scale63t_t,BV6,SHT6,DNK1,DEF1,SDEF7,DSKL5
 	.long	smith_f, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,Smith_h
 	.word	7,4,4,4
@@ -1083,7 +1074,6 @@ MINN_t
 	.long	gug_f, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,Gug_h
 	.word	6,6,3,1
 	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P
-;new
 	LWWWWWW	scale62t_t,BV8,SHT8,DNK5,DEF3,SDEF7,DSKL5
 	.long	MARBRY_F, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,marbry_h
 	.word	6,4,3,13
@@ -1109,7 +1099,6 @@ NJ_t
 	.long	gill_f, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,Gill_h
 	.word	7,2,3,9
 	.long	SW_NEJP_P,SW_NEJS_P,VP_NEJP_P,VP_NEJS_P
-;new
 	LWWWWWW	scale69t_t,BV6,SHT7,DNK7,DEF7,SDEF3,DSKL5
 	.long	KIT_F, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,kit_h
 	.word	5,6,2,3
@@ -1192,11 +1181,6 @@ PHIL_t
 	.long	IVER_F, UN_PHLP_P,UN_PHLS_P, TR_PHLP_P,TR_PHLS_P,iversn_h
 	.word	7,3,6,5
 	.long	SW_PHLP_P,SW_PHLS_P,VP_PHLP_P,VP_PHLS_P
-;new
-;;	LWWWWWW	scale65_t,BV6,SHT8,DNK6,DEF4,SDEF6,DSKL5
-;;	.long	MINR_F, UN_PHLP_P,UN_PHLS_P, TR_PHLP_P,TR_PHLS_P,minr_h
-;;	.word	7,5,2,12
-;;	.long	SW_PHLP_P,SW_PHLS_P,VP_PHLP_P,VP_PHLS_P
 	LWWWWWW	scale66_t,BV8,SHT7,DNK8,DEF3,SDEF5,DSKL5
 	.long	STACK_F, UN_PHLP_P,UN_PHLS_P, TR_PHLP_P,TR_PHLS_P,Stackhouse_h
 	.word	5,4,7,8

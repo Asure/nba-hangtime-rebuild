@@ -5271,7 +5271,7 @@ player_attribs
 
 	.word  08,02,05,07 
 	.word  07,01,05,02	;DEE BROWN		6'1"	161 reg
-;new
+
 	.word  06,07,07,05
 	.word  03,07,06,01	;STEVE HAMER		_______________
 
@@ -5309,8 +5309,8 @@ player_attribs
 
 ;03 CHICAGO BULLS
 
-	 .word	08,06,09,08
-	 .word  08,07,07,07	;MICHAEL JORDAN		6'6"	225 thin
+	.word	08,06,09,08
+	.word  08,07,07,07	;MICHAEL JORDAN		6'6"	225 thin
 
 	.word  08,06,08,09
 	.word  09,08,07,08	;SCOTTIE PIPPEN		6'7"	225 thin
@@ -5323,9 +5323,6 @@ player_attribs
 
 	.word  05,08,05,03
 	.word  02,07,06,02	;LUC LONGLEY		7'2"	265 fat
-
-;	.word  06,02,09,00
-;	.word  06,01,04,08	;STEVE KERR		_______________
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5380,10 +5377,10 @@ player_attribs
 
 	.word  04,05,08,01
 	.word  08,01,02,07	;SARUNAS MARCIULIONIS	6'5"	215 reg
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5403,9 +5400,9 @@ player_attribs
 
 	.word  04,06,06,02
 	.word  04,02,05,08	;TERRY MILLS          6'10" 250 fat
-;kill
-	.word  08,03,05,07
-	.word  06,02,04,08	;STACEY AUGMON		6'8"	205 thin
+
+	.word  00,00,00,00
+	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5423,7 +5420,7 @@ player_attribs
 
 	.word  04,06,05,07
 	.word  03,05,03,02	;JON KONCAK		7'0"	250 reg
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5434,7 +5431,7 @@ player_attribs
 
 	.word  07,10,07,08
 	.word  07,10,07,07	;HAKEEM OLAJUWON	7'0"	255 reg
-;new
+
 	.word  04,09,04,06
 	.word  02,08,04,02	;OTHELLA HARRINGTON	_______________
 
@@ -5443,10 +5440,9 @@ player_attribs
 
 	.word  05,09,05,07
 	.word  04,04,01,04	;KEVIN WILLIS		7'0"	240 reg
-;kill (MAYBE!!!)
-;Kenny Smith
-	.word  06,04,06,01
-	.word  07,01,07,04	;KENNY SMITH		_______________
+
+	.word  00,00,00,00
+	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5496,7 +5492,7 @@ player_attribs
 LAL_t
 
 	.word  07,09,00,10 
-	.word  04,09,03,03	;SHAQ
+	.word  04,09,03,03	;SHAQUILLE O'NEAL
 	
 	.word  08,04,07,05
 	.word  04,07,08,02	;EDDIE JONES		_______________
@@ -5523,10 +5519,10 @@ LAL_t
 
 	.word  05,05,08,02
 	.word  04,05,05,04	;SASHA DANILOVIC	_______________
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5560,13 +5556,13 @@ LAL_t
 
 	.word  07,06,07,05
 	.word  09,07,06,03	;TOM GUGLIOTTA		6'10"	240 reg
-;new
+
 	.word  08,04,08,05
 	.word  07,03,06,03	;STEPHON MARBURY	_______________
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5577,7 +5573,7 @@ LAL_t
 
 	.word  08,02,06,05
 	.word  07,05,07,03	;KENDALL GILL		6'5"	200 thin
-;new
+
 	.word  06,06,07,07
 	.word  03,07,05,02	;KERRY KITTLES		_______________
 
@@ -5608,7 +5604,7 @@ LAL_t
 	.word  07,02,08,08	;JOHN STARKS		6'5"	185 thin
 
 	.word  05,08,05,07
-	.word  05,02,04,02	 ;CHARLES OAKLEY    6'9" 245 fat
+	.word  05,02,04,02	;CHARLES OAKLEY    6'9" 245 fat
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5634,12 +5630,9 @@ LAL_t
 ;Steal, Block, Pass ability, Clutch
 
 ;19 PHILADELPHIA  76ers
-;new
+
 	.word  09,03,09,00
 	.word  09,01,07,06	;ALLEN IVERSON		_______________
-;new
-;;	.word  06,05,08,06
-;;	.word  06,04,07,02	;RYAN MINOR		_______________
 
 	.word  08,04,07,08
 	.word  05,03,05,07	;JERRY STACKHOUSE	_______________
@@ -5649,7 +5642,7 @@ LAL_t
 
 	.word  05,06,06,06
 	.word  04,06,05,07	;CLARENCE WEATHERSPOON	6'7"	240 fat
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5708,7 +5701,7 @@ LAL_t
 	.word  08,01,08,09	;MAHMOUD ABDUL-RAUF	6'1"	168 ex thin
 
 	.word  10,01,06,00
-	.word  08,00,08,04	 ;TYUS EDNEY      ______________
+	.word  08,00,08,04	;TYUS EDNEY      ______________
 
 	.word  00,00,00,00
 	.word  00,00,00,00
@@ -5789,7 +5782,7 @@ LAL_t
 
 	.word  05,06,07,05
 	.word  08,04,04,02	;CHRIS MORRIS		6'8"	220 reg
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5806,10 +5799,10 @@ LAL_t
 
 	.word  05,10,06,04
 	.word  05,08,02,02	;BRYANT REEVES		_______________
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
-;kill
+
 	.word  00,00,00,00
 	.word  00,00,00,00
 
@@ -5881,33 +5874,33 @@ LAL_t
 
 name_sort
  .long	BLAYLOCK,MUTUMBO,SSMITH,LAETTNER,KNORMAN		;00 HAWKS
- .long	BROWN, HAMER ,BARROS,RADJA,FOX			;new	;01 CELTICS
- .long	RICE,MASON,DIVAC,ZIDEK,CURRY				;02 HORNETS
- .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY			;03 BULLS
- .long	BRANDON,CMILLS,PHILLS,THILL,FERRY			;04 CAVALIERS
- .long	FINLEY,HARPER_D,JACK,MONTROSS,MASH			;05 MAVERICKS
- .long	DELLIS,MCDYESS,MARCIULO, DELLIS	, DELLIS	;kill	;06 NUGGETS
- .long	GHILL,DUMARS,THORPE,TMILLS, AUGMON 		;kill:new ;07 PISTONS
- .long	SPREWELL,MULLIN,JSMITH,KONCAK, MULLIN		;kill	;08 WARRIORS
- .long	OLAJUWON, HRNGTON ,DREXLER,WILLIS, WILLIS	;new,kill ;09 ROCKETS
- .long	MILLER,MJACKSON,SMITS,DDAVIS,ROSE		;new	;10 PACERS
+ .long	BROWN, HAMER ,BARROS,RADJA,FOX					;01 CELTICS
+ .long	RICE,MASON,DIVAC,ZIDEK,CURRY					;02 HORNETS
+ .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY				;03 BULLS
+ .long	BRANDON,CMILLS,PHILLS,THILL,FERRY				;04 CAVALIERS
+ .long	FINLEY,HARPER_D,JACK,MONTROSS,MASH				;05 MAVERICKS
+ .long	DELLIS,MCDYESS,MARCIULO, DELLIS	, DELLIS		;06 NUGGETS
+ .long	GHILL,DUMARS,THORPE,TMILLS, AUGMON 				;07 PISTONS
+ .long	SPREWELL,MULLIN,JSMITH,KONCAK, MULLIN			;08 WARRIORS
+ .long	OLAJUWON, HRNGTON ,DREXLER,WILLIS, WILLIS		;09 ROCKETS
+ .long	MILLER,MJACKSON,SMITS,DDAVIS,ROSE				;10 PACERS
  .long	VAUGHT,RROGERS,LMURRAY,PRICHARD,BBARRY			;11 CLIPPERS
- .long	ONEAL,EJONES,VANEXEL,HORRY,BRYANT			;12 LAKERS
- .long	MOURN,THARDAWAY,DANILOVI, DANILOVI , DANILOVI	;kill,kill ;13 HEAT
+ .long	ONEAL,EJONES,VANEXEL,HORRY,BRYANT				;12 LAKERS
+ .long	MOURN,THARDAWAY,DANILOVI, DANILOVI , DANILOVI	;13 HEAT
  .long	BAKER,GROBINSO, ALLEN ,DOUGLAS,GILLIAM			;14 BUCKS
- .long	GARNETT,GUGLI2, MARBURY , MARBURY , MARBURY	;new,kill,kill ;15 TIMBERWOLVES
- .long	GILL, KITTLES ,PACK,BRADLEY,OBANNON		;new	;16 NETS
- .long	EWING,JOHNSN_L,HOUSTON,STARKS,OAKLEY		;new	;17 KNICKS
+ .long	GARNETT,GUGLI2, MARBURY , MARBURY , MARBURY		;15 TIMBERWOLVES
+ .long	GILL, KITTLES ,PACK,BRADLEY,OBANNON				;16 NETS
+ .long	EWING,JOHNSN_L,HOUSTON,STARKS,OAKLEY			;17 KNICKS
  .long	AHARDAWAY,GRANT_HC,NANDERSON,SEIKALY,DSCOTT		;18 MAGIC
- .long	IVERSON ,STACKHOU,COLEMAN,WEATHSPN, MINOR 	;new,kill:new ;19 76ers
+ .long	IVERSON ,STACKHOU,COLEMAN,WEATHSPN, MINOR		;19 76ers
  .long	KJOHNSON,KIDD,WPERSON,MANNING,CEBALLOS			;20 SUNS
  .long	SABONIS,KANDERSON,CROBINSON,RIDER,CHILDRES		;21 TRAILBLAZERS
- .long	RICH,BOWENS,ABDULRAU,EDNEY, BGRANT 			;22 KINGS
- .long	ELLIOT2,DROBINSON,VMAXWELL,AJOHNSON,DELNEGRO		;23 SPURS
- .long	KEMP,PAYTON,SCHREMPF,HAWKINS,SFORD			;24 SUPERSONICS
- .long	STOUDAMI,WWILLIAM, CAMBY ,PJONES, CROGERS 	;new	;25 RAPTORS
- .long	STOCKTON,MALONE_K,HORNACEK,CMORRIS, CMORRIS	;kill	;26 JAZZ
- .long	ANTHONY,EDWARDS,BREEVES, BREEVES , BREEVES	;kill,kill ;27 GRIZZLIES
+ .long	RICH,BOWENS,ABDULRAU,EDNEY, BGRANT 				;22 KINGS
+ .long	ELLIOT2,DROBINSON,VMAXWELL,AJOHNSON,DELNEGRO	;23 SPURS
+ .long	KEMP,PAYTON,SCHREMPF,HAWKINS,SFORD				;24 SUPERSONICS
+ .long	STOUDAMI,WWILLIAM, CAMBY ,PJONES, CROGERS 		;25 RAPTORS
+ .long	STOCKTON,MALONE_K,HORNACEK,CMORRIS, CMORRIS		;26 JAZZ
+ .long	ANTHONY,EDWARDS,BREEVES, BREEVES , BREEVES		;27 GRIZZLIES
  .long	STRICKLA,WEBBER,JHOWARD,MURESAN,CHEANEY			;28 BULLETS
  .long	0
 
@@ -5971,7 +5964,7 @@ team_sqaud_cnts
 	.word	20	;NEW JERSEY
 	.word	20	;NEW YORK
 	.word	20	;ORLANDO
-	.word	12 ;20	;PHILADELPHIA
+	.word	12	;PHILADELPHIA
 	.word	20	;PHOENIX
 	.word	20	;PORTLAND
 	.word	12	;SACRAMENTO
