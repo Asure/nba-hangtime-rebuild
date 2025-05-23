@@ -1,4 +1,4 @@
 	.DATA
-CHEERS	.set	07000000h
+CHEERS	.set	06000000h
 	.TEXT
 

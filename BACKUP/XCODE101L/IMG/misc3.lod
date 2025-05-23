@@ -1,7 +1,7 @@
 IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
 ;If we expand GFX rom: 
-;use loadr misc3.bin,1200000,0,:gfxrom in mame debug
-***> 7000000,1
+;use loadr misc3.bin,1000000,0,:gfxrom in mame debug
+***> 6000000,1
 ; Static zipped images moved from PRG rom into GFX rom.
 ;
 ASM> BBVDA.TBL

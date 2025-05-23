@@ -1,52 +1,52 @@
 	.DATA
 SHANG01:
 	.word   40,79,-2,74
-	.long   091b8411H
+	.long   081b8411H
 	.word   06000H
 	.long   SHANGPAL
 SHANG02:
 	.word   40,79,-2,74
-	.long   091bce21H
+	.long   081bce21H
 	.word   06000H
 	.long   SHANGPAL
 SHANG03:
 	.word   40,79,-2,74
-	.long   091c1831H
+	.long   081c1831H
 	.word   06000H
 	.long   SHANGPAL
 SHANG04:
 	.word   40,79,-2,73
-	.long   091c6241H
+	.long   081c6241H
 	.word   06000H
 	.long   SHANGPAL
 SHANG05:
 	.word   39,79,-2,74
-	.long   091cac51H
+	.long   081cac51H
 	.word   06000H
 	.long   SHANGPAL
 SHANG06:
 	.word   40,79,-2,73
-	.long   091cf487H
+	.long   081cf487H
 	.word   06000H
 	.long   SHANGPAL
 SHANG07:
 	.word   40,79,-2,73
-	.long   091d3e97H
+	.long   081d3e97H
 	.word   06000H
 	.long   SHANGPAL
 STCLAP1:
 	.word   44,78,-3,73
-	.long   091d88a7H
+	.long   081d88a7H
 	.word   06000H
 	.long   SHANGPAL
 STCLAP2:
 	.word   37,78,-4,73
-	.long   091dd917H
+	.long   081dd917H
 	.word   06000H
 	.long   SHANGPAL
 STCLAP3:
 	.word   32,78,-7,73
-	.long   091e1cbbH
+	.long   081e1cbbH
 	.word   06000H
 	.long   SHANGPAL
 	.TEXT
