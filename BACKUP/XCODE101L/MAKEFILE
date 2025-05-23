@@ -20,7 +20,7 @@ bb.out: $(O)
 # need to get the symbol .map file
 	gsplnk bb.cmd
 # this cmd builds with no symbol .map file but makes .out object.
-	gsplnk bb2.cmd
+#	gsplnk bb2.cmd
 #	copy c:\bb.out c:\video\bball
 #	copy c:\bb.map c:\video\bball
 #	tv bb /v

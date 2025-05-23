@@ -17,7 +17,7 @@ Tested & Works in Hangtime
 SYS.EQU
 IMGVIEW	.equ 0/1
 ================
-
+Should be used together with DEBUG.
 BB.AXX has a CREATE0 anipts_debug which checks the value in a8
 
 From BB2.ASM: 

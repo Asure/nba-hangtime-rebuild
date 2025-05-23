@@ -58,18 +58,25 @@
 ;Display each frame of our ball player to check 2nd and 3rd ani pnts, etc.
 ;Re-insert these lines when tweaking ani points
 
-
+;12 = 11111111111011111111111111111111
+;14 = 11111111111110111111111111111111
+; FFFFF7FF = 21 = 11111111111111111111011111111111
+; FFFFEFFF = 20 = 11111111111111111110111111111111
 
 debug_lst
 	.long	debug1+16,debug1+16,debug1+16,debug4+16
 butn_minus
 	.long	12,12,12,6
+;	.long	20,20,20,20
 butn_plus
 	.long	14,14,14,13
+;	.long	21,21,21,21
 
 
 
 ;a8=0-3
+
+	.def	anipts_debug
 
  SUBR	anipts_debug
 
@@ -98,9 +105,12 @@ butn_plus
 
 wdrcswtop	SLEEPK	1
 	move	*a8,*a9,L		;Writes to ROM
-	move	@SWITCH,a0,L
-	cmpi	0ffefffffH,a0
-	jrnz	wdrcsw1
+;	move	@SWITCH,a0,L
+	.ref	_coin_addr		;it's where the VOLDN/UP buttons are.
+	move	@_coin_addr,a0,L
+	move	*a0,a0
+	cmpi	0fffff7ffH,a0		;volup = FFFFEFFF voldown = FFFFF7FF 
+	jrnz	wdrcsw1			; down not pressed
 	clr	a0
 	move	a0,*a13(PDATA)
 	jruc	wdrcswtop
@@ -112,9 +122,12 @@ wdrcsw1	move	*a13(PDATA),a1
 	move	a1,*a13(PDATA+16)
 	jruc	wdrcswtop
 
-wdrcsw2	btst	a11,a0			;14
+wdrcsw2	
+;	btst	a11,a0			;14
+	cmpi	0ffffefffH,a0
 	jrz	advance
-	btst	a10,a0			;12
+;	btst	a10,a0			;12
+	cmpi	0fffff7ffH,a0
 	jrnz	wdrcswtop
 ;go backwards
 	cmpi	debug_img_list,a8
@@ -146,7 +159,7 @@ debug_t1
        	.long	debug1,debug1,debug1,debug1
        	.long	debug1,debug1,debug1,debug1
 debug1
-	WLW	10,w1js1,F
+	WLW	10,w1elbo1,F
 	W0
 
 debug_t4
@@ -155,7 +168,7 @@ debug_t4
        	.long	debug4,debug4,debug4,debug4
        	.long	debug4,debug4,debug4,debug4
 debug4
-	WLW	10,w1js1,F
+	WLW	10,w1elbo1,F
 	W0
 
 
@@ -254,9 +267,9 @@ debug_img_list
 ;PLYRSEQ2.TBL
 ;nba_msc2.img
 	.long	w1elbo1,w1elbo3,w1elbo4,w1elbo5,w1elbo6,w1elbo7,w1elbo8
-	.long	w2elbo2,w2elbo3,w2elbo4,w2elbo5,w2elbo6,w2elbo8
+;	.long	w2elbo2,w2elbo3,w2elbo4,w2elbo5,w2elbo6,w2elbo8
 	.long	w4elbo3,w4elbo4,w4elbo5,w4elbo6,w4elbo7,w4elbo8
-	.long	w5elbo3,w5elbo4,w5elbo5,w5elbo6,w5elbo7
+;	.long	w5elbo3,w5elbo4,w5elbo5,w5elbo6,w5elbo7
 	.long	w4tipst1,w4tipst2,w4tipst3,w4tipst4,w4tipst5,w4tip1
 	.long	w4tip2,w4tip3,w4tip4,w4tip5,w4tip6,w4tip7,w2tipst1,w2tipst2,w2tipst3
 	.long	w2tipst4,w2tipst5,w2tip1,w2tip2,w2tip3,w2tip4,w2tip5,w2tip6,w2tip7
@@ -274,16 +287,16 @@ debug_img_list
 	.long	w3pikup1,w3pikup2,w3pikup3,w3pikup4,w3pikup5,w4pikup1,w4pikup2,w4pikup3
 	.long	w4pikup4,w4pikup5,w5pikup1,w5pikup2,w5pikup3,w5pikup4,w5pikup5
 ;nba_msc4.img
-	.long	w1fall1,w1fall2,w1fall3,w1fall4,w1fall5
-	.long	w1fall6,w1fall7,w1fall8,w1fall9,w1fall10
-	.long	w2fall1,w2fall2,w2fall3,w2fall4,w2fall5
-	.long	w2fall6,w2fall7,w2fall8,w2fall9,w2fall10,w2fall11
-	.long	w3fall1,w3fall2,w3fall3,w3fall4,w3fall5,w3fall6
-	.long	w3fall7,w3fall8,w3fall9,w3fall10,w3fall11,w3fall12
-	.long	w4fall1,w4fall2,w4fall3,w4fall4,w4fall5,w4fall6
-	.long	w4fall7,w4fall8,w4fall9,w4fall10,w4fall11,w4fall12
-	.long	w5fall1,w5fall2,w5fall3,w5fall5,w5fall6
-	.long	w5fall7,w5fall8,w5fall10,w5fall11,w5fall12
+;	.long	w1fall1,w1fall2,w1fall3,w1fall4,w1fall5
+;	.long	w1fall6,w1fall7,w1fall8,w1fall9,w1fall10
+;	.long	w2fall1,w2fall2,w2fall3,w2fall4,w2fall5
+;	.long	w2fall6,w2fall7,w2fall8,w2fall9,w2fall10,w2fall11
+;	.long	w3fall1,w3fall2,w3fall3,w3fall4,w3fall5,w3fall6
+;	.long	w3fall7,w3fall8,w3fall9,w3fall10,w3fall11,w3fall12
+;	.long	w4fall1,w4fall2,w4fall3,w4fall4,w4fall5,w4fall6
+;	.long	w4fall7,w4fall8,w4fall9,w4fall10,w4fall11,w4fall12
+;	.long	w5fall1,w5fall2,w5fall3,w5fall5,w5fall6
+;	.long	w5fall7,w5fall8,w5fall10,w5fall11,w5fall12
 ;nbaspnmv.img
 	.long	W3SPMVA1,W3SPMVA2,W3SPMVA3,W3SPMVA4,W3SPMVA5,W3SPMVA6,W3SPMVA7,W3SPMVA8
 	.long	W3SPMVA9,W3SPMVA10,W3SPMVA11,W3SPMVA12,W3SPMVA13,W3SPMVA14,W3SPMVA15
