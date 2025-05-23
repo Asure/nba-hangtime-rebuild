@@ -4707,14 +4707,14 @@ player_heads
 	.long	KOB_MUG,HOR_HOU
 
 ;13 MIAMI
-	.long	MOU_MIA,HRD_MIA
-	.long	MOU_MIA,MAS_DAL
-
 	.long	HRD_MIA,MOU_MIA
 	.long	HRD_MIA,MAS_DAL
 
-	.long	MAS_DAL,MOU_MIA
+	.long	MOU_MIA,HRD_MIA
+	.long	MOU_MIA,MAS_DAL
+
 	.long	MAS_DAL,HRD_MIA
+	.long	MAS_DAL,MOU_MIA
 
 	.long	0,0
 	.long	0,0
@@ -5504,14 +5504,14 @@ WALLACE	.equ	11
 	.long	BRYANT,HORRY
 
 ;13 MIAMI
-	.long	MOURN,THARDAWAY
-	.long	MOURN,MASH
-
 	.long	THARDAWAY,MOURN
 	.long	THARDAWAY,MASH
 
-	.long	MASH,MOURN
+	.long	MOURN,THARDAWAY
+	.long	MOURN,MASH
+
 	.long	MASH,THARDAWAY
+	.long	MASH,MOURN
 
 	.long	0,0
 	.long	0,0
