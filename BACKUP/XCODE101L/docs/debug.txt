@@ -49,6 +49,14 @@ Should normally be done like this.
 
 There are some imgs in debug_img_list
 
+Debug dunkings from PLYR.EQU?
+
+	.if	IMGVIEW
+	SEQG	debug_SEQ1	,debug_t1
+	SEQG	debug_SEQ4	,debug_t4
+	.endif
+
+
 SYS.EQU
 HEADCK	.equ 0/1
 ================		
@@ -74,6 +82,7 @@ We can
 DUNKTST .equ 0/1
 =========
 Most of these also trigger with DEBUG = 1
+
 
 WORLD.EQU
 CRTALGN = 1/0
