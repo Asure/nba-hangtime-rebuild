@@ -1,0 +1,47 @@
+Dunk Tables
+===========
+Dunk tables are in the two following files:
+
+PLYRDSEQ.ASM
+PLYRDSQ2.ASM
+
+Sample: 
+
+dunka_t 
+;(medium range)
+	.word	DFLGS				;Flags for sequence
+	.long	seq_stand			;Code for end of sequence
+	.long	uvgq1,uvgq2,uvgq3,uvgq4
+	.long	uvgq5,uvgq4,uvgq3,uvgq2
+
+The UVGQ* longs are actual frame sequences/animation scripts with images and sounds to go along.
+
+PLYR.EQU controls the collected tables.
+
+	SEQG	DUNKA_SEQ	,dunka_t
+	SEQG	DUNKA2_SEQ	,dunka2_t
+	SEQG	DUNKA3_SEQ	,dunka3_t
+
+
+PLYR.AXX
+========
+We cam debug some dunks here:
+
+ SUBRP	plyr_startjmp
+
+This subrp has the condition inside if the player jumps, has the ball, is holding turbo, and is in
+dunking range etc. 
+It checks a whole lot of conditions, should it be a hook, layup, double dunk flashing, and so on.
+
+Eventually it decides on one of three dunk types, assuming it is not a double dunk.
+
+There are debug provisions here to check dunk anims! search sloumed / DEBUG.
+
+PLYR3.AXX
+=========
+
+Here's where the dunking happens.
+
+ SUBR	getdunkseq
+
+
