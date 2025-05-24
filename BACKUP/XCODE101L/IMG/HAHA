@@ -12,7 +12,7 @@ Loading images ...
 	      C:\MYHT\BACKUP\XCODE1~3\IMG\misc3.irw
 	      
 SET new IRAM address = 2000000 bank 0
-SET new IRAM address = 7000000 bank 1
+SET new IRAM address = 6000000 bank 1
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -40,16 +40,16 @@ Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               466592 dec	   71EA0 hex
+	IMAGE RAM               467288 dec	   72158 hex
 
-	TOTAL LOAD              466592 dec	   71EA0 hex
+	TOTAL LOAD              467288 dec	   72158 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       466592 dec	   71EA0 hex
+	In IMAGE RAM records       467288 dec	   72158 hex
 
-	TOTAL bytes written        466592 dec	   71EA0 hex, in 2 records.
+	TOTAL bytes written        467288 dec	   72158 hex, in 2 records.
 
-Bytes Represented in Tables ... 466591 dec 71E9F hex
+Bytes Represented in Tables ... 467288 dec 72158 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.
