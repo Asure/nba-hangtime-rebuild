@@ -994,6 +994,10 @@ LAC_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 LAL_t
+	LWWWWWW	scale66_t,BV7,SHT5,DNK7,DEF3,SDEF5,DSKL5
+	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,kobe_h
+	.word	5,3,5,17
+	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P
 	LWWWWWW	scale72f_t,BV7,SHT0,DNK10,DEF9,SDEF4,DSKL5
 	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,oneal_h
 	.word	3,9,3,4
@@ -1010,11 +1014,7 @@ LAL_t
 	.long	HORRY_F, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,Horry_h
 	.word	5,6,9,0
 	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P
-	LWWWWWW	scale66_t,BV7,SHT5,DNK7,DEF3,SDEF5,DSKL5
-	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,kobe_h
-	.word	5,3,5,17
-	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P
-
+	
 MIAMI_t
 	LWWWWWW	scale60f_t,BV9,SHT7,DNK0,DEF1,SDEF8,DSKL5
 	.long	Hrdaway_f, UN_MIAP_P,UN_MIAS_P, TR_MIAP_P,TR_MIAS_P,Hardaway_h
