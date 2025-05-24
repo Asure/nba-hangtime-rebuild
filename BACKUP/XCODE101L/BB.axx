@@ -1490,6 +1490,14 @@ offpzlp	move	a0,*a1+
 	movi	offpmaxstr,a4,L
 	calla	print_string_C2
 
+	movi	offpmaxstr_setup2,a2,L
+	calla	setup_message
+	movi	CLSNEUT|TYPTEXT|SUBMES1,a0
+	move	a0,@mess_objid		;OBJ ID's for text
+	movi	offpmaxstr2,a4,L
+	calla	print_string_C2
+
+
 	movk	1,a0
 	move	a0,@DISPLAYON
 	calla	display_unblank
@@ -1498,8 +1506,8 @@ offpzlp	move	a0,*a1+
 
 	.ref	rim_fire_snd	;combo_lock1
 	SOUND1	rim_fire_snd
-	.ref	max_hngtm_sp
-	SOUND1	max_hngtm_sp
+;	.ref	max_hngtm_sp
+;	SOUND1	max_hngtm_sp
 	.ref	tm_fire_tune
 	SOUND1	tm_fire_tune
 
@@ -2027,8 +2035,13 @@ offpdemo
 ;DJT Start
 offpmaxstr_setup
 	.ref	brush50_ascii,BRSH50R_P
-	PRINT_STR	brush50_ascii,24,0,200,100,BRSH50R_P,0
+	PRINT_STR	brush50_ascii,24,0,200,50,BRSH50R_P,0
 offpmaxstr
+	.string	"SUPER",0
+offpmaxstr_setup2
+	.ref	brush50_ascii,BRSH50R_P
+	PRINT_STR	brush50_ascii,24,0,200,115,BRSH50R_P,0
+offpmaxstr2
 	.string	"MAXIMUM!",0
 	.even
 
