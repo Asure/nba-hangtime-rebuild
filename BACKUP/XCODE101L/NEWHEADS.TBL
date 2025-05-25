@@ -283,140 +283,140 @@ KOBE01:
 	.word   24,31,11,26
 	.long   08347a1dH
 	.word   06000H
-	.long   KOBE01P
+	.long   KOBE_P
 KOBE02:
 	.word   23,32,8,26
 	.long   08348b8dH
 	.word   06000H
-	.long   KOBE01P
+	.long   KOBE_P
 KOBE03:
 	.word   26,33,6,28
 	.long   08349ccdH
 	.word   06000H
-	.long   KOBE01P
+	.long   KOBE_P
 KOBE04:
 	.word   23,35,8,29
 	.long   0834b0e9H
 	.word   06000H
-	.long   KOBE01P
+	.long   KOBE_P
 KOBE05:
-	.word   24,36,11,31
+	.word   27,37,13,35
 	.long   0834c3c7H
 	.word   06000H
-	.long   KOBE01P
+	.long   KOBE_P
 KOBE16:
 	.word   37,34,22,23
-	.long   0834d807H
+	.long   0834db31H
 	.word   06000H
-	.long   KOBE01P
+	.long   KOBE_P
 ONEAL01:
 	.word   29,34,13,30
-	.long   0834f583H
+	.long   0834f8adH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL02:
 	.word   28,32,11,29
-	.long   08350c9fH
+	.long   08350fc9H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL03:
 	.word   31,37,8,33
-	.long   0835219fH
+	.long   083524c9H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL04:
 	.word   29,37,9,34
-	.long   08353c81H
+	.long   08353fabH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL05:
 	.word   27,36,13,32
-	.long   083555a7H
+	.long   083558d1H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL06:
 	.word   33,33,20,28
-	.long   08356c6fH
+	.long   08356f99H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL07:
 	.word   33,34,9,31
-	.long   083585f5H
+	.long   0835891fH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL08:
 	.word   34,41,8,32
-	.long   0835a041H
+	.long   0835a36bH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL09:
 	.word   31,39,8,34
-	.long   0835c0edH
+	.long   0835c417H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL10:
 	.word   29,36,13,31
-	.long   0835dd43H
+	.long   0835e06dH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL11:
 	.word   27,28,11,21
-	.long   0835f5bbH
+	.long   0835f8e5H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL12:
 	.word   35,34,20,30
-	.long   08360773H
+	.long   08360a9dH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL13:
 	.word   38,34,19,29
-	.long   08362357H
+	.long   08362681H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL14:
 	.word   30,35,14,31
-	.long   0836419fH
+	.long   083644c9H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL15:
 	.word   28,36,14,32
-	.long   08365a3bH
+	.long   08365d65H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL16:
 	.word   38,29,35,22
-	.long   083671dbH
+	.long   08367505H
 	.word   06000H
 	.long   ONEAL_P
 BARKLEY1:
 	.word   28,34,14,31
-	.long   08368bafH
+	.long   08368ed9H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY2:
 	.word   29,35,13,31
-	.long   0836a1ffH
+	.long   0836a529H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY3:
 	.word   32,35,12,31
-	.long   0836b9c9H
+	.long   0836bcf3H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY4:
 	.word   27,36,9,35
-	.long   0836d409H
+	.long   0836d733H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY5:
 	.word   27,37,13,33
-	.long   0836ead1H
+	.long   0836edfbH
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY16:
 	.word   35,32,34,24
-	.long   0837023bH
+	.long   08370565H
 	.word   06000H
 	.long   BARKLEY_P
 	.TEXT

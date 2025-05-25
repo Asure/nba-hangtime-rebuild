@@ -100,12 +100,14 @@ Jordan.img
 ---> JORDAN1,JORDAN2,JORDAN3,JORDAN4,JORDAN5,JORDAN6
 ---> JORDAN7,JORDAN8,JORDAN9,JORDAN10,JORDAN11,JORDAN12
 ---> JORDAN13,JORDAN14,JORDAN15,JORDAN16
-kobeai.img
+Kobe.img
 ---> KOBE01,KOBE02,KOBE03,KOBE04,KOBE05,KOBE16
 Shaq.img
 ---> ONEAL01,ONEAL02,ONEAL03,ONEAL04,ONEAL05,ONEAL06
 ---> ONEAL07,ONEAL08,ONEAL09,ONEAL10,ONEAL11,ONEAL12
 ---> ONEAL13,ONEAL14,ONEAL15,ONEAL16
+Barkley.img
+---> BARKLEY1,BARKLEY2,BARKLEY3,BARKLEY4,BARKLEY5,BARKLEY16
 ;
 ; New mugs here
 ; Mugs go into mugshot.glo / mugshot.tbl, so copypaste output there manualy
@@ -128,6 +130,8 @@ Shaq.img
 ---> ONE_LAL
 Kobe.img
 ---> KOB_MUG
+Barkley.img
+---> BARK_MUG
 ;
 ; New nameplates here. 
 ; Nameplates go into imgtbl.axx !AND! imgtbl.glo 

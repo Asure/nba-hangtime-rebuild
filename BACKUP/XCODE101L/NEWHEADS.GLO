@@ -60,7 +60,7 @@
 	.global	JORDAN14
 	.global	JORDAN15
 	.global	JORDAN16
-	.globl	KOBE01P
+	.globl	KOBE_P
 	.global	KOBE01
 	.global	KOBE02
 	.global	KOBE03
