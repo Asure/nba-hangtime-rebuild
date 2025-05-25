@@ -2008,7 +2008,7 @@ jmp_t	.long	set1,set1,set1,set2,set2
 ****************************************************************************
 
 
-;Set of dunks for mqpb5 skill level 
+;Set of dunks for #5 skill level 
 
 d5u_t	.long	mqpbd1u_t,mqpbd2u_t,mqpbd3u_t,mqpbd4u_t
 	.long	mqpbd5u_t,mqpbd4u_t,mqpbd3u_t,mqpbd2u_t, mqpbd1u_t
@@ -2139,7 +2139,7 @@ mqpbd5l_t	.word	6-1
 
 
 ****************************************************************************
-;Set of dunks for rygf4 skill players
+;Set of dunks for #4 skill players
 
 d4u_t	.long	rygfd1u_t,rygfd2u_t,rygfd3u_t,rygfd4u_t
 	.long	rygfd5u_t,rygfd4u_t,rygfd3u_t,rygfd2u_t, rygfd1u_t
@@ -2258,7 +2258,7 @@ rygfd5l_t	.word	5-1
 
 
 ****************************************************************************
-;Set of dunks for ttzn3 skill players
+;Set of dunks for #3 skill players
 
 d3u_t	.long	ttznd1u_t,ttznd2u_t,ttznd3u_t,ttznd4u_t
 	.long	ttznd5u_t,ttznd4u_t,ttznd3u_t,ttznd2u_t, ttznd1u_t
@@ -2378,7 +2378,7 @@ ttznd5l_t	.word	6-1
 
 
 ****************************************************************************
-;Set of dunks for mxgf2 skill players
+;Set of dunks for #2 skill players
 
 d2u_t	.long	mxgfd1u_t,mxgfd2u_t,mxgfd3u_t,mxgfd4u_t
 	.long	mxgfd5u_t,mxgfd4u_t,mxgfd3u_t,mxgfd2u_t, mxgfd1u_t
@@ -2482,7 +2482,7 @@ mxgfd5l_t	.word	3-1
 
 
 ****************************************************************************
-;Set of dunks for cnmy1 skill players
+;Set of dunks for #1 skill players
 
 d1u_t	.long	cnmyd1u_t,cnmyd2u_t,cnmyd3u_t,cnmyd4u_t
 	.long	cnmyd5u_t,cnmyd4u_t,cnmyd3u_t,cnmyd2u_t, cnmyd1u_t
