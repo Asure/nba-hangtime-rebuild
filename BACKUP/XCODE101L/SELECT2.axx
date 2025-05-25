@@ -5489,8 +5489,6 @@ player_attribs
 
 ;12 L.A. LAKERS
 
-LAL_t
-
 	.word  07,10,03,10
 	.word  02,09,05,09	;SHAQUILLE O'NEAL
 	
