@@ -53,8 +53,14 @@ del c:\myht\backup\xcode1~3\imgpal8.asm
 copy c:\myht\backup\xcode1~3\pal8_b.asm C:\myht\backup\xcode1~3\imgpal8.asm 
 type c:\tmp\htextra\imgpal8.asm >> c:\myht\backup\xcode1~3\imgpal8.asm
 
+rem cleanup
+del c:\tmp\htextra\imgpal.asm
+del c:\tmp\htextra\imgpal8.asm
+del c:\tmp\htextra\*.tbl
+del c:\tmp\htextra\*.glo
+
 echo !!! DELETE BAST_Y_P duplicate from IMGPAL8.ASM !!!
 echo !!! DELETE BOTH HOOP_p duplicate from IMGPAL8.ASM !!!
-
+loadw misc4 /t=c:\tmp\htextra /FI /E >haha2
 pause
 exit

@@ -1,0 +1,24 @@
+Unused anims
+============
+
+Dunk stuff
+
+nba_dnk4
+S3oASD* (sorta slamdunk)
+
+m8revd 	NBA_DNK7
+m8* 	NBA_DNK6
+
+Rebound?
+
+nba_def3
+w3reb1-w3reb10
+
+nba_def4
+w3rej1
+
+Pass?
+t5hindr6-10 (mirror version behind the back pass)
+
+nba_msc1
+w1cow* - w5cow6* (raises hands above head, cowering)

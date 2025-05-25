@@ -55,7 +55,3 @@ Need to figure out
 - How to store player PALs head/team/flesh cols etc.
 - How to set a PAL for the sprite we morph to. (does it get team colored?) ffal...
 - How to restore player head/team/flesh cols etc.
-
-unused: 
-m8revd NBA_DNK7
-m8* DNK6

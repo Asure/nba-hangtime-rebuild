@@ -19,7 +19,7 @@ ZOF>
 CON>
 ;PAL for these is already in imgpal7, so we don't output it.
 ;We can use compression on these images so those are all turned on.
-NBACROWD.IMG
+..\..\ART100\NBACROWD.IMG
 ---> COACH02,COACH03,COACH04,COACH05,COACH06
 ---> BNCHPL02,BNCHPL03,BNCHPL04,BNCHPL05,BNCHPL06,BNCHPL07
 SHANG.IMG
@@ -36,7 +36,7 @@ ZON>
 XON>
 ;PAL for these is already in imgpal7, so we don't output it.
 ;We can use compression on these images so those are all turned on.
-OUTDOOR.IMG
+..\..\ART100\OUTDOOR.IMG
 ---> STORM02,STORM03,STORM04,STORM05,STORM06,STORM07,STORM08,STORM09,STORM10,STORM11,STORM12
 PON>
 ---> fence
@@ -95,6 +95,9 @@ smoke.img
 ---> RAD_MK2,SMK_MUG
 nmugs.img
 ---> SCO_MK2,REP_MK2,SUB_MK2
+; auto-ppp doesn't work for these so set to 1
+; this forces the correct choice.
+PPP> 1
 Jordan.img
 ---> JOR_MUG
 Shaq.img
@@ -103,6 +106,8 @@ Kobe.img
 ---> KOB_MUG
 Barkley.img
 ---> BARK_MUG
+; switch back to auto pal-per-pixel setting
+PPP> 0
 ;
 ; New nameplates here. 
 ; Nameplates go into imgtbl.axx !AND! imgtbl.glo 
@@ -116,7 +121,7 @@ CON>
 XON>
 ZOF>
 ---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL
-pnames.img
+..\..\ART100\pnames.img
 ---> BARKLEY,PORTER,MAJERLE,WILKINS
 ;
 ;We put hoop & shards here at the back, since it allows easier delete from 

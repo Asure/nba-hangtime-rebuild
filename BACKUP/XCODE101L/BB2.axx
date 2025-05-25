@@ -153,6 +153,14 @@ advance	cmpi	debug_img_end,a8
 	.def	debug1,debug4
 ;	.def	debug_t1,debug_t4
 
+; This is defined in plyr.equ
+;
+;	.if	IMGVIEW
+;	SEQG	debug_SEQ1	,debug_t1
+;	SEQG	debug_SEQ4	,debug_t4
+;	.endif
+
+
 debug_t1
 	.word	0
        	.long	0
