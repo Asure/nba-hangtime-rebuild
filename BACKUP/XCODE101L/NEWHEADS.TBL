@@ -395,78 +395,28 @@ BARKLEY1:
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY2:
-	.word   21,24,9,22
+	.word   29,35,13,31
 	.long   0836a1ffH
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY3:
-	.word   26,25,8,23
-	.long   0836adcfH
+	.word   32,35,12,31
+	.long   0836b9c9H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY4:
-	.word   23,28,8,26
-	.long   0836bd0bH
+	.word   27,36,9,35
+	.long   0836d409H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY5:
 	.word   27,37,13,33
-	.long   0836cc23H
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY6:
-	.word   25,22,13,19
-	.long   0836e38dH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY7:
-	.word   21,25,5,22
-	.long   0836f071H
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY8:
-	.word   26,29,4,24
-	.long   0836fcbfH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY9:
-	.word   23,28,4,25
-	.long   08370e6bH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY10:
-	.word   23,28,4,24
-	.long   08371d83H
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY11:
-	.word   20,18,9,25
-	.long   08372c9bH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY12:
-	.word   23,21,13,19
-	.long   0837350bH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY13:
-	.word   28,24,14,20
-	.long   0837405dH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY14:
-	.word   25,24,12,22
-	.long   0837501dH
-	.word   06000H
-	.long   BARKLEY_P
-BARKLEY15:
-	.word   23,23,10,21
-	.long   08375e2dH
+	.long   0836ead1H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY16:
-	.word   27,22,25,18
-	.long   08376a93H
+	.word   35,32,34,24
+	.long   0837023bH
 	.word   06000H
 	.long   BARKLEY_P
 	.TEXT
