@@ -13,15 +13,6 @@ Loading images ...
 	      
 SET new IRAM address = 2000000 bank 0
 SET new IRAM address = 6000000 bank 1
-Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK4BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK5BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK6BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK7BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
-Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 Image JORDAN1 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN2 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN3 has 98 colors. Can't fit into 6 bits per pixel.
@@ -38,18 +29,27 @@ Image JORDAN13 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN14 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
+Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK4BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK5BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK6BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK7BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
+Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               474482 dec	   73D72 hex
+	IMAGE RAM               473986 dec	   73B82 hex
 
-	TOTAL LOAD              474482 dec	   73D72 hex
+	TOTAL LOAD              473986 dec	   73B82 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       474482 dec	   73D72 hex
+	In IMAGE RAM records       473986 dec	   73B82 hex
 
-	TOTAL bytes written        474482 dec	   73D72 hex, in 2 records.
+	TOTAL bytes written        473986 dec	   73B82 hex, in 2 records.
 
-Bytes Represented in Tables ... 474481 dec 73D71 hex
+Bytes Represented in Tables ... 473985 dec 73B81 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.

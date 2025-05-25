@@ -43,7 +43,36 @@ PON>
 ;MK3 temple to go along with the animated storm.
 MKSTREET.IMG
 ---> FALL2_vda
+POF>
 PON>
+;Let's get the glass shard shatter stuff from Jam TE
+HOOPJAM.IMG
+PPP> 6
+ASM> shatter.tbl
+GLO> shatter.glo
+ZOF>
+---> shard1_1,shard1_2
+---> shard1_3,shard1_4,shard1_5,shard1_6,shard1_7,shard1_8,shard2_1,shard2_2
+---> shard2_3,shard2_4,shard2_5,shard2_6,shard2_7,shard2_8,shard3_1,shard3_2
+---> shard3_3,shard3_4,shard3_5,shard3_6,shard3_7,shard3_8,shard3_9
+---> shard3_10,shard3_11,shard3_12,shard4_1,shard4_2,shard4_3,shard4_4
+---> shard4_5,shard4_6,shard4_7,shard4_8,shard4_9,shard4_10,shard5_1
+---> shard5_2,shard5_3,shard5_4,shard5_5,shard5_6,shard5_7,shard5_8,shard6_1
+---> shard6_2,shard6_3,shard6_4,shard6_5,shard6_6,shard6_7,shard6_8,shard7_1
+---> shard7_2,shard7_3,shard7_4,shard7_5,shard7_6,shard7_7,shard7_8,shard7_9
+---> shard7_10,shard8_1,shard8_2,shard8_3,shard8_4,shard8_5,shard8_6
+---> shard8_7,shard8_8,shard8_9,shard8_10
+---> shat1_1
+---> shat1_2,shat1_3,shat1_4,shat1_5,shat2_1,shat2_2,shat2_3,shat2_4,shat2_5
+---> shat3_1,shat3_2,shat3_3,shat3_4,shat3_5,shat4_1,shat4_2,shat4_3,shat4_4
+---> shat4_5
+ZON>
+;Redrawn shattered hoop from Ressurecta - Thanks!
+HOOPHT.IMG
+PPP> 6
+ASM> hoop2.tbl
+GLO> hoop2.glo
+---> BACK1BR,BACK2BR,BACK3BR,BACK4BR,BACK5BR,BACK6BR,BACK7BR,BACK8BR,BACK9BR
 ;Raiden lightning
 RAIDEN.IMG
 ASM> lighten.tbl
@@ -119,34 +148,8 @@ ZOF>
 pnames.img
 ---> BARKLEY,PORTER,MAJERLE,WILKINS
 ;
-;We put hoop & shards here at the back, since it allows easier delete from 
-;IMGPAL8.ASM
-PON>
-;Let's get the glass shard shatter stuff from Jam TE
-HOOPJAM.IMG
-PPP> 6
-ASM> shatter.tbl
-GLO> shatter.glo
-ZOF>
----> shard1_1,shard1_2
----> shard1_3,shard1_4,shard1_5,shard1_6,shard1_7,shard1_8,shard2_1,shard2_2
----> shard2_3,shard2_4,shard2_5,shard2_6,shard2_7,shard2_8,shard3_1,shard3_2
----> shard3_3,shard3_4,shard3_5,shard3_6,shard3_7,shard3_8,shard3_9
----> shard3_10,shard3_11,shard3_12,shard4_1,shard4_2,shard4_3,shard4_4
----> shard4_5,shard4_6,shard4_7,shard4_8,shard4_9,shard4_10,shard5_1
----> shard5_2,shard5_3,shard5_4,shard5_5,shard5_6,shard5_7,shard5_8,shard6_1
----> shard6_2,shard6_3,shard6_4,shard6_5,shard6_6,shard6_7,shard6_8,shard7_1
----> shard7_2,shard7_3,shard7_4,shard7_5,shard7_6,shard7_7,shard7_8,shard7_9
----> shard7_10,shard8_1,shard8_2,shard8_3,shard8_4,shard8_5,shard8_6
----> shard8_7,shard8_8,shard8_9,shard8_10
----> shat1_1
----> shat1_2,shat1_3,shat1_4,shat1_5,shat2_1,shat2_2,shat2_3,shat2_4,shat2_5
----> shat3_1,shat3_2,shat3_3,shat3_4,shat3_5,shat4_1,shat4_2,shat4_3,shat4_4
----> shat4_5
-ZON>
-;Redrawn shattered hoop from Ressurecta - Thanks!
-HOOPHT.IMG
-PPP> 6
-ASM> hoop2.tbl
-GLO> hoop2.glo
----> BACK1BR,BACK2BR,BACK3BR,BACK4BR,BACK5BR,BACK6BR,BACK7BR,BACK8BR,BACK9BR
+
+
+
+
+

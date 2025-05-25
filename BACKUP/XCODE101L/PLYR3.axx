@@ -3900,7 +3900,7 @@ yglxinpos
 	movk	10,a1
 	move	a1,*a0(PTIME)
 
-	move	@ballpnumshot,a11
+	move	@ballpnumshot,a11	;Last plyr who shot (0-3)
 	movk	10,a8
 	move	a11,a0
 	subk	2,a0
