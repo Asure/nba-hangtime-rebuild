@@ -4604,12 +4604,19 @@ player_heads
 	.long	0,0
 
 ;09 HOUSTON
+	.long	BARK_MUG,OLA_HOU
+	.long	BARK_MUG,DRX_HOU
+	.long	BARK_MUG,WLS_GLD
+
+	.long	OLA_HOU,BARK_MUG
 	.long	OLA_HOU,DRX_HOU
 	.long	OLA_HOU,WLS_GLD
 
+	.long	DRX_HOU,BARK_MUG
 	.long	DRX_HOU,OLA_HOU
 	.long	DRX_HOU,WLS_GLD
 
+	.long	WLS_GLD,BARK_MUG
 	.long	WLS_GLD,OLA_HOU
 	.long	WLS_GLD,DRX_HOU
 
@@ -4621,12 +4628,7 @@ player_heads
 	.long	0,0
 	.long	0,0
 	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+
 
 ;10 INDIANA
 	.long	MIL_IND,JAC_IND
@@ -5400,12 +5402,19 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;09 HOUSTON
+	.long	BARKLEY,OLAJUWON
+	.long	BARKLEY,DREXLER
+	.long	BARKLEY,WILLIS
+
+	.long	OLAJUWON,BARKLEY
 	.long	OLAJUWON,DREXLER
 	.long	OLAJUWON,WILLIS
 
+	.long	DREXLER,BARKLEY
 	.long	DREXLER,OLAJUWON
 	.long	DREXLER,WILLIS
 
+	.long	WILLIS,BARKLEY
 	.long	WILLIS,OLAJUWON
 	.long	WILLIS,DREXLER
 
@@ -5417,12 +5426,7 @@ WALLACE	.equ	11
 	.long	0,0
 	.long	0,0
 	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+
 
 ;10 INDIANA
 	.long	MILLER,MJACKSON

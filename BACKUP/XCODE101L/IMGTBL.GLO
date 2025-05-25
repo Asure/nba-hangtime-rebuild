@@ -10,6 +10,7 @@
 	.global JORDAN
 	.global BRYANT
 	.global	ONEAL
+	.global BARKLEY
 ;
 	.globl	DIAGP
 	.globl	crtwrk_p

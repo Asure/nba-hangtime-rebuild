@@ -22,6 +22,8 @@ Stream Oneal "Oneal.wav";
 Stream Shaq_Oneal "Shaq_Oneal.wav";
 Stream Walker "Walker.wav";
 Stream Antoine_Walker "Antoine_Walker.wav";
+Stream Barkley "Barkley.wav";
+Stream Charles_Barkley "Charles_Barkley.wav";
 
 // last used call 07BF ?
 
@@ -199,5 +201,24 @@ Track $07C2 channel 5 {		// call free
     SetMixingLevel(level 111);
     Play(stream $1CC03A);
     Wait(15) Play(Walker);
+    Wait(Stream);         
+};
+// Barkley
+Track $0bbf channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Barkley);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Charles Barkley
+Track $0bc0 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Charles_Barkley);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Barkley
+Track $07C3 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Barkley);
     Wait(Stream);         
 };

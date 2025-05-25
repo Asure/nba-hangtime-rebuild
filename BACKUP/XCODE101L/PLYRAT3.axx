@@ -226,6 +226,7 @@
 	.def	jordan_h
 	.def	kobe_h
 	.def	oneal_h
+	.def	Barkley_h
 	.text
 
 ;; MARKER
@@ -254,6 +255,9 @@ kobe_h
 
 oneal_h
 	HDMAC	ONEAL01
+
+Barkley_h
+	HDMAC	BARKLEY1
 
 heithb_h
 	HDMAC2	HEITH01

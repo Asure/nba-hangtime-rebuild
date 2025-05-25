@@ -461,3 +461,5 @@
 	.global	ONE_LAL
 	.globl	KOB_MUGP
 	.global	KOB_MUG
+	.globl	BARK_MUGP
+	.global	BARK_MUG

@@ -301,6 +301,7 @@
 	.ref	jordan_h
 	.ref	kobe_h
 	.ref	oneal_h
+	.ref	Barkley_h
 
 ;symbols refined in this file
 
@@ -910,6 +911,11 @@ GOLD_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 HOU_t
+;Barkley
+	LWWWWWW	scale610f_t,BV7,SHT7,DNK9,DEF5,SDEF5,DSKL3
+	.long	Hakeem_f, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,Barkley_h
+	.word	5,9,9,0
+	.long	SW_HOUP_P,SW_HOUS_P,VP_HOUP_P,VP_HOUS_P
 	LWWWWWW	scale70_t,BV7,SHT7,DNK8,DEF10,SDEF7,DSKL5
 	.long	Hakeem_f, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,Olajuwon_h
 	.word	7,10,7,0
@@ -923,10 +929,10 @@ HOU_t
 	.word	1,9,4,18
 	.long	SW_HOUP_P,SW_HOUS_P,VP_HOUP_P,VP_HOUS_P
 ;kill
-	LWWWWWW	scale610f_t,BV4,SHT4,DNK6,DEF8,SDEF2,DSKL5
-	.long	HARR_F, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,harr_h
-	.word	4,9,2,5
-	.long	SW_HOUP_P,SW_HOUS_P,VP_HOUP_P,VP_HOUS_P
+;	LWWWWWW	scale610f_t,BV4,SHT4,DNK6,DEF8,SDEF2,DSKL5
+;	.long	HARR_F, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,harr_h
+;	.word	4,9,2,5
+;	.long	SW_HOUP_P,SW_HOUS_P,VP_HOUP_P,VP_HOUS_P
 ;kill
 	LWWWWWW	scale63t_t,BV6,SHT6,DNK1,DEF1,SDEF7,DSKL5
 	.long	smith_f, UN_HOUP_P,UN_HOUS_P, TR_HOUP_P,TR_HOUS_P,Smith_h

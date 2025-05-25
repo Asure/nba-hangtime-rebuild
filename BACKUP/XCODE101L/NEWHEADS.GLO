@@ -84,3 +84,20 @@
 	.global	ONEAL14
 	.global	ONEAL15
 	.global	ONEAL16
+	.globl	BARKLEY_P
+	.global	BARKLEY1
+	.global	BARKLEY2
+	.global	BARKLEY3
+	.global	BARKLEY4
+	.global	BARKLEY5
+	.global	BARKLEY6
+	.global	BARKLEY7
+	.global	BARKLEY8
+	.global	BARKLEY9
+	.global	BARKLEY10
+	.global	BARKLEY11
+	.global	BARKLEY12
+	.global	BARKLEY13
+	.global	BARKLEY14
+	.global	BARKLEY15
+	.global	BARKLEY16

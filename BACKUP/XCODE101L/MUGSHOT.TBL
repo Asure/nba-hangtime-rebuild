@@ -1133,42 +1133,47 @@ WAL_COL:
 	.DATA
 RAD_MK2:
 	.word   72,63,0,63
-	.long   08368bafH
+	.long   0837787fH
 	.word   07580H
 	.long   RAD_MK2P
 SMK_MUG:
 	.word   72,62,0,62
-	.long   0836e6bdH
+	.long   0837d38dH
 	.word   0880H
 	.long   SMK_MUGP
 SCO_MK2:
 	.word   71,62,0,62
-	.long   08372d0dH
+	.long   083819ddH
 	.word   07880H
 	.long   SCO_MK2P
 REP_MK2:
 	.word   50,63,0,63
-	.long   08376c28H
+	.long   083858f8H
 	.word   07080H
 	.long   REP_MK2P
 SUB_MK2:
 	.word   46,63,0,63
-	.long   0837aa33H
+	.long   08389703H
 	.word   07080H
 	.long   SUB_MK2P
 JOR_MUG:
 	.word   68,62,0,62
-	.long   0837e5d6H
+	.long   0838d2a6H
 	.word   0580H
 	.long   JOR_MUGP
 ONE_LAL:
 	.word   68,62,0,62
-	.long   083837c6H
+	.long   08392496H
 	.word   0680H
 	.long   ONE_LALP
 KOB_MUG:
 	.word   63,62,0,62
-	.long   083885c6H
+	.long   08397296H
 	.word   0480H
 	.long   KOB_MUGP
+BARK_MUG:
+	.word   76,61,0,62
+	.long   0839bc6eH
+	.word   0880H
+	.long   BARK_MUGP
 	.TEXT
