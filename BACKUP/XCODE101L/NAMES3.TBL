@@ -39,25 +39,5 @@ ONEAL:
 	.long   0838f07dH
 	.word   03000H
 	.long   BAST_Y_P
-BARKLEY:
-	.word   50,10,24,0
-	.long   0838f4f1H
-	.word   03000H
-	.long   BAST_Y_P
-PORTER:
-	.word   42,10,20,0
-	.long   0838facdH
-	.word   03000H
-	.long   BAST_Y_P
-MAJERLE:
-	.word   49,10,23,0
-	.long   0838ffb9H
-	.word   03000H
-	.long   BAST_Y_P
-WILKINS:
-	.word   45,10,21,0
-	.long   08390577H
-	.word   03000H
-	.long   BAST_Y_P
 	.TEXT
 
