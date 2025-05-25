@@ -5957,7 +5957,7 @@ team_sqaud_cnts
 	.word	6	;DENVER
 	.word	12	;DETROIT
 	.word	6	;GOLDEN STATE
-	.word	6	;HOUSTON
+	.word	12	;HOUSTON
 	.word	20	;INDIANA
 	.word	12	;L.A. CLIPPERS
 	.word	20	;L.A. LAKERS
