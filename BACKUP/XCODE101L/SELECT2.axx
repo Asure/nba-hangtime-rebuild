@@ -5444,9 +5444,6 @@ player_attribs
 	.word  00,00,00,00
 	.word  00,00,00,00
 
-	.word  00,00,00,00
-	.word  00,00,00,00
-
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
 
