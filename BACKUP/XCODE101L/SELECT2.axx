@@ -5494,20 +5494,20 @@ player_attribs
 
 LAL_t
 
-	.word  07,03,05,07
+	.word  07,10,03,10
+	.word  02,09,05,09	;SHAQUILLE O'NEAL
+	
+	.word  08,03,07,08
+	.word  07,04,07,07	;EDDIE JONES		_______________
+
+	.word  09,02,07,01
+	.word  05,01,08,07	;NICK VAN EXEL		6'1"	170 ex thin
+
+	.word  08,03,05,08
 	.word  05,03,05,05	;KOBE BRYANT
 	
-	.word  07,09,00,10 
-	.word  04,09,03,03	;SHAQUILLE O'NEAL
-	
-	.word  08,04,07,05
-	.word  04,07,08,02	;EDDIE JONES		_______________
-
-	.word  10,02,07,01
-	.word  06,01,08,09	;NICK VAN EXEL		6'1"	170 ex thin
-
-	.word  08,06,06,08
-	.word  07,08,05,09	;ROBERT HORRY		6'10"	220 thin
+	.word  07,06,06,06
+	.word  04,07,05,07	;ROBERT HORRY		6'10"	220 thin
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5888,7 +5888,7 @@ name_sort
  .long	OLAJUWON,BARKLEY,DREXLER,WILLIS, WILLIS 		;09 ROCKETS
  .long	MILLER,MJACKSON,SMITS,DDAVIS,ROSE				;10 PACERS
  .long	VAUGHT,RROGERS,BBARRY,PRICHARD, LMURRAY			;11 CLIPPERS
- .long	BRYANT,ONEAL,EJONES,VANEXEL,HORRY				;12 LAKERS
+ .long	ONEAL,EJONES,VANEXEL,BRYANT,HORRY				;12 LAKERS
  .long	THARDAWAY,MOURN,MASH, MASH , MASH				;13 HEAT
  .long	BAKER,GROBINSO, ALLEN ,DOUGLAS,GILLIAM			;14 BUCKS
  .long	GARNETT,GUGLI2, MARBURY , MARBURY , MARBURY		;15 TIMBERWOLVES
