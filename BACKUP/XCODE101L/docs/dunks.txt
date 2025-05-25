@@ -45,3 +45,17 @@ Here's where the dunking happens.
  SUBR	getdunkseq
 
 
+Adding stuff
+============
+Images need the third any point table to be active, it's where the ball attaches.
+In IT you enable this with CTRL-P. The box with A3X A3Y becomes active and can then be used.
+A3Z is the plane where the ball is (eg. behind of in front of the image.) ID needs to be figured out.
+
+Need to figure out 
+- How to store player PALs head/team/flesh cols etc.
+- How to set a PAL for the sprite we morph to. (does it get team colored?) ffal...
+- How to restore player head/team/flesh cols etc.
+
+unused: 
+m8revd NBA_DNK7
+m8* DNK6
