@@ -325,6 +325,10 @@ bguplp
 ;;	calla	set_volume_for_amode
 
 	JSRP	show_title
+	.if	VDADEBUG
+	.ref	show_trophy
+	JSRP	show_trophy
+	.ENDIF
 
 * Robo debug
 	.if	ROBOG

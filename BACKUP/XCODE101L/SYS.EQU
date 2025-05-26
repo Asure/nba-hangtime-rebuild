@@ -39,6 +39,7 @@ ROBOG	.equ	0	;0 or 1  Robotron (broken atm) off/on	;Cost 20K
 SHANG	.equ	1	;0 or 1  Shang in audience off/on	;Cost ~810
 
 CPUDEBUG .equ	0	;Cpu meter process (bb.axx calcs CPULEFT, EXPERIMENTAL)
+VDADEBUG .equ	0	;Debug zipped pics
 
 SMOKET	.equ	0	;Player Smoketrails (Abandoned feature, EXPERIMENTAL)
 SHADOWT	.equ	0	;Player Shadowtrails (Abandoned feature, EXPERIMENTAL) combined cost around 1024

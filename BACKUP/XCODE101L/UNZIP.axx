@@ -25,7 +25,9 @@
 ;	.include	"shawn.hdr"		;Macros
 ;	.include	"frame.tbl"
 
-;	.include	"bbvda.tbl"
+	.if	VDADEBUG
+	.include	"bbvda.tbl"
+	.endif
 
 
 	.ref	pal_getf
@@ -88,49 +90,51 @@ PIXPERFRM	.equ	frmpalptr+32			;32b
 	.ref	dtype,display_unblank,get_all_buttons_cur2
 	.ref	SOUNDSUP,bounce_snd
 
-; SUBR	show_trophy
-;
-;	calla	display_blank
-;	calla	WIPEOUT
-;
-;	movk	1,a0
-;	move	a0,@DISPLAYON
-;	move	a0,@dpageflip
-;
-;	calla	display_unblank
-;
-;	SLEEPK	1
-;
-;	clr	a0
-;	move	a0,@dpageflip
-;
-;	movi	TROPHY,a8
-;	movi	[0,0],a9
-;	JSRP	movie_run
-;
-;	movk	1,a0
-;	move	a0,@dpageflip
-;	SLEEPK	1
-;	clr	a0
-;	move	a0,@dpageflip
-;
-;	movi	6*TSEC,a10
-;icfclp	SLEEPK	1
-;	calla	get_all_buttons_cur2
-;	jrz	icfcnob
-;
-;      	clr	a0
-;	move	a0,@SOUNDSUP		;turn all sounds on
-;	SOUND1	bounce_snd
-;	movk	1,a0
-;	move	a0,@SOUNDSUP		;turn all sounds off
-;	jruc	icfcxb
-;icfcnob	
-;	dsj	a10,icfclp
-;icfcxb
-;	calla	WIPEOUT
-;
-;	RETP
+	.if	VDADEBUG
+ SUBR	show_trophy
+
+	calla	display_blank
+	calla	WIPEOUT
+
+	movk	1,a0
+	move	a0,@DISPLAYON
+	move	a0,@dpageflip
+
+	calla	display_unblank
+
+	SLEEPK	1
+
+	clr	a0
+	move	a0,@dpageflip
+
+	movi	TROPHY,a8
+	movi	[0,0],a9
+	JSRP	movie_run
+
+	movk	1,a0
+	move	a0,@dpageflip
+	SLEEPK	1
+	clr	a0
+	move	a0,@dpageflip
+
+	movi	6*TSEC,a10
+icfclp	SLEEPK	1
+	calla	get_all_buttons_cur2
+	jrz	icfcnob
+
+      	clr	a0
+	move	a0,@SOUNDSUP		;turn all sounds on
+	SOUND1	bounce_snd
+	movk	1,a0
+	move	a0,@SOUNDSUP		;turn all sounds off
+	jruc	icfcxb
+icfcnob	
+	dsj	a10,icfclp
+icfcxb
+	calla	WIPEOUT
+
+	RETP
+	.endif
 
 
 *******************************

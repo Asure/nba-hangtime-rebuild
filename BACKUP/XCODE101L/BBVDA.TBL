@@ -1,4 +1,5 @@
 	.DATA
-CHEERS	.set	06000000h
+CHEERS	.set	0fff6ba30h
+TROPHY	.set	0fff6ba30h
 	.TEXT
 
