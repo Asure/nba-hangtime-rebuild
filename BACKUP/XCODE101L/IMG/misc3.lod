@@ -84,7 +84,8 @@ Shaq.img
 ---> ONEAL01,ONEAL02,ONEAL03,ONEAL04,ONEAL05,ONEAL16
 Barkley.img
 ---> BARKLEY1,BARKLEY2,BARKLEY3,BARKLEY4,BARKLEY5,BARKLEY16
-;
+Magic.img
+---> MAGIC01,MAGIC02,MAGIC03,MAGIC04,MAGIC05,MAGIC16;
 ; New mugs here
 ; Mugs go into mugshot.glo / mugshot.tbl, so copypaste output there manualy
 ; Mugs are used in select2.axx. Our mug pals should go into imgpal8.asm
@@ -111,6 +112,8 @@ Kobe.img
 ---> KOB_MUG
 Barkley.img
 ---> BARK_MUG
+Magic.img
+---> MAG_MUG
 ; switch back to auto pal-per-pixel setting
 PPP> 0
 ;
@@ -127,7 +130,7 @@ XON>
 ZOF>
 ---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL
 ..\..\ART100\pnames.img
----> BARKLEY,PORTER,MAJERLE,WILKINS
+---> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M
 ;
 ;We put hoop & shards here at the back, since it allows easier delete from 
 ;IMGPAL8.ASM

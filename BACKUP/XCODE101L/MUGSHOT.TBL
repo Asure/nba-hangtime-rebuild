@@ -1176,4 +1176,9 @@ BARK_MUG:
 	.long   082c17bfH
 	.word   0580H
 	.long   BARK_MUGP
+MAG_MUG:
+	.word   42,62,0,62
+	.long   082c691fH
+	.word   080H
+	.long   MAG_MUGP
 	.TEXT

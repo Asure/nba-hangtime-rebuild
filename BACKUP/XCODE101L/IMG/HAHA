@@ -29,10 +29,17 @@ Image JORDAN13 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN14 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
+Couldn't find image [MAGIC01] in library [C:\MYHT\BACKUP\XCODE1~3\IMG\MAGIC.IMG]
+Couldn't find image [MAGIC02] in library [C:\MYHT\BACKUP\XCODE1~3\IMG\MAGIC.IMG]
+Couldn't find image [MAGIC03] in library [C:\MYHT\BACKUP\XCODE1~3\IMG\MAGIC.IMG]
+Couldn't find image [MAGIC04] in library [C:\MYHT\BACKUP\XCODE1~3\IMG\MAGIC.IMG]
+Couldn't find image [MAGIC05] in library [C:\MYHT\BACKUP\XCODE1~3\IMG\MAGIC.IMG]
+Couldn't find image [MAGIC16;] in library [C:\MYHT\BACKUP\XCODE1~3\IMG\MAGIC.IMG]
 Image JOR_MUG has 67 colors. Can't fit into 1 bits per pixel.
 Image ONE_LAL has 68 colors. Can't fit into 1 bits per pixel.
 Image KOB_MUG has 68 colors. Can't fit into 1 bits per pixel.
 Image BARK_MUG has 60 colors. Can't fit into 1 bits per pixel.
+Image MAG_MUG has 69 colors. Can't fit into 1 bits per pixel.
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -44,16 +51,16 @@ Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               401140 dec	   61EF4 hex
+	IMAGE RAM               403468 dec	   6280C hex
 
-	TOTAL LOAD              401140 dec	   61EF4 hex
+	TOTAL LOAD              403468 dec	   6280C hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       401140 dec	   61EF4 hex
+	In IMAGE RAM records       403468 dec	   6280C hex
 
-	TOTAL bytes written        401140 dec	   61EF4 hex, in 2 records.
+	TOTAL bytes written        403468 dec	   6280C hex, in 2 records.
 
-Bytes Represented in Tables ... 401139 dec 61EF3 hex
+Bytes Represented in Tables ... 403468 dec 6280C hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.

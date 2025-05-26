@@ -11,3 +11,4 @@
 	.global	PORTER
 	.global	MAJERLE
 	.global	WILKINS
+	.global	JOHNSON_M
