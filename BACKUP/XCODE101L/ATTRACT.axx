@@ -35,6 +35,10 @@
 	.include	"bgndtbl7.asm"
 	.include	"bgndpal7.asm"
 	.include	"bgndtbl7.glo"
+	.if 	DCSLOGO
+	.include	"dcs.tbl"
+	.include	"dcs.glo"
+	.endif
 
 	.def	COLTAB
 	.def	creditscreen
@@ -325,10 +329,15 @@ bguplp
 ;;	calla	set_volume_for_amode
 
 	JSRP	show_title
+
 	.if	VDADEBUG
 	.ref	show_trophy
 	JSRP	show_trophy
-	.ENDIF
+	.endif
+
+	.if	DCSLOGO
+	JSRP	show_dcslogo
+	.endif
 
 * Robo debug
 	.if	ROBOG
@@ -637,6 +646,64 @@ xqcvstick_t
 	.endif
 
 ;DJT End
+
+****************************************************************
+* DCS screen
+
+	.if 	DCSLOGO
+show_dcslogo
+	calla	display_blank
+	calla	WIPEOUT
+
+	clr	a0
+	move	a0,@dtype		;2D
+
+	movk	1,a0			;page flipping on
+	move	a0,@dpageflip
+
+	movi	SCRNEND,a0		;[256,405]
+	move	a0,@SCRNLR,L
+
+	clr	a0
+	move	a0,@WORLDTLX,L
+	move	a0,@WORLDTLY,L
+	move	a0,@IRQSKYE
+
+	SLEEPK	2
+
+	movi	dcs_msg_setup,a2
+	calla	setup_message
+	movk	11,a0
+	move	a0,@mess_line_spacing
+	movi	dcs_msg_str,a4
+	calla	print_string_C2
+
+	movi	[200,0],a0
+	movi	[120,0],a1
+	movi	dcslogo,a2			;* image
+	movi	20000,a3
+	movi	DMAWNZ|M_NOCOLL,a4
+	movi	CLSDEAD,a5
+	clr	a6
+	clr	a7
+	calla	BEGINOBJ2
+
+	clr	a10
+	movk	8,a11
+	CREATE0	fade_up
+
+	movk	1,a0
+	move	a0,@DISPLAYON
+
+	SLEEPK	2
+	calla	display_unblank
+
+	SLEEP	1*TSEC
+
+	movi	6*TSEC,a10
+	jruc	niuclp			;!! We recycle code from the show_title here ;)
+
+	.endif
 
 ****************************************************************
 * Title screen
@@ -1034,6 +1101,15 @@ ifcjxb
 	SLEEP	40
 
 	RETP
+
+dcs_msg_setup
+	PRINT_STR	bast8t_ascii,4,0,200,190,BAST_W_P,0
+
+
+dcs_msg_str
+	.string "DIGITAL COMPRESSED SOUND SYSTEM",1
+	.string	"(C) 1996 MIDWAY MANUFACTURING COMPANY",0
+	.even
 
 our_legal_msg_setup
 	PRINT_STR	bast8t_ascii,4,0,200,140,BAST_W_P,0

@@ -46,6 +46,11 @@ PON>
 MKSTREET.IMG
 ---> FALL2_vda
 PON>
+;Unused art from DCSLOGO
+..\..\ART100\DCSLOGO.IMG
+ASM> dcs.tbl
+GLO> dcs.glo
+---> dcslogo
 ;Raiden lightning
 RAIDEN.IMG
 ASM> lighten.tbl

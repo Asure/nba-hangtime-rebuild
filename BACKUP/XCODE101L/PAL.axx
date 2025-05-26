@@ -39,6 +39,7 @@
 	.include	"imgpal8.asm"
 	.include	"mugshot.tbl"
 	.include	"mugshot.glo"
+	.include	"dcs.glo"
 
 
 ;refs

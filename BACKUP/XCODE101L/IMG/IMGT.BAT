@@ -52,6 +52,8 @@ del c:\tmp\htextra\l2*.*
 del c:\myht\backup\xcode1~3\imgpal8.asm
 copy c:\myht\backup\xcode1~3\pal8_b.asm C:\myht\backup\xcode1~3\imgpal8.asm 
 type c:\tmp\htextra\imgpal8.asm >> c:\myht\backup\xcode1~3\imgpal8.asm
+rem DCS
+copy c:\tmp\htextra\dcs.* c:\myht\backup\xcode1~3\
 
 rem cleanup
 del c:\tmp\htextra\imgpal.asm

@@ -1,47 +1,47 @@
 	.DATA
 COACH02:
 	.word   129,69,0,62
-	.long   080935d0H
+	.long   08000000H
 	.word   07000H
 COACH03:
 	.word   129,68,0,61
-	.long   080a2933H
+	.long   0800f363H
 	.word   07000H
 COACH04:
 	.word   129,74,0,67
-	.long   080b190fH
+	.long   0801e33fH
 	.word   07000H
 COACH05:
 	.word   129,89,0,82
-	.long   080c1e15H
+	.long   0802e845H
 	.word   07000H
 COACH06:
 	.word   129,93,0,86
-	.long   080d5804H
+	.long   08042234H
 	.word   07000H
 BNCHPL02:
 	.word   250,74,13,67
-	.long   080ea00fH
+	.long   08056a3fH
 	.word   07000H
 BNCHPL03:
 	.word   250,74,13,67
-	.long   081099ebH
+	.long   0807641bH
 	.word   07000H
 BNCHPL04:
 	.word   250,74,13,67
-	.long   081293c7H
+	.long   08095df7H
 	.word   07000H
 BNCHPL05:
 	.word   250,78,13,71
-	.long   08148da3H
+	.long   080b57d3H
 	.word   07000H
 BNCHPL06:
 	.word   250,89,13,82
-	.long   0816a2d7H
+	.long   080d6d07H
 	.word   07000H
 BNCHPL07:
 	.word   252,93,15,86
-	.long   0819033dH
+	.long   080fcd6dH
 	.word   07000H
 	.TEXT
 
