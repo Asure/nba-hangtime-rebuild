@@ -29,10 +29,10 @@ Image JORDAN13 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN14 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
-Image JOR_MUG has 256 colors. Can't fit into 1 bits per pixel.
-Image ONE_LAL has 256 colors. Can't fit into 1 bits per pixel.
-Image KOB_MUG has 256 colors. Can't fit into 1 bits per pixel.
-Image BARK_MUG has 256 colors. Can't fit into 1 bits per pixel.
+Image JOR_MUG has 67 colors. Can't fit into 1 bits per pixel.
+Image ONE_LAL has 68 colors. Can't fit into 1 bits per pixel.
+Image KOB_MUG has 68 colors. Can't fit into 1 bits per pixel.
+Image BARK_MUG has 60 colors. Can't fit into 1 bits per pixel.
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -44,16 +44,16 @@ Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               473986 dec	   73B82 hex
+	IMAGE RAM               474566 dec	   73DC6 hex
 
-	TOTAL LOAD              473986 dec	   73B82 hex
+	TOTAL LOAD              474566 dec	   73DC6 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       473986 dec	   73B82 hex
+	In IMAGE RAM records       474566 dec	   73DC6 hex
 
-	TOTAL bytes written        473986 dec	   73B82 hex, in 2 records.
+	TOTAL bytes written        474566 dec	   73DC6 hex, in 2 records.
 
-Bytes Represented in Tables ... 473985 dec 73B81 hex
+Bytes Represented in Tables ... 474566 dec 73DC6 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.
