@@ -73,16 +73,6 @@
 	.global	ONEAL03
 	.global	ONEAL04
 	.global	ONEAL05
-	.global	ONEAL06
-	.global	ONEAL07
-	.global	ONEAL08
-	.global	ONEAL09
-	.global	ONEAL10
-	.global	ONEAL11
-	.global	ONEAL12
-	.global	ONEAL13
-	.global	ONEAL14
-	.global	ONEAL15
 	.global	ONEAL16
 	.globl	BARKLEY_P
 	.global	BARKLEY1

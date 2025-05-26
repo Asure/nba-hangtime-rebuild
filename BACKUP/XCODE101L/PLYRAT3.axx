@@ -254,7 +254,7 @@ kobe_h
 	HDMAC2	KOBE01  ; 5-head Kobe.	
 
 oneal_h
-	HDMAC	ONEAL01
+	HDMAC2	ONEAL01
 
 Barkley_h
 	HDMAC2	BARKLEY1
