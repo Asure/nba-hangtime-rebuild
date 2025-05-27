@@ -2447,7 +2447,7 @@ spechds_t
 	LWWWWWW	scale69_t,BV10,SHT7,DNK7,DEF4,SDEF10,DSKL5
 	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,Magic_h
 	.word	10,6,10,13
-	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P
+	.long	SW_LALS_P,SW_LALS_P,VP_LALS_P,VP_LALS_P
 
 ;These are superstar players (Or leftover art) that can be picked with name
 ;and pin # - allowing them to be 'traded' from team to team

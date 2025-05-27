@@ -87,3 +87,4 @@
 	.global	MAG03
 	.global	MAG04
 	.global	MAG05
+	.global	MAG16
