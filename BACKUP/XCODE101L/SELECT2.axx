@@ -5813,20 +5813,20 @@ player_attribs
 
 ;28 WASHINGTON BULLETS
 
-	.word  08,08,08,08
-	.word  06,04,06,07	;CHRIS WEBBER		6'10"	260 fat
+	.word  07,08,06,08
+	.word  05,05,06,07	;CHRIS WEBBER		6'10"	260 fat
 
-	.word  08,03,07,00
-	.word  07,01,10,06	;ROD STRICKLAND		6'3"	185 reg
+	.word  08,03,06,01
+	.word  07,01,09,07	;ROD STRICKLAND		6'3"	185 reg
 
-	.word  07,07,08,06
-	.word  05,03,04,06	;JUWAN HOWARD		_______________
+	.word  06,08,05,07
+	.word  03,07,04,06	;JUWAN HOWARD		_______________
 
-	.word  04,09,05,02
-	.word  03,09,01,04	;GHEORGHE MURESAN	7'7"	315 thin
+	.word  04,09,03,06
+	.word  02,09,01,03	;GHEORGHE MURESAN	7'7"	315 thin
 
-	.word  06,05,07,05
-	.word  03,03,02,07	;TRACY MURRAY        6'7" 228 reg
+	.word  06,04,06,05
+	.word  05,04,03,05	;TRACY MURRAY        6'7" 228 reg
 ;DJT End
 
 ;FIX!!!
