@@ -5473,17 +5473,17 @@ player_attribs
 
 ;11 L.A. CLIPPERS
 
-	.word  05,07,07,06
-	.word  06,06,01,08	;LOY VAUGHT		6'9"	240 reg
+	.word  07,06,06,06
+	.word  05,05,03,05	;LOY VAUGHT		6'9"	240 reg
 
-	.word  06,08,05,05
-	.word  02,03,02,05	;RODNEY ROGERS		_______________
+	.word  06,07,06,05
+	.word  03,05,04,06	;RODNEY ROGERS		_______________
 
-	.word  08,05,06,09
-	.word  06,04,05,08	;BRENT BARRY		_______________
+	.word  07,03,06,08
+	.word  06,03,05,05	;BRENT BARRY		_______________
 
-	.word  08,01,04,01
-	.word  08,01,08,02	;POOH RICHARDS		_______________
+	.word  08,01,06,01
+	.word  05,01,07,04	;POOH RICHARDS		_______________
 
 	.word  00,00,00,00
 	.word  00,00,00,00
