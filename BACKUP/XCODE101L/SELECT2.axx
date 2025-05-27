@@ -5413,14 +5413,14 @@ player_attribs
 
 ;08 GOLDEN STATE WARRIORS
 
-	.word  09,04,08,08
-	.word  07,02,04,08	;LATRELL SPREWELL	6'5"	190 ex thin
+	.word  09,04,07,08
+	.word  07,02,05,07	;LATRELL SPREWELL	6'5"	190 ex thin
 
-	.word  04,05,09,02
-	.word  08,04,07,08	;CHRIS MULLIN		6'7"	215 reg
+	.word  05,04,09,02
+	.word  07,03,06,06	;CHRIS MULLIN		6'7"	215 reg
 
-	.word  07,07,07,09
-	.word  07,08,02,03	;JOE SMITH		_______________
+	.word  06,05,05,08
+	.word  04,07,02,05	;JOE SMITH		_______________
 
 	.word  00,00,00,00
 	.word  00,00,00,00
