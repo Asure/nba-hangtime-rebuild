@@ -5733,17 +5733,17 @@ player_attribs
 
 ;24 SEATTLE SUPERSONICS
 
-	.word  10,03,07,00
-	.word  10,02,08,08	;GARY PAYTON		6'4"	190 ex thin
+	.word  10,03,08,01
+	.word  10,02,08,09	;GARY PAYTON		6'4"	190 ex thin
 
-	.word  08,07,08,10
-	.word  06,09,03,07	;SHAWN KEMP		6'10"	245 reg
+	.word  08,08,06,10
+	.word  06,08,04,08	;SHAWN KEMP		6'10"	245 reg
 
-	.word  06,03,07,00
-	.word  06,04,05,07	;HERSEY HAWKINS		6'3"	190 thin
+	.word  07,03,07,01
+	.word  07,02,05,07	;HERSEY HAWKINS		6'3"	190 thin
 
-	.word  05,06,08,05
-	.word  02,04,04,02	;DETLEF SCHREMPF	6'10"	230 thin
+	.word  06,06,07,05
+	.word  06,04,05,06	;DETLEF SCHREMPF	6'10"	230 thin
 
 	.word  00,00,00,00
 	.word  00,00,00,00
