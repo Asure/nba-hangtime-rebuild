@@ -5793,14 +5793,14 @@ player_attribs
 
 ;27 VANCOUVER GRIZZLIES
 
-	.word  05,10,06,04
-	.word  05,08,02,02	;BRYANT REEVES		_______________
+	.word  03,08,03,06
+	.word  02,08,02,02	;BRYANT REEVES		_______________
 
-	.word  08,04,05,01
-	.word  07,02,07,02	;GREG ANTHONY		6'2"	185 ex thin
+	.word  08,03,05,01
+	.word  07,02,07,06	;GREG ANTHONY		6'2"	185 ex thin
 
-	.word  07,06,07,04
-	.word  08,05,03,07	;BLUE EDWARDS		6'4"	228 reg
+	.word  06,03,04,04
+	.word  04,04,03,07	;BLUE EDWARDS		6'4"	228 reg
 
 	.word  00,00,00,00
 	.word  00,00,00,00
