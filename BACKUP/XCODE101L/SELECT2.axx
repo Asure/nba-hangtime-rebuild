@@ -5713,20 +5713,20 @@ player_attribs
 
 ;23 SAN ANTONIO SPURS
 
-	.word  08,09,08,06
-	.word  05,10,04,06	;DAVID ROBINSON		7'1"	235 reg
+	.word  07,08,06,09
+	.word  05,10,06,08	;DAVID ROBINSON		7'1"	235 reg
 
-	.word  08,04,08,07
-	.word  04,05,02,08	;SEAN ELLIOTT		6'8"	215 thin
+	.word  08,05,08,07
+	.word  06,03,06,07	;SEAN ELLIOTT		6'8"	215 thin
 
-	.word  10,01,05,00
-	.word  08,01,09,02	;AVERY JOHNSON		5'11"	175 ex thin
+	.word  10,02,05,01
+	.word  07,01,09,06	;AVERY JOHNSON		5'11"	175 ex thin
 
-	.word  07,03,06,01
-	.word  07,01,03,02	;VINNY DEL NEGRO	6'4"	200 thin
+	.word  07,03,07,01
+	.word  05,01,06,05	;VINNY DEL NEGRO	6'4"	200 thin
 
-	.word  07,04,08,03
-	.word  05,03,06,04	;VERNON MAXWELL		6'4"	190 thin
+	.word  06,02,07,01
+	.word  05,01,05,05	;VERNON MAXWELL		6'4"	190 thin
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
