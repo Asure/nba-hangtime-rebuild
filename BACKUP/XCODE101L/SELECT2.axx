@@ -5253,17 +5253,17 @@ player_attribs
 
 ;00 ATLANTA HAWKS
 
-	.word  09,02,07,00
-	.word  09,01,07,09	;MOOKIE BLAYLOCK	6'1"	185 reg 
+	.word  09,02,07,01
+	.word  09,01,07,08	;MOOKIE BLAYLOCK	6'1"	185 reg 
 
-	.word  06,09,04,08
-	.word  05,10,03,07	;DIKEMBE MUTOMBO	7'2"	245 reg
+	.word  06,09,03,08
+	.word  04,10,04,07	;DIKEMBE MUTOMBO	7'2"	245 reg
 
-	.word  07,06,07,03
-	.word  05,05,05,08	;CHRISTIAN LAETTNER	6'11"	235 reg
+	.word  07,06,06,04
+	.word  04,05,05,06	;CHRISTIAN LAETTNER	6'11"	235 reg
 
 	.word  07,05,08,05
-	.word  05,02,04,06	;STEVE SMITH		6'8"	208 reg
+	.word  05,02,05,06	;STEVE SMITH		6'8"	208 reg
 
 	.word  00,00,00,00
 	.word  00,00,00,00
