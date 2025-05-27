@@ -5353,20 +5353,20 @@ player_attribs
 
 ;05 DALLAS MAVERICKS
 
-	.word  09,02,07,09
-	.word  07,02,04,09	;MICHAEL FINLEY   ____________
+	.word  07,04,06,08
+	.word  07,03,06,06	;MICHAEL FINLEY   ____________
 
-	.word  05,03,05,08
-	.word  04,10,03,04	;SHAWN BRADLEY		7'6"	248 ex thin
+	.word  04,04,04,07
+	.word  02,10,03,03	;SHAWN BRADLEY		7'6"	248 ex thin
 
-	.word  05,05,08,02
-	.word  04,05,05,04	;SASHA DANILOVIC	_______________
+	.word  05,03,07,02
+	.word  02,02,04,04	;SASHA DANILOVIC	_______________
 
-	.word  09,03,06,00
-	.word  09,00,09,02	;ROBERT PACK		6'2"	180 thin
+	.word  07,03,05,05
+	.word  07,01,09,04	;ROBERT PACK		6'2"	180 thin
 
-	.word  06,05,06,01
-	.word  07,01,05,05	;DEREK HARPER		6'4"	206 reg
+	.word  06,03,06,01
+	.word  06,01,05,04	;DEREK HARPER		6'4"	206 reg
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
