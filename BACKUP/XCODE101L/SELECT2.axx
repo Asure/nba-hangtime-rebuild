@@ -5593,20 +5593,20 @@ player_attribs
 
 ;17 NEW YORK KNICKS
 
-	.word  06,10,07,08
-	.word  04,10,02,08	;PATRICK EWING		7'0"	240 reg
+	.word  06,09,06,08
+	.word  03,10,04,08	;PATRICK EWING		7'0"	240 reg
 
-	.word  07,08,07,08
-	.word  04,05,07,08	;LARRY JOHNSON		6'7"	250 fat
+	.word  07,07,06,08
+	.word  04,05,06,07	;LARRY JOHNSON		6'7"	250 fat
 
-	.word  08,01,10,02
-	.word  04,03,05,07	;ALAN HOUSTON		6'6"	200 thin
+	.word  08,03,08,03
+	.word  05,03,05,07	;ALAN HOUSTON		6'6"	200 thin
 
-	.word  09,05,08,02
-	.word  07,02,08,08	;JOHN STARKS		6'5"	185 thin
+	.word  08,03,07,06
+	.word  07,03,07,08	;JOHN STARKS		6'5"	185 thin
 
-	.word  05,08,05,07
-	.word  05,02,04,02	;CHARLES OAKLEY    6'9" 245 fat
+	.word  05,08,04,06
+	.word  04,03,04,05	;CHARLES OAKLEY    6'9" 245 fat
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
