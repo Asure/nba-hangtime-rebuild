@@ -5673,17 +5673,17 @@ player_attribs
 
 ;21 PORTLAND TRAILBLAZERS
 
-	.word  04,09,06,05
-	.word  03,07,02,04	;ARVYDAS SABONIS	_______________
+	.word  06,09,06,07
+	.word  03,08,08,08	;ARVYDAS SABONIS	_______________
 
-	.word  10,03,06,00
-	.word  08,03,09,06	;KENNY ANDERSON		6'1"	168 ex thin 
+	.word  08,03,06,01
+	.word  07,01,08,07	;KENNY ANDERSON		6'1"	168 ex thin 
 
-	.word  08,07,06,06
-	.word  06,07,02,08	;CLIFF ROBINSON		6'10"	225 thin
+	.word  06,06,07,06
+	.word  04,06,04,06	;CLIFF ROBINSON		6'10"	225 thin
 
-	.word  07,04,05,09
-	.word  04,01,02,06	;ISIAH RIDER		6'5"	215 thin
+	.word  07,03,06,08
+	.word  03,03,03,05	;ISIAH RIDER		6'5"	215 thin
 
 	.word  09,02,05,00
 	.word  06,01,08,08	;RANDOLPH CHILDRESS	_______________
