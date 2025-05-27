@@ -5944,6 +5944,11 @@ hnrxxtbl	.word	57,148,251,342
 ;
 ;		***NOTE*** if change this table...must also update 
 ;			'player_names' and 'player_heads'
+;
+; 5 players = 20 squads
+; 4 players = 12 squads
+; 3 players = 6 squads
+;
 ;-----------------------------------------------------------------------------
 team_sqaud_cnts
 ;DJT Start
