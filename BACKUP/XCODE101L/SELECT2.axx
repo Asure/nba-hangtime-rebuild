@@ -5373,14 +5373,14 @@ player_attribs
 
 ;06 DENVER NUGGETS
 
-	.word  07,06,08,02
-	.word  06,01,05,08	;DALE ELLIS		6'7"	215 reg
+	.word  07,04,06,02
+	.word  06,01,05,05	;DALE ELLIS		6'7"	215 reg
 
-	.word  07,01,06,07
-	.word  05,07,03,07	;ANTONIO McDYESS	_______________
+	.word  06,06,05,07
+	.word  03,06,03,04	;ANTONIO McDYESS	_______________
 
-	.word  04,05,08,01
-	.word  08,01,02,07	;SARUNAS MARCIULIONIS	6'5"	215 reg
+	.word  04,02,06,01
+	.word  06,01,05,03	;SARUNAS MARCIULIONIS	6'5"	215 reg
 
 	.word  00,00,00,00
 	.word  00,00,00,00
