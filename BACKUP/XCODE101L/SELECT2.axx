@@ -5533,20 +5533,20 @@ player_attribs
 
 ;14 MILWAUKEE BUCKS
 
-	.word  08,05,07,08
-	.word  05,07,04,06	;VIN BAKER		6'11"	234 thin
+	.word  07,07,06,08
+	.word  04,06,04,06	;VIN BAKER		6'11"	234 thin
 
-	.word  07,07,09,06
-	.word  07,02,04,08	;GLENN ROBINSON		_______________
+	.word  07,06,07,06
+	.word  06,03,04,05	;GLENN ROBINSON		_______________
 
-	.word  09,02,08,06
-	.word  06,02,05,08	;RAY ALLEN		_______________
+	.word  07,03,07,06
+	.word  06,02,05,05	;RAY ALLEN		_______________
 
-	.word  06,03,06,00
-	.word  06,01,06,03	;SHERMAN DOUGLAS    6'1"  180  fat
+	.word  07,02,06,01
+	.word  05,01,07,04	;SHERMAN DOUGLAS    6'1"  180  fat
 
-	.word  06,08,07,06
-	.word  07,06,04,02	;ARMON GILLIAM      6'9" 245  fat
+	.word  06,06,05,06
+	.word  03,05,03,03	;ARMON GILLIAM      6'9" 245  fat
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
