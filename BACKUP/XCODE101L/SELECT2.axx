@@ -5294,16 +5294,16 @@ player_attribs
 ;02 CHARLOTTE HORNETS
 
 	.word  07,05,10,05
-	.word  06,02,02,09	;GLEN RICE		6'8"	220 reg
+	.word  06,03,04,08	;GLEN RICE		6'8"	220 reg
 
-	.word  06,09,06,05
-	.word  03,03,04,06	;ANTHONY MASON		6'7"	250 fat
+	.word  06,09,05,07
+	.word  02,06,06,07	;ANTHONY MASON		6'7"	250 fat
 
-	.word  05,08,04,04
-	.word  05,09,06,02	;VLADE DIVAC		7'1"	260 thin
+	.word  05,08,05,05
+	.word  04,08,06,06	;VLADE DIVAC		7'1"	260 thin
 
-	.word  08,02,07,01
-	.word  08,01,04,07	;DELL CURRY		6'5"	200 thin
+	.word  07,02,09,01
+	.word  06,01,04,06	;DELL CURRY		6'5"	200 thin
 
 	.word  00,00,00,00
 	.word  00,00,00,00
