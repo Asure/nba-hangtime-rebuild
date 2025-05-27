@@ -5773,17 +5773,17 @@ player_attribs
 
 ;26 UTAH JAZZ
 
-	.word  07,10,08,08
-	.word  08,05,06,07	;KARL MALONE		6'9"	256 fat
+	.word  07,10,07,09
+	.word  06,06,06,07	;KARL MALONE		6'9"	256 fat
 
-	.word  07,02,08,00
-	.word  10,01,10,08	;JOHN STOCKTON		6'1"	175 ex thin
+	.word  08,02,08,01
+	.word  10,01,10,09	;JOHN STOCKTON		6'1"	175 ex thin
         
-	.word  05,05,07,02
-	.word  07,02,05,06	;JEFF HORNACEK		6'4"	190 reg
+	.word  07,03,08,02
+	.word  07,02,06,06	;JEFF HORNACEK		6'4"	190 reg
 
-	.word  05,06,07,05
-	.word  08,04,04,02	;CHRIS MORRIS		6'8"	220 reg
+	.word  05,06,05,06
+	.word  05,06,04,03	;CHRIS MORRIS		6'8"	220 reg
 
 	.word  00,00,00,00
 	.word  00,00,00,00
