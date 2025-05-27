@@ -227,6 +227,7 @@
 	.def	kobe_h
 	.def	oneal_h
 	.def	Barkley_h
+	.def	Magic_h
 	.text
 
 ;; MARKER
@@ -258,6 +259,9 @@ oneal_h
 
 Barkley_h
 	HDMAC2	BARKLEY1
+	
+Magic_h
+	HDMAC2	MAG01
 
 heithb_h
 	HDMAC2	HEITH01

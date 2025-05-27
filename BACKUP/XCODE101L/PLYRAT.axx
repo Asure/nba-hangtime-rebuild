@@ -302,6 +302,7 @@
 	.ref	kobe_h
 	.ref	oneal_h
 	.ref	Barkley_h
+	.ref	Magic_h
 
 ;symbols refined in this file
 
@@ -2441,6 +2442,12 @@ spechds_t
 	.long	Mutumbo_f, UN_CHIP_P,UN_CHIS_P, TR_CHIP_P,TR_CHIS_P,jordan_h
 	.word	8,8,7,6
 	.long	SW_CHIP_P,SW_CHIS_P,VP_CHIP_P,VP_CHIS_P
+
+; Magic
+	LWWWWWW	scale66_t,BV8,SHT6,DNK10,DEF7,SDEF7,DSKL5
+	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,Magic_h
+	.word	8,8,7,6
+	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P
 
 ;These are superstar players (Or leftover art) that can be picked with name
 ;and pin # - allowing them to be 'traded' from team to team

@@ -2870,6 +2870,9 @@ zpsjteam_data1
 	.word	J_,O_,R_,D_,A_,N_
 	.word	ZER,TWO,ONE,SEV 	;Jordan
 	
+	.word	M_,A_,G_,I_,C_,0
+	.word	ZER,EIG,ONE,FOR 	;Magic
+	
 zpsjteam_data1_end
 
 
@@ -2978,6 +2981,7 @@ zpsjteam_snds
  .word	0100DH,95,0b51h ;Reptile
  .word	0100DH,95,0b54h ;Smoke
  .word	0100DH,95,0b56h ;Jordan
+ .word	0100DH,95,0bc1h ;Magic
 
 
 ;DJT End
@@ -6076,6 +6080,7 @@ our_names
 	.long	REPTILE
 	.long	SM0K3
 	.long	JORDAN
+	.long	JOHNSON_M
 ;DJT End
 
 
@@ -6185,6 +6190,7 @@ our_heads
 	.long	REP_MK2		; reptile mug
 	.long	SMK_MUG		; smoke mug
 	.long	JOR_MUG		; jordan mug
+	.long	MAG_MUG		; magic mug
 
 our_heads_end
 	.long	SAL_MUG		;0		;repeat 1st 2 for wrap around

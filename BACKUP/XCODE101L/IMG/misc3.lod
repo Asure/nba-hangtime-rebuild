@@ -85,7 +85,7 @@ Shaq.img
 Barkley.img
 ---> BARKLEY1,BARKLEY2,BARKLEY3,BARKLEY4,BARKLEY5,BARKLEY16
 Magic.img
----> MAGIC01,MAGIC02,MAGIC03,MAGIC04,MAGIC05,MAGIC16;
+---> MAG01,MAG02,MAG03,MAG04,MAG05,MAG16;
 ; New mugs here
 ; Mugs go into mugshot.glo / mugshot.tbl, so copypaste output there manualy
 ; Mugs are used in select2.axx. Our mug pals should go into imgpal8.asm

@@ -81,3 +81,9 @@
 	.global	BARKLEY4
 	.global	BARKLEY5
 	.global	BARKLEY16
+	.globl	MAG_P
+	.global	MAG01
+	.global	MAG02
+	.global	MAG03
+	.global	MAG04
+	.global	MAG05

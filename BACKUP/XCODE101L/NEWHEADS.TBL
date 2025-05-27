@@ -369,5 +369,30 @@ BARKLEY16:
 	.long   0829be20H
 	.word   06000H
 	.long   BARKLEY_P
+MAG01:
+	.word   26,35,11,32
+	.long   0829d860H
+	.word   06000H
+	.long   MAG_P
+MAG02:
+	.word   28,35,12,31
+	.long   0829edb4H
+	.word   06000H
+	.long   MAG_P
+MAG03:
+	.word   32,36,13,33
+	.long   082a04acH
+	.word   06000H
+	.long   MAG_P
+MAG04:
+	.word   28,36,9,33
+	.long   082a1facH
+	.word   06000H
+	.long   MAG_P
+MAG05:
+	.word   25,37,11,33
+	.long   082a374cH
+	.word   06000H
+	.long   MAG_P
 	.TEXT
 

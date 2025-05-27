@@ -11,6 +11,7 @@
 	.global BRYANT
 	.global	ONEAL
 	.global BARKLEY
+	.global	JOHNSON_M
 ;
 	.globl	DIAGP
 	.globl	crtwrk_p

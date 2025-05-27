@@ -1394,6 +1394,7 @@ special_name_speech
  .word	0100DH,45,0B51h ;Reptile
  .word	0100DH,45,0B54h ;Smoke
  .word	0100DH,45,0B56h ;Jordan
+ .word	0100DH,45,0BC1h ;Magic
 
 
 ***********
@@ -1497,6 +1498,8 @@ special_pass_speech
  .word	0100DH,45,07b8h ;to Reptile
  .word	0100DH,45,07bch ;to Smoke 
  .word	0100DH,45,07bfh ;to Jordan
+ .word	0100DH,45,07c4h ;to Magic
+
  
 ******************************************************************************
 
