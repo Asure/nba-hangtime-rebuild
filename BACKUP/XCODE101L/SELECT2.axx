@@ -5453,20 +5453,20 @@ player_attribs
 
 ;10 INDIANA PACERS
 
-	.word  07,04,09,06
-	.word  06,05,05,10	;REGGIE MILLER		6'7"	185 ex thin
+	.word  07,04,10,06
+	.word  06,04,06,10	;REGGIE MILLER		6'7"	185 ex thin
 
-	.word  07,04,06,01
-	.word  09,04,09,04	;MARK JACKSON		6'3"	192 fat
+	.word  08,03,06,01
+	.word  08,02,09,07	;MARK JACKSON		6'3"	192 fat
 
-	.word  06,09,07,03
-	.word  04,06,02,09	;RIK SMITS		7'4"	265 ex thin
+	.word  06,08,05,07
+	.word  02,08,04,07	;RIK SMITS		7'4"	265 ex thin
 
-	.word  05,06,04,06
-	.word  05,08,02,02	;DALE DAVIS		6'11"	230 reg
+	.word  04,08,03,06
+	.word  03,07,02,03	;DALE DAVIS		6'11"	230 reg
 
-	.word  09,04,06,06
-	.word  08,06,08,09	;JALEN ROSE		_______________
+	.word  07,03,06,07
+	.word  07,03,07,05	;JALEN ROSE		_______________
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
