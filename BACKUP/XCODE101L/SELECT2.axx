@@ -5653,20 +5653,20 @@ player_attribs
 
 ;20 PHOENIX SUNS
 
-	.word  09,02,08,02
-	.word  08,03,08,09	;KEVIN JOHNSON		6'1"	190 ex thin
+	.word  08,02,07,05
+	.word  07,02,08,08	;KEVIN JOHNSON		6'1"	190 ex thin
 
-	.word  09,04,04,05
-	.word  06,06,08,08	;JASON KIDD		_______________
+	.word  09,04,05,04
+	.word  07,03,10,07	;JASON KIDD		_______________
 
-	.word  08,05,07,04
-	.word  08,05,04,09	;WESLEY PERSON    ____________
+	.word  07,03,07,04
+	.word  06,02,04,06	;WESLEY PERSON    ____________
 
 	.word  05,06,05,07
-	.word  04,05,03,06	;DANNY MANNING		6'10"	234 reg
+	.word  04,06,04,05	;DANNY MANNING		6'10"	234 reg
 
-	.word  08,03,09,07
-	.word  08,02,02,08	;CEDRIC CEBALLOS	6'7"	220 thin
+	.word  06,04,06,07
+	.word  06,02,03,05	;CEDRIC CEBALLOS	6'7"	220 thin
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
