@@ -71,6 +71,7 @@
 	.def	ONEAL_P
 	.def	BARKLEY_P
 	.def	MAG_P
+	.def	BIRD_P
 
 ;AMM end
 
