@@ -5633,17 +5633,17 @@ player_attribs
 
 ;19 PHILADELPHIA  76ers
 
-	.word  09,03,09,00
-	.word  09,01,07,06	;ALLEN IVERSON		_______________
+	.word  09,02,07,04
+	.word  06,01,07,06	;ALLEN IVERSON		_______________
 
-	.word  05,08,07,06
-	.word  03,05,03,02	;DERRICK COLEMAN	6'10"	260 fat
+	.word  05,07,05,06
+	.word  04,06,04,04	;DERRICK COLEMAN	6'10"	260 fat
 
-	.word  08,04,07,08
-	.word  05,03,05,07	;JERRY STACKHOUSE	_______________
+	.word  07,03,05,08
+	.word  05,03,04,04	;JERRY STACKHOUSE	_______________
 
-	.word  05,06,06,06
-	.word  04,06,05,07	;CLARENCE WEATHERSPOON	6'7"	240 fat
+	.word  05,07,04,06
+	.word  03,06,03,03	;CLARENCE WEATHERSPOON	6'7"	240 fat
 
 	.word  00,00,00,00
 	.word  00,00,00,00
