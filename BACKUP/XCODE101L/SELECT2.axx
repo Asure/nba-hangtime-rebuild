@@ -5393,17 +5393,17 @@ player_attribs
 
 ;07 DETROIT PISTONS
 
-	.word  09,05,08,08
+	.word  08,05,08,08
 	.word  08,05,08,09	;GRANT HILL		_______________
 
-	.word  06,04,08,00
-	.word  06,01,08,09	;JOE DUMARS		6'3"	195 thin
+	.word  07,03,07,01
+	.word  06,01,08,07	;JOE DUMARS		6'3"	195 thin
 
-	.word  07,09,05,07
-	.word  04,07,05,02	;OTIS THORPE		6'10"	246 reg
+	.word  06,09,03,07
+	.word  02,07,05,04	;OTIS THORPE		6'10"	246 reg
 
-	.word  04,06,06,02
-	.word  04,02,05,08	;TERRY MILLS          6'10" 250 fat
+	.word  04,06,07,02
+	.word  03,02,05,06	;TERRY MILLS          6'10" 250 fat
 
 	.word  00,00,00,00
 	.word  00,00,00,00
