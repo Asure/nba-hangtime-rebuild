@@ -5613,20 +5613,20 @@ player_attribs
 
 ;18 ORLANDO MAGIC
 
-	.word  10,04,08,08
-	.word  08,07,08,10	;ANFERNEE HARDAWAY	6'7"	200 ex thin
+	.word  10,05,08,08
+	.word  08,05,08,08	;ANFERNEE HARDAWAY	6'7"	200 ex thin
 
-	.word  06,08,05,06
-	.word  04,08,04,04	;HORACE GRANT		6'10"	220 reg
+	.word  07,08,05,07
+	.word  04,07,05,05	;HORACE GRANT		6'10"	220 reg
 
-	.word  07,04,08,03
-	.word  08,04,04,04	;NICK ANDERSON		6'6"	205 reg
+	.word  07,04,08,04
+	.word  06,04,04,06	;NICK ANDERSON		6'6"	205 reg
 
-	.word  05,08,05,03
-	.word  03,07,04,04	;RONY SEIKALY		6'11"	252 reg
+	.word  05,08,05,05
+	.word  03,07,03,03	;RONY SEIKALY		6'11"	252 reg
 
-	.word  07,03,09,03
-	.word  04,04,05,04	;DENNIS SCOTT		6'8"	229 reg
+	.word  07,03,08,03
+	.word  05,03,03,04	;DENNIS SCOTT		6'8"	229 reg
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
