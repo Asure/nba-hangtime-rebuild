@@ -5553,14 +5553,14 @@ player_attribs
 
 ;15 MINNESOTA TIMBERWOLVES
 
-	.word  08,02,05,08
-	.word  05,08,04,03	;KEVIN GARNETT		_______________
+	.word  07,05,06,08
+	.word  05,08,04,06	;KEVIN GARNETT		_______________
 
-	.word  07,06,07,05
-	.word  09,07,06,03	;TOM GUGLIOTTA		6'10"	240 reg
+	.word  07,05,07,06
+	.word  06,06,06,05	;TOM GUGLIOTTA		6'10"	240 reg
 
-	.word  08,04,08,05
-	.word  07,03,06,03	;STEPHON MARBURY	_______________
+	.word  08,03,06,04
+	.word  06,02,07,05	;STEPHON MARBURY	_______________
 
 	.word  00,00,00,00
 	.word  00,00,00,00
