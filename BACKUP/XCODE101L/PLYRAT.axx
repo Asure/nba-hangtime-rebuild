@@ -1108,25 +1108,25 @@ MINN_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 NJ_t
-	LWWWWWW	scale65_t,BV8,SHT6,DNK5,DEF5,SDEF7,DSKL5
+	LWWWWWW	scale65_t,BV7,SHT5,DNK7,DEF3,SDEF7,DSKL5
 	.long	gill_f, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,Gill_h
-	.word	7,2,3,9
+	.word	6,4,6,3
 	.long	SW_NEJP_P,SW_NEJS_P,VP_NEJP_P,VP_NEJS_P
-	LWWWWWW	scale69t_t,BV6,SHT7,DNK7,DEF7,SDEF3,DSKL5
+	LWWWWWW	scale69t_t,BV7,SHT6,DNK6,DEF3,SDEF7,DSKL5
 	.long	KIT_F, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,kit_h
-	.word	5,6,2,3
+	.word	5,2,5,16
 	.long	SW_NEJP_P,SW_NEJS_P,VP_NEJP_P,VP_NEJS_P
-	LWWWWWW	scale63_t,BV9,SHT6,DNK1,DEF1,SDEF4,DSKL5
+	LWWWWWW	scale63_t,BV8,SHT6,DNK1,DEF1,SDEF6,DSKL5
 	.long	CASSEL_F, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,Cassel_h
-	.word	6,1,2,16
+	.word	7,1,5,19
 	.long	SW_NEJP_P,SW_NEJS_P,VP_NEJP_P,VP_NEJS_P
-	LWWWWWW	scale66_t,BV7,SHT7,DNK5,DEF4,SDEF5,DSKL5
+	LWWWWWW	scale66_t,BV7,SHT6,DNK7,DEF4,SDEF5,DSKL5
 	.long	JACK_F, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,Jack_h
-	.word	5,4,7,0
+	.word	5,4,4,2
 	.long	SW_NEJP_P,SW_NEJS_P,VP_NEJP_P,VP_NEJS_P
-	LWWWWWW	scale70f_t,BV4,SHT3,DNK7,DEF6,SDEF1,DSKL5
+	LWWWWWW	scale70f_t,BV4,SHT3,DNK6,DEF6,SDEF1,DSKL5
 	.long	MONTRO_F, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,Montross_h
-	.word	3,8,3,14
+	.word	3,8,2,7
 	.long	SW_NEJP_P,SW_NEJS_P,VP_NEJP_P,VP_NEJS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill

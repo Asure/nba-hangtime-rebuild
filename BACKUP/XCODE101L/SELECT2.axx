@@ -5573,20 +5573,20 @@ player_attribs
 
 ;16 NEW JERSEY NETS
 
-	.word  08,02,06,05
-	.word  07,05,07,03	;KENDALL GILL		6'5"	200 thin
+	.word  07,04,05,07
+	.word  07,03,06,06	;KENDALL GILL		6'5"	200 thin
 
-	.word  06,06,07,07
-	.word  03,07,05,02	;KERRY KITTLES		_______________
+	.word  07,02,06,06
+	.word  07,03,05,05	;KERRY KITTLES		_______________
 
-	.word  09,01,06,01
-	.word  04,01,06,02	;SAM CASSELL		6'3"	195 thin
+	.word  08,01,06,01
+	.word  06,01,07,05	;SAM CASSELL		6'3"	195 thin
 
-	.word  07,04,07,05
-	.word  05,04,05,07	;JIM JACKSON		6'6"	220 reg
+	.word  07,04,06,07
+	.word  05,04,05,04	;JIM JACKSON		6'6"	220 reg
 
-	.word  04,08,03,07
-	.word  01,06,03,03	;ERIC MONTROSS		_______________
+	.word  04,08,03,06
+	.word  01,06,03,02	;ERIC MONTROSS		_______________
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
