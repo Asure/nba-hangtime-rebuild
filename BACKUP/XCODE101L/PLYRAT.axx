@@ -2444,9 +2444,9 @@ spechds_t
 	.long	SW_CHIP_P,SW_CHIS_P,VP_CHIP_P,VP_CHIS_P
 
 ; Magic
-	LWWWWWW	scale66_t,BV8,SHT6,DNK10,DEF7,SDEF7,DSKL5
+	LWWWWWW	scale69_t,BV10,SHT7,DNK7,DEF4,SDEF10,DSKL5
 	.long	NFL55_p, UN_LALP_P,UN_LALS_P, TR_LALP_P,TR_LALS_P,Magic_h
-	.word	8,8,7,6
+	.word	10,6,10,13
 	.long	SW_LALP_P,SW_LALS_P,VP_LALP_P,VP_LALS_P
 
 ;These are superstar players (Or leftover art) that can be picked with name
