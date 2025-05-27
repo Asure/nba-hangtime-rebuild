@@ -5513,14 +5513,14 @@ player_attribs
 
 ;13 MIAMI HEAT
 
-	.word  09,05,07,00
-	.word  08,01,08,06	;TIM HARDAWAY		6'0"	195 reg
+	.word  09,04,07,01
+	.word  08,02,08,08	;TIM HARDAWAY		6'0"	195 reg
 
-	.word  08,10,06,09
-	.word  04,09,03,07	;ALONZO MOURNING	6'10"	240 reg
+	.word  07,09,06,09
+	.word  03,09,04,07	;ALONZO MOURNING	6'10"	240 reg
 
-	.word  08,03,09,08
-	.word  04,07,05,09	;JAMAL MASHBURN		6'8"	240 thin
+	.word  07,06,06,06
+	.word  04,05,05,06	;JAMAL MASHBURN		6'8"	240 thin
 
 	.word  00,00,00,00
 	.word  00,00,00,00
