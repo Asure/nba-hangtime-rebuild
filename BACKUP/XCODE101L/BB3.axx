@@ -1656,7 +1656,7 @@ jnwzlp
  SUBR	start_animate
 
 	.ref	RNDPER
-	movi	200,a0			;20% chance !!! ;Randomly knock down his %
+	movi	350,a0			;35% chance !!! ;Randomly knock down his %
 	calla	RNDPER
 	jrls	mphbskp
 
