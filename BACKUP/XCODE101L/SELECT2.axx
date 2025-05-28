@@ -2785,8 +2785,8 @@ zpsjteam_data1
 ;FIX!!!
 ;Use name and birthday as pin #
 
-;	.word	M_,C_,L_,O_,U_,D_
-;	.word	ZER,ZER,ZER,ZER 	;McCLOUD,     george
+	.word	M_,C_,L_,O_,U_,D_
+	.word	ZER,ZER,ZER,ZER 	;McCLOUD,     george
 
 	.word	T_,M_,I_,L_,L_,S_
 	.word	ZER,ZER,ZER,ZER 	;MILLS,       terry
@@ -2848,8 +2848,9 @@ zpsjteam_data1
 	.word	B_,S_,C_,O_,T_,T_
 	.word	ZER,ZER,ZER,ZER 	;SCOTT,       byron
 
-	.word	M_,U_,R_,D_,C_,K_
-	.word	ZER,ZER,ZER,ZER 	;MURDOCK,     eric
+;	.word	M_,U_,R_,D_,C_,K_
+;	.word	ZER,ZER,ZER,ZER 	;MURDOCK,     eric
+
 ;; MARKER
 ;; New hiddens go here.
 	.word	R_,A_,I_,D_,E_,N_
