@@ -713,20 +713,6 @@ show_title
 	calla	display_blank
 	calla	WIPEOUT
 
-;DJT Start
-;	.bss	junk,140*16	;quick rndper loop for hotspot
-;
-;	movi	junk,a8,L
-;	movi	140,a9
-;niucllpp
-;	SLEEPK	1
-;	movk	20,a0
-;	calla	RNDRNG0
-;	move	a0,*a8+,W
-;	dsj	a9,niucllpp
-;	jruc	$
-;
-;DJT End
 	movk	1,a0
 	move	a0,@dpageflip
 
@@ -747,53 +733,23 @@ show_title
 	move	a0,@BAKMODS,L
 	calla	BGND_UD1
 
+;Placeholder for SUPER Maximum HT!
+
+	movi	[0a8h,0],a0
+	movi	[03bh,0],a1
+	.ref	hang_logo
+	movi	hang_logo,a2			;* image
+	movi	20000,a3
+	movi	DMAWNZ|M_NOCOLL,a4
+	movi	CLSDEAD,a5
+	clr	a6
+	clr	a7
+	calla	BEGINOBJ2
+
 
 	movk	1,a0
 	move	a0,@DISPLAYON
 	calla	display_unblank
-
-;	movi	STATIC_p,a8
-;	movi	cycram,a9
-;	movi	[1,8],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-;
-;	movi	P_STATIC,a8
-;	movi	cycram2,a9
-;	movi	[21,27],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-;
-;	movi	P_STATIC,a8
-;	movi	cycram3,a9
-;	movi	[28,34],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-;
-;	movi	P_STATIC,a8
-;	movi	cycram4,a9
-;	movi	[35,41],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-;
-;	movi	P_STATIC,a8
-;	movi	cycram5,a9
-;	movi	[42,48],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-;
-;	movi	P_STATIC,a8
-;	movi	cycram6,a9
-;	movi	[49,55],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-;
-;	movi	P_STATIC,a8
-;	movi	cycram7,a9
-;	movi	[56,63],a10		;1st,last color
-;	movk	2,a11			;Rate
-;	CREATE	CYCPID,COLCYC
-
 
 	movi	6*TSEC,a10
 niuclp	SLEEPK	1
