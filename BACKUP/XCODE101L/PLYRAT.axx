@@ -2450,9 +2450,9 @@ spechds_t
 	.long	SW_LALS_P,SW_LALS_P,VP_LALS_P,VP_LALS_P
 
 ; Bird
-	LWWWWWW	scale69_t,BV10,SHT7,DNK7,DEF4,SDEF10,DSKL5
+	LWWWWWW	scale69_t,BV8,SHT10,DNK6,DEF6,SDEF8,DSKL5
 	.long	RADJA_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Bird_h
-	.word	10,6,10,13
+	.word	9,7,10,8
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
 	
 ;These are superstar players (Or leftover art) that can be picked with name
