@@ -1,0 +1,17 @@
+Why does it break?
+
+0x004048 + "3x TMS sound cmd" = lookup table for that sound
+
+
+bird, 	0x0038
+to bird	0x0039
+
+4048+ (3x38) = 40f2
+4048+ (3x39) = 40f3
+
+There is data at 40F0 in orig rom so this call appears to be unuseable?!
+
+We do however have a large chunk of (free?) FFFF at $4C4E
+That translates to call (4C4E - 4048 = ? /3 = C06 = $402.
+
+Reworking script, the call does not show up in the new rom at $4C4E?!

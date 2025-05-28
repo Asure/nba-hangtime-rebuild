@@ -2987,7 +2987,7 @@ zpsjteam_snds
  .word	0100DH,95,0b54h ;Smoke
  .word	0100DH,95,0b56h ;Jordan
  .word	0100DH,95,0bc1h ;Magic
-;.word	0100DH,95,0038h ;Bird
+ .word	0100DH,95,0403h ;Bird
 
 ;DJT End
 ******************************************************************************
