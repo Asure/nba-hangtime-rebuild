@@ -5259,7 +5259,7 @@ player_attribs
 	.word  06,09,03,08
 	.word  04,10,04,07	;DIKEMBE MUTOMBO	7'2"	245 reg
 
-	.word  07,06,06,04
+	.word  07,07,05,06
 	.word  04,05,05,06	;CHRISTIAN LAETTNER	6'11"	235 reg
 
 	.word  07,05,08,05
@@ -5280,10 +5280,10 @@ player_attribs
 	.word  04,07,05,04	;DINO RADJA		6'11"	225 thin 
 
 	.word  08,01,08,01
-	.word  07,01,06,04	;DANA BARROS		5'11"	165 reg
+	.word  06,01,06,04	;DANA BARROS		5'11"	165 reg
 
 	.word  09,02,06,08
-	.word  07,01,07,04	;DEE BROWN		6'1"	161 reg
+	.word  06,01,07,04	;DEE BROWN		6'1"	161 reg
 
 	.word  00,00,00,00
 	.word  00,00,00,00
@@ -5393,8 +5393,8 @@ player_attribs
 
 ;07 DETROIT PISTONS
 
-	.word  08,05,08,08
-	.word  08,05,08,09	;GRANT HILL		_______________
+	.word  08,06,08,08
+	.word  08,06,08,09	;GRANT HILL		_______________
 
 	.word  07,03,07,01
 	.word  06,01,08,07	;JOE DUMARS		6'3"	195 thin
@@ -5694,7 +5694,7 @@ player_attribs
 ;22 SACRAMENTO KINGS
 
 	.word  07,05,10,03
-	.word  09,02,06,07	;MITCH RICHMOND		6'5"	215 reg
+	.word  08,02,06,07	;MITCH RICHMOND		6'5"	215 reg
 
 	.word  06,07,04,07
 	.word  03,06,05,05	;BILLY OWENS		6'9"	220 reg
@@ -5757,7 +5757,7 @@ player_attribs
 	.word  06,01,07,06	;DAMON STOUDAMIRE	_______________
 
 	.word  05,05,07,05
-	.word  04,04,05,05	;WALT WILLIAMS		6'8"	230 reg
+	.word  05,04,05,05	;WALT WILLIAMS		6'8"	230 reg
 
 	.word  07,03,04,07
 	.word  03,08,03,05	;MARCUS CAMBY		_______________
