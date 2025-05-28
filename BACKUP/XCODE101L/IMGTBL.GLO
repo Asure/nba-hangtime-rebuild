@@ -12,6 +12,7 @@
 	.global	ONEAL
 	.global BARKLEY
 	.global	JOHNSON_M
+	.global	BIRD
 ;
 	.globl	DIAGP
 	.globl	crtwrk_p

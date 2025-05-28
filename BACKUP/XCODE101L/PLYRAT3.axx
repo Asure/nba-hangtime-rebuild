@@ -228,6 +228,7 @@
 	.def	oneal_h
 	.def	Barkley_h
 	.def	Magic_h
+	.def	Bird_h
 	.text
 
 ;; MARKER
@@ -262,6 +263,9 @@ Barkley_h
 	
 Magic_h
 	HDMAC2	MAG01
+
+Bird_h
+	HDMAC2	BIRD01
 
 heithb_h
 	HDMAC2	HEITH01

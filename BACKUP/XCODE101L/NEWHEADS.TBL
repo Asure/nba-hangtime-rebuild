@@ -399,5 +399,35 @@ MAG16:
 	.long   082a4cfaH
 	.word   06000H
 	.long   MAG_P
+BIRD01:
+	.word   29,42,14,40
+	.long   082a64e2H
+	.word   06000H
+	.long   BIRD_P
+BIRD02:
+	.word   31,35,13,34
+	.long   082a816eH
+	.word   06000H
+	.long   BIRD_P
+BIRD03:
+	.word   29,38,15,34
+	.long   082a9adcH
+	.word   06000H
+	.long   BIRD_P
+BIRD04:
+	.word   30,36,11,34
+	.long   082ab4b0H
+	.word   06000H
+	.long   BIRD_P
+BIRD05:
+	.word   29,44,14,39
+	.long   082ace00H
+	.word   06000H
+	.long   BIRD_P
+BIRD16:
+	.word   35,25,28,15
+	.long   082aebe8H
+	.word   06000H
+	.long   BIRD_P
 	.TEXT
 

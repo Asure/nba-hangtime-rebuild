@@ -303,7 +303,7 @@
 	.ref	oneal_h
 	.ref	Barkley_h
 	.ref	Magic_h
-
+	.ref	Bird_h
 ;symbols refined in this file
 
 ;	.def	EB_H,JTO_H	;RA_H
@@ -2393,10 +2393,10 @@ spechds_t
 	.word	4,4,9,7
 	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;B. SCOTT
 
-	LWWWWWW	scale61_t,BV8,SHT6,DNK1,DEF1,SDEF9,DSKL_2
-	.long	EMURD_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,EMurdock_h
-	.word	6,2,5,17
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;E. MURDOCK
+;	LWWWWWW	scale61_t,BV8,SHT6,DNK1,DEF1,SDEF9,DSKL_2
+;	.long	EMURD_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,EMurdock_h
+;	.word	6,2,5,17
+;	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;E. MURDOCK
 
 ;; MARKER
 ;; Add new player data here
@@ -2449,6 +2449,12 @@ spechds_t
 	.word	10,6,10,13
 	.long	SW_LALS_P,SW_LALS_P,VP_LALS_P,VP_LALS_P
 
+; Bird
+	LWWWWWW	scale69_t,BV10,SHT7,DNK7,DEF4,SDEF10,DSKL5
+	.long	RADJA_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Bird_h
+	.word	10,6,10,13
+	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
+	
 ;These are superstar players (Or leftover art) that can be picked with name
 ;and pin # - allowing them to be 'traded' from team to team
 ;Make sure these guys work - get their birthdays for pin #'s

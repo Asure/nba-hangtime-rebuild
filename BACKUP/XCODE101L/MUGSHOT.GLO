@@ -465,3 +465,5 @@
 	.global	BARK_MUG
 	.globl	MAG_MUGP
 	.global	MAG_MUG
+	.globl	BRD_MUGP
+	.global	BRD_MUG

@@ -88,3 +88,10 @@
 	.global	MAG04
 	.global	MAG05
 	.global	MAG16
+	.globl	BIRD_P
+	.global	BIRD01
+	.global	BIRD02
+	.global	BIRD03
+	.global	BIRD04
+	.global	BIRD05
+	.global	BIRD16

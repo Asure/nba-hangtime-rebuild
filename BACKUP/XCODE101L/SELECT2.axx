@@ -2785,8 +2785,8 @@ zpsjteam_data1
 ;FIX!!!
 ;Use name and birthday as pin #
 
-	.word	M_,C_,L_,O_,U_,D_
-	.word	ZER,ZER,ZER,ZER 	;McCLOUD,     george
+;	.word	M_,C_,L_,O_,U_,D_
+;	.word	ZER,ZER,ZER,ZER 	;McCLOUD,     george
 
 	.word	T_,M_,I_,L_,L_,S_
 	.word	ZER,ZER,ZER,ZER 	;MILLS,       terry
@@ -2872,6 +2872,9 @@ zpsjteam_data1
 	
 	.word	M_,A_,G_,I_,C_,0
 	.word	ZER,EIG,ONE,FOR 	;Magic
+	
+	.word	B_,I_,R_,D_,0,0
+	.word	ONE,TWO,ZER,SEV 	;Bird
 	
 zpsjteam_data1_end
 
@@ -2972,7 +2975,8 @@ zpsjteam_snds
  .word	0100DH,53,1816	;MURRAY,      tracy
  .word	0100DH,69,1832	;BENOIT,      david
  .word	0100DH,60,1958	;SCOTT,       byron
- .word	0100DH,63,1856	;MURDOCK,     eric
+;.word	0100DH,63,1856	;MURDOCK,     eric
+
 ;; MARKER
 ;; New select speech goes here
  .word	0100DH,95,0b50h ;Raiden
@@ -2982,7 +2986,7 @@ zpsjteam_snds
  .word	0100DH,95,0b54h ;Smoke
  .word	0100DH,95,0b56h ;Jordan
  .word	0100DH,95,0bc1h ;Magic
-
+;.word	0100DH,95,0038h ;Bird
 
 ;DJT End
 ******************************************************************************
@@ -6076,7 +6080,8 @@ our_names
 	.long	TMURRAY
 	.long	BENOIT
 	.long	SCOTT
-	.long	EMURDOCK
+;	.long	EMURDOCK
+
 ;; MARKER
 ;; New nameplates go here
 	.long	RAIDEN
@@ -6086,6 +6091,7 @@ our_names
 	.long	SM0K3
 	.long	JORDAN
 	.long	JOHNSON_M
+	.long	BIRD
 ;DJT End
 
 
@@ -6186,7 +6192,8 @@ our_heads
 	.long	MUR_TOR
 	.long	BEN_UTA
 	.long	SCO_VAN
-	.long	MUR_VAN
+;	.long	MUR_VAN
+
 ;; MARKER
 ;; New mugs go here
 	.long	RAD_MK2		; raiden mug
@@ -6196,6 +6203,7 @@ our_heads
 	.long	SMK_MUG		; smoke mug
 	.long	JOR_MUG		; jordan mug
 	.long	MAG_MUG		; magic mug
+	.long	BRD_MUG		; bird mug
 
 our_heads_end
 	.long	SAL_MUG		;0		;repeat 1st 2 for wrap around
