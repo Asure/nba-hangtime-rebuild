@@ -440,23 +440,23 @@ ARNOLD02:
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD03:
-	.word   32,45,13,41
+	.word   27,38,12,34
 	.long   082b3484H
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD04:
 	.word   26,36,11,33
-	.long   082b5644H
+	.long   082b4c90H
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD05:
-	.word   27,42,12,39
-	.long   082b6c34H
+	.word   27,42,12,40
+	.long   082b6280H
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD16:
-	.word   45,32,37,26
-	.long   082b86c8H
+	.word   38,27,34,21
+	.long   082b7d14H
 	.word   06000H
 	.long   ARNOLD_P
 	.TEXT

@@ -6097,7 +6097,7 @@ our_names
 	.long	JORDAN
 	.long	JOHNSON_M
 	.long	BIRD
-	.long	TERMINATOR
+	.long	ARNOLD
 ;DJT End
 
 

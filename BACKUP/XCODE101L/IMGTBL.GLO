@@ -14,6 +14,7 @@
 	.global	JOHNSON_M
 	.global	BIRD
 	.global TERMINATOR
+	.global	ARNOLD
 ;
 	.globl	DIAGP
 	.globl	crtwrk_p

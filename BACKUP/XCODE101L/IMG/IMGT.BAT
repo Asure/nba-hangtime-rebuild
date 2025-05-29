@@ -64,5 +64,5 @@ del c:\tmp\htextra\*.glo
 echo !!! DELETE BAST_Y_P duplicate from IMGPAL8.ASM !!!
 echo !!! DELETE BOTH HOOP_p duplicate from IMGPAL8.ASM !!!
 loadw misc4 /t=c:\tmp\htextra /FI /E >haha2
-pause
+::pause
 exit
