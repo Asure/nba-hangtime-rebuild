@@ -38,6 +38,10 @@
 	.include	"imgtbl2.glo"
 	.include	"imgtblp.glo"
 
+	.if	DEBUGCRT
+	.include	"uground.pal"
+	.endif
+
 	.asg		0,SEQT
 	.include	"plyr.equ"
 
@@ -2063,10 +2067,20 @@ COLTAB_RNBW
 ;--------------------
 ; Team court palettes
 
+
+
+	.if	DEBUGCRT
 otd_pal_objs
+	.long	UCRT01,UCRT01,UCRT01,UCRT01,UCRT01,UCRT01
+	.long	UCRT01,UCRT01,UCRT01,UCRT01,UCRT01,UCRT01
+OTD_CNT	.equ	($-otd_pal_objs)/32
+
+	.else
+otd_pal_objs							;outdoor.tbl has these objs w/ pals attached to them.
 	.long	outdr1,outdr2,outdr3,outdr4,outdr5,outdr6
 	.long	outdr7,outdr8,outdr9,outdr10,outdr11,outdr12
 OTD_CNT	.equ	($-otd_pal_objs)/32
+	.endif
 
 crt_pals
 	.long	CRT_ATL_p,BK_ATL_P,CRT_BOS_p,BK_BOS_P

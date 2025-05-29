@@ -1,7 +1,7 @@
 	.DATA
 dcslogo:
 	.word   187,89,93,44
-	.long   081f964dH
+	.long   083e8f4dH
 	.word   05380H
 	.long   DCLIQU3
 	.TEXT

@@ -42,6 +42,8 @@ CPUDEBUG .equ	0	;Cpu meter process (bb.axx calcs CPULEFT, EXPERIMENTAL)
 VDADEBUG .equ	0	;Debug zipped pics
 DCSLOGO	.equ	1	;DCS Logo during attract
 
+DEBUGCRT .equ	1	;third court debugging
+
 SMOKET	.equ	0	;Player Smoketrails (Abandoned feature, EXPERIMENTAL)
 SHADOWT	.equ	0	;Player Shadowtrails (Abandoned feature, EXPERIMENTAL) combined cost around 1024
 

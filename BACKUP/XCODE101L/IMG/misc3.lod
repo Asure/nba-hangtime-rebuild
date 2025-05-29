@@ -9,9 +9,13 @@ IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
 ;FRM> CHEERS
 ;FRM> TITLE ; Todo Title BGNDTBL.ASM
 ;
+; Underground Lava court.
+ASM> uground1.tbl
+FRM> UGROUND
 ;Coach & Benched player anims
 ;These were disabled for production, probably to save costs.
 ;
+
 ASM> crowd2.tbl
 GLO> crowd2.glo
 POF>

@@ -1,5 +1,8 @@
 	.DATA
-OUTDOOR	.set	0398e1f0h
+OUTDOOR		.set	06000000h
+;OUTDOOR	.set	0398e1f0h
+;UGROUND	.set	06000000h
+
 sidebot:
 	.word   86,154,0,0
 	.long   05b7daf0H
