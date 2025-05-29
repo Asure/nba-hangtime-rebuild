@@ -35,7 +35,7 @@ Image KOB_MUG has 68 colors. Can't fit into 1 bits per pixel.
 Image BARK_MUG has 60 colors. Can't fit into 1 bits per pixel.
 Image MAG_MUG has 73 colors. Can't fit into 1 bits per pixel.
 Image BRD_MUG has 55 colors. Can't fit into 1 bits per pixel.
-Image ARN_MUG has 54 colors. Can't fit into 1 bits per pixel.
+Image ARN_MUG has 70 colors. Can't fit into 1 bits per pixel.
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -47,16 +47,16 @@ Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               423396 dec	   675E4 hex
+	IMAGE RAM               423514 dec	   6765A hex
 
-	TOTAL LOAD              423396 dec	   675E4 hex
+	TOTAL LOAD              423514 dec	   6765A hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       423396 dec	   675E4 hex
+	In IMAGE RAM records       423514 dec	   6765A hex
 
-	TOTAL bytes written        423396 dec	   675E4 hex, in 2 records.
+	TOTAL bytes written        423514 dec	   6765A hex, in 2 records.
 
-Bytes Represented in Tables ... 423395 dec 675E3 hex
+Bytes Represented in Tables ... 423514 dec 6765A hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.

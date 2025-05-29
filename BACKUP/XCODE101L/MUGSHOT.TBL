@@ -1187,7 +1187,7 @@ BRD_MUG:
 	.word   080H
 	.long   BRD_MUGP
 ARN_MUG:
-	.word   41,62,0,62
+	.word   50,62,0,62
 	.long   082ece47H
 	.word   080H
 	.long   ARN_MUGP
