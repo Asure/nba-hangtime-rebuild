@@ -1,6 +1,7 @@
 @echo off
-rem this CMD file will do everything and create bb3.bin.
+rem this CMD file will do everything and create bin and roms, and zip the whole lot.
 rem adjust paths as needed.
+rem 29-5 now with auto-trimming the last 35 lines from imgpal8.asm with powershell.
 c:\dosbox-x\dosbox-x.exe -fastlaunch -conf .\dosbox-x\dosbox-x.conf exit -c "c:\myht\backup\xcode1~3\img\imgt.bat"
 del misc2.old
 ren misc2.bin misc2.old
@@ -11,11 +12,15 @@ rem MAME debug commands to load these from the mame folder:
 rem loadr misc.bin,1200000,0,:gfxrom in mame debug
 copy misc*.bin D:\mame
 del *.irw
-del *.old
-makeimgr
-echo Rebuild?
+rem this is started in the background & runs parallel.
+start makeimgr
 cd ..
-pause
-rem rebuild.cmd
+rem cut the last 35 lines (these are duplicate PALS we dont need.
+rem linux "head -n -35 input.txt > temp && mv temp input.txt" for example.
+powershell -Command "Get-Content IMGPAL8.ASM | Select-Object -First ((Get-Content IMGPAL8.ASM).Count - 35) | Set-Content IMGPAL18.ASM"
+del imgpal8.asm
+ren imgpal18.asm IMGPAL8.ASM
+rem pause
+rework.cmd
 
 

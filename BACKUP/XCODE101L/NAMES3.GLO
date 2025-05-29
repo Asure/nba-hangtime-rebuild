@@ -9,6 +9,7 @@
 	.global	ONEAL
 	.global	BIRD
 	.global	TERMINATOR
+	.global	ARNOLD
 	.global	BARKLEY
 	.global	PORTER
 	.global	MAJERLE

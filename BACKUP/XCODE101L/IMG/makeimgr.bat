@@ -12,4 +12,5 @@ fsutil file seteof rom\l1.0_nba_hangtime_u_115_image_rom.u115 1048576
 fsutil file seteof rom\l1.0_nba_hangtime_u_114_image_rom.u114 1048576
 cd rom
 zip d:\mame\roms\nbamht.zip l1*.u*
+exit
 
