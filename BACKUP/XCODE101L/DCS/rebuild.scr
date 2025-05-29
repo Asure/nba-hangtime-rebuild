@@ -25,8 +25,9 @@ Stream Antoine_Walker "Antoine_Walker.wav";
 Stream Barkley "Barkley.wav";
 Stream Charles_Barkley "Charles_Barkley.wav";
 Stream Magic "Magic.wav";
+Stream Magic_Johnson "Magic_Johnson.wav";
 Stream Bird "Bird.wav";
-Stream LarryBird "Larry_Bird.wav";
+Stream Larry_Bird "Larry_Bird.wav";
 
 // last used call 07BF ?
 
@@ -231,6 +232,12 @@ Track $0bc1 channel 5 {		// call free
     Play(Magic);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
+// Magic Johnson
+Track $0404 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Magic_Johnson);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
 // To Magic
 Track $07C4 channel 5 {		// call free
     SetMixingLevel(level 111);
@@ -247,13 +254,13 @@ Track $0402 channel 5 {		// call free
 // Larry Bird
 Track $0403 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
-    Play(LarryBird);       // start an audio clip
+    Play(Larry_Bird);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // To Bird
-Track $0404 channel 5 {		// call free
+Track $0405 channel 5 {		// call free
     SetMixingLevel(level 111);
     Play(stream $1CC03A);
     Wait(27) Play(Bird);
     Wait(Stream);         
-};
+};	

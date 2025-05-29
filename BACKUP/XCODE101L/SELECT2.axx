@@ -2854,19 +2854,19 @@ zpsjteam_data1
 ;; MARKER
 ;; New hiddens go here.
 	.word	R_,A_,I_,D_,E_,N_
-	.word	ZER,ZER,ZER,ZER 	;raiden mk2
+	.word	ZER,SEV,ZER,NIN 	;raiden mk2
 
 	.word	S_,C_,O_,R_,P_,I_
-	.word	ZER,ZER,ZER,ZER 	;scorpion mk2
+	.word	ZER,ONE,ONE,THR 	;scorpion mk2
 	
 	.word	S_,U_,B_,Z_,E_,R_
-	.word	ZER,ZER,ZER,ZER 	;subzero mk2
+	.word	ONE,ZER,ZER,FIV 	;subzero mk2
 	
 	.word	R_,E_,P_,T_,I_,L_
-	.word	ZER,ZER,ZER,ZER 	;reptile mk2
+	.word	ONE,ZER,ONE,ZER 	;reptile mk2
 
 	.word	S_,M_,O_,K_,E_,0
-	.word	ZER,ZER,ZER,ZER 	;smoke mk2
+	.word	ZER,THR,ONE,FOR 	;smoke mk2
 	
 	.word	J_,O_,R_,D_,A_,N_
 	.word	ZER,TWO,ONE,SEV 	;Jordan
@@ -2985,8 +2985,8 @@ zpsjteam_snds
  .word	0100DH,95,0b53h ;Subzero
  .word	0100DH,95,0b51h ;Reptile
  .word	0100DH,95,0b54h ;Smoke
- .word	0100DH,95,0b56h ;Jordan
- .word	0100DH,95,0bc1h ;Magic
+ .word	0100DH,95,0bb8h ;Jordan
+ .word	0100DH,95,0404h ;Magic
  .word	0100DH,95,0403h ;Bird
 
 ;DJT End

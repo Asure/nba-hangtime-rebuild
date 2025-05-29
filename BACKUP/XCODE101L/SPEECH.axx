@@ -1501,7 +1501,7 @@ special_pass_speech
  .word	0100DH,45,07bch ;to Smoke 
  .word	0100DH,45,07bfh ;to Jordan
  .word	0100DH,45,07c4h ;to Magic
- .word	0100DH,45,0404h ;to Bird
+ .word	0100DH,45,0405h ;to Bird
 
 ******************************************************************************
 
