@@ -28,6 +28,8 @@ Stream Magic "Magic.wav";
 Stream Magic_Johnson "Magic_Johnson.wav";
 Stream Bird "Bird.wav";
 Stream Larry_Bird "Larry_Bird.wav";
+Stream Terminator "Terminator.wav";
+Stream Arnold_Schwarzenegger "Arnold_Schwarzenegger.wav";
 
 // last used call 07BF ?
 
@@ -264,3 +266,22 @@ Track $0405 channel 5 {		// call free
     Wait(27) Play(Bird);
     Wait(Stream);         
 };	
+// Terminator
+Track $0406 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Terminator);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Arnold Schwarzenegger 
+Track $0407 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Arnold_Schwarzenegger);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Terminator
+Track $0408 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(27) Play(Terminator);
+    Wait(Stream);         
+};

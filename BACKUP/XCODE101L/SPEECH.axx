@@ -1384,7 +1384,7 @@ special_name_speech
  .word	0100DH,39,1813	;MILLER,      oliver
  .word	0100DH,30,1817	;MURRAY,      tracy
  .word	0100DH,38,1833	;BENOIT,      david
- .word	0100DH,36,1959	;SCOTT,       byron
+;.word	0100DH,36,1959	;SCOTT,       byron
 ;.word	0100DH,37,1857	;MURDOCK,     eric
 
 ;; MARKER
@@ -1397,6 +1397,8 @@ special_name_speech
  .word	0100DH,45,0B56h ;Jordan
  .word	0100DH,45,0BC1h ;Magic
  .word	0100DH,45,0402h ;Bird
+ .word	0100DH,45,0406h ;Arnold
+
 
 ***********
 ***********
@@ -1489,7 +1491,7 @@ special_pass_speech
  .word	0100DH,48,1815	;to MILLER,      oliver
  .word	0100DH,39,1819	;to MURRAY,      tracy
  .word	0100DH,48,1835	;to BENOIT,      david
- .word	0100DH,45,1960	;to SCOTT,       byron
+;.word	0100DH,45,1960	;to SCOTT,       byron
 ;.word	0100DH,46,1859	;to MURDOCK,     eric
 
 ;; MARKER
@@ -1502,6 +1504,7 @@ special_pass_speech
  .word	0100DH,45,07bfh ;to Jordan
  .word	0100DH,45,07c4h ;to Magic
  .word	0100DH,45,0405h ;to Bird
+ .word	0100DH,45,0408h ;to Arnold
 
 ******************************************************************************
 

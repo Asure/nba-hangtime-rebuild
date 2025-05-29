@@ -88,6 +88,8 @@ Magic.img
 ---> MAG01,MAG02,MAG03,MAG04,MAG05,MAG16
 Bird.img
 ---> BIRD01,BIRD02,BIRD03,BIRD04,BIRD05,BIRD16
+Arnold.img
+---> ARNOLD01,ARNOLD02,ARNOLD03,ARNOLD04,ARNOLD05,ARNOLD16
 ; New mugs here
 ; Mugs go into mugshot.glo / mugshot.tbl, so copypaste output there manualy
 ; Mugs are used in select2.axx. Our mug pals should go into imgpal8.asm
@@ -118,6 +120,8 @@ Magic.img
 ---> MAG_MUG
 Bird.img
 ---> BRD_MUG
+Arnold.img
+---> ARN_MUG
 ; switch back to auto pal-per-pixel setting
 PPP> 0
 ;
@@ -132,7 +136,7 @@ PON>
 CON>
 XON>
 ZOF>
----> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL,BIRD
+---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL,BIRD,TERMINATOR
 ..\..\ART100\pnames.img
 ---> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M
 ;

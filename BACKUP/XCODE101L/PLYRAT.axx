@@ -304,6 +304,7 @@
 	.ref	Barkley_h
 	.ref	Magic_h
 	.ref	Bird_h
+	.ref	Arnold_h
 ;symbols refined in this file
 
 ;	.def	EB_H,JTO_H	;RA_H
@@ -2388,10 +2389,10 @@ spechds_t
 	.word	5,5,4,12
 	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P		;D. BENOIT
 
-	LWWWWWW	scale64f_t,BV7,SHT8,DNK1,DEF3,SDEF4,DSKL0
-	.long	Scott_f, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Scott_h
-	.word	4,4,9,7
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;B. SCOTT
+;	LWWWWWW	scale64f_t,BV7,SHT8,DNK1,DEF3,SDEF4,DSKL0
+;	.long	Scott_f, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Scott_h
+;	.word	4,4,9,7
+;	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;B. SCOTT
 
 ;	LWWWWWW	scale61_t,BV8,SHT6,DNK1,DEF1,SDEF9,DSKL_2
 ;	.long	EMURD_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,EMurdock_h
@@ -2454,6 +2455,12 @@ spechds_t
 	.long	RADJA_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Bird_h
 	.word	9,7,10,8
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
+	
+; Arnold
+	LWWWWWW	scale62_t,BV8,SHT10,DNK6,DEF6,SDEF8,DSKL5
+	.long	NFL55_p,UN_BOSS_P,UN_BOSS_P,TR_SANS_P,TR_SANS_P,Arnold_h
+	.word	9,7,10,8
+	.long	SW_PORS_P,SW_PORS_P,VP_PORS_P,VP_PORS_P	
 	
 ;These are superstar players (Or leftover art) that can be picked with name
 ;and pin # - allowing them to be 'traded' from team to team

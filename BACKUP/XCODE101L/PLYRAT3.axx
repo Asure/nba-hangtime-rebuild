@@ -229,6 +229,7 @@
 	.def	Barkley_h
 	.def	Magic_h
 	.def	Bird_h
+	.def	Arnold_h
 	.text
 
 ;; MARKER
@@ -266,6 +267,9 @@ Magic_h
 
 Bird_h
 	HDMAC2	BIRD01
+	
+Arnold_h
+	HDMAC2	ARNOLD01
 
 heithb_h
 	HDMAC2	HEITH01

@@ -95,3 +95,10 @@
 	.global	BIRD04
 	.global	BIRD05
 	.global	BIRD16
+	.globl	ARNOLD_P
+	.global	ARNOLD01
+	.global	ARNOLD02
+	.global	ARNOLD03
+	.global	ARNOLD04
+	.global	ARNOLD05
+	.global	ARNOLD16

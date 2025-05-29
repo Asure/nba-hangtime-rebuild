@@ -429,5 +429,35 @@ BIRD16:
 	.long   082aec54H
 	.word   06000H
 	.long   BIRD_P
+ARNOLD01:
+	.word   28,35,13,32
+	.long   082b0694H
+	.word   06000H
+	.long   ARNOLD_P
+ARNOLD02:
+	.word   28,35,11,32
+	.long   082b1d8cH
+	.word   06000H
+	.long   ARNOLD_P
+ARNOLD03:
+	.word   32,45,13,41
+	.long   082b3484H
+	.word   06000H
+	.long   ARNOLD_P
+ARNOLD04:
+	.word   26,36,11,33
+	.long   082b5644H
+	.word   06000H
+	.long   ARNOLD_P
+ARNOLD05:
+	.word   27,42,12,39
+	.long   082b6c34H
+	.word   06000H
+	.long   ARNOLD_P
+ARNOLD16:
+	.word   45,32,37,26
+	.long   082b86c8H
+	.word   06000H
+	.long   ARNOLD_P
 	.TEXT
 

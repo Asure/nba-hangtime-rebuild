@@ -2845,8 +2845,8 @@ zpsjteam_data1
 	.word	B_,E_,N_,O_,I_,T_
 	.word	ZER,ZER,ZER,ZER 	;BENOIT,      david
 
-	.word	B_,S_,C_,O_,T_,T_
-	.word	ZER,ZER,ZER,ZER 	;SCOTT,       byron
+;	.word	B_,S_,C_,O_,T_,T_
+;	.word	ZER,ZER,ZER,ZER 	;SCOTT,       byron
 
 ;	.word	M_,U_,R_,D_,C_,K_
 ;	.word	ZER,ZER,ZER,ZER 	;MURDOCK,     eric
@@ -2876,6 +2876,9 @@ zpsjteam_data1
 	
 	.word	B_,I_,R_,D_,0,0
 	.word	ONE,TWO,ZER,SEV 	;Bird
+	
+	.word	A_,R_,N_,O_,L_,D_
+	.word	ZER,SEV,THR,ZER 	;Arnold
 	
 zpsjteam_data1_end
 
@@ -2975,7 +2978,7 @@ zpsjteam_snds
  .word	0100DH,67,1812	;MILLER,      oliver
  .word	0100DH,53,1816	;MURRAY,      tracy
  .word	0100DH,69,1832	;BENOIT,      david
- .word	0100DH,60,1958	;SCOTT,       byron
+;.word	0100DH,60,1958	;SCOTT,       byron
 ;.word	0100DH,63,1856	;MURDOCK,     eric
 
 ;; MARKER
@@ -2988,6 +2991,7 @@ zpsjteam_snds
  .word	0100DH,95,0bb8h ;Jordan
  .word	0100DH,95,0404h ;Magic
  .word	0100DH,95,0403h ;Bird
+ .word	0100DH,95,0407h ;Arnold
 
 ;DJT End
 ******************************************************************************
@@ -6080,7 +6084,7 @@ our_names
 	.long	OMILLER
 	.long	TMURRAY
 	.long	BENOIT
-	.long	SCOTT
+;	.long	SCOTT
 ;	.long	EMURDOCK
 
 ;; MARKER
@@ -6093,6 +6097,7 @@ our_names
 	.long	JORDAN
 	.long	JOHNSON_M
 	.long	BIRD
+	.long	TERMINATOR
 ;DJT End
 
 
@@ -6192,7 +6197,7 @@ our_heads
 	.long	MIL_TOR
 	.long	MUR_TOR
 	.long	BEN_UTA
-	.long	SCO_VAN
+;	.long	SCO_VAN
 ;	.long	MUR_VAN
 
 ;; MARKER
@@ -6205,6 +6210,7 @@ our_heads
 	.long	JOR_MUG		; jordan mug
 	.long	MAG_MUG		; magic mug
 	.long	BRD_MUG		; bird mug
+	.long	ARN_MUG		; arnold mug
 
 our_heads_end
 	.long	SAL_MUG		;0		;repeat 1st 2 for wrap around

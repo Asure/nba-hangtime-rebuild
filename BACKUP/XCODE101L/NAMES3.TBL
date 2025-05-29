@@ -1,72 +1,77 @@
 	.DATA
 RAIDEN:
 	.word   39,9,17,0
-	.long   082e3fbbH
+	.long   082f240fH
 	.word   03000H
 	.long   BAST_Y_P
 SCORPION:
 	.word   53,10,26,0
-	.long   082e43d8H
+	.long   082f282cH
 	.word   03000H
 	.long   BAST_Y_P
 SUBZER:
 	.word   47,9,23,0
-	.long   082e4a0eH
+	.long   082f2e62H
 	.word   03000H
 	.long   BAST_Y_P
 REPTILE:
 	.word   43,10,21,0
-	.long   082e4f03H
+	.long   082f3357H
 	.word   03000H
 	.long   BAST_Y_P
 SM0K3:
 	.word   34,9,17,0
-	.long   082e540dH
+	.long   082f3861H
 	.word   03000H
 	.long   BAST_Y_P
 JORDAN:
 	.word   42,9,21,0
-	.long   082e57a3H
+	.long   082f3bf7H
 	.word   03000H
 	.long   BAST_Y_P
 BRYANT:
 	.word   43,9,21,0
-	.long   082e5c11H
+	.long   082f4065H
 	.word   03000H
 	.long   BAST_Y_P
 ONEAL:
 	.word   38,10,18,0
-	.long   082e609aH
+	.long   082f44eeH
 	.word   03000H
 	.long   BAST_Y_P
 BIRD:
 	.word   24,9,12,0
-	.long   082e650eH
+	.long   082f4962H
+	.word   03000H
+	.long   BAST_Y_P
+TERMINATOR:
+	.word   24,9,12,0
+	.long   082f4962H
 	.word   03000H
 	.long   BAST_Y_P
 BARKLEY:
 	.word   50,10,24,0
-	.long   082e6796H
+	.long   082f4beaH
 	.word   03000H
 	.long   BAST_Y_P
 PORTER:
 	.word   42,10,20,0
-	.long   082e6d72H
+	.long   082f51c6H
 	.word   03000H
 	.long   BAST_Y_P
 MAJERLE:
 	.word   49,10,23,0
-	.long   082e725eH
+	.long   082f56b2H
 	.word   03000H
 	.long   BAST_Y_P
 WILKINS:
 	.word   45,10,21,0
-	.long   082e781cH
+	.long   082f5c70H
 	.word   03000H
 	.long   BAST_Y_P
 JOHNSON_M:
 	.word   49,10,23,0
-	.long   082e7d62H
+	.long   082f61b6H
 	.word   03000H
 	.long   BAST_Y_P
 	.TEXT
