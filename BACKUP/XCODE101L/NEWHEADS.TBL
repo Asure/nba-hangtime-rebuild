@@ -405,28 +405,28 @@ BIRD01:
 	.word   06000H
 	.long   BIRD_P
 BIRD02:
-	.word   31,35,13,34
+	.word   31,35,13,32
 	.long   082a816eH
 	.word   06000H
 	.long   BIRD_P
 BIRD03:
-	.word   29,38,15,34
+	.word   32,35,14,31
 	.long   082a9adcH
 	.word   06000H
 	.long   BIRD_P
 BIRD04:
-	.word   30,36,11,34
-	.long   082ab4b0H
+	.word   30,36,13,34
+	.long   082ab51cH
 	.word   06000H
 	.long   BIRD_P
 BIRD05:
 	.word   29,44,14,39
-	.long   082ace00H
+	.long   082ace6cH
 	.word   06000H
 	.long   BIRD_P
 BIRD16:
-	.word   35,25,28,15
-	.long   082aebe8H
+	.word   35,32,31,22
+	.long   082aec54H
 	.word   06000H
 	.long   BIRD_P
 	.TEXT
