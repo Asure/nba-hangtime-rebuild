@@ -20,8 +20,30 @@ It's breaking again.
 
 (040Cx3) 4048+C24 = 4C6C
 
-Figure out which sound is broken at the moment: Edit menu.axx to check.
+Figure out which sound is broken at the moment: Edit menu.axx to check. Fixed.
 
+040A,040B,040C these play fine. Issues during game, Jordan, Swish Chicago?
+
+Q:What did 040a 040b and 040c damage?
+
+Where are the calls supposed to be?
+
+4048 + (3x 040A) = 4C66 -> 00 96 98 -> There's something here in the original already.
+4048 + (3x 040B) = 4C69 -> 00 96 B2 -> 
+4048 + (3x 040C) = 4C6C -> 00 96 C4 -> 
+
+Let's look up a call, 'Chicago' 04BB in orig u2
+
+4048 + (3x 04bb) = 4E79 -> 00 95 FC -> 
+01 05 00 00 07 05 71 00 01 05 19 *11 80 01* 00 4b 00
+DCS raw data is at 0x018011
+
+What is the original 00 96 98 playing/doing?
+
+60 00 01 05 00 00 07 05 71 00 00 01 05 *19A744* 01 00 what was that? 
+From org_prog -> $04c2 = "the denver nuggets"
+
+Let's move to 4300 / 4303 / 4306 ?
 
 
 Old notes below:
