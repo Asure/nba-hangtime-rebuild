@@ -15,3 +15,285 @@ We do however have a large chunk of (free?) FFFF at $4C4E
 That translates to call (4C4E - 4048 = ? /3 = C06 = $402.
 
 Reworking script, the call does not show up in the new rom at $4C4E?!
+
+It's breaking again.
+
+(040Cx3) 4048+C24 = 4C6C
+
+Figure out which sound is broken at the moment: Edit menu.axx to check.
+
+
+
+Old notes below:
+
+===
+
+From recon2015 Exide talk. See https://www.youtube.com/watch?v=K5N0GgDHlQU
+
+Samples 31000Hz
+
+ROM
+DSP Boot 0-0x1000
+Compression dict 0x3000 (U2)
+Look-up table entries 0x4000 (U4)
+sound headers - U2 0x13800
+- compressed audio
+
+Look up table points to sound header - sound header points to frame header
+U2 sound look up table 0x4000
+--- size varies
+U2 sound headers 0x13897
+--- size varies
+Frame headers & compressed audio
+-\/-
+END 0xFFFFF
+
+0x4040-0x4042 pointer to base TMS sound command (i.e. 0x004048)
+0x4046 holds max tms sound cmd i.e. 0x52c6-1
+"52C6 -1 = 52C5
+0x4048 + 3x 0x52c5 = 0x4048+0xF84F = 13897 max cmd
+
+0x004048 + "3x TMS sound cmd" = lookup table for that sound
+
+An Example:
+Sound command: $0429 expands to 0x4048 + (3x$0429) = 4CC3 (U2 bank4)
+Sound lookup table entry is at $4cc3 is 0x18183 (u2)
+U2, offset 0x18183 contains sound header
+01 01 00 00 07 01 69 00 00 01 01 *10 47 54* 01 *01 47* 00 00
+01 05 00 00 07 05 6F 00 00 01 05 *34 C7 78* 01 *00 AF* 00 01 05 00 00 
+Pointer to sound header: U3 0x4754 
+Number of frames: 0x0147
+Sound header points to frame header U3, 0x04754
+01 47 95 95 91 11 11 11 11 11 11 51 51
+
+For Hangtime:
+
+0x4040 "004048"
+0x4048 "0063CE" 
+0x4048 + (3x 0x63CE)= 16BB2
+
+Lookup table for "super dunk" ($0971)
+0x4048 + (3x 0x0971) = 5C9B
+0x5C9B = 00 E6 CA = sound header is at 0x00E6CA
+
+exampl = 01 01 00 00 07 01 69 00 00 01 01 *10 47 54* 01 *01 47* 00 00 (from talk)
+0x00E6CA = 01 05 00 00 07 05 6F 00 00 01 05 *34 C7 78* 01 *00 AF* 00 01 05 6F 00 
+
+Pointer to sound data: 0x34C778  (0x10000 per rom) = U2 = 0x00.... U3=0x10.... U4=0x20.... U5=0x30....
+U5: at 0x4C778 = 00 AE 9D 9D 9D 19 19 59 (0xAE not matching 0xAF frames, wierd..)
+Actual frames count here is used by playback, instead of what's in U2 sound header.
+
+Highest sound? 0b4e?
+4048 + (3x 0b4e) = 6232
+u2 0x6232 = 00 f6 62 00 -> 00 f6 86 00 f6 98 ffffffff..
+Looks like one more entry here. (f698@ 6235 - 4048 = 0xB4F) tested: 'for his teammate' speech.
+6235 = 00 F6 98 = 0B4F?
+
+Let's add a pointer here. (00E6CA) at $6238 (6238 - 4048 = 0B50h)
+And see if it's maybe ignored? It's not, the sound call still works.
+Let's move some data from 00E6CA to a free spot.
+
+01 05 00 00 07 05 6F 00 00 01 05 34 C7 78 01 00 AF 00
+
+Plenty of space at 003A00, put a copy there.
+Update our new pointer at 6238 to 00 3A 00
+Test rom: Works.
+
+Now to add more. Dumped from mk2 wolf.. LST file/LOC files:
+
+RAIDEN                    1850        74 0x73a
+REPTILE     0x28921C      2592       128 0xa20
+REPTSPIT    0x289C3C?
+
+SUBZERO     0x1D79A8      3502       151 0xdae
+SUPERB      0x1D8756
+
+SCORPION    0x28EBA6      2982       155 0xba6
+SCORTHR1    0x28F74C?
+
+I'm gonna use:
+003a00 = raiden   = call 6238 - 4048 /3 $0b50h in-game  $402530 = U6 short names in speech.axx
+003a20 = reptile  = call 623B - 4048 /3 $0b51h in game  $0FF547 = U2 short name
+003a60 = subzero  = call 6241 - 4048 /3 $0b53 in-game   $1FEEDE = U3 short name
+
+003a40 = scorpion = call 623e - 4048 /3 $0b52		$400010 = U6 short name
+003a80 = jordank  = call 6244 - 4048 /3 $0b54 in game	$400BD0 = U6 short name
+003aa0 = jordankf = call 6244 - 4048 /3 $0b55 in game	$4014E0 = U6 full name select2.axx
+003ac0 = oneal    = call 624a - 4048 /3 $0b56 in game   $4027C0 = U6 short name
+free space at $575E used for sound call table to continue.
+003ae0 = bennybul = call 575E - 4048 /3 $7B2  in game    $403AE0 = U6 short name (00 6C)
+003b00 = bryant	  = call 5761 - 4048 /3 $7B3  in game	$4048d8
+003b20 = kbryant  = call 5764 - 4048 /3 $7B4  in game	$4053e8
+003b40 = tobryant = call 5767 - 4048 /3 $7B5  in game	$406a20
+
+003b60 = to_jor   = call 576a - 4048 /3 $07B6 in game   $407840 = U6 Pass speech
+003b80 = to_rad   = call 576d - 4048 /3 $07B7 in game   $4083e0 = U6 Pass speech
+003ba0 = to_rept  = call 5770 - 4048 /3 $07B8 in game   $409218 = U6 Pass speech
+003bc0 = to_scorp = call 5773 - 4048 /3 $07B9 in game   $40a388 = U6 Pass speech
+003be0 = to_subz  = call 5776 - 4048 /3 $07Ba in game   $40b830 = U6 Pass speech
+003c00 = smoke    = call 5779 - 4048 /3 $07Bb in game   $40d048 = U6 Pass speech
+003c20 = to_smoke = call 577c - 4048 /3 $07Bc in game   $40e148 = U6 Pass speech
+003c40 = glass    = call 577f - 4048 /3 $07Bd in game   $40f4b0 = U6 Glass break (4 sec)
+003c60 = supermax = call 5782 - 4048 /3 $07be in game   $411790 = U6 Super Maximum Hangtime
+
+003c80 = create   = call 5785 - 4048 /4 $07bf in game   $4140F0 = U6 Create player tune extended
+
+Music:
+00 40 D0 5E E7 01 00 00 00 02 01 00 00 02 02 00 00 02 03 00 01 00 01 00 00 00 07 00 69 00 21 0E 00 00 00 01 00 10 00 0E 01 00 21 0F FF FF 00
+
+NBA: $3 = grand champ tune. 3x3 + 4048 = 4051. : 00 65 02
+
+Debug test
+$26 x 3 + 4048 = 40BA = 00 40 D0
+$0040D0 = 01 00 00 00 07 00 69 00 21 0E 00 00 00 01 00 10 00 0E 01 00 21 0F FF FF 00 into 3C80
+          
+
+
+dd conv=notrunc bs=1 seek=0x48d8 if=bryant.dat of=l1.0_nba_hangtime_u_6_music_spch.u6
+rem Test inject Bryant @ 53e8 u6:
+dd conv=notrunc bs=1 seek=0x53e8 if=kbryant.dat of=l1.0_nba_hangtime_u_6_music_spch.u6
+dd conv=notrunc bs=1 seek=0x6a20 if=tobryant.dat of=l1.0_nba_hangtime_u_6_music_spch.u6
+
+
+$1360 pippen
+select 2:
+ .word	0100DH,72,1360	;PIPPEN,      scottie 0x550 x3 + 4048 = $5038
+
+Pippen
+call #1360 = $5038 'Pippen'
+00 A1 B6 00 A1 D0 00 A1 E2 00 A1 F4 00
+
+
+
+$a1b6
+01 05 00 00 07 05 6F 00 00 01 05[2B 59 0E]01 00 61 01 05 1A 88 16 01 00 4B 00 
+01 05 00 00 07 05 6F 00 00 01 05 1A 88 16 01 00 4B 00 
+01 05 00 00 07 05 6F 00 00 01 05 1A 88 16 01 00 4B 00 
+01 05 00
+
+my header
+01 05 00 00 07 05 6F 00 00 01 05 [34C778] 01 00 AF 00
+
+Call #1363 = 'To Pippen' $0553 = $5041
+
+To Pippen
+$5041
+00 A1 F4 00 A2 0E 00 A2 28 00 A2 3A
+
+$a1f4
+01 05 00 00 07 05 6F 00 00 01 05 [1CC03A] 01 00 16 01 051A88 16 01 00 4B 00 
+$a20e
+01 05 00 00 07 05 6F 00 00 01 05 [1A8D5E] 01 00 4B 01 05 1A 95 E4 01 00 44 00 01 05 00 00 07 05 6F
+
+
+
+
+
+
+speech.axx
+$1363 to pippen
+ .word	0100DH,60,1364	;RODMAN,      dennis
+$1367 to rodman
+
+Pointers to sound data: ex 0x34C778  (0x10000 per rom) = U2 = 0x00.... U3=0x10.... U4=0x20.... U5=0x30....
+
+My order:
+; Raiden in white & black
+; Jordan, like Pippen but +1 dunk, in chicago uniform
+; Shaq, with some random stats.
+; Scorpion (stats from TE) (black suit/ yellow trim)
+; Sub Zero (stats from TE, he's -1 slower than other ninjas it seems.) 
+; Reptile (stats from TE)
+
+
+
+Space in the hangtime: 
+FEE0D - FFFFF free in U2 = (raiden FEE0D - FF547 = OK) (rept: FF547) (raiden+reptile are here.)
+FEEDE - FFFFF free in U3 = (subzero FEEDE = OK) (subz is here.)
+FF334 - FFFFF free in U4 = (scorp is here) =2ff334
+FF064 - FFFFF free in U5 =
+
+
+How big is our super dunk speech sample in rom U5? -> (00AE 4C778 - (00CC 4D5C2?) (0xe4a free)
+
+For 'MK2' test rom..
+
+0x4040 
+0x4048
+
+ARC3        0x00C518 offset,2484 bytes,66 frames (in U2)
+
+xx indicates missing data in ROM/CMP or vice versa.
+U2 ROM @0x00C518: 
+00 42 98 18 98 18 14 14 14 14 14 FF FF FF FF FF FF xx xx 50 55 0A A8 AA 8A 8A 8A 1A E9
+=66fr                                              unknwn   - swapped data here. -
+
+FILE ARC3.CMP # 0x0
+00 EB 00 00 12 7A F0 00 E0 3D 00 00 D1 04 00 00 (assumed cmp file header)
+XX XX 98 18 98 18 14 14 14 14 14 FF FF FF FF FF FF 1A 00 55 50 A8 0A 8A AA 8A 8A E9 1A
+
+END OF FILE
+xxxx: 71 1F DB 03 30 FF 71 7F D4 DD 2F 01 B0 E0 FF 00 00
+IN ROM
+CEC0:    71 F1 DB 1F F1 FF D4 7F 2F DD FF
+
+- Frames can be noted down from HENRY output.
+
+ATTRCT2A    0x00CECC offset,21710 bytes,522 frames (in U2)
+
+U2 ROM @0x00CECC:
+02 0a 92 92 8E 0e 0e 0e 0e 0e 0e 4e 4e ff ff ff ff ff       50 4a 82 15 04 a8 54 2a 2a aa aa a9 12 48
+522fr
+
+FILE: 0x10
+xx xx 92 92 8e 0e 0e 0e 0e 0e 0e 4e 4e ff ff ff ff ff 23 00 4a 50 15 82 a8 04 2a 54 aa 2a a9 aa 48 12
+
+So, take .CMP. Strip 0x10. Swap data 0x22+
+RAIDEN.CMP
+RAIDEN      0x1BBBFE      1850       116 frames, in U3
+RAIDKILL    0x1BC338      9944       142 (follows raiden..)
+
+Cheat, and take the data from MK2 U roms
+RAIDEN.DAT into U5: 0x4C778
+
+Or, edit the sound pointer and leave the superdnk speech in there.
+or, add a sound pointer, and increase sound tbl ?
+0x4040 "004048" 0x4048 "0063CE" 0x4048 + (3x 0x63CE)= 16BB2 (this needs to increase?)
+
+0xE6CA = 01 05 00 00 07 05 6F 00 00 01 05 *34 C7 78* 01 *00 AF* 00 01 05 6F 00 
+Pointer to sound header: 0x34C778  (0x10000 per rom) = U3=0x10.... U4=0x20.... U5=0x30....
+U5: 0x4C778 = 00 AE 9D 9D 9D 19 19 59 (0xAE not matching 0xAF frames..)
+
+===============
+Short version
+===============
+Open hangtime U2 in a hexeditor. Look at 
+4048 + (3x 0b4e) = 6232  (0b4e is the highest sound i found in source/speech.asm etc.)
+
+u2 0x6232 = 00 f6 62 00 f6 86 00 f6 98 ffffffff..This is the end of the sound call table pointers.
+
+It means there are three sound headers at:
+00 f6 62 
+00 f6 86 
+00 f6 98
+
+This is a sound header:
+
+01 05 00 00 07 05 6F 00 00 01 [05 34 C7 78] 01 00 [AF] 00  (Block 1 is the location, block 2 is no. of frames.)
+
+Find a free spot in U2 rom, i choose 003a00 and 003a20 for ease of use.
+Put the sound header as shown above there, and point to your .DAT file. I extracted them from MK2 U roms.
+Edit block 1 [05 34 c7 78] to point to your extracted .dat and block 2 for the number of frames.
+You can see the mk2 source for a sound call, follow the tables & pointers for it to extract it.
+
+Jordan:
+- 31500Kh raw mono export audacity
+Stuffed into mk2 temp.. rom
+JORDAN      0x14C0B6      2886        91    0:00.699  33.036   HENRY[4.50] -vb47 -vi7 -vt3  (U3)
+KOTOB       0x14CBFC      1666        49
+ 
+Todo: Find the 'to' calls, full name.
+Todo: Hoopsie!
+Todo Kitzrow stuff:
+https://www.youtube.com/watch?v=k4236wva0oI
+
