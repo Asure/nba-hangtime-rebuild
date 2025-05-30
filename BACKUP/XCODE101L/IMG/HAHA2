@@ -15,14 +15,14 @@ SET new IRAM address = 2000000 bank 0
 SET new IRAM address = 7000000 bank 1
 
 Bytes Loaded...
-	IMAGE RAM                35722 dec	    8B8A hex
+	IMAGE RAM                54586 dec	    D53A hex
 
-	TOTAL LOAD               35722 dec	    8B8A hex
+	TOTAL LOAD               54586 dec	    D53A hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records        35722 dec	    8B8A hex
+	In IMAGE RAM records        54586 dec	    D53A hex
 
-	TOTAL bytes written         35722 dec	    8B8A hex, in 2 records.
+	TOTAL bytes written         54586 dec	    D53A hex, in 2 records.
 
-Bytes Represented in Tables ... 35722 dec 8B8A hex
+Bytes Represented in Tables ... 54586 dec D53A hex
 

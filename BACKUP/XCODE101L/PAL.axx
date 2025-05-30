@@ -73,6 +73,8 @@
 	.def	MAG_P
 	.def	BIRD_P
 	.def	ARNOLD_P
+	.def	TERM_P
+
 ;AMM end
 
 

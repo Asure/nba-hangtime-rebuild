@@ -231,59 +231,72 @@ Track $07C3 channel 5 {		// call free
     Wait(Stream);         
 };
 // Magic
-Track $0bc1 channel 5 {		// call free
+Track $0402 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
     Play(Magic);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // Magic Johnson
-Track $0404 channel 5 {		// call free
+Track $0403 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
     Play(Magic_Johnson);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // To Magic
-Track $07C4 channel 5 {		// call free
+Track $0404 channel 5 {		// call free
     SetMixingLevel(level 111);
     Play(stream $1CC03A);
     Wait(15) Play(Magic);
     Wait(Stream);         
 };
 // Bird
-Track $0402 channel 5 {		// call free
+Track $0405 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
     Play(Bird);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // Larry Bird
-Track $0403 channel 5 {		// call free
+Track $0406 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
     Play(Larry_Bird);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // To Bird
-Track $0405 channel 5 {		// call free
+Track $0407 channel 5 {		// call free
     SetMixingLevel(level 111);
     Play(stream $1CC03A);
     Wait(27) Play(Bird);
     Wait(Stream);         
 };	
 // Arnold
-Track $0406 channel 5 {		// call free
+Track $0408 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
     Play(Arnold);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // Arnold Schwarzenegger 
-Track $0407 channel 5 {		// call free
+Track $0409 channel 5 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
     Play(Arnold_Schwarzenegger);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
 // To Arnold
-Track $0408 channel 5 {		// call free
+Track $040A channel 5 {		// call free
     SetMixingLevel(level 111);
     Play(stream $1CC03A);
     Wait(27) Play(Arnold);
+    Wait(Stream);         
+};
+// Terminator
+Track $040B channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Terminator);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Terminator
+Track $040C channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(27) Play(Terminator);
     Wait(Stream);         
 };

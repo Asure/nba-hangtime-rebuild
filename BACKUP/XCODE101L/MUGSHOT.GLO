@@ -469,3 +469,5 @@
 	.global	BRD_MUG
 	.globl	ARN_MUGP
 	.global	ARN_MUG
+	.globl	TRM_MUGP
+	.global	TRM_MUG

@@ -102,3 +102,10 @@
 	.global	ARNOLD04
 	.global	ARNOLD05
 	.global	ARNOLD16
+	.globl	TERM_P
+	.global	TERM01
+	.global	TERM02
+	.global	TERM03
+	.global	TERM04
+	.global	TERM05
+	.global	TERM16

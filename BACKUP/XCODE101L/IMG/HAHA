@@ -29,6 +29,12 @@ Image JORDAN13 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN14 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
+Image TERM01 has 69 colors. Can't fit into 6 bits per pixel.
+Image TERM02 has 69 colors. Can't fit into 6 bits per pixel.
+Image TERM03 has 69 colors. Can't fit into 6 bits per pixel.
+Image TERM04 has 69 colors. Can't fit into 6 bits per pixel.
+Image TERM05 has 69 colors. Can't fit into 6 bits per pixel.
+Image TERM16 has 69 colors. Can't fit into 6 bits per pixel.
 Image JOR_MUG has 68 colors. Can't fit into 1 bits per pixel.
 Image ONE_LAL has 68 colors. Can't fit into 1 bits per pixel.
 Image KOB_MUG has 68 colors. Can't fit into 1 bits per pixel.
@@ -36,6 +42,7 @@ Image BARK_MUG has 60 colors. Can't fit into 1 bits per pixel.
 Image MAG_MUG has 73 colors. Can't fit into 1 bits per pixel.
 Image BRD_MUG has 55 colors. Can't fit into 1 bits per pixel.
 Image ARN_MUG has 70 colors. Can't fit into 1 bits per pixel.
+Image TRM_MUG has 70 colors. Can't fit into 1 bits per pixel.
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -47,16 +54,16 @@ Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               423514 dec	   6765A hex
+	IMAGE RAM               685878 dec	   A7736 hex
 
-	TOTAL LOAD              423514 dec	   6765A hex
+	TOTAL LOAD              685878 dec	   A7736 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       423514 dec	   6765A hex
+	In IMAGE RAM records       685878 dec	   A7736 hex
 
-	TOTAL bytes written        423514 dec	   6765A hex, in 2 records.
+	TOTAL bytes written        685878 dec	   A7736 hex, in 2 records.
 
-Bytes Represented in Tables ... 423514 dec 6765A hex
+Bytes Represented in Tables ... 685877 dec A7735 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.

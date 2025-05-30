@@ -230,6 +230,7 @@
 	.def	Magic_h
 	.def	Bird_h
 	.def	Arnold_h
+	.def	Term_h
 	.text
 
 ;; MARKER
@@ -270,6 +271,9 @@ Bird_h
 	
 Arnold_h
 	HDMAC2	ARNOLD01
+
+Term_h
+	HDMAC2	TERM01
 
 heithb_h
 	HDMAC2	HEITH01

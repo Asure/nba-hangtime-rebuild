@@ -2842,8 +2842,8 @@ zpsjteam_data1
 	.word	M_,U_,R_,R_,A_,Y_
 	.word	ZER,ZER,ZER,ZER 	;MURRAY,      tracy
 
-	.word	B_,E_,N_,O_,I_,T_
-	.word	ZER,ZER,ZER,ZER 	;BENOIT,      david
+;	.word	B_,E_,N_,O_,I_,T_
+;	.word	ZER,ZER,ZER,ZER 	;BENOIT,      david
 
 ;	.word	B_,S_,C_,O_,T_,T_
 ;	.word	ZER,ZER,ZER,ZER 	;SCOTT,       byron
@@ -2879,6 +2879,9 @@ zpsjteam_data1
 	
 	.word	A_,R_,N_,O_,L_,D_
 	.word	ZER,SEV,THR,ZER 	;Arnold
+	
+	.word	T_,E_,R_,M_,0,0
+	.word	ZER,EIG,ZER,ZER 	;Terminator
 	
 zpsjteam_data1_end
 
@@ -2977,7 +2980,7 @@ zpsjteam_snds
  .word	0100DH,61,1952	;ROBERTSON,   alvin
  .word	0100DH,67,1812	;MILLER,      oliver
  .word	0100DH,53,1816	;MURRAY,      tracy
- .word	0100DH,69,1832	;BENOIT,      david
+; .word	0100DH,69,1832	;BENOIT,      david
 ;.word	0100DH,60,1958	;SCOTT,       byron
 ;.word	0100DH,63,1856	;MURDOCK,     eric
 
@@ -2989,9 +2992,11 @@ zpsjteam_snds
  .word	0100DH,95,0b51h ;Reptile
  .word	0100DH,95,0b54h ;Smoke
  .word	0100DH,95,0bb8h ;Jordan
- .word	0100DH,95,0404h ;Magic
- .word	0100DH,95,0403h ;Bird
- .word	0100DH,95,0407h ;Arnold
+ .word	0100DH,95,0403h ;Magic
+ .word	0100DH,95,0406h ;Bird
+ .word	0100DH,95,0409h ;Arnold
+ .word	0100DH,95,040bh ;Terminator
+
 
 ;DJT End
 ******************************************************************************
@@ -6083,7 +6088,7 @@ our_names
 	.long	ROBERTSON
 	.long	OMILLER
 	.long	TMURRAY
-	.long	BENOIT
+;	.long	BENOIT
 ;	.long	SCOTT
 ;	.long	EMURDOCK
 
@@ -6098,6 +6103,7 @@ our_names
 	.long	JOHNSON_M
 	.long	BIRD
 	.long	ARNOLD
+	.long	TERMINATOR
 ;DJT End
 
 
@@ -6196,7 +6202,7 @@ our_heads
 	.long	ROB_TOR
 	.long	MIL_TOR
 	.long	MUR_TOR
-	.long	BEN_UTA
+;	.long	BEN_UTA
 ;	.long	SCO_VAN
 ;	.long	MUR_VAN
 
@@ -6211,6 +6217,7 @@ our_heads
 	.long	MAG_MUG		; magic mug
 	.long	BRD_MUG		; bird mug
 	.long	ARN_MUG		; arnold mug
+	.long	TRM_MUG		; terminator mug
 
 our_heads_end
 	.long	SAL_MUG		;0		;repeat 1st 2 for wrap around

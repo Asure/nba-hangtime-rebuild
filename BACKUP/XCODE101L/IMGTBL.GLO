@@ -13,8 +13,9 @@
 	.global BARKLEY
 	.global	JOHNSON_M
 	.global	BIRD
-	.global TERMINATOR
 	.global	ARNOLD
+	.global TERMINATOR
+
 ;
 	.globl	DIAGP
 	.globl	crtwrk_p

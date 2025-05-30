@@ -459,5 +459,35 @@ ARNOLD16:
 	.long   084a7614H
 	.word   06000H
 	.long   ARNOLD_P
+TERM01:
+	.word   28,37,14,34
+	.long   084a8e20H
+	.word   00H
+	.long   TERM_P
+TERM02:
+	.word   28,34,13,32
+	.long   084aae80H
+	.word   00H
+	.long   TERM_P
+TERM03:
+	.word   33,40,12,35
+	.long   084acc40H
+	.word   00H
+	.long   TERM_P
+TERM04:
+	.word   29,37,10,34
+	.long   084af580H
+	.word   00H
+	.long   TERM_P
+TERM05:
+	.word   27,43,13,40
+	.long   084b1708H
+	.word   00H
+	.long   TERM_P
+TERM16:
+	.word   35,29,31,19
+	.long   084b3b50H
+	.word   00H
+	.long   TERM_P
 	.TEXT
 
