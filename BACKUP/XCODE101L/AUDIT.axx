@@ -3072,7 +3072,8 @@ FACTORY_TABLE
 	.WORD	1	;ADJBABY	43	;Baby sized players
 	.WORD	1	;ADJHUGE	44	;Huge Head Mode (Funko pop style)
 	.WORD	1	;ADJHSPOT	45	;Show Hotspot
-	;LAST_ADJUST	equ	44
+	.WORD	1	;ADJPROFA	46	;Profanity
+	;LAST_ADJUST	equ	46
 
 
 **
