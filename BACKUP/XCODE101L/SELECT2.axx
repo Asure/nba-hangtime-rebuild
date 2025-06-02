@@ -3211,33 +3211,33 @@ _WAS	.equ	28
 
 team_orders
 	.word	_VAN	;27	29
-	.word	_PHI	;19	28
-	.word	_TOR	;25	27
-	.word	_MIL	;14	26
-	.word	_DAL	;5	25
-	.word	_MIN	;15	24
-	.word	_LAC	;11	23
-	.word	_NJ	;16	22
 	.word	_BOS	;1	21
 	.word	_DEN	;6	20
+	.word	_PHI	;19	28
+	.word	_DAL	;5	25
+	.word	_NJ		;16	22
 	.word	_GOL	;8	19
+	.word	_TOR	;25	27
+	.word	_MIL	;14	26
 	.word	_SAC	;22	18
-	.word	_WAS	;28	17
-	.word	_CHA	;2	16
-	.word	_PHX	;20	15
-	.word	_MI	;13	14
-	.word	_POR	;21	13
-	.word	_DET	;7	12
-	.word	_ATL	;0	11
-	.word	_CLE	;4	10
-	.word	_NY	;17	9
-	.word	_HOU	;9	8
+	.word	_LAC	;11	23
 	.word	_IND	;10	7
-	.word	_LAL	;12	6
-	.word	_UTA	;26	5
-	.word	_SAN	;23	4
+	.word	_MIN	;15	24
+	.word	_PHX	;20	15
+	.word	_CLE	;4	10
+	.word	_WAS	;28	17
 	.word	_ORL	;18	3
+	.word	_POR	;21	13
+	.word	_CHA	;2	16
+	.word	_DET	;7	12
+	.word	_LAL	;12	6
+	.word	_ATL	;0	11
+	.word	_NY		;17	9
+	.word	_SAN	;23	4
 	.word	_SEA	;24	2
+	.word	_MI		;13	14
+	.word	_HOU	;9	8
+	.word	_UTA	;26	5
 	.word	_CHI	;3	1
 	.word	-1
 ;DJT End
