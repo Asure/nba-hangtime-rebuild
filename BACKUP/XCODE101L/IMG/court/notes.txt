@@ -1,2 +1,3 @@
 See doc\court.txt for more details.
 Outdoor.png is for reference, the original 1762x144 outside court, with original color map.
+Should be an 8BPP image!
