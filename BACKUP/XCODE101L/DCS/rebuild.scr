@@ -300,3 +300,9 @@ Track $040C channel 5 {		// call free
     Wait(27) Play(Terminator);
     Wait(Stream);         
 };
+// mk3 easter egg
+Track $040D channel 4 {		// call free
+    SetMixingLevel(level 100);   // always set the mixing level for a new track
+    Play("mk3.mp3");       	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};

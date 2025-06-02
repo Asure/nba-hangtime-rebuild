@@ -60,7 +60,7 @@
 	.def	organ_fx1_sc,organ_fx2_sc
 	.def	crwd_blchrs_sc,crwd_goteam_sc,crwd_defnse_sc
 ;AMM For MK1 easter egg.
-	.def	mk1_snd
+	.def	mk1_snd,mk3_snd
 
 ;--------------------
 ; Constants
@@ -373,6 +373,7 @@ ex	.set	08000H			; flag: extended sound call !!
  SX	tarzan,      01603H,70, 0123H
  SX	shatter_snd, 0140DH,76, 07bdH
  SX	mk1_snd,     0140DH,76, 0b55H		;A wild Shang appears!
+ SX	mk3_snd,     0140DH,76, 040DH		;A wild Forden appears!
 ;
 ;tunes
 ;

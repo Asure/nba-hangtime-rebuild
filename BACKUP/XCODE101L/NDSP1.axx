@@ -2178,6 +2178,11 @@ GANISAG
 	rets
 
 
+********************************
+* Begin an object
+* A0=XVAL, A1=YVAL, A2=*IMG, A3=ZPOS, A4=FLAGS, A5=OID, A6=XVEL, A7=YVEL
+* 0A8H=*Obj
+* Trashes scratch
 
 BEGINOBJ
 	move	@WORLDTLX,a8,L		;Adjust for world coord

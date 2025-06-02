@@ -1,2 +1,4 @@
 	.globl	DCLIQU3
 	.global	dcslogo
+	.globl	TOASTYP
+	.global	TOASTY

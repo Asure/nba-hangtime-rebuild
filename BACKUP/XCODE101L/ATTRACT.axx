@@ -42,6 +42,7 @@
 
 	.def	COLTAB
 	.def	creditscreen
+	.def	peeker
 
 	.ref	tuneend_snd,bounce_snd
 	.ref	tuneq1_snd,tuneq2_snd,tuneq3_snd,tuneq4_snd
@@ -700,8 +701,64 @@ show_dcslogo
 
 	SLEEP	1*TSEC
 
+	CREATE0	peeker
+
+	SLEEP	5*TSEC
+
+	CREATE0	peeker
+
+	SLEEP	5*TSEC
+
+	CREATE0	peeker
+
+	SLEEP	5*TSEC
+
 	movi	6*TSEC,a10
 	jruc	niuclp			;!! We recycle code from the show_title here ;)
+
+ SUBRP peeker
+;Screen viewport is 400x254 visible. (World is the entire court.)
+;Forden is 97x100 64 colors
+;We start the obj @ 456, so it's offscreen for sure.
+* BEGINOBJ2 notes:
+* Begin an object
+* A0=XVAL, A1=YVAL, A2=*IMG, A3=ZPOS, A4=FLAGS, A5=OID, A6=XVEL, A7=YVEL
+* 0A8H=*Obj
+
+	movi	[01C8h,0],a0			; X pos we start the OBJ at 344 (0=top) 1C8 (1F4 is too far)
+	movi	[00a0h,0],a1			; Y pos we start the OBJ at 160
+	movi	TOASTY,a2			;* image
+	movi	5001,a3				; Z position (priority) (from tvpanel 5000)
+	movi	DMAWNZ|M_NOCOLL|M_SCRNREL,a4	; Screen-relative, i.e. XYZ in viewport, not world scroller.
+	movi	CLSDEAD,a5			; Object ID (dead object, no coll etc.)
+	clr	a6				; A6 X Velocity
+	clr	a7				; A7 Y Velocity
+	calla	BEGINOBJ2			; Display it! (returns with A8 filled with object pointer.)
+
+	movi	-080000H,a11			; Negative value, object moves left
+	move	a11,*a8(OXVEL),L		; assign velocity to object
+	movk	6,a10
+ford3	sleep	1
+	dsj	a10,ford3			; decrease a10 until its zero
+
+	clr	a1				; no velocity
+	move	a1,*a8(OXVEL),L 		; in the "x" direction (and design)
+      	clr	a0
+	move	a0,@SOUNDSUP			;turn all sounds on
+	.ref	mk3_snd
+	SOUND1	mk3_snd				;make a sound
+
+	sleep	040H				;Sleep was 020h
+	neg	a11				;invert the negative value we had before
+	move	a11,*a8(OXVEL),L		;put it back into object's ID to slide off screen.
+
+	movi	010H,a10
+ford5	sleep	1
+	dsj	a10,ford5
+
+;	move	a8,a0
+	calla	DELOBJA8			;We were still holding obj in *A8 so now it's deleted.
+	die                                     ;This proc now dies.
 
 	.endif
 

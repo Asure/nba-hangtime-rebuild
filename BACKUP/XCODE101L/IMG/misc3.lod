@@ -51,11 +51,13 @@ PON>
 MKSTREET.IMG
 ---> FALL2_vda
 PON>
-;Unused art from DCSLOGO
+;Unused art from DCSLOGO and Forden pic
 ..\..\ART100\DCSLOGO.IMG
 ASM> dcs.tbl
 GLO> dcs.glo
 ---> dcslogo
+mkstreet.img
+---> TOASTY
 ;Raiden lightning
 RAIDEN.IMG
 ASM> lighten.tbl

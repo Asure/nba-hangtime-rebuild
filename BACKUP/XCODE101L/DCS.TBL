@@ -4,5 +4,10 @@ dcslogo:
 	.long   083e8f4dH
 	.word   05380H
 	.long   DCLIQU3
+TOASTY:
+	.word   98,101,103,0
+	.long   083fd2c9H
+	.word   06980H
+	.long   TOASTYP
 	.TEXT
 
