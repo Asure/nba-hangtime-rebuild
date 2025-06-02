@@ -5451,7 +5451,7 @@ player_attribs
 	.word  05,10,07,09	;HAKEEM OLAJUWON	7'0"	255 reg
 
 	.word  07,08,06,08
-	.word  04,06,06,08	;CHARLES BARKLEY
+	.word  04,07,06,08	;CHARLES BARKLEY
 
 	.word  08,03,07,07
 	.word  08,03,08,08	;CLYDE DREXLER		6'7"	222 thin
