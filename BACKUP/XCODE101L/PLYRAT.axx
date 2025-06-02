@@ -2459,15 +2459,15 @@ spechds_t
    .long    SW_SANS_P,SW_SANS_P,VP_SANS_P,VP_SANS_P
 	
 ; Arnold
-	LWWWWWW	scale62f_t,BV8,SHT10,DNK6,DEF6,SDEF8,DSKL5
+	LWWWWWW	scale62f_t,BV5,SHT6,DNK10,DEF10,SDEF4,DSKL5
 	.long	NFL55_p,UN_BOSS_P,UN_BOSS_P,TR_SANS_P,TR_SANS_P,Arnold_h
-	.word	9,7,10,8
+	.word	5,10,10,10
 	.long	SW_PORS_P,SW_PORS_P,VP_PORS_P,VP_PORS_P	
 
 ; Terminator
-	LWWWWWW	scale77ef_t,BV8,SHT11,DNK10,DEF8,SDEF6,DSKL_5	;Can shatter
+	LWWWWWW	scale77ef_t,BV5,SHT6,DNK10,DEF10,SDEF4,DSKL5	;Can shatter
 	.long	NFL55_p, UN_BOSS_P,UN_BOSS_P,TR_SANS_P,TR_SANS_P,Term_h
-	.word	2,3,8,17
+	.word	5,10,10,10
 	.long	SW_PORS_P,SW_PORS_P,VP_PORS_P,VP_PORS_P
 	
 ;These are superstar players (Or leftover art) that can be picked with name
