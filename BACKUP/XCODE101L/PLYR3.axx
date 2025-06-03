@@ -3895,8 +3895,8 @@ yglxinpos
 
 	SOUND1	ohmy
 
-	.ref	peeker			;head shows up!
-	CREATE0 peeker
+	.ref	peeker2			;In attract.axx
+	CREATE0 peeker2
 
 	CREATE0	board_glssnd		;fix the sound later.
 

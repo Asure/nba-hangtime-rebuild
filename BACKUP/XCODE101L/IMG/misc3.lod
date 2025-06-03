@@ -57,7 +57,7 @@ ASM> dcs.tbl
 GLO> dcs.glo
 ---> dcslogo
 mkstreet.img
----> TOASTY
+---> TOASTY,KITZ
 ;Raiden lightning
 RAIDEN.IMG
 ASM> lighten.tbl

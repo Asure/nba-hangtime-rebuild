@@ -1,4 +1,6 @@
 	.globl	DCLIQU3
 	.global	dcslogo
-	.globl	TOASTYP
+	.globl	TOASTYPAL
 	.global	TOASTY
+	.globl	KITZPAL
+	.global	KITZ

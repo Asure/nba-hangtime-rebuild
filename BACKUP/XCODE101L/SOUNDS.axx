@@ -371,9 +371,10 @@ ex	.set	08000H			; flag: extended sound call !!
  SX	jet2_snd,    01603H,80, 0128H
  SX	jet3_snd,    01603H,80, 0126H
  SX	tarzan,      01603H,70, 0123H
- SX	shatter_snd, 0140DH,76, 07bdH
- SX	mk1_snd,     0140DH,76, 0b55H		;A wild Shang appears!
- SX	mk3_snd,     0140DH,76, 040DH		;A wild Forden appears!
+;AMM Start
+ SX	shatter_snd, 01402H,76, 07bdH	;Breaking glass		Chan 2
+ SX	mk1_snd,     01403H,76, 0b55H	;A wild Shang appears!  Chan 3
+ SX	mk3_snd,     01404H,76, 040DH	;A wild Forden appears! Chan 4
 ;
 ;tunes
 ;

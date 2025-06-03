@@ -8,6 +8,11 @@ TOASTY:
 	.word   98,101,103,0
 	.long   083fd2c9H
 	.word   06980H
-	.long   TOASTYP
+	.long   TOASTYPAL
+KITZ:
+	.word   101,101,103,0
+	.long   084086cdH
+	.word   07b80H
+	.long   KITZPAL
 	.TEXT
 
