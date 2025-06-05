@@ -1087,27 +1087,27 @@ MILW_t
 
 MINN_t
 	LWWWWWW	scale611t_t,BV7,SHT6,DNK8,DEF8,SDEF5,DSKL5
-	.long	GARNET_F, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,Garnett_h
+	.long	GARNET_F, UN_MINP_P,UN_MINS_P, TR_SANS_P,TR_SANS_P,Garnett_h
 	.word	4,5,6,15
-	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P
+	.long	SW_SANP_P,SW_MINS_P,VP_MINS_P,VP_MINP_P
 	LWWWWWW	scale610_t,BV7,SHT7,DNK6,DEF6,SDEF6,DSKL5
-	.long	gug_f, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,Gug_h
+	.long	gug_f, UN_MINP_P,UN_MINS_P, TR_SANS_P,TR_SANS_P,Gug_h
 	.word	6,5,5,5
-	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P
+	.long	SW_SANP_P,SW_MINS_P,VP_MINS_P,VP_MINP_P
 	LWWWWWW	scale62t_t,BV8,SHT6,DNK4,DEF2,SDEF6,DSKL5
-	.long	MARBRY_F, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,marbry_h
+	.long	MARBRY_F, UN_MINP_P,UN_MINS_P, TR_SANS_P,TR_SANS_P,marbry_h
 	.word	7,3,5,1
-	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P
+	.long	SW_SANP_P,SW_MINS_P,VP_MINS_P,VP_MINP_P
 ;kill
 	LWWWWWW	scale57_t,BV10,SHT5,DNK9,DEF0,SDEF7,DSKL5
-	.long	Webb_f, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,Webb_h
+	.long	Webb_f, UN_MINP_P,UN_MINS_P, TR_SANS_P,TR_SANS_P,Webb_h
 	.word	6,0,5,2
-	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P
+	.long	SW_SANP_P,SW_MINS_P,VP_MINS_P,VP_MINP_P
 ;kill
 	LWWWWWW	scale57_t,BV10,SHT5,DNK9,DEF0,SDEF7,DSKL5
-	.long	Webb_f, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,Webb_h
+	.long	Webb_f, UN_MINP_P,UN_MINS_P, TR_SANS_P,TR_SANS_P,Webb_h
 	.word	6,0,5,2
-	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P
+	.long	SW_SANP_P,SW_MINS_P,VP_MINS_P,VP_MINP_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
@@ -2331,9 +2331,9 @@ spechds_t
 	.long	SW_MILP_P,SW_MILS_P,VP_MILP_P,VP_MILS_P		;S. DOUGLAS
 
 	LWWWWWW	scale57_t,BV10,SHT5,DNK9,DEF0,SDEF7,DSKL_8
-	.long	Webb_f, UN_MINP_P,UN_MINS_P, TR_MINP_P,TR_MINS_P,Webb_h
+	.long	Webb_f, UN_MINP_P,UN_MINS_P, TR_SANS_P,TR_SANS_P,Webb_h
 	.word	6,0,5,9
-	.long	SW_MINP_P,SW_MINS_P,VP_MINP_P,VP_MINS_P		;S. WEBB
+	.long	SW_SANP_P,SW_MINS_P,VP_MINS_P,VP_MINP_P		;S. WEBB
 
 	LWWWWWW	scale69f_t,BV6,SHT7,DNK6,DEF6,SDEF7,DSKL0
 	.long	GILLIA_F, UN_NEJP_P,UN_NEJS_P, TR_NEJP_P,TR_NEJS_P,Gilliam_h
