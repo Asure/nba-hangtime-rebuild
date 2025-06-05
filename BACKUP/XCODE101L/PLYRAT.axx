@@ -1391,26 +1391,26 @@ TORONTO_t
 
 UTAH_t
 	LWWWWWW	scale69ef_t,BV7,SHT7,DNK9,DEF6,SDEF6,DSKL5
-	.long	kmalone_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,KMalone_h
+	.long	kmalone_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,KMalone_h
 	.word	6,10,7,5
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
+	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P
 	LWWWWWW	scale61_t,BV8,SHT8,DNK1,DEF1,SDEF10,DSKL5
-	.long	stock_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Stockton_h
+	.long	stock_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,Stockton_h
 	.word	10,2,9,12
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
+	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P
 	LWWWWWW	scale64_t,BV7,SHT8,DNK2,DEF2,SDEF7,DSKL5
-	.long	Horna_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Hornacek_h
+	.long	Horna_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,Hornacek_h
 	.word	6,3,6,16
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
+	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P
 	LWWWWWW	scale68_t,BV5,SHT5,DNK6,DEF6,SDEF5,DSKL5
-	.long	MORRIS_F, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Morris_h
+	.long	MORRIS_F, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,Morris_h
 	.word	4,6,3,0
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
+	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P
 ;kill
 	LWWWWWW	scale68_t,BV6,SHT5,DNK6,DEF5,SDEF5,DSKL5
-	.long	BENOIT_F, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Benoit_h
+	.long	BENOIT_F, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,Benoit_h
 	.word	5,5,4,3
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P
+	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
@@ -2280,9 +2280,9 @@ spechds_t
 	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P		;KEMP
 
 	LWWWWWW	scale69ef_t,BV7,SHT8,DNK8,DEF5,SDEF8,DSKL4
-	.long	kmalone_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,KMalone_h
+	.long	kmalone_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,KMalone_h
 	.word	6,10,7,5
-	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P		;K. MALONE
+	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P		;K. MALONE
 
 	LWWWWWW	scale610f_t,BV8,SHT8,DNK8,DEF4,SDEF6,DSKL_4
 	.long	WEBBER_F, UN_WASP_P,UN_WASS_P, TR_WASP_P,TR_WASS_P,Webber_h
@@ -2391,9 +2391,9 @@ spechds_t
 	.long	SW_MIAP_P,SW_MIAS_P,VP_SANS_P,VP_MILS_P		;T. MURRAY
 
 ;	LWWWWWW	scale68_t,BV6,SHT5,DNK6,DEF5,SDEF5,DSKL4
-;	.long	BENOIT_F, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,Benoit_h
+;	.long	BENOIT_F, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_LALS_P,Benoit_h
 ;	.word	5,5,4,12
-;	.long	SW_UTAP_P,SW_UTAS_P,VP_UTAP_P,VP_UTAS_P		;D. BENOIT
+;	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P		;D. BENOIT
 
 ;	LWWWWWW	scale64f_t,BV7,SHT8,DNK1,DEF3,SDEF4,DSKL0
 ;	.long	Scott_f, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Scott_h
