@@ -1419,27 +1419,27 @@ UTAH_t
 
 VANCOU_t
 	LWWWWWW	scale70ef_t,BV3,SHT3,DNK6,DEF8,SDEF2,DSKL5
-	.long	BREEV_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Breeves_h
+	.long	BREEV_F, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,Breeves_h
 	.word	2,8,2,11
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P
+	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P
 	LWWWWWW	scale61_t,BV8,SHT5,DNK1,DEF2,SDEF7,DSKL5
-	.long	ANTHON_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Anthony_h
+	.long	ANTHON_F, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,Anthony_h
 	.word	7,3,6,18
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P
+	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P
 	LWWWWWW	scale64_t,BV6,SHT4,DNK4,DEF4,SDEF4,DSKL5
-	.long	BEdwrd_f, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,BEdwrds_h
+	.long	BEdwrd_f, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,BEdwrds_h
 	.word	3,3,7,0
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P
+	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P
 ;kill
 	LWWWWWW	scale64f_t,BV7,SHT8,DNK1,DEF3,SDEF4,DSKL5
-	.long	Scott_f, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Scott_h
+	.long	Scott_f, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,Scott_h
 	.word	4,4,9,2
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P
+	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P
 ;kill
 	LWWWWWW	scale61_t,BV8,SHT6,DNK1,DEF1,SDEF9,DSKL5
-	.long	EMURD_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,EMurdock_h
+	.long	EMURD_F, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,EMurdock_h
 	.word	6,2,5,4
-	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P
+	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
@@ -2396,14 +2396,14 @@ spechds_t
 ;	.long	SW_ORLS_P,SW_ORLS_P,VP_UTAP_P,VP_UTAS_P		;D. BENOIT
 
 ;	LWWWWWW	scale64f_t,BV7,SHT8,DNK1,DEF3,SDEF4,DSKL0
-;	.long	Scott_f, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,Scott_h
+;	.long	Scott_f, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,Scott_h
 ;	.word	4,4,9,7
-;	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;B. SCOTT
+;	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P		;B. SCOTT
 
 ;	LWWWWWW	scale61_t,BV8,SHT6,DNK1,DEF1,SDEF9,DSKL_2
-;	.long	EMURD_F, UN_VANP_P,UN_VANS_P, TR_VANP_P,TR_VANS_P,EMurdock_h
+;	.long	EMURD_F, UN_TORP_P,UN_VANS_P, TR_SANS_P,TR_SANS_P,EMurdock_h
 ;	.word	6,2,5,17
-;	.long	SW_VANP_P,SW_VANS_P,VP_VANP_P,VP_VANS_P		;E. MURDOCK
+;	.long	SW_SANP_P,SW_CHAS_P,VP_CHAS_P,VP_UTAS_P		;E. MURDOCK
 
 ;; MARKER
 ;; Add new player data here
