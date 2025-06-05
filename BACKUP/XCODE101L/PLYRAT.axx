@@ -1335,26 +1335,26 @@ SANANT_t
 
 SEA_t
 	LWWWWWW	scale64_t,BV10,SHT8,DNK1,DEF2,SDEF10,DSKL5
-	.long	PAYTON_F, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Payton_h
+	.long	PAYTON_F, UN_SEAP_P,UN_SEAS_P, TR_TORP_P,TR_SEAS_P,Payton_h
 	.word	8,3,9,10
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P
 	LWWWWWW	scale610_t,BV8,SHT6,DNK10,DEF8,SDEF6,DSKL5
-	.long	kemp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Kemp_h
+	.long	kemp_f, UN_SEAP_P,UN_SEAS_P, TR_TORP_P,TR_SEAS_P,Kemp_h
 	.word	4,8,8,15
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P
 	LWWWWWW	scale63_t,BV7,SHT7,DNK1,DEF2,SDEF7,DSKL5
-	.long	hawkins_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Hawkins_h
+	.long	hawkins_f, UN_SEAP_P,UN_SEAS_P, TR_TORP_P,TR_SEAS_P,Hawkins_h
 	.word	5,3,7,5
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P
 	LWWWWWW	scale610t_t,BV6,SHT7,DNK5,DEF4,SDEF6,DSKL5
-	.long	schremp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Schrempf_h
+	.long	schremp_f, UN_SEAP_P,UN_SEAS_P, TR_TORP_P,TR_SEAS_P,Schrempf_h
 	.word	5,6,6,2
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P
 ;kill
 	LWWWWWW	scale67t_t,BV7,SHT4,DNK4,DEF4,SDEF4,DSKL5
-	.long	FORD_F, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Sford_h
+	.long	FORD_F, UN_SEAP_P,UN_SEAS_P, TR_TORP_P,TR_SEAS_P,Sford_h
 	.word	6,3,4,1
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P
+	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
@@ -2275,9 +2275,9 @@ spechds_t
 	.long	SW_SANP_P,SW_SANS_P,VP_SANP_P,VP_SANS_P		;S. ELLIOT
 
 	LWWWWWW	scale610_t,BV8,SHT8,DNK10,DEF9,SDEF6,DSKL0
-	.long	kemp_f, UN_SEAP_P,UN_SEAS_P, TR_SEAP_P,TR_SEAS_P,Kemp_h
+	.long	kemp_f, UN_SEAP_P,UN_SEAS_P, TR_TORP_P,TR_SEAS_P,Kemp_h
 	.word	3,7,7,15
-	.long	SW_SEAP_P,SW_SEAS_P,VP_SEAP_P,VP_SEAS_P		;KEMP
+	.long	SW_SEAP_P,SW_TORP_P,VP_TORP_P,VP_SEAS_P		;KEMP
 
 	LWWWWWW	scale69ef_t,BV7,SHT8,DNK8,DEF5,SDEF8,DSKL4
 	.long	kmalone_f, UN_UTAP_P,UN_UTAS_P, TR_UTAP_P,TR_UTAS_P,KMalone_h
