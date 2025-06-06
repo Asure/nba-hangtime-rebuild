@@ -1,0 +1,60 @@
+Where are they?
+===============
+
+These are defined in plyrat*
+
+Example:
+
+;Size, speed, shot%, dunks, block defense, steals, drone skill
+;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
+;Pass ability, power, clutch, hotspot
+;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
+
+ATL_t
+	LWWWWWW	scale61_t,BV9,SHT7,DNK0,DEF1,SDEF9,DSKL5
+	.long	BLAYLO_F, UN_ATLP_P,UN_ATLS_P, TR_ATLP_P,TR_ATLS_P,Blaylock_h
+	.word	7,2,9,0
+	.long	SW_ATLP_P,SW_ATLS_P,VP_ATLP_P,VP_ATLS_P
+
+The actual PALS are stored in:
+
+UN_ATLP_P - IMGPALP.ASM / IMGTBLP.GLO
+UN_ATLS_P - IMGPALP.ASM / IMGTBLP.GLO
+TR_ATLP_P - IMGPALP.ASM / IMGTBLP.GLO
+TR_ATLS_P - IMGPALP.ASM / IMGTBLP.GLO
+
+SW_ATLP_P - IMGPALP.ASM / IMGTBLP.GLO
+SW_ATLS_P - IMGPALP.ASM / IMGTBLP.GLO
+VP_ATLP_P - IMGPALP.ASM / IMGTBLP.GLO
+VP_ATLS_P - IMGPALP.ASM / IMGTBLP.GLO
+
+How did they get there?
+=======================
+
+In IMG there is a ANEWP.IMG container, and the pals are attached to 3x2px images 
+
+The LOD used to create them looks like this:
+
+PON>
+;
+IHDR PAL:L
+;
+ASM> junkxxxx
+;
+;Flesh and uniform pals
+anewp.img
+---> NPAL1
+---> NPALW1
+---> XSPAL1,XSPAL2,XSPAL3,XSPAL4,XSPAL5,XSPAL6,XSPAL7,XSPAL8
+---> XSPAL9,XSPAL10,XSPAL11,XSPAL12,XSPAL13,XSPAL14,XSPAL15
+
+---------------
+The junkxxxx stuff was deleted, .GLO renamed to IMGTBLP.GLO and IMGTBL.ASM were
+renamed to IMGPALP.ASM.
+
+How do i make new ones?
+Using IT you can ctrl-S to export the XSPAL* images of your choice and edit the pal.
+Then import it back into a custom IMG container, and name the pal(s) in there.
+
+Easiest way to do stuff would be to cherry pick them from the TMP directory and
+put them into the IMGTBLP.ASM file.
