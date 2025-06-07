@@ -697,15 +697,15 @@ PLYRAT_TBL_SIZE	equ	ATL_tend-ATL_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 BOST_t
-	LWWWWWW	scale67ef_t,BV6,SHT7,DNK5,DEF5,SDEF7,DSKL5
+	LWWWWWW	scale67ef_t,BV7,SHT7,DNK5,DEF5,SDEF7,DSKL5
 	.long	FOX_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Fox_h
 	.word	6,5,6,2
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
 
 ;Antoine Walker
-	LWWWWWW	scale69_t,BV5,SHT4,DNK7,DEF7,SDEF4,DSKL_5
+	LWWWWWW	scale69_t,BV6,SHT6,DNK6,DEF6,SDEF5,DSKL5
 	.long	WRIGHT_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Walker_h
-	.word    4,5,4,0
+	.word	3,6,5,19
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
 
 	LWWWWWW	scale611_t,BV6,SHT4,DNK7,DEF7,SDEF4,DSKL5

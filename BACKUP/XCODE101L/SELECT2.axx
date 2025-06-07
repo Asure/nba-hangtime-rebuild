@@ -5287,11 +5287,11 @@ player_attribs
 
 ;01 BOSTON CELTICS
 
-	.word  06,05,07,05
+	.word  07,05,07,05
 	.word  07,05,06,06	;RICK FOX		6'7"	231 reg
 	
-	.word  05,05,04,07
-    .word  04,07,04,04    ;ANTOINE WALKER
+	.word  06,06,06,06
+	.word  05,06,03,05	;ANTOINE WALKER
 
 	.word  06,07,04,07
 	.word  04,07,05,04	;DINO RADJA		6'11"	225 thin 
