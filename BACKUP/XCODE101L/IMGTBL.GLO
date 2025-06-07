@@ -16,6 +16,7 @@
 	.global	ARNOLD
 	.global TERMINATOR
 	.global	WALKER
+	.global	ELLIS
 
 ;
 	.globl	DIAGP

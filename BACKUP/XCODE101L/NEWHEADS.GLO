@@ -126,3 +126,10 @@
 	.global	WALKER14
 	.global	WALKER15
 	.global	WALKER16
+	.globl	ELLIS_P
+	.global	ELLIS1
+	.global	ELLIS2
+	.global	ELLIS3
+	.global	ELLIS4
+	.global	ELLIS5
+	.global	ELLIS16

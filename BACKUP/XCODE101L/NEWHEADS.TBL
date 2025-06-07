@@ -569,5 +569,35 @@ WALKER16:
 	.long   084df0edH
 	.word   06000H
 	.long   WALKER_P
+ELLIS1:
+	.word   28,37,13,34
+	.long   084e0809H
+	.word   00H
+	.long   ELLIS_P
+ELLIS2:
+	.word   29,35,10,31
+	.long   084e2869H
+	.word   00H
+	.long   ELLIS_P
+ELLIS3:
+	.word   31,35,11,31
+	.long   084e4821H
+	.word   00H
+	.long   ELLIS_P
+ELLIS4:
+	.word   31,36,12,34
+	.long   084e6a09H
+	.word   00H
+	.long   ELLIS_P
+ELLIS5:
+	.word   25,37,12,35
+	.long   084e8ce9H
+	.word   00H
+	.long   ELLIS_P
+ELLIS16:
+	.word   35,31,28,24
+	.long   084ea9d1H
+	.word   00H
+	.long   ELLIS_P
 	.TEXT
 

@@ -75,6 +75,7 @@
 	.def	ARNOLD_P
 	.def	TERM_P
 	.def	WALKER_P
+	.def	ELLIS_P
 ;AMM end
 
 

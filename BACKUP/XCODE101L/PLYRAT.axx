@@ -307,6 +307,7 @@
 	.ref	Arnold_h
 	.ref	Term_h
 	.ref	Walker_h
+	.ref	Ellis_h
 
 ;symbols refined in this file
 
@@ -851,10 +852,10 @@ DEN_t
 	.long	MARCIU_F, UN_DENP_P,UN_DENS_P, TR_DENP_P,TR_DENS_P,Marciulonis_h
 	.word	5,2,3,1
 	.long	SW_DENP_P,SW_DENS_P,VP_DENP_P,VP_DENS_P
-;kill
-	LWWWWWW	scale67_t,BV7,SHT8,DNK2,DEF1,SDEF6,DSKL5
-	.long	DELLIS_F, UN_DENP_P,UN_DENS_P, TR_DENP_P,TR_DENS_P,DEllis_h
-	.word	5,6,8,4
+;Alphonso Ellis
+	LWWWWWW	scale67_t,BV7,SHT6,DNK7,DEF5,SDEF6,DSKL5
+	.long	BRAND_F, UN_DENP_P,UN_DENS_P, TR_DENP_P,TR_DENS_P,Ellis_h
+	.word	5,6,6,16
 	.long	SW_DENP_P,SW_DENS_P,VP_DENP_P,VP_DENS_P
 ;kill
 	LWWWWWW	scale67_t,BV7,SHT8,DNK2,DEF1,SDEF6,DSKL5

@@ -32,6 +32,7 @@ Stream Terminator "Terminator.wav";
 Stream Arnold "Arnold.wav";
 Stream Schwarzenegger "Schwarzenegger.wav";
 Stream Arnold_Schwarzenegger "Arnold_Schwarzenegger.wav";
+Steam Alphonso_Ellis "Alphonso_Ellis.wav";
 
 // last used call 07BF ?
 
@@ -305,4 +306,10 @@ Track $040D channel 4 {		// call free
     SetMixingLevel(level 100);   // always set the mixing level for a new track
     Play("mk3.mp3");       	// start an audio clip
     Wait(Stream);          	// ...and wait for it to finish before exiting
+};
+// Alphonso Ellis 
+Track $040E channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Alphonso_Ellis);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
 };

@@ -103,6 +103,8 @@ Walker.img
 ---> WALKER1,WALKER2,WALKER3,WALKER4,WALKER5,WALKER6
 ---> WALKER7,WALKER8,WALKER9,WALKER10,WALKER11,WALKER12
 ---> WALKER13,WALKER14,WALKER15,WALKER16
+Ellis.img
+---> ELLIS1,ELLIS2,ELLIS3,ELLIS4,ELLIS5,ELLIS16
 ; New mugs here
 ; Mugs go into mugshot.glo / mugshot.tbl, so copypaste output there manualy
 ; Mugs are used in select2.axx. Our mug pals should go into imgpal8.asm
@@ -139,6 +141,8 @@ Term.img
 ---> TRM_MUG
 Walker.img
 ---> WALK_MUG
+Ellis.img
+---> ELL_MUG
 ; switch back to auto pal-per-pixel setting
 PPP> 0
 ;
@@ -153,7 +157,7 @@ PON>
 CON>
 XON>
 ZOF>
----> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL,WALKER
+---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL,WALKER,ELLIS
 ---> BIRD,TERMINATOR,ARNOLD
 ..\..\ART100\pnames.img
 ---> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M

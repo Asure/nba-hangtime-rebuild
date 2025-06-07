@@ -4530,19 +4530,20 @@ player_heads
 ;06 DENVER
 	.long	ELL_DEN,MCD_DEN
 	.long	ELL_DEN,MAR_SAC
+	.long	ELL_DEN,ELL_MUG
 
 	.long	MCD_DEN,ELL_DEN
 	.long	MCD_DEN,MAR_SAC
+	.long	MCD_DEN,ELL_MUG
 
 	.long	MAR_SAC,ELL_DEN
 	.long	MAR_SAC,MCD_DEN
+	.long	MAR_SAC,ELL_MUG
+	
+	.long	ELL_MUG,ELL_DEN
+	.long	ELL_MUG,MCD_DEN
+	.long	ELL_MUG,MAR_SAC
 
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5217,7 +5218,7 @@ WALLACE	.equ	11
 	.long	BARROS,BROWN
 
 	.long	BROWN,FOX
-	.long	BROWN,WALKER
+	.long	BROWN,WALKER	
 	.long	BROWN,RADJA
 	.long	BROWN,BARROS
 
@@ -5328,19 +5329,20 @@ WALLACE	.equ	11
 ;06 DENVER
 	.long	DELLIS,MCDYESS
 	.long	DELLIS,MARCIULO
+	.long	DELLIS,ELLIS
 
 	.long	MCDYESS,DELLIS
 	.long	MCDYESS,MARCIULO
+	.long	MCDYESS,ELLIS
 
 	.long	MARCIULO,DELLIS
 	.long	MARCIULO,MCDYESS
+	.long	MARCIULO,ELLIS
 
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
+	.long	ELLIS,DELLIS
+	.long	ELLIS,MCDYESS
+	.long	ELLIS,MARCIULO
+	
 	.long	0,0
 	.long	0,0
 	.long	0,0
