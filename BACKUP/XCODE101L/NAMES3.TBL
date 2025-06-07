@@ -45,48 +45,48 @@ WALKER:
 	.word   03000H
 	.long   BAST_Y_P
 ELLIS:
-	.word   28,9,14,0
+	.word   39,9,22,0
 	.long   0853600fH
 	.word   03000H
 	.long   BAST_Y_P
 BIRD:
 	.word   24,9,12,0
-	.long   08536303H
+	.long   0853642cH
 	.word   03000H
 	.long   BAST_Y_P
 TERMINATOR:
 	.word   31,9,16,0
-	.long   0853658bH
+	.long   085366b4H
 	.word   03000H
 	.long   BAST_Y_P
 ARNOLD:
 	.word   42,9,21,0
-	.long   085368d0H
+	.long   085369f9H
 	.word   03000H
 	.long   BAST_Y_P
 BARKLEY:
 	.word   50,10,24,0
-	.long   08536d3eH
+	.long   08536e67H
 	.word   03000H
 	.long   BAST_Y_P
 PORTER:
 	.word   42,10,20,0
-	.long   0853731aH
+	.long   08537443H
 	.word   03000H
 	.long   BAST_Y_P
 MAJERLE:
 	.word   49,10,23,0
-	.long   08537806H
+	.long   0853792fH
 	.word   03000H
 	.long   BAST_Y_P
 WILKINS:
 	.word   45,10,21,0
-	.long   08537dc4H
+	.long   08537eedH
 	.word   03000H
 	.long   BAST_Y_P
 JOHNSON_M:
 	.word   49,10,23,0
-	.long   0853830aH
+	.long   08538433H
 	.word   03000H
 	.long   BAST_Y_P
 	.TEXT
