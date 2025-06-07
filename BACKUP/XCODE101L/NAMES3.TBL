@@ -40,48 +40,48 @@ ONEAL:
 	.word   03000H
 	.long   BAST_Y_P
 WALKER:
-	.word   42,9,21,0
+	.word   44,9,21,0
 	.long   0852502bH
 	.word   03000H
 	.long   BAST_Y_P
 BIRD:
 	.word   24,9,12,0
-	.long   08525499H
+	.long   085254cfH
 	.word   03000H
 	.long   BAST_Y_P
 TERMINATOR:
 	.word   31,9,16,0
-	.long   08525721H
+	.long   08525757H
 	.word   03000H
 	.long   BAST_Y_P
 ARNOLD:
 	.word   42,9,21,0
-	.long   0852502bH
+	.long   08525a9cH
 	.word   03000H
 	.long   BAST_Y_P
 BARKLEY:
 	.word   50,10,24,0
-	.long   08525a66H
+	.long   08525f0aH
 	.word   03000H
 	.long   BAST_Y_P
 PORTER:
 	.word   42,10,20,0
-	.long   08526042H
+	.long   085264e6H
 	.word   03000H
 	.long   BAST_Y_P
 MAJERLE:
 	.word   49,10,23,0
-	.long   0852652eH
+	.long   085269d2H
 	.word   03000H
 	.long   BAST_Y_P
 WILKINS:
 	.word   45,10,21,0
-	.long   08526aecH
+	.long   08526f90H
 	.word   03000H
 	.long   BAST_Y_P
 JOHNSON_M:
 	.word   49,10,23,0
-	.long   08527032H
+	.long   085274d6H
 	.word   03000H
 	.long   BAST_Y_P
 	.TEXT
