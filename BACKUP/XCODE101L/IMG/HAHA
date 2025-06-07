@@ -43,6 +43,7 @@ Image MAG_MUG has 73 colors. Can't fit into 1 bits per pixel.
 Image BRD_MUG has 55 colors. Can't fit into 1 bits per pixel.
 Image ARN_MUG has 70 colors. Can't fit into 1 bits per pixel.
 Image TRM_MUG has 70 colors. Can't fit into 1 bits per pixel.
+Image WALK_MUG has 68 colors. Can't fit into 1 bits per pixel.
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -54,19 +55,19 @@ Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               697080 dec	   AA2F8 hex
+	IMAGE RAM               710954 dec	   AD92A hex
 
-	TOTAL LOAD              697080 dec	   AA2F8 hex
+	TOTAL LOAD              710954 dec	   AD92A hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       697080 dec	   AA2F8 hex
+	In IMAGE RAM records       710954 dec	   AD92A hex
 
-	TOTAL bytes written        697080 dec	   AA2F8 hex, in 2 records.
+	TOTAL bytes written        710954 dec	   AD92A hex, in 2 records.
 
-Bytes Represented in Tables ... 697080 dec AA2F8 hex
+Bytes Represented in Tables ... 710953 dec AD929 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.
 
-Skipped 6239 duplicate bytes in 20 foreground checksum matches.
+Skipped 6381 duplicate bytes in 21 foreground checksum matches.
 

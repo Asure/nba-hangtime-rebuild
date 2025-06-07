@@ -306,6 +306,7 @@
 	.ref	Bird_h
 	.ref	Arnold_h
 	.ref	Term_h
+	.ref	Walker_h
 
 ;symbols refined in this file
 
@@ -700,24 +701,29 @@ BOST_t
 	.long	FOX_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Fox_h
 	.word	6,5,6,2
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
+
+;Antoine Walker
+	LWWWWWW	scale69_t,BV5,SHT4,DNK7,DEF7,SDEF4,DSKL_5
+	.long	WRIGHT_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Walker_h
+	.word    4,5,4,0
+	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
+
 	LWWWWWW	scale611_t,BV6,SHT4,DNK7,DEF7,SDEF4,DSKL5
 	.long	RADJA_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Radja_h
 	.word	5,7,4,7
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
+
 	LWWWWWW	scale511_t,BV8,SHT8,DNK1,DEF1,SDEF6,DSKL5
 	.long	BARROS_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Barros_h
 	.word	6,1,4,18
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
+
 	LWWWWWW	scale61_t,BV9,SHT6,DNK8,DEF1,SDEF6,DSKL5
 	.long	BROWN_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,Brown_h
 	.word	7,2,4,1
 	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
-;kill
-	LWWWWWW	scale69f_t,BV6,SHT7,DNK5,DEF7,SDEF3,DSKL5
-	.long	HAM_F, UN_BOSP_P,UN_BOSS_P, TR_BOSP_P,TR_BOSS_P,ham_h
-	.word	6,7,1,14
-	.long	SW_BOSP_P,SW_BOSS_P,VP_BOSP_P,VP_BOSS_P
 
+	
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
 ;Pass ability, power, clutch, hotspot

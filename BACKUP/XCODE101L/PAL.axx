@@ -74,7 +74,7 @@
 	.def	BIRD_P
 	.def	ARNOLD_P
 	.def	TERM_P
-
+	.def	WALKER_P
 ;AMM end
 
 

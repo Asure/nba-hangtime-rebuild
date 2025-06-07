@@ -4396,30 +4396,30 @@ player_heads
 	.long	0,0
 
 ;01 BOSTON
+	.long	FOX_BOS,WALK_MUG
 	.long	FOX_BOS,RAD_BOS
 	.long	FOX_BOS,BAR_BOS
 	.long	FOX_BOS,BRO_BOS
+	
+	.long	WALK_MUG,FOX_BOS
+	.long	WALK_MUG,RAD_BOS
+	.long	WALK_MUG,BAR_BOS
+	.long	WALK_MUG,BRO_BOS
 
 	.long	RAD_BOS,FOX_BOS
+	.long	RAD_BOS,WALK_MUG
 	.long	RAD_BOS,BAR_BOS
 	.long	RAD_BOS,BRO_BOS
 
 	.long	BAR_BOS,FOX_BOS
+	.long	BAR_BOS,WALK_MUG
 	.long	BAR_BOS,RAD_BOS
 	.long	BAR_BOS,BRO_BOS
 
 	.long	BRO_BOS,FOX_BOS
+	.long	BRO_BOS,WALK_MUG
 	.long	BRO_BOS,RAD_BOS
 	.long	BRO_BOS,BAR_BOS
-
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
 
 ;02 CHARLOTTE
 	.long	RCE_CHA,MAS_NEY
@@ -5196,30 +5196,30 @@ WALLACE	.equ	11
 	.long	0,0
 
 ;01 BOSTON
+	.long	FOX,WALKER
 	.long	FOX,RADJA
 	.long	FOX,BARROS
 	.long	FOX,BROWN
 
+	.long	WALKER,FOX
+	.long	WALKER,RADJA
+	.long	WALKER,BARROS
+	.long	WALKER,BROWN
+
 	.long	RADJA,FOX
+	.long	RADJA,WALKER
 	.long	RADJA,BARROS
 	.long	RADJA,BROWN
 
 	.long	BARROS,FOX
+	.long	BARROS,WALKER
 	.long	BARROS,RADJA
 	.long	BARROS,BROWN
 
 	.long	BROWN,FOX
+	.long	BROWN,WALKER
 	.long	BROWN,RADJA
 	.long	BROWN,BARROS
-
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
-	.long	0,0
 
 ;02 CHARLOTTE
 	.long	RICE,MASON

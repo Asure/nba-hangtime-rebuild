@@ -109,3 +109,20 @@
 	.global	TERM04
 	.global	TERM05
 	.global	TERM16
+	.globl	WALKER_P
+	.global	WALKER1
+	.global	WALKER2
+	.global	WALKER3
+	.global	WALKER4
+	.global	WALKER5
+	.global	WALKER6
+	.global	WALKER7
+	.global	WALKER8
+	.global	WALKER9
+	.global	WALKER10
+	.global	WALKER11
+	.global	WALKER12
+	.global	WALKER13
+	.global	WALKER14
+	.global	WALKER15
+	.global	WALKER16

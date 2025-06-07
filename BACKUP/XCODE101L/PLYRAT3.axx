@@ -231,6 +231,7 @@
 	.def	Bird_h
 	.def	Arnold_h
 	.def	Term_h
+	.def	Walker_h
 	.text
 
 ;; MARKER
@@ -274,6 +275,9 @@ Arnold_h
 
 Term_h
 	HDMAC2	TERM01
+	
+Walker_h
+	HDMAC	WALKER1
 
 heithb_h
 	HDMAC2	HEITH01

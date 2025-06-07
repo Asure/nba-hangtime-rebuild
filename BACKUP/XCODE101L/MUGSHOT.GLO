@@ -471,3 +471,5 @@
 	.global	ARN_MUG
 	.globl	TRM_MUGP
 	.global	TRM_MUG
+	.globl	WALK_MUGP
+	.global	WALK_MUG

@@ -7,6 +7,7 @@
 	.global	JORDAN
 	.global	BRYANT
 	.global	ONEAL
+	.global	WALKER
 	.global	BIRD
 	.global	TERMINATOR
 	.global	ARNOLD

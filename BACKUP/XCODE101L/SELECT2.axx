@@ -5289,6 +5289,9 @@ player_attribs
 
 	.word  06,05,07,05
 	.word  07,05,06,06	;RICK FOX		6'7"	231 reg
+	
+	.word  05,05,04,07
+    .word  04,07,04,04    ;ANTOINE WALKER
 
 	.word  06,07,04,07
 	.word  04,07,05,04	;DINO RADJA		6'11"	225 thin 
@@ -5298,9 +5301,6 @@ player_attribs
 
 	.word  09,02,06,08
 	.word  06,01,07,04	;DEE BROWN		6'1"	161 reg
-
-	.word  00,00,00,00
-	.word  00,00,00,00
 
 ;Speed, Power, Shoot, Dunk
 ;Steal, Block, Pass ability, Clutch
@@ -5890,7 +5890,7 @@ player_attribs
 
 name_sort
  .long	BLAYLOCK,MUTUMBO,LAETTNER,SSMITH, KNORMAN		;00 HAWKS
- .long	FOX,RADJA,BARROS,BROWN, HAMER					;01 CELTICS
+ .long	FOX,WALKER,RADJA,BARROS,BROWN					;01 CELTICS
  .long	RICE,MASON,DIVAC,CURRY, ZIDEK					;02 HORNETS
  .long	JORDAN,PIPPEN,RODMAN,KUKOC,LONGLEY				;03 BULLS
  .long	BRANDON,CMILLS,PHILLS,THILL,FERRY				;04 CAVALIERS
@@ -5967,7 +5967,7 @@ hnrxxtbl	.word	57,148,251,342
 team_sqaud_cnts
 ;DJT Start
 	.word	12	;ATLANTA
-	.word	12	;BOSTON
+	.word	20	;BOSTON
 	.word	12	;CHARLOTTE
 	.word	20	;CHICAGO
 	.word	20	;CLEVELAND
@@ -6104,6 +6104,7 @@ our_names
 	.long	BIRD
 	.long	ARNOLD
 	.long	TERMINATOR
+	.long	WALKER
 ;DJT End
 
 

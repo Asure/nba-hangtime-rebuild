@@ -489,5 +489,85 @@ TERM16:
 	.long   084c996bH
 	.word   00H
 	.long   TERM_P
+WALKER1:
+	.word   27,33,12,30
+	.long   084cb923H
+	.word   06000H
+	.long   WALKER_P
+WALKER2:
+	.word   26,33,12,29
+	.long   084cce05H
+	.word   06000H
+	.long   WALKER_P
+WALKER3:
+	.word   29,34,6,30
+	.long   084ce221H
+	.word   06000H
+	.long   WALKER_P
+WALKER4:
+	.word   24,34,7,29
+	.long   084cf93dH
+	.word   06000H
+	.long   WALKER_P
+WALKER5:
+	.word   24,34,11,31
+	.long   084d0c5dH
+	.word   06000H
+	.long   WALKER_P
+WALKER6:
+	.word   31,31,21,27
+	.long   084d1f7dH
+	.word   06000H
+	.long   WALKER_P
+WALKER7:
+	.word   26,33,3,25
+	.long   084d3603H
+	.word   06000H
+	.long   WALKER_P
+WALKER8:
+	.word   33,34,5,24
+	.long   084d4a1fH
+	.word   06000H
+	.long   WALKER_P
+WALKER9:
+	.word   27,34,4,26
+	.long   084d646bH
+	.word   06000H
+	.long   WALKER_P
+WALKER10:
+	.word   26,32,11,26
+	.long   084d79efH
+	.word   06000H
+	.long   WALKER_P
+WALKER11:
+	.word   25,27,11,16
+	.long   084d8d6fH
+	.word   06000H
+	.long   WALKER_P
+WALKER12:
+	.word   31,28,15,26
+	.long   084d9d41H
+	.word   06000H
+	.long   WALKER_P
+WALKER13:
+	.word   34,32,20,28
+	.long   084db199H
+	.word   06000H
+	.long   WALKER_P
+WALKER14:
+	.word   27,28,15,26
+	.long   084dcb19H
+	.word   06000H
+	.long   WALKER_P
+WALKER15:
+	.word   26,33,13,29
+	.long   084ddcd1H
+	.word   06000H
+	.long   WALKER_P
+WALKER16:
+	.word   34,29,31,21
+	.long   084df0edH
+	.word   06000H
+	.long   WALKER_P
 	.TEXT
 
