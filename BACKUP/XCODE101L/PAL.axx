@@ -67,6 +67,7 @@
 	.def	SUBZER_P
 	.def	SMOK_P
 	.def	JORDAN_P
+	.def	JORDNEWP
 	.def	KOBE_P
 	.def	ONEAL_P
 	.def	BARKLEY_P

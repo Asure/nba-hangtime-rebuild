@@ -1,4 +1,4 @@
 @echo off
-vidram on
+c:\qemm\vidram on
 gsplnk bb.cmd
-vidram off
+c:\qemm\vidram off

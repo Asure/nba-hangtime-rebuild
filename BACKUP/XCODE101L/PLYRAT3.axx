@@ -254,7 +254,8 @@ smok_h
 	HDMAC2	SMOKH01
 	
 jordan_h	
-	HDMAC	JORDAN1
+	HDMAC	JORD1
+;	HDMAC	JORDAN1
 
 kobe_h
 	HDMAC2	KOBE01  ; 5-head Kobe.	

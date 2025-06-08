@@ -60,6 +60,23 @@
 	.global	JORDAN14
 	.global	JORDAN15
 	.global	JORDAN16
+	.globl	JORDNEWP
+	.global	JORD1
+	.global	JORD2
+	.global	JORD3
+	.global	JORD4
+	.global	JORD5
+	.global	JORD6
+	.global	JORD7
+	.global	JORD8
+	.global	JORD9
+	.global	JORD10
+	.global	JORD11
+	.global	JORD12
+	.global	JORD13
+	.global	JORD14
+	.global	JORD15
+	.global	JORD16
 	.globl	KOBE_P
 	.global	KOBE01
 	.global	KOBE02
