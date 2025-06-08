@@ -7,11 +7,12 @@
 	.global	JORDAN
 	.global	BRYANT
 	.global	ONEAL
-	.global	WALKER
-	.global	ELLIS
 	.global	BIRD
 	.global	TERMINATOR
 	.global	ARNOLD
+	.global	WALKER
+	.global	ELLIS
+	.global	D_ELLIS
 	.global	BARKLEY
 	.global	PORTER
 	.global	MAJERLE

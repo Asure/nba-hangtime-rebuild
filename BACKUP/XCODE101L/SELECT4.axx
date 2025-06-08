@@ -4528,22 +4528,22 @@ player_heads
 	.long	HPR_NEY,PAC_WAS
 
 ;06 DENVER
-	.long	ELL_DEN,MCD_DEN
-	.long	ELL_DEN,MAR_SAC
-	.long	ELL_DEN,ELL_MUG
-
-	.long	MCD_DEN,ELL_DEN
-	.long	MCD_DEN,MAR_SAC
-	.long	MCD_DEN,ELL_MUG
-
-	.long	MAR_SAC,ELL_DEN
-	.long	MAR_SAC,MCD_DEN
-	.long	MAR_SAC,ELL_MUG
-	
 	.long	ELL_MUG,ELL_DEN
 	.long	ELL_MUG,MCD_DEN
 	.long	ELL_MUG,MAR_SAC
+	
+	.long	ELL_DEN,ELL_MUG
+	.long	ELL_DEN,MCD_DEN
+	.long	ELL_DEN,MAR_SAC
 
+	.long	MCD_DEN,ELL_MUG
+	.long	MCD_DEN,ELL_DEN
+	.long	MCD_DEN,MAR_SAC
+
+	.long	MAR_SAC,ELL_MUG
+	.long	MAR_SAC,ELL_DEN
+	.long	MAR_SAC,MCD_DEN
+	
 	.long	0,0
 	.long	0,0
 	.long	0,0
@@ -5327,21 +5327,21 @@ WALLACE	.equ	11
 	.long	HARPER_D,PACK
 
 ;06 DENVER
-	.long	DELLIS,MCDYESS
-	.long	DELLIS,MARCIULO
-	.long	DELLIS,ELLIS
-
-	.long	MCDYESS,DELLIS
-	.long	MCDYESS,MARCIULO
-	.long	MCDYESS,ELLIS
-
-	.long	MARCIULO,DELLIS
-	.long	MARCIULO,MCDYESS
-	.long	MARCIULO,ELLIS
-
-	.long	ELLIS,DELLIS
+	.long	ELLIS,D_ELLIS
 	.long	ELLIS,MCDYESS
 	.long	ELLIS,MARCIULO
+
+	.long	D_ELLIS,ELLIS	
+	.long	D_ELLIS,MCDYESS
+	.long	D_ELLIS,MARCIULO
+
+	.long	MCDYESS,ELLIS
+	.long	MCDYESS,D_ELLIS
+	.long	MCDYESS,MARCIULO
+
+	.long	MARCIULO,ELLIS
+	.long	MARCIULO,D_ELLIS
+	.long	MARCIULO,MCDYESS
 	
 	.long	0,0
 	.long	0,0

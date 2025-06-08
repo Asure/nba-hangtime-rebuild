@@ -17,6 +17,7 @@
 	.global TERMINATOR
 	.global	WALKER
 	.global	ELLIS
+	.global	D_ELLIS
 
 ;
 	.globl	DIAGP
