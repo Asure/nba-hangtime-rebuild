@@ -5980,12 +5980,14 @@ yveqnally
 	BSSX	was_alley_shot,16
 	move	a1,@was_alley_shot
 
-;	move	@GAMSTATE,a0
-;	cmpi	INAMODE,a0
-;	jrnz	yveqnofake
-;	.ref	do_ball_spark
-;	CREATE0	do_ball_spark
-;yveqnofake
+	.if	SPARKDB
+	move	@GAMSTATE,a0
+	cmpi	INAMODE,a0
+	jrnz	yveqnofake
+	.ref	do_ball_spark
+	CREATE0	do_ball_spark
+yveqnofake
+	.endif
 
 ;DJT Start
 	move	@plyr_onfire,a14	;Do on-fire shot snd?

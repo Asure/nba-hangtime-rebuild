@@ -58,6 +58,10 @@
 ;DJT End
 	.ref	gug1,BEdwrd1
 
+	.if	SPARKDB
+	.ref	spark1,spark2,spark3,spark4,spark5
+	.endif
+
 	.ref	pup_court,pup_aba
 	.ref	anipt_getsclxy
 	.ref	BAKMODS,BGND_UD1
@@ -251,6 +255,7 @@
 
 	.if	SMOKET
 	.def	plyr_smoketrail
+	.def	do_ball_spark
 	.endif
 
 
@@ -1613,16 +1618,18 @@ fltvsmoke_t
 ;	DIE
 
 
-;*******************************
-;* Start sparks in AMODE
-;
-; SUBR	do_ball_spark
-;
-;	movi	45,a11
-;laxilp	CREATE0	ball_spark
-;	SLEEPK	4
-;	dsj	a11,laxilp
-;	DIE
+	.if	SPARKDB
+*******************************
+* Start sparks in AMODE
+
+ SUBR	do_ball_spark
+
+	movi	45,a11
+laxilp	CREATE0	ball_spark
+	SLEEPK	4
+	dsj	a11,laxilp
+	DIE
+	.endif
 
 
 *******************************
@@ -3216,37 +3223,37 @@ aiuyexit
 
 
 
+	.if	SPARKDB
+********************************
+* Spark from flaming ball (Process)
+* A8/A11=*Ball obj
 
-;********************************
-;* Spark from flaming ball (Process)
-;* A8/A11=*Ball obj
-;
-; SUBR	ball_spark
-;
-;	movi	spark_l,a9
-;
-;	move	*a11(OXVEL),a6,L
-;	sra	2,a6
-;	movk	0aH,a0
-;	callr	rnd
-;	subk	5,a0
-;	sll	14,a0			;XVel
-;	add	a0,a6
-;
+ SUBR	ball_spark
+
+	movi	spark_l,a9
+
+	move	*a11(OXVEL),a6,L
+	sra	2,a6
+	movk	0aH,a0
+	callr	rnd
+	subk	5,a0
+	sll	14,a0			;XVel
+	add	a0,a6
+
 ;;	movk	3,a0
 ;;	callr	rnd
 ;;	jrnz	aiuyxnorm
 ;;	sll	2,a6			;*4
-;aiuyxnorm
-;
-;	move	*a11(OYVEL),a7,L
-;	movk	03H,a0
-;	callr	rnd
-;	sll	16,a0			;YVel
-;	neg	a0
-;	add	a0,a7
-;
-;
+aiuyxnorm
+
+	move	*a11(OYVEL),a7,L
+	movk	03H,a0
+	callr	rnd
+	sll	16,a0			;YVel
+	neg	a0
+	add	a0,a7
+
+
 ;;	move	*a11(OYVEL),a7,L
 ;;	sra	2,a7
 ;;	movk	0aH,a0
@@ -3260,67 +3267,67 @@ aiuyexit
 ;;	callr	rnd
 ;;	jrnz	aiuyynorm
 ;;	sll	2,a7			;*4
-;aiuyynorm
-;	move	*a8(OZPOS),a3
-;	movk	3,a0
-;	callr	rnd
-;	subk	2,a0
-;	add	a0,a3			;-2 to 1
-;
-;	move	*a8(OXPOS),a0
+aiuyynorm
+	move	*a8(OZPOS),a3
+	movk	3,a0
+	callr	rnd
+	subk	2,a0
+	add	a0,a3			;-2 to 1
+
+	move	*a8(OXPOS),a0
 ;;	move	*a8(OSIZEX),a2
 ;;	srl	1,a2			;/2
 ;;	add	a2,a0
-;	move	*a8(OXANI+16),a2
-;	add	a2,a0
-;	move	*a8(OYPOS),a1
-;	move	*a8(OSIZEY),a2
-;	srl	1,a2			;/2
-;	add	a2,a1
-;
-;	sll	16,a0
-;	sll	16,a1
-;	movi	spark1,a2
-;	movi	DMAWNZ|M_3D|M_NOSCALE,a4
-;	movi	CLSDEAD,a5
-;	calla	BEGINOBJ2
-;
-;	move	*a11(OZVEL),a2,L
-;	sra	2,a2			;/4
-;	movk	0fH,a0
-;	callr	rnd
-;	subk	7,a0
-;	sll	14,a0
-;	add	a0,a2
-;	move	a2,*a8(OZVEL),L
-;
-;
-;	movk	3,a11
+	move	*a8(OXANI+16),a2
+	add	a2,a0
+	move	*a8(OYPOS),a1
+	move	*a8(OSIZEY),a2
+	srl	1,a2			;/2
+	add	a2,a1
+
+	sll	16,a0
+	sll	16,a1
+	movi	spark1,a2
+	movi	DMAWNZ|M_3D|M_NOSCALE,a4
+	movi	CLSDEAD,a5
+	calla	BEGINOBJ2
+
+	move	*a11(OZVEL),a2,L
+	sra	2,a2			;/4
+	movk	0fH,a0
+	callr	rnd
+	subk	7,a0
+	sll	14,a0
+	add	a0,a2
+	move	a2,*a8(OZVEL),L
+
+
+	movk	3,a11
 ;;	callr	rnd
 ;;	addk	1,a0
 ;;	move	a0,a11
-;	jruc	aiuystrt
-;
-;aiuylp	dsj	a10,aiuynoani
-;aiuystrt
-;	move	a11,a10
-;	move	*a9,a0,L
-;	jrz	aiuydie			;noani
-;	addk	32,a9
-;
-;	move	*a8(OCTRL),a1
-;	calla	obj_aniq
-;aiuynoani
-;	SLEEPK	3
-;	move	*a8(OYVEL),a2,L
-;	addi	GRAV*2,a2
-;	move	a2,*a8(OYVEL),L
-;	jrn	aiuylp			;Going up?
-;	move	*a8(OYVAL),a1,L
-;	jrlt	aiuylp			;Above gnd?
-;	clr	a1
-;	move	a1,*a8(OYVAL),L
-;
+	jruc	aiuystrt
+
+aiuylp	dsj	a10,aiuynoani
+aiuystrt
+	move	a11,a10
+	move	*a9,a0,L
+	jrz	aiuydie			;noani
+	addk	32,a9
+
+	move	*a8(OCTRL),a1
+	calla	obj_aniq
+aiuynoani
+	SLEEPK	3
+	move	*a8(OYVEL),a2,L
+	addi	GRAV*2,a2
+	move	a2,*a8(OYVEL),L
+	jrn	aiuylp			;Going up?
+	move	*a8(OYVAL),a1,L
+	jrlt	aiuylp			;Above gnd?
+	clr	a1
+	move	a1,*a8(OYVAL),L
+
 ;;	move	@HCOUNT,a14
 ;;	sll	32-2,a14
 ;;	jrz	aiuydie
@@ -3330,35 +3337,35 @@ aiuyexit
 ;;	cmpi	-(GRAV*2),a2
 ;;	jrlt	aiuylp
 ;;
-;
-;aiuydie
-;	clr	a0
-;	move	a0,*a8(OXVEL),L
-;	move	a0,*a8(OYVEL),L
-;	move	a0,*a8(OZVEL),L
-;;	SLEEPK	4
-;
-;	jauc	DELOBJDIE
-;
-;
-;spark_l
-;	.long	spark1
-;	.long	spark2
-;	.long	spark3
-;	.long	spark4
-;	.long	spark5
-;	.long	spark1
-;	.long	spark2
-;	.long	spark3
-;	.long	spark4
-;	.long	spark5
-;	.long	spark1
-;	.long	spark2
-;	.long	spark3
-;	.long	spark4
-;	.long	spark5,0
 
-;	.endif
+aiuydie
+	clr	a0
+	move	a0,*a8(OXVEL),L
+	move	a0,*a8(OYVEL),L
+	move	a0,*a8(OZVEL),L
+;;	SLEEPK	4
+
+	jauc	DELOBJDIE
+
+
+spark_l
+	.long	spark1
+	.long	spark2
+	.long	spark3
+	.long	spark4
+	.long	spark5
+	.long	spark1
+	.long	spark2
+	.long	spark3
+	.long	spark4
+	.long	spark5
+	.long	spark1
+	.long	spark2
+	.long	spark3
+	.long	spark4
+	.long	spark5,0
+
+	.endif
 
 ;	movi	STATIC_p,a8
 ;	movi	cycram,a9

@@ -2646,6 +2646,11 @@ NONO1
 
 ;	CREATE0	drwnbalogo
 
+	.if	SPARKDB
+	.ref	do_ball_spark
+	CREATE0	do_ball_spark
+	.endif
+
 	SLEEPK	5
 	calla	update_insert
 

@@ -46,6 +46,7 @@ DEBUGCRT .equ	1	;third court debugging
 
 SMOKET	.equ	0	;Player Smoketrails (Abandoned feature, EXPERIMENTAL)
 SHADOWT	.equ	0	;Player Shadowtrails (Abandoned feature, EXPERIMENTAL) combined cost around 1024
+SPARKDB	.equ	0	;Ball sparking test (Abandoned feature, EXPERIMENTAL)
 
 ;DJT End
 

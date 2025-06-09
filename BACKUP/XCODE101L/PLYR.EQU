@@ -90,8 +90,9 @@
 	WORD	plyr_idiotbit	;Bit 0=drn pass,1=drn shoot,2=dunk,3=shoot
 	WORD	plyr_shtbutn	;Ticks sice last shoot button press
 	WORD	plyr_inair_pass	;-=cant pass to teamate in air, +=can
-;	WORD	plyr_keeppal	;Keep pal for reuse upon finish of flames
-;	WORD	plyr_hdkeeppal	;Keep head pal for reuse upon finish of flames
+;Check if this doesn't break stuff!
+	WORD	plyr_keeppal	;Keep pal for reuse upon finish of flames
+	WORD	plyr_hdkeeppal	;Keep head pal for reuse upon finish of flames
 	LONG	plyr_kpzvel	;Keep ZVEL for flyback skids on butt
 	LONG	plyr_kpxvel	;Keep XVEL for flyback skids on butt
 	LONG	plyr_meter_proc	;Jump ball meter
