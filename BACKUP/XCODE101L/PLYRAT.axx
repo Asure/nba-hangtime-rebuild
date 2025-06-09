@@ -840,8 +840,8 @@ DAL_t
 ;Pri swipe pal, Alt swipe pal, Pri vertical panel pal, Alt vertical panel pal
 
 DEN_t
-;Alphonso Ellis
-	LWWWWWW	scale67_t,BV7,SHT6,DNK7,DEF5,SDEF6,DSKL5
+;LaPhonso Ellis
+	LWWWWWW	scale68_t,BV7,SHT6,DNK7,DEF5,SDEF6,DSKL5
 	.long	BRAND_F, UN_DENP_P,UN_DENS_P, TR_DENP_P,TR_DENS_P,Ellis_h
 	.word	5,6,6,16
 	.long	SW_DENP_P,SW_DENS_P,VP_DENP_P,VP_DENS_P
