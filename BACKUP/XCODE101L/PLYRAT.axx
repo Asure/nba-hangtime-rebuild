@@ -990,24 +990,24 @@ LAC_t
 	LWWWWWW	scale69f_t,BV7,SHT6,DNK6,DEF5,SDEF5,DSKL5
 	.long	VAUGHT_F, UN_LACP_P,UN_LACS_P, TR_LACP_P,TR_LACS_P,Vaught_h
 	.word	3,6,5,15
-	.long	SW_LACP_P,SW_LACS_P,VP_LACP_P,VP_LACS_P
+	.long	SW_GLDS_P,SW_GLDS_P,VP_BOSP_P,VP_NEJP_P
 	LWWWWWW	scale67ef_t,BV6,SHT6,DNK5,DEF5,SDEF3,DSKL5
 	.long	RROGER_F, UN_LACP_P,UN_LACS_P, TR_LACP_P,TR_LACS_P,Rrogers_h
 	.word	4,7,6,3
-	.long	SW_LACP_P,SW_LACS_P,VP_LACP_P,VP_LACS_P
+	.long	SW_GLDS_P,SW_GLDS_P,VP_BOSP_P,VP_NEJP_P
 	LWWWWWW	scale66t_t,BV7,SHT6,DNK8,DEF3,SDEF6,DSKL5
 	.long	BBARRY_F, UN_LACP_P,UN_LACS_P, TR_LACP_P,TR_LACS_P,Bbarry_h
 	.word	5,3,5,20
-	.long	SW_LACP_P,SW_LACS_P,VP_LACP_P,VP_LACS_P
+	.long	SW_GLDS_P,SW_GLDS_P,VP_BOSP_P,VP_NEJP_P
 	LWWWWWW	scale61_t,BV8,SHT6,DNK1,DEF1,SDEF5,DSKL5
 	.long	PRICHA_F, UN_LACP_P,UN_LACS_P, TR_LACP_P,TR_LACS_P,Richardson_h
 	.word	7,1,4,0
-	.long	SW_LACP_P,SW_LACS_P,VP_LACP_P,VP_LACS_P
+	.long	SW_GLDS_P,SW_GLDS_P,VP_BOSP_P,VP_NEJP_P
 ;kill
 	LWWWWWW	scale67_t,BV8,SHT6,DNK5,DEF4,SDEF8,DSKL5
 	.long	LMURRA_F, UN_LACP_P,UN_LACS_P, TR_LACP_P,TR_LACS_P,Lmurray_h
 	.word	6,5,9,12
-	.long	SW_LACP_P,SW_LACS_P,VP_LACP_P,VP_LACS_P
+	.long	SW_GLDS_P,SW_GLDS_P,VP_BOSP_P,VP_NEJP_P
 
 ;Size, speed, shot%, dunks, block defense, steals, drone skill
 ;Flesh pal, Pri uniform pal, Alt uniform pal, Pri trim pal, Alt trim pal, head
