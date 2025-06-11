@@ -107,8 +107,9 @@ PIXPERFRM	.equ	frmpalptr+32			;32b
 	clr	a0
 	move	a0,@dpageflip
 
-	movi	CHEERS,a8
-	movi	[0,0],a9
+	movi	KOBE,a8
+;	movi	[0,0],a9
+	clr	a9
 ;Need to switch rom banks here, our new VDA stuff is in bank2
 ;Lucky there was some examples in MK3 src :)
 	move	@SYSCOPY,a1,W			; ram copy !!
@@ -475,9 +476,11 @@ sjkvx
 
 	movk	10,b3
 	movi	lengthtree,b0
-nhsultlp	callr	UncompressTree
+nhsultlp	
+	callr	UncompressTree
 	jrz	nhsultok			; br=OK
 	dsj	b3,nhsultlp
+	
 	.if	DEBUG
 	LOCKUP
 	.endif
@@ -488,9 +491,11 @@ nhsultok
 
 	movk	10,b3
 	movi	disttree,b0
-nhsudtlp	callr	UncompressTree
+nhsudtlp	
+	callr	UncompressTree
 	jrz	nhsudtok			; br=OK
 	dsj	b3,nhsudtlp
+	
 	.if	DEBUG
 	LOCKUP
 	.endif
@@ -507,7 +512,9 @@ nhsudebugstrt
 ;Clear top 4K of buffer to take care of initial wraparound
 
 	movi	RamBuffer+RAMBUFSIZ,a1	;End of buffer
-	movi	RAMBUFSIZ/IMGBPP/4,a2
+;	movi	RAMBUFSIZ/IMGBPP/4,a2
+;mk3 does this:
+	movi	1024,a2			;4K
 	clr	a3
 nhsuclrbuf
 	move	a3,*-a1,L

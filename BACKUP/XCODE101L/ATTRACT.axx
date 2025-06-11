@@ -801,16 +801,16 @@ show_title
 
 ;Placeholder for SUPER Maximum HT!
 
-	movi	[0a8h,0],a0
-	movi	[03bh,0],a1
-	.ref	hang_logo
-	movi	hang_logo,a2			;* image
-	movi	20000,a3
-	movi	DMAWNZ|M_NOCOLL,a4
-	movi	CLSDEAD,a5
-	clr	a6
-	clr	a7
-	calla	BEGINOBJ2
+;	movi	[0a8h,0],a0
+;	movi	[03bh,0],a1
+;	.ref	hang_logo
+;	movi	hang_logo,a2			;* image
+;	movi	20000,a3
+;	movi	DMAWNZ|M_NOCOLL,a4
+;	movi	CLSDEAD,a5
+;	clr	a6
+;	clr	a7
+;	calla	BEGINOBJ2
 
 
 	movk	1,a0

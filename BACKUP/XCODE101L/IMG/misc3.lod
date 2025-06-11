@@ -12,7 +12,9 @@ FRM> UGROUND
 ; See UNZIP.AXX for switching image rom banks!
 ASM> BBVDA.TBL
 FRM> CHEERS
-;FRM> TITLE ; Todo Title BGNDTBL.ASM
+FRM> KOBE
+FRM> TITLE 
+; Todo Title BGNDTBL.ASM and nuke pals!.
 ;
 
 ;Coach & Benched player anims

@@ -1,0 +1,12 @@
+Images: 400x255 254 colors or less!
+gimp: mode indexed, 253! col -> TGA
+pictview convert & overwrite the TGA
+IT ctrl-l load the TGA
+pal -> del unused colors. Should now show 254 colors in the pal list!
+Then ctrl-S to save the resulting tga. 
+Rename as file1.vda
+vdatobin file (exclude the number!)
+
+VDATOBIN expects frames for video ie. FRM1.VDA, FRM2.VDA and so on, to save a short video clip.
+
+(More details to put here later.)

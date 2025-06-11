@@ -1,17 +1,17 @@
 	.DATA
 dcslogo:
 	.word   187,89,93,44
-	.long   0847c51dH
+	.long   085100adH
 	.word   05380H
 	.long   DCLIQU3
 TOASTY:
 	.word   98,101,103,0
-	.long   08490899H
+	.long   08524429H
 	.word   06980H
 	.long   TOASTYPAL
 KITZ:
 	.word   101,101,103,0
-	.long   0849bc9dH
+	.long   0852f82dH
 	.word   07b80H
 	.long   KITZPAL
 	.TEXT
