@@ -2,17 +2,19 @@ IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
 ;If we expand GFX rom: 
 ;use loadr misc3.bin,1000000,0,:gfxrom in mame debug
 ***> 6000000,1
-; Static zipped images moved from PRG rom into GFX rom.
-; Update: Needs research how to use from IROM instead of PRG ROM!!
-; This didn't work from IROM at first tests:(
-;ASM> BBVDA.TBL
-;FRM> CHEERS
-;FRM> TITLE ; Todo Title BGNDTBL.ASM
-;
 ; Underground Lava court.
 ; Needs to be 8 bits per pixel i.e. 255/256 cols!
 ASM> uground1.tbl
 FRM> UGROUND
+; Static zipped images moved from PRG rom into GFX rom.
+; Update: Needs research how to use from IROM instead of PRG ROM!!
+; This didn't work from IROM at first tests:(
+; See UNZIP.AXX for switching image rom banks!
+ASM> BBVDA.TBL
+FRM> CHEERS
+;FRM> TITLE ; Todo Title BGNDTBL.ASM
+;
+
 ;Coach & Benched player anims
 ;These were disabled for production, probably to save costs.
 ;

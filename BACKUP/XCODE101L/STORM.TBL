@@ -1,56 +1,56 @@
 	.DATA
 STORM02:
 	.word   190,72,-31,-7
-	.long   08341a6bH
+	.long   083d503bH
 	.word   05f80H
 STORM03:
 	.word   190,73,-20,-6
-	.long   0834e09bH
+	.long   083e166bH
 	.word   05f80H
 STORM04:
 	.word   192,63,-24,-11
-	.long   0835aad9H
+	.long   083ee0a9H
 	.word   05b80H
 STORM05:
 	.word   217,64,-12,-12
-	.long   08366db5H
+	.long   083fa385H
 	.word   05f80H
 STORM06:
 	.word   227,61,0,-9
-	.long   08373495H
+	.long   08406a65H
 	.word   05f80H
 STORM07:
 	.word   204,61,-9,-11
-	.long   0837f7e8H
+	.long   08412db8H
 	.word   05b80H
 STORM08:
 	.word   205,78,-11,0
-	.long   0838bf28H
+	.long   0841f4f8H
 	.word   05f80H
 STORM09:
 	.word   195,77,-26,0
-	.long   08399726H
+	.long   0842ccf6H
 	.word   05f80H
 STORM10:
 	.word   192,64,-30,-9
-	.long   083a6a99H
+	.long   0843a069H
 	.word   05a80H
 STORM11:
 	.word   222,66,-19,-7
-	.long   083b368dH
+	.long   08446c5dH
 	.word   05f80H
 STORM12:
 	.word   226,60,-12,-14
-	.long   083c0011H
+	.long   084535e1H
 	.word   05f80H
 fence:
 	.word   187,73,0,0
-	.long   083cc271H
+	.long   0845f841H
 	.word   06180H
 	.long   fence_p
 FALL2_vda:
 	.word   89,96,0,0
-	.long   083dff4dH
+	.long   0847351dH
 	.word   06a80H
 	.long   FALL2P
 	.TEXT

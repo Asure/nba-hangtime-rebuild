@@ -107,8 +107,16 @@ PIXPERFRM	.equ	frmpalptr+32			;32b
 	clr	a0
 	move	a0,@dpageflip
 
-	movi	TROPHY,a8
+	movi	CHEERS,a8
 	movi	[0,0],a9
+;Need to switch rom banks here, our new VDA stuff is in bank2
+;Lucky there was some examples in MK3 src :)
+	move	@SYSCOPY,a1,W			; ram copy !!
+	andi	1111110011111111b,a1		; clear image bank bits
+	ori	0000000100000000b,a1		; set bank 2 bit
+	move	a1,@SYSCTRL,W
+	move	a1,@SYSCOPY,W			; keep a copy in ram
+
 	JSRP	movie_run
 
 	movk	1,a0

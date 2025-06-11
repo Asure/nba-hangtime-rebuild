@@ -29,6 +29,22 @@ Image JORDAN13 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN14 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
+Image JORD1 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD2 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD3 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD4 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD5 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD6 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD7 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD8 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD9 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD10 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD11 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD12 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD13 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD14 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD15 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD16 has 199 colors. Can't fit into 6 bits per pixel.
 Image TERM01 has 69 colors. Can't fit into 6 bits per pixel.
 Image TERM02 has 69 colors. Can't fit into 6 bits per pixel.
 Image TERM03 has 69 colors. Can't fit into 6 bits per pixel.
@@ -62,16 +78,16 @@ Image BACK8BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK9BR has 178 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               719908 dec	   AFC24 hex
+	IMAGE RAM               808864 dec	   C57A0 hex
 
-	TOTAL LOAD              719908 dec	   AFC24 hex
+	TOTAL LOAD              808864 dec	   C57A0 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       719908 dec	   AFC24 hex
+	In IMAGE RAM records       808864 dec	   C57A0 hex
 
-	TOTAL bytes written        719908 dec	   AFC24 hex, in 2 records.
+	TOTAL bytes written        808864 dec	   C57A0 hex, in 2 records.
 
-Bytes Represented in Tables ... 719907 dec AFC23 hex
+Bytes Represented in Tables ... 808863 dec C579F hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.
