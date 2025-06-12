@@ -1,6 +1,7 @@
 	.OPTION	B,D,L,T
 	.include	"BGNDTBL.GLO"
 	.DATA
+	.if 0
 HANGT1_P:	;PAL #0
 	.word	233	;pal size
 	.word 04631H,03C00H,04800H,05400H,05C00H,06400H,04000H,03400H,02800H,07B30H
@@ -322,6 +323,9 @@ timePALS:
 	.long	A2P
 	.long	A3P
 	.long	A4P
+	.endif
+
+
 REDBAR_P:	;PAL #0
 	.word	127	;pal size
 	.word 00H,00H,06801H,06422H,06822H,05C22H,06022H,05822H,07043H,06C43H

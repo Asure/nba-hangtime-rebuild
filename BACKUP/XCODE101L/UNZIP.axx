@@ -20,6 +20,7 @@
 	.include	"disp.equ"		;Display proc equates
 	.include	"gsp.equ"		;Gsp asm equates
 	.include	"sys.equ"
+	.include	"game.equ"
 	.include	"imgtbl.glo"
 	.include	"macros.hdr"		;Macros
 ;	.include	"shawn.hdr"		;Macros
@@ -120,6 +121,7 @@ PIXPERFRM	.equ	frmpalptr+32			;32b
 
 	JSRP	movie_run
 
+butwtlp
 	movk	1,a0
 	move	a0,@dpageflip
 	SLEEPK	1
@@ -140,15 +142,55 @@ icfclp	SLEEPK	1
 icfcnob	
 	dsj	a10,icfclp
 icfcxb
+	.ref	fade_down
+	movi	CYCPID,A0
+	calla	KIL1C
+
+	.asg	32,FRATE
+	clr	a10
+	movk	FRATE,a11
+	CREATE0	fade_down
+
+	SLEEP	1+(256/FRATE)+3
+
+	calla	WIPEOUT
+	RETP
+
+ SUBR	show_titlevda
+
+	calla	display_blank
 	calla	WIPEOUT
 
-	RETP
+	movk	1,a0
+	move	a0,@DISPLAYON
+	move	a0,@dpageflip
+
+	calla	display_unblank
+
+	SLEEPK	1
+
+	clr	a0
+	move	a0,@dpageflip
+
+	movi	TITLE,a8
+;	movi	[0,0],a9
+	clr	a9
+;Need to switch rom banks here, our new VDA stuff is in bank2
+;Lucky there was some examples in MK3 src :)
+	move	@SYSCOPY,a1,W			; ram copy !!
+	andi	1111110011111111b,a1		; clear image bank bits
+	ori	0000000100000000b,a1		; set bank 2 bit
+	move	a1,@SYSCTRL,W
+	move	a1,@SYSCOPY,W			; keep a copy in ram
+
+	JSRP	movie_run
+	jauc	butwtlp
 	.endif
 
 
 *******************************
 * Run movie footage (JSRP)
-* A8=* compressed picture data
+* A8=* comp	ressed picture data
 * A9=Screen X,Y for top left of picture
 * Trashes scratch, A2-A11,B2-B10
 

@@ -1,7 +1,7 @@
 	.OPTION	B,D,L,T
 	.include	"BGNDTBL.GLO"
 	.DATA
-
+	.if	0
 timeHDRS:
 	.word	76,123	;x size, y size
 	.long	05C8D817H	;address
@@ -80,6 +80,7 @@ maximBLKS:
 maximBMOD:
 	.word	400,256,14	;x size, y size, #blocks
 	.long	maximBLKS, timeHDRS, timePALS
+	.endif
 ;hangtimeBMOD:
 ;	.word	400,256,10	;x size, y size, #blocks
 ;	.long	hangtimeBLKS, timeHDRS, timePALS

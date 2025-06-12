@@ -1,12 +1,23 @@
-Images: 400x255 254 colors or less!
-gimp: mode indexed, 253! col -> TGA
-pictview convert & overwrite the TGA
+Images: 400x255 254 colors
+Gimp: mode indexed, 253! col -> export TGA no RLE compression, bottom left.
+Notes! 
+- Gimp counts up from zero, Midway's IT.EXE counts up from 1.
+- Black color on #0! (Use color remap feature in Gimp.)
+
+Dosbox: Use pictview to convert & overwrite the TGA so we can load it in IT.
 IT ctrl-l load the TGA
-pal -> del unused colors. Should now show 254 colors in the pal list!
+Top menu PAL -> Del unused colors. Should now show as 254 colors in the pal list!
 Then ctrl-S to save the resulting tga. 
-Rename as file1.vda
+Rename the result as file1.vda
 vdatobin file (exclude the number!)
 
 VDATOBIN expects frames for video ie. FRM1.VDA, FRM2.VDA and so on, to save a short video clip.
 
-(More details to put here later.)
+Resulting BIN file is now a .zip, with no zip header, VDATOBIN removes it to save more space.
+Unzipping is handled in unzip.asm/axx.
+
+Used in MK1 for some player anims. Extensive use in MK2/3/UMK3 for player bio and many static screens.
+NBA Jam used it for the halftime videos, but they are small and 'only' 3BPP. The unzipper is different.
+
+Hangtime unzipper can (for now) only handle single images.
+

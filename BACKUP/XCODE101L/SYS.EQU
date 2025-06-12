@@ -31,7 +31,7 @@ HOTSPOT	.equ	0	;0 or 1  Show hotspots    off/on
 OPERMES	.equ	0	;0 or 1  Operator message off/on
 TRIVCON	.equ	0	;0 or 1  Trivia contest   off/on
 PLYRDEM	.equ	0	;0 or 1  Create-a-Player demo during attract   off/on
-TEAMPOP	.equ	0	;0 or 1  Team popularity  off/on
+TEAMPOP	.equ	1	;0 or 1  Team popularity  off/on
 ANIM_VS	.equ	1	;0 or 1  Versus scrn anim off/on	;saves ~304
 AAMA	.equ	0	;0 or 1  AAMA advisory screen off/on	;saves ~256
 ROBOG	.equ	0	;0 or 1  Robotron (broken atm) off/on	;Cost 20K

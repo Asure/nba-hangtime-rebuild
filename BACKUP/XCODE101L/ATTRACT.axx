@@ -310,6 +310,8 @@ bgupnxt	move	*a0,a0,L
 
  SUBRP	amode
 
+	.ref	show_titlevda
+
 bguplp
 	movi	AMODE_PID,a0
 	move	a0,*a13(PROCID)
@@ -329,7 +331,7 @@ bguplp
 ;;	JSRP	show_trophy
 ;;	calla	set_volume_for_amode
 
-	JSRP	show_title
+	JSRP	show_titlevda
 
 	.if	VDADEBUG
 	.ref	show_trophy
@@ -375,7 +377,7 @@ bguplp
 	JSRP	result_screen
 	JSRP	show_nba_plyrs
 	JSRP	new_page
-	JSRP	show_title
+	JSRP	show_titlevda
 	JSRP	show_copyright
 	.if	OPERMES
 	JSRP	show_operatormsg
@@ -703,28 +705,56 @@ show_dcslogo
 
         movi	TOASTY,a2
 	CREATE0	peeker		;Forden
-
 	SLEEP	5*TSEC
+
 	CREATE0	peeker2		;Kitzrow
-
 	SLEEP	5*TSEC
 
-	movi	dcslogo,a2	;Testing
-	CREATE0	peeker3
-
-	SLEEP	5*TSEC
+;	movi	dcslogo,a2	;Testing
+;	CREATE0	peeker3
+;	SLEEP	5*TSEC
 
 	movi	6*TSEC,a10
-	jruc	niuclp			;!! We recycle code from the show_title here ;)
+
+niuclp	SLEEPK	1
+	calla	get_all_buttons_cur2
+	jrz	niucnob
+
+      	clr	a0
+	move	a0,@SOUNDSUP		;turn all sounds on
+	SOUND1	bounce_snd
+	movk	1,a0
+	move	a0,@SOUNDSUP		;turn all sounds off
+	jruc	niucxb
+niucnob	
+	dsj	a10,niuclp
+niucxb
+;DJT Start
+	movi	CYCPID,A0
+	calla	KIL1C
+
+	.asg	32,FRATE
+	clr	a10
+	movk	FRATE,a11
+	CREATE0	fade_down
+
+	SLEEP	1+(256/FRATE)+3
+
+	calla	WIPEOUT
+	RETP
 
 
-;Screen viewport is 400x254 visible. (World is the entire court.)
-;Forden is 97x100 64 colors
-;We start the obj @ 456, so it's offscreen for sure.
+****************************************************************
+* TOASTY routine from MK3
+
+* Screen viewport is 400x254 visible. (World is the entire court.)
+* Forden is 97x100 64 colors
+* We start the obj @ 456, so it's offscreen for sure.
 * BEGINOBJ2 notes:
 * Begin an object
 * A0=XVAL, A1=YVAL, A2=*IMG, A3=ZPOS, A4=FLAGS, A5=OID, A6=XVEL, A7=YVEL
 * 0A8H=*Obj
+
  SUBRP peeker
 	movi	TOASTY,a2
 	jauc	peeker3
@@ -773,109 +803,8 @@ ford5	sleep	1
 
 ****************************************************************
 * Title screen
-
-show_title
-
-	calla	display_blank
-	calla	WIPEOUT
-
-	movk	1,a0
-	move	a0,@dpageflip
-
-	clr	a0
-	move	a0,@dtype		;2D
-
-	movi	SCRNEND,a0		;[256,405]
-	move	a0,@SCRNLR,L
-
-	clr	a0
-	move	a0,@WORLDTLX,L
-	move	a0,@WORLDTLY,L
-	move	a0,@IRQSKYE
-
-	SLEEPK	2
-
-	movi	title_scr_mod,a0
-	move	a0,@BAKMODS,L
-	calla	BGND_UD1
-
-;Placeholder for SUPER Maximum HT!
-
-;	movi	[0a8h,0],a0
-;	movi	[03bh,0],a1
-;	.ref	hang_logo
-;	movi	hang_logo,a2			;* image
-;	movi	20000,a3
-;	movi	DMAWNZ|M_NOCOLL,a4
-;	movi	CLSDEAD,a5
-;	clr	a6
-;	clr	a7
-;	calla	BEGINOBJ2
-
-
-	movk	1,a0
-	move	a0,@DISPLAYON
-	calla	display_unblank
-
-	movi	6*TSEC,a10
-niuclp	SLEEPK	1
-	calla	get_all_buttons_cur2
-	jrz	niucnob
-
-      	clr	a0
-	move	a0,@SOUNDSUP		;turn all sounds on
-	SOUND1	bounce_snd
-	movk	1,a0
-	move	a0,@SOUNDSUP		;turn all sounds off
-	jruc	niucxb
-niucnob	
-	dsj	a10,niuclp
-niucxb
-;DJT Start
-	movi	CYCPID,A0
-	calla	KIL1C
-
-	.asg	32,FRATE
-	clr	a10
-	movk	FRATE,a11
-	CREATE0	fade_down
-
-	SLEEP	1+(256/FRATE)+3
-
-	calla	WIPEOUT
-	RETP
-
-title_scr_mod
-	.long	maximBMOD
-	.word	0,0
-	.long	0
-;	.long	hangtimeBMOD
-;	.word	0,0
-;	.long	0
-;DJT End
-
-
-ttl_setscl
-	move	*a8(OIMG),a2,L
-	movi	[0100H,0],a3
-	clr	a14
-	movx	a10,a14
-	divu	a14,a3
-;	move	*a2(IANIOFFX),a1
-	movi	-106,a1
-	mpys	a3,a1
-	sra	16,a1
-	addi	200,a1			;X base
-	move	a1,*a8(OXPOS)
-;	move	*a2(IANIOFFY),a1
-	movi	-98,a1
-	mpys	a3,a1
-	sra	16,a1
-	addi	124,a1			;Y base
-	move	a1,*a8(OYPOS)
-	move	a10,*a8(ODATA_p),L	;Set scale value
-	rets
-
+* show_title
+* moved to unzip.axx as 'show_titlevda'
 
 ****************************************************************
 * Show an operator message if one has been entered
