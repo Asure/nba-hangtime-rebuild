@@ -2314,9 +2314,9 @@ zdiknothot
 
 
 
-;AMM Are we on the rooftop?
-	move	@pup_court,a0		;Outdoor court(1) or not (0)
-	jrnz	zdiknoshat		;br=yes we are on roof
+;AMM Are we on the rooftop? Edit: don't care!
+;	move	@pup_court,a0		;Outdoor court(1) or not (0)
+;	jrnz	zdiknoshat		;br=yes we are on roof
 
 ;AMM disable this loop, any dunk is ok for now
 	move	*a10(plyr_seq),a0		; loads the current dunk seq into a0

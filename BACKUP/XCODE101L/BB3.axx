@@ -2489,6 +2489,7 @@ nikllp
 	move	*a11,a0			;Chk current crt X
 	jrn	nikllft
 	move	a9,a6			;Set for rgt hoop
+
 nikllft
 	abs	a0
 	subi	BOARD_ANI_MINX,A0	;Too far away (hoop off screen)?
@@ -2500,6 +2501,8 @@ nikllft
 	move	@pup_court,a14		;Outdoor court?
 	jrz	niklnootd			; br=no
 	jrz	niklbok			; br=no
+	move	*a10,a14		;Is bkbrd shattered? No if 0
+	jrnz	niklfok			;shattered needs new imgs
 	addi	niklani_otd_t-niklani_t,a0,W	;Set ptr to outdoor
 ;;	jruc	niklbok
 niklnootd
@@ -2507,9 +2510,11 @@ niklnootd
 	jrz	niklbok
 	addi	niklsani_t-niklani_t,a0,W	;Set ptr to shattered indoor
 ;;;FIX!!!
-;;	jruc	niklbok		;Skip code for bboard shatter ani
+	jruc	niklbok				;Animate it!
 ;;	jrz	niklbok
 ;;	addi	niklsani_t-niklani_t,a0,W	;Set ptr to shattered tbl
+niklfok
+	addi	niklsani_otd_t-niklani_t,a0,W	;Set ptr to shattered outdoor 
 niklbok
 	move	*a0,a0,L		;Deref for new backboard ptr
 	move	*a6(OIMG),a14,L		;Get old *bkbrd
@@ -2665,6 +2670,14 @@ niklani_otd_t
 
 	.long	nback2,nback3,nback4,nback5,nback6,nback7,nback8
 	.long	nback9,nback10,nback10,nback10,nback10
+
+niklsani_otd_t
+;Outdoor court shattered backboard
+	.long	nback2br		;Fill for BOARD_ANI_MINX -16
+
+	.long	nback2br,nback3br,nback4br,nback5br,nback6br,nback7br,nback8br
+	.long	nback9br,nback10br,nback10br,nback10br,nback10br
+
 
 ;niklsani_t
 ;	.long	bturn_5,bturn_4,bturn_3,bturn_2,bturn_1,bbord_10

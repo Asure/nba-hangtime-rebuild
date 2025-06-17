@@ -201,3 +201,7 @@ PPP> 6
 ASM> hoop2.tbl
 GLO> hoop2.glo
 ---> BACK1BR,BACK2BR,BACK3BR,BACK4BR,BACK5BR,BACK6BR,BACK7BR,BACK8BR,BACK9BR
+NBBD8.IMG
+PPP> 6
+---> nback1br,nback2br,nback3br,nback4br,nback5br
+---> nback6br,nback7br,nback8br,nback9br,nback10br

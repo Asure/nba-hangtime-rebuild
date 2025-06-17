@@ -8,6 +8,16 @@
 	.global	BACK7BR
 	.global	BACK8BR
 	.global	BACK9BR
+	.global	nback10br
+	.global	nback9br
+	.global	nback8br
+	.global	nback7br
+	.global	nback6br
+	.global	nback5br
+	.global	nback4br
+	.global	nback3br
+	.global	nback2br
+	.global	nback1br
 ;AMM End
 	.globl	HOOP_P
 	.global	hoopbot

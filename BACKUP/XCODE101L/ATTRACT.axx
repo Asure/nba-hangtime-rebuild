@@ -702,7 +702,7 @@ show_dcslogo
 	calla	display_unblank
 
 	SLEEP	1*TSEC
-
+	.if 	0
         movi	TOASTY,a2
 	CREATE0	peeker		;Forden
 	SLEEP	5*TSEC
@@ -713,6 +713,7 @@ show_dcslogo
 ;	movi	dcslogo,a2	;Testing
 ;	CREATE0	peeker3
 ;	SLEEP	5*TSEC
+	.endif
 
 	movi	6*TSEC,a10
 
