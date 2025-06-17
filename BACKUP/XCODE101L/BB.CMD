@@ -56,8 +56,8 @@ SCREEN.OBJ
 SELECT3.OBJ
 SELECT4.OBJ
 PLYRAT3.OBJ		/* basketball player code */
-/* COLL2.OBJ		/* Robo Collision code */
-/* ROBO.OBJ		/* Robo Game code */
+COLL2.OBJ		/* Robo Collision code */
+ROBO.OBJ		/* Robo Game code */
 UNZIP.OBJ
 
 MEMORY				/* set up memory for sdb board */

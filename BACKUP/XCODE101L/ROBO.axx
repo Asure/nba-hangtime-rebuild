@@ -1,4 +1,4 @@
-**************************************************************
+********************************w******************************
 *
 * Software:	Jason Skiles
 * Initiated:	4 Oct 93
@@ -86,7 +86,7 @@
 *****************************************************************************
 
 ROBO_DEBUG	equ	0
-WAVE_CONTROL	equ	0
+WAVE_CONTROL	equ	1
 BOG_MONITOR	equ	0
 
 ROBO_PAGE	equ	0*256
@@ -148,6 +148,9 @@ dhaqrobo_loop
 	jruc	dhaqrobo_end
 
 dhaqplayer_died
+	cmpi	16,a0
+	jreq	dhaqrobo_end
+	inc	a0
 	jruc	dhaqrobo_loop
 
 dhaqwave_successful
@@ -478,7 +481,7 @@ mdwlwave_kids
 	movi	CLSPLYR|TYPPLYR,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;set the global pointer
 	move	a8,@player_object,L
@@ -924,7 +927,7 @@ ftoqrate_of_fire	equ	6	;min ticks between shots
 	movi	CLSPLYR|TYPBULLET,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;set the speed and start position
 	move	@player_object,a9,L
@@ -1192,7 +1195,7 @@ puovmid_y2	equ	138+60
 	movi	CLSENMY|TYPGRUNT,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;initialize move timer
 	move	a11,a9
@@ -1513,7 +1516,7 @@ oqzhplace_post
 	movi	CLSNEUT|TYPPOST,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	move	a10,*a8(OMISC),W	;stuff the type in the object
 
@@ -1755,7 +1758,7 @@ ckopmake_obj
 	movi	CLSNEUT|TYPHUMAN,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;choose a direction of motion
 	movi	7,a0
@@ -2364,7 +2367,7 @@ henkmid_y2	equ	138+50
 	movi	CLSENMY|TYPHULK,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;set the move counter
 	movi	rpggmove_freq/2,a0
@@ -2738,7 +2741,7 @@ obnsmid_y2	equ	138+80
 	movi	CLSENMY|TYPSPHEREOID,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;initialize anim counter
 	movi	obnsanim_speed,a9
@@ -3118,7 +3121,7 @@ obnsparent_script
 	movi	CLSENMY|TYPENFORCER,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;grow phase
 
@@ -3479,7 +3482,7 @@ uibwdeath_speed	equ	3		;death seq anim speed
 	movi	CLSENMY|TYPSPARK,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;set the initial velocity.
 	move	@player_object,a0,L
@@ -3718,7 +3721,7 @@ cexsmid_y2	equ	138+60
 	movi	CLSENMY|TYPQUARK,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;initialize anim counter
 	movi	cexsanim_speed,a9
@@ -4030,7 +4033,7 @@ cexsparent_script
 	movi	CLSENMY|TYPTANK,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;grow phase
 
@@ -4338,7 +4341,7 @@ loygdeath_speed	equ	3		;death seq anim speed
 	movi	CLSENMY|TYPSHELL,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;set the initial velocity.
 	move	@player_object,a0,L
@@ -4646,7 +4649,7 @@ frcploop
 	movi	CLSDEAD,a5			;object ID
 	clr	a6				;x vel
 	clr	a7				;y vel
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	move	a8,a0
 ;AMM This call does not work.
@@ -4700,7 +4703,7 @@ frcpframe_datax
 	clr	a5				;object ID
 	clr	a6				;x vel
 	clr	a7				;y vel
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;ones digit
 ;	move	@robo_wave,a2,W
@@ -4724,7 +4727,7 @@ frcpframe_datax
 	clr	a5				;object ID
 	clr	a6				;x vel
 	clr	a7				;y vel
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	;tens digit
 	move	@robo_wave,a0,W
@@ -4745,7 +4748,7 @@ frcpframe_datax
 	clr	a5				;object ID
 	clr	a6				;x vel
 	clr	a7				;y vel
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 kqrqdone
 	rets
@@ -4925,7 +4928,7 @@ qpeudone
 	movi	CLSDEAD,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	move	a9,*a8(OPAL)
 	movi	0707h,a14
@@ -4946,7 +4949,7 @@ qpeudone
 	movi	CLSDEAD,a5
 	clr	a6
 	clr	a7
-	calla	BEGINOBJ
+	calla	BEGINOBJ2
 
 	move	a9,*a8(OPAL)
 	movi	0808h,a14

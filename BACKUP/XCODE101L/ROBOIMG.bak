@@ -80,7 +80,7 @@ spark_1:
 	.word   04000H
 	.long   robo_p
 spark_2:
-	.word   5,5,0,0
+	.word   5,5,-1,-1
 	.long   01316171H
 	.word   04000H
 	.long   robo_p
@@ -90,7 +90,7 @@ spark_3:
 	.word   04000H
 	.long   robo_p
 spark_4:
-	.word   5,5,0,0
+	.word   5,5,-1,-1
 	.long   01316299H
 	.word   04000H
 	.long   robo_p
@@ -625,37 +625,37 @@ wave_text:
 	.word   04000H
 	.long   robo_p
 circle_1:
-	.word   3,1,0,0
+	.word   3,1,-7,-7
 	.long   0131c65dH
 	.word   04000H
 	.long   robo_p
 circle_2:
-	.word   3,3,0,0
+	.word   3,3,-6,-6
 	.long   0131c669H
 	.word   04000H
 	.long   robo_p
 circle_3:
-	.word   5,5,0,0
+	.word   5,5,-5,-5
 	.long   0131c68dH
 	.word   04000H
 	.long   robo_p
 circle_4:
-	.word   7,7,0,0
+	.word   7,7,-4,-4
 	.long   0131c6f1H
 	.word   04000H
 	.long   robo_p
 circle_5:
-	.word   9,9,0,0
+	.word   9,9,-3,-3
 	.long   0131c7b5H
 	.word   04000H
 	.long   robo_p
 circle_6:
-	.word   11,11,0,0
+	.word   11,11,-2,-2
 	.long   0131c8f9H
 	.word   04000H
 	.long   robo_p
 circle_7:
-	.word   13,13,0,0
+	.word   13,13,-1,-1
 	.long   0131caddH
 	.word   04000H
 	.long   robo_p
@@ -715,82 +715,82 @@ rsmall_9:
 	.word   04000H
 	.long   robo_p
 grunt_xv1:
-	.word   9,34,0,0
+	.word   9,34,0,11
 	.long   0131d35dH
 	.word   04000H
 	.long   robo_p
 grunt_xv2:
-	.word   9,56,0,0
+	.word   9,56,0,22
 	.long   0131d825H
 	.word   04000H
 	.long   robo_p
 grunt_xv3:
-	.word   9,78,0,0
+	.word   9,78,0,33
 	.long   0131e005H
 	.word   04000H
 	.long   robo_p
 grunt_xv4:
-	.word   9,100,0,0
+	.word   9,100,0,44
 	.long   0131eafdH
 	.word   04000H
 	.long   robo_p
 grunt_xdb1:
-	.word   27,34,0,0
+	.word   27,34,9,11
 	.long   0131f90dH
 	.word   04000H
 	.long   robo_p
 grunt_xdb2:
-	.word   49,56,0,0
+	.word   49,56,18,22
 	.long   01320765H
 	.word   04000H
 	.long   robo_p
 grunt_xdb3:
-	.word   71,78,0,0
+	.word   71,78,27,33
 	.long   01323245H
 	.word   04000H
 	.long   robo_p
 grunt_xdb4:
-	.word   93,100,0,0
+	.word   93,100,36,44
 	.long   013288cdH
 	.word   04000H
 	.long   robo_p
 grunt_xh1:
-	.word   33,12,0,0
+	.word   33,12,12,0
 	.long   01331a1dH
 	.word   04000H
 	.long   robo_p
 grunt_xh2:
-	.word   57,12,0,0
+	.word   57,12,24,0
 	.long   0133204dH
 	.word   04000H
 	.long   robo_p
 grunt_xh3:
-	.word   81,12,0,0
+	.word   81,12,36,0
 	.long   01332afdH
 	.word   04000H
 	.long   robo_p
 grunt_xh4:
-	.word   105,12,0,0
+	.word   105,12,48,0
 	.long   01333a2dH
 	.word   04000H
 	.long   robo_p
 grunt_xdf1:
-	.word   27,34,0,0
+	.word   27,34,18,11
 	.long   01334dddH
 	.word   04000H
 	.long   robo_p
 grunt_xdf2:
-	.word   49,56,0,0
+	.word   49,56,31,22
 	.long   01335c35H
 	.word   04000H
 	.long   robo_p
 grunt_xdf3:
-	.word   71,78,0,0
+	.word   71,78,44,33
 	.long   01338715H
 	.word   04000H
 	.long   robo_p
 grunt_xdf4:
-	.word   93,100,0,0
+	.word   93,100,57,44
 	.long   0133dd9dH
 	.word   04000H
 	.long   robo_p
@@ -815,12 +815,12 @@ crystal_1:
 	.word   04000H
 	.long   robo_p
 crystal_2:
-	.word   7,7,0,0
+	.word   7,7,-1,-1
 	.long   0134725dH
 	.word   04000H
 	.long   robo_p
 crystal_3:
-	.word   3,3,0,0
+	.word   3,3,-3,-3
 	.long   01347321H
 	.word   04000H
 	.long   robo_p
@@ -830,12 +830,12 @@ diamond_1:
 	.word   04000H
 	.long   robo_p
 diamond_2:
-	.word   7,7,0,0
+	.word   7,7,-1,-1
 	.long   01347489H
 	.word   04000H
 	.long   robo_p
 diamond_3:
-	.word   3,3,0,0
+	.word   3,3,-3,-3
 	.long   0134754dH
 	.word   04000H
 	.long   robo_p
@@ -845,12 +845,12 @@ R2084_1:
 	.word   04000H
 	.long   robo_p
 R2084_2:
-	.word   15,5,0,0
+	.word   15,5,-1,-1
 	.long   0134774dH
 	.word   04000H
 	.long   robo_p
 R2084_3:
-	.word   11,1,0,0
+	.word   11,1,-3,-3
 	.long   01347879H
 	.word   04000H
 	.long   robo_p
@@ -860,12 +860,12 @@ pcube_1:
 	.word   04000H
 	.long   robo_p
 pcube_2:
-	.word   7,7,0,0
+	.word   7,7,-1,-1
 	.long   013479e9H
 	.word   04000H
 	.long   robo_p
 pcube_3:
-	.word   5,5,0,0
+	.word   5,5,-2,-2
 	.long   01347aadH
 	.word   04000H
 	.long   robo_p
@@ -875,12 +875,12 @@ spiral_1:
 	.word   04000H
 	.long   robo_p
 spiral_2:
-	.word   7,6,0,0
+	.word   7,6,0,-2
 	.long   01347c79H
 	.word   04000H
 	.long   robo_p
 spiral_3:
-	.word   5,4,0,0
+	.word   5,4,-2,-2
 	.long   01347d21H
 	.word   04000H
 	.long   robo_p

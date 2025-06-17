@@ -333,6 +333,12 @@ bguplp
 
 	JSRP	show_titlevda
 
+* Robo debug
+	.if	ROBOG
+	.ref	robo_check,robo_game
+	JSRP	robo_check		; RETURNS ONLY
+	.endif	;ROBOG
+
 	.if	VDADEBUG
 	.ref	show_trophy
 	JSRP	show_trophy
@@ -341,12 +347,6 @@ bguplp
 	.if	DCSLOGO
 	JSRP	show_dcslogo
 	.endif
-
-* Robo debug
-	.if	ROBOG
-	.ref	robo_check,robo_game
-	JSRP	robo_check		; RETURNS ONLY
-	.endif	;ROBOG
 
 ;	.ref	get_all_records
 ;	calla	get_all_records
