@@ -1,0 +1,76 @@
+We need a way to get the player head object
+
+plyr.equ
+
+	APTR	plyr_headobj_p	;*Head obj
+
+Pointer to head OBJ
+
+From shadow trail copy, we know:
+
+*	This PROCESS handles the disbatching of process for the player trail
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+* B4=*Next data in seq list
+
+	move	*a11(OIMG),a2,L		;image, like: 	movi	dcslogo,a2
+	move	*a11(OFLAGS),a4		;flags  like: 	movi	DMAWNZ|M_NOCOLL,a4)
+	movi	PLR_TRAIL_ID,a5		;class 	like:	movi	CLSDEAD,a5
+ 	clr	a0			;x
+	clr	a1			;y
+	clr	a3			;z
+	clr	a6			;x vel
+	clr	a7			;y vel
+	calla	BEGINOBJ
+
+; Get head
+
+	PUSH	a8			;save plyr *obj
+
+	clr	a0
+	clr	a1
+	move	*a7(PAT_HEADT_p),a2,L   (why a7?)
+	addi	5*32,a2			;POINT at 6th head (straight ahead)
+	move	*a2,a2,L
+
+PLAN
+====
+
+We can do something like      ?
+
+
+*	This PROCESS handles the Dunkface for specific players
+*
+* Passed when called during a dunk/sequence:
+* A8=*plyr obj
+* A13=*PxCTRL
+* B4=*Next data in seq list
+*
+* INPUT:  reg a8 - * plyr obj (body obj?)
+*        reg a11 - * plyr head obj
+
+seq_dunkface
+	move	*a13(plyr_attrib_p),a2,L
+	move	*a2(PAT_HEADT_p),a2,L   
+	addi	5*32,a2			;POINT at 6th head (straight ahead)
+	move	*a2,a2,L
+
+	move	*a13(plyr_headobj_p),a11,L
+
+	movi	dunkface,a2
+	move	a2,*a11(OIMG),L
+
+From dunking & shatter:
+
+	move	@ballpnumshot,a0	;Get scoring plyr #
+	move	a0,a10			;Get scoring plyr *proc
+	sll	5,a10
+	addi	plyrproc_t,a10
+	move	*a10,a10,L
+	move	*a10(plyr_seq),a6	;Get scoring plyr ani seq #
+
+	move	*a10(plyr_attrib_p),a0,L
+	move	*a0(PAT_DUNKSKILL),a0
+	cmpi	9,a0			;Dunkskill 9 or higher.
+	jrlt	zdiknoshat2
