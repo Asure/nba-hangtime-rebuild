@@ -1,3 +1,93 @@
+PLAN
+====
+
+Expand HDMAC and HDMAC2 so it adds a .long zero to the end of the head tables.
+We can now detect if a head table has a 17th head, or a zero. -Done! 
+(This eats a lot of space but there's plenty left.)
+
+Make some dunkfaces for some players as the 17th head.
+Make a HDMACD and HDMACD2 for 17/6 head tables for those players. - Done!
+
+Write a seq we can call from the PLYRDSEQ*.AXX during dunks. -Wip
+This code should
+
+- Get the dunkin players' head table
+- Checks if element 17 of the table is zero
+- If not, it sets the players head obj to the 17th head, aka the dunkface
+- Replaces the players head (still need to test this out..)
+
+I have code snippets to do this from other parts of the game code. ;)
+
+********************************
+*
+* Changes player head during a dunk seq
+*
+* Head pointers are 32 in size
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+*
+* We can read items from *PxCTRL in a13 (see PLYR.EQU for full structure)
+*
+* 	move	*a13(plyr_headobj_p),a11,L	(a11 now holds a pointer to the current head)
+*
+* We can read sub items as well
+*
+*	move	*a13(plyr_attrib_p),a2,L	(a2 now pointing at full PAT for a player)
+*	move	*a2(PAT_HEADT_p),a2,L   	(a2 now pointing at the head table ex raiden_h with 17 elements)
+*
+* And perform actions on those items now in a2
+*
+*	addi	17*32,a2		;POINT at 17th head (dunkface)
+*	cmpi	0,*a2,L			;check if it is zero
+*	jrz	dunkhddone		;jump if zero since it appears we don't have a dunkface for the player.
+*	move	*a2,a2,L		;instead of a pointer, load the actual value we point to (dereference)
+*	move	a2,*a11(OIMG),L		;move the head into the dunking players' plyr_headobj_p
+* dunkhddone
+*	rets
+
+If we do it in a safe way we create a handler, that creates a process to do this for us, like the smoketrail
+
+********************************
+* Fires up the dunk head changer
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+
+ SUBR start_dunkhead
+
+	PUSH 	a10,a11
+
+ 	move	*a13(plyr_headobj_p),a10,L	(a10 now holds a pointer to the current head)
+	move	*a13(plyr_attrib_p),a11,L	(a11 now pointing at full PAT for a player)
+	move	*a11(PAT_HEADT_p),a11,L   	(a11 now pointing at the head table ex raiden_h with 17 elements)
+	CREATE0	do_dunkhead
+
+	PULL	a10,a11
+	rets
+
+********************************
+* The actual head changer
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+* A10=*plyr head obj
+* A11=*plyr_h table
+
+ SUBRP do_dunkhead
+
+	addi	17*32,a11		;POINT at 17th head (dunkface)
+	cmpi	0,*a11,L		;check if it is zero
+	jrz	dunkhddone		;jump if zero since it appears we don't have a dunkface for the player.
+	move	*a11,a11,L		;instead of a pointer, load the actual value we point to (dereference)
+	move	a11,*a10(OIMG),L	;move the head into the dunking players' plyr_headobj_p
+
+dunkhddone
+
+	DIE
+
+
+
 We need a way to get the player head object
 
 plyr.equ
@@ -74,3 +164,51 @@ From dunking & shatter:
 	move	*a0(PAT_DUNKSKILL),a0
 	cmpi	9,a0			;Dunkskill 9 or higher.
 	jrlt	zdiknoshat2
+
+
+Final code:
+********************************
+* Fires up the dunk head changer
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+	.def 	seq_start_dunkhead
+ SUBR seq_start_dunkhead
+
+	PUSH 	a10,a11
+
+ 	move	*a13(plyr_headobj_p),a10,L	;a10 now holds a pointer to the current head)
+	move	*a13(plyr_attrib_p),a11,L	;a11 now pointing at full PAT for a player)
+	CREATE0	do_dunkhead			;create a proc
+
+	PULL	a10,a11
+	rets
+
+********************************
+* The actual head changer
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+* A10=*plyr head obj
+* A11=*plyr_h table
+
+	.def	do_dunkhead
+ SUBRP do_dunkhead
+
+	move	*a11(PAT_HEADT_p),a2,L   	;a11 now pointing at the head table ex raiden_h with 17 elements)
+
+	addi	16*32,a2		;POINT at 17th head (dunkface) - wierd neck tst for now
+	move	*a2,a9,L		;instead of a pointer, load the actual value we point to (dereference)
+					;tried a2 but it ended up pointing at the ball table for some reason.
+	cmpi	0,a9,L			;check if it is zero
+	jrz	dunkhddone		;jump if zero since it appears we don't have a dunkface for the player.
+dunkhloop
+	SLEEP 	4			
+	move	a9,*a10(OIMG),L		;move the head into the dunking players' plyr_headobj_p
+	move	*a9(ISIZEX),*a10(OSIZEX),W
+	move	*a9(ISIZEY),*a10(OSIZEY),W
+	move	*a9(ISAG),*a10(OSAG),L
+
+dunkhddone
+
+	DIE

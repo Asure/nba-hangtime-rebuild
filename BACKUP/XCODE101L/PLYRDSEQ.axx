@@ -50,6 +50,8 @@
 	.ref	seq_snd
 	.ref	seq_offset
 
+	.ref	seq_start_dunkhead
+
 	.ref	seq_high_dnk_spch
 	.ref	seq_low_dnk_spch
 	.ref	seq_jam_speech
@@ -2297,6 +2299,7 @@ kdzh1
 	WLW	3,w3hks4,F
 	WLW	3,w3hks5,F
 	WL	-1,plyr_shoot
+	WL	-1,seq_start_dunkhead
 	WLW	50,w3hks6,F
 	WLW	3,w3hks7,F
 	WLW	3,w3hks8,F
@@ -2313,6 +2316,7 @@ kdzh2
 	WLW	3,w4hks3,F
 	WLW	3,w4hks4,F
 	WLW	29,w4hks5,F
+	WL	-1,seq_start_dunkhead
 	WL	-1,plyr_shoot
 	WLW	2,w4hks5,F
 	WLW	50,w4hks6,F
@@ -2332,6 +2336,7 @@ kdzh3
 	WL	-1,kdzhrestore_xvel
 	WLW	3,w1hks3,F
 	WLW	29,w1hks4,F
+	WL	-1,seq_start_dunkhead
 	WL	-1,plyr_shoot
 	WLW	3,w1hks5,F
 	WLW	50,w1hks6,F
@@ -2360,6 +2365,7 @@ kdzh3a
 	WLW	3,w5hks3,F
 	WLW	3,w5hks4,F
 	WLW	29,w5hks5,F
+	WL	-1,seq_start_dunkhead
 	WL	-1,plyr_shoot
 	WLW	2,w5hks6,F
 	WLW	50,w5hks7,F
@@ -2378,6 +2384,7 @@ kdzh5
 	WLW	3,w3fhks3,F
 	WLW	3,w3fhks4,F
 	WLW	3,w3fhks5,F
+	WL	-1,seq_start_dunkhead
 	WL	-1,plyr_shoot
 	WLW	2,w3fhks5,F
 	WLW	50,w3fhks6,F

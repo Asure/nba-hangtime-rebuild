@@ -4041,6 +4041,57 @@ ykhznsq2
 	PULL	a0,a1
 	rets
 
+* !! HERE
+********************************
+* Fires up the dunk head changer
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+	.def 	seq_start_dunkhead
+ SUBR seq_start_dunkhead
+
+	PUSH 	a10,a11
+
+ 	move	*a13(plyr_headobj_p),a10,L	;a10 now holds a pointer to the current head)
+	move	*a13(plyr_attrib_p),a11,L	;a11 now pointing at full PAT for a player)
+	CREATE0	do_dunkhead			;create a proc
+
+	PULL	a10,a11
+	rets
+
+********************************
+* The actual head changer
+*
+* A8=*plyr obj
+* A13=*PxCTRL
+* A10=*plyr head obj
+* A11=*plyr_h table
+
+	.def	do_dunkhead
+ SUBRP do_dunkhead
+
+	move	*a11(PAT_HEADT_p),a2,L   	;a11 now pointing at the head table ex raiden_h with 17 elements)
+
+	addi	16*32,a2		;POINT at 17th head (dunkface) - wierd neck tst for now
+	move	*a2,a9,L		;instead of a pointer, load the actual value we point to (dereference)
+	cmpi	0,a9,L			;check if it is zero
+	jrz	dunkhddone		;jump if zero since it appears we don't have a dunkface for the player.
+dunkhloop
+	SLEEP 	4			
+	move	a9,*a10(OIMG),L		;move the head into the dunking players' plyr_headobj_p
+	move	*a9(ISIZEX),*a10(OSIZEX),W
+	move	*a9(ISIZEY),*a10(OSIZEY),W
+	move	*a9(ISAG),*a10(OSAG),L
+
+;need to move more, SAG
+;	jruc	dunkhloop		;test, keep doing it. -> game don't like it.
+	
+
+dunkhddone
+
+	DIE
+
+
 *****************************************
 * Sequence - adjust players X,Y, and/or Z
 *
