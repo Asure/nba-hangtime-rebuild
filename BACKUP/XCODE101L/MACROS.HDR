@@ -43,7 +43,6 @@ HDMAC	.macro	l
 	.long	:l:+X
 	.eval	X+90H,X
 	.endloop
-	.long 	0
 	.endm
 
 HDMAC2	.macro	l
@@ -52,7 +51,6 @@ HDMAC2	.macro	l
 	.loop	5
 	.long	:l:+X
 	.eval	X+90H,X
-	.long	0
 	.endloop
 
 	.eval	X-90h*5,X

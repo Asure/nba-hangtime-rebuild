@@ -36,7 +36,6 @@
 	.asg		0,SEQT
 	.include	"plyr.equ"
 
-
 ;sounds external
 
 	.ref	FLAME_F_13,FLAME2F_13
@@ -4047,16 +4046,19 @@ ykhznsq2
 *
 * A8=*plyr obj
 * A13=*PxCTRL
-	.def 	seq_start_dunkhead
+*
+* Free items we can use here: A9, A10
+*
+	.def 	seq_start_dunkhead		;.def this so we can debug it later.
  SUBR seq_start_dunkhead
 
-	PUSH 	a10,a11
+	PUSH 	a10,a11,a2
 
  	move	*a13(plyr_headobj_p),a10,L	;a10 now holds a pointer to the current head)
 	move	*a13(plyr_attrib_p),a11,L	;a11 now pointing at full PAT for a player)
 	CREATE0	do_dunkhead			;create a proc
 
-	PULL	a10,a11
+	PULL	a10,a11,a2
 	rets
 
 ********************************
@@ -4065,27 +4067,40 @@ ykhznsq2
 * A8=*plyr obj
 * A13=*PxCTRL
 * A10=*plyr head obj
-* A11=*plyr_h table
+* A11=*plyr attrib array
+*
+* Inside this subrp we can theoretically use A9 & A10 as they should be free to use.
+* They are normally passed from the sequence like this:
+* 	WLL	-1,seq_shadow_trail,[7,15]   	;rate,cnt til delete [a9,a10]
 
-	.def	do_dunkhead
+	.def	do_dunkhead			;.def this so we can debug it later.
  SUBRP do_dunkhead
 
-	move	*a11(PAT_HEADT_p),a2,L   	;a11 now pointing at the head table ex raiden_h with 17 elements)
+* We need to filter out players who don't have 17 heads! (So we can use custom head tables with the 17th dunk face.)
 
-	addi	16*32,a2		;POINT at 17th head (dunkface) - wierd neck tst for now
-	move	*a2,a9,L		;instead of a pointer, load the actual value we point to (dereference)
-	cmpi	0,a9,L			;check if it is zero
-	jrz	dunkhddone		;jump if zero since it appears we don't have a dunkface for the player.
+	move	*a11(PAT_HEADT_p),a2,L   	;a2 now pointing at the head table ex raiden_h with 16 elements)
+;	cmpi	raiden_h,a2			;check if it is raiden_h
+;	jrnz	dunkhddone			;no? Done!
+						;We can later add checks for specific players here.
+
+	addi	5*32,a2				;POINT at 5th head (dunkface) - Looking at screen
+	move	*a2,a9,L			;instead of a pointer, load the actual value we point to (dereference)
+	cmpi	0,a9,L				;check if it is zero
+	jrz	dunkhddone			;jump if zero since it appears we don't have a dunkface for the player.
 dunkhloop
-	SLEEP 	4			
-	move	a9,*a10(OIMG),L		;move the head into the dunking players' plyr_headobj_p
-	move	*a9(ISIZEX),*a10(OSIZEX),W
+	SLEEP 	2			
+	move	a9,*a10(OIMG),L			;move the head into the dunking players' plyr_headobj_p
+	move	*a9(ISIZEX),*a10(OSIZEX),W	;size
 	move	*a9(ISIZEY),*a10(OSIZEY),W
-	move	*a9(ISAG),*a10(OSAG),L
+;	move	*a9(IFLAGS),*a10(OFLAGS),L	;not needed (object flags)
+	move	*a9(ISAG),*a10(OSAG),L		;starting addr of gfx data
 
-;need to move more, SAG
-;	jruc	dunkhloop		;test, keep doing it. -> game don't like it.
-	
+						;not handling anipts or pal at the moment.
+						;but it would look something like this:
+;	movi	jordan_p,a0
+;	calla	pal_getf
+;	move	a0,a9
+;	move	a9,*a10(OPAL)
 
 dunkhddone
 
@@ -4098,6 +4113,8 @@ dunkhddone
 * A8=*plyr obj
 * A13=*PxCTRL
 * B4=*Next data in seq list
+*
+
 
 	.if	SHADOWT
 
