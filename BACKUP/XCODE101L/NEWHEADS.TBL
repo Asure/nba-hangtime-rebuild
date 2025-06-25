@@ -359,324 +359,334 @@ JORD16:
 	.long   085c795dH
 	.word   00H
 	.long   JORDNEWP
+JORD17:
+	.word   25,36,11,33
+	.long   085c9385H
+	.word   00H
+	.long   JORDNEWP
 KOBE01:
 	.word   27,35,12,32
-	.long   085c9385H
-	.word   06000H
+	.long   085cafa5H
+	.word   00H
 	.long   KOBE_P
 KOBE02:
 	.word   28,35,13,32
-	.long   085ca9abH
-	.word   06000H
+	.long   085ccd2dH
+	.word   00H
 	.long   KOBE_P
 KOBE03:
 	.word   31,35,13,30
-	.long   085cc0a3H
-	.word   06000H
+	.long   085cebcdH
+	.word   00H
 	.long   KOBE_P
 KOBE04:
 	.word   30,36,9,33
-	.long   085cda11H
-	.word   06000H
+	.long   085d0db5H
+	.word   00H
 	.long   KOBE_P
 KOBE05:
 	.word   27,37,13,35
-	.long   085cf361H
-	.word   06000H
+	.long   085d2f75H
+	.word   00H
 	.long   KOBE_P
 KOBE16:
 	.word   35,31,34,19
-	.long   085d0acbH
-	.word   06000H
+	.long   085d4eadH
+	.word   00H
+	.long   KOBE_P
+KOBE17:
+	.word   37,37,13,35
+	.long   085d7095H
+	.word   00H
 	.long   KOBE_P
 ONEAL01:
 	.word   25,35,11,32
-	.long   085d2439H
+	.long   085d9b5dH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL02:
 	.word   26,35,10,32
-	.long   085d38bbH
+	.long   085dafdfH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL03:
 	.word   30,38,12,34
-	.long   085d4e0fH
+	.long   085dc533H
 	.word   06000H
 	.long   ONEAL_P
 ONEAL04:
 	.word   24,41,10,38
-	.long   085d68c7H
+	.long   085ddfebH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL05:
 	.word   28,42,14,39
-	.long   085d7fd7H
+	.long   085df6fbH
 	.word   06000H
 	.long   ONEAL_P
 ONEAL16:
 	.word   38,30,35,19
-	.long   085d9b67H
+	.long   085e128bH
 	.word   06000H
 	.long   ONEAL_P
 BARKLEY1:
 	.word   28,34,14,31
-	.long   085db61fH
+	.long   085e2d43H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY2:
 	.word   29,35,13,31
-	.long   085dcc6fH
+	.long   085e4393H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY3:
 	.word   32,35,12,31
-	.long   085de439H
+	.long   085e5b5dH
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY4:
 	.word   27,36,9,35
-	.long   085dfe79H
+	.long   085e759dH
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY5:
 	.word   27,37,13,33
-	.long   085e1541H
+	.long   085e8c65H
 	.word   06000H
 	.long   BARKLEY_P
 BARKLEY16:
 	.word   35,32,34,24
-	.long   085e2cabH
+	.long   085ea3cfH
 	.word   06000H
 	.long   BARKLEY_P
 MAG01:
 	.word   26,35,11,32
-	.long   085e46ebH
+	.long   085ebe0fH
 	.word   06000H
 	.long   MAG_P
 MAG02:
 	.word   28,35,12,31
-	.long   085e5c3fH
+	.long   085ed363H
 	.word   06000H
 	.long   MAG_P
 MAG03:
 	.word   32,36,13,33
-	.long   085e7337H
+	.long   085eea5bH
 	.word   06000H
 	.long   MAG_P
 MAG04:
 	.word   28,36,9,33
-	.long   085e8e37H
+	.long   085f055bH
 	.word   06000H
 	.long   MAG_P
 MAG05:
 	.word   25,37,11,33
-	.long   085ea5d7H
+	.long   085f1cfbH
 	.word   06000H
 	.long   MAG_P
 MAG16:
 	.word   34,30,32,20
-	.long   085ebb85H
+	.long   085f32a9H
 	.word   06000H
 	.long   MAG_P
 BIRD01:
 	.word   29,42,14,40
-	.long   085ed36dH
+	.long   085f4a91H
 	.word   06000H
 	.long   BIRD_P
 BIRD02:
 	.word   31,35,13,32
-	.long   085eeff9H
+	.long   085f671dH
 	.word   06000H
 	.long   BIRD_P
 BIRD03:
 	.word   32,35,14,31
-	.long   085f0967H
+	.long   085f808bH
 	.word   06000H
 	.long   BIRD_P
 BIRD04:
 	.word   30,36,13,34
-	.long   085f23a7H
+	.long   085f9acbH
 	.word   06000H
 	.long   BIRD_P
 BIRD05:
 	.word   29,44,14,39
-	.long   085f3cf7H
+	.long   085fb41bH
 	.word   06000H
 	.long   BIRD_P
 BIRD16:
 	.word   35,32,31,22
-	.long   085f5adfH
+	.long   085fd203H
 	.word   06000H
 	.long   BIRD_P
 ARNOLD01:
 	.word   28,35,13,32
-	.long   085f751fH
+	.long   085fec43H
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD02:
 	.word   28,35,11,32
-	.long   085f8c17H
+	.long   0860033bH
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD03:
 	.word   27,38,12,34
-	.long   085fa30fH
+	.long   08601a33H
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD04:
 	.word   26,36,11,33
-	.long   085fbb1bH
+	.long   0860323fH
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD05:
 	.word   27,42,12,40
-	.long   085fd10bH
+	.long   0860482fH
 	.word   06000H
 	.long   ARNOLD_P
 ARNOLD16:
 	.word   38,27,34,21
-	.long   085feb9fH
+	.long   086062c3H
 	.word   06000H
 	.long   ARNOLD_P
 TERM01:
 	.word   28,37,14,34
-	.long   086003abH
+	.long   08607acfH
 	.word   00H
 	.long   TERM_P
 TERM02:
 	.word   28,34,13,32
-	.long   0860240bH
+	.long   08609b2fH
 	.word   00H
 	.long   TERM_P
 TERM03:
 	.word   33,40,12,35
-	.long   086041cbH
+	.long   0860b8efH
 	.word   00H
 	.long   TERM_P
 TERM04:
 	.word   29,37,10,34
-	.long   08606b0bH
+	.long   0860e22fH
 	.word   00H
 	.long   TERM_P
 TERM05:
 	.word   27,43,13,40
-	.long   08608c93H
+	.long   086103b7H
 	.word   00H
 	.long   TERM_P
 TERM16:
 	.word   35,29,31,19
-	.long   0860b0dbH
+	.long   086127ffH
 	.word   00H
 	.long   TERM_P
 WALKER1:
 	.word   27,33,12,30
-	.long   0860d093H
+	.long   086147b7H
 	.word   06000H
 	.long   WALKER_P
 WALKER2:
 	.word   26,33,12,29
-	.long   0860e575H
+	.long   08615c99H
 	.word   06000H
 	.long   WALKER_P
 WALKER3:
 	.word   29,34,6,30
-	.long   0860f991H
+	.long   086170b5H
 	.word   06000H
 	.long   WALKER_P
 WALKER4:
 	.word   24,34,7,29
-	.long   086110adH
+	.long   086187d1H
 	.word   06000H
 	.long   WALKER_P
 WALKER5:
 	.word   24,34,11,31
-	.long   086123cdH
+	.long   08619af1H
 	.word   06000H
 	.long   WALKER_P
 WALKER6:
 	.word   31,31,21,27
-	.long   086136edH
+	.long   0861ae11H
 	.word   06000H
 	.long   WALKER_P
 WALKER7:
 	.word   26,33,3,25
-	.long   08614d73H
+	.long   0861c497H
 	.word   06000H
 	.long   WALKER_P
 WALKER8:
 	.word   33,34,5,24
-	.long   0861618fH
+	.long   0861d8b3H
 	.word   06000H
 	.long   WALKER_P
 WALKER9:
 	.word   27,34,4,26
-	.long   08617bdbH
+	.long   0861f2ffH
 	.word   06000H
 	.long   WALKER_P
 WALKER10:
 	.word   26,32,11,26
-	.long   0861915fH
+	.long   08620883H
 	.word   06000H
 	.long   WALKER_P
 WALKER11:
 	.word   25,27,11,16
-	.long   0861a4dfH
+	.long   08621c03H
 	.word   06000H
 	.long   WALKER_P
 WALKER12:
 	.word   31,28,15,26
-	.long   0861b4b1H
+	.long   08622bd5H
 	.word   06000H
 	.long   WALKER_P
 WALKER13:
 	.word   34,32,20,28
-	.long   0861c909H
+	.long   0862402dH
 	.word   06000H
 	.long   WALKER_P
 WALKER14:
 	.word   27,28,15,26
-	.long   0861e289H
+	.long   086259adH
 	.word   06000H
 	.long   WALKER_P
 WALKER15:
 	.word   26,33,13,29
-	.long   0861f441H
+	.long   08626b65H
 	.word   06000H
 	.long   WALKER_P
 WALKER16:
 	.word   34,29,31,21
-	.long   0862085dH
+	.long   08627f81H
 	.word   06000H
 	.long   WALKER_P
 ELLIS1:
 	.word   28,37,13,34
-	.long   08621f79H
+	.long   0862969dH
 	.word   00H
 	.long   ELLIS_P
 ELLIS2:
 	.word   29,35,10,31
-	.long   08623fd9H
+	.long   0862b6fdH
 	.word   00H
 	.long   ELLIS_P
 ELLIS3:
 	.word   31,35,11,31
-	.long   08625f91H
+	.long   0862d6b5H
 	.word   00H
 	.long   ELLIS_P
 ELLIS4:
 	.word   31,36,12,34
-	.long   08628179H
+	.long   0862f89dH
 	.word   00H
 	.long   ELLIS_P
 ELLIS5:
 	.word   25,37,12,35
-	.long   0862a459H
+	.long   08631b7dH
 	.word   00H
 	.long   ELLIS_P
 ELLIS16:
 	.word   35,31,28,24
-	.long   0862c141H
+	.long   08633865H
 	.word   00H
 	.long   ELLIS_P
 	.TEXT

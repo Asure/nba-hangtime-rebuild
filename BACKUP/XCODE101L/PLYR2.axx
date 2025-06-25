@@ -4079,15 +4079,21 @@ ykhznsq2
 * We need to filter out players who don't have 17 heads! (So we can use custom head tables with the 17th dunk face.)
 
 	move	*a11(PAT_HEADT_p),a2,L   	;a2 now pointing at the head table ex raiden_h with 16 elements)
-;	cmpi	raiden_h,a2			;check if it is raiden_h
-;	jrnz	dunkhddone			;no? Done!
-						;We can later add checks for specific players here.
+	.ref	jordan_h,kobe_h
 
+	cmpi	jordan_h,a2			;check if it is a modded headset
+	jrz	head17				;yes? go for head17!
+	cmpi	kobe_h,a2			;check if it is a modded headset
+	jrz	head17				;yes? go for head17!
+						;We can later add checks for specific players here.
+head5						;Else, For now fall thru and use 5th head
 	addi	5*32,a2				;POINT at 5th head (dunkface) - Looking at screen
+	jruc	dunkdo
+head17
+	addi	17*32,a2			;POINT at 5th head (dunkface) - Looking at screen w tongue!
+dunkdo
 	move	*a2,a9,L			;instead of a pointer, load the actual value we point to (dereference)
-	cmpi	0,a9,L				;check if it is zero
-	jrz	dunkhddone			;jump if zero since it appears we don't have a dunkface for the player.
-dunkhloop
+
 	SLEEP 	2			
 	move	a9,*a10(OIMG),L			;move the head into the dunking players' plyr_headobj_p
 	move	*a9(ISIZEX),*a10(OSIZEX),W	;size
@@ -4167,7 +4173,15 @@ ptp_1	SLEEPK	1
 	clr	a6			;x vel
 	clr	a7			;y vel
 	move	a8,a9
+
+
 	calla	BEGINOBJ
+;amm test
+	.ref	FIFI_F
+	movi	FIFI_F,a0		;grey-ish dark pal
+	calla	pal_getf
+	move	a0,*a8(OPAL)
+
 ;	calla	BEGINOBJP
 
 	move	*a9(OXVAL),a14,L

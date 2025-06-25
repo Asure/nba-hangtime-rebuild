@@ -255,10 +255,11 @@ smok_h
 	
 jordan_h	
 	HDMAC	JORD1
-;	HDMAC	JORDAN1
+	.long	JORD17  ; Add angle 5 face with tongue
 
 kobe_h
 	HDMAC2	KOBE01  ; 5-head Kobe.	
+	.long	KOBE17  ; Add angle 5 face with tongue
 
 oneal_h
 	HDMAC2	ONEAL01

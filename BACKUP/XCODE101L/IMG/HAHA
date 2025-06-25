@@ -29,22 +29,30 @@ Image JORDAN13 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN14 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN15 has 98 colors. Can't fit into 6 bits per pixel.
 Image JORDAN16 has 98 colors. Can't fit into 6 bits per pixel.
-Image JORD1 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD2 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD3 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD4 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD5 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD6 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD7 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD8 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD9 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD10 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD11 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD12 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD13 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD14 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD15 has 199 colors. Can't fit into 6 bits per pixel.
-Image JORD16 has 199 colors. Can't fit into 6 bits per pixel.
+Image JORD1 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD2 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD3 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD4 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD5 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD6 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD7 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD8 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD9 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD10 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD11 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD12 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD13 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD14 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD15 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD16 has 173 colors. Can't fit into 6 bits per pixel.
+Image JORD17 has 173 colors. Can't fit into 6 bits per pixel.
+Image KOBE01 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE02 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE03 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE04 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE05 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE16 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE17 has 256 colors. Can't fit into 6 bits per pixel.
 Image TERM01 has 69 colors. Can't fit into 6 bits per pixel.
 Image TERM02 has 69 colors. Can't fit into 6 bits per pixel.
 Image TERM03 has 69 colors. Can't fit into 6 bits per pixel.
@@ -88,16 +96,16 @@ Image nback9br has 252 colors. Can't fit into 6 bits per pixel.
 Image nback10br has 252 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM               958840 dec	   EA178 hex
+	IMAGE RAM               962652 dec	   EB05C hex
 
-	TOTAL LOAD              958840 dec	   EA178 hex
+	TOTAL LOAD              962652 dec	   EB05C hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records       958840 dec	   EA178 hex
+	In IMAGE RAM records       962652 dec	   EB05C hex
 
-	TOTAL bytes written        958840 dec	   EA178 hex, in 2 records.
+	TOTAL bytes written        962652 dec	   EB05C hex, in 2 records.
 
-Bytes Represented in Tables ... 958840 dec EA178 hex
+Bytes Represented in Tables ... 962652 dec EB05C hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.
