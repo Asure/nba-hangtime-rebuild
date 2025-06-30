@@ -5804,20 +5804,23 @@ slounstm
 	move	@ballpnum,a14
 	jrge	slouchkdist		;Other team has ball?
 
+	.if	PUTBACK
 ;PUTBACK logic
-;	move	*a13(plyr_num),a1
-;	move	@ballpnumlast,a14	;Plyr on the same team as plyr who
-;	srl	1,a1			; missed the basket?
-;	srl	1,a14
-;	cmp	a1,a14
-;	jrnz	slounoffreb		;br=no
-;
-;	move	*a13(plyr_ohpdist),a14
+	move	*a13(plyr_num),a1
+	move	@ballpnumlast,a14	;Plyr on the same team as plyr who
+	srl	1,a1			; missed the basket?
+	srl	1,a14
+	cmp	a1,a14
+	jrnz	slounoffreb		;br=no
+
+	move	*a13(plyr_ohpdist),a14
 ;	cmpi	50,a14
-;	jrhs	sloudorb			;br=not close enough for put-back dunk
-;	movi	PUTBACK_SEQ,a0
-;	jruc	slousseq
-;slounoffreb
+	cmpi	100,a14				;debugging dist
+	jrhs	sloudorb			;br=not close enough for put-back dunk
+	movi	PUTBACK_SEQ,a0
+	jruc	slousseq
+slounoffreb
+	.endif
 	movk	20,a0
 	move	*a5(OXVEL),a1,L
 	mpys	a0,a1
@@ -5865,7 +5868,8 @@ sloudornd	calla	RNDPER
 	cmpi	5,a0
 	jrlt	sloudorej
 
-sloudorb	movk	REBOUND_SEQ,a0
+sloudorb
+	movk	REBOUND_SEQ,a0
 	jruc	slousseq
 sloudorej
 	movk	BLOCKREJ_SEQ,a0
@@ -5886,10 +5890,12 @@ sloufaceb	move	@ballobj_p,a5,L
 	movi	PICKUP_SEQ,a0		;No. Pick-up ball
  	jruc	slousseq
 
-sloublkd	movk	BLOCK_SEQ,a0
+sloublkd
+	movk	BLOCK_SEQ,a0
 
 
-slousseq	move	*a13(plyr_dir),a7
+slousseq
+	move	*a13(plyr_dir),a7
 	callr	plyr_setseq
 
 

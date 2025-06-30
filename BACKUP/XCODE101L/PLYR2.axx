@@ -5157,18 +5157,20 @@ vculz2ok
 	divs	a4,a3
 	divs	a4,a5
 vculsetvel
+	.if	PUTBACK
 ;PUTBACK logic
-;	move	*a13(plyr_seq),a1
-;	cmpi	PUTBACK_SEQ,a1
-;	jrne	vculnoput
-;	clr	a3			;no drift toward ball
-;	clr	a5			;no drift toward ball
-;	move	a3,*a8(OXVEL),L
-;	move	a5,*a8(OZVEL),L
-;	movi	-033000H,a1
-;	move	a1,*a8(OYVEL),L
-;	jruc	vculx
-;vculnoput
+	move	*a13(plyr_seq),a1
+	cmpi	PUTBACK_SEQ,a1
+	jrne	vculnoput
+	clr	a3			;no drift toward ball
+	clr	a5			;no drift toward ball
+	move	a3,*a8(OXVEL),L
+	move	a5,*a8(OZVEL),L
+	movi	-033000H,a1
+	move	a1,*a8(OYVEL),L
+	jruc	vculx
+vculnoput
+	.endif
 
 	move	*a13(plyr_num),a14
 	.ref	pup_nodrift

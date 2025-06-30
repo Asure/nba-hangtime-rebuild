@@ -270,7 +270,8 @@ raqkerror
 
 vywiwtlp
 	move	b13,b13			;Wait for DMAQ empty
-	jrge	vywiwtlp
+;	jrge	vywiwtlp
+	jrgt	vywiwtlp		;improvement from UMK3
 	move	@DMACTRL,a14
 	jrn	vywiwtlp
 

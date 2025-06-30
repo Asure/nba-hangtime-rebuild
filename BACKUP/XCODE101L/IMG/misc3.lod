@@ -152,23 +152,31 @@ Walker.img
 Ellis.img
 ---> ELL_MUG
 ; switch back to auto pal-per-pixel setting
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
 PPP> 0
-;
-; New nameplates here. 
-; Nameplates go into imgtbl.axx !AND! imgtbl.glo 
-;
-; These need to be 6-color and use BAST_Y pal that is already in!
-ASM> names3.tbl
-GLO> names3.glo
-pnames3.img
-PON>
-CON>
-XON>
+FIREFALL.IMG
+ASM> fireseq.tbl
+GLO> fireseq.glo
+---> F4FALL01,F4FALL02,F4FALL03,F4FALL04,F4FALL05,F4FALL06,F4FALL07,F4FALL08
+---> F4FALL09,F4FALL10,F4FALL11,F4FALL12,F4FALL13,F4FALL14,F4FALL15,F4FALL16
+---> F4FALL17,F4FALL18,F4FALL19,F4FALL20,F4FALL21,F4FALL22,F4FALL23,F4FALL24
+---> F4FALL25,F4FALL26,F2FALL01,F2FALL02,F2FALL03,F2FALL04,F2FALL05,F2FALL06
+---> F2FALL07,F2FALL08,F2FALL09,F2FALL10,F2FALL11,F2FALL12,F2FALL13,F2FALL14
+---> F2FALL15,F2FALL16,F2FALL17,F2FALL18,F2FALL19,F2FALL20,F2FALL21,F2FALL22
+---> F2FALL23,F2FALL24,F4FALL10a,F4FALL10b,F4FALL10c
+---> F2FALL08a,F2FALL08b,F2FALL08c
+..\..\ART100\NBA_DEF3.IMG
+ASM> plyrpbck.tbl
+GLO> plyrpbck.glo
+COF>
+XOF>
 ZOF>
----> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL
----> BIRD,TERMINATOR,ARNOLD,WALKER,ELLIS,D_ELLIS
-..\..\ART100\pnames.img
----> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M
+;---> w2blokl1,w2blokl2,w2blokl3,w2blokl4 (in plyrseq.tbl)
+; But these were not in plyrseq.tbl!
+---> w2blokl5,w2blokl6,w2blokl7
+---> w3blokl5,w3blokl6,w3blokl7
+---> w4blokl5,w4blokl6,w4blokl7
+;
 ;
 ;We put hoop & shards here at the back, since it allows easier delete from 
 ;IMGPAL8.ASM
@@ -179,6 +187,7 @@ PPP> 6
 ASM> shatter.tbl
 GLO> shatter.glo
 ZOF>
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
 ---> shard1_1,shard1_2
 ---> shard1_3,shard1_4,shard1_5,shard1_6,shard1_7,shard1_8,shard2_1,shard2_2
 ---> shard2_3,shard2_4,shard2_5,shard2_6,shard2_7,shard2_8,shard3_1,shard3_2
@@ -205,3 +214,21 @@ NBBD8.IMG
 PPP> 6
 ---> nback1br,nback2br,nback3br,nback4br,nback5br
 ---> nback6br,nback7br,nback8br,nback9br,nback10br
+;
+; New nameplates here. 
+; Nameplates go into imgtbl.axx !AND! imgtbl.glo 
+;
+; These need to be 6-color and use BAST_Y pal that is already in!
+ASM> names3.tbl
+GLO> names3.glo
+PPP> 0
+pnames3.img
+PON>
+CON>
+XON>
+ZOF>
+---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL
+---> BIRD,TERMINATOR,ARNOLD,WALKER,ELLIS,D_ELLIS
+..\..\ART100\pnames.img
+---> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M
+

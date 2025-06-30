@@ -33,6 +33,7 @@
 	.include	"behind.tbl"
 	.include	"plyrdsp.tbl"
 	.include	"plyrjsht.tbl"
+	.include	"plyrpbck.tbl"
 	.include	"dunks.glo"
 	.include	"world.equ"
 
@@ -62,6 +63,7 @@
 	.ref	leans_sp,leans_in_sp,pull_jmpr_sp
 	.ref	bslne_lnr_sp
 	.ref	seq_goto_line
+	.ref	robo_2_snd
 ;symbols defined in this file
 
 ;	.def	w3run1
@@ -97,51 +99,59 @@ M_YF	.equ	08000H	;Y free (OFLAGS)
 	.asg	M_WRNONZ|M_FLIPH,FF
 
 ;*
-;putback_t
-;;(very close range only)
-;;	.word	DUNK_M|NOJUMP_M|NOJOY_M|NOCOLLP_M	;DFLGS
-;	.word	NOJUMP_M|BLOCKREB_M|NOSTEAL_M|NOJOY_M
-;	.long	seq_stand
-;	.long	ezhw1,ezhw2,ezhw3,ezhw4
-;	.long	ezhw5,ezhw4,ezhw3,ezhw2
-;ezhw1
-;	WLW	3,w2blokl1,FF
+putback_t
+;(very close range only)
+
+;Todo:
+; This was scrapped during development and i put it back (sic) 
+; The 'DUNK_M' line was double commented. See original .asm file for details.
+; We don't know hot to trigger it in-game.
+
+
+;;	.word	DUNK_M|NOJUMP_M|NOJOY_M|NOCOLLP_M	;Flags for sequence
+	.word	NOJUMP_M|BLOCKREB_M|NOSTEAL_M|NOJOY_M	;if we use this one it's just a seq_block i think!
+	.long	seq_stand				;Code for end of sequence
+	.long	ezhw1,ezhw2,ezhw3,ezhw4			;Directions 1-8
+	.long	ezhw5,ezhw4,ezhw3,ezhw2
+ezhw1
+;	WLW	3,w2blokl1,FF				;just a block
 ;	WLW	3,w2blokl2,FF
 ;	WLW	3,w2blokl3,FF
-;	WLL	-1,seq_block,w2blokl4
+;	WLL	-1,seq_block,w2blokl4			;indicated by this call to seq_block!
 ;	WLW	27,w2blokl4,FF
 ;	WLW	500,w2blokl5,FF
 ;	WLW	3,w2blokl6,FF
 ;	WLW	3,w2blokl7,FF
 ;	WLW	-1,seq_newdir,1*16
-;	W0
+;	W0						;end, go to seq declared in the start (seq_stand)
+
+	WLW	3,w2blokl1,F
+	WLLW	-1,seq_strtdunk,w2blokl3,19		;Next frame begins elevation - seq_strtdunk indicates dunk!
+	WLW	3,w2blokl2,F
+	WLW	3,w2blokl3,F
+	WLW	12,w2blokl4,F
+	WLL	-1,check_own_ball,ezhw1a
+	WLW	1,w2blokl5,F
+	WLW	-1,seq_slamball,3			;This really appears to be a way to score.
+;	WLL	-1,seq_snd,put_back_sp
+	WLL	-1,seq_snd,robo_2_snd			;put_back_sp
+	WLW	500,w2blokl5,F
+	WLW	3,w2blokl6,F
+	WLW	3,w2blokl7,F
+	WLW	-1,seq_newdir,1*16
+	W0
 ;
-;;	WLW	3,w2blokl1,F
-;;	WLLW	-1,seq_strtdunk,w2blokl3,19
-;;	WLW	3,w2blokl2,F
-;;	WLW	3,w2blokl3,F
-;;	WLW	12,w2blokl4,F
-;;	WLL	-1,check_own_ball,ezhw1a
-;;	WLW	1,w2blokl5,F
-;;	WLW	-1,seq_slamball,3
-;;	WLL	-1,seq_snd,put_back_sp
-;;	WLW	500,w2blokl5,F
-;;	WLW	3,w2blokl6,F
-;;	WLW	3,w2blokl7,F
-;;	WLW	-1,seq_newdir,1*16
-;;	W0
-;
-;ezhw1a
-;	WLW	500,w2blokl4,F
-;	WLW	3,w2blokl7,F
-;	WLW	-1,seq_newdir,1*16
-;	W0
-;	
-;
-;ezhw2
-;ezhw3
-;ezhw4
-;	WLW	3,w3blokl1,FF
+ezhw1a
+	WLW	500,w2blokl4,F
+	WLW	3,w2blokl7,F
+	WLW	-1,seq_newdir,1*16
+	W0
+	
+
+ezhw2
+ezhw3
+ezhw4
+;	WLW	3,w3blokl1,FF				;just a block
 ;	WLW	3,w3blokl2,FF
 ;	WLW	3,w3blokl3,FF
 ;	WLL	-1,seq_block,w3blokl4
@@ -151,30 +161,31 @@ M_YF	.equ	08000H	;Y free (OFLAGS)
 ;	WLW	3,w3blokl7,FF
 ;	WLW	-1,seq_newdir,2*16
 ;	W0
-;
-;;	WLW	3,w3blokl1,F
-;;	WLLW	-1,seq_strtdunk,w3blokl3,19
-;;	WLW	3,w3blokl2,F
-;;	WLW	3,w3blokl3,F
-;;	WLW	12,w3blokl4,F
-;;	WLL	-1,check_own_ball,ezhw3a
-;;	WLW	1,w3blokl5,F
-;;	WLW	-1,seq_slamball,3
-;;	WLL	-1,seq_snd,put_back_sp
-;;	WLW	500,w3blokl5,F
-;;	WLW	3,w3blokl6,F
-;;	WLW	3,w3blokl7,F
-;;	WLW	-1,seq_newdir,2*16
-;;	W0
-;
-;ezhw3a
-;	WLW	500,w3blokl4,F
-;	WLW	3,w3blokl7,F
-;	WLW	-1,seq_newdir,2*16
-;	W0
-;
-;ezhw5
-;	WLW	3,w4blokl1,FF
+
+	WLW	3,w3blokl1,F
+	WLLW	-1,seq_strtdunk,w3blokl3,19
+	WLW	3,w3blokl2,F
+	WLW	3,w3blokl3,F
+	WLW	12,w3blokl4,F
+	WLL	-1,check_own_ball,ezhw3a
+	WLW	1,w3blokl5,F
+	WLW	-1,seq_slamball,3
+;	WLL	-1,seq_snd,put_back_sp
+	WLL	-1,seq_snd,robo_2_snd			;put_back_sp
+	WLW	500,w3blokl5,F
+	WLW	3,w3blokl6,F
+	WLW	3,w3blokl7,F
+	WLW	-1,seq_newdir,2*16
+	W0
+
+ezhw3a
+	WLW	500,w3blokl4,F
+	WLW	3,w3blokl7,F
+	WLW	-1,seq_newdir,2*16
+	W0
+
+ezhw5
+;	WLW	3,w4blokl1,FF				;just a block
 ;	WLW	3,w4blokl2,FF
 ;	WLW	3,w4blokl3,FF
 ;	WLL	-1,seq_block,w4blokl4
@@ -184,35 +195,36 @@ M_YF	.equ	08000H	;Y free (OFLAGS)
 ;	WLW	3,w4blokl7,FF
 ;	WLW	-1,seq_newdir,3*16
 ;	W0
-;
-;;	WLW	3,w4blokl1,F
-;;	WLLW	-1,seq_strtdunk,w4blokl3,19
-;;	WLW	3,w4blokl2,F
-;;	WLW	3,w4blokl3,F
-;;	WLW	12,w4blokl4,F
-;;	WLL	-1,check_own_ball,ezhw5a
-;;	WLW	1,w4blokl5,F
-;;	WLW	-1,seq_slamball,3
+
+	WLW	3,w4blokl1,F
+	WLLW	-1,seq_strtdunk,w4blokl3,19
+	WLW	3,w4blokl2,F
+	WLW	3,w4blokl3,F
+	WLW	12,w4blokl4,F
+	WLL	-1,check_own_ball,ezhw5a
+	WLW	1,w4blokl5,F
+	WLW	-1,seq_slamball,3
 ;;	WLL	-1,seq_snd,put_back_sp
-;;	WLW	500,w4blokl5,F
-;;	WLW	3,w4blokl6,F
-;;	WLW	3,w4blokl7,F
-;;	WLW	-1,seq_newdir,3*16
-;;	W0
+	WLL	-1,seq_snd,robo_2_snd			;put_back_sp
+	WLW	500,w4blokl5,F
+	WLW	3,w4blokl6,F
+	WLW	3,w4blokl7,F
+	WLW	-1,seq_newdir,3*16
+	W0
 ;;
-;ezhw5a
-;	WLW	500,w4blokl4,F
-;	WLW	3,w4blokl7,F
-;	WLW	-1,seq_newdir,3*16
-;	W0
-;
-;
-;check_own_ball
-;	move	*b4+,b0,L		      ;get Alternative ending for seq
-;	move	*a13(plyr_ownball),a14
-;	jrp	cob_1				;I own the ball, do reg. end
-;	move	b0,b4			      ;change to Alternative ending
-;cob_1	rets
+ezhw5a
+	WLW	500,w4blokl4,F
+	WLW	3,w4blokl7,F
+	WLW	-1,seq_newdir,3*16
+	W0
+
+
+check_own_ball
+	move	*b4+,b0,L		        ;get Alternative ending for seq
+	move	*a13(plyr_ownball),a14		;
+	jrp	cob_1			        ;I own the ball, do reg. end
+	move	b0,b4			        ;change to Alternative ending
+cob_1	rets
 
 
 stnd2_t	.word	EASYSTAG_M

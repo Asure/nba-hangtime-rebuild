@@ -54,6 +54,12 @@ copy c:\myht\backup\xcode1~3\pal8_b.asm C:\myht\backup\xcode1~3\imgpal8.asm
 type c:\tmp\htextra\imgpal8.asm >> c:\myht\backup\xcode1~3\imgpal8.asm
 rem DCS
 copy c:\tmp\htextra\dcs.* c:\myht\backup\xcode1~3\
+rem PUTBACK cut anims
+del c:\myht\backup\xcode1~3\plyrpbck.tbl
+copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
+rem FIREFALL fatality
+del c:\myht\backup\xcode1~3\fireseq.tbl
+copy c:\tmp\htextra\fireseq.tbl c:\myht\backup\xcode1~3\fireseq.tbl
 
 rem cleanup
 del c:\tmp\htextra\imgpal.asm

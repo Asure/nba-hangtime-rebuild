@@ -17,7 +17,7 @@ start makeimgr
 cd ..
 rem cut the last 70 lines (these are duplicate PALS we dont need.)
 rem linux "head -n -70 input.txt > temp && mv temp input.txt" for example.
-powershell -Command "Get-Content IMGPAL8.ASM | Select-Object -First ((Get-Content IMGPAL8.ASM).Count - 70) | Set-Content IMGPAL18.ASM"
+powershell -Command "Get-Content IMGPAL8.ASM | Select-Object -First ((Get-Content IMGPAL8.ASM).Count - 88) | Set-Content IMGPAL18.ASM"
 del imgpal8.asm
 ren imgpal18.asm IMGPAL8.ASM
 rem pause
