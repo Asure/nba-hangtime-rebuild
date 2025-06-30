@@ -33,6 +33,13 @@
 	.include	"flail.tbl"
 	.include	"world.equ"
 
+	.if	FATALITY
+;	.include	"fireseq.tbl"
+	.include	"firepals.asm"
+	.ref		seq_strtfire,seq_stopfire,seq_smoke,seq_firecircle
+	.endif
+
+
 
 ;sounds external
 
@@ -60,7 +67,7 @@
 
 ;symbols defined in this file
 
-;	.def	FIREFALP
+	.def	FIREFALP
 ;	.def	zwilpal
 
 ;	.def	PLYRFIX_P
@@ -491,12 +498,14 @@ ydsr5
 
 *
 fall_t
+ffall_t
 	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|SAMEDIR_M
 	.long	seq_stand
 	.long	dcgz1,dcgz2,dcgz3,dcgz4,dcgz5,dcgz4,dcgz3,dcgz2
 	.asg	2,N
 dcgz1
 	WLWWW	-1,seq_offset2,0,-32,0
+	WL	-1,seq_strtfire
 	WLW	N,w1fall1,F
 	WLL	-1,seq_snd,fall1_snd
 	WLW	N,w1fall2,F
@@ -510,11 +519,13 @@ dcgz1
 	WLW	N,w1fall9,F
 	WL	-1,seq_stayinair
 	WLW	N,w1fall10,F
+	WL	-1,seq_firecircle
 	WLL	-1,seq_snd,land_snd
 	WLW	N,w1fall11,F
 	WLW	N,w1fall12,F
 	WLW	N,w1fall13,F
 	WLW	10,w1fall14,F
+	WL	-1,seq_smoke
 	WLW	N,w1fall15,F
 	WLW	N,w1fall16,F
 	WLW	N,w1fall17,F
@@ -524,6 +535,7 @@ dcgz1
 	WLW	N,w1fall21,F
 	WLW	N,w1fall22,F
 	WLW	N,w1fall23,F
+	WL	-1,seq_stopfire
 	W0
 
 seq_clr_flag
@@ -532,6 +544,7 @@ seq_clr_flag
 	rets
 dcgz2
 	WLWWW	-1,seq_offset2,0,-30,0
+	WL	-1,seq_strtfire
 	WLW	N,w2fall1,F
 	WLL	-1,seq_snd,fall1_snd
 	WLW	N,w2fall2,F
@@ -546,7 +559,9 @@ dcgz2
 	WLW	N,w2fall9,F
 	WLL	-1,seq_snd,land_snd
 	WLW	N,w2fall10,F
+	WL	-1,seq_firecircle
 	WLW	10,w2fall11,F
+	WL	-1,seq_smoke
 	WLW	N,w2fall12,F
 	WLW	N,w2fall13,F
 	WLW	N,w2fall14,F
@@ -557,9 +572,11 @@ dcgz2
 	WLW	N,w2fall19,F
 	WLW	N,w2fall20,F
 	WLW	N,w2fall21,F
+	WL	-1,seq_stopfire
 	W0
 dcgz3
 	WLWWW	-1,seq_offset2,0,-37,0
+	WL	-1,seq_strtfire
 	WLW	N,w3fall1,F
 	WLL	-1,seq_snd,fall1_snd
 	WLW	N,w3fall2,F
@@ -577,7 +594,9 @@ dcgz3
 	WL	-1,seq_stayinair
 	WLW	N,w3fall13,F
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	10,w3fall14,F
+	WL	-1,seq_smoke
 	WLW	N,w3fall15,F
 	WLW	N,w3fall16,F
 	WLW	N,w3fall17,F
@@ -588,9 +607,11 @@ dcgz3
 	WLW	N,w3fall22,F
 	WLW	N,w3fall23,F
 	WLW	N,w3fall24,F
+	WL	-1,seq_stopfire
 	W0
 dcgz4
 	WLWWW	-1,seq_offset2,0,-37,0
+	WL	-1,seq_strtfire
 	WLW	N,w4fall1,F
 	WLL	-1,seq_snd,fall1_snd
 	WLW	N,w4fall2,F
@@ -606,8 +627,10 @@ dcgz4
 	WL	-1,seq_stayinair
 	WLW	N,w4fall11,F
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	N,w4fall12,F
 	WLW	10,w4fall13,F
+	WL	-1,seq_smoke
 	WLW	N,w4fall14,F
 	WLW	N,w4fall15,F
 	WLW	N,w4fall16,F
@@ -617,10 +640,12 @@ dcgz4
 	WLW	N,w4fall20,F
 	WLW	N,w4fall21,F
 	WLW	N,w4fall22,F
+	WL	-1,seq_stopfire
 	W0
 
 dcgz5
 	WLWWW	-1,seq_offset2,0,-42,0
+	WL	-1,seq_strtfire
 	WLW	N,w5fall1,F
 	WLL	-1,seq_snd,fall1_snd
 	WLW	N,w5fall2,F
@@ -636,9 +661,11 @@ dcgz5
 	WL	-1,seq_stayinair
 	WLW	N,w5fall11,F
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	N,w5fall12,F
 	WLW	N,w5fall13,F
 	WLW	10,w5fall14,F
+	WL	-1,seq_smoke
 	WLW	N,w5fall15,F
 	WLW	N,w5fall16,F
 	WLW	N,w5fall17,F
@@ -647,21 +674,25 @@ dcgz5
 	WLW	N,w5fall20,F
 	WLW	N,w5fall21,F
 	WLW	N,w5fall22,F
+	WL	-1,seq_stopfire
 	W0
 
 	
 *
 flyback_t
+fflyback_t
 	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
 	.long	vhwp1,vhwp2,vhwp3,vhwp4,vhwp5,vhwp4,vhwp3,vhwp2
 flybackwb_t
+fflybackwb_t
 	.word	NOMV_M|NOJUMP_M|NOJOY_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
 	.long	vhwp1,vhwp2,vhwp3,vhwp4,vhwp5,vhwp4,vhwp3,vhwp2
 	.asg	2,N
 vhwp1
 	WLWWW	-1,seq_offset2,0,-32,0
+	WL	-1,seq_strtfire
 	WLW	N,w1fall1,F
 	WLL	-1,seq_snd,fall1_snd
 ;	WLL	-1,seq_snd,boo_snd
@@ -678,11 +709,13 @@ vhwp1
 	WL	-1,seq_injury
 	WLW	N,w1fall10,F
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	N,w1fall11,F
 	WLW	N,w1fall12,F
 	WLW	N,w1fall13,F
 	WLW	10,w1fall14,F
 	WL	-1,seq_noballoff
+	WL	-1,seq_smoke
 	WLW	N,w1fall15,F
 	WLW	N,w1fall16,F
 	WLW	N,w1fall17,F
@@ -692,10 +725,12 @@ vhwp1
 	WLW	N,w1fall21,F
 	WLW	N,w1fall22,F
 	WLW	N,w1fall23,F
+	WL	-1,seq_stopfire
 	W0
 
 vhwp2
 	WLWWW	-1,seq_offset2,0,-30,0
+	WL	-1,seq_strtfire
 	WLW	N,w2fall1,F
 	WLL	-1,seq_snd,fall1_snd
 ;	WLL	-1,seq_snd,boo_snd
@@ -711,9 +746,11 @@ vhwp2
 	WLW	N,w2fall9,F
 	WLL	-1,seq_snd,land_snd
 	WL	-1,seq_injury
+	WL	-1,seq_firecircle
 	WLW	N,w2fall10,F
 	WLW	10,w2fall11,F
 	WL	-1,seq_noballoff
+	WL	-1,seq_smoke
 	WLW	N,w2fall12,F
 	WLW	N,w2fall13,F
 	WLW	N,w2fall14,F
@@ -724,9 +761,11 @@ vhwp2
 	WLW	N,w2fall19,F
 	WLW	N,w2fall20,F
 	WLW	N,w2fall21,F
+	WL	-1,seq_stopfire
 	W0
 vhwp3
 	WLWWW	-1,seq_offset2,0,-37,0
+	WL	-1,seq_strtfire
 	WLW	N,w3fall1,F
 	WLL	-1,seq_snd,fall1_snd
 ;	WLL	-1,seq_snd,boo_snd
@@ -746,8 +785,10 @@ vhwp3
 	WLW	N,w3fall13,F
 	WL	-1,seq_injury
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	10,w3fall14,F
 	WL	-1,seq_noballoff
+	WL	-1,seq_smoke
 	WLW	N,w3fall15,F
 	WLW	N,w3fall16,F
 	WLW	N,w3fall17,F
@@ -758,9 +799,11 @@ vhwp3
 	WLW	N,w3fall22,F
 	WLW	N,w3fall23,F
 	WLW	N,w3fall24,F
+	WL	-1,seq_stopfire
 	W0
 vhwp4
 	WLWWW	-1,seq_offset2,0,-37,0
+	WL	-1,seq_strtfire
 	WLW	N,w4fall1,F
 	WLL	-1,seq_snd,fall1_snd
 ;	WLL	-1,seq_snd,boo_snd
@@ -778,9 +821,11 @@ vhwp4
 	WL	-1,seq_injury
 	WLW	N,w4fall11,F
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	N,w4fall12,F
 	WLW	10,w4fall13,F
 	WL	-1,seq_noballoff
+	WL	-1,seq_smoke
 	WLW	N,w4fall14,F
 	WLW	N,w4fall15,F
 	WLW	N,w4fall16,F
@@ -790,10 +835,12 @@ vhwp4
 	WLW	N,w4fall20,F
 	WLW	N,w4fall21,F
 	WLW	N,w4fall22,F
+	WL	-1,seq_stopfire
 	W0
 
 vhwp5
 	WLWWW	-1,seq_offset2,0,-42,0
+	WL	-1,seq_strtfire
 	WLW	N,w5fall1,F
 	WLL	-1,seq_snd,fall1_snd
 ;	WLL	-1,seq_snd,boo_snd
@@ -810,10 +857,12 @@ vhwp5
 	WL	-1,seq_injury
 	WLW	N,w5fall11,F
 	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_firecircle
 	WLW	N,w5fall12,F
 	WLW	N,w5fall13,F
 	WLW	10,w5fall14,F
 	WL	-1,seq_noballoff
+	WL	-1,seq_smoke
 	WLW	N,w5fall15,F
 	WLW	N,w5fall16,F
 	WLW	N,w5fall17,F
@@ -822,19 +871,23 @@ vhwp5
 	WLW	N,w5fall20,F
 	WLW	N,w5fall21,F
 	WLW	N,w5fall22,F
+	WL	-1,seq_stopfire
 	W0
 
 *
 flyback2_t	;(push, no fall)
+fflyback2_t	;(push, no fall)
 	.word	NOMV_M|NOJOY_M|NOBALL_M|NOJUMP_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
 	.long	npfa1,npfa2,npfa3,npfa4,npfa5,npfa4,npfa3,npfa2
 flybackwb2_t
+fflybackwb2_t
 	.word	NOMV_M|NOJOY_M|NOJUMP_M|NOSTEAL_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
 	.long	npfa1,npfa2,npfa3,npfa4,npfa5,npfa4,npfa3,npfa2
 	.asg	3,N
 npfa1
+	WL	-1,seq_strtfire
 	WLW	N,w1flai1,F
 ;	WLL	-1,seq_snd,boo_snd
 	WLL	-1,seq_snd,flail_snd
@@ -845,9 +898,11 @@ npfa1
 	WLW	N,w1flai6,F
 	WLW	N,w1flai7,F
 	WLW	N,w1flai8,F
+	WL	-1,seq_stopfire
 	W0
 
 npfa2
+	WL	-1,seq_strtfire
 	WLW	N,w2flai1,F
 ;	WLL	-1,seq_snd,boo_snd
 	WLL	-1,seq_snd,flail_snd
@@ -860,8 +915,10 @@ npfa2
 	WLW	N,w2flai8,F
 	WLW	N,w2flai9,F
 	WLW	N,w2flai11,F
+	WL	-1,seq_stopfire
 	W0
 npfa3
+	WL	-1,seq_strtfire
 	WLW	N,w3flai1,F
 ;	WLL	-1,seq_snd,boo_snd
 	WLL	-1,seq_snd,flail_snd
@@ -874,8 +931,10 @@ npfa3
 	WLW	N,w3flai8,F
 	WLW	N,w3flai9,F
 	WLW	N,w3flai1,F
+	WL	-1,seq_stopfire
 	W0
 npfa4
+	WL	-1,seq_strtfire
 	WLW	N,w4flai1,F
 ;	WLL	-1,seq_snd,boo_snd
 	WLL	-1,seq_snd,flail_snd
@@ -886,9 +945,11 @@ npfa4
 	WLW	N,w4flai6,F
 	WLW	N,w4flai7,F
 	WLW	N,w4flai8,F
+	WL	-1,seq_stopfire
 	W0
 
 npfa5
+	WL	-1,seq_strtfire
 	WLW	N,w5flai2,F
 ;	WLL	-1,seq_snd,boo_snd
 	WLL	-1,seq_snd,flail_snd
@@ -900,6 +961,7 @@ npfa5
 	WLW	N,w5flai8,F
 	WLW	N,w5flai10,F
 	WLW	N,w5flai11,F
+	WL	-1,seq_stopfire
 	W0
 
 

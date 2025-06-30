@@ -1804,6 +1804,61 @@ smokp_l
 	LW	SMOK1_11,1	;2
 	LWL0	SMOK1_12,1	;2
 
+;Old smoke table from NBA Jam. These are in imgtbl!
+
+	.if	FATALITY
+	.ref	CLDB2,CLDB3,CLDB4,CLD5,CLD6,CLD7,CLD8,CLD9,CLD10,CLD11
+	.ref	ORNGPAL,WHTPAL,LGRYPAL,GREYPAL,LGRYPAL
+jamsmoke_t
+	.long	cldbw_l,cldblg_l,cldbgry_l,cldblg2_l
+
+cldbw_l
+	LW	CLDB2,3
+	LWL	CLDB3,NEWPALET|3,ORNGPAL
+	LW	CLDB4,2
+	LWL	CLD5,NEWPALET|2,WHTPAL
+	LW	CLD6,2
+	LW	CLD7,2
+	LW	CLD8,2
+	LW	CLD9,2
+	LW	CLD10,2
+	LWL0	CLD11,2
+cldblg_l
+	LW	CLDB2,2
+	LWL	CLDB3,NEWPALET|3,ORNGPAL
+	LW	CLDB4,2
+	LWL	CLD5,NEWPALET|2,LGRYPAL
+	LW	CLD6,2
+	LW	CLD7,2
+	LW	CLD8,2
+	LW	CLD9,2
+	LW	CLD10,2
+	LWL0	CLD11,1
+cldbgry_l
+	LW	CLDB2,3
+	LWL	CLDB3,NEWPALET|2,ORNGPAL
+	LW	CLDB4,2
+	LWL	CLD5,NEWPALET|2,GREYPAL
+	LW	CLD6,2
+	LW	CLD7,2
+	LW	CLD8,2
+	LW	CLD9,1
+	LW	CLD10,1
+	LWL0	CLD11,1
+cldblg2_l
+	LW	CLDB2,2
+	LWL	CLDB3,NEWPALET|2,ORNGPAL
+	LWL	CLDB4,NEWPALET|2,LGRYPAL
+	LW	CLD5,2
+	LW	CLD6,2
+	LW	CLD7,2
+	LW	CLD8,2
+	LW	CLD9,2
+	LW	CLD10,2
+	LWL0	CLD11,2
+	.endif
+
+
 
 SCLT	.macro	sx,sy,sxa,sya
 	.eval	:sx:*1048,X	;Convert (has slight error)
@@ -3590,11 +3645,12 @@ chztlp	CREATE0	plyr_smokepuff
 	dsj	a11,chztlp
 
 	DIE
-
+	.endif			;plyr smoketrail .if 0
 *******************************
 * Smoke trail (Process)
 * A8=*Src obj
 * A10=*Plyr process
+* Used by fatality
 
  SUBR	plyr_smoketrail2
 
@@ -3625,7 +3681,7 @@ yzjilp	CREATE0	plyr_smokepuff
 	movk	3,a0
 	callr	rnd
 	sll	5,a0			;*32
-	addi	smoke_t,a0
+	addi	jamsmoke_t,a0
 	move	*a0,a9,L
 
 	move	*a8(OXVEL),a6,L
@@ -3650,16 +3706,15 @@ yzjilp	CREATE0	plyr_smokepuff
 	sll	16,a0			;X
 	sll	16,a1			;Y
 ; CLDB1WHT,CLDB1ORNG,CLDB1LGRY,CLDB1GRN,CLDB1PURP are also available.
-;	.ref	CLDB1WHT		;AMM add .ref
-;	movi	CLDB1WHT,a2		;these are old from NBA Jam!
-	movi	SMOK1_01,a2
+	.ref	CLDB1ORNG		;AMM add .ref
+	movi	CLDB1ORNG,a2
 	movi	DMAWNZ|M_3D|M_NOCOLL,a4	;No collisions
 	movi	CLSDEAD,a5
 	calla	BEGINOBJ2
 	movi	scale50_t,a0
 	move	a0,*a8(ODATA_p),L
 	SLEEPK	3
-	jauc	FRQDELDIE
+	jauc	FRQDELDIE ; DELOBJDIE? (debug FRQDELDIE/FRANIMQ this is not used in Hangtime but in JAM.)
 
 mslstxy_t
 	.word	12,12,11,10,8,6,3,1		;Y
@@ -3668,7 +3723,7 @@ mslstxy_t
 	.word	0,1,3,6,8,10,11,12
 	.word	12,12,11,10,8,6,3,1
 
-	.endif			;plyr smoketrail .if 0
+
 
 ;---------------------------------------
 

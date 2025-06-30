@@ -58,8 +58,8 @@ rem PUTBACK cut anims
 del c:\myht\backup\xcode1~3\plyrpbck.tbl
 copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
 rem FIREFALL fatality
-del c:\myht\backup\xcode1~3\fireseq.tbl
-copy c:\tmp\htextra\fireseq.tbl c:\myht\backup\xcode1~3\fireseq.tbl
+rem del c:\myht\backup\xcode1~3\fireseq.tbl
+rem copy c:\tmp\htextra\fireseq.tbl c:\myht\backup\xcode1~3\fireseq.tbl
 
 rem cleanup
 del c:\tmp\htextra\imgpal.asm

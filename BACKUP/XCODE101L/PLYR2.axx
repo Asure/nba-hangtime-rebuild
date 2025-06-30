@@ -129,6 +129,11 @@
 	.def	seq_shadow_trail
 	.endif
 
+	.if	FATALITY
+	.def	seq_stopfire,seq_strtfire,seq_firecircle
+	.ref	FIREFALP
+	.endif
+
 
 
 ;uninitialized ram definitions
@@ -4605,55 +4610,70 @@ pyplx	rets
 
 	rets
 
+	.if	FATALITY
+
 *******************************
 * Sequence - Change into fire pal
 
-; SUBR	seq_strtfire
-;
-;;WORD	plyr_keeppal	;Keep pal for reuse upon finish of flames
-;
-;	move	*a13(plyr_keeppal),a0
-;	jrnz	gmsjx
-;	move	*a8(OPAL),a0
-;	move	a0,*a13(plyr_keeppal)
-;	movi	FIREFALP,a0
-;	calla	pal_getf
-;	move	a0,*a8(OPAL)
-;;Do head also
-;	move	*a13(plyr_headobj_p),a1,L
-;	move	*a1(OPAL),a14
-;	move	a14,*a13(plyr_hdkeeppal)
-;	move	a0,*a1(OPAL)
-;gmsjx
-;	rets
+ SUBR	seq_strtfire
+
+;WORD	plyr_keeppal	;Keep pal for reuse upon finish of flames
+
+	move	*a13(plyr_keeppal),a0
+	jrnz	gmsjx
+	move	*a8(OPAL),a0
+	move	a0,*a13(plyr_keeppal)
+	movi	FIREFALP,a0
+	calla	pal_getf
+	move	a0,*a8(OPAL)
+;Do head also
+	move	*a13(plyr_headobj_p),a1,L
+	move	*a1(OPAL),a14
+	move	a14,*a13(plyr_hdkeeppal)
+	move	a0,*a1(OPAL)
+gmsjx
+	rets
 
 *******************************
 * Sequence - Change back from fire pal
 
-; SUBR	seq_stopfire
-;
-;	move	*a13(plyr_keeppal),a0
-;	jrz	blkxx
-;	move	a0,*a8(OPAL)
-;;Do head also
-;	move	*a13(plyr_hdkeeppal),a0
-;	move	*a13(plyr_headobj_p),a1,L
-;	move	a0,*a1(OPAL)
-;	clr	a0
-;	move	a0,*a13(plyr_keeppal)
-;blkxx
-;	rets
+ SUBR	seq_stopfire
+
+	move	*a13(plyr_keeppal),a0
+	jrz	blkxx
+	move	a0,*a8(OPAL)
+;Do head also
+	move	*a13(plyr_hdkeeppal),a0
+	move	*a13(plyr_headobj_p),a1,L
+	move	a0,*a1(OPAL)
+	clr	a0
+	move	a0,*a13(plyr_keeppal)
+blkxx
+	rets
+
+	.endif		;FATALITY
 
 *******************************
 * Sequence - Start smoke
 
-; SUBR	seq_smoke
-;
-;	.ref	plyr_smoketrail2
-;	CREATE0	plyr_smoketrail2
-;	move	a13,*a0(PA10),L
-;
-;	rets
+ SUBR	seq_smoke
+
+	.ref	plyr_smoketrail2
+	CREATE0	plyr_smoketrail2	;in plyr3.axx
+	move	a13,*a0(PA10),L
+
+	rets
+
+*******************************
+* Sequence - create fire circle 
+
+ SUBR	seq_firecircle
+
+	CREATE0 fire_circle		;we should move this to a .seq and call when they fall.
+	move	a13,*a0(PA10),L
+
+	rets
+
 
 
 *******************************

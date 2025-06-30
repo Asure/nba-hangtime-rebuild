@@ -223,11 +223,13 @@ pseq_t
 	SEQG	FLYBACK2_SEQ	,flyback2_t	;Pushed - nofall
 	SEQG	FLYBACKWB_SEQ	,flybackwb_t	;Pushed (have ball)
 	SEQG	FLYBACKWB2_SEQ	,flybackwb2_t	;Pushed (have ball) - no fall
-;	SEQG	FFALL_SEQ	,ffall_t	;Fall down - Catch fire!
-;	SEQG	FFLYBACK_SEQ	,fflyback_t	;Pushed - Catch fire!
-;	SEQG	FFLYBACK2_SEQ	,fflyback2_t	;Pushed - nofall - Catch fire!
-;	SEQG	FFLYBACKWB_SEQ	,fflybackwb_t	;Pushed (have ball)
-;	SEQG	FFLYBACKWB2_SEQ	,fflybackwb2_t	;Pushed (have ball) - no fall
+
+	SEQG	FFALL_SEQ	,ffall_t	;Fall down - Catch fire!
+	SEQG	FFLYBACK_SEQ	,fflyback_t	;Pushed - Catch fire!
+	SEQG	FFLYBACK2_SEQ	,fflyback2_t	;Pushed - nofall - Catch fire!
+	SEQG	FFLYBACKWB_SEQ	,fflybackwb_t	;Pushed (have ball)
+	SEQG	FFLYBACKWB2_SEQ	,fflybackwb2_t	;Pushed (have ball) - no fall
+
 	SEQG	PICKUP_SEQ	,pickup_t	;Pickup ball
 	SEQG	ELBO_SEQ	,elbo_t		;Throw elbows
 	SEQG	ELBO2_SEQ	,elbo2_t	;Throw elbows slower
