@@ -356,7 +356,7 @@ select_sounds
 	.bss	teams_pop,	NUM_TEAMS*32
 	.bss	sorted_teams,	NUM_TEAMS*16
 
-;	BSSX	fatality,16		;Fatality 0,1,2, or 3 for both teams
+;	BSSX	fatality,16		;Fatality 0,1,2, or 3 for both teams ;	moved to plyr.axx
 	BSSX	winningteam,16
 
 	.bss	p1_hide_atts,16

@@ -63,7 +63,7 @@
 
 ;symbols externally defined
 
-	.ref	pup_court,pup_aba
+	.ref	pup_court,pup_aba,fatality
 
 	.ref	DBV
 	.ref	VOLBTN_PRESS
@@ -1439,6 +1439,7 @@ offpzlp	move	a0,*a1+
 	move	a0,@pup_court			;default=INDOOR court
 	move	a0,@pup_aba			;default=regular ball
 	move	a0,@dronesmrt
+	move	a0,@fatality			;no fire pushes default
 
 	.ref	clear_secret_powerup_ram
 	calla	clear_secret_powerup_ram

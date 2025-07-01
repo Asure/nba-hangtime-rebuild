@@ -496,14 +496,429 @@ ydsr5
 	WLW	N,w5flai2,F
 	W0
 
-*
+* Normal fall tables
 fall_t
-ffall_t
 	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|SAMEDIR_M
 	.long	seq_stand
 	.long	dcgz1,dcgz2,dcgz3,dcgz4,dcgz5,dcgz4,dcgz3,dcgz2
 	.asg	2,N
 dcgz1
+	WLWWW	-1,seq_offset2,0,-32,0
+	WLW	N,w1fall1,F
+	WLL	-1,seq_snd,fall1_snd
+	WLW	N,w1fall2,F
+	WLW	N,w1fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w1fall4,F
+	WLW	N,w1fall5,F
+	WLW	N,w1fall6,F
+	WLW	N,w1fall7,F
+	WLW	N,w1fall8,F
+	WLW	N,w1fall9,F
+	WL	-1,seq_stayinair
+	WLW	N,w1fall10,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w1fall11,F
+	WLW	N,w1fall12,F
+	WLW	N,w1fall13,F
+	WLW	10,w1fall14,F
+	WLW	N,w1fall15,F
+	WLW	N,w1fall16,F
+	WLW	N,w1fall17,F
+	WLW	N,w1fall18,F
+	WLW	N,w1fall19,F
+	WLW	N,w1fall20,F
+	WLW	N,w1fall21,F
+	WLW	N,w1fall22,F
+	WLW	N,w1fall23,F
+	W0
+
+seq_clr_flag
+	clr	a0
+	move	a0,*a13(plyr_offset_flag)
+	rets
+dcgz2
+	WLWWW	-1,seq_offset2,0,-30,0
+	WLW	N,w2fall1,F
+	WLL	-1,seq_snd,fall1_snd
+	WLW	N,w2fall2,F
+	WLW	N,w2fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w2fall4,F
+	WLW	N,w2fall5,F
+	WLW	N,w2fall6,F
+	WLW	N,w2fall7,F
+	WLW	N,w2fall8,F
+	WL	-1,seq_stayinair
+	WLW	N,w2fall9,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w2fall10,F
+	WLW	10,w2fall11,F
+	WLW	N,w2fall12,F
+	WLW	N,w2fall13,F
+	WLW	N,w2fall14,F
+	WLW	N,w2fall15,F
+	WLW	N,w2fall16,F
+	WLW	N,w2fall17,F
+	WLW	N,w2fall18,F
+	WLW	N,w2fall19,F
+	WLW	N,w2fall20,F
+	WLW	N,w2fall21,F
+	W0
+dcgz3
+	WLWWW	-1,seq_offset2,0,-37,0
+	WLW	N,w3fall1,F
+	WLL	-1,seq_snd,fall1_snd
+	WLW	N,w3fall2,F
+	WLW	N,w3fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w3fall4,F
+	WLW	N,w3fall5,F
+	WLW	N,w3fall6,F
+	WLW	N,w3fall7,F
+	WLW	N,w3fall8,F
+	WLW	N,w3fall9,F
+	WLW	N,w3fall10,F
+	WLW	N,w3fall11,F
+	WLW	N,w3fall12,F
+	WL	-1,seq_stayinair
+	WLW	N,w3fall13,F
+	WLL	-1,seq_snd,land_snd
+	WLW	10,w3fall14,F
+	WLW	N,w3fall15,F
+	WLW	N,w3fall16,F
+	WLW	N,w3fall17,F
+	WLW	N,w3fall18,F
+	WLW	N,w3fall19,F
+	WLW	N,w3fall20,F
+	WLW	N,w3fall21,F
+	WLW	N,w3fall22,F
+	WLW	N,w3fall23,F
+	WLW	N,w3fall24,F
+	W0
+dcgz4
+	WLWWW	-1,seq_offset2,0,-37,0
+	WLW	N,w4fall1,F
+	WLL	-1,seq_snd,fall1_snd
+	WLW	N,w4fall2,F
+	WLW	N,w4fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w4fall4,F
+	WLW	N,w4fall5,F
+	WLW	N,w4fall6,F
+	WLW	N,w4fall7,F
+	WLW	N,w4fall8,F
+	WLW	N,w4fall9,F
+	WLW	N,w4fall10,F
+	WL	-1,seq_stayinair
+	WLW	N,w4fall11,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w4fall12,F
+	WLW	10,w4fall13,F
+	WLW	N,w4fall14,F
+	WLW	N,w4fall15,F
+	WLW	N,w4fall16,F
+	WLW	N,w4fall17,F
+	WLW	N,w4fall18,F
+	WLW	N,w4fall19,F
+	WLW	N,w4fall20,F
+	WLW	N,w4fall21,F
+	WLW	N,w4fall22,F
+	W0
+
+dcgz5
+	WLWWW	-1,seq_offset2,0,-42,0
+	WLW	N,w5fall1,F
+	WLL	-1,seq_snd,fall1_snd
+	WLW	N,w5fall2,F
+	WLW	N,w5fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w5fall4,F
+	WLW	N,w5fall5,F
+	WLW	N,w5fall6,F
+	WLW	N,w5fall7,F
+	WLW	N,w5fall8,F
+	WLW	N,w5fall9,F
+	WLW	N,w5fall10,F
+	WL	-1,seq_stayinair
+	WLW	N,w5fall11,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w5fall12,F
+	WLW	N,w5fall13,F
+	WLW	10,w5fall14,F
+	WLW	N,w5fall15,F
+	WLW	N,w5fall16,F
+	WLW	N,w5fall17,F
+	WLW	N,w5fall18,F
+	WLW	N,w5fall19,F
+	WLW	N,w5fall20,F
+	WLW	N,w5fall21,F
+	WLW	N,w5fall22,F
+	W0
+
+	
+*
+flyback_t
+	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|NOCOLLP_M|SAMEDIR_M
+	.long	seq_stand
+	.long	vhwp1,vhwp2,vhwp3,vhwp4,vhwp5,vhwp4,vhwp3,vhwp2
+flybackwb_t
+	.word	NOMV_M|NOJUMP_M|NOJOY_M|NOCOLLP_M|SAMEDIR_M
+	.long	seq_stand
+	.long	vhwp1,vhwp2,vhwp3,vhwp4,vhwp5,vhwp4,vhwp3,vhwp2
+	.asg	2,N
+vhwp1
+	WLWWW	-1,seq_offset2,0,-32,0
+	WLW	N,w1fall1,F
+	WLL	-1,seq_snd,fall1_snd
+;	WLL	-1,seq_snd,boo_snd
+	WLW	N,w1fall2,F
+	WLW	N,w1fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w1fall4,F
+	WLW	N,w1fall5,F
+	WLW	N,w1fall6,F
+	WLW	N,w1fall7,F
+	WLW	N,w1fall8,F
+	WLW	N,w1fall9,F
+	WL	-1,seq_stayinair
+	WL	-1,seq_injury
+	WLW	N,w1fall10,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w1fall11,F
+	WLW	N,w1fall12,F
+	WLW	N,w1fall13,F
+	WLW	10,w1fall14,F
+	WL	-1,seq_noballoff
+	WLW	N,w1fall15,F
+	WLW	N,w1fall16,F
+	WLW	N,w1fall17,F
+	WLW	N,w1fall18,F
+	WLW	N,w1fall19,F
+	WLW	N,w1fall20,F
+	WLW	N,w1fall21,F
+	WLW	N,w1fall22,F
+	WLW	N,w1fall23,F
+	W0
+
+vhwp2
+	WLWWW	-1,seq_offset2,0,-30,0
+	WLW	N,w2fall1,F
+	WLL	-1,seq_snd,fall1_snd
+;	WLL	-1,seq_snd,boo_snd
+	WLW	N,w2fall2,F
+	WLW	N,w2fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w2fall4,F
+	WLW	N,w2fall5,F
+	WLW	N,w2fall6,F
+	WLW	N,w2fall7,F
+	WLW	N,w2fall8,F
+	WL	-1,seq_stayinair
+	WLW	N,w2fall9,F
+	WLL	-1,seq_snd,land_snd
+	WL	-1,seq_injury
+	WLW	N,w2fall10,F
+	WLW	10,w2fall11,F
+	WL	-1,seq_noballoff
+	WLW	N,w2fall12,F
+	WLW	N,w2fall13,F
+	WLW	N,w2fall14,F
+	WLW	N,w2fall15,F
+	WLW	N,w2fall16,F
+	WLW	N,w2fall17,F
+	WLW	N,w2fall18,F
+	WLW	N,w2fall19,F
+	WLW	N,w2fall20,F
+	WLW	N,w2fall21,F
+	W0
+vhwp3
+	WLWWW	-1,seq_offset2,0,-37,0
+	WLW	N,w3fall1,F
+	WLL	-1,seq_snd,fall1_snd
+;	WLL	-1,seq_snd,boo_snd
+	WLW	N,w3fall2,F
+	WLW	N,w3fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w3fall4,F
+	WLW	N,w3fall5,F
+	WLW	N,w3fall6,F
+	WLW	N,w3fall7,F
+	WLW	N,w3fall8,F
+	WLW	N,w3fall9,F
+	WLW	N,w3fall10,F
+	WLW	N,w3fall11,F
+	WLW	N,w3fall12,F
+	WL	-1,seq_stayinair
+	WLW	N,w3fall13,F
+	WL	-1,seq_injury
+	WLL	-1,seq_snd,land_snd
+	WLW	10,w3fall14,F
+	WL	-1,seq_noballoff
+	WLW	N,w3fall15,F
+	WLW	N,w3fall16,F
+	WLW	N,w3fall17,F
+	WLW	N,w3fall18,F
+	WLW	N,w3fall19,F
+	WLW	N,w3fall20,F
+	WLW	N,w3fall21,F
+	WLW	N,w3fall22,F
+	WLW	N,w3fall23,F
+	WLW	N,w3fall24,F
+	W0
+vhwp4
+	WLWWW	-1,seq_offset2,0,-37,0
+	WLW	N,w4fall1,F
+	WLL	-1,seq_snd,fall1_snd
+;	WLL	-1,seq_snd,boo_snd
+	WLW	N,w4fall2,F
+	WLW	N,w4fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w4fall4,F
+	WLW	N,w4fall5,F
+	WLW	N,w4fall6,F
+	WLW	N,w4fall7,F
+	WLW	N,w4fall8,F
+	WLW	N,w4fall9,F
+	WLW	N,w4fall10,F
+	WL	-1,seq_stayinair
+	WL	-1,seq_injury
+	WLW	N,w4fall11,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w4fall12,F
+	WLW	10,w4fall13,F
+	WL	-1,seq_noballoff
+	WLW	N,w4fall14,F
+	WLW	N,w4fall15,F
+	WLW	N,w4fall16,F
+	WLW	N,w4fall17,F
+	WLW	N,w4fall18,F
+	WLW	N,w4fall19,F
+	WLW	N,w4fall20,F
+	WLW	N,w4fall21,F
+	WLW	N,w4fall22,F
+	W0
+
+vhwp5
+	WLWWW	-1,seq_offset2,0,-42,0
+	WLW	N,w5fall1,F
+	WLL	-1,seq_snd,fall1_snd
+;	WLL	-1,seq_snd,boo_snd
+	WLW	N,w5fall2,F
+	WLW	N,w5fall3,F
+	WL	-1,seq_clr_flag
+	WLW	N,w5fall4,F
+	WLW	N,w5fall5,F
+	WLW	N,w5fall6,F
+	WLW	N,w5fall7,F
+	WLW	N,w5fall8,F
+	WLW	N,w5fall10,F
+	WL	-1,seq_stayinair
+	WL	-1,seq_injury
+	WLW	N,w5fall11,F
+	WLL	-1,seq_snd,land_snd
+	WLW	N,w5fall12,F
+	WLW	N,w5fall13,F
+	WLW	10,w5fall14,F
+	WL	-1,seq_noballoff
+	WLW	N,w5fall15,F
+	WLW	N,w5fall16,F
+	WLW	N,w5fall17,F
+	WLW	N,w5fall18,F
+	WLW	N,w5fall19,F
+	WLW	N,w5fall20,F
+	WLW	N,w5fall21,F
+	WLW	N,w5fall22,F
+	W0
+
+*
+flyback2_t	;(push, no fall)
+	.word	NOMV_M|NOJOY_M|NOBALL_M|NOJUMP_M|NOCOLLP_M|SAMEDIR_M
+	.long	seq_stand
+	.long	npfa1,npfa2,npfa3,npfa4,npfa5,npfa4,npfa3,npfa2
+flybackwb2_t
+	.word	NOMV_M|NOJOY_M|NOJUMP_M|NOSTEAL_M|NOCOLLP_M|SAMEDIR_M
+	.long	seq_stand
+	.long	npfa1,npfa2,npfa3,npfa4,npfa5,npfa4,npfa3,npfa2
+	.asg	3,N
+npfa1
+	WLW	N,w1flai1,F
+;	WLL	-1,seq_snd,boo_snd
+	WLL	-1,seq_snd,flail_snd
+	WLW	N,w1flai2,F
+	WLW	N,w1flai3,F
+	WLW	N,w1flai4,F
+	WLW	N,w1flai5,F
+	WLW	N,w1flai6,F
+	WLW	N,w1flai7,F
+	WLW	N,w1flai8,F
+	W0
+
+npfa2
+	WLW	N,w2flai1,F
+;	WLL	-1,seq_snd,boo_snd
+	WLL	-1,seq_snd,flail_snd
+	WLW	N,w2flai2,F
+	WLW	N,w2flai3,F
+	WLW	N,w2flai4,F
+	WLW	N,w2flai5,F
+	WLW	N,w2flai6,F
+	WLW	N,w2flai7,F
+	WLW	N,w2flai8,F
+	WLW	N,w2flai9,F
+	WLW	N,w2flai11,F
+	W0
+npfa3
+	WLW	N,w3flai1,F
+;	WLL	-1,seq_snd,boo_snd
+	WLL	-1,seq_snd,flail_snd
+	WLW	N,w3flai2,F
+	WLW	N,w3flai3,F
+	WLW	N,w3flai4,F
+	WLW	N,w3flai5,F
+	WLW	N,w3flai6,F
+	WLW	N,w3flai7,F
+	WLW	N,w3flai8,F
+	WLW	N,w3flai9,F
+	WLW	N,w3flai1,F
+	W0
+npfa4
+	WLW	N,w4flai1,F
+;	WLL	-1,seq_snd,boo_snd
+	WLL	-1,seq_snd,flail_snd
+	WLW	N,w4flai2,F
+	WLW	N,w4flai3,F
+	WLW	N,w4flai4,F
+	WLW	N,w4flai5,F
+	WLW	N,w4flai6,F
+	WLW	N,w4flai7,F
+	WLW	N,w4flai8,F
+	W0
+
+npfa5
+	WLW	N,w5flai2,F
+;	WLL	-1,seq_snd,boo_snd
+	WLL	-1,seq_snd,flail_snd
+	WLW	N,w5flai3,F
+	WLW	N,w5flai4,F
+	WLW	N,w5flai5,F
+	WLW	N,w5flai6,F
+	WLW	N,w5flai7,F
+	WLW	N,w5flai8,F
+	WLW	N,w5flai10,F
+	WLW	N,w5flai11,F
+	W0
+
+
+*
+
+* Fire fall Tables
+ffall_t
+	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|SAMEDIR_M
+	.long	seq_stand
+	.long	fdcgz1,fdcgz2,fdcgz3,fdcgz4,fdcgz5,fdcgz4,fdcgz3,fdcgz2
+	.asg	2,N
+fdcgz1
 	WLWWW	-1,seq_offset2,0,-32,0
 	WL	-1,seq_strtfire
 	WLW	N,w1fall1,F
@@ -538,11 +953,11 @@ dcgz1
 	WL	-1,seq_stopfire
 	W0
 
-seq_clr_flag
-	clr	a0
-	move	a0,*a13(plyr_offset_flag)
-	rets
-dcgz2
+;seq_clr_flag
+;	clr	a0
+;	move	a0,*a13(plyr_offset_flag)
+;	rets
+fdcgz2
 	WLWWW	-1,seq_offset2,0,-30,0
 	WL	-1,seq_strtfire
 	WLW	N,w2fall1,F
@@ -574,7 +989,7 @@ dcgz2
 	WLW	N,w2fall21,F
 	WL	-1,seq_stopfire
 	W0
-dcgz3
+fdcgz3
 	WLWWW	-1,seq_offset2,0,-37,0
 	WL	-1,seq_strtfire
 	WLW	N,w3fall1,F
@@ -609,7 +1024,7 @@ dcgz3
 	WLW	N,w3fall24,F
 	WL	-1,seq_stopfire
 	W0
-dcgz4
+fdcgz4
 	WLWWW	-1,seq_offset2,0,-37,0
 	WL	-1,seq_strtfire
 	WLW	N,w4fall1,F
@@ -643,7 +1058,7 @@ dcgz4
 	WL	-1,seq_stopfire
 	W0
 
-dcgz5
+fdcgz5
 	WLWWW	-1,seq_offset2,0,-42,0
 	WL	-1,seq_strtfire
 	WLW	N,w5fall1,F
@@ -679,18 +1094,16 @@ dcgz5
 
 	
 *
-flyback_t
 fflyback_t
 	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
-	.long	vhwp1,vhwp2,vhwp3,vhwp4,vhwp5,vhwp4,vhwp3,vhwp2
-flybackwb_t
+	.long	fvhwp1,fvhwp2,fvhwp3,fvhwp4,fvhwp5,fvhwp4,fvhwp3,fvhwp2
 fflybackwb_t
 	.word	NOMV_M|NOJUMP_M|NOJOY_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
-	.long	vhwp1,vhwp2,vhwp3,vhwp4,vhwp5,vhwp4,vhwp3,vhwp2
+	.long	fvhwp1,fvhwp2,fvhwp3,fvhwp4,fvhwp5,fvhwp4,fvhwp3,fvhwp2
 	.asg	2,N
-vhwp1
+fvhwp1
 	WLWWW	-1,seq_offset2,0,-32,0
 	WL	-1,seq_strtfire
 	WLW	N,w1fall1,F
@@ -728,7 +1141,7 @@ vhwp1
 	WL	-1,seq_stopfire
 	W0
 
-vhwp2
+fvhwp2
 	WLWWW	-1,seq_offset2,0,-30,0
 	WL	-1,seq_strtfire
 	WLW	N,w2fall1,F
@@ -763,7 +1176,7 @@ vhwp2
 	WLW	N,w2fall21,F
 	WL	-1,seq_stopfire
 	W0
-vhwp3
+fvhwp3
 	WLWWW	-1,seq_offset2,0,-37,0
 	WL	-1,seq_strtfire
 	WLW	N,w3fall1,F
@@ -801,7 +1214,7 @@ vhwp3
 	WLW	N,w3fall24,F
 	WL	-1,seq_stopfire
 	W0
-vhwp4
+fvhwp4
 	WLWWW	-1,seq_offset2,0,-37,0
 	WL	-1,seq_strtfire
 	WLW	N,w4fall1,F
@@ -838,7 +1251,7 @@ vhwp4
 	WL	-1,seq_stopfire
 	W0
 
-vhwp5
+fvhwp5
 	WLWWW	-1,seq_offset2,0,-42,0
 	WL	-1,seq_strtfire
 	WLW	N,w5fall1,F
@@ -875,18 +1288,17 @@ vhwp5
 	W0
 
 *
-flyback2_t	;(push, no fall)
 fflyback2_t	;(push, no fall)
 	.word	NOMV_M|NOJOY_M|NOBALL_M|NOJUMP_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
-	.long	npfa1,npfa2,npfa3,npfa4,npfa5,npfa4,npfa3,npfa2
-flybackwb2_t
+	.long	fnpfa1,fnpfa2,fnpfa3,fnpfa4,fnpfa5,fnpfa4,fnpfa3,fnpfa2
+
 fflybackwb2_t
 	.word	NOMV_M|NOJOY_M|NOJUMP_M|NOSTEAL_M|NOCOLLP_M|SAMEDIR_M
 	.long	seq_stand
-	.long	npfa1,npfa2,npfa3,npfa4,npfa5,npfa4,npfa3,npfa2
+	.long	fnpfa1,fnpfa2,fnpfa3,fnpfa4,fnpfa5,fnpfa4,fnpfa3,fnpfa2
 	.asg	3,N
-npfa1
+fnpfa1
 	WL	-1,seq_strtfire
 	WLW	N,w1flai1,F
 ;	WLL	-1,seq_snd,boo_snd
@@ -901,7 +1313,7 @@ npfa1
 	WL	-1,seq_stopfire
 	W0
 
-npfa2
+fnpfa2
 	WL	-1,seq_strtfire
 	WLW	N,w2flai1,F
 ;	WLL	-1,seq_snd,boo_snd
@@ -917,7 +1329,7 @@ npfa2
 	WLW	N,w2flai11,F
 	WL	-1,seq_stopfire
 	W0
-npfa3
+fnpfa3
 	WL	-1,seq_strtfire
 	WLW	N,w3flai1,F
 ;	WLL	-1,seq_snd,boo_snd
@@ -933,7 +1345,7 @@ npfa3
 	WLW	N,w3flai1,F
 	WL	-1,seq_stopfire
 	W0
-npfa4
+fnpfa4
 	WL	-1,seq_strtfire
 	WLW	N,w4flai1,F
 ;	WLL	-1,seq_snd,boo_snd
@@ -948,7 +1360,7 @@ npfa4
 	WL	-1,seq_stopfire
 	W0
 
-npfa5
+fnpfa5
 	WL	-1,seq_strtfire
 	WLW	N,w5flai2,F
 ;	WLL	-1,seq_snd,boo_snd

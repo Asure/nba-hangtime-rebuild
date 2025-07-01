@@ -313,3 +313,9 @@ Track $040E channel 5 {		// call free
     Play(Laphonso_Ellis);       // start an audio clip
     Wait(Stream);          // ...and wait for it to finish before exiting
 };
+// MK3 Fatality
+Track $040F channel 4 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play("fatality.wav");      	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};

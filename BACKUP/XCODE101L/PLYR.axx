@@ -493,6 +493,7 @@
 	BSSX	pup_nodrift	,16	;Bit 0-3 on = no drift for block jumps
 	BSSX	pup_noassistance,16	;1=turn help off
 	BSSX	pup_aba		,16	;0=regular ball, !0=ABA ball
+	BSSX	fatality	,16	;Fatality 0,1,2, or 3 for both teams
 	BSSX	pup_court	,16	;0=indoor, !0=outdoor
 	BSSX	pup_showhotspots,16	;Bit 0-3 on = show plyr 0-3 hotspots
 
@@ -1307,7 +1308,7 @@ zmnqlp
 	move	@HALT,a0
 	jrnz	zmnqhalted
 
-;	clr	a9
+	clr	a9			;needed for fire pushes
 
 	.if	IMGVIEW
 	move	*a13(plyr_num),a0
@@ -1560,40 +1561,40 @@ zmnqnocol
 	subk	30-15,a2		;stupid K!!!
 	jrle	zmnqchkstag		;Chk stag?
 
-;	move	@plyr_onfire,a1
-;	jrz	zmnqnoflm1
-;	move	@fatality,a2		;bit 0=tm1, bit 1=tm2
-;	jrz	zmnqnoflm1
-;	sll	3,a1
-;	addi	pbit_tbit,a1,L
-;	movb	*a1,a1			;Assume valid plyr_onfire
-;	move	*a13(plyr_num),a3
-;	srl	1,a3			;make tm # 0 or 1
-;	btst	a3,a1
-;	jrnz	zmnqnoflm1			;br=on the on-fire tm
-;	and	a1,a2
-;	jrz	zmnqnoflm1			;br=on-fire tm fatality not set
-;	movi	500,a0			;###
-;	calla	RNDPER
-;	jrls	zmnqnoflm1
-;;Yes, this will be a flaming fall!
-;	movk	1,a9
-;zmnqnoflm1
-;
+	move	@plyr_onfire,a1
+	jrz	zmnqnoflm1
+	move	@fatality,a2		;bit 0=tm1, bit 1=tm2
+	jrz	zmnqnoflm1
+	sll	3,a1
+	addi	pbit_tbit,a1,L
+	movb	*a1,a1			;Assume valid plyr_onfire
+	move	*a13(plyr_num),a3
+	srl	1,a3			;make tm # 0 or 1
+	btst	a3,a1
+	jrnz	zmnqnoflm1		;br=on the on-fire tm
+	and	a1,a2
+	jrz	zmnqnoflm1		;br=on-fire tm fatality not set
+	movi	500,a0			;###
+	calla	RNDPER
+	jrls	zmnqnoflm1
+;Yes, this will be a flaming fall!
+	movk	1,a9
+zmnqnoflm1
+
 	move	*a13(plyr_seq),a14
 
 	movi	FLYBACK_SEQ,a0
-;	move	a9,a9
-;	jrz	zmnqnoflm2
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm2
+	move	a9,a9
+	jrz	zmnqnoflm2
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm2
 	cmp	a0,a14
 	jreq	zmnqcstag
 
-;	cmpi	FALL_SEQ,a14
-;	jrge	zmnqcstag
-;	cmpi	FFLYBACKWB2_SEQ,a14
-;	jrgt	zmnqcstag
+	cmpi	FALL_SEQ,a14
+	jrge	zmnqcstag
+	cmpi	FFLYBACKWB2_SEQ,a14
+	jrgt	zmnqcstag
 
 	cmpi	FLYBACKWB_SEQ,a14
 	jreq	zmnqcstag
@@ -1611,25 +1612,25 @@ zmnqnocol
 	sub	a1,a2
 	abs	a2
 
-;	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm3
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm3
+	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
+	move	a9,a9
+	jrz	zmnqnoflm3
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm3
 	cmpi	1,a2
 	jrle	zmnqfall
 	
 	sll	4,a1
 	PUSH	a14
-	addi	zmnqnoblflail_t,a1		;Powerful guys flail more often
+	addi	zmnqnoblflail_t,a1	;Powerful guys flail more often
 	move	*a1,a0
 	calla	RNDPER
 	PULL	a14
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm4
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm4
+	move	a9,a9
+	jrz	zmnqnoflm4
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm4
 
 ; Will this work?
 	jrls	zmnqfall
@@ -1641,10 +1642,10 @@ zmnqhaveball
 ;normal flyback and never keep ball!
 
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm5
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm5
+	move	a9,a9
+	jrz	zmnqnoflm5
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm5
 
 	move	*a8(OZPOS),a1
 	cmpi	CZMIN+40,a1		;stupid K!!!
@@ -1726,10 +1727,10 @@ zmnqkeepball
 	calla	pushed_speech
 
 	movi	FLYBACKWB_SEQ,a0	;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm6
-;	movi	FFLYBACKWB_SEQ,a0
-;zmnqnoflm6
+	move	a9,a9
+	jrz	zmnqnoflm6
+	movi	FFLYBACKWB_SEQ,a0
+zmnqnoflm6
 
 	move	*a13(plyr_seqflgs),a14
 	btst	DUNK_B,a14
@@ -1769,10 +1770,10 @@ zmnqi5050
 	jrhi	zmnqnofall
 
 	movi	FLYBACKWB_SEQ,a0	;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm7
-;	movi	FFLYBACKWB_SEQ,a0
-;zmnqnoflm7
+	move	a9,a9
+	jrz	zmnqnoflm7
+	movi	FFLYBACKWB_SEQ,a0
+zmnqnoflm7
 	jruc	zmnqfall
 zmnqnofall
 
@@ -1792,10 +1793,10 @@ zmnqflail	move	*a8(OZVEL),a0,L
 	move	a0,*a8(OXVEL),L
 
 	movi	FLYBACKWB2_SEQ,a0	;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm8
-;	movi	FFLYBACKWB2_SEQ,a0
-;zmnqnoflm8
+	move	a9,a9
+	jrz	zmnqnoflm8
+	movi	FFLYBACKWB2_SEQ,a0
+zmnqnoflm8
 	jruc	zmnqfall
 
 zmnqfb
@@ -1805,10 +1806,10 @@ zmnqfb
 ;What else?
 	calla	pushed_speech
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm9
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm9
+	move	a9,a9
+	jrz	zmnqnoflm9
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm9
 
 	move	*a13(plyr_seqflgs),a14
 	btst	DUNK_B,a14
@@ -1825,10 +1826,10 @@ zmnqfb
 	jrgt	zmnqnorm5
 
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm10
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm10
+	move	a9,a9
+	jrz	zmnqnoflm10
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm10
 
 	jruc	zmnqfall
 zmnqnorm5
@@ -1856,10 +1857,10 @@ zmnqflyout
 	jrhi	zmnqfly_short
 
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm11
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm11
+	move	a9,a9
+	jrz	zmnqnoflm11
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm11
 	jruc	zmnqfall
 
 zmnqfly_short
@@ -1874,10 +1875,10 @@ zmnqfly_short
 	move	a0,*a8(OXVEL),L
 
 	movi	FLYBACK2_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm12
-;	movi	FFLYBACK2_SEQ,a0
-;zmnqnoflm12
+	move	a9,a9
+	jrz	zmnqnoflm12
+	movi	FFLYBACK2_SEQ,a0
+zmnqnoflm12
 
 	jruc	zmnqfall
 
@@ -1886,10 +1887,10 @@ zmnqchkstag
 	jrz	zmnqstag			;On gnd?
 
 	movi	FALL_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	jrz	zmnqnoflm13
-;	movi	FFALL_SEQ,a0
-;zmnqnoflm13
+	move	a9,a9
+	jrz	zmnqnoflm13
+	movi	FFALL_SEQ,a0
+zmnqnoflm13
 
 	cmp	a14,a0
 	jrne	zmnqfall

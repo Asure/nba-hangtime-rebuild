@@ -89,6 +89,7 @@
 	.asg	0,MSG_ABABALL	;Flag bit# - ABA ball msg
 	.asg	1,MSG_OUTDOOR	;Flag bit# - outdoor court msg
 	.asg	2,MSG_SPECIAL	;Flag bit# - special msg
+	.asg	3,MSG_FATAL	;Flag bit# - fatality msg
 
 	BSSX	pup_msgs,32	;Matchup screen pup message flags
 
@@ -3320,6 +3321,7 @@ dlgpspecial_moves
 	.long	sp_nodrift
 	.long	sp_noassistance
 	.long	sp_aba
+	.long	sp_fatal
 	.long	sp_court
 	.long	sp_special
 	.long	sp_cmos			;process for forced powerups set in CMOS
@@ -3329,6 +3331,8 @@ dlgpspecial_moves
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* Lock combo counter stuff
 
 ;;fkzjTIMEOUT	.equ	40
 
@@ -3374,6 +3378,8 @@ sp_lockcombo
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* Big Head Powerup
 
 ;qgvxTIMEOUT	.equ	60
 
@@ -3408,6 +3414,8 @@ qgvxlp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* Huge Head Powerup
 
 ;pbonTIMEOUT	.equ	40
 pbonTIMEOUT	.equ	60
@@ -3446,6 +3454,8 @@ pbonlp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* Show shot% Powerup
 
 ;fewsTIMEOUT	.equ	55
 fewsTIMEOUT	.equ	60
@@ -3505,6 +3515,63 @@ fewslp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* Fire Fatality
+*
+* @Fatality 0,1,2, or 3 for both teams 
+
+fataTIMEOUT	.equ	60
+
+sp_fatal
+
+	SLEEPK	1
+fatalp
+	clr	a11
+
+	WAITSWITCH_DWN	JOY_UP,fatalp,0
+
+	movi	fataTIMEOUT,a11
+
+	WAITSWITCH_DWN	JOY_UP|BUT_PASS,fatalp,1
+	WAITSWITCH_DWN	JOY_UP,fatalp,1
+	WAITSWITCH_DWN	JOY_UP|BUT_PASS,fatalp,1
+
+;a9=0-3 for player
+	.ref	fatality
+;	move	@fatality,a0
+;	movk	1,a1
+;	sll	a9,a1
+;	or	a1,a0
+;	move	a0,@fatality
+
+	move    @fatality,a0     ; load current fatality value
+	cmpi    2,a9             ; is a9 >= 2?
+	jrlt    add1             ; if a9 < 2, add 1
+	addk    2,a0             ; a9 is 2 or 3, add 2
+	jruc    store
+add1
+   	addk    1,a0             ; a9 is 0 or 1, add 1
+store:
+	move    a0,@fatality     ; store updated value
+
+
+;DJT Start
+	movk	1<<MSG_FATAL,a3
+	movi	msg_fatal_setup,a2,L
+	movi	msg_fatal,a4,L
+	movi	fatpwrup_snds,a11	;debug!
+
+;DJT Start
+ 	jruc	pupmsg
+
+;DJT End
+
+
+*******************************************************************************
+* a8=PnCTRL for this player
+* a9=plyr #
+*
+* Show Hotspots Powerup
 
 xldwTIMEOUT	.equ	60
 
@@ -3537,6 +3604,8 @@ xldwlp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* No Tag arrows Powerup
 
 ;bwjfTIMEOUT	.equ	50
 bwjfTIMEOUT	.equ	60
@@ -3573,6 +3642,8 @@ bwjflp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* No Drift Powerup
 
 ;odpeTIMEOUT	.equ	50
 odpeTIMEOUT	.equ	60
@@ -3616,6 +3687,8 @@ odpelp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* Disable all computer assistance Powerup
 
 engoTIMEOUT	.equ	60
 
@@ -3648,6 +3721,8 @@ engolp
 *******************************************************************************
 * a8=PnCTRL for this player
 * a9=plyr #
+*
+* ABA Ball Powerup
 
 ;lnizTIMEOUT	.equ	40
 lnizTIMEOUT	.equ	60
@@ -4044,6 +4119,15 @@ spcpwrup_snds
 	.ref	yes_no_sel1,yes_no_sel2,yes_no_sel3,yes_no_sel4
 	.long	yes_no_sel1,yes_no_sel2,yes_no_sel3,yes_no_sel4
 
+fatpwrup_snds
+	.ref	mk3_fatal
+	.long	mk3_fatal,mk3_fatal,mk3_fatal,mk3_fatal
+
+msg_fatal_setup
+	PRINT_STR	bast8_ascii,5,0,200,74,BAST_C_P,0
+msg_fatal
+	.string	"Fatalities Enabled",0
+	.even
 
 msg_ababall_setup
 	PRINT_STR	bast8_ascii,5,0,200,84,BAST_C_P,0

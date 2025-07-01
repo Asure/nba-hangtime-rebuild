@@ -172,7 +172,7 @@
 	.ref	award_plr_attrib_pts
 
 	.ref	pup_showshotper,pup_noassistance
-	.ref	pup_court,pup_aba
+	.ref	pup_court,pup_aba,fatality
 	.ref	kp_p1_crtplr,kp_p2_crtplr,kp_p3_crtplr,kp_p4_crtplr
 ;DJT Start
 	.ref	logos,name_sort
@@ -2508,6 +2508,7 @@ ljicxb
 	clr	a0
 	move	a0,@pup_showshotper
 	move	a0,@pup_noassistance
+	move	a0,@fatality
 
 	movk	NUM_TEAMS-1,a0
 	calla	RNDRNG0
