@@ -67,6 +67,11 @@
 	.ref	sumrslts_sp
 	.ref	shot_type
 
+	.if	HOOKDEBUG
+	.include	plyrdsq3.tbl
+	.ref	seq_strtfire,seq_stopfire,seq_smoke
+	.endif
+
 ;FIX!!!!  We can get rid of the pal data for these pals in imgpal3 before
 ;game ships!  Check zwilpal, etc.  All unused pals!
 ;	.ref	PLYRFX2_P
@@ -2284,6 +2289,149 @@ ybvl5
 
 
 ********************************
+	.if	HOOKDEBUG
+* Use for debug dunk & hook stuff!
+* need to test doink transformation D4ST4E03-6 D2GH3A02-7
+* all these images are with the player facing RIGHT
+* Needs extra point table where to position the ball. (anipt mode 2)
+* Edit the 3rd set with the mouse in the grey area where it says a3x a3y
+*
+* Format: AAA,BBB,F  AAA=frame hold time, image name, marker F
+
+hook_t
+hook2_t
+;	.word	NOJUMP_M|SHOOT_M|NOJOY_M
+	.word	DFLGS
+	.long	seq_stand
+	.long	kdzh4,kdzh4,kdzh4,kdzh4
+	.long	kdzh4,kdzh4,kdzh4,kdzh4
+kdzh1
+	WLW	2,S3OASD01,F
+	WL	-1,seq_strtfire
+	WLLW	-1,seq_strtdunk,S3OASD05,73	;Next frame begins elevation
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WLL	-1,seq_snd,goes_up_sp
+	WLW	3,S3OASD02,F
+	WLW	3,S3OASD03,F
+	WLW	3,S3OASD04,F
+	WLW	3,S3OASD05,F
+	WLW	3,S3OASD06,F
+	WLW	3,S3OASD07,F
+	WLW	3,S3OASD08,F
+	WLW	3,S3OASD09,F
+	WLW	15,S3OASD10,F
+	WLW	3,S3OASD11,F
+	WLW	3,S3OASD12,F
+	WLW	3,S3OASD13,F
+	WLW	3,S3OASD14,F
+	WLW	3,S3OASD15,F
+	WLW	1,S3OASD16,F
+	WLW	-1,seq_slamball,2		;Ball centers in hoop at
+	WL	-1,seq_stopfire
+	WLW	2,S3OASD17,F
+	WLW	500,S3OASD17,F
+	WLW	3,S3OASD18,F			;Lands on ground
+	WLW	3,S3OASD19,F
+	WLW	-1,seq_newdir,0*16
+	W0
+;needs longer (very long!) range.
+kdzh2	
+	WLW	2,M8OHM301,F
+	WL	-1,seq_strtfire
+	WLLW	-1,seq_strtdunk,M8OHM305,73	;Next frame begins elevation
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WLL	-1,seq_snd,goes_up_sp
+	WLW	3,M8OHM302,F
+	WLW	3,M8OHM303,F
+	WLW	3,M8OHM304,F
+	WLW	3,M8OHM305,F
+	WLW	3,M8OHM306,F
+	WLW	3,M8OHM307,F
+	WLW	3,M8OHM308,F
+	WLW	3,M8OHM309,F
+	WLW	35,M8OHM310,F
+	WLW	3,M8OHM311,F
+	WLW	3,M8OHM312,F
+	WLW	3,M8OHM313,F
+	WLW	3,M8OHM314,F
+	WLW	3,M8OHM315,F
+	WLW	1,M8OHM316,F
+	WLW	-1,seq_slamball,2		;Ball centers in hoop at
+	WL	-1,seq_stopfire
+	WLW	2,M8OHM317,F
+	WLW	500,M8OHM317,F
+	WLW	3,M8OHM318,F			;Lands on ground
+	WLW	3,M8OHM319,F
+	WLW	-1,seq_newdir,0*16
+	W0
+kdzh3	;looks like a very simple dunk?
+	WLW	2,M8OASD01,F
+	WL	-1,seq_strtfire
+	WLLW	-1,seq_strtdunk,M8OASD05,73	;Next frame begins elevation
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WLL	-1,seq_snd,goes_up_sp
+	WLW	3,M8OASD02,F
+	WLW	3,M8OASD03,F
+	WLW	3,M8OASD04,F
+	WLW	3,M8OASD05,F
+	WLW	3,M8OASD06,F
+	WLW	3,M8OASD07,F
+	WLW	3,M8OASD08,F
+	WLW	3,M8OASD09,F
+	WLW	35,M8OASD10,F
+	WLW	3,M8OASD11,F
+	WLW	3,M8OASD12,F
+	WLW	3,M8OASD13,F
+	WLW	3,M8OASD14,F
+	WLW	3,M8OASD15,F
+	WLW	1,M8OASD16,F
+	WLW	-1,seq_slamball,2		;Ball centers in hoop at
+	WL	-1,seq_stopfire
+	WLW	2,M8OASD17,F
+	WLW	500,M8OASD17,F
+	WLW	3,M8OASD18,F			;Lands on ground
+;	WLW	3,M8OASD19,F
+	WLW	-1,seq_newdir,0*16
+	W0
+kdzh4	; very nice dunk! needs longer (very long!) range.
+	WLW	2,M8REVD01,F
+	WL	-1,seq_smoke
+	WLLW	-1,seq_strtdunk,M8REVD08,73	;Next frame begins elevation
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WLL	-1,seq_snd,goes_up_sp
+	WLW	3,M8REVD02,F
+	WLW	3,M8REVD03,F
+	WLW	3,M8REVD04,F
+	WLW	3,M8REVD05,F
+	WLW	3,M8REVD06,F
+	WLW	3,M8REVD07,F
+	WLW	3,M8REVD08,F
+	WLW	3,M8REVD09,F
+	WLW	35,M8REVD10,F
+	WLW	3,M8REVD11,F
+	WLW	3,M8REVD12,F
+	WLW	3,M8REVD13,F
+	WLW	3,M8REVD14,F
+	WLW	3,M8REVD15,F
+	WLW	1,M8REVD16,F
+	WLW	-1,seq_slamball,2		;Ball centers in hoop at
+;	WL	-1,seq_stopfire
+	WLW	2,M8REVD17,F
+	WLW	500,M8REVD17,F
+	WLW	3,M8REVD18,F			;Lands on ground
+	WLW	3,M8REVD19,F
+	WLW	3,M8REVD20,F
+	WLW	3,M8REVD21,F
+
+	WLW	-1,seq_newdir,0*16
+	W0
+
+
+
+
+	.else
+********************************
+* Original Hook tables
 
 hook_t
 hook2_t
@@ -2420,6 +2568,8 @@ kdzhrestore_xvel
 	move	@KP_TMPZ,a0,L
 	move	a0,*a8(OZVEL),L
 	rets
+
+	.endif
 
 
 

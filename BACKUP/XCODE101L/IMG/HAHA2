@@ -13,19 +13,16 @@ Loading images ...
 	      
 SET new IRAM address = 2000000 bank 0
 SET new IRAM address = 7000000 bank 1
-Image Library [court\uground2.img] could not be opened.
 
 Bytes Loaded...
-	IMAGE RAM                35722 dec	    8B8A hex
+	IMAGE RAM               911412 dec	   DE834 hex
 
-	TOTAL LOAD               35722 dec	    8B8A hex
+	TOTAL LOAD              911412 dec	   DE834 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records        35722 dec	    8B8A hex
+	In IMAGE RAM records       911412 dec	   DE834 hex
 
-	TOTAL bytes written         35722 dec	    8B8A hex, in 2 records.
+	TOTAL bytes written        911412 dec	   DE834 hex, in 2 records.
 
-Bytes Represented in Tables ... 35722 dec 8B8A hex
-
-WARNING!! Some image libs could not be opened!!!
+Bytes Represented in Tables ... 911411 dec DE833 hex
 

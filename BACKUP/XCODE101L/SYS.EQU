@@ -49,6 +49,7 @@ SHADOWT	.equ	0	;Player Shadowtrails (Abandoned feature, EXPERIMENTAL) combined c
 SPARKDB	.equ	0	;Ball sparking test (Abandoned feature, EXPERIMENTAL)
 PUTBACK	.equ	1	;Putback rebounds (Abandoned feature, EXPERIMENTAL)
 FATALITY .equ	1	;Fire push fatality
+HOOKDEBUG .equ	1	;Debug dunks using hook table ;)
 
 ;DJT End
 

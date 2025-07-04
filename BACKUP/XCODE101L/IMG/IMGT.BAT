@@ -70,5 +70,9 @@ del c:\tmp\htextra\*.glo
 echo !!! DELETE BAST_Y_P duplicate from IMGPAL8.ASM !!!
 echo !!! DELETE BOTH HOOP_p duplicate from IMGPAL8.ASM !!!
 loadw misc4 /t=c:\tmp\htextra /FI /E >haha2
+rem unused dunk #1
+del c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
+copy c:\tmp\htextra\PLYRDSQ3.TBL c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
+
 ::pause
 exit
