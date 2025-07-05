@@ -2303,13 +2303,23 @@ hook2_t
 ;	.word	NOJUMP_M|SHOOT_M|NOJOY_M
 	.word	DFLGS
 	.long	seq_stand
-	.long	kdzh4,kdzh4,kdzh4,kdzh4
-	.long	kdzh4,kdzh4,kdzh4,kdzh4
-kdzh1
+	.long	kzdh5,kzdh5,kzdh5,kzdh5
+	.long	kzdh5,kzdh5,kzdh5,kzdh5
+kzdh1	;big one-arm slam dunk (with arm retract)
+	;long range, high.?
+	
 	WLW	2,S3OASD01,F
-	WL	-1,seq_strtfire
-	WLLW	-1,seq_strtdunk,S3OASD05,73	;Next frame begins elevation
-	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WL	-1,seq_smoke			;turn on the fire pal for body & head for fun.
+	WLLW	-1,seq_strtdunk,S3OASD17,73	;Next frame begins elevation
+						;Last frame before releasing
+						;ball, the last frame with
+						;Last # is total ticks until
+						;player is at rim.
+					
+						;this sequence is: 
+						;2+(8*3)+35+(5*3)+1 = 26+35+15+1 = 77 and we have 73 set.
+
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP	;play speech sample
 	WLL	-1,seq_snd,goes_up_sp
 	WLW	3,S3OASD02,F
 	WLW	3,S3OASD03,F
@@ -2319,26 +2329,38 @@ kdzh1
 	WLW	3,S3OASD07,F
 	WLW	3,S3OASD08,F
 	WLW	3,S3OASD09,F
-	WLW	15,S3OASD10,F
+	WLW	35,S3OASD10,F			;display this one for 35 frames/ticks
 	WLW	3,S3OASD11,F
 	WLW	3,S3OASD12,F
 	WLW	3,S3OASD13,F
 	WLW	3,S3OASD14,F
 	WLW	3,S3OASD15,F
-	WLW	1,S3OASD16,F
-	WLW	-1,seq_slamball,2		;Ball centers in hoop at
-	WL	-1,seq_stopfire
+	WLW	2,S3OASD16,F
+	WLW	-1,seq_slamball,15		;Ball centers in hoop at
+						;display of next frame
+						;Last cnt is total hang cnt
 	WLW	2,S3OASD17,F
-	WLW	500,S3OASD17,F
-	WLW	3,S3OASD18,F			;Lands on ground
-	WLW	3,S3OASD19,F
+	WLW	2,S3OASD18,F			
+	WLW	2,S3OASD19,F
+	WLW	2,S3OASD14,F
+	WLW	2,S3OASD13,F
+	WLW	500,S3OASD12,F                    ;Lands on ground
 	WLW	-1,seq_newdir,0*16
 	W0
-;needs longer (very long!) range.
-kdzh2	
+
+kzdh2	; leg walk one arm dunk. Very noice
+	; debugged, looks good. Done medium range
 	WLW	2,M8OHM301,F
-	WL	-1,seq_strtfire
-	WLLW	-1,seq_strtdunk,M8OHM305,73	;Next frame begins elevation
+	WL	-1,seq_smoke
+	WLLW	-1,seq_strtdunk,M8OHM317,75	;Next frame begins elevation
+						;Last frame before releasing
+						;ball, the last frame with
+						;Last # is total ticks until
+						;player is at rim.
+					
+						;this sequence is: 
+						;2+(8*3)+35+(5*3)+1 = 26+35+15+1 = 77 and we have 73 set.
+
 	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
 	WLL	-1,seq_snd,goes_up_sp
 	WLW	3,M8OHM302,F
@@ -2357,17 +2379,88 @@ kdzh2
 	WLW	3,M8OHM315,F
 	WLW	1,M8OHM316,F
 	WLW	-1,seq_slamball,2		;Ball centers in hoop at
-	WL	-1,seq_stopfire
 	WLW	2,M8OHM317,F
 	WLW	500,M8OHM317,F
 	WLW	3,M8OHM318,F			;Lands on ground
 	WLW	3,M8OHM319,F
 	WLW	-1,seq_newdir,0*16
 	W0
-kdzh3	;looks like a very simple dunk?
+kzdh2a	;Direction from below(facing north). medium range then.
+	WLW	2,M8OHM201,F
+	WL	-1,seq_smoke
+	WLLW	-1,seq_strtdunk,M8OHM317,75	;Next frame begins elevation
+						;Last frame before releasing
+						;ball, the last frame with
+						;Last # is total ticks until
+						;player is at rim.
+					
+						;this sequence is: 
+						;2+(8*3)+35+(5*3)+1 = 26+35+15+1 = 77 and we have 73 set.
+
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WLL	-1,seq_snd,goes_up_sp
+	WLW	3,M8OHM202,F
+	WLW	3,M8OHM203,F
+	WLW	3,M8OHM204,F
+	WLW	3,M8OHM205,F
+	WLW	3,M8OHM206,F
+	WLW	3,M8OHM207,F
+	WLW	3,M8OHM208,F
+	WLW	3,M8OHM209,F
+	WLW	35,M8OHM210,F
+	WLW	3,M8OHM211,F
+	WLW	3,M8OHM212,F
+	WLW	3,M8OHM213,F
+	WLW	3,M8OHM214,F
+	WLW	3,M8OHM215,F
+	WLW	1,M8OHM216,F
+	WLW	-1,seq_slamball,2		;Ball centers in hoop at
+	WLW	2,M8OHM217,F
+	WLW	500,M8OHM217,F
+	WLW	3,M8OHM218,F			;Lands on ground
+	WLW	-1,seq_newdir,0*16
+	W0
+kzdh2b	;Direction thru middle. 
+	WLW	2,M8OHM501,F
+	WL	-1,seq_smoke
+	WLLW	-1,seq_strtdunk,M8OHM317,75	;Next frame begins elevation
+						;Last frame before releasing
+						;ball, the last frame with
+						;Last # is total ticks until
+						;player is at rim.
+					
+						;this sequence is: 
+						;2+(8*3)+35+(5*3)+1 = 26+35+15+1 = 77 and we have 73 set.
+
+	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
+	WLL	-1,seq_snd,goes_up_sp
+	WLW	3,M8OHM502,F
+	WLW	3,M8OHM503,F
+	WLW	3,M8OHM504,F
+	WLW	3,M8OHM505,F
+	WLW	3,M8OHM506,F
+	WLW	3,M8OHM507,F
+	WLW	3,M8OHM508,F
+	WLW	3,M8OHM509,F
+	WLW	35,M8OHM510,F
+	WLW	3,M8OHM511,F
+	WLW	3,M8OHM512,F
+	WLW	3,M8OHM513,F
+	WLW	3,M8OHM514,F
+	WLW	3,M8OHM515,F
+	WLW	1,M8OHM516,F
+	WLW	-1,seq_slamball,2		;Ball centers in hoop at
+	WLW	2,M8OHM517,F
+	WLW	500,M8OHM517,F
+	WLW	3,M8OHM518,F			;Lands on ground
+	WLW	-1,seq_newdir,0*16
+	W0
+
+kzdh3	;looks like a over arm dunk, med range
+	;debugged, looks good. Done.
 	WLW	2,M8OASD01,F
-	WL	-1,seq_strtfire
-	WLLW	-1,seq_strtdunk,M8OASD05,73	;Next frame begins elevation
+	WL	-1,seq_smoke
+	WLLW	-1,seq_strtdunk,M8OASD17,75	;Next frame begins elevation
 	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
 	WLL	-1,seq_snd,goes_up_sp
 	WLW	3,M8OASD02,F
@@ -2390,15 +2483,19 @@ kdzh3	;looks like a very simple dunk?
 	WLW	2,M8OASD17,F
 	WLW	500,M8OASD17,F
 	WLW	3,M8OASD18,F			;Lands on ground
-;	WLW	3,M8OASD19,F
 	WLW	-1,seq_newdir,0*16
 	W0
-kdzh4	; very nice dunk! needs longer (very long!) range.
-	WLW	2,M8REVD01,F
+kzdh4	; very nice dunk! long range.
+	; mostly debugged, looks good. More height?
+	WLW	3,M8REVD01,F
 	WL	-1,seq_smoke
-	WLLW	-1,seq_strtdunk,M8REVD08,73	;Next frame begins elevation
-	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
-	WLL	-1,seq_snd,goes_up_sp
+	WLLW	-1,seq_strtdunk,M8REVD18,75	;Next frame begins elevation. ,77 = launch up speed/angle?.
+						;Last frame before releasing
+						;ball, the last frame with
+						;Last # is total ticks until
+						;player is at rim.
+	WLW	-1,seq_jam_speech,JAM_GREAT
+	WL	-1,seq_high_dnk_spch
 	WLW	3,M8REVD02,F
 	WLW	3,M8REVD03,F
 	WLW	3,M8REVD04,F
@@ -2407,24 +2504,49 @@ kdzh4	; very nice dunk! needs longer (very long!) range.
 	WLW	3,M8REVD07,F
 	WLW	3,M8REVD08,F
 	WLW	3,M8REVD09,F
-	WLW	35,M8REVD10,F
+	WLW	30,M8REVD10,F			;hold this frame for a bit. was 15
+	WL	-1,seq_start_dunkhead
 	WLW	3,M8REVD11,F
 	WLW	3,M8REVD12,F
-	WLW	3,M8REVD13,F
+	WLW	3,M8REVD13,F			;elevation stops here?
 	WLW	3,M8REVD14,F
 	WLW	3,M8REVD15,F
-	WLW	1,M8REVD16,F
-	WLW	-1,seq_slamball,2		;Ball centers in hoop at
-;	WL	-1,seq_stopfire
-	WLW	2,M8REVD17,F
-	WLW	500,M8REVD17,F
-	WLW	3,M8REVD18,F			;Lands on ground
-	WLW	3,M8REVD19,F
+	WLW	3,M8REVD16,F
+;	WLWWW	-1,seq_offset,0,0,18
+	WLW	3,M8REVD17,F
+	WLW	-1,seq_slamball,15		;this centers ball in hoop
+	WLW	15,M8REVD18,F			;this frame has hands behind and ball ready for hoop entering
+	WLW	500,M8REVD19,F
 	WLW	3,M8REVD20,F
 	WLW	3,M8REVD21,F
-
 	WLW	-1,seq_newdir,0*16
 	W0
+
+kzdh5	;medium,far
+	;from below viewed on back.
+	WLW	3,M8FLY201,F
+	WL	-1,seq_smoke
+	WLLW	-1,seq_strtdunk,M8FLY210,76
+	WLW	-1,seq_jam_speech,JAM_GREAT
+	WL	-1,seq_high_dnk_spch
+	WLW	3,M8FLY202,F
+	WLW	3,M8FLY203,F
+	WLW	3,M8FLY204,F
+	WLW	56,M8FLY205,F
+	WLW	3,M8FLY206,F
+	WLW	3,M8FLY207,F
+;	WLWWW	-1,seq_offset,0,0,-20		;behind net (this changes Z position of player)
+	WLW	3,M8FLY208,F
+	WLW	2,M8FLY209,F
+	WLW	-1,seq_slamball,15
+	WLW	5,M8FLY209,F
+	WLW	500,M8FLY210,F
+	WLW	3,M8FLY211,F
+	WLW	3,M8FLY212,F
+	WLW	3,M8FLY213,F
+	WLW	-1,seq_newdir,3*16
+	W0
+
 
 
 
