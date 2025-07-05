@@ -57,9 +57,9 @@ copy c:\tmp\htextra\dcs.* c:\myht\backup\xcode1~3\
 rem PUTBACK cut anims
 del c:\myht\backup\xcode1~3\plyrpbck.tbl
 copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
-rem FIREFALL fatality
-rem del c:\myht\backup\xcode1~3\fireseq.tbl
-rem copy c:\tmp\htextra\fireseq.tbl c:\myht\backup\xcode1~3\fireseq.tbl
+rem Team Zone gfx
+del c:\myht\backup\xcode1~3\TEAMZONE.TBL
+copy c:\tmp\htextra\TEAMZONE.TBL c:\myht\backup\xcode1~3\TEAMZONE.TBL
 
 rem cleanup
 del c:\tmp\htextra\imgpal.asm
@@ -70,9 +70,10 @@ del c:\tmp\htextra\*.glo
 echo !!! DELETE BAST_Y_P duplicate from IMGPAL8.ASM !!!
 echo !!! DELETE BOTH HOOP_p duplicate from IMGPAL8.ASM !!!
 loadw misc4 /t=c:\tmp\htextra /FI /E >haha2
-rem unused dunk #1
+rem unused dunks
 del c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
 copy c:\tmp\htextra\PLYRDSQ3.TBL c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
+
 
 ::pause
 exit

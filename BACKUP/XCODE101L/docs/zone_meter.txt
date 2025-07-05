@@ -1,0 +1,55 @@
+Team Zone
+=========
+
+As seen at https://www.bunnyears.net/hangtime/hangscreendunk.jpg there are
+meters below both teams marked 'team zone'. This never made it to production for unknown
+reasons. The assets still exist and code is available commented in the src.
+
+This option can be enabled at compile time with SYS.EQU setting TEAMZONE (0 or 1)
+
+How:
+It's about team play, you can't score all own your own. A pass between players is needed.
+The meter is quite slow to fill, but its status stays between quarters.
+
+
+
+Where:
+
+BB.AXX
+------
+
+;;	BSSX	tm1_meter_cnt,	16
+;;	BSSX	tm1_meter_obj,	32
+;;	BSSX	tm2_meter_cnt,	16
+;;	BSSX	tm2_meter_obj,	32
+
+There's "CREATE0 team_meters" commented. This would spawn a process to show the meters on screen.
+
+Main processes live here in bb.axx:
+
+; SUBRP	team_meters 
+; SUBR	update_team_meter
+
+;tm_meter_img_tbl
+;	.long	TEAMZN01 (these are in BB7.LOD, would be in CREDIT.TBL, from TVSCORE.IMG)
+
+SCORE.AXX 
+---------
+
+Calls the 'update_team_meter' in commented code.
+It would add '2' to the meter count.
+
+;;TEAM METER logic
+;	movk	2,a14
+;	.ref	update_team_meter
+;	calla	update_team_meter
+
+So at this point we could enable it after adding the 'TEAMZN01-30' image table+its pals.
+And it would fill up if we add it to the main game start logic as well, and score.axx.
+
+But any logic tied to a full meter is nowhere to be found.
+The game does not check the meter count at any point in the code 
+
+Values at @tm1_meter_cnt or tm2_meter_cnt are never read to allow something special to happen
+or give out some reward.
+

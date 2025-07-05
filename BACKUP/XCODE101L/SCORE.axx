@@ -2287,10 +2287,12 @@ ddyunoaud
 	jrz	ddyusx
 	dec	a1
 
-;;TEAM METER logic
-;	movk	2,a14
-;	.ref	update_team_meter
-;	calla	update_team_meter
+	.if	TEAMZONE	
+;TEAM METER logic
+	movk	2,a14
+	.ref	update_team_meter
+	calla	update_team_meter
+	.endif
 
 	movk	PS_ASSISTS,a0
 	calla	inc_player_stat

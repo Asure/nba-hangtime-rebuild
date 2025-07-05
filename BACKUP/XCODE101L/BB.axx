@@ -42,6 +42,10 @@
 	.include	"uground.pal"
 	.endif
 
+	.if	TEAMZONE
+	.include	"teamzone.pal"
+	.include	"teamzone.tbl"
+
 	.asg		0,SEQT
 	.include	"plyr.equ"
 
@@ -301,10 +305,12 @@
 	BSSX	_soundirq_addr,32
 	BSSX	_coin_counter_addr,32
 
-;;	BSSX	tm1_meter_cnt,	16
-;;	BSSX	tm1_meter_obj,	32
-;;	BSSX	tm2_meter_cnt,	16
-;;	BSSX	tm2_meter_obj,	32
+	.if	TEAMZONE
+	BSSX	tm1_meter_cnt,	16
+	BSSX	tm1_meter_obj,	32
+	BSSX	tm2_meter_cnt,	16
+	BSSX	tm2_meter_obj,	32
+	.endif
 
 ;equates for this file
 
@@ -1841,9 +1847,10 @@ offpbomb_out
 	move	a0,@SHK_ON
 	move	a0,@ballnumscored
 	move	a0,@balltmshotcnt
-
-;;	move	a0,@tm1_meter_cnt
-;;	move	a0,@tm2_meter_cnt
+	.if	TEAMZONE
+	move	a0,@tm1_meter_cnt
+	move	a0,@tm2_meter_cnt
+	.endif
 
 	movi	1 ,a0
 	move	a0,@name_cnt
@@ -1946,7 +1953,10 @@ offpdemo
 	move	a0,@NO_START
 	move	a0,@inmatchup
 
-;	CREATE0	team_meters
+	.if	TEAMZONE
+	CREATE0	team_meters
+	.endif
+
 	CREATE	STAT_PID,status_display
 	SLEEPK	1
 
@@ -2415,129 +2425,131 @@ hlygsmksmk
 
 	DIE
 
+	.if	TEAMZONE
+**********************************
+* Create and init team meters objs.
 
-;**********************************
-;* Create and init team meters objs.
-;
-; SUBRP	team_meters
-;
-;	movi	hlygtm_mtr_init_tbl,a9,L
-;
-;;team 1 team meter
-;	move	*a9+,a0			;X
-;	move	*a9+,a1			;Y
-;	sll	16,a0
-;	sll	16,a1
-;	move	*a9+,a3			;Z
-;	move	*a9+,a2,L		;image			;Y
-;	movi	DMAWNZ|M_NOCOLL|M_SCRNREL,a4
-;	movi	CLSDEAD,a5
-;	clr	a6
-;	clr	a7
-;	calla	BEGINOBJ2
-;	move	a8,@tm1_meter_obj,L	;keep *obj
-;
-;;team 2 team meter
-;	move	*a9+,a0			;X
-;	move	*a9+,a1			;Y
-;	sll	16,a0
-;	sll	16,a1
-;	move	*a9+,a3			;Z
-;	move	*a9,a2,L		;image			;Y
-;	calla	BEGINOBJ2
-;	move	a8,@tm2_meter_obj,L	;keep *obj
-; 	DIE
-;
-;
+ SUBRP	team_meters
+
+	movi	hlygtm_mtr_init_tbl,a9,L
+
+;team 1 team meter
+	move	*a9+,a0			;X
+	move	*a9+,a1			;Y
+	sll	16,a0
+	sll	16,a1
+	move	*a9+,a3			;Z
+	move	*a9+,a2,L		;image			;Y
+	movi	DMAWNZ|M_NOCOLL|M_SCRNREL,a4
+	movi	CLSDEAD,a5
+	clr	a6
+	clr	a7
+	calla	BEGINOBJ2
+	move	a8,@tm1_meter_obj,L	;keep *obj
+
+;team 2 team meter
+	move	*a9+,a0			;X
+	move	*a9+,a1			;Y
+	sll	16,a0
+	sll	16,a1
+	move	*a9+,a3			;Z
+	move	*a9,a2,L		;image			;Y
+	calla	BEGINOBJ2
+	move	a8,@tm2_meter_obj,L	;keep *obj
+ 	DIE
+
+
 ;	.asg	25,TM_METR_Y
-;;	.asg	27,TM_METR_Y
-;	.asg	300,TM_METR_Z
-;
-;hlygtm_mtr_init_tbl
-;	.word	54,TM_METR_Y,TM_METR_Z			;x,y
-;	.long	TEAMZN_01b
-;	.word	280,TM_METR_Y,TM_METR_Z			;x,y
-;	.long	TEAMZN_01r
-;
-;
-;***************************************
-;* Update count and image for team
-;*
-;* INPUT:  a1 - player number
-;* 	 a14 - amount to add to meter
-;*
-; SUBR	update_team_meter
-;
-;	PUSH	a1
-;
-;	srl	1,a1
-;	jrnz	hlygtm2
-;
-;	move	@tm1_meter_cnt,a1
-;	add	a14,a1
-;	cmpi	NUM_MTR_IMGS,a1			;value in range ?
-;	jrlo	hlygok1				;br=yes
-;	movi	NUM_MTR_IMGS-1,a1		;set to max
-;hlygok1	move	a1,@tm1_meter_cnt
-;	sll	5,a1
-;	addi	tm_meter_img_tbl,a1
-;	move	*a1,a14,L			;get NEW img ptr
-;	move	@tm1_meter_obj,a1,L		;get CURRENT img ptr
-;	jruc	hlygchng
-;hlygtm2
-;	move	@tm2_meter_cnt,a1
-;	add	a14,a1
-;	cmpi	NUM_MTR_IMGS,a1			;value in range ?
-;	jrlo	hlygok2				;br=yes
-;	movi	NUM_MTR_IMGS-1,a1		;set to max
-;hlygok2	move	a1,@tm2_meter_cnt
-;	sll	5,a1
-;	addi	tm_meter_img_tbl,a1
-;	move	*a1,a14,L			;get NEW img ptr.
-;	move	@tm2_meter_obj,a1,L		;get CURRENT img ptr.
-;hlygchng
-;;	move	a14,*a1(OIMG),L			;update image
-;;	move	*a14(0),*a1(OSIZE),L
-;	move	*a14(0),*a1(OSAG),L
-;
-;	PULL	a1
-; 	rets
-; 
-;
-;tm_meter_img_tbl
-;	.long	TEAMZN01
-;	.long	TEAMZN02
-;	.long	TEAMZN03
-;	.long	TEAMZN04
-;	.long	TEAMZN05
-;	.long	TEAMZN06
-;	.long	TEAMZN07
-;	.long	TEAMZN08
-;	.long	TEAMZN09
-;	.long	TEAMZN10
-;	.long	TEAMZN11
-;	.long	TEAMZN12
-;	.long	TEAMZN13
-;	.long	TEAMZN14
-;	.long	TEAMZN15
-;	.long	TEAMZN16
-;	.long	TEAMZN17
-;	.long	TEAMZN18
-;	.long	TEAMZN19
-;	.long	TEAMZN20
-;	.long	TEAMZN21
-;	.long	TEAMZN22
-;	.long	TEAMZN23
-;	.long	TEAMZN24
-;	.long	TEAMZN25
-;	.long	TEAMZN26
-;	.long	TEAMZN27
-;	.long	TEAMZN28
-;	.long	TEAMZN29
-;	.long	TEAMZN30
-;tm_meter_img_tbl_end
-;
-;NUM_MTR_IMGS	equ	(tm_meter_img_tbl_end-tm_meter_img_tbl)/32
+	.asg	27,TM_METR_Y
+	.asg	300,TM_METR_Z
+
+hlygtm_mtr_init_tbl
+	.word	54,TM_METR_Y,TM_METR_Z			;x,y
+	.long	TEAMZN_01b
+	.word	280,TM_METR_Y,TM_METR_Z			;x,y
+	.long	TEAMZN_01r
+
+
+***************************************
+* Update count and image for team
+*
+* INPUT:  a1 - player number
+* 	 a14 - amount to add to meter
+*
+ SUBR	update_team_meter
+
+	PUSH	a1
+
+	srl	1,a1
+	jrnz	hlygtm2
+
+	move	@tm1_meter_cnt,a1
+	add	a14,a1
+	cmpi	NUM_MTR_IMGS,a1			;value in range ?
+	jrlo	hlygok1				;br=yes
+	movi	NUM_MTR_IMGS-1,a1		;set to max
+hlygok1	move	a1,@tm1_meter_cnt
+	sll	5,a1
+	addi	tm_meter_img_tbl,a1
+	move	*a1,a14,L			;get NEW img ptr
+	move	@tm1_meter_obj,a1,L		;get CURRENT img ptr
+	jruc	hlygchng
+hlygtm2
+	move	@tm2_meter_cnt,a1
+	add	a14,a1
+	cmpi	NUM_MTR_IMGS,a1			;value in range ?
+	jrlo	hlygok2				;br=yes
+	movi	NUM_MTR_IMGS-1,a1		;set to max
+hlygok2	move	a1,@tm2_meter_cnt
+	sll	5,a1
+	addi	tm_meter_img_tbl,a1
+	move	*a1,a14,L			;get NEW img ptr.
+	move	@tm2_meter_obj,a1,L		;get CURRENT img ptr.
+hlygchng
+;	move	a14,*a1(OIMG),L			;update image
+;	move	*a14(0),*a1(OSIZE),L
+	move	*a14(0),*a1(OSAG),L
+
+	PULL	a1
+ 	rets
+ 
+
+tm_meter_img_tbl
+	.long	TEAMZN01
+	.long	TEAMZN02
+	.long	TEAMZN03
+	.long	TEAMZN04
+	.long	TEAMZN05
+	.long	TEAMZN06
+	.long	TEAMZN07
+	.long	TEAMZN08
+	.long	TEAMZN09
+	.long	TEAMZN10
+	.long	TEAMZN11
+	.long	TEAMZN12
+	.long	TEAMZN13
+	.long	TEAMZN14
+	.long	TEAMZN15
+	.long	TEAMZN16
+	.long	TEAMZN17
+	.long	TEAMZN18
+	.long	TEAMZN19
+	.long	TEAMZN20
+	.long	TEAMZN21
+	.long	TEAMZN22
+	.long	TEAMZN23
+	.long	TEAMZN24
+	.long	TEAMZN25
+	.long	TEAMZN26
+	.long	TEAMZN27
+	.long	TEAMZN28
+	.long	TEAMZN29
+	.long	TEAMZN30
+tm_meter_img_tbl_end
+
+NUM_MTR_IMGS	equ	(tm_meter_img_tbl_end-tm_meter_img_tbl)/32
+
+	.endif
 
 
 *******************************

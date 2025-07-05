@@ -50,6 +50,7 @@ SPARKDB	.equ	0	;Ball sparking test (Abandoned feature, EXPERIMENTAL)
 PUTBACK	.equ	1	;Putback rebounds (Abandoned feature, EXPERIMENTAL)
 FATALITY .equ	1	;Fire push fatality
 HOOKDEBUG .equ	1	;Debug dunks using hook table ;)
+TEAMZONE .equ	1	;Enable Team Zone meter (Abandoned feature, EXPERIMENTAL)
 
 ;DJT End
 
