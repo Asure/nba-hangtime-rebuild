@@ -59,6 +59,7 @@
 ;These are pals for new stuff in IMGTBL8.ASM
 	.def	HOOP_p3
 	.def	ligtn_p
+	.def	UGRBACKP
 ;; MARKER
 ;These are pals for new players
 	.def	RAIDEN_P

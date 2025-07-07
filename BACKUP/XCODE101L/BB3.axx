@@ -36,10 +36,18 @@
 	.include	"outdoor.tbl"
 	.include	"outdoor.glo"
 	.include	"storm.tbl"
+
 	.if	SHANG
 	.include	"shang.tbl"
 	.include	"shang.pal"
 	.endif
+
+	.if	UGROUND
+	.ref	UGRBACKP
+	.include	"uground.tbl"
+	.include	"uground.pal"
+	.endif
+
 
 	.include	"imgtbl.glo"
 	.include	"hoop.glo"
@@ -826,8 +834,10 @@ whcqinit_otd_t
 	.asg	CZMIN-40,Z		;Z priority back from crt top
 	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-
+	.if	UGROUND
+	.else
 ;	.word	SXO-496,Y-56,Z,ZOFF,F
+;	.long	bkwall
 	.word	SXO-468,Y-56,Z-1,ZOFF,F
 	.long	fence			;enable the cut fence gfx.
 	.word	SXO-330,Y,Z,ZOFF,F
@@ -840,9 +850,12 @@ whcqinit_otd_t
 	.long	bkwall
 	.word	SXO+331,Y,Z,ZOFF,F
 	.long	bkwall
+	.endif
 
 ;--------------------
 ; street lights
+	.if	UGROUND
+	.else
 
 	.asg	-130,Y			;Y to realign after ZOFF
 ;	.asg	-400,Y
@@ -860,10 +873,12 @@ whcqinit_otd_t
 
 	.word	SXO+464,Y,Z,ZOFF,FF
 	.long	lamp1
+	.endif
 
 ;--------------------
 ; cheerleaders
-
+	.if	UGROUND
+	.else
 	.asg	0,Y			;Y to realign after ZOFF
 ;	.asg	-400,Y
 	.asg	CZMIN-24,Z		;Z priority back from crt top
@@ -876,10 +891,12 @@ whcqinit_otd_t
 ;	.long	CHEERA01
 	.long	CHEERB01
 	WL	4001,otd_chldr_ani_rgt
+	.endif
 
 ;--------------------
 ; side buildings
-
+	.if	UGROUND
+	.else
 	.asg	-33,Y			;Y to realign after ZOFF
 ;	.asg	-400,Y
 	.asg	CZMIN-39,Z		;Z priority back from crt top
@@ -898,9 +915,41 @@ whcqinit_otd_t
 	.long	sidetop
 	.word	SXO+540,Y,Z,ZOFF,FF
 	.long	sidetop
+	.endif
 
 ;--------------------
 ; city backdrop
+
+	.if	UGROUND
+	.asg	-92,Y			;Y to realign after ZOFF
+	.asg	210,Z			;Z priority back from crt top
+
+	.word	SXO-300,Y,Z,0,0
+	.long	UGRBK1
+	WL	4002,city1obj
+	.word	SXO-100,Y,Z,0,0
+	.long	UGRBK2
+	WL	4002,city2obj
+	.word	SXO+100,Y,Z,0,0
+	.long	UGRBK3
+	WL	4002,city3obj
+
+	.word	SXO-28,-140,Z+1,0,0
+	.long	moon
+	WL	4002,moonobj
+
+	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
+	.long	STORM01
+	WL	4002,stormobj
+
+	.word	SXO-28+360-74h+88,10,Z,0,0
+	.long	FALL2_vda
+	WL	4002,templeobj
+
+
+
+	.word	4000			;End
+	.else
 
 	.asg	-92,Y			;Y to realign after ZOFF
 	.asg	210,Z			;Z priority back from crt top
@@ -930,6 +979,7 @@ whcqinit_otd_t
 
 
 	.word	4000			;End
+	.endif
 
 
 ;--------------------

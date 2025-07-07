@@ -60,6 +60,10 @@ copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
 rem Team Zone gfx
 del c:\myht\backup\xcode1~3\TEAMZONE.TBL
 copy c:\tmp\htextra\TEAMZONE.TBL c:\myht\backup\xcode1~3\TEAMZONE.TBL
+rem Underground
+del c:\myht\backup\xcode1~3\uground.tbl
+copy c:\tmp\htextra\uground.tbl c:\myht\backup\xcode1~3\uground.tbl
+
 
 rem cleanup
 del c:\tmp\htextra\imgpal.asm

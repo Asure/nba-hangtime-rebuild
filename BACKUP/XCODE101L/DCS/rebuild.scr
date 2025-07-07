@@ -322,6 +322,6 @@ Track $040F channel 4 {		// call free
 // Outdoor backboard break
 Track $0410 channel 2 {		// call free
     SetMixingLevel(level 111);   // always set the mixing level for a new track
-    Play("wood-smash-3.mp3");      	// start an audio clip
+    Play("wood-smash-3.wav");      	// start an audio clip
     Wait(Stream);          	// ...and wait for it to finish before exiting
 };
