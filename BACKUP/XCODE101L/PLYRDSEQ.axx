@@ -2303,8 +2303,8 @@ hook2_t
 ;	.word	NOJUMP_M|SHOOT_M|NOJOY_M
 	.word	DFLGS
 	.long	seq_stand
-	.long	kzdh5,kzdh5,kzdh5,kzdh5
-	.long	kzdh5,kzdh5,kzdh5,kzdh5
+	.long	kzdh2,kzdh2,kzdh2,kzdh2
+	.long	kzdh2,kzdh2,kzdh2,kzdh2
 kzdh1	;big one-arm slam dunk (with arm retract)
 	;long range, high.?
 	
