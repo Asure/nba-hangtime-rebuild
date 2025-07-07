@@ -373,6 +373,7 @@ ex	.set	08000H			; flag: extended sound call !!
  SX	tarzan,      01603H,70, 0123H
 ;AMM Start
  SX	shatter_snd, 01402H,76, 07bdH	;Breaking glass		Chan 2
+ SX	shattero_snd,01402H,76, 0410H	;Breaking wood		Chan 2
  SX	mk1_snd,     01403H,76, 0b55H	;A wild Shang appears!  Chan 3
  SX	mk3_snd,     01404H,76, 040DH	;A wild Forden appears! Chan 4
  SX	mk3_fatal,   00100h,76, 040FH	;Fatality!	

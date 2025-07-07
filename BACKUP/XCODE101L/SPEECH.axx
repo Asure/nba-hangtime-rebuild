@@ -1,4 +1,4 @@
-;DJT Start whole file changed!!
+;DJT Start whole file changed!! 
 ****************************************************************
 *
 * Owner:	JOHNSON
@@ -218,7 +218,7 @@
  SX	swith_hnd_sp,0110DH,53, 0823H
  SX	spn_shtup_sp,0110DH,56, 07fdH
  SX	a_fngr_rl_sp,0110DH,55, 0902H
-
+                                                             
  SX	hnd_face_sp, 0100DH,67, 0b24H
  SX	ill_shot_sp, 0100DH,60, 0b25H
  SX	frcd_shot_sp,0100DH,56, 0b2dH
@@ -246,7 +246,6 @@
  SX	is_legal_sp ,00F0DH,65, 0b21H
 ;DJT End
 
- SX	tm_onfire_sp,0140DH,76, 0b3eH		;AMM
 ;DJT Start
  SX	got_hspot_sp,0140DH,76, 0b40H
 ;DJT End
@@ -266,7 +265,8 @@
  SX	there_brk_sp,0100DH,66, 09b5H
  SX	dwn_luck_sp, 0100DH,54, 0ac9H
  SX	missed_sp,   0100DH,30, 09d6H
- SX	mised_agn_sp,0100DH,59, 09d7H
+ SX	mised_agn_sp,0100DH,59, 09d7H		;unused
+ SX	he_misagn_sp,0100DH,65, 09b7H		;he missed again
  SX	hita_barn_sp,0100DH,124,0a98H
  SX	wht_thnk2_sp,0100DH,88, 09edH
  SX	wht_distr_sp,0100DH,73, 0aa8H
@@ -286,11 +286,11 @@
  SX	nicly_dne_sp,0100DH,69, 0a49H
  SX	got_skilz_sp,0100DH,67, 0a97H
 
- SX	misd_evry_sp,0100DH,66, 09e2H
- SX	way_shrt_sp, 0100DH,57, 09dfH
+ SX	misd_evry_sp,0100DH,66, 09e2H		;never heard it.
+ SX	way_shrt_sp, 0100DH,57, 09dfH		;unused?
  SX	misd_mile_sp,0100DH,72, 09e3H		;AMM
  SX	teribl_sh_sp,0100DH,57, 09baH
- SX	airball_sp,  0100DH,56, 09daH
+ SX	airball_sp,  0100DH,56, 09daH		;unused?
 
  SX	cannonbal_sp,0110DH,58, 095bH
  SX	sumrslts_sp, 0110DH,90, 096aH
@@ -306,7 +306,7 @@
  SX	tks2_hoop_sp,0110DH,51, 0a36H
  SX	fly_1hdnr_sp,0110DH,76, 096eH		;AMM
  SX	didnt_knw_sp,0110DH,77, 097fH
- SX	haning_sp,   0110DH,34, 0a0fH		;AMM
+ SX	haning_sp,   0110DH,34, 0a0fH		;AMM "Hangin!"
  SX	ooooooh_sp,  0110DH,65, 0af7H
  SX	ooooooh2_sp, 0110DH,40, 0af7H
  SX	thrgh_air_sp,0110DH,50, 096bH
@@ -330,10 +330,11 @@
  SX	leans_in_sp, 0100DH,80, 0b16H
  SX	pull_jmpr_sp,0100DH,80, 0838H
  SX	bslne_lnr_sp,0100DH,45, 0b30H
- SX	luky_bnce_sp,0100DH,58, 092fH
+ SX	getslkbnc_sp,0100DH,60, 092eH		;gets a lucky bounce (longer)
+ SX	luky_bnce_sp,0100DH,58, 092fH		;a lucky bounce
  SX	per_luck_sp, 0100DH,64, 0946H		;AMM
 ;DJT Start
- SX	luky_bskt_sp,0100DH,82, 0948H		;AMM
+ SX	luky_bskt_sp,0100DH,82, 0948H		;AMM "There's a lucky basket"
 ;DJT End
 	
 ;DJT Start
@@ -356,6 +357,7 @@
  SX	throws_it_sp,0100DH,66, 0963H
  SX	pounds_it_sp,0100DH,62, 0964H
  SX	incredble_sp,0100DH,49, 0970H
+ SX	superdunk_sp,0100DH,75, 0971H		;AMM - unused "A Super Dunk!"
  SX	incrd_sht_sp,0100DH,75, 090eH
 ; SX	supr_dnk_sp, 0100DH,61, 0971H	;**
 ; SX	mnstr_jam_sp,0100DH,70, 0971H
@@ -365,10 +367,12 @@
  SX	he_dnk_it_sp,0100DH,33, 0961H
  SX	dunks_it_sp, 0100DH,24, 0962H
  SX	jams_it_sp,  0100DH,35, 097cH
+
  SX	spect_dnk_sp,0100DH,81, 0988H
- SX	slam_dunk_sp,0100DH,51, 0989H
+ SX	slam_dunk_sp,0100DH,51, 0989H		;AMM Unused? "Slam Dunk"
  SX	he_slams_sp, 0100DH,42, 098bH
- SX	with_ajam_sp,0100DH,49, 0998H
+ SX	with_ajam_sp,0100DH,65, 0997H		;AMM Unused "finishes with a jam"
+ SX	with_aja2_sp,0100DH,49, 0998H
  SX	powr_jams_sp,0100DH,73, 09a6H
 
  SX	head_fake_sp,0050DH,24, 0a8eH
@@ -391,6 +395,7 @@
  SX	money_bnk_sp,0100DH,33, 0b33H
  SX	chk_it_up_sp,0100DH,56, 093bH
  SX	good_4_3_sp, 0100DH,69, 0929H
+ SX	for_3_sp,    0100DH,58, 092aH	;AMM - For threeee
  SX	thats_3_sp,  0100DH,58, 092bH
  SX	fantastic_sp,0100DH,73, 0a99H
  SX	drains_it_sp,0100DH,38, 093fH
@@ -550,9 +555,19 @@
  SX	tookm_out_sp,0090DH,48, 0abeH
  SX	hamerd_hm_sp,0090DH,35, 0ad1H
  SX	into_stnd_sp,0050DH,96, 0ac4H
-;AMM unused sounds
-; 0ab1 tonights matchup (alt)
+;AMM More unused sounds here:
 ; 0ae7 'a three sixty' 360
+ SX	fr_basel_sp, 0100DH,41, 0a29H ;Unused - From the baseline
+ SX	fr_base2_sp, 0100DH,61, 0a2aH ;Unused - From the baseline - longer
+ SX	grtmove_sp,  0100DH,41, 0a3aH ;Unused - Great move!
+ SX	tm_onfire_sp,0140DH,76, 0b3eH ;Unused - The Team is on fire!
+ SX	zigzag_sp,   0100DH,75, 095ch ;AMM - unused "zigzag!"
+ SX	jams_it2_sp, 0100DH,65, 0986H		;AMM Unused "jams it with two hands"
+ SX	intzone_sp,  0100DH,61, 0915H		;AMM - "In the zone!"
+ SX	wit_a_flr_sp,0100DH,60, 099cH		;AMM Unused "with a flourish"
+ SX	wit_a_fl2_sp,0100DH,65, 099bH		;AMM Unused "finishes with a flourish"
+
+ 
 
 
  SX	nick_nme1,   0100DH,23, 0760H
@@ -2338,6 +2353,7 @@ jkaidesptab
 	.long	kakaboom_sp
 	.long	unbelieve_sp
 	.long	luky_bskt_sp
+
 ;DJT End
 
 ****************
@@ -2726,7 +2742,7 @@ jkaigreat_tab
 ****************
 jkaialleyoop_jam
 
-	movk	7,a0
+	movk	9,a0
 	calla	rndrng0
 	sll	5,a0
 	addi	jkaialleyoop_tab,a0
@@ -2744,8 +2760,8 @@ jkaialleyoop_tab
 	.long	alley_oop_sp
 	.long	nicly_dne_sp
 	.long	alley_oop_sp
-;	.long	thr_zone_sp
-;	.long	whta_show_sp
+	.long	thr_zone_sp
+	.long	whta_show_sp
 
 
 

@@ -3984,7 +3984,13 @@ wjfoshlp2	CREATE0	board_shard
 * AMM This one is from JAMTE
 board_glssnd
 ;	SLEEPK	2         	;too long
-	.ref	shatter_snd
+	.ref	pup_court,shatter_snd, shattero_snd	;shatteru_snd
+; Need to check indoor or outdoor (underground later.)
+	move	@pup_court,a11		;Outdoor court?
+	jrz	not_otd			; br=no
+	SOUND1	shattero_snd
+	DIE
+not_otd
 	SOUND1	shatter_snd
 	DIE
 
