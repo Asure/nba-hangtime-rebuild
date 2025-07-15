@@ -52,6 +52,7 @@ PUTBACK	.equ	1	;Putback rebounds (Abandoned feature, EXPERIMENTAL)
 FATALITY .equ	1	;Fire push fatality
 HOOKDEBUG .equ	1	;Debug dunks using hook table ;)
 TEAMZONE .equ	1	;Enable Team Zone meter (Abandoned feature, EXPERIMENTAL)
+COWER	.equ	1	;Cowering player anim (Unused GFX, EXPERIMENTAL)
 
 ;DJT End
 

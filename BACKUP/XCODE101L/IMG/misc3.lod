@@ -179,25 +179,6 @@ COURT\UGROUND2.IMG
 ASM> UGROUND.TBL
 GLO> UGROUND.GLO
 ---> UGRBK1,UGRBK2,UGRBK3
-;
-;Switch to extended image headers for the player frames
-;
-IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
-..\..\ART100\NBA_DEF3.IMG
-ASM> plyrpbck.tbl
-GLO> plyrpbck.glo
-COF>
-XOF>
-ZOF>
-;---> w2blokl1,w2blokl2,w2blokl3,w2blokl4 (in plyrseq.tbl)
-; But these were not in plyrseq.tbl!
----> w2blokl5,w2blokl6,w2blokl7
----> w3blokl5,w3blokl6,w3blokl7
----> w4blokl5,w4blokl6,w4blokl7
-;
-;Switch back to normal image headers for the remaining gfx
-;
-IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
 ;We put hoop & shards here at the back, since it allows easier delete from 
 ;IMGPAL8.ASM
 PON>

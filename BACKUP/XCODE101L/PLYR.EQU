@@ -230,6 +230,8 @@ pseq_t
 	SEQG	FFLYBACKWB_SEQ	,fflybackwb_t	;Pushed (have ball)
 	SEQG	FFLYBACKWB2_SEQ	,fflybackwb2_t	;Pushed (have ball) - no fall
 
+	SEQG	COWER_SEQ	,cower_t	;cowering under basket 		 #unused gfx!
+
 	SEQG	PICKUP_SEQ	,pickup_t	;Pickup ball
 	SEQG	ELBO_SEQ	,elbo_t		;Throw elbows
 	SEQG	ELBO2_SEQ	,elbo2_t	;Throw elbows slower

@@ -2298,6 +2298,31 @@ ybvl5
 *
 * Format: AAA,BBB,F  AAA=frame hold time, image name, marker F
 
+	.ref	ball_convfmprel,plyr_setshtdly
+	.ref	ballfree,ballobj_p,ballpnum
+
+seq_bounce_ball_off_floor
+
+	calla	ball_convfmprel
+	move	@ballobj_p,a0,L
+
+	clr	a14
+	move	a14,*a0(OZVEL),L
+	move	a14,*a13(plyr_ownball)
+	not	a14
+	move	a14,@ballpnum		;No owner
+	move	a14,@ballfree		;0=ball not free
+
+	movi	97c00h,a14
+	move	a14,*a0(OYVEL),L
+	movi	200000,a14		; gotta be negative for flipped dunk!
+	move	a14,*a0(OXVEL),L
+
+	movi	30,a0
+	calla	plyr_setshtdly
+	rets
+
+
 hook_t
 hook2_t
 ;	.word	NOJUMP_M|SHOOT_M|NOJOY_M
@@ -2330,6 +2355,7 @@ kzdh1	;big one-arm slam dunk (with arm retract)
 	WLW	3,S3OASD08,F
 	WLW	3,S3OASD09,F
 	WLW	35,S3OASD10,F			;display this one for 35 frames/ticks
+	WL	-1,seq_bounce_ball_off_floor
 	WLW	3,S3OASD11,F
 	WLW	3,S3OASD12,F
 	WLW	3,S3OASD13,F
@@ -2364,6 +2390,7 @@ kzdh2	; leg walk one arm dunk. Very noice
 	WLW	-1,seq_jam_speech,JAM_ALLEYOOP
 	WLL	-1,seq_snd,goes_up_sp
 	WLW	3,M8OHM302,F
+	WL	-1,seq_bounce_ball_off_floor
 	WLW	3,M8OHM303,F
 	WLW	3,M8OHM304,F
 	WLW	3,M8OHM305,F

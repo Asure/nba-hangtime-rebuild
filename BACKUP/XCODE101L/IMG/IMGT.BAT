@@ -54,16 +54,12 @@ copy c:\myht\backup\xcode1~3\pal8_b.asm C:\myht\backup\xcode1~3\imgpal8.asm
 type c:\tmp\htextra\imgpal8.asm >> c:\myht\backup\xcode1~3\imgpal8.asm
 rem DCS
 copy c:\tmp\htextra\dcs.* c:\myht\backup\xcode1~3\
-rem PUTBACK cut anims
-del c:\myht\backup\xcode1~3\plyrpbck.tbl
-copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
 rem Team Zone gfx
 del c:\myht\backup\xcode1~3\TEAMZONE.TBL
 copy c:\tmp\htextra\TEAMZONE.TBL c:\myht\backup\xcode1~3\TEAMZONE.TBL
 rem Underground
 del c:\myht\backup\xcode1~3\uground.tbl
 copy c:\tmp\htextra\uground.tbl c:\myht\backup\xcode1~3\uground.tbl
-
 
 rem cleanup
 del c:\tmp\htextra\imgpal.asm
@@ -77,7 +73,12 @@ loadw misc4 /t=c:\tmp\htextra /FI /E >haha2
 rem unused dunks
 del c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
 copy c:\tmp\htextra\PLYRDSQ3.TBL c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
-
+rem PUTBACK cut anims
+del c:\myht\backup\xcode1~3\plyrpbck.tbl
+copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
+Rem Cowering under basket
+del c:\myht\backup\xcode1~3\cowering.tbl
+copy c:\tmp\htextra\cowering.tbl c:\myht\backup\xcode1~3\cowering.tbl
 
 ::pause
 exit

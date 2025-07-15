@@ -34,20 +34,24 @@ dunking range etc.
 It checks a whole lot of conditions, should it be a hook, layup, double dunk flashing, and so on.
 
 Eventually it decides on one of three dunk types, assuming it is not a double dunk.
+*dodunk label calls getdunkseq and comes back with a table of valid dunks. Then randomly selects it.
 
 There are debug provisions here to check dunk anims! search sloumed / DEBUG.
 
 PLYR3.AXX
 =========
 
-Here's where the dunking happens.
+Here's where the dunking selection happens.
 
  SUBR	getdunkseq
+
+Checks dunk skill and selects available dunks from the table, based on distance to hoop.
+Normally plyr.axx calls this function and applies randomness to it.
 
 
 Adding stuff
 ============
-Images need the third any point table to be active, it's where the ball attaches.
+Images need the third ani point table to be active, it's where the ball attaches.
 In IT you enable this with CTRL-P. The box with A3X A3Y becomes active and can then be used.
 A3Z is the plane where the ball is (eg. behind of in front of the image.) ID needs to be figured out.
 

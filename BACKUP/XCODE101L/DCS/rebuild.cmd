@@ -1,6 +1,6 @@
 rem working with nbamht!
 del nbatest10.zip
-DCSEncoder.exe -o nbatest10.zip --stream-dir=.\input --patch .\ORIGROM\nba.zip rebuild.scr >rebuild.txt
+NEWDCS.exe -o nbatest10.zip --stream-dir=.\input --patch .\ORIGROM\nba.zip rebuild.scr >rebuild.txt
 rem DCSexplorer.exe -p nbatest10.zip >new_prog.txt
 mkdir output
 cd output

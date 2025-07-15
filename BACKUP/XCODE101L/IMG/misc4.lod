@@ -57,3 +57,45 @@ ASM> PLYRDSQ3.TBL
 ---> M8REVD07,M8REVD08,M8REVD09,M8REVD10,M8REVD11,M8REVD12
 ---> M8REVD13,M8REVD14,M8REVD15,M8REVD16,M8REVD17,M8REVD18
 ---> M8REVD19,M8REVD20,M8REVD21
+;
+; Cut rebound dunk effect 'putback'
+; Needs better logic/testing
+;
+..\..\ART110\NBA_DEF3.IMG
+ASM> plyrpbck.tbl
+GLO> plyrpbck.glo
+; These are in plyrseq.tbl already
+;---> w2blokl1,w2blokl2,w2blokl3,w2blokl4 
+; But these were not in plyrseq.tbl!
+---> w2blokl5,w2blokl6,w2blokl7
+---> w3blokl5,w3blokl6,w3blokl7
+---> w4blokl5,w4blokl6,w4blokl7
+;
+; Unused upward swipe steal (normal swipes are in plyrseq.tbl)
+; Needs logic!
+;
+..\..\ART110\NBA_DEF1.IMG
+ASM> swpuseq.tbl
+GLO> swpuseq.glo
+---> T1SWPU1,T1SWPU2,T1SWPU3,T1SWPU4,T1SWPU5,T1SWPU6,T1SWPU7,T1SWPU8,T1SWPU9
+---> T2SWPU1,T2SWPU2,T2SWPU3,T2SWPU4,T2SWPU5,T2SWPU6,T2SWPU7,T2SWPU8,T2SWPU9
+---> T3SWPU1,T3SWPU2,T3SWPU3,T3SWPU4,T3SWPU5,T3SWPU6,T3SWPU7,T3SWPU8,T3SWPU9
+---> T4SWPU1,T4SWPU2,T4SWPU3,T4SWPU4,T4SWPU5,T4SWPU6,T4SWPU7,T4SWPU8,T4SWPU9
+---> T5SWPU1,T5SWPU2,T5SWPU3,T5SWPU4,T5SWPU5,T5SWPU6,T5SWPU7,T5SWPU8,T5SWPU9
+;
+; Cowering player (for shattered basket maybe?)
+; Needs logic!
+;
+..\..\ART110\NBA_MSC1.IMG
+ASM> cowering.tbl
+GLO> cowering.glo
+---> w1cow1,w1cow2,w1cow3,w1cow4,w1cow5,w1cow6,w1cow7
+---> w2cow1,w2cow2,w2cow3,w2cow4,w2cow5,w2cow6,w2cow7
+---> w3cow1,w3cow2,w3cow3,w3cow4,w3cow5,w3cow6,w3cow7
+---> w4cow1,w4cow2,w4cow3,w4cow4,w4cow5,w4cow6,w4cow7
+---> w5cow1,w5cow2,w5cow3,w5cow4,w5cow5,w5cow6,w5cow7
+;
+; Running pass
+; Needs logic!
+;
+..\..\ART110\NBA_PAS4.IMG

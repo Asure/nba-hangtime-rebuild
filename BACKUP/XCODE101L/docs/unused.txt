@@ -20,5 +20,18 @@ w3rej1
 Pass?
 t5hindr6-10 (mirror version behind the back pass)
 
+cowering - not implemented.
+--------
 nba_msc1
 w1cow* - w5cow6* (raises hands above head, cowering)
+
+Upwards swiping - not implemented
+---------------
+stealup_t
+for use with stealup seq 'swipe up at ball', t1swpu nba_def1.img!
+
+arm flapping w*def in nba_def3.img
+
+Ball swatting like in nba jam/te?
+--------------------------------
+!w2rej stuff in nba_def3?
