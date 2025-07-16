@@ -40,6 +40,10 @@
 	.include	"plyrpbck.tbl"
 	.endif
 
+	.if	STEALUP
+	.include	"stealup.tbl"
+	.endif
+
 ;sounds external
 
 	.ref	swipe_snd
@@ -2666,11 +2670,12 @@ jmme6
 	W0
 
 
-*
+* Normal middle swipe table
 steal_t
 	.word	NOMV_M|NOSTEAL_M|NOJUMP_M|NOJOY_M
 	.long	seq_stealstand
 	.long	yqlt1,yqlt2,yqlt3,yqlt4,yqlt5,yqlt4,yqlt3,yqlt2
+;	.long	uyqlt1,uyqlt2,uyqlt3,uyqlt4,uyqlt5,uyqlt4,uyqlt3,uyqlt2 ; I don't like it.
 yqlt1
 	WLW	1,T1SWPE5,F
 	WLL	-1,seq_snd,swipe_snd
@@ -2811,6 +2816,126 @@ yqlt5
 	WLW	1,T5SWPE3,F
 	WLW	1,T5SWPE4,F
 	W0
+
+	.if	STEALUP
+
+stealup_t
+	.word	NOMV_M|NOSTEAL_M|NOJUMP_M|NOJOY_M
+	.long	seq_stealstand
+	.long	uyqlt1,uyqlt2,uyqlt3,uyqlt4,uyqlt5,uyqlt4,uyqlt3,uyqlt2
+uyqlt1
+	WLW	2,T1SWPU1,F
+	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T1SWPU2,F
+	WLW	2,T1SWPU3,F
+	WLW	2,T1SWPU4,F
+	WLW	2,T1SWPU5,F
+	WLW	2,T1SWPU6,F
+	WLW	2,T1SWPU7,F
+	WLW	2,T1SWPU8,F
+	WLW	2,T1SWPU9,F
+;	WL	-1,seq_stealstand
+	WLW	2,T1SWPU8,F
+	WLW	2,T1SWPU7,F
+;	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T1SWPU6,F
+	WLW	2,T1SWPU5,F
+	WLW	2,T1SWPU4,F
+	WLW	2,T1SWPU3,F
+	WLW	2,T1SWPU2,F
+;	WLW	2,T1SWPU1,F
+	W0
+uyqlt2
+	WLW	2,T2SWPU1,F
+	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T2SWPU2,F
+	WLW	2,T2SWPU3,F
+	WLW	2,T2SWPU4,F
+	WLW	2,T2SWPU5,F
+	WLW	2,T2SWPU6,F
+	WLW	2,T2SWPU7,F
+	WLW	2,T2SWPU8,F
+	WLW	2,T2SWPU9,F
+;	WL	-1,seq_stealstand
+	WLW	2,T2SWPU8,F
+	WLW	2,T2SWPU7,F
+;	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T2SWPU6,F
+	WLW	2,T2SWPU5,F
+	WLW	2,T2SWPU4,F
+	WLW	2,T2SWPU3,F
+	WLW	2,T2SWPU2,F
+;	WLW	2,T2SWPU1,F
+	W0
+
+uyqlt3
+	WLW	2,T3SWPU1,F
+	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T3SWPU2,F
+	WLW	2,T3SWPU3,F
+	WLW	2,T3SWPU4,F
+	WLW	2,T3SWPU5,F
+	WLW	2,T3SWPU6,F
+	WLW	2,T3SWPU7,F
+	WLW	2,T3SWPU8,F
+	WLW	2,T3SWPU9,F
+;	WL	-1,seq_stealstand
+	WLW	2,T3SWPU8,F
+	WLW	2,T3SWPU7,F
+;	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T3SWPU6,F
+	WLW	2,T3SWPU5,F
+	WLW	2,T3SWPU4,F
+	WLW	2,T3SWPU3,F
+	WLW	2,T3SWPU2,F
+;	WLW	2,T3SWPU1,F
+	W0
+uyqlt4
+	WLW	2,T4SWPU1,F
+	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T4SWPU2,F
+	WLW	2,T4SWPU3,F
+	WLW	2,T4SWPU4,F
+	WLW	2,T4SWPU5,F
+	WLW	2,T4SWPU6,F
+	WLW	2,T4SWPU7,F
+	WLW	2,T4SWPU8,F
+	WLW	2,T4SWPU9,F
+;	WL	-1,seq_stealstand
+	WLW	2,T4SWPU8,F
+	WLW	2,T4SWPU7,F
+;	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T4SWPU6,F
+	WLW	2,T4SWPU5,F
+	WLW	2,T4SWPU4,F
+	WLW	2,T4SWPU3,F
+	WLW	2,T4SWPU2,F
+;	WLW	2,T4SWPU1,F
+	W0
+uyqlt5
+	WLW	2,T5SWPU1,F
+	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T5SWPU2,F
+	WLW	2,T5SWPU3,F
+	WLW	2,T5SWPU4,F
+	WLW	2,T5SWPU5,F
+	WLW	2,T5SWPU6,F
+	WLW	2,T5SWPU7,F
+	WLW	2,T5SWPU8,F
+	WLW	2,T5SWPU9,F
+;	WL	-1,seq_stealstand
+	WLW	2,T5SWPU8,F
+	WLW	2,T5SWPU7,F
+;	WLL	-1,seq_snd,swipe_snd
+	WLW	2,T5SWPU6,F
+	WLW	2,T5SWPU5,F
+	WLW	2,T5SWPU4,F
+	WLW	2,T5SWPU3,F
+	WLW	2,T5SWPU2,F
+;	WLW	2,T5SWPU1,F
+	W0
+
+	.endif
 
 *
 push_t

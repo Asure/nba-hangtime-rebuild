@@ -217,6 +217,8 @@ pseq_t
 ;FIX!!!  Check all references to regular STEAL_SEQ!
 ;	SEQ	STEALUP_SEQ	,stealup_t	;Swipe at ball - swat upward
 	SEQG	PUSH_SEQ	,push_t		;Push opponent
+* seq 0x32!
+	SEQG	COWER_SEQ	,cower_t	;cowering under basket 		 #unused gfx!
 	SEQG	STAGGER_SEQ	,stagger_t	;Staggered
 	SEQG	FALL_SEQ	,fall_t		;Fall down
 	SEQG	FLYBACK_SEQ	,flyback_t	;Pushed
@@ -229,8 +231,6 @@ pseq_t
 	SEQG	FFLYBACK2_SEQ	,fflyback2_t	;Pushed - nofall - Catch fire!
 	SEQG	FFLYBACKWB_SEQ	,fflybackwb_t	;Pushed (have ball)
 	SEQG	FFLYBACKWB2_SEQ	,fflybackwb2_t	;Pushed (have ball) - no fall
-
-	SEQG	COWER_SEQ	,cower_t	;cowering under basket 		 #unused gfx!
 
 	SEQG	PICKUP_SEQ	,pickup_t	;Pickup ball
 	SEQG	ELBO_SEQ	,elbo_t		;Throw elbows

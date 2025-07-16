@@ -53,6 +53,7 @@ FATALITY .equ	1	;Fire push fatality
 HOOKDEBUG .equ	1	;Debug dunks using hook table ;)
 TEAMZONE .equ	1	;Enable Team Zone meter (Abandoned feature, EXPERIMENTAL)
 COWER	.equ	1	;Cowering player anim (Unused GFX, EXPERIMENTAL)
+STEALUP	.equ	0	;Upward swiping steal animations. (AM: I don't like these animations at all!)
 
 ;DJT End
 

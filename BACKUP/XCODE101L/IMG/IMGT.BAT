@@ -79,6 +79,10 @@ copy c:\tmp\htextra\plyrpbck.tbl c:\myht\backup\xcode1~3\plyrpbck.tbl
 Rem Cowering under basket
 del c:\myht\backup\xcode1~3\cowering.tbl
 copy c:\tmp\htextra\cowering.tbl c:\myht\backup\xcode1~3\cowering.tbl
+Rem Steal swipe upward
+del c:\myht\backup\xcode1~3\stealup.tbl
+copy c:\tmp\htextra\stealup.tbl c:\myht\backup\xcode1~3\stealup.tbl
+
 
 ::pause
 exit

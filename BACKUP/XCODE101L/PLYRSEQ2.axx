@@ -454,56 +454,86 @@ cower_t
 	.word	NOMV_M|NOBALL_M|NOJUMP_M|NOJOY_M|SAMEDIR_M
 	.long	seq_stand
 	.long	cower1,cower2,cower3,cower4,cower5,cower4,cower3,cower2
-	.asg	2,N	; I don't know what the N is for.. frame time?
+	.asg	4,N	; I don't know what the N is for.. frame time?
 cower1
 	WLW	N,w1cow1,F
-	WLL	-1,seq_snd,boo_snd
+;	WLL	-1,seq_snd,boo_snd
 	WLW	N,w1cow2,F
 	WLW	N,w1cow3,F
 	WLW	N,w1cow4,F
 	WLW	N,w1cow5,F
 	WLW	N,w1cow6,F
-	WLW	N,w1cow7,F
+	WLW	10,w1cow7,F
+	WLW	N,w1cow6,F
+	WLW	N,w1cow5,F
+	WLW	N,w1cow4,F
+	WLW	N,w1cow3,F
+	WLW	N,w1cow2,F
+	WLW	N,w1cow1,F
 	W0
 cower2
 	WLW	N,w2cow1,F
-	WLL	-1,seq_snd,boo_snd
+;	WLL	-1,seq_snd,boo_snd
 	WLW	N,w2cow2,F
 	WLW	N,w2cow3,F
 	WLW	N,w2cow4,F
 	WLW	N,w2cow5,F
 	WLW	N,w2cow6,F
-	WLW	N,w2cow7,F
+	WLW	10,w2cow7,F
+	WLW	N,w2cow6,F
+	WLW	N,w2cow5,F
+	WLW	N,w2cow4,F
+	WLW	N,w2cow3,F
+	WLW	N,w2cow2,F
+	WLW	N,w2cow1,F
 	W0
 cower3
 	WLW	N,w3cow1,F
-	WLL	-1,seq_snd,boo_snd
+;	WLL	-1,seq_snd,boo_snd
 	WLW	N,w3cow2,F
 	WLW	N,w3cow3,F
 	WLW	N,w3cow4,F
 	WLW	N,w3cow5,F
 	WLW	N,w3cow6,F
-	WLW	N,w3cow7,F
+	WLW	10,w3cow7,F
+	WLW	N,w3cow6,F
+	WLW	N,w3cow5,F
+	WLW	N,w3cow4,F
+	WLW	N,w3cow3,F
+	WLW	N,w3cow2,F
+	WLW	N,w3cow1,F
 	W0
 cower4
 	WLW	N,w4cow1,F
-	WLL	-1,seq_snd,boo_snd
+;	WLL	-1,seq_snd,boo_snd
 	WLW	N,w4cow2,F
 	WLW	N,w4cow3,F
 	WLW	N,w4cow4,F
 	WLW	N,w4cow5,F
 	WLW	N,w4cow6,F
-	WLW	N,w4cow7,F
+	WLW	10,w4cow7,F
+	WLW	N,w4cow6,F
+	WLW	N,w4cow5,F
+	WLW	N,w4cow4,F
+	WLW	N,w4cow3,F
+	WLW	N,w4cow2,F
+	WLW	N,w4cow1,F
 	W0
 cower5
 	WLW	N,w5cow1,F
-	WLL	-1,seq_snd,boo_snd
+;	WLL	-1,seq_snd,boo_snd
 	WLW	N,w5cow2,F
 	WLW	N,w5cow3,F
 	WLW	N,w5cow4,F
 	WLW	N,w5cow5,F
 	WLW	N,w5cow6,F
-	WLW	N,w5cow7,F
+	WLW	10,w5cow7,F
+	WLW	N,w5cow6,F
+	WLW	N,w5cow5,F
+	WLW	N,w5cow4,F
+	WLW	N,w5cow3,F
+	WLW	N,w5cow2,F
+	WLW	N,w5cow1,F
 	W0
 	.endif
 

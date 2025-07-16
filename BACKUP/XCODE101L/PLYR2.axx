@@ -2358,21 +2358,46 @@ zdikdlp	move	*a1+,a14
 	move	a0,@t1dunkcnt
 	move	a0,@t2dunkcnt
  
-	movk	32,a0
 	cmpi	2,a1			;a1 is still holding ballpnumshot (player who took shot.)
 	jrlt	tm1			;if less than 2, plr 3+4 are on the other team etc.
+
+	.if	COWER
+;Cowering Team 1
+
+	PUSH	a13
+	move	@plyrproc_t,a13,L
+	movi	COWER_SEQ,a0
+	calla	plyr_setseq
+	move	@plyrproc_t+32,a13,L
+	calla	plyr_setseq
+	PULL	a13
+	jruc	zdikdoit
+tm1
+	PUSH	a13
+	move	@plyrproc_t+64,a13,L
+	movi	COWER_SEQ,a0
+	calla	plyr_setseq
+	move	@plyrproc_t+96,a13,L
+	movi	COWER_SEQ,a0
+	calla	plyr_setseq
+	PULL	a13
+	.else
+
 ;Knock down team 1	(works)
+	movk	32,a0			;AM: No idea why it's 32. Figure out someday.
 	move	@plyrproc_t,a1,L
-	move	a0,*a1(plyr_stagcnt)
+	move	a0,*a1(plyr_stagcnt)	;AM I know it's move 32 there.. :)
 	move	@plyrproc_t+32,a1,L
 	move	a0,*a1(plyr_stagcnt)
 	jruc	zdikdoit
 ; else knock down the other team.
 tm1
+	movk	32,a0			;AM: No idea why it's 32. Figure out someday.
 	move	@plyrproc_t+64,a1,L
 	move	a0,*a1(plyr_stagcnt)
 	move	@plyrproc_t+96,a1,L
 	move	a0,*a1(plyr_stagcnt)
+	.endif
 
 ;AMM this is the actuall sub routine proc triggered to do the breaking after all the checks
 ;
@@ -2380,6 +2405,7 @@ tm1
 zdikdoit
 
 ;Amm sounds later
+
 	CREATE0	board_shatter		;in plyr3.axx
 	movi	HOOP_PID,a0
 	calla	KIL1C
