@@ -1,0 +1,53 @@
+Color Cycling
+=============
+
+As done on the city background.
+
+Needs some ram.
+
+	.bss	cycram1		,3*2*16	;pal cycle mem
+
+	movi	city1_p,a8		;pal
+	movi	cycram1,a9		;available ram
+	movi	[60,62],a10		;1st,last color   (these are red/brown airplane ligths)
+	movi	60,a11			;Rate
+
+	.ref	COLCYC
+	CREATE	CYCPID,COLCYC
+
+	movi	city1_p,a8
+	movi	cycram2,a9
+	movi	[62,64],a10		;1st,last color	 (white/redbrown so it appears to blink white)
+	movi	2*60,a0
+	calla	RNDRNG0
+	addi	1*60,a0
+	move	a0,a11			;Rate
+	CREATE	CYCPID,COLCYC
+
+UTIL.ASM holds the COLCYC process that is created:
+
+********************************
+*CHEAP COLOR CYCLER
+*CYCLES ANY NUMBER OF COLORS
+*A8=PALETTE NAME
+*A9=RAM STORAGE AREA
+*A10=MSW START COLOR, LSW END COLOR
+*A11=SPEED, A11=NEGATIVE FOR REVERSE CYCLER
+
+Expensive version
+=================
+
+We have CYCLE_TABLE that does a whole table:
+
+	MOVI	[62,1],A8		;START AT COLOR 60, CYCLE 1 COLOR
+	MOVI	scorep,A9		;PAL NAME
+	MOVI	COLTAB_RNBW,A10		;TABLE TO CYCLE WITH
+	MOVK	3,A11			;RATE OF CYCLE IN TICKS
+	CREATE	CYCPID,CYCLE_TABLE	;START PROCESS TO DO CYCLE
+
+
+
+
+
+
+
