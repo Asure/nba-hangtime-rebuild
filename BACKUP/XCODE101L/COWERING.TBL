@@ -1,211 +1,211 @@
 	.DATA
 w1cow1:
 	.word   90,100,58,93
-	.long   09a1c24eH
+	.long   08d32caeH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,57,2,-1,12,0
 w1cow2:
 	.word   86,120,61,113
-	.long   09a2b866H
+	.long   08d422c6H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,57,21,-1,12,0
 w1cow3:
 	.word   74,131,52,127
-	.long   09a3d296H
+	.long   08d53cf6H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,40,33,-1,6,0
 w1cow4:
 	.word   72,134,49,130
-	.long   09a4dba8H
+	.long   08d64608H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,30,38,-1,6,0
 w1cow5:
 	.word   78,134,54,130
-	.long   09a5e378H
+	.long   08d74dd8H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,31,40,-1,6,0
 w1cow6:
 	.word   80,131,60,127
-	.long   09a70144H
+	.long   08d86ba4H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,35,42,-1,6,0
 w1cow7:
 	.word   79,125,65,122
-	.long   09a81fd4H
+	.long   08d98a34H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,41,35,-1,6,0
 w2cow1:
 	.word   106,105,42,95
-	.long   09a92dd9H
+	.long   08da9839H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,44,3,-1,12,0
 w2cow2:
 	.word   99,118,40,110
-	.long   09aa5e2fH
+	.long   08dbc88fH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,39,17,-1,12,0
 w2cow3:
 	.word   72,133,37,128
-	.long   09ab9d9dH
+	.long   08dd07fdH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,32,35,-1,6,0
 w2cow4:
 	.word   60,129,30,129
-	.long   09aca375H
+	.long   08de0dd5H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,23,35,-1,6,0
 w2cow5:
 	.word   58,125,27,125
-	.long   09ad7719H
+	.long   08dee179H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,18,30,-1,6,0
 w2cow6:
 	.word   62,120,31,120
-	.long   09ae3d57H
+	.long   08dfa7b7H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,19,26,-1,6,0
 w2cow7:
 	.word   65,119,37,119
-	.long   09af08c7H
+	.long   08e07327H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,22,27,-1,6,0
 w3cow1:
 	.word   73,104,20,94
-	.long   09afdc48H
+	.long   08e146a8H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,28,6,-1,3,0
 w3cow2:
 	.word   69,115,17,105
-	.long   09b0abe0H
+	.long   08e21640H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,22,18,-1,3,0
 w3cow3:
 	.word   54,122,13,112
-	.long   09b184d9H
+	.long   08e2ef39H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,14,27,-1,3,0
 w3cow4:
 	.word   43,121,13,111
-	.long   09b238fdH
+	.long   08e3a35dH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,12,30,-1,3,0
 w3cow5:
 	.word   44,119,14,109
-	.long   09b2c742H
+	.long   08e431a2H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,11,31,-1,3,0
 w3cow6:
 	.word   48,116,16,106
-	.long   09b3566eH
+	.long   08e4c0ceH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,10,30,-1,3,0
 w3cow7:
 	.word   50,114,18,104
-	.long   09b3eeaeH
+	.long   08e5590eH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,11,30,-1,3,0
 w4cow1:
 	.word   65,103,30,93
-	.long   09b48a8aH
+	.long   08e5f4eaH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,33,7,1,14,0
 w4cow2:
 	.word   69,115,35,105
-	.long   09b5419bH
+	.long   08e6abfbH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,32,16,-1,14,0
 w4cow3:
 	.word   61,124,34,115
-	.long   09b61a94H
+	.long   08e784f4H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,23,23,-1,14,0
 w4cow4:
 	.word   60,129,32,120
-	.long   09b6e968H
+	.long   08e853c8H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,16,27,-1,14,0
 w4cow5:
 	.word   69,130,37,121
-	.long   09b7bd0cH
+	.long   08e9276cH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,20,29,-1,14,0
 w4cow6:
 	.word   78,130,41,121
-	.long   09b8b252H
+	.long   08ea1cb2H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,22,31,-1,14,0
 w4cow7:
 	.word   81,129,44,120
-	.long   09b9c796H
+	.long   08eb31f6H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,23,32,-1,14,0
 w5cow1:
 	.word   64,97,35,91
-	.long   09bae54dH
+	.long   08ec4fadH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,32,5,1,15,0
 w5cow2:
 	.word   69,105,43,99
-	.long   09bb8f0dH
+	.long   08ecf96dH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,38,13,1,15,0
 w5cow3:
 	.word   63,118,38,112
-	.long   09bc5528H
+	.long   08edbf88H
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,0,29,26,-1,5,0
 w5cow4:
 	.word   68,117,39,112
-	.long   09bd206eH
+	.long   08ee8aceH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,16384,29,26,-1,4,0
 w5cow5:
 	.word   80,119,37,113
-	.long   09bdf9faH
+	.long   08ef645aH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,16384,25,30,-1,3,0
 w5cow6:
 	.word   87,112,44,106
-	.long   09befe4aH
+	.long   08f068aaH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,16384,32,25,-1,3,0
 w5cow7:
 	.word   93,104,49,98
-	.long   09c008baH
+	.long   08f1731aH
 	.word   07000H
 	.long   PLYRFX3_P
 	.word   -1,-1,-1,16384,37,20,-1,3,0

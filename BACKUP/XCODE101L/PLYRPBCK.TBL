@@ -1,55 +1,55 @@
 	.DATA
 w2blokl5:
 	.word   81,155,11,153
-	.long   096f4194H
+	.long   08a0abf4H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   34,18,-3,0,20,43,1,2,0
 w2blokl6:
 	.word   74,149,15,142
-	.long   097098e1H
+	.long   08a20341H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   38,17,-3,0,21,38,1,2,0
 w2blokl7:
 	.word   71,143,22,132
-	.long   0971c65fH
+	.long   08a330bfH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   40,20,-3,0,27,42,1,2,0
 w3blokl5:
 	.word   67,156,13,147
-	.long   0972dbfeH
+	.long   08a4465eH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   56,21,-3,0,22,36,1,13,0
 w3blokl6:
 	.word   75,134,16,124
-	.long   0973f9caH
+	.long   08a5642aH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   63,19,-3,0,16,20,1,3,0
 w3blokl7:
 	.word   76,117,17,107
-	.long   09750c98H
+	.long   08a676f8H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   66,21,-3,0,23,19,1,3,0
 w4blokl5:
 	.word   95,170,60,161
-	.long   0975ffbcH
+	.long   08a76a1cH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   92,12,3,0,61,47,1,14,0
 w4blokl6:
 	.word   99,174,65,163
-	.long   0977b956H
+	.long   08a923b6H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   96,20,3,0,65,54,1,14,0
 w4blokl7:
 	.word   90,151,56,141
-	.long   0979905cH
+	.long   08aafabcH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   80,12,3,0,56,48,1,4,0

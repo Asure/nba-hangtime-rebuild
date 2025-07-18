@@ -240,7 +240,7 @@ pseq_t
 	SEQG	TIPSTND_SEQ	,tipstnd_t	;Stand before jump ball
 	SEQG	SPIN_MOVE_SEQ	,spinmove_t	;avoid plr by spinning around him
 ;	SEQG	LOB_PASS_SEQ	,lobpass_t	;lob the ball to the hoop
-	SEQG	PUTBACK_SEQ	,putback_t	;put-back slam (cut content)
+;	SEQG	PUTBACK_SEQ	,putback_t	;put-back slam (cut content)
 ;	SEQG	GOOD_BLOCK_SEQ	,good_block_t	;Jump into this on good block
 
 	SEQG	DUNKA_SEQ	,dunka_t

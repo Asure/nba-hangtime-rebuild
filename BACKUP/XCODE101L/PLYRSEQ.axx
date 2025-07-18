@@ -106,6 +106,7 @@ M_YF	.equ	08000H	;Y free (OFLAGS)
 	.asg	M_WRNONZ|M_FLIPH,FF
 
 ;*
+	.if	PUTBACK
 putback_t
 ;(very close range only)
 
@@ -232,6 +233,7 @@ check_own_ball
 	jrp	cob_1			        ;I own the ball, do reg. end
 	move	b0,b4			        ;change to Alternative ending
 cob_1	rets
+	.endif
 
 
 stnd2_t	.word	EASYSTAG_M

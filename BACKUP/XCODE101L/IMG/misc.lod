@@ -1,0 +1,341 @@
+;!!THIS FILE NEEDS TO STAY IN IN ITS GENERAL LAYOUT!!
+;e.g court, vda, anims, rest
+;use loadr misc3.bin,1000000,0,:gfxrom in mame debug
+;
+***> 6000000,1
+; Underground Lava court.
+; Needs to be 8 bits per pixel i.e. 255/256 cols!
+ASM> uground1.tbl
+FRM> UGROUND
+; Static zipped images moved from PRG rom into GFX rom.
+; Update: Needs research how to use from IROM instead of PRG ROM!!
+; This didn't work from IROM at first tests:(
+; See UNZIP.AXX for switching image rom banks!
+ASM> BBVDA.TBL
+FRM> CHEERS
+FRM> KOBE
+FRM> TITLE 
+; Cut dunk anims
+; These need to be here or the DMACTRL words get screwed. LoadW.exe bug?
+PON>
+CON>
+XOF>
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X:W,PT2X:W,PT2Y:W,PT3X:W,PT3Y:W,PT5X:W
+;
+ASM> PLYRDSQ3.TBL
+;
+;#4
+..\..\ART110\NBA_DNK4.IMG
+;Over head? One Arm? slam dunk. (similar to arm spin dunk, but doesn't spin.)
+---> S3OASD01,S3OASD02,S3OASD03,S3OASD04,S3OASD05,S3OASD06,S3OASD07,S3OASD08
+---> S3OASD09,S3OASD10,S3OASD11,S3OASD12,S3OASD13,S3OASD14,S3OASD15,S3OASD16
+---> S3OASD17,S3OASD18,S3OASD19
+;
+;..\..\ART110\NBA_DNK5.IMG
+;---> W8OHP4 TO 12
+;#5
+; Nothing unused in ..\ART110\NBA_DNK5.IMG
+;#6
+;Some really cool wild stuff here 'over arm slam dunk' 'over head move'
+..\..\ART110\NBA_DNK6.IMG
+; Not really special slamming, maybe layup?
+---> M8FLY201,M8FLY202,M8FLY203,M8FLY204,M8FLY205,M8FLY206,M8FLY207
+---> M8FLY208,M8FLY209,M8FLY210,M8FLY211,M8FLY212,M8FLY213
+; Cool over arm slam dunk? or "super dunk" !
+---> M8OASD01,M8OASD02,M8OASD03,M8OASD04,M8OASD05,M8OASD06
+---> M8OASD07,M8OASD08,M8OASD09,M8OASD10,M8OASD11,M8OASD12
+---> M8OASD13,M8OASD14,M8OASD15,M8OASD16,M8OASD17,M8OASD18
+; Over head move
+---> M8OHM201,M8OHM202,M8OHM203,M8OHM204,M8OHM205,M8OHM206
+---> M8OHM207,M8OHM208,M8OHM209,M8OHM210,M8OHM211,M8OHM212
+---> M8OHM213,M8OHM214,M8OHM215,M8OHM216,M8OHM217,M8OHM218
+; Over head move: IN ROM BUT NOT USED! LOL!
+;---> M8OHM301,M8OHM302,M8OHM303,M8OHM304,M8OHM305,M8OHM306
+;---> M8OHM307,M8OHM308,M8OHM309,M8OHM310,M8OHM311,M8OHM312
+;---> M8OHM313,M8OHM314,M8OHM315,M8OHM316,M8OHM317,M8OHM318
+;---> M8OHM319
+; Over head move
+---> M8OHM401,M8OHM402,M8OHM403,M8OHM404,M8OHM405,M8OHM406
+---> M8OHM407,M8OHM408,M8OHM409,M8OHM410,M8OHM411,M8OHM412
+---> M8OHM413,M8OHM414,M8OHM415,M8OHM416
+; Over head move
+---> M8OHM501,M8OHM502,M8OHM503,M8OHM504,M8OHM505,M8OHM506
+---> M8OHM507,M8OHM508,M8OHM509,M8OHM510,M8OHM511,M8OHM512
+---> M8OHM513,M8OHM514,M8OHM515,M8OHM516,M8OHM517,M8OHM518
+;
+;#7
+..\..\ART110\NBA_DNK7.IMG
+; Reverse dunk?
+---> M8REVD01,M8REVD02,M8REVD03,M8REVD04,M8REVD05,M8REVD06
+---> M8REVD07,M8REVD08,M8REVD09,M8REVD10,M8REVD11,M8REVD12
+---> M8REVD13,M8REVD14,M8REVD15,M8REVD16,M8REVD17,M8REVD18
+---> M8REVD19,M8REVD20,M8REVD21
+;
+; Cut rebound dunk effect 'putback'
+; Needs better logic/testing
+;
+..\..\ART110\NBA_DEF3.IMG
+ASM> plyrpbck.tbl
+GLO> plyrpbck.glo
+; These are in plyrseq.tbl already
+;---> w2blokl1,w2blokl2,w2blokl3,w2blokl4 
+; But these were not in plyrseq.tbl!
+---> w2blokl5,w2blokl6,w2blokl7
+---> w3blokl5,w3blokl6,w3blokl7
+---> w4blokl5,w4blokl6,w4blokl7
+;
+; Unused upward swipe steal (normal swipes are in plyrseq.tbl)
+; Needs logic!
+;
+..\..\ART110\NBA_DEF1.IMG
+ASM> stealup.tbl
+GLO> swpuseq.glo
+---> T1SWPU1,T1SWPU2,T1SWPU3,T1SWPU4,T1SWPU5,T1SWPU6,T1SWPU7,T1SWPU8,T1SWPU9
+---> T2SWPU1,T2SWPU2,T2SWPU3,T2SWPU4,T2SWPU5,T2SWPU6,T2SWPU7,T2SWPU8,T2SWPU9
+---> T3SWPU1,T3SWPU2,T3SWPU3,T3SWPU4,T3SWPU5,T3SWPU6,T3SWPU7,T3SWPU8,T3SWPU9
+---> T4SWPU1,T4SWPU2,T4SWPU3,T4SWPU4,T4SWPU5,T4SWPU6,T4SWPU7,T4SWPU8,T4SWPU9
+---> T5SWPU1,T5SWPU2,T5SWPU3,T5SWPU4,T5SWPU5,T5SWPU6,T5SWPU7,T5SWPU8,T5SWPU9
+;
+; Cowering player (for shattered basket maybe?)
+; Needs logic!
+;
+..\..\ART110\NBA_MSC1.IMG
+ASM> cowering.tbl
+GLO> cowering.glo
+---> w1cow1,w1cow2,w1cow3,w1cow4,w1cow5,w1cow6,w1cow7
+---> w2cow1,w2cow2,w2cow3,w2cow4,w2cow5,w2cow6,w2cow7
+---> w3cow1,w3cow2,w3cow3,w3cow4,w3cow5,w3cow6,w3cow7
+---> w4cow1,w4cow2,w4cow3,w4cow4,w4cow5,w4cow6,w4cow7
+---> w5cow1,w5cow2,w5cow3,w5cow4,w5cow5,w5cow6,w5cow7
+;
+; Running pass
+; Needs logic!
+;
+;..\..\ART110\NBA_PAS4.IMG
+
+
+; You can add stuff below here but anims etc. need to go in the above section!!
+;
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+
+;Coach & Benched player anims
+;These were disabled for production, probably to save costs.
+
+ASM> crowd2.tbl
+GLO> crowd2.glo
+POF>
+XOF>
+ZOF>
+;test CON
+CON>
+;PAL for these is already in imgpal7, so we don't output it.
+;We can use compression on these images so those are all turned on.
+..\..\ART100\NBACROWD.IMG
+---> COACH02,COACH03,COACH04,COACH05,COACH06
+---> BNCHPL02,BNCHPL03,BNCHPL04,BNCHPL05,BNCHPL06,BNCHPL07
+SHANG.IMG
+PON>
+ASM> shang.tbl
+---> SHANG01,SHANG02,SHANG03,SHANG04,SHANG05,SHANG06,SHANG07
+---> STCLAP1,STCLAP2,STCLAP3
+ASM> storm.tbl
+GLO> storm.glo
+PPP> 0
+CON>
+POF>
+ZON>
+XON>
+;PAL for these is already in imgpal7, so we don't output it.
+;We can use compression on these images so those are all turned on.
+..\..\ART100\OUTDOOR.IMG
+---> STORM02,STORM03,STORM04,STORM05,STORM06,STORM07,STORM08,STORM09,STORM10,STORM11,STORM12
+PON>
+---> fence
+;MK3 temple to go along with the animated storm.
+MKSTREET.IMG
+---> FALL2_vda
+PON>
+;Unused art from DCSLOGO and Forden pic
+..\..\ART100\DCSLOGO.IMG
+ASM> dcs.tbl
+GLO> dcs.glo
+---> dcslogo
+mkstreet.img
+---> TOASTY,KITZ
+;Raiden lightning
+RAIDEN.IMG
+ASM> lighten.tbl
+GLO> lighten.glo
+---> lighten1,lighten2,lighten3,lighten4,lighten5,lighten6,lighten7
+;
+; New heads here
+; The .tbl & glo files are included in plyrat3.axx
+ASM> newheads.tbl
+GLO> newheads.glo
+ourhds3.img
+PPP> 6
+ZOF>
+---> RAIDEN01,RAIDEN02,RAIDEN03,RAIDEN04,RAIDEN05,RAIDEN06
+---> RAIDEN07,RAIDEN08,RAIDEN09,RAIDEN10,RAIDEN11,RAIDEN12
+---> RAIDEN13,RAIDEN14,RAIDEN15,RAIDEN16
+;Ninjas only have 5 head angles
+ourhds2.img
+---> SCORPI01,SCORPI02,SCORPI03,SCORPI04,SCORPI05,SCORPI16
+---> SUBZER01,SUBZER02,SUBZER03,SUBZER04,SUBZER05,SUBZER16
+---> REPTIL01,REPTIL02,REPTIL03,REPTIL04,REPTIL05,REPTIL16
+ninjas.img
+---> SMOKH01,SMOKH02,SMOKH03,SMOKH04,SMOKH05,SMOKH16
+Jordan.img
+---> JORDAN1,JORDAN2,JORDAN3,JORDAN4,JORDAN5,JORDAN6
+---> JORDAN7,JORDAN8,JORDAN9,JORDAN10,JORDAN11,JORDAN12
+---> JORDAN13,JORDAN14,JORDAN15,JORDAN16
+;New Sora Jordan
+---> JORD1,JORD2,JORD3,JORD4,JORD5,JORD6
+---> JORD7,JORD8,JORD9,JORD10,JORD11,JORD12
+---> JORD13,JORD14,JORD15,JORD16,JORD17
+Kobe.img
+---> KOBE01,KOBE02,KOBE03,KOBE04,KOBE05,KOBE16,KOBE17
+Shaq.img
+---> ONEAL01,ONEAL02,ONEAL03,ONEAL04,ONEAL05,ONEAL16
+Barkley.img
+---> BARKLEY1,BARKLEY2,BARKLEY3,BARKLEY4,BARKLEY5,BARKLEY16
+Magic.img
+---> MAG01,MAG02,MAG03,MAG04,MAG05,MAG16
+Bird.img
+---> BIRD01,BIRD02,BIRD03,BIRD04,BIRD05,BIRD16
+Arnold.img
+---> ARNOLD01,ARNOLD02,ARNOLD03,ARNOLD04,ARNOLD05,ARNOLD16
+Term.img
+---> TERM01,TERM02,TERM03,TERM04,TERM05,TERM16
+Walker.img
+---> WALKER1,WALKER2,WALKER3,WALKER4,WALKER5,WALKER6
+---> WALKER7,WALKER8,WALKER9,WALKER10,WALKER11,WALKER12
+---> WALKER13,WALKER14,WALKER15,WALKER16
+Ellis.img
+---> ELLIS1,ELLIS2,ELLIS3,ELLIS4,ELLIS5,ELLIS16
+; New mugs here
+; Mugs go into mugshot.glo / mugshot.tbl, so copypaste output there manualy
+; Mugs are used in select2.axx. Our mug pals should go into imgpal8.asm
+; The new imgpal8.asm is created by IMG.BAT in dosbox.
+;
+ASM> newmugs.tbl
+GLO> newmugs.glo
+XOF>
+CON>
+ZON>
+PPP> 0
+smoke.img
+---> RAD_MK2,SMK_MUG
+nmugs.img
+---> SCO_MK2,REP_MK2,SUB_MK2
+; auto-ppp doesn't work for these so set to 1
+; this forces the correct choice.
+PPP> 1
+Jordan.img
+---> JOR_MUG
+Shaq.img
+---> ONE_LAL
+Kobe.img
+---> KOB_MUG
+Barkley.img
+---> BARK_MUG
+Magic.img
+---> MAG_MUG
+Bird.img
+---> BRD_MUG
+Arnold.img
+---> ARN_MUG
+Term.img
+---> TRM_MUG
+Walker.img
+---> WALK_MUG
+Ellis.img
+---> ELL_MUG
+;Team Zone meter (cut feature) imgs
+ASM> TEAMZONE.TBL
+GLO> XXXHD.GLO
+..\..\ART110\TVSCORE.IMG
+IHDR SAG:L
+PPP> 6
+POF>
+---> TEAMZN30,TEAMZN29,TEAMZN28,TEAMZN27,TEAMZN26
+---> TEAMZN25,TEAMZN24,TEAMZN23,TEAMZN22,TEAMZN21
+---> TEAMZN20,TEAMZN19,TEAMZN18,TEAMZN17,TEAMZN16
+---> TEAMZN15,TEAMZN14,TEAMZN13,TEAMZN12,TEAMZN11
+---> TEAMZN10,TEAMZN09,TEAMZN08,TEAMZN07,TEAMZN06
+---> TEAMZN05,TEAMZN04,TEAMZN03,TEAMZN02,TEAMZN01
+CON>
+PON>
+IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
+---> TEAMZN_01r,TEAMZN_01b
+
+;Underground court art (handled in BB3.AXX)
+;
+
+CON>
+XON>
+ZON>
+PPP> 1
+COURT\UGROUND2.IMG
+ASM> UGROUND.TBL
+GLO> UGROUND.GLO
+---> UGRBK1,UGRBK2,UGRBK3
+
+; The section below needs to stay the same, since we perform
+; auto-cleanup on the IMGPAL8.ASM file and cut lines at certain points.
+; (See IMGT.CMD for the powershell oneliners.)
+
+;We put hoop & shards here at the back, since it allows easier delete from 
+;IMGPAL8.ASM
+PON>
+;Let's get the glass shard shatter stuff from Jam TE
+HOOPJAM.IMG
+PPP> 6
+ASM> shatter.tbl
+GLO> shatter.glo
+ZOF>
+---> shard1_1,shard1_2
+---> shard1_3,shard1_4,shard1_5,shard1_6,shard1_7,shard1_8,shard2_1,shard2_2
+---> shard2_3,shard2_4,shard2_5,shard2_6,shard2_7,shard2_8,shard3_1,shard3_2
+---> shard3_3,shard3_4,shard3_5,shard3_6,shard3_7,shard3_8,shard3_9
+---> shard3_10,shard3_11,shard3_12,shard4_1,shard4_2,shard4_3,shard4_4
+---> shard4_5,shard4_6,shard4_7,shard4_8,shard4_9,shard4_10,shard5_1
+---> shard5_2,shard5_3,shard5_4,shard5_5,shard5_6,shard5_7,shard5_8,shard6_1
+---> shard6_2,shard6_3,shard6_4,shard6_5,shard6_6,shard6_7,shard6_8,shard7_1
+---> shard7_2,shard7_3,shard7_4,shard7_5,shard7_6,shard7_7,shard7_8,shard7_9
+---> shard7_10,shard8_1,shard8_2,shard8_3,shard8_4,shard8_5,shard8_6
+---> shard8_7,shard8_8,shard8_9,shard8_10
+---> shat1_1
+---> shat1_2,shat1_3,shat1_4,shat1_5,shat2_1,shat2_2,shat2_3,shat2_4,shat2_5
+---> shat3_1,shat3_2,shat3_3,shat3_4,shat3_5,shat4_1,shat4_2,shat4_3,shat4_4
+---> shat4_5
+ZON>
+;Redrawn shattered hoop from Ressurecta - Thanks!
+HOOPHT.IMG
+PPP> 6
+ASM> hoop2.tbl
+GLO> hoop2.glo
+---> BACK1BR,BACK2BR,BACK3BR,BACK4BR,BACK5BR,BACK6BR,BACK7BR,BACK8BR,BACK9BR
+NBBD8.IMG
+PPP> 6
+---> nback1br,nback2br,nback3br,nback4br,nback5br
+---> nback6br,nback7br,nback8br,nback9br,nback10br
+;
+; New nameplates here. 
+; Nameplates go into imgtbl.axx !AND! imgtbl.glo 
+;
+; These need to be 6-color and use BAST_Y pal that is already in!
+ASM> names3.tbl
+GLO> names3.glo
+PPP> 0
+pnames3.img
+PON>
+CON>
+XON>
+ZOF>
+---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL
+---> BIRD,TERMINATOR,ARNOLD,WALKER,ELLIS,D_ELLIS
+..\..\ART100\pnames.img
+---> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M
+

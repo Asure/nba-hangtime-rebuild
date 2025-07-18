@@ -3,7 +3,8 @@ mkdir c:\tmp\htextra
 rem cleanup
 del c:\tmp\htextra\imgpal.asm
 del c:\tmp\htextra\imgpal8.asm
-loadw misc /t=c:\tmp\htextra /FI /E >haha
+rem loadw misc2 /t=c:\tmp\htextra /FI /E >haha
+loadw misc3 /t=c:\tmp\htextra /FI /E >haha
 rem shatter imgs
 del c:\myht\backup\xcode1~3\shatter.tbl
 copy c:\tmp\htextra\shatter.tbl c:\myht\backup\xcode1~3\shatter.tbl
@@ -59,6 +60,16 @@ copy c:\tmp\htextra\TEAMZONE.TBL c:\myht\backup\xcode1~3\TEAMZONE.TBL
 rem Underground
 del c:\myht\backup\xcode1~3\uground.tbl
 copy c:\tmp\htextra\uground.tbl c:\myht\backup\xcode1~3\uground.tbl
+
+rem cleanup
+del c:\tmp\htextra\imgpal.asm
+del c:\tmp\htextra\imgpal8.asm
+del c:\tmp\htextra\*.tbl
+del c:\tmp\htextra\*.glo
+
+echo !!! DELETE BAST_Y_P duplicate from IMGPAL8.ASM !!!
+echo !!! DELETE BOTH HOOP_p duplicate from IMGPAL8.ASM !!!
+loadw misc4 /t=c:\tmp\htextra /FI /E >haha2
 rem unused dunks
 del c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
 copy c:\tmp\htextra\PLYRDSQ3.TBL c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
@@ -71,12 +82,6 @@ copy c:\tmp\htextra\cowering.tbl c:\myht\backup\xcode1~3\cowering.tbl
 Rem Steal swipe upward
 del c:\myht\backup\xcode1~3\stealup.tbl
 copy c:\tmp\htextra\stealup.tbl c:\myht\backup\xcode1~3\stealup.tbl
-
-rem cleanup
-del c:\tmp\htextra\imgpal.asm
-del c:\tmp\htextra\imgpal8.asm
-del c:\tmp\htextra\*.tbl
-del c:\tmp\htextra\*.glo
 
 
 ::pause

@@ -1,37 +1,37 @@
 	.DATA
 lighten1:
 	.word   7,13,1,10
-	.long   0853a244H
+	.long   0914b376H
 	.word   03000H
 	.long   ligtn_p
 lighten2:
 	.word   13,16,-2,20
-	.long   0853a355H
+	.long   0914b487H
 	.word   03080H
 	.long   ligtn_p
 lighten3:
 	.word   10,29,-5,37
-	.long   0853a5b5H
+	.long   0914b6e7H
 	.word   03000H
 	.long   ligtn_p
 lighten4:
 	.word   15,23,2,44
-	.long   0853a91bH
+	.long   0914ba4dH
 	.word   03080H
 	.long   ligtn_p
 lighten5:
 	.word   10,22,4,56
-	.long   0853ac85H
+	.long   0914bdb7H
 	.word   03000H
 	.long   ligtn_p
 lighten6:
 	.word   11,20,4,65
-	.long   0853af19H
+	.long   0914c04bH
 	.word   03000H
 	.long   ligtn_p
 lighten7:
 	.word   10,11,-1,69
-	.long   0853b1adH
+	.long   0914c2dfH
 	.word   03000H
 	.long   ligtn_p
 	.TEXT

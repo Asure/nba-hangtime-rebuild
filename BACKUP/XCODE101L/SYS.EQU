@@ -48,7 +48,7 @@ UGROUND	.equ	1	;third court background & obj stuff
 SMOKET	.equ	0	;Player Smoketrails (Abandoned feature, EXPERIMENTAL)
 SHADOWT	.equ	0	;Player Shadowtrails (Abandoned feature, EXPERIMENTAL) combined cost around 1024
 SPARKDB	.equ	0	;Ball sparking test (Abandoned feature, EXPERIMENTAL)
-PUTBACK	.equ	1	;Putback rebounds (Abandoned feature, EXPERIMENTAL)
+PUTBACK	.equ	0	;Putback rebounds (Abandoned feature, EXPERIMENTAL)
 FATALITY .equ	1	;Fire push fatality
 HOOKDEBUG .equ	1	;Debug dunks using hook table ;)
 TEAMZONE .equ	1	;Enable Team Zone meter (Abandoned feature, EXPERIMENTAL)
