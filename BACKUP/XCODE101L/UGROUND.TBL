@@ -14,5 +14,25 @@ UGRBK3:
 	.long   092f0812H
 	.word   0f80H
 	.long   UGRBACKP
+SPIKETST:
+	.word   187,45,0,-6
+	.long   09321222H
+	.word   0f80H
+	.long   SPIKEPAL
+BLUBAK1:
+	.word   200,297,0,0
+	.long   0932d042H
+	.word   00H
+	.long   BLUBAKP
+BLUBAK2:
+	.word   200,297,0,0
+	.long   093a1082H
+	.word   00H
+	.long   BLUBAKP
+BLUBAK3:
+	.word   200,297,0,0
+	.long   094150c2H
+	.word   00H
+	.long   BLUBAKP
 	.TEXT
 

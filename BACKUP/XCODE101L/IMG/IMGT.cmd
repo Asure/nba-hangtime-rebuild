@@ -20,8 +20,9 @@ rem linux "head -n -70 input.txt > temp && mv temp input.txt" for example.
 powershell -Command "$i=0; Get-Content imgpal8.asm | Where-Object { ++$i -lt 8 -or $i -gt 44 } | Set-Content imgpal16.asm"
 powershell -Command "Get-Content IMGPAL16.ASM | Select-Object -First ((Get-Content IMGPAL16.ASM).Count - 70) | Set-Content IMGPAL18.ASM"
 del imgpal8.asm
+rem del imgpal16.asm
 ren imgpal18.asm IMGPAL8.ASM
 rem pause
-rework.cmd
+rem rework.cmd
 
 

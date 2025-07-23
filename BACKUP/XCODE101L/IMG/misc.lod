@@ -1,16 +1,23 @@
 ;!!THIS FILE NEEDS TO STAY IN IN ITS GENERAL LAYOUT!!
-;e.g court, vda, anims, rest
+;e.g court floor, vda, anims, rest, HOOP, NAMES
 ;use loadr misc3.bin,1000000,0,:gfxrom in mame debug
 ;
 ***> 6000000,1
 ; Underground Lava court.
 ; Needs to be 8 bits per pixel i.e. 255/256 cols!
+; PAL for this is un UGROUND.TBL for now.
 ASM> uground1.tbl
-FRM> UGROUND
+;FRM> UGROUND2
+;
+; Blue vortex (tiled) floor
+; PAL for this is un UGROUND.TBL for now.
+FRM> BLUFLOOR
+; COURT PALS NEED ATTACHED TO A OBJ and are in BB.AXX
+;
 ; Static zipped images moved from PRG rom into GFX rom.
 ; Update: Needs research how to use from IROM instead of PRG ROM!!
 ; This didn't work from IROM at first tests:(
-; See UNZIP.AXX for switching image rom banks!
+; Done, See UNZIP.AXX for switching image rom banks!
 ASM> BBVDA.TBL
 FRM> CHEERS
 FRM> KOBE
@@ -269,10 +276,8 @@ CON>
 PON>
 IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L
 ---> TEAMZN_01r,TEAMZN_01b
-
 ;Underground court art (handled in BB3.AXX)
 ;
-
 CON>
 XON>
 ZON>
@@ -281,11 +286,15 @@ COURT\UGROUND2.IMG
 ASM> UGROUND.TBL
 GLO> UGROUND.GLO
 ---> UGRBK1,UGRBK2,UGRBK3
-
+---> SPIKETST
+ZOF>
+COF>
+XOF>
+COURT\BLUCOURT.IMG
+---> BLUBAK1,BLUBAK2,BLUBAK3
 ; The section below needs to stay the same, since we perform
 ; auto-cleanup on the IMGPAL8.ASM file and cut lines at certain points.
 ; (See IMGT.CMD for the powershell oneliners.)
-
 ;We put hoop & shards here at the back, since it allows easier delete from 
 ;IMGPAL8.ASM
 PON>

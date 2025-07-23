@@ -25,6 +25,7 @@ DEBUG	.equ	0	;0 or 1
 IMGVIEW	.equ	0	;0 or 1
 HEADCK	.equ	0	;0 or 1
 DNKTST	.equ	0	;0 or 1 Similar to DEBUG but adds extra things.
+;CRTALGN	.equ	1	;Show court alignment dots  -> in world.equ!
 
 HOTSPOT	.equ	0	;0 or 1  Show hotspots    off/on
 

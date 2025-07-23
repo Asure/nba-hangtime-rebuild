@@ -45,12 +45,6 @@ rem VDA zipped images
 rem These used to be in the program rom, now in GFX rom.
 del c:\myht\backup\xcode1~3\bbvda.tbl
 copy c:\tmp\htextra\bbvda.tbl c:\myht\backup\xcode1~3\bbvda.tbl
-rem pals
-ren c:\tmp\htextra\imgpal.asm imgpal8.asm
-del c:\tmp\htextra\l2*.*
-del c:\myht\backup\xcode1~3\imgpal8.asm
-copy c:\myht\backup\xcode1~3\pal8_b.asm C:\myht\backup\xcode1~3\imgpal8.asm 
-type c:\tmp\htextra\imgpal8.asm >> c:\myht\backup\xcode1~3\imgpal8.asm
 rem DCS
 copy c:\tmp\htextra\dcs.* c:\myht\backup\xcode1~3\
 rem Team Zone gfx
@@ -72,12 +66,17 @@ Rem Steal swipe upward
 del c:\myht\backup\xcode1~3\stealup.tbl
 copy c:\tmp\htextra\stealup.tbl c:\myht\backup\xcode1~3\stealup.tbl
 
+rem pals
+ren c:\tmp\htextra\imgpal.asm imgpal8.asm
+del c:\tmp\htextra\l2*.*
+del c:\myht\backup\xcode1~3\imgpal8.asm
+copy c:\myht\backup\xcode1~3\pal8_b.asm C:\myht\backup\xcode1~3\imgpal8.asm 
+type c:\tmp\htextra\imgpal8.asm >> c:\myht\backup\xcode1~3\imgpal8.asm
+
+
 rem cleanup
-del c:\tmp\htextra\imgpal.asm
-del c:\tmp\htextra\imgpal8.asm
-del c:\tmp\htextra\*.tbl
-del c:\tmp\htextra\*.glo
+del c:\tmp\htextra\*.*
 
-
+loadw misc2 /t=c:\tmp\htextra /FI /E >haha2
 ::pause
 exit

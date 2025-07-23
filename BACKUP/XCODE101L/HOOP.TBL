@@ -994,98 +994,98 @@ nhoopbot:
 	.TEXT
 	.DATA
 BACK1BR:
-	.word   91,74,-28,181
-	.long   0932665eH
+	.word   90,73,-28,181
+	.long   0948d3ceH
 	.word   0780H
 	.long   HOOP_P
 BACK2BR:
-	.word   90,74,-28,181
-	.long   0932e45eH
+	.word   89,73,-28,181
+	.long   09495196H
 	.word   0780H
 	.long   HOOP_P
 BACK3BR:
-	.word   88,74,-28,181
-	.long   09335f3eH
-	.word   0680H
+	.word   87,73,-28,181
+	.long   0949cc46H
+	.word   0280H
 	.long   HOOP_P
 BACK4BR:
-	.word   87,74,-28,181
-	.long   0933d69eH
+	.word   86,73,-28,181
+	.long   094a4286H
 	.word   0280H
 	.long   HOOP_P
 BACK5BR:
-	.word   86,74,-28,181
-	.long   09344bdeH
+	.word   85,73,-28,181
+	.long   094ab6aeH
 	.word   0280H
 	.long   HOOP_P
 BACK6BR:
-	.word   84,74,-28,181
-	.long   0934bdd6H
+	.word   83,73,-28,181
+	.long   094b27aeH
 	.word   0280H
 	.long   HOOP_P
 BACK7BR:
-	.word   83,74,-28,181
-	.long   09352d36H
+	.word   82,73,-28,181
+	.long   094b9646H
 	.word   0280H
 	.long   HOOP_P
 BACK8BR:
-	.word   80,74,-28,181
-	.long   09359b0eH
+	.word   79,73,-28,181
+	.long   094c035eH
 	.word   0280H
 	.long   HOOP_P
 BACK9BR:
-	.word   78,74,-28,181
-	.long   093601e6H
+	.word   77,73,-28,181
+	.long   094c698eH
 	.word   0280H
 	.long   HOOP_P
 nback1br:
-	.word   131,99,14,175
-	.long   09366576H
+	.word   130,98,14,175
+	.long   094ccc86H
 	.word   0f80H
 	.long   NHOOP_p
 nback2br:
-	.word   130,99,14,175
-	.long   09375ad6H
+	.word   129,98,14,175
+	.long   094dbe76H
 	.word   0f80H
 	.long   NHOOP_p
 nback3br:
-	.word   129,99,14,175
-	.long   09384d5eH
+	.word   128,98,14,175
+	.long   094eae16H
 	.word   0f80H
 	.long   NHOOP_p
 nback4br:
-	.word   127,99,14,175
-	.long   09393dceH
+	.word   126,98,14,175
+	.long   094f9ba6H
 	.word   0f80H
 	.long   NHOOP_p
 nback5br:
-	.word   126,99,14,175
-	.long   093a29ceH
+	.word   125,98,14,175
+	.long   095084d6H
 	.word   0f80H
 	.long   NHOOP_p
 nback6br:
-	.word   124,99,14,175
-	.long   093b1376H
+	.word   123,98,14,175
+	.long   09516b36H
 	.word   0f80H
 	.long   NHOOP_p
 nback7br:
-	.word   123,99,14,175
-	.long   093bf6aeH
+	.word   122,98,14,175
+	.long   09524af6H
 	.word   0f80H
 	.long   NHOOP_p
 nback8br:
-	.word   122,99,14,175
-	.long   093cd70eH
+	.word   121,98,14,175
+	.long   095329e6H
 	.word   0f80H
 	.long   NHOOP_p
 nback9br:
-	.word   120,99,14,175
-	.long   093db756H
+	.word   119,98,14,175
+	.long   09540e46H
 	.word   0f80H
 	.long   NHOOP_p
 nback10br:
-	.word   119,99,14,175
-	.long   093e996eH
+	.word   118,98,14,175
+	.long   0954ecc6H
 	.word   0f80H
 	.long   NHOOP_p
 	.TEXT

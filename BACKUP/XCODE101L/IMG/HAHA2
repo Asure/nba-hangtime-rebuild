@@ -6,23 +6,22 @@ Using a page of expanded memory.
 
 GSP is Memory Mapped at PC address C000:7000
 Loading images ...
-	from: C:\MYHT\BACKUP\XCODE1~3\IMG\misc4.lod
+	from: C:\MYHT\BACKUP\XCODE1~3\IMG\misc2.lod
 	to:   Table header files (written to directory c:\tmp\htextra\)
 	      GSP target system.
-	      C:\MYHT\BACKUP\XCODE1~3\IMG\misc4.irw
+	      C:\MYHT\BACKUP\XCODE1~3\IMG\misc2.irw
 	      
 SET new IRAM address = 2000000 bank 0
-SET new IRAM address = 7000000 bank 1
 
 Bytes Loaded...
-	IMAGE RAM              1581608 dec	  182228 hex
+	IMAGE RAM                18878 dec	    49BE hex
 
-	TOTAL LOAD             1581608 dec	  182228 hex
+	TOTAL LOAD               18878 dec	    49BE hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records      1581608 dec	  182228 hex
+	In IMAGE RAM records        18878 dec	    49BE hex
 
-	TOTAL bytes written       1581608 dec	  182228 hex, in 2 records.
+	TOTAL bytes written         18878 dec	    49BE hex, in 1 record.
 
-Bytes Represented in Tables ... 1581607 dec 182227 hex
+Bytes Represented in Tables ... 18878 dec 49BE hex
 

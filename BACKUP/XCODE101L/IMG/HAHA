@@ -46,13 +46,13 @@ Image JORD14 has 173 colors. Can't fit into 6 bits per pixel.
 Image JORD15 has 173 colors. Can't fit into 6 bits per pixel.
 Image JORD16 has 173 colors. Can't fit into 6 bits per pixel.
 Image JORD17 has 173 colors. Can't fit into 6 bits per pixel.
-Image KOBE01 has 256 colors. Can't fit into 6 bits per pixel.
-Image KOBE02 has 256 colors. Can't fit into 6 bits per pixel.
-Image KOBE03 has 256 colors. Can't fit into 6 bits per pixel.
-Image KOBE04 has 256 colors. Can't fit into 6 bits per pixel.
-Image KOBE05 has 256 colors. Can't fit into 6 bits per pixel.
-Image KOBE16 has 256 colors. Can't fit into 6 bits per pixel.
-Image KOBE17 has 256 colors. Can't fit into 6 bits per pixel.
+Image KOBE01 has 67 colors. Can't fit into 6 bits per pixel.
+Image KOBE02 has 67 colors. Can't fit into 6 bits per pixel.
+Image KOBE03 has 67 colors. Can't fit into 6 bits per pixel.
+Image KOBE04 has 67 colors. Can't fit into 6 bits per pixel.
+Image KOBE05 has 67 colors. Can't fit into 6 bits per pixel.
+Image KOBE16 has 67 colors. Can't fit into 6 bits per pixel.
+Image KOBE17 has 67 colors. Can't fit into 6 bits per pixel.
 Image TERM01 has 69 colors. Can't fit into 6 bits per pixel.
 Image TERM02 has 69 colors. Can't fit into 6 bits per pixel.
 Image TERM03 has 69 colors. Can't fit into 6 bits per pixel.
@@ -78,6 +78,10 @@ Image ELL_MUG has 59 colors. Can't fit into 1 bits per pixel.
 Image UGRBK1 has 52 colors. Can't fit into 1 bits per pixel.
 Image UGRBK2 has 52 colors. Can't fit into 1 bits per pixel.
 Image UGRBK3 has 52 colors. Can't fit into 1 bits per pixel.
+Image SPIKETST has 64 colors. Can't fit into 1 bits per pixel.
+Image BLUBAK1 has 64 colors. Can't fit into 1 bits per pixel.
+Image BLUBAK2 has 64 colors. Can't fit into 1 bits per pixel.
+Image BLUBAK3 has 64 colors. Can't fit into 1 bits per pixel.
 Image BACK1BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK2BR has 178 colors. Can't fit into 6 bits per pixel.
 Image BACK3BR has 178 colors. Can't fit into 6 bits per pixel.
@@ -99,19 +103,19 @@ Image nback9br has 252 colors. Can't fit into 6 bits per pixel.
 Image nback10br has 252 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM              2620140 dec	  27FAEC hex
+	IMAGE RAM              2802918 dec	  2AC4E6 hex
 
-	TOTAL LOAD             2620140 dec	  27FAEC hex
+	TOTAL LOAD             2802918 dec	  2AC4E6 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records      2620140 dec	  27FAEC hex
+	In IMAGE RAM records      2802918 dec	  2AC4E6 hex
 
-	TOTAL bytes written       2620140 dec	  27FAEC hex, in 2 records.
+	TOTAL bytes written       2802918 dec	  2AC4E6 hex, in 2 records.
 
-Bytes Represented in Tables ... 2620140 dec 27FAEC hex
+Bytes Represented in Tables ... 2802917 dec 2AC4E5 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.
 
-Skipped 6932 duplicate bytes in 22 foreground checksum matches.
+Skipped 6738 duplicate bytes in 8 foreground checksum matches.
 

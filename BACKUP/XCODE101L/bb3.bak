@@ -3920,7 +3920,7 @@ sp_cmos_end
 * a9=plyr #
 
 ;DJT Start
-	.ref	mess_objid,message_palette,mess_cursx,mess_cursy
+	.ref	mess_objid,message_palette,mess_cursx
 xfelTIMEOUT	.equ	60
 
 sp_court
@@ -3931,8 +3931,8 @@ sp_court
 xfellp
 	SLEEPK	1
 	callr	xfelcbani
-	move	*a8,a10		;player inputs moved into a10
-	jrnz	xfellp		;default inputs are high and go low. loop here if nothing pressed
+	move	*a8,a10
+	jrnz	xfellp
 xfellp1
 	SLEEPK	1
 	callr	xfelcbani
@@ -3947,102 +3947,38 @@ xfellp1
 
 	movk	1,a0
 	cmpi	JOY_RIGHT,a10
-	jreq	xfellp2
-
-	movk	2,a0		;add case for up
-	cmpi	JOY_UP,a10
-	jreq	xfellp2
-
-	movk	3,a0		;add case for down
-	cmpi	JOY_DOWN,a10
-	jreq	xfellp2
-
-	jruc	xfellp		; None matched
-
-xfellp2					;we enter here if any of the sticks was moved l/r/u
+	jrne	xfellp
+xfellp2
 	move	a0,@pup_court
 
-	movi	msg_doors_setup,a2,L	;this has the x/y and such for text defined. (default=BLU/unselected)
-	calla	setup_message		;sets up text printing
+	movi	msg_doors_setup,a2,L
+	calla	setup_message
 	movi	TYPTEXT+1,a0
 	move	a0,@mess_objid		;OBJ ID's for text
 	calla	obj_del1c
 
-	movi	BAST_W_P,a11		;White font, selected item.
-	cmpi	JOY_LEFT,a10            ;check if stick is left.
-	jrne	xfellp4			;if it's not left, skip below.
-	move	a11,@message_palette,L  ;load white palette
+	movi	BAST_W_P,a11
+	cmpi	JOY_LEFT,a10
+	jrne	xfellp4
+	move	a11,@message_palette,L
 xfellp4
-	movi	msg_indoor,a4,L		;load indoor text
-	calla	print_string_C2		;print the indoor string (white if it was left)
+	movi	msg_indoor,a4,L
+	calla	print_string_C2
 
-	cmpi	JOY_RIGHT,a10		;since it's not left, check for right
-	jreq	xfellp5                 ;ok it's right, we keep the white font and on to xfellp5
-	movi	BAST_B_P,a11		;Blue font, unselected.
+	cmpi	JOY_RIGHT,a10
+	jreq	xfellp5
+	movi	BAST_B_P,a11
 xfellp5
-	move	a11,@message_palette,L	;This sets the font color
-	move	@mess_cursx,a0		;cursor x pos
-	addi	70,a0			;70
-	move	a0,@mess_cursx		;added to cursor
-	movi	msg_outdoor,a4,L	;outdoor text
-	calla	print_string_C2		;print the text.
-
-; we always get get here.
-; stick was pressed and it was not left or right.
-; turn the other court texts blue
-
-	cmpi	JOY_UP,a10		;check if it's indeed UP
-	jrne	xfellp6c                ;it's not up, so we keep blue.
-
-xfellp6
-	movi	BAST_W_P,a11		;White font, selected item.
-	jruc	xfellp6d
-xfellp6c
-        movi	BAST_B_P,a11		;Blue font, unselected.
-xfellp6d
-	move	a11,@message_palette,L	;This sets the font color
-	move	@mess_cursx,a0		;cursor x pos
-	subi	35,a0			;70 ;50
-	move	a0,@mess_cursx		;added to cursor
-	move	@mess_cursy,a0		;cursor x pos
-	subi	10,a0			;70
-	move	a0,@mess_cursy		;added to cursor
-	movi	msg_uground,a4,L	;uground text
-	calla	print_string_C2		;print the text.
-
-	cmpi	JOY_DOWN,a10		;check if it's indeed DOWN
-	jrne	xfellp8c                ;it's not up, so we keep blue.
-
-xfellp8
-	movi	BAST_W_P,a11		;White font, selected item.
-	jruc	xfellp8d
-xfellp8c
-        movi	BAST_B_P,a11		;Blue font, unselected.
-xfellp8d
-	move	a11,@message_palette,L	;This sets the font color
-	move	@mess_cursx,a0		;cursor x pos
-;	addi	5,a0			;20
-	move	a0,@mess_cursx		;added to cursor
-	move	@mess_cursy,a0		;cursor x pos
-	addi	20,a0			;30
-	move	a0,@mess_cursy		;added to cursor
-	movi	msg_bluvort,a4,L	;Vortex Temple
-	calla	print_string_C2		;print the text.
-
-
-xfellp9
-; do something here.
-; 	move	@mess_cursy,a0		;cursor x pos
-;	addi	30,a0			;70
-;	move	a0,@mess_cursy		;added to cursor
-
-
-
-;outdoor
+	move	a11,@message_palette,L
+	move	@mess_cursx,a0
+	addi	70,a0
+	move	a0,@mess_cursx
+	movi	msg_outdoor,a4,L
+	calla	print_string_C2
 
 	movi	crtsel_snds,a11,L
 	move	@pup_msgs,a0,L
-	movk	1<<MSG_OUTDOOR,a14	;flag bit, case sensitive ASG above in the file.
+	movk	1<<MSG_OUTDOOR,a14
 	and	a0,a14
 	jrnz	xfellp3
 
@@ -4287,7 +4223,7 @@ msg_special
 	.even
 
 msg_court_setup
-	PRINT_STR	bast8_ascii,5,0,200,160,BAST_C_P,0
+	PRINT_STR	bast8_ascii,5,0,200,170,BAST_C_P,0
 msg_court
 	.string	"Court:",0
 	.even
@@ -4298,12 +4234,6 @@ msg_indoor
 	.string	"Stadium",0
 msg_outdoor
 	.string	"Outdoor",0
-	.even
-msg_uground
-	.string	"Underground",0
-	.even
-msg_bluvort
-	.string	"Vortex",0
 	.even
 
 ;;msg_nodrift_setup
