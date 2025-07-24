@@ -7,8 +7,7 @@
 ; Needs to be 8 bits per pixel i.e. 255/256 cols!
 ; PAL for this is un UGROUND.TBL for now.
 ASM> uground1.tbl
-;FRM> UGROUND2
-;
+FRM> UGROUND2
 ; Blue vortex (tiled) floor
 ; PAL for this is un UGROUND.TBL for now.
 FRM> BLUFLOOR

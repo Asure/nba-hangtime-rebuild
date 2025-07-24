@@ -1061,8 +1061,12 @@ DMACRT	.equ	(((8|COURT_BC)<<12)|DMAWNZ)<<16
 	.if 	1		;1 for locked court, 0 for new court
 	.ref	COURT
 	.ref	OUTDOOR
-SAGCRT	.equ	  COURT-IROM+(GNDI_W/2-200)*COURT_BC+BNKCRT*04000000H
+	.ref	UGRCRT
+	.ref	BLUCRT
+SAGCRT	.equ	COURT-IROM+(GNDI_W/2-200)*COURT_BC+BNKCRT*04000000H
 SAGOTD	.equ	OUTDOOR-IROM+(GNDI_W/2-200)*COURT_BC+BNKOTD*04000000H
+SAGUGR	.equ	UGRCRT-IROM+(GNDI_W/2-200)*COURT_BC+BNKOTD*04000000H
+SAGBLU	.equ	BLUCRT-IROM+(GNDI_W/2-200)*COURT_BC+BNKOTD*04000000H
 	.else
 	.ref	COURTNEW
 	.ref	OUTDOOR
@@ -1096,7 +1100,18 @@ tesrdo_x_t	move	a2,a3			;Eliminate X frac & put in table
 	movi	SAGCRT,a6		;A6=*1st line centered of court img
 	move	@pup_court,a2		;Outdoor court?
 	jrz	tesrcrt			; br=no
+	cmpi	2,a2			;Underground?
+	jreq	ugrcrt			; br=yes
+	cmpi	3,a2			;Vortex?
+	jreq	vrtcrt			; br=yes
+
 	movi	SAGOTD,a6		;A6=*1st line centered of court img
+	jruc	tesrcrt
+vrtcrt
+	movi	SAGBLU,a6		;A6=*1st line centered of court img
+	jruc	tesrcrt
+ugrcrt
+	movi	SAGUGR,a6		;A6=*1st line centered of court img
 tesrcrt
 	movi	GNDI_W*COURT_BC,a2	;K> A2=court img bit width
 	movi	GNDI_H,a5		;A5=court img line count

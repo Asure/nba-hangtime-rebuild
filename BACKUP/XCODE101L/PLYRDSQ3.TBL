@@ -1,739 +1,739 @@
 	.DATA
 S3OASD01:
 	.word   56,108,16,107
-	.long   08316a60H
+	.long   08506360H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   35,14,-3,-32768,23,14,1,3,0
 S3OASD02:
 	.word   59,121,20,122
-	.long   08320fc0H
+	.long   085108c0H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   42,17,-3,-32768,24,19,1,3,0
 S3OASD03:
 	.word   67,134,24,132
-	.long   0832d2f5H
+	.long   0851cbf5H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   56,25,3,-32768,26,22,1,3,0
 S3OASD04:
 	.word   76,136,26,131
-	.long   0833c873H
+	.long   0852c173H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   67,39,-3,-32768,26,21,1,3,0
 S3OASD05:
 	.word   84,131,28,127
-	.long   0834e313H
+	.long   0853dc13H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   62,53,-3,-32768,28,17,1,3,0
 S3OASD06:
 	.word   91,124,29,121
-	.long   08360ff7H
+	.long   085508f7H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   51,60,-3,-32768,29,12,1,3,0
 S3OASD07:
 	.word   94,112,30,112
-	.long   08374483H
+	.long   08563d83H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   32,62,3,-32768,29,3,1,3,0
 S3OASD08:
 	.word   93,109,30,111
-	.long   08386463H
+	.long   08575d63H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,62,3,-32768,29,3,1,3,0
 S3OASD09:
 	.word   101,107,46,111
-	.long   08397992H
+	.long   08587292H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   5,59,3,-32768,45,3,1,3,0
 S3OASD10:
 	.word   109,106,62,110
-	.long   083aa113H
+	.long   08599a13H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   3,40,3,-32768,62,2,1,3,0
 S3OASD11:
 	.word   106,108,66,111
-	.long   083bdd01H
+	.long   085ad601H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   3,18,3,-32768,69,3,1,3,0
 S3OASD12:
 	.word   98,128,58,129
-	.long   083d1609H
+	.long   085c0f09H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   3,9,3,-32768,65,21,-1,3,0
 S3OASD13:
 	.word   80,157,35,157
-	.long   083e6d09H
+	.long   085d6609H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,13,-3,-32768,47,50,-1,3,0
 S3OASD14:
 	.word   63,165,15,163
-	.long   083fc479H
+	.long   085ebd79H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   29,15,-3,-32768,29,61,-1,8,0
 S3OASD15:
 	.word   68,152,16,149
-	.long   0840e0b6H
+	.long   085fd9b6H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   60,18,-3,-32768,31,49,-1,8,0
 S3OASD16:
 	.word   81,133,17,130
-	.long   0841fb56H
+	.long   0860f456H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   74,19,-3,-32768,32,31,-1,8,0
 S3OASD17:
 	.word   76,127,18,126
-	.long   084321e9H
+	.long   08621ae9H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   49,0,0,-32768,32,27,-1,8,0
 S3OASD18:
 	.word   60,154,16,150
-	.long   084429d5H
+	.long   086322d5H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,-32768,27,51,-1,8,0
 S3OASD19:
 	.word   54,161,15,151
-	.long   0845267dH
+	.long   08641f7dH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,-32768,21,54,-1,8,0
 M8FLY201:
 	.word   87,109,22,105
-	.long   08461437H
+	.long   08650d37H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   26,10,2,-32768,33,16,1,3,0
 M8FLY202:
 	.word   88,121,23,117
-	.long   08471784H
+	.long   08661084H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   18,9,2,-32768,39,19,1,3,0
 M8FLY203:
 	.word   83,123,36,120
-	.long   08483aacH
+	.long   086733acH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,14,2,-32768,49,19,1,3,0
 M8FLY204:
 	.word   78,122,49,117
-	.long   084951d3H
+	.long   08684ad3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   8,21,2,-32768,61,18,1,2,0
 M8FLY205:
 	.word   75,103,54,110
-	.long   084a5607H
+	.long   08694f07H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   7,20,2,-32768,62,11,1,2,0
 M8FLY206:
 	.word   86,83,53,105
-	.long   084b2942H
+	.long   086a2242H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   7,15,2,-32768,61,4,1,2,0
 M8FLY207:
 	.word   94,81,47,108
-	.long   084bec70H
+	.long   086ae570H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   8,8,2,-32768,56,7,1,2,0
 M8FLY208:
 	.word   97,118,38,131
-	.long   084cbca2H
+	.long   086bb5a2H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   20,13,-1,-32768,47,32,-2,2,0
 M8FLY209:
 	.word   90,144,30,145
-	.long   084df59cH
+	.long   086cee9cH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   41,16,-1,-32768,40,47,-2,2,0
 M8FLY210:
 	.word   79,143,23,141
-	.long   084f57fcH
+	.long   086e50fcH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   50,17,-1,-32768,31,45,-2,7,0
 M8FLY211:
 	.word   72,136,18,135
-	.long   08508ce3H
+	.long   086f85e3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   46,17,0,-32768,27,40,-2,7,0
 M8FLY212:
 	.word   70,136,22,133
-	.long   085198a3H
+	.long   087091a3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   40,0,0,-32768,31,40,-2,7,0
 M8FLY213:
 	.word   68,131,27,128
-	.long   08529cf3H
+	.long   087195f3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,-32768,35,37,-2,7,0
 M8OASD01:
 	.word   51,99,19,97
-	.long   08539087H
+	.long   08728987H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   43,14,3,0,21,14,1,3,0
 M8OASD02:
 	.word   49,123,14,120
-	.long   08541a96H
+	.long   08731396H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   39,14,3,0,17,27,-2,3,0
 M8OASD03:
 	.word   52,130,18,122
-	.long   0854bf63H
+	.long   0873b863H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   45,15,3,0,20,23,-2,3,0
 M8OASD04:
 	.word   57,115,23,110
-	.long   0855783bH
+	.long   0874713bH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   52,11,3,0,24,11,1,3,0
 M8OASD05:
 	.word   59,102,24,103
-	.long   08562b78H
+	.long   08752478H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   53,18,3,0,26,4,1,3,0
 M8OASD06:
 	.word   56,97,26,104
-	.long   0856d006H
+	.long   0875c906H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   51,32,3,0,29,5,1,3,0
 M8OASD07:
 	.word   59,90,30,103
-	.long   0857648eH
+	.long   08765d8eH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   40,45,3,0,33,4,1,3,0
 M8OASD08:
 	.word   61,80,33,101
-	.long   0857f5c0H
+	.long   0876eec0H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   22,48,3,0,37,3,1,3,0
 M8OASD09:
 	.word   61,76,33,99
-	.long   08587b30H
+	.long   08777430H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   7,43,3,0,38,3,1,3,0
 M8OASD10:
 	.word   70,80,43,99
-	.long   0858f9f4H
+	.long   0877f2f4H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,34,3,0,50,4,1,3,0
 M8OASD11:
 	.word   70,86,41,99
-	.long   08599314H
+	.long   08788c14H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   7,18,3,0,50,4,1,3,0
 M8OASD12:
 	.word   62,107,32,115
-	.long   085a37b0H
+	.long   087930b0H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,10,3,0,42,20,1,3,0
 M8OASD13:
 	.word   67,124,37,130
-	.long   085aed16H
+	.long   0879e616H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   33,12,-3,0,48,35,1,3,0
 M8OASD14:
 	.word   75,134,43,139
-	.long   085bd042H
+	.long   087ac942H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   60,16,-3,0,56,44,1,3,0
 M8OASD15:
 	.word   88,126,48,132
-	.long   085ce310H
+	.long   087bdc10H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   90,18,-3,0,64,38,1,9,0
 M8OASD16:
 	.word   101,116,53,121
-	.long   085e1240H
+	.long   087d0b40H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   101,15,-3,0,71,29,1,9,0
 M8OASD17:
 	.word   94,116,58,117
-	.long   085f529cH
+	.long   087e4b9cH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   83,0,0,0,75,26,1,9,0
 M8OASD18:
 	.word   91,122,61,121
-	.long   08607cc4H
+	.long   087f75c4H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,0,77,32,1,9,0
 M8OHM201:
 	.word   77,90,25,87
-	.long   0861ac56H
+	.long   0880a556H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   69,37,-3,0,12,1,-1,2,0
 M8OHM202:
 	.word   75,113,22,108
-	.long   086269d4H
+	.long   088162d4H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   57,39,-3,0,10,20,-1,2,0
 M8OHM203:
 	.word   69,133,19,125
-	.long   08635191H
+	.long   08824a91H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   46,38,-3,0,11,32,1,2,0
 M8OHM204:
 	.word   64,141,18,129
-	.long   08644c80H
+	.long   08834580H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   47,40,-3,0,12,34,1,2,0
 M8OHM205:
 	.word   62,141,18,131
-	.long   08654340H
+	.long   08843c40H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   55,48,-3,0,13,35,1,2,0
 M8OHM206:
 	.word   77,135,23,132
-	.long   0866324aH
+	.long   08852b4aH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   70,61,-3,0,18,35,1,2,0
 M8OHM207:
 	.word   82,121,28,130
-	.long   08674e87H
+	.long   08864787H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   75,68,-3,0,23,32,1,2,0
 M8OHM208:
 	.word   75,108,32,127
-	.long   08685dd5H
+	.long   088756d5H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   70,69,-3,0,28,30,-1,1,0
 M8OHM209:
 	.word   72,112,41,122
-	.long   08693b51H
+	.long   08883451H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   64,60,-3,0,36,25,-1,1,0
 M8OHM210:
 	.word   78,117,53,119
-	.long   086a17d1H
+	.long   088910d1H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   63,47,-3,0,47,22,-1,1,0
 M8OHM211:
 	.word   86,112,66,112
-	.long   086b115bH
+	.long   088a0a5bH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   60,32,-3,0,57,14,-1,1,0
 M8OHM212:
 	.word   92,122,74,117
-	.long   086c18bbH
+	.long   088b11bbH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   57,17,-3,0,65,19,1,1,0
 M8OHM213:
 	.word   90,137,77,131
-	.long   086d4ba3H
+	.long   088c44a3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   63,18,-3,0,68,36,1,1,0
 M8OHM214:
 	.word   86,145,73,139
-	.long   086e9cc9H
+	.long   088d95c9H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   68,17,-3,0,64,45,1,1,0
 M8OHM215:
 	.word   79,149,67,143
-	.long   086ff1c3H
+	.long   088eeac3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   72,17,-3,0,58,50,-1,1,0
 M8OHM216:
 	.word   80,144,52,136
-	.long   087133a0H
+	.long   08902ca0H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   78,17,-3,0,44,42,-1,2,0
 M8OHM217:
 	.word   74,135,41,128
-	.long   08726ea0H
+	.long   089167a0H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   72,18,-3,0,33,34,-1,2,0
 M8OHM218:
 	.word   60,135,33,131
-	.long   08737fcaH
+	.long   089278caH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,0,25,39,-1,2,0
 M8OHM401:
 	.word   81,94,44,89
-	.long   08745d46H
+	.long   08935646H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   8,14,-1,-32768,46,5,1,4,0
 M8OHM402:
 	.word   100,119,51,111
-	.long   08752d78H
+	.long   08942678H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   6,18,-1,-32768,51,23,1,4,0
 M8OHM403:
 	.word   107,129,53,116
-	.long   087672dcH
+	.long   08956bdcH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   2,20,-1,-32768,51,27,1,4,0
 M8OHM404:
 	.word   101,132,56,116
-	.long   0877ec49H
+	.long   0896e549H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   1,23,-1,-32768,52,25,1,4,0
 M8OHM405:
 	.word   75,129,48,116
-	.long   087958d5H
+	.long   089851d5H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   1,37,-1,-32768,44,23,1,4,0
 M8OHM406:
 	.word   65,127,30,119
-	.long   087a6162H
+	.long   08995a62H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   5,55,-1,-32768,27,26,1,4,0
 M8OHM407:
 	.word   67,121,18,121
-	.long   087b431bH
+	.long   089a3c1bH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   18,64,-1,-32768,17,26,1,3,0
 M8OHM408:
 	.word   85,112,24,121
-	.long   087c20c8H
+	.long   089b19c8H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   42,64,-1,-32768,23,26,1,3,0
 M8OHM409:
 	.word   105,111,35,122
-	.long   087d2518H
+	.long   089c1e18H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   70,58,-1,-32768,34,26,1,3,0
 M8OHM410:
 	.word   117,110,43,122
-	.long   087e63c9H
+	.long   089d5cc9H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   85,42,-1,-32768,43,26,1,3,0
 M8OHM411:
 	.word   121,109,49,121
-	.long   087fc3b3H
+	.long   089ebcb3H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   91,29,-1,-32768,50,25,1,3,0
 M8OHM412:
 	.word   118,108,48,120
-	.long   08812c56H
+	.long   08a02556H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   87,16,-1,-32768,50,25,-1,3,0
 M8OHM413:
 	.word   113,121,46,130
-	.long   088288ceH
+	.long   08a181ceH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   85,19,-1,-32768,48,36,-1,3,0
 M8OHM414:
 	.word   97,131,39,134
-	.long   0883feadH
+	.long   08a2f7adH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   80,20,-1,-32768,41,41,-1,3,0
 M8OHM415:
 	.word   79,128,31,124
-	.long   08855a22H
+	.long   08a45322H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   73,18,-1,-32768,32,32,-1,3,0
 M8OHM416:
 	.word   61,138,28,126
-	.long   08866ea2H
+	.long   08a567a2H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   -1,-1,-1,-32768,21,31,-1,3,0
 M8OHM501:
 	.word   55,109,22,103
-	.long   088754d0H
+	.long   08a64dd0H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   19,12,3,-32768,24,14,1,4,0
 M8OHM502:
 	.word   54,130,23,124
-	.long   0887f8bdH
+	.long   08a6f1bdH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   13,13,3,-32768,25,34,1,4,0
 M8OHM503:
 	.word   55,146,23,138
-	.long   0888b8b1H
+	.long   08a7b1b1H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   8,12,3,-32768,23,43,1,4,0
 M8OHM504:
 	.word   52,144,25,138
-	.long   08899443H
+	.long   08a88d43H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   11,11,3,-32768,23,41,1,4,0
 M8OHM505:
 	.word   57,133,29,133
-	.long   088a6103H
+	.long   08a95a03H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   21,8,3,-32768,24,34,-1,3,0
 M8OHM506:
 	.word   57,114,29,119
-	.long   088b304eH
+	.long   08aa294eH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   34,11,3,-32768,20,19,-1,3,0
 M8OHM507:
 	.word   47,103,30,114
-	.long   088be1fcH
+	.long   08aadafcH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   41,13,-3,-32768,19,15,-1,3,0
 M8OHM508:
 	.word   61,92,29,110
-	.long   088c665bH
+	.long   08ab5f5bH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   47,19,-3,-32768,17,11,-1,3,0
 M8OHM509:
 	.word   59,82,26,104
-	.long   088cffcfH
+	.long   08abf8cfH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   48,23,-3,-32768,14,5,-1,3,0
 M8OHM510:
 	.word   53,75,23,100
-	.long   088d8419H
+	.long   08ac7d19H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   47,28,-3,-32768,10,2,-1,3,0
 M8OHM511:
 	.word   52,76,25,98
-	.long   088df0caH
+	.long   08ace9caH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   44,30,-3,-32768,10,1,-1,3,0
 M8OHM512:
 	.word   55,80,28,98
-	.long   088e5cdaH
+	.long   08ad55daH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   39,32,3,-32768,12,1,-1,3,0
 M8OHM513:
 	.word   61,79,32,98
-	.long   088ed52aH
+	.long   08adce2aH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   31,26,3,-32768,15,2,-1,3,0
 M8OHM514:
 	.word   63,85,33,102
-	.long   088f58efH
+	.long   08ae51efH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   20,12,3,-32768,19,5,-1,2,0
 M8OHM515:
 	.word   72,109,34,121
-	.long   088feb5cH
+	.long   08aee45cH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   21,12,-1,-32768,20,24,-2,2,0
 M8OHM516:
 	.word   78,128,31,134
-	.long   0890c1f4H
+	.long   08afbaf4H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   20,15,-1,-32768,17,36,-2,2,0
 M8OHM517:
 	.word   84,135,24,134
-	.long   0891d2f4H
+	.long   08b0cbf4H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   17,14,-1,-32768,12,36,-2,2,0
 M8OHM518:
 	.word   83,138,20,138
-	.long   08930908H
+	.long   08b20208H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   18,19,-1,-32768,7,42,-2,7,0
 M8REVD01:
 	.word   49,112,21,107
-	.long   0894423aH
+	.long   08b33b3aH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   31,14,-3,-32768,14,19,-1,3,0
 M8REVD02:
 	.word   47,122,21,117
-	.long   0894d84aH
+	.long   08b3d14aH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   20,13,-1,-32768,15,26,-2,4,0
 M8REVD03:
 	.word   46,140,30,128
-	.long   08957514H
+	.long   08b46e14H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   15,12,-1,-32768,23,33,1,5,0
 M8REVD04:
 	.word   46,137,32,128
-	.long   0896252cH
+	.long   08b51e2cH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   12,14,-1,-16384,25,33,1,4,0
 M8REVD05:
 	.word   50,127,34,122
-	.long   0896d17eH
+	.long   08b5ca7eH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   12,14,-1,-16384,26,27,-2,4,0
 M8REVD06:
 	.word   47,109,31,110
-	.long   08977f20H
+	.long   08b67820H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   10,13,-1,-16384,23,15,-2,4,0
 M8REVD07:
 	.word   41,93,25,101
-	.long   08980b35H
+	.long   08b70435H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   6,18,3,-16384,21,5,1,9,0
 M8REVD08:
 	.word   48,87,31,100
-	.long   08987378H
+	.long   08b76c78H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   12,32,3,-16384,28,5,1,9,0
 M8REVD09:
 	.word   52,82,35,98
-	.long   0898e5a8H
+	.long   08b7dea8H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   18,43,3,-16384,32,5,1,9,0
 M8REVD10:
 	.word   52,78,35,97
-	.long   08995a40H
+	.long   08b85340H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   17,46,3,-16384,32,6,1,9,0
 M8REVD11:
 	.word   54,75,34,97
-	.long   0899c928H
+	.long   08b8c228H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   14,45,3,-16384,31,7,1,9,0
 M8REVD12:
 	.word   57,75,36,98
-	.long   089a37e6H
+	.long   08b930e6H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   8,38,3,-16384,33,6,1,9,0
 M8REVD13:
 	.word   66,80,45,99
-	.long   089aaccbH
+	.long   08b9a5cbH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,28,3,-16384,42,5,1,9,0
 M8REVD14:
 	.word   71,85,48,101
-	.long   089b3d2bH
+	.long   08ba362bH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   9,13,3,-16384,45,6,1,3,0
 M8REVD15:
 	.word   68,112,42,124
-	.long   089be230H
+	.long   08badb30H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   8,15,3,-16384,41,25,-2,3,0
 M8REVD16:
 	.word   59,130,28,140
-	.long   089cb270H
+	.long   08bbab70H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   17,16,3,-16384,28,39,-2,3,0
 M8REVD17:
 	.word   60,131,26,136
-	.long   089d842aH
+	.long   08bc7d2aH
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   39,17,3,-16384,22,36,-2,13,0
 M8REVD18:
 	.word   52,120,22,122
-	.long   089e5b16H
+	.long   08bd5416H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   44,15,-1,-16384,18,23,-2,13,0
 M8REVD19:
 	.word   33,116,16,117
-	.long   089f05b6H
+	.long   08bdfeb6H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,-16384,17,21,-1,3,0
 M8REVD20:
 	.word   54,101,35,102
-	.long   089f6e62H
+	.long   08be6762H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,-16384,34,24,-1,8,0
 M8REVD21:
 	.word   77,80,56,81
-	.long   08a00384H
+	.long   08befc84H
 	.word   07000H
 	.long   PLYRRCH_P
 	.word   0,0,0,-16384,53,5,-1,8,0

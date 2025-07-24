@@ -103,16 +103,16 @@ Image nback9br has 252 colors. Can't fit into 6 bits per pixel.
 Image nback10br has 252 colors. Can't fit into 6 bits per pixel.
 
 Bytes Loaded...
-	IMAGE RAM              2802918 dec	  2AC4E6 hex
+	IMAGE RAM              3056646 dec	  2EA406 hex
 
-	TOTAL LOAD             2802918 dec	  2AC4E6 hex
+	TOTAL LOAD             3056646 dec	  2EA406 hex
 
 Bytes Written to Raw File...
-	In IMAGE RAM records      2802918 dec	  2AC4E6 hex
+	In IMAGE RAM records      3056646 dec	  2EA406 hex
 
-	TOTAL bytes written       2802918 dec	  2AC4E6 hex, in 2 records.
+	TOTAL bytes written       3056646 dec	  2EA406 hex, in 2 records.
 
-Bytes Represented in Tables ... 2802917 dec 2AC4E5 hex
+Bytes Represented in Tables ... 3056645 dec 2EA405 hex
 
 5 images were NOT zero-compressed because they are
 	smaller than 10 pixels wide.

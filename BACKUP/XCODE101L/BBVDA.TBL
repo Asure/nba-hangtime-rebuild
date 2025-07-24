@@ -1,6 +1,6 @@
 	.DATA
-CHEERS	.set	061ef900h
-KOBE	.set	06282ed0h
-TITLE 	.set	062a66e0h
+CHEERS	.set	063df200h
+KOBE	.set	064727d0h
+TITLE 	.set	06495fe0h
 	.TEXT
 

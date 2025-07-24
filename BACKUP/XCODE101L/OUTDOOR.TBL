@@ -1,7 +1,7 @@
 	.DATA
-OUTDOOR		.set	06000000h
-;OUTDOOR	.set	0398e1f0h
-;UGROUND	.set	06000000h
+OUTDOOR	.set	0398e1f0h
+UGRCRT	.set	06000000h
+BLUCRT  .set    061ef900h
 
 sidebot:
 	.word   86,154,0,0

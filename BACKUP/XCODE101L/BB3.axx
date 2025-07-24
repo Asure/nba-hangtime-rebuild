@@ -60,6 +60,8 @@
 
 	.def	COURT
 	.def	OUTDOOR
+	.def	UGRCRT
+	.def	BLUCRT
 ;DJT Start
 	.def	HOTblu,HOTgrn,HOTyel,HOTred
 ;DJT End
@@ -193,14 +195,35 @@
 	.endif
 
 	movi	whcqinit_t,a11		;>Setup crowd, hoops, side crowd
+
 	.if	SHANG
 	CREATE0	animate_shang		;>Setup Shang head turner.
 	.endif
-	move	@pup_court,a0
-	jrz	whcqnext
-	CREATE0	otd_scroller		;>Outdoor court scroll initializer
-	move	a0,@otdscroll_p,L
+
+	move	@pup_court,a0		;0/1/2/3 indoor/outdoor/uground/vortex
+	jrz	whcqnext		;0 = indoor court, do normal stuff.
 	movi	whcqinit_otd_t,a11	;>Setup outdoor court objs
+
+
+;new court cases
+	cmpi	2,a0
+	jreq	whcqugrinit		;uground
+	cmpi	3,a0
+	jreq	whcqvortinit		;vortex
+;
+
+	jruc	whcqgo			;it wasn't any of those? Init normal outdoor then.
+
+whcqugrinit
+	movi	whcqinit_ugr_t,a11	;>Setup outdoor court objs
+	jruc	whcqgo
+whcqvortinit
+	movi	whcqinit_otd_t,a11	;>Setup outdoor court objs
+
+whcqgo
+
+	CREATE0	otd_scroller		;>Outdoor court scroll initializer (also used for the others)
+	move	a0,@otdscroll_p,L
 	jruc	whcqnext
 whcqlp
 	cmpi	4001,a0			;>Start process
@@ -284,7 +307,8 @@ whcqobj	move	*a11+,a1		;Y
 	sub	a6,a3			;-X anipt
 	move	a3,*a8(OXPOS)
 
-whcqnext	move	*a11+,a0		;X
+whcqnext
+	move	*a11+,a0		;X
 	cmpi	4000,a0
 	jrne	whcqlp			;!End?
 
@@ -814,8 +838,6 @@ whcqinit_otd_t
 	.asg	CZMIN-40,Z		;Z priority back from crt top
 	.asg	40-(2*Y2Z),ZOFF		;Z off for gndpos_t element to use
 
-	.if	UGROUND
-	.else
 	.word	SXO-493,Y,Z,ZOFF,F
 	.long	BKg1
 	.word	SXO-326,Y,Z,ZOFF,F
@@ -828,33 +850,18 @@ whcqinit_otd_t
 	.long	BKg2
 	.word	SXO+493,Y,Z,ZOFF,FF
 	.long	BKg1
-	.endif
+
 
 ;--------------------
 ; wall
 
-;	.asg	-16,Y			;Y to realign after ZOFF
-	.asg	-26,Y			;Y to realign after ZOFF
+	.asg	-16,Y			;Y to realign after ZOFF
+;	.asg	-26,Y			;Y to realign after ZOFF
 
 ;	.asg	-400,Y
 	.asg	CZMIN-40,Z		;Z priority back from crt top
 	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-	.if	UGROUND
-	.word	SXO-496,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO-330,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO-165,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO+166,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO+331,Y,Z,ZOFF,F
-	.long	SPIKETST
-
-	.else
 ;	.word	SXO-496,Y-56,Z,ZOFF,F
 ;	.long	bkwall
 	.word	SXO-468,Y-56,Z-1,ZOFF,F
@@ -869,35 +876,28 @@ whcqinit_otd_t
 	.long	bkwall
 	.word	SXO+331,Y,Z,ZOFF,F
 	.long	bkwall
-	.endif
 
 ;--------------------
 ; street lights
-	.if	UGROUND
-	.else
 
 	.asg	-130,Y			;Y to realign after ZOFF
 ;	.asg	-400,Y
 	.asg	220,Z			;Z priority back from crt top
 	.asg	CZMIN-Z-(39*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-
 	.word	SXO-468,Y,Z,ZOFF,F
 	.long	lamp1
-
 	.word	SXO-154-80,Y,Z,ZOFF,F
 	.long	lamp2
+
 	.word	SXO+150-80,Y,Z,ZOFF,F
 	.long	lamp2
-
 	.word	SXO+464,Y,Z,ZOFF,FF
 	.long	lamp1
-	.endif
 
 ;--------------------
 ; cheerleaders
-	.if	UGROUND
-	.else
+
 	.asg	0,Y			;Y to realign after ZOFF
 ;	.asg	-400,Y
 	.asg	CZMIN-24,Z		;Z priority back from crt top
@@ -910,12 +910,10 @@ whcqinit_otd_t
 ;	.long	CHEERA01
 	.long	CHEERB01
 	WL	4001,otd_chldr_ani_rgt
-	.endif
 
 ;--------------------
 ; side buildings
-	.if	UGROUND
-	.else
+
 	.asg	-33,Y			;Y to realign after ZOFF
 ;	.asg	-400,Y
 	.asg	CZMIN-39,Z		;Z priority back from crt top
@@ -934,53 +932,9 @@ whcqinit_otd_t
 	.long	sidetop
 	.word	SXO+540,Y,Z,ZOFF,FF
 	.long	sidetop
-	.endif
 
 ;--------------------
 ; city backdrop
-
-	.if	UGROUND
-;	.asg	-97,Y			;Y to realign after ZOFF
-	.asg	-190,Y			;Y to realign after ZOFF (for blue vortex bg.)
-	
-	.asg	210,Z			;Z priority back from crt top
-
-;	.word	SXO-300,Y,Z,0,0
-;	.long	UGRBK1
-;	WL	4002,city1obj
-;	.word	SXO-100,Y,Z,0,0
-;	.long	UGRBK2
-;	WL	4002,city2obj
-;	.word	SXO+100,Y,Z,0,0
-;	.long	UGRBK3
-;	WL	4002,city3obj
-
-	.word	SXO-300,Y,Z,0,0
-	.long	BLUBAK1
-	WL	4002,city1obj
-	.word	SXO-100,Y,Z,0,0
-	.long	BLUBAK2
-	WL	4002,city2obj
-	.word	SXO+100,Y,Z,0,0
-	.long	BLUBAK3
-	WL	4002,city3obj
-
-;	.word	SXO-28,-140,Z+1,0,0
-;	.long	moon
-;	WL	4002,moonobj
-
-	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
-	.long	STORM01
-	WL	4002,stormobj
-
-	.word	SXO-28+360-74h+88,10,Z,0,0
-	.long	FALL2_vda
-	WL	4002,templeobj
-
-
-
-	.word	4000			;End
-	.else
 
 	.asg	-92,Y			;Y to realign after ZOFF
 	.asg	210,Z			;Z priority back from crt top
@@ -1010,8 +964,112 @@ whcqinit_otd_t
 
 
 	.word	4000			;End
-	.endif
 
+;----------------------------------------------------------------------------
+; .word	X, Y, Z, Z-offset, DMA
+; .long	IMG_p
+
+whcqinit_ugr_t
+
+;--------------------
+; hoops
+
+	.asg	HOOPBASE_X,X
+;FIX!!!  Alignment should be done with img ani pts, not offsets here!
+	.asg	HOOPBASE_Y-4,Y
+	.asg	CZMID,Z
+
+;Outdoor hoop setup - left side
+
+	.word	SXO-X-4,Y,Z,     0,F
+	.long	nhoopbot
+	.word	SXO-X-4,Y,Z-17, 17,F
+	.long	nback1
+	WL	4001,backboard_ani
+
+	.word	SXO-X-2,Y,Z-10, 10,F
+	.long	CHAN1B_01
+	WL	4002,rimlb
+	.word	SXO-X-2,Y,Z+10,-10,F
+	.long	CHAN1F_01
+	WL	4002,rimlf
+
+;Outdoor hoop setup - right side
+
+	.word	SXO+X+2,Y,Z,     0,FF
+	.long	nhoopbot
+	.word	SXO+X+2,Y,Z-17, 17,FF
+	.long	nback1
+	WL	4001,backboard_svrptr
+
+	.word	SXO+X,Y,Z-10, 10,FF
+	.long	CHAN1B_01
+	WL	4002,rimrb
+	.word	SXO+X,Y,Z+10,-10,FF
+	.long	CHAN1F_01
+	WL	4002,rimrf
+
+;--------------------
+; backcourt roof edge
+
+	.asg	-14,Y			;Y to realign after ZOFF
+;	.asg	-400,Y
+	.asg	CZMIN-40,Z		;Z priority back from crt top
+	.asg	40-(2*Y2Z),ZOFF		;Z off for gndpos_t element to use
+
+;--------------------
+; wall
+
+;	.asg	-16,Y			;Y to realign after ZOFF
+	.asg	-26,Y			;Y to realign after ZOFF
+
+;	.asg	-400,Y
+	.asg	CZMIN-40,Z		;Z priority back from crt top
+	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
+
+	.word	SXO-496,Y,Z,ZOFF,F
+	.long	SPIKETST
+	.word	SXO-330,Y,Z,ZOFF,F
+	.long	SPIKETST
+	.word	SXO-165,Y,Z,ZOFF,F
+	.long	SPIKETST
+	.word	SXO,Y,Z,ZOFF,F
+	.long	SPIKETST
+	.word	SXO+166,Y,Z,ZOFF,F
+	.long	SPIKETST
+	.word	SXO+331,Y,Z,ZOFF,F
+	.long	SPIKETST
+
+;--------------------
+; street lights
+
+;--------------------
+; cheerleaders
+
+;--------------------
+; side buildings
+
+;--------------------
+; underground backdrop 600x200
+
+	.asg	-97,Y			;Y to realign after ZOFF
+	.asg	210,Z			;Z priority back from crt top
+
+	.word	SXO-300,Y,Z,0,0
+	.long	UGRBK1
+	WL	4002,city1obj
+	.word	SXO-100,Y,Z,0,0
+	.long	UGRBK2
+	WL	4002,city2obj
+	.word	SXO+100,Y,Z,0,0
+	.long	UGRBK3
+	WL	4002,city3obj
+
+	.word	SXO-28+360-74h+88,10,Z,0,0
+	.long	FALL2_vda
+	WL	4002,templeobj
+
+	.word	4000			;End
 
 ;--------------------
 
@@ -3959,7 +4017,7 @@ xfellp1
 
 	jruc	xfellp		; None matched
 
-xfellp2					;we enter here if any of the sticks was moved l/r/u
+xfellp2					;we enter here if any of the sticks was moved l/r/u/d
 	move	a0,@pup_court
 
 	movi	msg_doors_setup,a2,L	;this has the x/y and such for text defined. (default=BLU/unselected)
