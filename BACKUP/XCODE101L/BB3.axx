@@ -215,10 +215,10 @@
 	jruc	whcqgo			;it wasn't any of those? Init normal outdoor then.
 
 whcqugrinit
-	movi	whcqinit_ugr_t,a11	;>Setup outdoor court objs
+	movi	whcqinit_ugr_t,a11	;>Setup underground court objs
 	jruc	whcqgo
 whcqvortinit
-	movi	whcqinit_otd_t,a11	;>Setup outdoor court objs
+	movi	whcqinit_vrt_t,a11	;>Setup vortex court objs
 
 whcqgo
 
@@ -1068,6 +1068,184 @@ whcqinit_ugr_t
 	.word	SXO-28+360-74h+88,10,Z,0,0
 	.long	FALL2_vda
 	WL	4002,templeobj
+
+	.word	4000			;End
+;----------------------------------------------------------------------------
+; .word	X, Y, Z, Z-offset, DMA
+; .long	IMG_p
+
+whcqinit_vrt_t
+
+;--------------------
+; hoops
+
+	.asg	HOOPBASE_X,X
+;FIX!!!  Alignment should be done with img ani pts, not offsets here!
+	.asg	HOOPBASE_Y-4,Y
+	.asg	CZMID,Z
+
+;Outdoor hoop setup - left side
+
+	.word	SXO-X-4,Y,Z,     0,F
+	.long	nhoopbot
+	.word	SXO-X-4,Y,Z-17, 17,F
+	.long	nback1
+	WL	4001,backboard_ani
+
+	.word	SXO-X-2,Y,Z-10, 10,F
+	.long	CHAN1B_01
+	WL	4002,rimlb
+	.word	SXO-X-2,Y,Z+10,-10,F
+	.long	CHAN1F_01
+	WL	4002,rimlf
+
+;Outdoor hoop setup - right side
+
+	.word	SXO+X+2,Y,Z,     0,FF
+	.long	nhoopbot
+	.word	SXO+X+2,Y,Z-17, 17,FF
+	.long	nback1
+	WL	4001,backboard_svrptr
+
+	.word	SXO+X,Y,Z-10, 10,FF
+	.long	CHAN1B_01
+	WL	4002,rimrb
+	.word	SXO+X,Y,Z+10,-10,FF
+	.long	CHAN1F_01
+	WL	4002,rimrf
+
+;--------------------
+; backcourt roof edge
+
+	.asg	-14,Y			;Y to realign after ZOFF
+;	.asg	-400,Y
+	.asg	CZMIN-40,Z		;Z priority back from crt top
+	.asg	40-(2*Y2Z),ZOFF		;Z off for gndpos_t element to use
+
+	.word	SXO-493,Y,Z,ZOFF,F
+	.long	BKg1
+	.word	SXO-326,Y,Z,ZOFF,F
+	.long	BKg2
+	.word	SXO,Y,Z,ZOFF,FF
+	.long	BKg2
+	.word	SXO,Y,Z,ZOFF,F
+	.long	BKg2
+	.word	SXO+326,Y,Z,ZOFF,FF
+	.long	BKg2
+	.word	SXO+493,Y,Z,ZOFF,FF
+	.long	BKg1
+
+
+;--------------------
+; temple
+
+	.asg	-16,Y			;Y to realign after ZOFF
+;	.asg	-26,Y			;Y to realign after ZOFF
+
+;	.asg	-400,Y
+	.asg	CZMIN-40,Z		;Z priority back from crt top
+	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
+
+;	.word	SXO-496,Y-56,Z,ZOFF,F
+;	.long	bkwall
+	.word	SXO-468,Y-56,Z-1,ZOFF,F
+	.long	fence			;enable the cut fence gfx.
+	.word	SXO-330,Y,Z,ZOFF,F
+	.long	bkwall
+	.word	SXO-165,Y,Z,ZOFF,F
+	.long	bkwall
+	.word	SXO,Y,Z,ZOFF,F
+	.long	bkwall
+	.word	SXO+166,Y,Z,ZOFF,F
+	.long	bkwall
+	.word	SXO+331,Y,Z,ZOFF,F
+	.long	bkwall
+
+;--------------------
+; street lights
+
+	.asg	-130,Y			;Y to realign after ZOFF
+;	.asg	-400,Y
+	.asg	220,Z			;Z priority back from crt top
+	.asg	CZMIN-Z-(39*Y2Z),ZOFF	;Z off for gndpos_t element to use
+
+	.word	SXO-468,Y,Z,ZOFF,F
+	.long	lamp1
+	.word	SXO-154-80,Y,Z,ZOFF,F
+	.long	lamp2
+
+	.word	SXO+150-80,Y,Z,ZOFF,F
+	.long	lamp2
+	.word	SXO+464,Y,Z,ZOFF,FF
+	.long	lamp1
+
+;--------------------
+; cheerleaders
+
+	.asg	0,Y			;Y to realign after ZOFF
+;	.asg	-400,Y
+	.asg	CZMIN-24,Z		;Z priority back from crt top
+	.asg	0,ZOFF			;Z off for gndpos_t element to use
+
+	.word	SXO-424,Y,Z,ZOFF,F
+	.long	CHEERA01
+	WL	4001,otd_chldr_ani_lft
+	.word	SXO+428,Y,Z,ZOFF,F
+;	.long	CHEERA01
+	.long	CHEERB01
+	WL	4001,otd_chldr_ani_rgt
+
+;--------------------
+; side buildings
+
+	.asg	-33,Y			;Y to realign after ZOFF
+;	.asg	-400,Y
+	.asg	CZMIN-39,Z		;Z priority back from crt top
+	.asg	39-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
+
+	.word	SXO-544,Y,Z,ZOFF,F
+	.long	sidebot
+	.word	SXO+540,Y,Z,ZOFF,FF
+	.long	sidebot
+
+
+	.asg	290,Z			;Z priority back from crt top
+	.asg	CZMIN-Z-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
+
+	.word	SXO-544,Y,Z,ZOFF,F
+	.long	sidetop
+	.word	SXO+540,Y,Z,ZOFF,FF
+	.long	sidetop
+
+;--------------------
+; city backdrop
+
+	.asg	-92,Y			;Y to realign after ZOFF
+	.asg	210,Z			;Z priority back from crt top
+
+	.word	SXO-300,Y,Z,0,0
+	.long	city1
+	WL	4002,city1obj
+	.word	SXO-100,Y,Z,0,0
+	.long	city2
+	WL	4002,city2obj
+	.word	SXO+100,Y,Z,0,0
+	.long	city3
+	WL	4002,city3obj
+
+	.word	SXO-28,-140,Z+1,0,0
+	.long	moon
+	WL	4002,moonobj
+
+	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
+	.long	STORM01
+	WL	4002,stormobj
+
+	.word	SXO-28+360-74h+88,10,Z,0,0
+	.long	FALL2_vda
+	WL	4002,templeobj
+
+
 
 	.word	4000			;End
 
@@ -3988,7 +4166,7 @@ sp_court
 
 xfellp
 	SLEEPK	1
-	callr	xfelcbani
+	callr	xfelcbani	;this does the spinning basketball selector.
 	move	*a8,a10		;player inputs moved into a10
 	jrnz	xfellp		;default inputs are high and go low. loop here if nothing pressed
 xfellp1
@@ -4020,7 +4198,7 @@ xfellp1
 xfellp2					;we enter here if any of the sticks was moved l/r/u/d
 	move	a0,@pup_court
 
-	movi	msg_doors_setup,a2,L	;this has the x/y and such for text defined. (default=BLU/unselected)
+	movi	msg_doors_setup,a2,L	;this has the x/y and such for text defined. (default=BLU/unselected) 166,180
 	calla	setup_message		;sets up text printing
 	movi	TYPTEXT+1,a0
 	move	a0,@mess_objid		;OBJ ID's for text
@@ -4062,7 +4240,7 @@ xfellp6d
 	move	@mess_cursx,a0		;cursor x pos
 	subi	35,a0			;70 ;50
 	move	a0,@mess_cursx		;added to cursor
-	move	@mess_cursy,a0		;cursor x pos
+	move	@mess_cursy,a0		;cursor y pos
 	subi	10,a0			;70
 	move	a0,@mess_cursy		;added to cursor
 	movi	msg_uground,a4,L	;uground text
@@ -4139,7 +4317,7 @@ xfelcba1
 	move	*a13(PDATA+32),a11,L
 	jrnz	xfelcba2
 	clr	a0
-	movi	[189,0],a1,L
+	movi	[189,0],a1,L		;a1 holds Y position of this object (179 is good for Uground ,199 vort)
 	movi	20000,a3		;Z
 	movi	DMAWNZ|M_SCRNREL,a4	;DMA flags
 	clr	a5			;object ID
@@ -4153,11 +4331,45 @@ xfelcba1
 xfelcba2
 	move	*a2(ISAG),*a11(OSAG),L
 	movi	[120,0],a0,L
-	move	@pup_court,a14
-	jrz	xfelcba3
+	move	@pup_court,a14		;x position of spinning ball
+	jrz	xfelcbai		;0 = indoor
+
+;we need some cpmi 2/3 here to deal with the new positions for uground and vortex.
+;beginobj2 needs
+
+	cmpi	1,a14
+	jreq	xfelcbao		;outdoor
+
+	cmpi	2,a14
+	jreq	xfelcbau		;uground
+
+	cmpi	3,a14
+	jreq	xfelcbav		;vortex
+
+** Indoor
+xfelcbai
+	movi	[179,0],a1,L		;a1 holds Y position of this object (179 is good for Uground ,199 vort)
+	movi	[120,0],a0,L
+	jruc	xfelcba3
+** Outdoor
+xfelcbao
+	movi	[179,0],a1,L		;a1 holds Y position of this object (179 is good for Uground ,199 vort)
 	movi	[269,0],a0,L
+	jruc	xfelcba3
+** Underground
+xfelcbau
+	movi	[165,0],a1,L		;Y
+	movi	[137,0],a0,L		;X
+	jruc	xfelcba3
+** Vortex
+xfelcbav
+	movi	[189,0],a1,L
+	movi	[160,0],a0,L		;269 for right x position of spinning ball (vortex
+
+** 
 xfelcba3
-	move	a0,*a11(OXVAL),L
+	move	a0,*a11(OXVAL),L	;update xpos 
+	move	a1,*a11(OYVAL),L	;update ypos
 
 	move	*a10+,a0
 	move	a10,*a13(PDATA),L

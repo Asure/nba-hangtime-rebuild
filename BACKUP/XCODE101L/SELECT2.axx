@@ -4970,7 +4970,7 @@ matchup_mod
 bsd_stat_str_setup
 ;DJT Start
 ;	PRINT_STR	bast8_ascii,5,0,200,197,BAST_Y_P,0
-	PRINT_STR	bast8_ascii,5,0,200,200,BAST_Y_P,0 ; 200 so the new courts fit.
+	PRINT_STR	bast8_ascii,5,0,200,203,BAST_Y_P,0 ; 200 so the new courts fit.
 ;DJT End
 
 bsd_stat_str
