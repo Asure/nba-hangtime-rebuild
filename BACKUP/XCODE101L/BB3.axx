@@ -43,15 +43,16 @@
 	.endif
 
 	.if	UGROUND
-	.ref	UGRBACKP
-	.ref	SPIKEPAL
+	.include "uground.glo"
+;	.ref	UGRBACKP
+;	.ref	SPIKEPAL
 ;.GLO someday
-	.ref	BLUBAKP
-	.ref	MFENCERP
-	.ref	TFENCEP
-	.ref	SFENCEP
-	.ref	PILLARLP
-	.ref	TTOP_P
+;	.ref	BLUBAKP
+;	.ref	MFENCERP
+;	.ref	TFENCEP
+;	.ref	SFENCEP
+;	.ref	PILLARLP
+;	.ref	TTOP_P
 
 	.include	"uground.tbl"
 	.include	"uground.pal"
@@ -1147,41 +1148,20 @@ whcqinit_vrt_t
 ;--------------------
 ; temple
 
-;	.asg	-16,Y			;Y to realign after ZOFF
 	.asg	-51,Y			;Y to realign after ZOFF
-;	.asg	39-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use **TEST**
 
-;	.asg	-400,Y
-	.asg	CZMIN-40,Z		;Z priority back from crt top (was 40)
-	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
+;	.asg	CZMIN-40,Z		;Z priority back from crt top (was 40)
+;	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-	.word	SXO-58-20-88,Y,Z,ZOFF,F
-	.long	TFENCE
+;this is taken from for the side buildings, so that top is behind the score stuff.
 
-	.word	SXO-58-24,Y-42,Z,ZOFF,F
-	.long	PILLARL
-	.word	SXO-58,Y,Z,ZOFF,F
-	.long	MFENCEL
-	.word	SXO,Y,Z,ZOFF,F
-	.long	MFENCER
-	.word	SXO+52,Y-42,Z,ZOFF,F
-	.long	PILLARR
+	.asg	290,Z			;Z priority back from crt top
+	.asg	CZMIN-Z-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-	.word	SXO+58+24,Y,Z,ZOFF,F
-	.long	TFENCE
-
-;temple top
-
-	.word	SXO-176,Y-170,Z,ZOFF,F
-	.long	TOPLEFT
-	.word	SXO,Y-170,Z,ZOFF,F
-	.long	TOPRGHT
-
-
-;	.word	SXO+166,Y,Z,ZOFF,F
-;	.long	bkwall
-;	.word	SXO+331,Y,Z,ZOFF,F
-;	.long	bkwall
+	.word	SXO-122,Y-99,Z,ZOFF,F  ;120 too much
+	.long	STEMPLEL
+	.word	SXO,Y-99,Z,ZOFF,F
+	.long	STEMPLER
 
 ;--------------------
 ; street lights
@@ -1255,9 +1235,9 @@ whcqinit_vrt_t
 	.long	BLUBAK3
 	WL	4002,city3obj
 
-;	.word	SXO-28,-140,Z+1,0,0
-;	.long	moon
-;	WL	4002,moonobj
+	.word	SXO-28,-140,Z+1,0,0
+	.long	moon
+	WL	4002,moonobj
 
 ;	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
 ;	.long	STORM01

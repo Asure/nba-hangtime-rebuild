@@ -52,7 +52,9 @@ del c:\myht\backup\xcode1~3\TEAMZONE.TBL
 copy c:\tmp\htextra\TEAMZONE.TBL c:\myht\backup\xcode1~3\TEAMZONE.TBL
 rem Underground
 del c:\myht\backup\xcode1~3\uground.tbl
+del c:\myht\backup\xcode1~3\uground.glo
 copy c:\tmp\htextra\uground.tbl c:\myht\backup\xcode1~3\uground.tbl
+copy c:\tmp\htextra\uground.glo c:\myht\backup\xcode1~3\uground.glo
 rem unused dunks
 del c:\myht\backup\xcode1~3\PLYRDSQ3.TBL
 copy c:\tmp\htextra\PLYRDSQ3.TBL c:\myht\backup\xcode1~3\PLYRDSQ3.TBL

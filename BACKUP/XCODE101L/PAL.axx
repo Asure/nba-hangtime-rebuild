@@ -40,6 +40,7 @@
 	.include	"mugshot.tbl"
 	.include	"mugshot.glo"
 	.include	"dcs.glo"
+	.include	"uground.glo"
 
 
 ;refs
@@ -60,16 +61,17 @@
 	.def	HOOP_p3
 	.def	ligtn_p
 ;Undeground court pals
-	.def	UGRBACKP	;background
-	.def	SPIKEPAL	;spikes
+;	.def	UGRBACKP	;background
+;	.def	SPIKEPAL	;spikes
 
 ;Vortex court pals
-	.def	BLUBAKP		;background
-	.def	MFENCERP	;gate/fence
-	.def	TFENCEP
-	.def	SFENCEP
-	.def	PILLARLP
-	.def	TTOP_P
+;	.def	BLUBAKP		;background
+;	.def	MFENCERP	;gate/fence
+;	.def	TFENCEP
+;	.def	SFENCEP
+;	.def	PILLARLP
+;	.def	TTOP_P
+;	.def	TEMPLEPAL
 
 ;; MARKER
 ;These are pals for new players

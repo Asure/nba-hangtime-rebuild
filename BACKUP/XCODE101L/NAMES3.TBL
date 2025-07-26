@@ -1,97 +1,97 @@
 	.DATA
 RAIDEN:
 	.word   39,10,17,0
-	.long   097e64c6H
+	.long   0979c696H
 	.word   03000H
 	.long   BAST_Y_P
 SCORPION:
 	.word   53,10,24,0
-	.long   097e6958H
+	.long   0979cb28H
 	.word   03000H
 	.long   BAST_Y_P
 SUBZER:
 	.word   53,10,26,0
-	.long   097e6f8eH
+	.long   0979d15eH
 	.word   03000H
 	.long   BAST_Y_P
 REPTILE:
 	.word   43,10,20,0
-	.long   097e75c4H
+	.long   0979d794H
 	.word   03000H
 	.long   BAST_Y_P
 SM0K3:
 	.word   38,10,17,0
-	.long   097e7aceH
+	.long   0979dc9eH
 	.word   03000H
 	.long   BAST_Y_P
 JORDAN:
 	.word   43,10,20,0
-	.long   097e7f42H
+	.long   0979e112H
 	.word   03000H
 	.long   BAST_Y_P
 BRYANT:
 	.word   44,10,21,0
-	.long   097e844cH
+	.long   0979e61cH
 	.word   03000H
 	.long   BAST_Y_P
 ONEAL:
 	.word   38,10,17,0
-	.long   097e8974H
+	.long   0979eb44H
 	.word   03000H
 	.long   BAST_Y_P
 BIRD:
 	.word   25,10,10,0
-	.long   097e8de8H
+	.long   0979efb8H
 	.word   03000H
 	.long   BAST_Y_P
 TERMINATOR:
 	.word   32,10,16,0
-	.long   097e90d6H
+	.long   0979f2a6H
 	.word   03000H
 	.long   BAST_Y_P
 ARNOLD:
 	.word   43,10,22,0
-	.long   097e9496H
+	.long   0979f666H
 	.word   03000H
 	.long   BAST_Y_P
 WALKER:
 	.word   45,10,22,0
-	.long   097e99a0H
+	.long   0979fb70H
 	.word   03000H
 	.long   BAST_Y_P
 ELLIS:
 	.word   38,10,17,0
-	.long   097e9ee6H
+	.long   097a00b6H
 	.word   03000H
 	.long   BAST_Y_P
 D_ELLIS:
 	.word   39,10,16,0
-	.long   097ea35aH
+	.long   097a052aH
 	.word   03000H
 	.long   BAST_Y_P
 BARKLEY:
 	.word   50,10,24,0
-	.long   097ea7ecH
+	.long   097a09bcH
 	.word   03000H
 	.long   BAST_Y_P
 PORTER:
 	.word   42,10,20,0
-	.long   097eadc8H
+	.long   097a0f98H
 	.word   03000H
 	.long   BAST_Y_P
 MAJERLE:
 	.word   49,10,23,0
-	.long   097eb2b4H
+	.long   097a1484H
 	.word   03000H
 	.long   BAST_Y_P
 WILKINS:
 	.word   45,10,21,0
-	.long   097eb872H
+	.long   097a1a42H
 	.word   03000H
 	.long   BAST_Y_P
 JOHNSON_M:
 	.word   49,10,23,0
-	.long   097ebdb8H
+	.long   097a1f88H
 	.word   03000H
 	.long   BAST_Y_P
 	.TEXT

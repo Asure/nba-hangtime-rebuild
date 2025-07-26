@@ -1,2 +1,13 @@
-	.globl	UCRTPAL
-	.global	UCRT01
+	.globl	UGRBACKP
+	.global	UGRBK1
+	.global	UGRBK2
+	.global	UGRBK3
+	.globl	SPIKEPAL
+	.global	SPIKETST
+	.globl	BLUBAKP
+	.global	BLUBAK1
+	.global	BLUBAK2
+	.global	BLUBAK3
+	.globl	TEMPLEPAL
+	.global	STEMPLEL
+	.global	STEMPLER
