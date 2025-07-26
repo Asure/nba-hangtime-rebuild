@@ -34,5 +34,45 @@ BLUBAK3:
 	.long   096049c2H
 	.word   00H
 	.long   BLUBAKP
+MFENCEL:
+	.word   67,52,0,0
+	.long   09678a02H
+	.word   00H
+	.long   MFENCERP
+MFENCER:
+	.word   67,52,0,0
+	.long   0967f6e2H
+	.word   00H
+	.long   MFENCERP
+TFENCE:
+	.word   96,51,0,0
+	.long   096863c2H
+	.word   00H
+	.long   TFENCEP
+SFENCE:
+	.word   20,38,0,0
+	.long   0968fcc2H
+	.word   00H
+	.long   SFENCEP
+PILLARL:
+	.word   29,102,0,0
+	.long   09691482H
+	.word   00H
+	.long   PILLARLP
+PILLARR:
+	.word   36,102,0,0
+	.long   096970f2H
+	.word   00H
+	.long   PILLARLP
+TOPLEFT:
+	.word   199,150,0,0
+	.long   0969e3b2H
+	.word   00H
+	.long   TTOP_P
+TOPRGHT:
+	.word   199,150,0,0
+	.long   096d8882H
+	.word   00H
+	.long   TTOP_P
 	.TEXT
 

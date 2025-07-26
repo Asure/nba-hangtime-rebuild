@@ -1885,6 +1885,8 @@ offpbomb_out
 	jrz	offpnootd			; br=no
 	cmpi	2,a14			;Underground court?
 	jreq	offpuground			; br=yes
+	cmpi	3,a14			;Vortex court?
+	jreq	offpvortex			; br=yes
 
 	movk	OTD_CNT-1,a0
 	calla	RNDRNG0
@@ -1902,7 +1904,15 @@ offpuground				;underground pal selection
 	move	*a0,a2,L
 	move	*a2(ICMAP),a0,L
 	move	a0,@crt_colors,L
-
+	jruc	offpgo
+offpvortex				;vortex pal selection
+	movk	VRT_CNT-1,a0
+	calla	RNDRNG0
+	sll	5,a0
+	addi	vrt_pal_objs,a0
+	move	*a0,a2,L
+	move	*a2(ICMAP),a0,L
+	move	a0,@crt_colors,L
 
 offpgo
 	clr	a0

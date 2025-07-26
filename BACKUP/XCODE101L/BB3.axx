@@ -45,7 +45,14 @@
 	.if	UGROUND
 	.ref	UGRBACKP
 	.ref	SPIKEPAL
+;.GLO someday
 	.ref	BLUBAKP
+	.ref	MFENCERP
+	.ref	TFENCEP
+	.ref	SFENCEP
+	.ref	PILLARLP
+	.ref	TTOP_P
+
 	.include	"uground.tbl"
 	.include	"uground.pal"
 	.endif
@@ -219,6 +226,7 @@ whcqugrinit
 	jruc	whcqgo
 whcqvortinit
 	movi	whcqinit_vrt_t,a11	;>Setup vortex court objs
+	jruc	whcqgo
 
 whcqgo
 
@@ -1139,45 +1147,59 @@ whcqinit_vrt_t
 ;--------------------
 ; temple
 
-	.asg	-16,Y			;Y to realign after ZOFF
-;	.asg	-26,Y			;Y to realign after ZOFF
+;	.asg	-16,Y			;Y to realign after ZOFF
+	.asg	-51,Y			;Y to realign after ZOFF
+;	.asg	39-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use **TEST**
 
 ;	.asg	-400,Y
-	.asg	CZMIN-40,Z		;Z priority back from crt top
+	.asg	CZMIN-40,Z		;Z priority back from crt top (was 40)
 	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-;	.word	SXO-496,Y-56,Z,ZOFF,F
-;	.long	bkwall
-	.word	SXO-468,Y-56,Z-1,ZOFF,F
-	.long	fence			;enable the cut fence gfx.
-	.word	SXO-330,Y,Z,ZOFF,F
-	.long	bkwall
-	.word	SXO-165,Y,Z,ZOFF,F
-	.long	bkwall
+	.word	SXO-58-20-88,Y,Z,ZOFF,F
+	.long	TFENCE
+
+	.word	SXO-58-24,Y-42,Z,ZOFF,F
+	.long	PILLARL
+	.word	SXO-58,Y,Z,ZOFF,F
+	.long	MFENCEL
 	.word	SXO,Y,Z,ZOFF,F
-	.long	bkwall
-	.word	SXO+166,Y,Z,ZOFF,F
-	.long	bkwall
-	.word	SXO+331,Y,Z,ZOFF,F
-	.long	bkwall
+	.long	MFENCER
+	.word	SXO+52,Y-42,Z,ZOFF,F
+	.long	PILLARR
+
+	.word	SXO+58+24,Y,Z,ZOFF,F
+	.long	TFENCE
+
+;temple top
+
+	.word	SXO-176,Y-170,Z,ZOFF,F
+	.long	TOPLEFT
+	.word	SXO,Y-170,Z,ZOFF,F
+	.long	TOPRGHT
+
+
+;	.word	SXO+166,Y,Z,ZOFF,F
+;	.long	bkwall
+;	.word	SXO+331,Y,Z,ZOFF,F
+;	.long	bkwall
 
 ;--------------------
 ; street lights
 
-	.asg	-130,Y			;Y to realign after ZOFF
-;	.asg	-400,Y
-	.asg	220,Z			;Z priority back from crt top
-	.asg	CZMIN-Z-(39*Y2Z),ZOFF	;Z off for gndpos_t element to use
-
-	.word	SXO-468,Y,Z,ZOFF,F
-	.long	lamp1
-	.word	SXO-154-80,Y,Z,ZOFF,F
-	.long	lamp2
-
-	.word	SXO+150-80,Y,Z,ZOFF,F
-	.long	lamp2
-	.word	SXO+464,Y,Z,ZOFF,FF
-	.long	lamp1
+;	.asg	-130,Y			;Y to realign after ZOFF
+;;	.asg	-400,Y
+;	.asg	220,Z			;Z priority back from crt top
+;	.asg	CZMIN-Z-(39*Y2Z),ZOFF	;Z off for gndpos_t element to use
+;
+;	.word	SXO-468,Y,Z,ZOFF,F
+;	.long	lamp1
+;	.word	SXO-154-80,Y,Z,ZOFF,F
+;	.long	lamp2
+;
+;	.word	SXO+150-80,Y,Z,ZOFF,F
+;	.long	lamp2
+;	.word	SXO+464,Y,Z,ZOFF,FF
+;	.long	lamp1
 
 ;--------------------
 ; cheerleaders
@@ -1218,32 +1240,32 @@ whcqinit_vrt_t
 	.long	sidetop
 
 ;--------------------
-; city backdrop
+; Vortex backdrop
 
-	.asg	-92,Y			;Y to realign after ZOFF
+	.asg	-190,Y			;Y to realign after ZOFF
 	.asg	210,Z			;Z priority back from crt top
 
 	.word	SXO-300,Y,Z,0,0
-	.long	city1
+	.long	BLUBAK1
 	WL	4002,city1obj
 	.word	SXO-100,Y,Z,0,0
-	.long	city2
+	.long	BLUBAK2
 	WL	4002,city2obj
 	.word	SXO+100,Y,Z,0,0
-	.long	city3
+	.long	BLUBAK3
 	WL	4002,city3obj
 
-	.word	SXO-28,-140,Z+1,0,0
-	.long	moon
-	WL	4002,moonobj
+;	.word	SXO-28,-140,Z+1,0,0
+;	.long	moon
+;	WL	4002,moonobj
 
-	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
-	.long	STORM01
-	WL	4002,stormobj
+;	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
+;	.long	STORM01
+;	WL	4002,stormobj
 
-	.word	SXO-28+360-74h+88,10,Z,0,0
-	.long	FALL2_vda
-	WL	4002,templeobj
+;	.word	SXO-28+360-74h+88,10,Z,0,0
+;	.long	FALL2_vda
+;	WL	4002,templeobj
 
 
 

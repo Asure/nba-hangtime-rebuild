@@ -291,6 +291,7 @@ COF>
 XOF>
 COURT\BLUCOURT.IMG
 ---> BLUBAK1,BLUBAK2,BLUBAK3
+---> MFENCEL,MFENCER,TFENCE,SFENCE,PILLARL,PILLARR,TOPLEFT,TOPRGHT
 ; The section below needs to stay the same, since we perform
 ; auto-cleanup on the IMGPAL8.ASM file and cut lines at certain points.
 ; (See IMGT.CMD for the powershell oneliners.)
