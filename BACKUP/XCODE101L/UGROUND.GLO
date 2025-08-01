@@ -4,6 +4,12 @@
 	.global	UGRBK3
 	.globl	SPIKEPAL
 	.global	SPIKETST
+	.globl	UGRTEETHP
+	.global	UGRTEETH
+	.globl	UGRLAVAP
+	.global	UGRLAVA
+	.globl	UGRTEETSP
+	.global	UGRTEETS
 	.globl	BLUBAKP
 	.global	BLUBAK1
 	.global	BLUBAK2
@@ -11,3 +17,7 @@
 	.globl	TEMPLEPAL
 	.global	STEMPLEL
 	.global	STEMPLER
+	.global	TFENCE
+	.globl	SIDENEWP
+	.global	NEWBOT
+	.global	NEWTOP

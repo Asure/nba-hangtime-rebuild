@@ -860,9 +860,10 @@ whcqinit_otd_t
 	.word	SXO+493,Y,Z,ZOFF,FF
 	.long	BKg1
 
+;--------------------
 
 ;--------------------
-; wall
+; wall (image is 186x16 px)
 
 	.asg	-16,Y			;Y to realign after ZOFF
 ;	.asg	-26,Y			;Y to realign after ZOFF
@@ -979,7 +980,8 @@ whcqinit_otd_t
 ; .long	IMG_p
 
 whcqinit_ugr_t
-
+;--------------------
+;The Underground
 ;--------------------
 ; hoops
 
@@ -1027,27 +1029,37 @@ whcqinit_ugr_t
 	.asg	40-(2*Y2Z),ZOFF		;Z off for gndpos_t element to use
 
 ;--------------------
-; wall
+; wall (image is 186x16 px)
+; I made SPIKETST in similar dimensions, just higher. (186x44)
+; UGRTEETHT is 246x99, not sure if that would work on real hardware/fast enough?
 
-;	.asg	-16,Y			;Y to realign after ZOFF
-	.asg	-26,Y			;Y to realign after ZOFF
-
-;	.asg	-400,Y
+	.asg	-28,Y			;Y to realign after ZOFF
 	.asg	CZMIN-40,Z		;Z priority back from crt top
 	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
-	.word	SXO-496,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO-330,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO-165,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO+166,Y,Z,ZOFF,F
-	.long	SPIKETST
-	.word	SXO+331,Y,Z,ZOFF,F
-	.long	SPIKETST
+	.word	SXO-96-96-96-96-96,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO-96-96-96-96,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO-96-96-96,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO-96-96,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO-96,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO,Y,Z,ZOFF,F		;right from center
+	.long	UGRTEETS
+	.word	SXO+97,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO+97+97,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO+97+97+97,Y,Z,ZOFF,F
+	.long	UGRTEETS
+	.word	SXO+97+97+97+97,Y,Z,ZOFF,F
+	.long	UGRTEETS
+
+
+
 
 ;--------------------
 ; street lights
@@ -1084,7 +1096,8 @@ whcqinit_ugr_t
 ; .long	IMG_p
 
 whcqinit_vrt_t
-
+;--------------------
+;The Vortex
 ;--------------------
 ; hoops
 
@@ -1127,7 +1140,6 @@ whcqinit_vrt_t
 ; backcourt roof edge
 
 	.asg	-14,Y			;Y to realign after ZOFF
-;	.asg	-400,Y
 	.asg	CZMIN-40,Z		;Z priority back from crt top
 	.asg	40-(2*Y2Z),ZOFF		;Z off for gndpos_t element to use
 
@@ -1146,15 +1158,9 @@ whcqinit_vrt_t
 
 
 ;--------------------
-; temple
+; Temple
 
 	.asg	-51,Y			;Y to realign after ZOFF
-
-;	.asg	CZMIN-40,Z		;Z priority back from crt top (was 40)
-;	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
-
-;this is taken from for the side buildings, so that top is behind the score stuff.
-
 	.asg	290,Z			;Z priority back from crt top
 	.asg	CZMIN-Z-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
@@ -1164,28 +1170,33 @@ whcqinit_vrt_t
 	.long	STEMPLER
 
 ;--------------------
-; street lights
+; fence walls
+; this area was 6x186 = 1116 but some parts on the side not covered completely
+; the original wall was 186 wide but scaled down? to 165 in the game.? (-21)
+; TFENCE is 67 wide and 36 high. BKWALL 186 wide 16 high.
 
-;	.asg	-130,Y			;Y to realign after ZOFF
-;;	.asg	-400,Y
-;	.asg	220,Z			;Z priority back from crt top
-;	.asg	CZMIN-Z-(39*Y2Z),ZOFF	;Z off for gndpos_t element to use
-;
-;	.word	SXO-468,Y,Z,ZOFF,F
-;	.long	lamp1
-;	.word	SXO-154-80,Y,Z,ZOFF,F
-;	.long	lamp2
-;
-;	.word	SXO+150-80,Y,Z,ZOFF,F
-;	.long	lamp2
-;	.word	SXO+464,Y,Z,ZOFF,FF
-;	.long	lamp1
+	.asg	-36,Y			;Y to realign after ZOFF (was -16 ,counts from bottom)
+
+	.asg	CZMIN-40,Z		;Z priority back from crt top
+	.asg	40-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
+
+	.word	SXO-330-80-60,Y,Z,ZOFF,F
+	.long	TFENCE
+	.word	SXO-330-84,Y,Z,ZOFF,F
+	.long	TFENCE
+	.word	SXO+331+26,Y,Z,ZOFF,F
+	.long	TFENCE
+	.word	SXO+331+80,Y,Z,ZOFF,F
+	.long	TFENCE
+
+
+;--------------------
+; street lights
 
 ;--------------------
 ; cheerleaders
 
 	.asg	0,Y			;Y to realign after ZOFF
-;	.asg	-400,Y
 	.asg	CZMIN-24,Z		;Z priority back from crt top
 	.asg	0,ZOFF			;Z off for gndpos_t element to use
 
@@ -1193,7 +1204,6 @@ whcqinit_vrt_t
 	.long	CHEERA01
 	WL	4001,otd_chldr_ani_lft
 	.word	SXO+428,Y,Z,ZOFF,F
-;	.long	CHEERA01
 	.long	CHEERB01
 	WL	4001,otd_chldr_ani_rgt
 
@@ -1201,23 +1211,22 @@ whcqinit_vrt_t
 ; side buildings
 
 	.asg	-33,Y			;Y to realign after ZOFF
-;	.asg	-400,Y
 	.asg	CZMIN-39,Z		;Z priority back from crt top
 	.asg	39-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
 	.word	SXO-544,Y,Z,ZOFF,F
-	.long	sidebot
+	.long	NEWBOT
 	.word	SXO+540,Y,Z,ZOFF,FF
-	.long	sidebot
+	.long	NEWBOT
 
 
 	.asg	290,Z			;Z priority back from crt top
 	.asg	CZMIN-Z-(16*Y2Z),ZOFF	;Z off for gndpos_t element to use
 
 	.word	SXO-544,Y,Z,ZOFF,F
-	.long	sidetop
+	.long	NEWTOP
 	.word	SXO+540,Y,Z,ZOFF,FF
-	.long	sidetop
+	.long	NEWTOP
 
 ;--------------------
 ; Vortex backdrop
@@ -1235,9 +1244,9 @@ whcqinit_vrt_t
 	.long	BLUBAK3
 	WL	4002,city3obj
 
-	.word	SXO-28,-140,Z+1,0,0
-	.long	moon
-	WL	4002,moonobj
+;	.word	SXO-28,-140,Z+1,0,0
+;	.long	moon
+;	WL	4002,moonobj
 
 ;	.word	SXO-28+360-74h+8,-140,Z+1,0,0 	;Adjusted 200 to 320
 ;	.long	STORM01
@@ -1246,8 +1255,6 @@ whcqinit_vrt_t
 ;	.word	SXO-28+360-74h+88,10,Z,0,0
 ;	.long	FALL2_vda
 ;	WL	4002,templeobj
-
-
 
 	.word	4000			;End
 
