@@ -1,78 +1,78 @@
 	.DATA
-UGRBK1:
-	.word   201,201,0,0
-	.long   094913f2H
-	.word   07f80H
-	.long   UGRBACKP
-UGRBK2:
-	.word   201,201,0,0
-	.long   094b3a81H
-	.word   07f80H
-	.long   UGRBACKP
-UGRBK3:
-	.word   201,201,0,0
-	.long   094d6500H
-	.word   07f80H
-	.long   UGRBACKP
 SPIKETST:
-	.word   187,45,0,-6
-	.long   09500e97H
-	.word   07f80H
+	.word   186,44,0,-6
+	.long   094913f2H
+	.word   00H
 	.long   SPIKEPAL
 UGRTEETH:
-	.word   247,100,0,0
-	.long   0950b520H
-	.word   0f80H
+	.word   246,99,0,0
+	.long   094a13b2H
+	.word   00H
 	.long   UGRTEETHP
 UGRLAVA:
-	.word   148,63,0,0
-	.long   09536ca0H
-	.word   0380H
+	.word   147,62,0,0
+	.long   094d0cc2H
+	.word   00H
 	.long   UGRLAVAP
 UGRTEETS:
-	.word   110,42,0,0
-	.long   09548be8H
-	.word   0780H
+	.word   114,44,0,0
+	.long   094e2992H
+	.word   00H
 	.long   UGRTEETSP
+UGRBKG1:
+	.word   200,200,0,0
+	.long   094ec652H
+	.word   00H
+	.long   UGRBKG1P
+UGRBKG2:
+	.word   200,200,0,0
+	.long   0953a852H
+	.word   00H
+	.long   UGRBKG1P
+UGRBKG3:
+	.word   200,200,0,0
+	.long   09588a52H
+	.word   00H
+	.long   UGRBKG1P
 BLUBAK1:
 	.word   200,297,0,0
-	.long   09550658H
-	.word   07000H
+	.long   095d6c52H
+	.word   00H
 	.long   BLUBAKP
 BLUBAK2:
 	.word   200,297,0,0
-	.long   095b5e90H
-	.word   07000H
+	.long   0964ac92H
+	.word   00H
 	.long   BLUBAKP
 BLUBAK3:
 	.word   200,297,0,0
-	.long   0961b6c8H
-	.word   07000H
+	.long   096becd2H
+	.word   00H
 	.long   BLUBAKP
 STEMPLEL:
 	.word   138,149,0,-1
-	.long   09680f00H
-	.word   07000H
+	.long   09732d12H
+	.word   00H
 	.long   TEMPLEPAL
 STEMPLER:
 	.word   138,149,0,-1
-	.long   096a413eH
-	.word   07000H
+	.long   0975afa2H
+	.word   00H
 	.long   TEMPLEPAL
 TFENCE:
 	.word   67,36,0,0
-	.long   096c737cH
-	.word   07000H
+	.long   09783232H
+	.word   00H
 	.long   TEMPLEPAL
 NEWBOT:
 	.word   88,154,0,0
-	.long   096cb570H
-	.word   07000H
+	.long   09787d92H
+	.word   00H
 	.long   SIDENEWP
 NEWTOP:
 	.word   88,237,0,237
-	.long   096e2800H
-	.word   07000H
+	.long   097a2512H
+	.word   00H
 	.long   SIDENEWP
 	.TEXT
 

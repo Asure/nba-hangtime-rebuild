@@ -1,7 +1,3 @@
-	.globl	UGRBACKP
-	.global	UGRBK1
-	.global	UGRBK2
-	.global	UGRBK3
 	.globl	SPIKEPAL
 	.global	SPIKETST
 	.globl	UGRTEETHP
@@ -10,6 +6,10 @@
 	.global	UGRLAVA
 	.globl	UGRTEETSP
 	.global	UGRTEETS
+	.globl	UGRBKG1P
+	.global	UGRBKG1
+	.global	UGRBKG2
+	.global	UGRBKG3
 	.globl	BLUBAKP
 	.global	BLUBAK1
 	.global	BLUBAK2

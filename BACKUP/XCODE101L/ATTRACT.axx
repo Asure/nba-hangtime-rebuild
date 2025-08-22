@@ -2541,8 +2541,12 @@ edzxotd
 	addi	demopups,a14,L
 	move	*a14,a14
 
-	movk	1,a0
-	and	a14,a0
+;	movk	1,a0			;This doesn't take our two new courts into account.
+;	and	a14,a0
+;	move	a0,@pup_court
+	
+	movk	3,a0			;This does!
+	calla	RNDRNG0
 	move	a0,@pup_court
 
 	srl	1,a14

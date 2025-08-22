@@ -1,7 +1,7 @@
 Signature "NBA SUPER HANGTIME";
 
 Default encoding parameters (
-Type=0, Subtype=0, BitRate=96000,
+Type=*, Subtype=*, BitRate=96000,
 //PowerCut=97, MinRange=5, MaxError=5);
 PowerCut=97.5, MinRange=5, MaxError=5);
 

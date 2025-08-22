@@ -1,0 +1,74 @@
+From NBA Jam TE:
+================
+
+- All MK1 Characters are in.
+- TE fatality code is in.  (UP+2x PASS for now.)
+- Need to be on fire for fatality pushes to toast up enemy team.
+- Buggy like NBA Jam TE the palette can sometimes corrupt if you fatal push a lot.
+- Backboard breaking is back! See CMOS settings.
+
+CMOS
+====
+Enter diagnostic mode to access the extended CMOS menus. Super max settings:
+
+Idiot boxes: Quality of life, the game won't explain how to play, who you control, or that you should hold
+the turbo buttons etc. These are disabled by default since we expect skilled players to pick this version.
+You can still enable them for games on location.
+
+Backboard shatter: Self explaining. Current code just lets you shatter forever for demo purpose.
+
+Basketball type: The long hidden ABA ball or default ball can be selected here.
+
+Max Rubberbanding: The Maximum Hangtime version has insane rubber banding with aggro drones. Here you
+can switch between to the 'normal' Hangtime version, or MAX version of rubberbanding for a more enjoyable
+or more difficult game.
+
+Baby sized players: Normally via a code, but for easy setting and party games you can force this on.
+
+Huge Head: Same as above. Also huge head babies are.. fun!
+
+Show Hotspots: A new feature in MAX, each player has a hotspot, and this option shows them on the court.
+(Score 3 times to perma-enable it on screen.)
+
+Profanity: Fuck. Shit. And so on an so forth. (except, it's not in the sound code yet haha! Soon...)
+
+New courts
+==========
+Normal 'MAX' has left/right on matchup screen to select the indoor or outdoor court.
+We're adding two more.
+
+New players
+===========
+See also "special characters.txt" file. Bryant is on Lakers, Jordan is on Chicago.
+We don't have any lol chars, but aim at 'period correct' pop culture chars like Terminator.
+Oh and these all have sounds/speech calls etc.
+
+New Dunks
+=========
+Several new dunk types added that had gfx, but were never used in order to save rom space.
+Demo: You can use 'hook shots' to trigger one. (Walk down at top of bucket + turbo+shot.)
+
+New Easter eggs
+===============
+Hold up+right at matchup screen to enable a MK3 easter egg on 'OUTDOOR' court.
+This is polished up to have the vortex in the sky swirling (unused gfx) and an extra MK3 item near the ledge.
+
+Hold up+left at matchup screen to enable a MK1 easter egg on 'INDOOR' court.
+(Random two variants, one claps, one follows the ball.)
+
+New screens
+===========
+Placeholder Kobe, DCS logo that got cut from the game, others to follow.
+
+New anims / GFX
+=========
+Coach and bench players animate now randomly on scoring. Fence added on left of rooftop.
+
+Features
+========
+Team Zone meter is in place and fills up, but no reward is tied to it (yet). 
+You should pass more often to fill it up. Solo dunking doesn't fill it.
+
+More
+====
+Reworked the whole DCS audio with new samples etc.

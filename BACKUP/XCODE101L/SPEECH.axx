@@ -496,7 +496,7 @@
  SX	guns_it_sp,  0070DH,43, 0a13H
 
  SX	cros_crt_sp, 0070DH,37, 0a16H
- SX	downcourt_sp,0070DH,37, 0a0aH
+ SX	downcourt_sp,0070DH,37, 0a0aH		;down court
 ;DJT Start
  SX	downcrt2_sp, 0070DH,39, 0a1eH
  SX	lngpss_dc_sp,0070DH,84, 0a0bH
@@ -504,7 +504,7 @@
  SX	hev_dncrt_sp,0070DH,69, 0a1dH
  SX	bnce_pass_sp,0070DH,41, 0a20H
  SX	dumps_it_sp, 0070DH,27, 09feH
- SX	long_pass_sp,0070DH,85, 0a0bH
+ SX	long_pass_sp,0070DH,85, 0a0bH		;long pass down court
  SX	pas_outsd_sp,0070DH,58, 09f8H
 
  SX	goal_tend_sp,0120DH,47, 0a4bH	;SUX

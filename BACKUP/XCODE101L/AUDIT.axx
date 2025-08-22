@@ -3016,7 +3016,8 @@ ROM_NAME
 
 ;DJT Start
 ;	.byte	"MAX HANGTIME - VER M1.0 9/04/96",0	;Last 8K CMOS v#
-	.byte	"MAX HANGTIME - VER L1.0 11/08/96",0	;Last dedicated v#
+;	.byte	"MAX HANGTIME - VER L1.0 11/08/96",0	;Last dedicated v#
+	.byte	"SUPER MAX HANGTIME - VER M1.05 21/08/25",0	;Last dedicated v#
 ;DJT End
 
 	.even
