@@ -234,6 +234,14 @@
  SX	thr_zone_sp, 0100DH,65, 0b05H
  SX	whta_show_sp,0100DH,57, 0958H		;AMM: Unused
 
+;AMM New Alleyoop stuff from showtime
+ SX	alleyoop2_sp,0100DH,63, 1004H
+ SX	alleyoop3_sp,0100DH,63, 1005H
+ SX	alleyoop4_sp,0100DH,63, 1006H
+ SX	alleyoop6_sp,0100DH,63, 1007H
+ SX	alleyoop7_sp,0100DH,63, 1008H
+ SX	alleyoop8_sp,0100DH,63, 1009H
+
  SX	dble_dnk_sp, 0120DH,55, 0b3aH
  SX	dble_dnk2_sp,0120DH,78, 0b38H
  SX	lob_pass_sp, 0120DH,55, 0a1cH
@@ -1697,6 +1705,7 @@ STAB_END
 
 *****************************************************************************
 *
+*	These are the Double-Dunk speech calls. One is picked randomly.
 *
  SUBR	lob_ball_speech
 
@@ -1712,18 +1721,31 @@ mvphsayo
 	rets
 
 mvphlob_spch_tbl
-	.long	lev_tmate_sp
-	.long	lob_pass_sp
-	.long	scp_tmate_sp
+	.long	lev_tmate_sp	;0b3d 1
+	.long	lob_pass_sp	;0a1c 2
+	.long	scp_tmate_sp	;0b3b 3
 ;DJT Start
-	.long	the_scoop_sp
+	.long	the_scoop_sp	;0b3c 4
 ;DJT End
-	.long	lob_pass_sp
-	.long	tosses_it_sp
-	.long	lob_pass_sp
-	.long	passes_sp
-	.long	dble_dnk_sp
-	.long	dble_dnk2_sp
+	.long	lob_pass_sp	;0a1c x
+	.long	tosses_it_sp	;09fc 5
+	.long	lob_pass_sp	;0a1c x
+	.long	passes_sp	;09f4 6
+	.long	dble_dnk_sp	;0b3a 7
+	.long	dble_dnk2_sp	;0b38 8
+
+* From showtime:
+* SCA_MAK1
+*  300  $012c   1       56.1    64.3  What an alley oop
+*  301  $012d   1       67.4    77.3  Alleyyyy Oop
+*  305  $0131   1       76.6    87.8  Ohhh with the Alley oop
+*  306  $0132   1       62.8    72.0  Alleyyy oop (2)
+*  310  $0136   1       89.6   102.7  A beautiful alley oop
+*  312  $0138   1       82.9    95.0  Oh with the Alley oop dunk
+*  314  $013a   1      107.6   123.4  Theres nothing sweeter than an Alley Oop
+*  335  $014f   1      156.1   179.0  One more alley oop is gonna light this team on fire
+*  324  $0144   1      112.2   128.6  Double your pleasure double your dunks
+*  327  $0147   1       69.9    80.2  Ohh the DOUBLE DUNK!
 
 *****************************************************************************
 *
@@ -1832,13 +1854,24 @@ qjzmdie
 
 
 qjzmbckbd_hit_sp_tbl
-	.long	kild_smne_sp
-	.long	off_trgt_sp
-	.long	wht_thnkg_sp
-	.long	off_glass_sp
-	.long	sht_stunk_sp
-	.long	off_bkbrd_sp
-	.long	wht_distr_sp
+	.long	kild_smne_sp ;09ee
+	.long	off_trgt_sp  ;09e1
+	.long	wht_thnkg_sp ;09ed
+	.long	off_glass_sp ;083a
+	.long	sht_stunk_sp ;09e8
+	.long	off_bkbrd_sp ;0827
+	.long	wht_distr_sp ;0aa8
+
+* Showtime - SCA_MAK1
+*  14   $000e   1       56.5    64.8  _ Off the backboard
+*  73   $0049   1       70.7    81.1  What was he thinking ?!
+*  60   $003c   1       86.2    98.9  Again the shot won-t go 2
+*  61   $003d   1       46.0    52.8  Off the rim (missed)
+*  63   $003f   1       49.0    56.2  Bounces out
+*  64   $0040   1       43.1    49.4  Off the mark
+*  65   $0041   1       37.7    43.2  _ Misses
+
+
 
 *****************************************************************************
 ;a player has just launched a shot
@@ -1899,10 +1932,14 @@ jgorxshtspeech
 
 
 jgorinface_sp_tbl
-	.long	hnd_face_sp
-	.long	frcd_shot_sp
-	.long	frcd_shot_sp
-	.long	difficult_sp
+	.long	hnd_face_sp	;0b24
+	.long	frcd_shot_sp	;0b2d
+	.long	frcd_shot_sp	;0b2d
+	.long	difficult_sp	;09af
+	.long	ill_shot_sp	;0b25
+
+* I don't really have anything for these calls in Showtime!
+
 	
 
 jgorshoots_table
@@ -1939,19 +1976,26 @@ jgorfulltab
 
 jgordesptab
 ;DJT Start
-	.long	hail_mary_sp
-	.long	unlod_one_sp
-	.long	wild_shot_sp
-	.long	lfts_wild_sp
+	.long	hail_mary_sp	;0a22
+	.long	unlod_one_sp	;07ff
+	.long	wild_shot_sp	;0b2e
+	.long	lfts_wild_sp	;09bb
 
-	.long	whyyyy_sp
-	.long	whyyyy_sp
-	.long	ill_shot_sp
-	.long	ill_shot_sp
-	.long	outof_rng_sp
-	.long	outof_rg2_sp
-	.long	out_cntrl_sp
-	.long	difficult_sp
+	.long	whyyyy_sp	;0ae3
+	.long	whyyyy_sp	;0ae3
+	.long	ill_shot_sp	;0b25
+	.long	ill_shot_sp	;0b25
+	.long	outof_rng_sp	;09b9
+	.long	outof_rg2_sp    ;09b9 ;yes these are the same.
+	.long	out_cntrl_sp	;09bd
+	.long	difficult_sp	;09af
+
+* Showtime:
+* SCA_TAKE
+  37   $0025   1       57.8    66.2  A Hail Mary
+  46   $002e   1       79.1    90.7  A Wild shot 
+  54   $0036   1       59.0    67.7  Crazy shot
+
 
 ;DJT End
 ****************
@@ -2431,41 +2475,43 @@ jkaix2pts
 
 
 jkai2bkbdhit_tab
-	.long	banked_it_sp
-	.long	off_glass_sp
-	.long	off_bkbrd_sp
-	.long	a_banker_sp
-	.long	scores_sp
+	.long	banked_it_sp		;829
+	.long	off_glass_sp		;83a
+	.long	off_bkbrd_sp		;827
+	.long	a_banker_sp		;811
+	.long	scores_sp		;7de- done
 ;DJT Start
-	.long	scores2_sp
+	.long	scores2_sp		;7df- done
 ;DJT End
 
+;25 sound calls for 2pt shots (no dunk)
+
 jkai2tab
-	.long	it_falls_sp
-	.long	scores_sp
-	.long	hits_jmpr_sp
-	.long	great_sht_sp
+	.long	it_falls_sp		;90d -done
+	.long	scores_sp		;7de -done
+	.long	hits_jmpr_sp		;906
+	.long	great_sht_sp		;935
 ;DJT Start
-	.long	greatshot_sp
+	.long	greatshot_sp		;90f
 ;DJT End
-	.long	bingo_sp
-	.long	good_sht_sp
-	.long	count_it_sp
-	.long	chk_it_up_sp
-	.long	good_4two_sp
-	.long	goooood2_sp
-	.long	yes_sp
+	.long	bingo_sp		;ae2
+	.long	good_sht_sp		;938
+	.long	count_it_sp		;90b
+	.long	chk_it_up_sp		;93b
+	.long	good_4two_sp		;90a
+	.long	goooood2_sp		;903
+	.long	yes_sp			;b33
 ;DJT Start
-	.long	chalk_it_sp
+	.long	chalk_it_sp		;b48
 ;DJT End
-	.long	book_it_sp
-	.long	bingo_sp
-	.long	smokin_sp
-	.long	kncks_dwn_sp
-	.long	dwn_well_sp
+	.long	book_it_sp		;8ff
+	.long	bingo_sp		;ae2
+	.long	smokin_sp		;af6
+	.long	kncks_dwn_sp		;92x
+	.long	dwn_well_sp		;94b
 ;DJT Start
-	.long	and_drops_sp
-	.long	scores2_sp
+	.long	and_drops_sp		;943
+	.long	scores2_sp		;7df - done
 ;DJT End
 
 
@@ -2752,16 +2798,27 @@ jkaialleyoop_jam
 
 
 jkaialleyoop_tab
+;	.long	alley_oop_sp
+;	.long	bomshakalaka
+;	.long	thr_tmwrk_sp
+;	.long	alley_oop_sp
+;	.long	thr_smkn_sp
+;	.long	alley_oop_sp
+;	.long	nicly_dne_sp
+;	.long	alley_oop_sp
+;	.long	thr_zone_sp
+;	.long	whta_show_sp
+
 	.long	alley_oop_sp
-	.long	bomshakalaka
-	.long	thr_tmwrk_sp
-	.long	alley_oop_sp
-	.long	thr_smkn_sp
-	.long	alley_oop_sp
-	.long	nicly_dne_sp
-	.long	alley_oop_sp
-	.long	thr_zone_sp
-	.long	whta_show_sp
+	.long	alleyoop2_sp
+	.long	alleyoop3_sp
+	.long	alleyoop4_sp
+	.long	alleyoop6_sp
+	.long	alleyoop7_sp
+	.long	alleyoop8_sp
+	.long	alleyoop2_sp
+	.long	alleyoop7_sp
+	.long	alleyoop3_sp
 
 
 

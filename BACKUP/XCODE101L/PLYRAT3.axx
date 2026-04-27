@@ -254,7 +254,7 @@ smok_h
 	HDMAC2	SMOKH01
 	
 jordan_h	
-	HDMAC	JORD1
+	HDMAC	JORD1	; 16 head variant AI
 	.long	JORD17  ; Add angle 5 face with tongue
 
 kobe_h

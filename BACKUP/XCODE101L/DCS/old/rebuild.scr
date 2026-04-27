@@ -1,0 +1,327 @@
+Signature "NBA SUPER HANGTIME";
+
+Default encoding parameters (
+Type=*, Subtype=*, BitRate=96000,
+//PowerCut=97, MinRange=5, MaxError=5);
+PowerCut=97.5, MinRange=5, MaxError=5);
+
+//Nuke some unused samples
+Stream nuke1 "dummy.wav" replaces $31DA0A; 
+Stream nuke2 "dummy.wav" replaces $34C778; 				// "A Super Dunk" unused sample.
+
+Stream Raiden "JAM_Raiden.wav"; 	// Raiden's sample because we use it twice, save 2449 bytes.
+Stream Reptile "JAM_Reptile.wav";       //
+Stream Scorpion "JAM_Scorpion.wav";	//
+Stream Subzero "JAM_Sub-zero.wav";	//
+Stream Smoke "JAM_Smoke.wav";
+Stream Jordan "Jordan.wav";
+Stream Michael_Jordan "Michael_Jordan.wav";
+Stream Kobe "Kobe.wav";
+Stream Kobe_Bryant "Kobe_Bryant.wav";
+Stream Oneal "Oneal.wav";
+Stream Shaq_Oneal "Shaq_Oneal.wav";
+Stream Walker "Walker.wav";
+Stream Antoine_Walker "Antoine_Walker.wav";
+Stream Barkley "Barkley.wav";
+Stream Charles_Barkley "Charles_Barkley.wav";
+Stream Magic "Magic.wav";
+Stream Magic_Johnson "Magic_Johnson.wav";
+Stream Bird "Bird.wav";
+Stream Larry_Bird "Larry_Bird.wav";
+Stream Terminator "Terminator.wav";
+Stream Arnold "Arnold.wav";
+Stream Schwarzenegger "Schwarzenegger.wav";
+Stream Arnold_Schwarzenegger "Arnold_Schwarzenegger.wav";
+Stream Laphonso_Ellis "Laphonso_Ellis.wav";
+
+// last used call 07BF ?
+
+//; SX	max_hngtm_sp,0200DH,93, 07beH "Super Maximum Hangtime"
+//; SX	max_hngtm_sp,0200DH,93, 0b8fH "maximum hangtime"
+//; SX	nba_hngtm_sp,0200DH,99, 0b02H "nba hangtime"
+Track $07be channel 5 {
+    SetMixingLevel(level 112);  // always set the mixing level for a new track
+    Play("Super.wav");       	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+    Play(stream $0A0682); 	// "Maximum Hangtime"  (recycled from original DCS rom)
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+//    Queue($0b8f);		// pretend that the WPC host just send command code $0004
+};
+
+// mk1 easter egg
+Track $0b55 channel 3 {		// call free
+    SetMixingLevel(level 100);   // always set the mixing level for a new track
+    Play("mk1.wav");       	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};
+
+Track $07bd channel 2 {         // call free
+    SetMixingLevel(level 100); 	// always set the mixing level for a new track
+    Play("Glass.wav");       	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};
+
+
+// To <player> pass speech
+//    SetMixingLevel(level 111);                                      // 0000 07 05 6F
+//    Play(stream $1CC03A);                                           // 0000 01 05 1CC03A 01
+//    Wait(15) Play(stream $3A7A0A);                                  // 000F 01 05 3A7A0A 01
+//    Wait(86) End;  
+
+// Player names & pass speech on chan 5 always!
+
+// Raiden
+Track $0b50 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Raiden);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Raiden
+Track $07b7 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Raiden);
+    Wait(Stream);         
+};
+// Reptile
+Track $0b51 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Reptile);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Reptile
+Track $07b8 channel 4 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Reptile);
+    Wait(Stream);         
+};
+// Scorpion
+Track $0b52 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Scorpion);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Scorpion
+Track $07b9 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Scorpion);
+    Wait(Stream);         
+};
+// Sub-Zero
+Track $0b53 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Subzero);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Subzero
+Track $07ba channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Subzero);
+    Wait(Stream);         
+};
+
+// Smoke
+Track $0b54 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Smoke);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Smoke
+Track $07bc channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Smoke);
+    Wait(Stream);         
+};
+// Jordan
+Track $0b56 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Jordan);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Michael Jordan
+Track $0bb8 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Michael_Jordan);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Jordan
+Track $07bf channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Jordan);
+    Wait(Stream);         
+};
+// Kobe
+Track $0bb9 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Kobe);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Kobe Bryant
+Track $0bba channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Kobe_Bryant);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Kobe
+Track $07C0 channel 5 {		// Call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Kobe);
+    Wait(Stream);         
+};
+// O'Neal
+Track $0bbb channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Oneal);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Shaq O'Neal
+Track $0bbc channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Shaq_Oneal);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To O'Neal
+Track $07C1 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Oneal);
+    Wait(Stream);         
+};
+// Walker
+Track $0bbd channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Walker);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Antoine Walker
+Track $0bbe channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Antoine_Walker);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Walker
+Track $07C2 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Walker);
+    Wait(Stream);         
+};
+// Barkley
+Track $0bbf channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Barkley);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Charles Barkley
+Track $0bc0 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Charles_Barkley);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Barkley
+Track $07C3 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Barkley);
+    Wait(Stream);         
+};
+// Magic
+Track $0402 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Magic);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Magic Johnson
+Track $0403 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Magic_Johnson);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Magic
+Track $0404 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(15) Play(Magic);
+    Wait(Stream);         
+};
+// Bird
+Track $0405 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Bird);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Larry Bird
+Track $0406 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Larry_Bird);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Bird
+Track $0407 channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(27) Play(Bird);
+    Wait(Stream);         
+};	
+// Arnold
+Track $0408 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Arnold);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// Arnold Schwarzenegger 
+Track $0409 channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Arnold_Schwarzenegger);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Arnold
+Track $040A channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(27) Play(Arnold);
+    Wait(Stream);         
+};
+// Terminator
+Track $040B channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Terminator);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// To Terminator
+Track $040C channel 5 {		// call free
+    SetMixingLevel(level 111);
+    Play(stream $1CC03A);
+    Wait(27) Play(Terminator);
+    Wait(Stream);         
+};
+// mk3 easter egg
+Track $040D channel 4 {		// call free
+    SetMixingLevel(level 100);   // always set the mixing level for a new track
+    Play("mk3.mp3");       	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};
+// Laphonso Ellis 
+Track $040E channel 5 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play(Laphonso_Ellis);       // start an audio clip
+    Wait(Stream);          // ...and wait for it to finish before exiting
+};
+// MK3 Fatality
+Track $040F channel 4 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play("fatality.wav");      	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};
+// Outdoor backboard break
+Track $0410 channel 2 {		// call free
+    SetMixingLevel(level 111);   // always set the mixing level for a new track
+    Play("wood-smash-3.wav");      	// start an audio clip
+    Wait(Stream);          	// ...and wait for it to finish before exiting
+};

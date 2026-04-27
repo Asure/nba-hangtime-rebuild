@@ -1,0 +1,36 @@
+JAM: WARMSET
+HT: init_prog
+
+Reset Vector is Always init_prog for both. Not sure if this is hit on cold boot?
+
+NBA Jam/SE
+==========
+
+Game bootup/init
+
+Entry point from BB.CMD -> WARMSET in BB.ASM
+
+WARMSET:
+
+- what i don't have
+- no vmuxer init
+- no initpic
+
+
+NBA Hangtime
+============
+
+Game bootup/init
+
+Differes from NBA Jam/SE which would boot into WARMSET
+
+Entry point from BB.CMD -> init_prog in BB.ASM
+
+init_prog: 
+
+- Init vmux and others. 
+- Check if this was a watchdog (or manual,from test mode) reset. 
+-- If not, go to POWERTST. 
+-- If warm, go to WARMSET.
+
+POWERTST

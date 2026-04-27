@@ -1,7 +1,7 @@
 rem working with nbamht!
 del nbatest10.zip
 rem NEWDCS.exe -o nbatest10.zip --stream-dir=.\input --patch .\ORIGROM\nba.zip rebuild.scr >rebuild.txt
-DCSencoder.exe -o nbatest10.zip --stream-dir=.\input --patch .\ORIGROM\nba.zip rebuild.scr >rebuild.txt
+DCSencoder.exe -o nbatest10.zip --stream-dir=.\origrom --patch base.zip nbanew.prg >nbanew.log
 rem DCSexplorer.exe -p nbatest10.zip >new_prog.txt
 mkdir output
 cd output
@@ -17,7 +17,7 @@ ren u4.bin l1.0_nba_hangtime_u_4_music_spch.u4
 ren u5.bin l1.0_nba_hangtime_u_5_music_spch.u5
 ren u6.bin l1.0_nba_hangtime_u_6_music_spch.u6
 zip d:\mame\roms\nbamht.zip .\l1.0_*.u*
-cd \mame
+rem cd \mame
 rem mame.exe nbamht -debug
 
 
