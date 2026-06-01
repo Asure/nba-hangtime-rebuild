@@ -2,7 +2,7 @@
 rem this CMD file will do everything and create bin and roms, and zip the whole lot.
 rem adjust paths as needed.
 rem 29-5 now with auto-trimming the last 35 lines from imgpal8.asm with powershell.
-c:\dosbox-x\dosbox-x.exe -fastlaunch -conf .\dosbox-x\dosbox-x.conf exit -c "c:\myht\backup\xcode1~3\img\imgt.bat"
+c:\dosbox-x\dosbox-x.exe -fastlaunch exit -c "c:\myht\backup\xcode1~3\img\imgt.bat"
 del misc.old
 ren misc.bin misc.old
 dd if=misc.irw of=misc.bin bs=0x44 skip=1
