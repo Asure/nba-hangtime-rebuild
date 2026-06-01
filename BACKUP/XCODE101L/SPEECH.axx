@@ -1746,6 +1746,9 @@ mvphlob_spch_tbl
 *  335  $014f   1      156.1   179.0  One more alley oop is gonna light this team on fire
 *  324  $0144   1      112.2   128.6  Double your pleasure double your dunks
 *  327  $0147   1       69.9    80.2  Ohh the DOUBLE DUNK!
+* SCA_MAKE
+*  308  $0134   1       73.7    84.5  It takes two to tango (AO or DD)
+*  316  $013c   1       51.1    58.6  Catch and release
 
 *****************************************************************************
 *
@@ -1936,10 +1939,10 @@ jgorinface_sp_tbl
 	.long	frcd_shot_sp	;0b2d
 	.long	frcd_shot_sp	;0b2d
 	.long	difficult_sp	;09af
-	.long	ill_shot_sp	;0b25
 
+*
 * I don't really have anything for these calls in Showtime!
-
+*
 	
 
 jgorshoots_table
@@ -1992,9 +1995,22 @@ jgordesptab
 
 * Showtime:
 * SCA_TAKE
-  37   $0025   1       57.8    66.2  A Hail Mary
-  46   $002e   1       79.1    90.7  A Wild shot 
-  54   $0036   1       59.0    67.7  Crazy shot
+*  37   $0025   1       57.8    66.2  A Hail Mary
+*  46   $002e   1       79.1    90.7  A Wild shot 
+*  54   $0036   1       59.0    67.7  Crazy shot
+
+*  54   $0036   1       59.0    67.7  Crazy shot
+*  57   $0039   1       70.3    80.6  The ball on its way ...
+*  59   $003b   1       56.5    64.8  _ From half-court
+*  61   $003d   1      103.0   118.1  _ From way downtown 3
+*  62   $003e   1       96.3   110.4  _ Lets it fly from half-court
+
+
+* SCA_MAKE
+*  54   $0036   1       87.9   100.8  A very difficult shot
+*  50   $0032   1       67.8    77.8  A terrible shot
+* SCA_MISC
+*  571  $023b   1       48.1    55.2  Why!?
 
 
 ;DJT End
@@ -2012,15 +2028,15 @@ jgorlong_range
 	rets
 
 jgorlongtab
-	.long	frm_l_rng_sp
-	.long	frm_dwntn_sp
-	.long	wild_shot_sp
-	.long	difficult_sp
-	.long	unlod_one_sp
-	.long	frm_dwntn_sp
-	.long	out_cntrl_sp
+	.long	frm_l_rng_sp	;0801
+	.long	frm_dwntn_sp	;07e9
+	.long	wild_shot_sp	;0b2e
+	.long	difficult_sp	;09af
+	.long	unlod_one_sp	;07ff
+	.long	frm_dwntn_sp	;07e9
+	.long	out_cntrl_sp	;09bd
 ;DJT Start
-	.long	outof_rng_sp
+	.long	outof_rng_sp	;09b9
 ;DJT End
 
 ****************

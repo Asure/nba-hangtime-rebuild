@@ -6,7 +6,7 @@ Type=*, Subtype=*, BitRate=96000,
 PowerCut=97.5, MinRange=5, MaxError=5);
 
 //Nuke some unused samples
-Stream nuke1 "dummy.wav" replaces $31DA0A; 
+//Stream nuke1 "dummy.wav" replaces $31DA0A;				// part of create a player. 
 Stream nuke2 "dummy.wav" replaces $34C778; 				// "A Super Dunk" unused sample.
 
 Stream Raiden "JAM_Raiden.wav"; 	// Raiden's sample because we use it twice, save 2449 bytes.

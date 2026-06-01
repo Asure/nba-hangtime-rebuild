@@ -8,6 +8,9 @@ cd output
 del u*.bin
 del l1*.*
 unzip ..\nbatest10.zip
+cd ..
+check_alignment.py output >>rebuilt.txt
+cd output
 pause
 rem We're now overflowing into bigger romset, and the encoder names this file wrong!
 rem we need to update MAME for this!
