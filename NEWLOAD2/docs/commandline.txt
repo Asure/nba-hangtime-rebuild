@@ -1,0 +1,37 @@
+
+Copyright (C) Williams Electronics Games, Inc. 1993.
+GSP Image Loader - DMA 2 - Version 03/14/95
+Invocation...	LOAD2 <file> <flags>
+      TRGTADDR is the host communication port
+      Source directories for related files can be chosen through flags.
+      YOU CAN SPECIFY AN IMAGE HEADER FORMAT IN THE .LOD FILE!!!
+
+Valid <flags>...
+  /X  -DO NOT download to GSP. (If not present, it does)
+  /Dx -Specify directory for .lod file (see below for 'x' description)
+  /Tx -Build image table files (see below for 'x' description)
+  /Fx -Build raw file (see below for 'x' description)
+  /Ox -Override dir. for all files in .lod file (see below for 'x')
+NOTE! The above flags are independent and may be used in any combination.
+  /Rx -Load from a raw image file. (see below for 'x' description).
+  /H  -Print an explanation of .lod file directives.
+  /V  -Verbose mode, report lots of stuff.
+  /I  -Write background data to image roms
+  /B  -Make Bits Per Pixel based on Palette size, not pixel data.
+  /P  -Pad images to multiple of 4 bits
+  /L  -aLign images to 16 bit boundaries
+  /A  -Append new information to default files (for multiple loads)
+
+                           Press ENTER to continue...
+  /3  -Limit multiple sizes to 3 (full,half,qrtr), not 4 (eighth).
+  /E  -ED adjustment (Dual banked image memory
+
+Flags pertaining to bgtool...
+  /Ux -Override dirs. within all Universe files (see below for 'x')
+  /S  -Write UNIVSEQ.NEW
+
+The T,F,R,D,O and U options use a secondary flag shown above as 'x'.
+  If x is I, the affected file uses IMGDIR.
+  If x is S, the affected file uses SRCDIR.
+  If x is C, the affected file uses the current dir.
+  If x is =, supply a directory on the command line.

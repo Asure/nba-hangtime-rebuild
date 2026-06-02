@@ -32,7 +32,7 @@ IHDR SIZX:W,SIZY:W,ANIX:W,ANIY:W,SAG:L,CTRL:W,PAL:L,PWRD1:W,PWRD2:W,PWRD3:W,PT0X
 ASM> PLYRDSQ3.TBL
 ;
 ;#4
-..\..\ART110\NBA_DNK4.IMG
+ART110\NBA_DNK4.IMG
 ;Over head? One Arm? slam dunk. (similar to arm spin dunk, but doesn't spin.)
 ---> S3OASD01,S3OASD02,S3OASD03,S3OASD04,S3OASD05,S3OASD06,S3OASD07,S3OASD08
 ---> S3OASD09,S3OASD10,S3OASD11,S3OASD12,S3OASD13,S3OASD14,S3OASD15,S3OASD16
@@ -44,7 +44,7 @@ ASM> PLYRDSQ3.TBL
 ; Nothing unused in ..\ART110\NBA_DNK5.IMG
 ;#6
 ;Some really cool wild stuff here 'over arm slam dunk' 'over head move'
-..\..\ART110\NBA_DNK6.IMG
+ART110\NBA_DNK6.IMG
 ; Not really special slamming, maybe layup?
 ---> M8FLY201,M8FLY202,M8FLY203,M8FLY204,M8FLY205,M8FLY206,M8FLY207
 ---> M8FLY208,M8FLY209,M8FLY210,M8FLY211,M8FLY212,M8FLY213
@@ -71,7 +71,7 @@ ASM> PLYRDSQ3.TBL
 ---> M8OHM513,M8OHM514,M8OHM515,M8OHM516,M8OHM517,M8OHM518
 ;
 ;#7
-..\..\ART110\NBA_DNK7.IMG
+ART110\NBA_DNK7.IMG
 ; Reverse dunk?
 ---> M8REVD01,M8REVD02,M8REVD03,M8REVD04,M8REVD05,M8REVD06
 ---> M8REVD07,M8REVD08,M8REVD09,M8REVD10,M8REVD11,M8REVD12
@@ -81,7 +81,7 @@ ASM> PLYRDSQ3.TBL
 ; Cut rebound dunk effect 'putback'
 ; Needs better logic/testing
 ;
-..\..\ART110\NBA_DEF3.IMG
+ART110\NBA_DEF3.IMG
 ASM> plyrpbck.tbl
 GLO> plyrpbck.glo
 ; These are in plyrseq.tbl already
@@ -94,7 +94,7 @@ GLO> plyrpbck.glo
 ; Unused upward swipe steal (normal swipes are in plyrseq.tbl)
 ; Needs logic!
 ;
-..\..\ART110\NBA_DEF1.IMG
+ART110\NBA_DEF1.IMG
 ASM> stealup.tbl
 GLO> swpuseq.glo
 ---> T1SWPU1,T1SWPU2,T1SWPU3,T1SWPU4,T1SWPU5,T1SWPU6,T1SWPU7,T1SWPU8,T1SWPU9
@@ -106,7 +106,7 @@ GLO> swpuseq.glo
 ; Cowering player (for shattered basket maybe?)
 ; Needs logic!
 ;
-..\..\ART110\NBA_MSC1.IMG
+ART110\NBA_MSC1.IMG
 ASM> cowering.tbl
 GLO> cowering.glo
 ---> w1cow1,w1cow2,w1cow3,w1cow4,w1cow5,w1cow6,w1cow7
@@ -137,7 +137,7 @@ ZOF>
 CON>
 ;PAL for these is already in imgpal7, so we don't output it.
 ;We can use compression on these images so those are all turned on.
-..\..\ART100\NBACROWD.IMG
+ART100\NBACROWD.IMG
 ---> COACH02,COACH03,COACH04,COACH05,COACH06
 ---> BNCHPL02,BNCHPL03,BNCHPL04,BNCHPL05,BNCHPL06,BNCHPL07
 SHANG.IMG
@@ -154,7 +154,7 @@ ZON>
 XON>
 ;PAL for these is already in imgpal7, so we don't output it.
 ;We can use compression on these images so those are all turned on.
-..\..\ART100\OUTDOOR.IMG
+ART100\OUTDOOR.IMG
 ---> STORM02,STORM03,STORM04,STORM05,STORM06,STORM07,STORM08,STORM09,STORM10,STORM11,STORM12
 PON>
 ---> fence
@@ -163,7 +163,7 @@ MKSTREET.IMG
 ---> FALL2_vda
 PON>
 ;Unused art from DCSLOGO and Forden pic
-..\..\ART100\DCSLOGO.IMG
+ART100\DCSLOGO.IMG
 ASM> dcs.tbl
 GLO> dcs.glo
 ---> dcslogo
@@ -261,7 +261,7 @@ Ellis.img
 ;Team Zone meter (cut feature) imgs
 ASM> TEAMZONE.TBL
 GLO> XXXHD.GLO
-..\..\ART110\TVSCORE.IMG
+ART110\TVSCORE.IMG
 IHDR SAG:L
 PPP> 6
 POF>
@@ -347,6 +347,6 @@ XON>
 ZOF>
 ---> RAIDEN,SCORPION,SUBZER,REPTILE,SM0K3,JORDAN,BRYANT,ONEAL
 ---> BIRD,TERMINATOR,ARNOLD,WALKER,ELLIS,D_ELLIS
-..\..\ART100\pnames.img
+ART100\pnames.img
 ---> BARKLEY,PORTER,MAJERLE,WILKINS,JOHNSON_M
 

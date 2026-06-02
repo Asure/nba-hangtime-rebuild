@@ -6,10 +6,10 @@ Using a page of expanded memory.
 
 GSP is Memory Mapped at PC address C000:7000
 Loading images ...
-	from: C:\MYHT\BACKUP\XCODE1~3\IMG\misc.lod
+	from: C:\IMG\misc.lod
 	to:   Table header files (written to directory c:\tmp\htextra\)
 	      GSP target system.
-	      C:\MYHT\BACKUP\XCODE1~3\IMG\misc.irw
+	      C:\IMG\misc.irw
 	      
 SET new IRAM address = 2000000 bank 0
 SET new IRAM address = 6000000 bank 1

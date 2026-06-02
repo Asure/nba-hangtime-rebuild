@@ -1,0 +1,2473 @@
+**************************************************************
+*
+* Owner:		Shawn
+*
+* Software:		Shawn Liptak
+* Initiated:		9/17/92
+*
+* Modified:		Shawn Liptak, 3/24/93	-New compatible version
+* 			Shawn Liptak, 1/17/94	-Smarter for tournament ed.
+* 			Shawn Liptak, 3/20/96	-Smarter for HangTime
+*
+* COPYRIGHT (C) 1992-1996 WILLIAMS ELECTRONICS GAMES, INC.
+*
+*.Last mod - 4/8/96 17:01
+**************************************************************
+	.file	"drone.asm"
+	.title	"basketball drone code"
+	.width	132
+	.option	b,d,l,t
+	.mnolist
+
+
+	.include	"mproc.equ"		;Mproc equates
+	.include	"disp.equ"		;Display proc equates
+	.include	"gsp.equ"		;Gsp asm equates
+	.include	"sys.equ"
+	.include	"audit.equ"
+	.include	"macros.hdr"		;Macros
+	.include	"world.equ"		;Court-world defs
+	.include	"game.equ"
+	.asg		0,SEQT
+	.include	"plyr.equ"
+
+
+;sounds external
+
+
+;symbols externally defined
+
+	.ref	plyrobj_t,plyrproc_t
+	.ref	ballobj_p
+	.ref	ballpnum,ballpnumshot
+	.ref	ballnumscored,ballpnumscored
+	.ref	balltmshotcnt,balltmscored
+	.ref	plyr_onfire
+	.ref	seekdirdist_obxz128
+
+	.ref	game_time,gmqrtr
+	.ref	shotimer
+
+	.ref	team1,team2
+
+	.ref	PCNT
+	.ref	RNDPER
+	.ref	PSTATUS
+	.ref	GET_ADJ
+
+
+;symbols defined in this file
+
+
+;uninitialized ram definitions
+
+	.bss	drnzzcnt	,16	;Drone zigzag mode cntdn
+	.bss	drnzzmode	,16	;Drone zigzag mode (0-?)
+	BSSX	drone2on	,16	;!0=Use drone version2 code
+
+	BSSX	dronesmrt	,16	;Bit 0-3 if 1 = Smarter drone
+
+
+;equates for this file
+
+
+BV5	equ	01040H-080H+042H*6
+
+NOPUSHSTEAL	equ	0	;!0=No push or stealing
+ONLY3		equ	0	;!0=Only shoot 3's
+
+	.text
+
+
+
+***************************************************************
+* Main drone logic
+* A8 = *Obj
+* A9 = *Plyr secondary data
+* A11= *Ctrl bits
+* A13= *Plyr process
+* Trashes scratch, A2-A5
+
+ SUBR	drone_main
+
+
+;	move	*a13(plyr_d_seekcnt),a0
+;	cmpi	TSEC*4/2,a0
+;	jrle	pixs_skok
+;	LOCKUP
+;pixs_skok
+
+;	move	@ballnumscored,b0
+;	subk	ONFIRE_MINCNT-1,b0
+;	jrge	pixs_warm				;None heating up?
+;	movk	2,b0
+;	move	b0,@ballnumscored
+;pixs_warm
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	move	@ballpnum,a14
+	jrn	drone_chaseball		;No owner?
+
+;ÄÄÄÄÄÄÄ
+;DEBUG
+;	move	*a13(plyr_ohoopx),a0
+;	movi	200,a1
+;	cmpi	WRLDMID,a0
+;	jrlt	pixs_1
+;	neg	a1
+;pixs_1
+;	add	a1,a0
+;	move	a0,*a13(plyr_d_seekx)
+;	movi	CZMID-100,a0
+;	move	a0,*a13(plyr_d_seeky)
+;ÄÄÄÄÄÄÄ
+
+	move	*a13(plyr_ownball),a1
+	jrz	drone_defense		;We don't have ball?
+	jrn	drone_offwoball		;Teammate has ball?
+
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Offense
+
+	move	@PSTATUS,a0		;Plyr start bits 0-3
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	btst	a1,a0
+	jrz	pixstmdrone		;Teammate is a drone?
+
+	move	*a13(plyr_d_cflgs),a2
+	btst	DRN_PASS_B,a2
+	jrz	pixsnopass
+
+	movi	BUT2_M<<8+BUT2_M,a14	;>Make him pass
+	jruc	pixsdocmd
+
+pixsnopass
+	btst	DRN_SHOOT_B,a2
+	jrz	pixsnoshoot
+	movi	BUT1_M<<8|BUT1_M|BUT3_M,a14	;>Make him shoot
+;	movk	3,a0
+;	move	a0,*a13(plyr_d_seekcnt)
+pixsdocmd
+	move	*a11,a0
+	sll	32-4,a0
+	srl	32-4,a0
+;	move	a2,a2
+;	jrnn	pixsnoturb
+	ori	BUT3_M,a0		;+turbo
+pixsnoturb
+	or	a14,a0
+	move	a0,*a11
+	clr	a0
+	move	a0,*a13(plyr_d_cflgs)
+	jruc	pixsx
+
+pixsnoshoot
+pixstmdrone
+
+	move	*a13(plyr_d_mode),a14
+	subk	2,a14
+	jrge	pixsinmd			;Already in mode?
+
+	movk	2,a1			;Offense with ball
+	move	a1,*a13(plyr_d_mode)
+	movk	1,a1
+	jruc	pixssetskc
+pixsinmd
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Update tob mode
+
+	move	*a13(plyr_d_seekcnt),a1
+	jrle	pixsnotob
+pixssetskc
+	subk	1,a1
+	move	a1,*a13(plyr_d_seekcnt)
+	jrgt	pixsnotob
+
+	move	*a13(plyr_ohoopx),*a13(plyr_d_seekx)
+
+	movi	70,a0
+	callr	rndrng0
+	addi	CZMID-35,a0
+	move	a0,*a13(plyr_d_seeky)
+pixsnotob
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	move	*a13(plyr_seqflgs),a2
+	btst	PASS_B,a2
+	jrnz	pixskilbuts
+
+	move	*a13(plyr_jmpcnt),a14
+	jrnz	pixsinjmp
+
+	move	*a11,a0
+	btst	BUT1_B,a0
+	jrnz	pixsfake			;Shoot button down?
+
+
+	btst	SHOOT_B,a2
+	jrnz	pixsinjmp
+
+	btst	DUNK_B,a2
+	jrnz	pixsinjmp
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			0BHreakaway
+
+	move	*a13(plyr_ohpdist),a4	;A4=Hoop distance
+
+	move	*a13(plyr_dribmode),a14
+	jrn	pixsnodrib
+pixsinspin
+
+	move	*a13(plyr_num),a14	;0CHhk for breakaway
+	srl	1,a14
+	movk	1,a0
+	xor	a0,a14
+	sll	6,a14			;*64
+	addi	plyrproc_t,a14
+	move	*a14+,a2,L
+	move	*a14+,a3,L
+
+	move	*a2(plyr_hpdist),a2
+	move	*a3(plyr_hpdist),a3
+
+	cmp	a4,a2
+	jrlt	pixsshootrnd		;He's closer?
+	cmp	a4,a3
+	jrlt	pixsshootrnd		;He's closer?
+
+	callr	drone_seek
+
+
+;Tell drone to always turbo on breakaways...
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	move	@PSTATUS,a14		;Plyr start bits 0-3
+	btst	a1,a14
+	jrnz	pixsori			;Teammate is a human?
+	move	*a13(plyr_d_skill),a14
+	addk	8,a14
+	jrle	pixsnoturb2
+pixsori	ori	BUT3_M,a0		;Push turbo
+
+
+
+	move	a0,*a11
+pixsnoturb2
+
+	move	@game_time,a1,L
+	srl	8,a1			;Remove tenths
+	subk	2,a1
+	jrlt	pixsshoot3			;Less than 2 secs?
+	move	@shotimer+16,a1		;Tens
+	jrnz	pixsscok
+	move	@shotimer,a1		;Ones
+	subk	2,a1
+	jrlt	pixsshoot3			;Less than 2 secs?
+pixsscok
+	callr	drone_chk3ptr
+	jrnz	pixsshoot3			;Need a 3?
+
+	cmpi	50,a4
+	jrlt	pixsshoot2			;Close?
+
+	move	@PSTATUS,a0		;Plyr start bits 0-3
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	btst	a1,a0
+	jrnz	pixsx			;Teammate is a human?
+
+	cmpi	170,a4
+	jrge	pixsx			;Too far?
+
+	movk	9,a0
+	callr	rndrng0
+	TEST	a0
+	jrnz	pixsx
+
+	jruc	pixsshoot2
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			0CaHn't dribble
+
+pixsnodrib
+	move	*a13(plyr_seq),a0
+	cmpi	SPIN_MOVE_SEQ,a0
+	jreq	pixsinspin			;Spinning?
+
+	subi	ELBO_SEQ,a0
+	jreq	pixsx			;Elbows?
+
+	subk	ELBO2_SEQ-ELBO_SEQ,a0
+	jreq	pixsx			;Elbows?
+
+	cmpi	240,a4
+	jrlt	pixsshoot2
+
+	callr	drone_pass
+	jrnz	pixsx			;Pass OK?
+
+	movk	01fH,a0
+	callr	rnd
+	jrnz	pixsx			;97%?
+	jruc	pixsshoot2
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+pixsshootrnd
+	move	@game_time,a1,L
+	srl	8,a1			;Remove tenths
+	subk	2,a1
+	jrlt	pixsshoot3			;Less than 2 secs?
+	move	@shotimer+16,a1
+	jrnz	pixsscok2
+	move	@shotimer,a1
+	subk	2,a1
+	jrlt	pixsshoot3			;Less than 2 secs?
+pixsscok2
+	PUSH	a6,a7
+	move	*a13(plyr_ohoopx),a6
+	movi	CZMID,a7
+	calla	seekdirdist_obxz128
+	PULL	a6,a7
+
+	move	*a13(plyr_o1dist),a14
+	cmpi	80,a14
+	jrgt	pixso1dok			;He's too far?
+	cmp	a14,a1
+	jrlt	pixso1dok			;I'm closer?
+	move	*a13(plyr_o1dir),a2
+	sub	a0,a2
+	abs	a2
+	cmpi	040H,a2
+	jrle	pixso1dsml
+	subi	080H,a2
+	abs	a2
+pixso1dsml	subk	32,a2
+	jrlt	pixsgoaround		;In front of me?
+pixso1dok
+	move	*a13(plyr_o2dist),a14
+	cmpi	80,a14
+	jrgt	pixso2dok			;He's too far?
+	cmp	a14,a1
+	jrlt	pixso2dok			;I'm closer?
+	move	*a13(plyr_o2dir),a2
+	sub	a0,a2
+	abs	a2
+	cmpi	040H,a2
+	jrle	pixso2dsml
+	subi	080H,a2
+	abs	a2
+pixso2dsml	subk	32,a2
+	jrlt	pixsgoaround		;In front of me?
+pixso2dok
+	jruc	pixsrunath
+
+pixsgoaround				;>Opponent in my way
+	move	*a13(plyr_tmdist),a0
+	cmpi	80,a0
+	jrlt	pixsgoa			;Teammate too close?
+
+	callr	drone_pass
+	jrnz	pixsx			;Pass OK?
+
+pixsgoa
+	movi	drnzzcnt,a2
+	move	*a2,a0
+	subk	1,a0
+	jrgt	pixszzsame
+
+	move	*a13(plyr_dirtime),a0
+	subk	8,a0
+	jrle	pixszz			;Too little time in dir?
+
+	move	*a13(plyr_attrib_p),a0,L
+	move	*a0(PAT_BVEL),a0	;Speed
+	cmpi	BV5,a0
+	jrle	pixszz			;Too slow?
+
+;	movk	1,a0			;50% spin move
+;	callr	rnd
+;	jrnz	pixszz
+
+	movk	2,a0
+	move	a0,*a13(plyr_tbutn)
+
+	callr	drone_seek
+	ori	BUT3_M<<8|BUT3_M,a0	;Turbo
+	move	a0,*a11
+
+	jruc	pixstryshot
+
+pixszz
+	movk	5,a0			;New mode
+	callr	rndrng0
+	ANDK	3,a0
+	move	a0,*a2(drnzzmode-drnzzcnt)
+
+	movi	TSEC-10,a0
+	callr	rndrng0
+	addk	28,a0
+pixszzsame
+	move	a0,*a2
+
+	callr	drone_seek
+;	jrz	pixsshoot2			;In position?
+	sll	3,a0			;*8
+	addi	pixsjbits_t,a0
+
+	move	*a2(drnzzmode-drnzzcnt),a14
+	sll	4+3,a14			;*16*8
+	add	a14,a0
+	movb	*a0,a0
+	move	a0,*a11
+
+	move	*a8(OZPOS),a1
+
+	btst	JOYU_B,a0
+	jrz	pixsnju
+	cmpi	CZMIN+40,a1
+	jrle	pixsxzmd			;Flip to other circle mode?
+pixsnju
+	btst	JOYD_B,a0
+	jrz	pixsnjd
+	cmpi	CZMAX-40,a1
+	jrlt	pixsnjd
+pixsxzmd
+	move	*a2(drnzzmode-drnzzcnt),a3
+	movk	1,a14
+	xor	a14,a3
+	and	a14,a3
+	move	a3,*a2(drnzzmode-drnzzcnt)
+pixsnjd
+
+	cmpi	80,a4
+	jrlt	pixsshoot2			;Close enough for jam?
+
+	jruc	pixstryshot
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+pixsrunath					;>I have a clr path to hoop!
+;	move	*a13(plyr_o1dist),a14
+;	cmpi	65,a14
+;	jrlt	pixsgoa			;He's too close?
+;	move	*a13(plyr_o2dist),a14
+;	cmpi	65,a14
+;	jrlt	pixsgoa			;He's too close?
+
+	callr	drone_seek
+	move	*a13(plyr_d_skill),a14
+	addk	7,a14
+	jrle	pixstryshot		;Dumb?
+	ori	BUT3_M,a0		;Turbo
+	move	a0,*a11
+
+
+pixstryshot
+	cmpi	50,a4
+	jrlt	pixsshoot2			;Close enough for jam?
+
+	move	@PSTATUS,a0		;Plyr start bits 0-3
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	btst	a1,a0
+	jrnz	pixsx			;Teammate is a human?
+
+	callr	drone_chk3ptr
+	jrnz	pixsshoot2			;Need a 3?
+
+	cmpi	255,a4
+	jrge	pixsx			;Too far?
+
+	move	*a13(plyr_tmproc_p),a0,L
+	move	*a0(plyr_seqflgs),a0
+	btst	DUNK_B,a0
+	jrnz	pixspass			;Alleyoop?
+
+
+	move	@balltmshotcnt,b0
+	subk	TMFIRE_MINCNT-1,b0
+	jrne	pixsnotmheat		;None heating up?
+
+	move	@balltmscored,a1
+	srl	5,a1			;0=Tm2, 1=Tm1
+	move	*a13(plyr_num),a0
+	srl	1,a0
+	cmp	a0,a1
+	jreq	pixsnotmheat		;!My tm?
+
+	movi	200,a0
+	jruc	pixsrndsht
+pixsnotmheat
+
+	movi	50,a0
+	move	*a13(plyr_d_skill),a14
+	addk	7,a14
+	jrgt	pixsrndsht			;Smarter?
+	movk	30,a0
+pixsrndsht
+	callr	rndrng0
+	move	a0,a0
+	jrnz	pixsx
+
+
+pixsshoot2
+	move	*a13(plyr_tmproc_p),a0,L
+	move	*a0(plyr_seqflgs),a0
+	btst	DUNK_B,a0
+	jrz	pixsshoot3			;No alleyoop?
+pixspass
+	move	*a11,a0			;>Pass
+	ori	BUT2_M<<8|BUT2_M|BUT3_M,a0
+	move	a0,*a11
+
+	jruc	pixsx
+
+pixsshoot3
+	move	*a11,a0			;>Shoot
+	ori	BUT1_M<<8|BUT1_M|BUT3_M,a0
+	move	a0,*a11
+;	movk	1,a0			;Max fakes
+;	move	a0,*a13(plyr_d_seekcnt)
+
+	jruc	pixsx
+
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Jumping but still on gnd
+
+pixsfake
+;	move	*a13(plyr_d_seekcnt),a2
+;	jrle	pixsx			;No fakes?
+
+	move	@PSTATUS,a0		;Plyr start bits 0-3
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	btst	a1,a0
+	jrnz	pixsx			;Teammate is a human?
+
+	move	*a13(plyr_o1dist),a14
+	cmpi	80,a14
+	jrlt	pixsfkc			;He's close?
+
+	move	*a13(plyr_o2dist),a14
+	cmpi	80,a14
+	jrge	pixsx			;He's far?
+pixsfkc
+	movk	01fH,a0
+	callr	rnd
+	jrnz	pixsx
+
+	move	*a9(pld_d_lowsecagr),a14
+	move	@game_time,a1,L
+	srl	8,a1			;Remove tenths
+	cmp	a14,a1
+	jrlt	pixsx			;Less than x secs?
+	move	@shotimer+16,a1		;Tens
+	jrnz	pixsfk
+	move	@shotimer,a1		;Ones
+	cmp	a14,a1
+	jrlt	pixsx			;Less than x secs?
+pixsfk
+;	subk	1,a2
+;	move	a2,*a13(plyr_d_seekcnt)
+	jruc	pixskilbuts
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+pixsinjmp
+	move	@PSTATUS,a0		;Plyr start bits 0-3
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	btst	a1,a0
+	jrz	pixstmdrn			;Teammate is a drone?
+
+	move	*a13(plyr_tmproc_p),a0,L
+	move	*a0(PA11),a0,L
+	move	*a0,a0			;Get teammates ctrl bits
+	btst	BUT1_B,a0
+	jrnz	pixsx			;Holding shoot button?
+	jruc	pixskilbuts
+pixstmdrn
+	move	*a13(plyr_seqflgs),a0
+	btst	BLOCKREB_B,a0
+	jrnz	pixskilbuts		;Got a rebound?
+
+	btst	DUNK_B,a0
+	jrz	pixsnodnk			;Try alleyoop?
+
+	move	@game_time,a1,L
+	srl	8,a1			;Remove tenths
+	subk	2,a1
+	jrlt	pixsshoot3			;Less than 2 secs?
+	move	@shotimer+16,a1		;Tens
+	jrnz	pixsnodnk
+	move	@shotimer,a1		;Ones
+	subk	2,a1
+	jrlt	pixsshoot3			;Less than 2 secs?
+pixsnodnk
+
+	move	*a13(plyr_tmproc_p),a0,L
+	move	*a0(plyr_seqflgs),a0
+	btst	DUNK_B,a0
+	jrnz	pixspss			;Try alleyoop?
+
+
+	move	*a13(plyr_num),a2	;0CHhk for close blockers
+	srl	1,a2
+	XORK	1,a2
+	sll	6,a2			;*64
+	addi	plyrobj_t,a2
+
+	move	*a2+,a3,L
+
+	move	*a13(plyr_o1dist),a14
+	cmpi	70,a14
+	jrgt	pixso1sdok			;He's too far?
+
+	move	*a3(OYPOS),a0
+	addk	20,a0
+	move	*a8(OYPOS),a1
+	cmp	a0,a1
+	jrgt	pixsrndrel			;I'm lower?
+pixso1sdok
+	move	*a13(plyr_o2dist),a14
+	cmpi	70,a14
+	jrgt	pixskilbuts		;He's too far? Shoot
+
+	move	*a2+,a3,L
+
+	move	*a3(OYPOS),a0
+	addk	20,a0
+	move	*a8(OYPOS),a1
+	cmp	a0,a1
+	jrle	pixskilbuts		;I'm higher, so shoot?
+
+pixsrndrel
+	movk	30,a0
+	callr	rndrng0
+	move	a0,a0
+	jrz	pixskilbuts		;Cause shoot?
+
+	movk	7,a0
+	callr	rnd
+	jrnz	pixsx			;88%?
+
+	move	*a13(plyr_ptsdown),a14
+	addk	5,a14
+	jrlt	pixspss			;Winning by 05H?
+	move	*a13(plyr_seqflgs),a14
+	btst	DUNK_B,a14
+	jrnz	pixsx			;In a dunk?
+	move	@game_time,a1,L
+	cmpi	0200H,a1
+	jrlt	pixsx			;Less than 2 secs?
+pixspss
+	callr	drone_pass
+
+	jruc	pixsx
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+pixskilbuts
+	clr	a0			;>Let go of shoot button
+	move	a0,*a11
+
+pixsx
+	rets
+
+
+pixsjbits_t
+	.byte	0,JOYL_M,JOYR_M,0			;90~ clockwise
+	.byte	JOYD_M,JOYD_M|JOYL_M,JOYD_M|JOYR_M,0
+	.byte	JOYU_M,JOYU_M|JOYL_M,JOYU_M|JOYR_M,0
+	.byte	0,0,0,0
+
+	.byte	0,JOYR_M,JOYL_M,0			;90~ cntr clkwise
+	.byte	JOYU_M,JOYU_M|JOYR_M,JOYU_M|JOYL_M,0
+	.byte	JOYD_M,JOYD_M|JOYR_M,JOYD_M|JOYL_M,0
+	.byte	0,0,0,0
+
+	.byte	0,JOYD_M|JOYL_M,JOYU_M|JOYR_M,0		;135~ clkwise
+	.byte	JOYD_M|JOYR_M,JOYD_M,JOYR_M,0
+	.byte	JOYU_M|JOYL_M,JOYL_M,JOYU_M,0
+	.byte	0,0,0,0
+
+	.byte	0,JOYD_M|JOYR_M,JOYU_M|JOYL_M,0		;135~ cntr clkwise
+	.byte	JOYU_M|JOYR_M,JOYR_M,JOYU_M,0
+	.byte	JOYD_M|JOYL_M,JOYD_M,JOYL_M,0
+	.byte	0,0,0,0
+
+
+*******************************
+* Check if this drone needs a 3 ptr
+* A4 = Distance from opponents hoop
+*0A0H = !0 if needed (CC)
+* Trashes scratch
+
+ SUBRP	drone_chk3ptr
+
+	cmpi	290,a4
+	jrgt	hxmsx0			;Too far?
+
+	move	*a13(plyr_num),a1
+	move	@PSTATUS,a0		;Plyr start bits 0-3
+	movk	1,a14
+	xor	a14,a1
+	btst	a1,a0
+	jrnz	hxmsx0			;Teammate is a human?
+
+	xor	a14,a1
+	move	@plyr_onfire,a0
+	btst	a1,a0
+	jrnz	hxmsx1			;I'm on fire?
+
+	cmpi	230,a4
+	jrlt	hxmsx0			;Too close?
+
+	XORK	2,a1
+	btst	a1,a0
+	jrnz	hxmsx0			;Opp 1 on fire?
+	XORK	1,a1
+	btst	a1,a0
+	jrnz	hxmsx0			;Opp 2 on fire?
+
+
+	movk	6,a1
+	move	@game_time,a0,L
+	cmpi	01010000H,a0
+	jrgt	hxmshvtime			;Enough time?
+	movk	3,a1
+hxmshvtime
+	move	*a13(plyr_ptsdown),a14
+	cmp	a1,a14
+	jrlt	hxmsx0
+
+	cmpi	040000H,a0
+	jrlt	hxmsx1			;Less than 40 secs?
+
+	move	*a13(plyr_o1dist),a14
+	cmpi	70,a14
+	jrlt	hxmsrndsht			;He's close?
+	move	*a13(plyr_o2dist),a14
+	cmpi	70,a14
+	jrge	hxmsx1			;He's far?
+hxmsrndsht
+	movk	8,a0
+	callr	rndrng0
+	move	a0,a0
+	jrnz	hxmsx0
+
+hxmsx1
+	addk	1,a0
+	rets
+hxmsx0
+	clr	a0
+	rets
+
+
+*******************************
+* Drone in offense with out ball
+* A8 = *Obj
+* A9 = *Plyr secondary data
+* A11= *Ctrl bits
+* A13= *Plyr process
+* Trashes scratch, A2-A5
+
+ SUBRP	drone_offwoball
+
+	clr	a0
+	move	a0,*a13(plyr_d_cflgs)
+
+	callr	drone_getcurskillo
+	move	a0,a5				;A5=Skill offset
+
+
+	movk	1,a4				;A4=Fire flag (+=Me, -=Tm)
+	move	*a13(plyr_num),a0
+	move	@plyr_onfire,a1
+	btst	a0,a1
+	jrnz	zpkmmefr				;I'm on fire?
+
+	subk	2,a4				;=-1
+
+	XORK	1,a0
+	btst	a0,a1
+	jrnz	zpkmmefr				;Tm on fire?
+	clr	a4
+zpkmmefr
+
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	move	*a13(plyr_d_mode),a14
+	subk	1,a14
+	jreq	zpkminmd				;Already in mode?
+
+	movk	1,a0				;Offense wo ball
+	move	a0,*a13(plyr_d_mode)
+
+	move	a5,a0
+	addi	zpkmmdsk_t,a0
+	move	*a0,a0
+	callr	rndrng0
+	addk	1,a0
+	move	a0,*a13(plyr_d_seekcnt)
+zpkminmd
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+
+	move	*a13(plyr_dir),a3
+
+	move	*a13(plyr_o1dist),a14
+	subi	50,a14
+	jrgt	zpkmo1far				;Too far?
+	move	*a13(plyr_o1dir),a2
+	sub	a3,a2
+	abs	a2
+	cmpi	040H,a2
+	jrle	zpkmo1dsml
+	subi	080H,a2
+	abs	a2
+zpkmo1dsml	subk	16,a2
+	jrlt	zpkmpusho				;In front of me?
+zpkmo1far
+	move	*a13(plyr_o2dist),a14
+	subi	50,a14
+	jrgt	zpkmnopush				;Too far?
+	move	*a13(plyr_o2dir),a2
+	sub	a3,a2
+	abs	a2
+	cmpi	040H,a2
+	jrle	zpkmo2dsml
+	subi	080H,a2
+	abs	a2
+zpkmo2dsml	subk	16,a2
+	jrge	zpkmnopush				;!In front?
+zpkmpusho
+	movi	99,a0
+	callr	rndrng0
+
+	move	a5,a14
+	addi	zpkmp_t,a14
+	move	*a14,a1
+
+	TEST	a4
+	jrle	zpkmpshnf				;No fire?
+	addk	30,a1				;Push alot more!
+zpkmpshnf
+	move	@balltmshotcnt,b0
+	subk	TMFIRE_MINCNT-1,b0
+	jrlt	zpkmnoth				;None heating up?
+	addk	20,a1				;Push more!
+zpkmnoth
+	cmp	a1,a0
+	jrge	zpkmnewseek			;Skip push?
+
+	.if	NOPUSHSTEAL
+	jruc	zpkmx
+	.endif
+
+	move	*a11,a0				;Push
+	ori	BUT2_M<<8|BUT2_M|BUT3_M,a0
+	move	a0,*a11
+
+	jruc	zpkmx
+
+zpkmnopush
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ				>Try dunk wo ball
+
+	move	*a13(plyr_ohpdist),a3
+	cmpi	65,a3
+	jrle	zpkmnoalyo				;Too close?
+	cmpi	180,a3
+	jrgt	zpkmnoalyo				;Too far?
+
+	TEST	a4
+	jrnz	zpkmnoalyo				;We on fire?
+
+	move	a5,a14
+	addi	zpkmaly_t,a14
+	move	*a14,a2
+
+	move	*a13(plyr_tmproc_p),a1,L
+	move	*a1(plyr_seqflgs),a14
+	btst	DUNK_B,a14
+	jrz	zpkmnorm				;Tm not dunking?
+
+	move	*a1(plyr_slam_ticks),a14
+	move	*a1(plyr_jmpcnt),a1
+	sub	a1,a14
+	subk	20,a14
+	jrle	zpkmnoalyo				;Not enough time?
+
+;	clr	a0
+zpkmnorm
+	move	*a13(plyr_d_seeky),a0
+	cmpi	CZMID+1,a0
+	jrne	zpkmrndaly				;!in allyo seek?
+
+	callr	drone_seek
+	ori	BUT1_M<<8|BUT1_M|BUT3_M,a0	;Turbo shoot
+	move	a0,*a11
+
+;	move	*a13(plyr_tbutn),a0
+;	subk	30,a0
+;	jrle	zpkmx
+
+	jruc	zpkmx
+
+zpkmrndaly
+	move	@balltmshotcnt,b0
+	subk	TMFIRE_MINCNT-1,b0
+	jrlt	zpkmnotmheat			;None heating up?
+
+;	move	@balltmscored,a1
+;	srl	5,a1				;0=Tm2, 1=Tm1
+;	move	*a13(plyr_num),a0
+;	srl	1,a0
+;	cmp	a0,a1
+;	jreq	zpkmnotmheat			;!My tm?
+
+	sll	2,a2				;% * 2
+zpkmnotmheat
+
+	movi	99,a0
+	callr	rndrng0
+	cmp	a2,a0
+	jrge	zpkmnoalyo
+
+	cmpi	80,a3
+	jrle	zpkmnoalyo				;Too close?
+
+	move	*a13(plyr_PDATA_p),a1,L
+	move	*a1(ply_turbo),a14
+	subk	3,a14
+	jrle	zpkmnoalyo				;No turbo?
+
+	move	*a13(plyr_ohoopx),a0
+	movi	CZMID+1,a1
+	move	a0,*a13(plyr_d_seekx)
+	move	a1,*a13(plyr_d_seeky)
+
+	callr	drone_seekxy
+
+	jruc	zpkmx
+
+zpkmnoalyo
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ				>Seek
+
+;	movi	07fH,a0
+;	callr	rnd
+;	jrz	zpkmnewseek
+
+	move	*a13(plyr_d_seeky),a0
+	cmpi	CZMID+1,a0
+	jreq	zpkmnewseek			;Failed allyo?
+
+	move	*a13(plyr_d_seekcnt),a0
+	subk	1,a0
+	jrgt	zpkmseek
+
+zpkmnewseek
+;	move	*a13(plyr_newdir),a0
+;	jrnn	zpkmcontsk				;Turning?
+
+	movk	16-1,a0
+
+	TEST	a4
+	jrle	zpkmno3				;I'm not on fire?
+	movk	7-1,a0
+zpkmno3
+	.if	ONLY3
+	movk	7-1,a0
+	.endif
+
+	callr	rndrng0
+	sll	5,a0				;*32
+	addi	zpkmseek_t,a0
+
+	move	*a0+,a1
+
+	move	*a13(plyr_ohoopx),a14
+	cmpi	WRLDMID,a14
+	jrlt	zpkmlft
+	neg	a1
+zpkmlft
+	add	a1,a14
+	move	a14,*a13(plyr_d_seekx)
+
+	move	*a0+,a1
+	move	a1,*a13(plyr_d_seeky)
+
+	movi	TSEC*3/2,a0
+	callr	rndrng0
+	addk	TSEC/2,a0
+
+zpkmseek
+	move	a0,*a13(plyr_d_seekcnt)
+zpkmcontsk
+	callr	drone_seek
+	jrnz	zpkmnotthere
+
+	movk	01fH,a0				;3%
+	callr	rnd
+	jrnz	zpkmx
+
+	clr	a0
+	move	a0,*a13(plyr_d_seekcnt)
+
+zpkmnotthere
+	TEST	a4
+	jrle	zpkmnotur				;I'm not on fire?
+
+	move	*a11,a0
+	ori	BUT3_M,a0			;+turbo
+	move	a0,*a11
+zpkmnotur
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+zpkmx
+	rets
+
+
+zpkmmdsk_t					;Mode switch max seek time
+	.word	50,50,50,50,50		;Up 15-11
+	.word	40,40,40,35,30		;10-6
+	.word	25,22,20,18,16		;5-1
+	.word	14			;Even score
+	.word	10,8,6,4,4		;Dn 1-5
+	.word	4,3,3,3,2		;6-10
+	.word	2,2,2,2,1		;11-15
+
+zpkmp_t					;% to push
+	.word	1,1,1,1,1
+	.word	2,2,2,2,3
+	.word	3,3,4,4,5
+	.word	5
+	.word	5,6,8,10,13
+	.word	15,17,18,20,20
+	.word	25,30,35,40,50
+
+	.asg	10,N
+zpkmaly_t					;% to jump at backboard
+	.word	1,2,3,4,5
+	.word	N+05,N+10,N+15,N+15,N+20
+	.word	N+20,N+20,N+20,N+22,N+25
+	.word	N+25
+	.word	N+25,N+26,N+28,N+30,N+35
+	.word	N+40,N+45,N+50,N+55,N+60
+	.word	N+65,N+70,N+75,N+90,N+99
+
+
+	.asg	CZMID,Z
+zpkmseek_t
+	.word	0,Z-150, 80,Z-150, 200,Z-100	;3ptrs
+	.word	255,Z
+	.word	200,Z+115, 80,Z+190, 0,Z+190
+
+	.word	0,Z-100, 50,Z-90, 100,Z-80	;2ptrs
+	.word	150,Z
+	.word	100,Z+100, 50,Z+110, 0,Z+120
+
+	.word	30,Z-40, 30,Z+40
+
+
+*******************************
+* Drone code - pass if clear
+* A8  = *Obj
+* A11 = *Ctrl bits
+* A13 = *Plyr process
+*0A0H = !0 if pass OK (CC)
+* Trashes scratch
+
+ SUBRP	drone_pass
+
+	move	@PSTATUS,a0			;Plyr start bits 0-3
+	move	*a13(plyr_num),a1
+	XORK	1,a1
+	btst	a1,a0
+	jrnz	jalcx				;Teammate is a human?
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	move	*a13(plyr_tmdist),a0
+	addk	30,a0
+
+	move	*a13(plyr_o1dist),a1		;0CHhk if o1 in my way
+	cmp	a1,a0
+	jrlt	jalco1ok
+
+	move	*a13(plyr_tmdir),a14
+	move	*a13(plyr_o1dir),a1
+	sub	a14,a1
+	abs	a1
+	cmpi	64,a1
+	jrle	jalcdsml
+	subi	128,a1
+	abs	a1
+jalcdsml
+	subk	16,a1
+	jrlt	jalcinway
+jalco1ok
+
+	move	*a13(plyr_o2dist),a1		;0CHhk if o2 in my way
+	cmp	a1,a0
+	jrlt	jalco2ok
+
+	move	*a13(plyr_tmdir),a14
+	move	*a13(plyr_o2dir),a1
+	sub	a14,a1
+	abs	a1
+	cmpi	64,a1
+	jrle	jalcdsml2
+	subi	128,a1
+	abs	a1
+jalcdsml2
+	subk	16,a1
+	jrlt	jalcinway
+jalco2ok
+
+	move	@ballnumscored,b0
+	subk	ONFIRE_MINCNT-1,b0
+	jrlt	jalcnoheat				;None heating up?
+
+	move	@ballpnumscored,a1
+	move	*a13(plyr_num),a0
+	cmp	a0,a1
+	jrne	jalcnoheat				;!Me?
+
+	move	*a13(plyr_ohpdist),a0
+	cmpi	350,a0
+	jrlt	jalcx				;Too close? Don't pass
+jalcnoheat
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+jalciwpass
+	move	*a13(plyr_tmproc_p),a1,L
+jalctmclos
+	move	*a1(plyr_seqflgs),a0
+	btst	DUNK_B,a0
+	jrnz	jalcpass				;Tm dunking?
+
+	move	*a1(plyr_seq),a0
+	subk	RUNDRIBTURB_SEQ,a0
+	jrhi	jalcx				;Tm is doing something?
+jalcpass
+	move	*a11,a0				;>Pass
+	ori	BUT2_M<<8|BUT2_M|BUT3_M,a0
+	move	a0,*a11
+
+	rets
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+jalcinway
+	move	@ballnumscored,b0
+	subk	ONFIRE_MINCNT-1,b0
+	jrlt	jalcnoheatiw			;None heating up?
+
+	move	@ballpnumscored,a1
+	move	*a13(plyr_num),a0
+	XORK	1,a0
+	cmp	a0,a1
+	jrne	jalcnoheatiw			;!Tm?
+
+	move	*a13(plyr_tmproc_p),a1,L
+	move	*a1(plyr_ohpdist),a0
+	cmpi	300,a0
+	jrlt	jalciwpass				;He's Close? Risk pass
+
+jalcnoheatiw
+	move	*a13(plyr_ohpdist),a1
+	cmpi	250,a1
+	jrlt	jalcx				;I'm close to hoop?
+
+	move	*a13(plyr_tmproc_p),a1,L
+	move	*a1(plyr_ohpdist),a0
+	cmpi	240,a0
+	jrlt	jalctmclos				;Teammate is close to hoop?
+
+jalcx
+	clr	a0
+	rets
+
+
+
+*******************************
+* Drone code - defense
+* A8 = *Obj
+* A9 = *Plyr secondary data
+* A11= *Ctrl bits
+* A13= *Plyr process
+
+ SUBRP	drone_defense
+
+	PUSH	a6,a7,a10
+
+	clr	a0
+	move	a0,*a13(plyr_d_cflgs)
+
+
+	move	@ballpnum,a5
+	sll	5,a5
+	addi	plyrproc_t,a5
+	move	*a5,a5,L		;A5=*Proc of opponent with ball
+
+
+	callr	drone_getcurskillo
+	move	a0,a7			;A7=Ptsdn+skill for indexing (*16)
+
+
+	movk	1,a6			;A6=Fire flag (+=Me, -=Tm)
+	move	*a13(plyr_num),a0
+	move	@plyr_onfire,a1
+	btst	a0,a1
+	jrnz	qjrbmefr			;I'm on fire?
+
+	subk	2,a6			;=-1
+
+	XORK	1,a0
+	btst	a0,a1
+	jrnz	qjrbmefr			;Tm on fire?
+	clr	a6
+qjrbmefr
+
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Mode
+
+	move	*a13(plyr_d_mode),a14
+	jrn	qjrbinmd			;Already in mode?
+
+	not	a14
+	move	a14,*a13(plyr_d_mode)	;Neg
+
+	move	a7,a14
+	addi	qjrbmdsk_t,a14
+	move	*a14,a0
+	move	a0,a2
+	srl	2,a2			;/4
+
+	callr	rndrng0
+	addk	1,a0
+	add	a2,a0
+	move	a0,*a13(plyr_d_seekcnt)
+
+	clr	a0
+	move	a0,*a9(pld_d_nastycnt)
+
+	movk	30,a0
+	callr	rndrng0
+
+	addi	190-20,a0
+	move	a0,*a9(pld_d_grddist)
+qjrbinmd
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Update nasty mode
+
+	move	*a9(pld_d_lowsecagr),a0
+
+	movk	2,a10
+	move	@game_time,a14,L
+	srl	8,a14			;Remove tenths
+	cmp	a0,a14
+	jrlt	qjrbnasty			;Less than x secs?
+
+	move	@gmqrtr,a2
+	subk	3,a2
+	jrlt	qjrbchkst
+	move	*a13(plyr_ptsdown),a1
+	addk	3,a1
+	jrle	qjrbchkst			;Winning by 3 or more?
+	srl	8,a14			;Remove ones
+	sll	1,a14			;*2
+	cmp	a0,a14
+	jrlt	qjrbnasty			;Less than x0 secs?
+qjrbchkst
+	move	@shotimer+16,a14	;Tens
+	jrnz	qjrbscok
+	move	@shotimer,a14		;Ones
+	srl	1,a0			;/2
+	cmp	a0,a14
+	jrlt	qjrbnasty			;Less than x secs?
+qjrbscok
+	move	*a9(pld_d_nastycnt),a10
+	jrgt	qjrbnaston
+
+	movk	10,a10
+	movi	0ffh,a0
+	callr	rnd
+	jrz	qjrbnasty
+
+	clr	a10
+
+	movi	999,a0
+	callr	rndrng0
+
+	move	a7,a14
+	addi	qjrbnast_t,a14
+	move	*a14,a1
+	cmp	a1,a0
+	jrge	qjrbnonast			;No nasty?
+
+	movi	TSEC-20,a0
+	callr	rndrng0
+	addk	20,a0
+	move	a0,a10
+qjrbnaston
+	subk	1,a10
+qjrbnasty
+	move	a10,*a9(pld_d_nastycnt)
+
+	cmpi	10,a10
+	jreq	qjrbnewsk
+qjrbnonast
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	move	*a13(plyr_d_seekcnt),a0
+	subk	1,a0
+	jrgt	qjrbseek
+qjrbnewsk
+	move	*a13(plyr_num),a2
+	XORK	2,a2
+	move	a2,a4
+	sll	5,a4			;*32
+	addi	plyrproc_t,a4
+	move	*a4,a4,L
+	cmp	a5,a4
+	jreq	qjrbguard			;I'm on guy with ball?
+
+	move	*a5(plyr_ohpdist),a0
+	cmpi	300,a0
+	jrgt	qjrbguard			;Too far to worry about?
+
+;	move	*a5(plyr_seqflgs),a0
+;	btst	DUNK_B,a0
+;	jrnz	qjrbgbc			;He's dunking?
+
+	move	*a13(plyr_tmproc_p),a3,L
+	move	*a3(plyr_seq),a0
+	subi	STAGGER_SEQ,a0
+	jrls	qjrbtmok
+	subk	FLYBACKWB2_SEQ-STAGGER_SEQ,a0
+	jrls	qjrbgbc			;Teammate staggered?
+qjrbtmok
+	move	*a3(plyr_o1dist),a14
+	move	*a3(plyr_o1dir),a1
+	btst	0,a2
+	jrnz	qjrbp1
+	move	*a3(plyr_o2dist),a14
+	move	*a3(plyr_o2dir),a1
+qjrbp1
+	move	*a3(plyr_hpdir),a0	;Find dir difference
+	sub	a1,a0
+	abs	a0
+	cmpi	040H,a0
+	jrle	qjrbdsml
+	subi	080H,a0
+	abs	a0
+qjrbdsml	subk	28,a0
+	jrle	qjrbgbc			;TM not between op and hoop?
+
+	cmpi	160,a14
+	jrle	qjrbguard			;TM guarding?
+
+qjrbgbc
+	move	a5,a4			;Guard ball carrier
+qjrbguard
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Seek
+
+	move	*a4(PA8),a2,L		;*Obj
+
+	move	*a2(OXPOS),a0
+	move	*a2(OXANI+16),a14
+	add	a14,a0			;X
+	move	*a2(OZPOS),a1		;Z
+
+	move	*a2(OXVEL),a14,L
+	sra	16-4,a14		;16 ticks from now
+	add	a14,a0
+	move	*a2(OZVEL),a14,L
+	sra	16-4,a14		;16 ticks from now
+	add	a14,a1
+
+
+	TEST	a10
+	jrgt	qjrbsetseek		;Nasty on?
+
+
+	move	*a5(plyr_seqflgs),a14
+	btst	SHOOT_B,a14
+	jrz	qjrbnosh			;!Starting a shot?
+
+	TEST	a6
+	jrgt	qjrbnosh			;I'm on fire?
+
+	move	*a13(plyr_balldist),a14
+	cmpi	70,a14
+	jrle	qjrbsetseek		;In his face?
+
+qjrbnosh
+	move	*a13(plyr_myhoopx),a2	;Stay near oplyr between my basket
+	movi	CZMID,a3
+
+	sub	a2,a0
+	sub	a3,a1
+
+	move	*a9(pld_d_grddist),a14
+
+	TEST	a6
+	jrle	qjrbnofire			;I'm not on fire?
+
+	movi	77,a14			;30%
+
+	move	a4,b0
+	move	*b0(plyr_ohpdist),b0
+	cmpi	400,b0
+	jrge	qjrbnofire			;Opp far from my hoop?
+	movi	154,a14			;60%
+qjrbnofire
+	mpys	a14,a1
+	sra	8,a1			;/256
+	add	a1,a3
+
+	move	a0,a1
+	mpys	a14,a1
+	sra	8,a1			;/256
+	add	a1,a2
+
+	move	a2,a0
+	move	a3,a1
+
+qjrbsetseek
+	move	a0,*a13(plyr_d_seekx)
+	move	a1,*a13(plyr_d_seeky)
+
+	movk	25,a0
+	move	*a4(plyr_ohpdist),a1
+	cmpi	320,a1
+	jrge	qjrbseek			;Opp far from my hoop?
+
+	move	a7,a14
+	addi	qjrbskt_t,a14
+	move	*a14,a0
+	srl	1,a0			;/2
+	move	a0,a2
+	callr	rndrng0
+	add	a2,a0
+
+qjrbseek
+	move	a0,*a13(plyr_d_seekcnt)
+
+	callr	drone_seek
+	move	a0,a2
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Turbo if opp closer to my basket
+
+	move	*a13(plyr_num),a14	;>Get opponents proc
+	addk	2,a14
+	sll	32-2,a14
+	srl	32-2-5,a14		;*32
+	addi	plyrproc_t,a14
+	move	*a14,a0,L
+
+	move	*a0(plyr_ohpdist),a0
+	subk	10,a0
+	cmpi	300,a0
+	jrgt	qjrbonclose		;!close?
+	subi	60,a0			;Turbo earlier
+qjrbonclose
+	move	*a13(plyr_hpdist),a1
+	cmp	a0,a1
+	jrlt	qjrbicloser
+
+	TEST	a2
+	jrz	qjrbicloser		;I'm not moving?
+	addi	BUT3_M,a2		;Turbo
+qjrbicloser
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Push/steal
+
+	move	*a13(plyr_balldist),a1
+	cmpi	35,a1
+	jrgt	qjrbpsrnd			;!In his face?
+
+	move	@PCNT,a0
+	sll	32-1,a0
+	jrnz	qjrbskipsp			;Skip 50%?
+
+	move	a10,a10
+	jrgt	qjrbps			;Nasty on?
+
+qjrbpsrnd
+	move	a7,a14
+	addi	qjrbdist_t,a14
+	move	*a14,a0
+	cmp	a0,a1
+	jrgt	qjrbskipsp			;Ball too far?
+
+	movi	999,a0
+	callr	rndrng0
+
+	move	a7,a14
+	addi	qjrbps_t,a14
+	move	*a14,a1
+	cmp	a1,a0
+	jrge	qjrbskipsp			;Skip push?
+qjrbps
+	movk	1,a0
+	callr	rnd
+	jrnz	qjrbpush			;50%?
+
+
+	move	*a5(plyr_jmpcnt),a1
+	jrnz	qjrbpush			;Plyr with ball is in air?
+
+	sll	32-4,a2
+	srl	32-4,a2
+	addk	BUT2_M,a2		;Steal
+	jruc	qjrbx
+
+qjrbpush
+	move	*a5(PA8),a0,L
+	move	*a0(OYPOS),a1
+	move	*a5(plyr_aniy),a14
+	add	a14,a1			;His feet Y position
+	move	*a8(OYPOS),a0
+	sub	a1,a0
+	addk	10,a0
+	jrgt	qjrbskipsp			;Feet above my shoulders?
+
+	ori	BUT2_M<<8|BUT2_M|BUT3_M,a2
+	jruc	qjrbx
+
+qjrbskipsp
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			0CHhk if I can block ball
+
+	move	*a13(plyr_balldist),a14
+	cmpi	65,a14
+	jrge	qjrbnoblk
+
+	move	*a5(plyr_seqflgs),a4
+
+
+	btst	DUNK_B,a4
+	jrz	qjrbnodnk
+
+	cmpi	35,a14
+	jrgt	qjrbnoblk
+
+	move	*a13(plyr_tmproc_p),a3,L
+
+	move	*a3(plyr_balldist),a14
+	cmpi	45,a14
+	jrgt	qjrbtryblk			;Teammate far?
+
+	move	*a3(plyr_jmpcnt),a1
+	jrz	qjrbtryblk			;Tm on gnd?
+
+	move	@PCNT,a0
+	sll	32-3,a0
+	jrnz	qjrbnoblk			;Skip 88%?
+
+	jruc	qjrbtryblk
+
+qjrbnodnk
+	btst	SHOOT_B,a4
+	jrz	qjrbnoblk			;!Starting a shot?
+
+	move	*a5(plyr_jmpcnt),a1
+	jrnz	qjrbtryblk			;Plyr with ball is in air?
+
+	movk	11,a0
+	callr	rndrng0
+	TEST	a0
+	jrnz	qjrbnoblk			;92% ignore?
+	jruc	qjrbblk
+
+qjrbtryblk
+	movi	99,a0
+	callr	rndrng0
+	move	a7,a14
+	addi	qjrbblk_t,a14
+	move	*a14,a1
+
+	btst	DUNK_B,a4
+	jrz	qjrbnd
+	sra	1,a1			;Dunk % /2
+qjrbnd
+	TEST	a10
+	jrle	qjrbnstoff			;Nasty off?
+	sll	1,a1			;%*2
+qjrbnstoff
+	cmp	a1,a0
+	jrge	qjrbnoblk
+
+qjrbblk
+	sll	32-4,a2
+	srl	32-4,a2
+	addi	BUT1_M<<8|BUT1_M|BUT3_M,a2 ;Block
+qjrbnoblk
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+qjrbx
+	.if	NOPUSHSTEAL
+	andi	0dfh,a2
+	.endif
+
+	move	a2,*a11
+
+
+	PULL	a6,a7,a10
+	rets
+
+
+qjrbmdsk_t					;Mode switch max seek time
+	.word	50,50,50,50,50		;Up 15-11
+	.word	50,50,45,45,40		;10-6
+	.word	33,25,22,18,16		;5-1
+	.word	14			;Even score
+	.word	10,8,6,4,4		;Dn 1-5
+	.word	4,3,3,3,2		;6-10
+	.word	2,2,2,2,1		;11-15
+
+	.asg	0,N
+qjrbnast_t					;% to become nasty
+	.word	0,0,0,0,0
+	.word	N+1,N+1,N+2,N+2,N+2
+	.word	N+3,N+3,N+3,N+4,N+5
+	.word	N+5
+	.word	N+6,N+7,N+8,N+9,N+10
+	.word	N+12,N+13,N+14,N+15,N+16
+	.word	N+18,N+20,N+24,N+28,N+30
+
+	.asg	25,N
+qjrbskt_t					;Max seek time (75% avrg)
+	.word	N+55,N+55,N+55,N+55,N+52
+	.word	N+48,N+44,N+40,N+36,N+33
+	.word	N+30,N+29,N+28,N+27,N+26
+	.word	N+25			;Even score
+	.word	N+24,N+23,N+21,N+19,N+17
+	.word	N+14,N+11,N+08,N+06,N+03
+	.word	N+01,N-01,N-03,N-05,N-10
+qjrbdist_t					;Max dist to try push/steal
+	.word	110,100,100,100,100
+	.word	90,90,80,80,80
+	.word	80,70,70,60,60
+	.word	60
+	.word	50,50,50,50,50
+	.word	50,50,50,50,50
+	.word	50,50,50,50,50
+qjrbps_t					;% to push/steal
+	.word	1,2,2,2,2
+	.word	3,3,3,3,3
+	.word	4,4,4,5,5
+	.word	6
+	.word	6,6,8,10,13
+	.word	15,17,18,20,30
+	.word	40,60,80,150,250
+qjrbblk_t					;% to block
+	.word	1,1,2,3,3
+	.word	3,3,4,4,5
+	.word	6,7,8,10,12
+	.word	14
+	.word	16,18,20,25,30
+	.word	35,40,45,50,50
+	.word	50,50,50,50,50
+
+
+*******************************
+* Setup drones for ball takeout
+* Trashes scratch
+
+ SUBR	drone_setuptob
+
+;DJT Start
+	PUSH	a3,a4,a7,a8,a9,a13
+;DJT End
+
+	movk	4,a4
+	movi	plyrproc_t,a3
+
+ytfqlp
+	move	*a3+,a13,L
+;DJT Start
+	move	*a13(PA9),a9,L
+;DJT End
+
+	movk	1,a0
+	move	*a13(plyr_ownball),a14
+	jrz	ytfqdef			;Defense?
+					;>Setup offense
+	jrn	ytfqwob
+	movk	2,a0
+ytfqwob
+	move	a0,*a13(plyr_d_mode)
+
+	movi	TSEC-10,a0
+	callr	rndrng0
+	addk	5,a0
+	move	a0,*a13(plyr_d_seekcnt)
+
+	movk	9-1,a0
+	callr	rndrng0
+	sll	5,a0			;*32
+	addi	ytfqseek_t,a0
+
+	move	*a0+,a1
+	move	*a13(plyr_num),a14
+	subk	2,a14
+	jrlt	ytfqlft
+	neg	a1
+ytfqlft
+	addi	WRLDMID,a1
+	move	a1,*a13(plyr_d_seekx)
+
+	move	*a0+,a1
+	move	a1,*a13(plyr_d_seeky)
+
+	jruc	ytfqnxt
+
+
+ytfqdef					;>Setup defense
+;DJT Start
+; .if 0
+	move	@PSTATUS,a0
+	move	*a13(plyr_num),a8
+	btst	a8,a0
+	jrnz	ytfqdf
+	movk	1,a14
+	xor	a8,a14
+	btst	a14,a0
+	jrnz	ytfqdf
+	srl	1,a14
+	sll	4,a14
+	neg	a14
+	.ref	t1ispro
+	addi	t1ispro+16,a14,L
+	movi	8,a8		;TSEC*2	;!!!
+	move	*a14,a14
+	jrn	ytfqdf
+	jrp	ytfqdd
+	movi	12,a8		;TSEC*4	;!!!
+ytfqdd
+	CREATE0	drone_mean
+	move	a0,a8
+	movi	TSEC*3,a0,W		;!!!
+	callr	rndrng0
+	addi	TSEC,a0,W		;!!!
+	move	a0,*a8(PTIME)
+ytfqdf
+; .endif ;0
+;DJT End
+	movi	-1,a14
+	move	a14,*a13(plyr_d_mode)	;Defense
+
+;DJT Start
+	clr	a0
+	move	a0,*a9(pld_d_nastycnt)
+
+	movi	190,a0
+	move	a0,*a9(pld_d_grddist)
+;DJT End
+
+	movk	4,a0
+	callr	rndrng0
+	addk	5,a0
+;DJT Start
+	move	a0,*a9(pld_d_lowsecagr)	;5-9
+;DJT End
+
+	callr	drone_getcurskillo
+
+	addi	ytfqmdsk_t,a0
+	move	*a0,a0
+	callr	rndrng0
+	addk	1,a0
+	move	a0,*a13(plyr_d_seekcnt)
+
+ytfqnxt
+	dsj	a4,ytfqlp
+
+;DJT Start
+	PULL	a3,a4,a7,a8,a9,a13
+	rets
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+ SUBR	drone_mean
+
+	move	a8,*a9(pld_d_nastycnt)
+	DIE
+
+	.asg	CZMID,Z
+ytfqseek_t
+	.word	-350,Z-220, -310,Z-220,	-270,Z-150, -150,Z-150
+	.word	0,Z
+	.word	-350,Z+220, -310,Z+220,	-270,Z+150, -150,Z+150
+
+;	.word	-260,Z-160, -200,Z-150,	-100,Z-130, -50,Z-100
+;	.word	0,Z
+;	.word	-260,Z+160, -200,Z+150,	-100,Z+130, -50,Z+100
+;DJT End
+
+
+ytfqmdsk_t					;Mode switch max seek time
+	.word	30,30,30,25,25		;Up 15-11
+	.word	25,25,20,20,20		;10-6
+	.word	20,18,16,14,12		;5-1
+	.word	10			;Even score
+	.word	8,7,6,5,4		;Dn 1-5
+	.word	4,3,3,2,2		;6-10
+	.word	2,1,1,1,1		;11-15
+
+
+*******************************
+* Drone code - nobody has ball
+* A8 = *Obj
+* A11= *Ctrl bits
+* A13= *Plyr process
+
+ SUBRP	drone_chaseball
+
+	move	*a13(plyr_rcvpass),a14
+	jrgt	drone_offwoball		;I'm rcving ball?
+
+	move	*a13(plyr_tmproc_p),a4,L
+	move	*a4(plyr_rcvpass),a14
+	jrgt	drone_offwoball		;Teammate rcving ball?
+
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Mode
+
+	clr	a0
+	move	a0,*a13(plyr_d_cflgs)
+
+	move	*a13(plyr_d_mode),a14
+	jrz	ybvainmd			;Already in mode?
+
+	move	a0,*a13(plyr_d_mode)
+
+	callr	drone_getcurskillo
+	addi	ybvamdsk_t,a0
+	move	*a0,a0
+
+	callr	rndrng0
+	addk	2,a0
+	move	a0,*a13(plyr_d_seekcnt)
+
+ybvainmd
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			>Seek
+
+	move	*a13(plyr_d_seekcnt),a0
+	subk	1,a0
+	jrgt	ybvaseek
+
+	move	@ballobj_p,a5,L
+
+
+	move	*a13(plyr_num),a14	;0CHhk for pass
+	srl	1,a14
+	movk	1,a0
+	xor	a0,a14
+	sll	6,a14			;*64
+	addi	plyrproc_t,a14
+
+	move	*a14+,a1,L
+	move	*a1(plyr_rcvpass),a0
+	jrgt	ybvachaseb			;Opp rcving ball?
+
+	move	*a14+,a1,L
+	move	*a1(plyr_rcvpass),a0
+	jrgt	ybvachaseb			;Opp rcving ball?
+
+
+	move	*a4(plyr_seq),a0
+	subi	STAGGER_SEQ,a0
+	jrls	ybvatmok
+	subk	FLYBACKWB2_SEQ-STAGGER_SEQ,a0
+	jrls	ybvachaseb			;Teammate staggered?
+ybvatmok
+	move	*a4(plyr_jmpcnt),a14
+	jrnz	ybvachaseb			;Tm in air?
+
+	movi	CZMID,a1
+
+;FIX! Also if team almost on fire..
+	move	*a13(plyr_num),a0
+	move	@plyr_onfire,a2
+	btst	a0,a2
+	jrz	ybvanof			;I'm not on fire?
+
+	XORK	1,a0
+	btst	a0,a2
+	jrz	ybvaskf			;Tm not on fire?
+
+	move	*a13(plyr_balldist),a0
+	move	*a4(plyr_balldist),a14
+	cmp	a14,a0
+	jrle	ybvachaseb			;I'm closer?
+ybvaskf
+	move	*a13(plyr_myhoopx),a0	;Go in front of my hoop for goaltend
+	move	a0,a14
+	subi	WRLDMID,a14
+	sra	4,a14			;/16
+	sub	a14,a0
+	jruc	ybvasetxz
+
+ybvanof
+	XORK	1,a0
+	btst	a0,a2
+	jrnz	ybvachaseb			;Tm on fire? I get ball
+
+	move	*a13(plyr_balldist),a0
+	move	*a4(plyr_balldist),a14
+	cmp	a14,a0
+	jrle	ybvachaseb			;I'm closer?
+
+	move	*a5(OYVEL+16),a0
+	jrlt	ybvachaseb			;Going up?
+
+	move	*a13(plyr_ohoopx),a0	;Go for opponents top of 3 pt line
+	subi	WRLDMID,a0
+	sra	2,a0			;/4
+	addi	WRLDMID,a0
+	jruc	ybvasetxz
+
+ybvachaseb
+	move	*a5(OXPOS),a0
+	move	*a5(OXANI+16),a14
+	add	a14,a0
+	move	*a5(OXVEL),a14,L
+	sra	16-4,a14		;16 ticks from now
+	add	a14,a0
+
+	move	*a5(OZPOS),a1
+	move	*a5(OZVEL),a14,L
+	sra	16-4,a14		;16 ticks from now
+	add	a14,a1
+ybvasetxz
+	move	a0,*a13(plyr_d_seekx)
+	move	a1,*a13(plyr_d_seeky)
+
+
+	callr	drone_getcurskillo
+	addi	ybvaskt_t,a0
+	move	*a0,a0
+
+	callr	rndrng0
+	addk	5,a0
+
+ybvaseek
+	move	a0,*a13(plyr_d_seekcnt)
+
+	callr	drone_seek
+	jrz	ybvask0
+	ori	BUT3_M,a0		;Turbo
+	move	a0,*a11
+ybvask0
+
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ			0CHhk if I can jump at ball or steal
+
+
+	move	*a13(plyr_balldist),a0
+	cmpi	100,a0
+	jrgt	ybvanojmp
+
+	move	@ballobj_p,a5,L
+
+
+	move	*a5(OXPOS),a0		;0CaHlc distance (long+short/2.667)
+	move	*a5(OXANI+16),a14
+	add	a14,a0
+	move	*a5(OXVEL),a14,L
+	sra	16-4,a14		;16 ticks from now
+	add	a14,a0
+
+	move	*a5(OZPOS),a1
+	move	*a5(OZVEL),a14,L
+	sra	16-4,a14		;16 ticks from now
+	add	a14,a1
+
+	move	*a8(OXPOS),a2
+	move	*a8(OXANI+16),a14
+	add	a14,a2
+	move	*a8(OZPOS),a3
+
+	sub	a0,a2
+	abs	a2
+	sub	a1,a3
+	abs	a3
+
+	cmp	a2,a3
+	jrge	ybvaa3bg
+	SWAP	a2,a3
+ybvaa3bg
+	srl	1,a2			;Shorter/2
+	add	a2,a3
+	srl	2,a2			;Shorter/8
+	sub	a2,a3			;A3=Dist in 16 ticks
+
+
+	cmpi	60,a3
+	jrgt	ybvanojmp
+
+
+	move	@balltmshotcnt,b0
+	subk	TMFIRE_MINCNT-1,b0
+	jrne	ybvanotmheat		;None heating up?
+
+	move	@gmqrtr,b0
+	subk	3,b0
+	jrlt	ybvatmhqok			;Q123?
+
+	move	@game_time,a14,L
+	srl	8+8,a14			;Remove one & tenths
+	subk	6,a14
+	jrlt	ybvanotmheat		;Less than 60 secs?
+ybvatmhqok
+	move	@balltmscored,a1
+	srl	5,a1			;0=Tm2, 1=Tm1
+	move	*a13(plyr_num),a0
+	srl	1,a0
+	cmp	a0,a1
+	jrne	ybvaifire			;My tm?
+ybvanotmheat
+
+	move	*a13(plyr_num),a1
+	move	@plyr_onfire,a0
+	btst	a1,a0
+	jrnz	ybvaifire			;I'm on fire?
+
+	XORK	1,a1
+	btst	a1,a0
+	jrz	ybvanofire			;Tm not on fire?
+ybvaifire
+	move	*a13(plyr_hpdist),a14
+	cmpi	150,a14
+	jrge	ybvanofire			;Too far for goaltend?
+
+	move	*a8(OYPOS),a0
+	move	*a5(OYPOS),a1
+	sub	a1,a0
+	subk	20,a0
+	jrle	ybvanofire			;Ball too low?
+
+	subi	160-20,a0
+	jrgt	ybvanojmp			;Ball too high?
+
+	move	*a5(OYVEL+16),a0
+	jrgt	ybvaj			;Going down? Goaltend!
+	jruc	ybvanojmp
+
+ybvanofire
+	move	*a8(OYPOS),a0
+	move	*a5(OYPOS),a1
+	sub	a1,a0
+	subk	10,a0
+	jrgt	ybvanojmp			;Ball too high?
+
+	addk	32,a1
+	jrge	ybvanojmp			;Ball close to gnd?
+
+	movk	7,a0
+	callr	rnd
+	jrnz	ybvanojmp			;87%?
+
+	move	*a11,a2
+	sll	32-4,a2
+	srl	32-4,a2
+	addk	BUT2_M,a2		;Steal
+	move	a2,*a11
+	jruc	ybvanojmp
+
+ybvaj
+	move	*a11,a0			;Jmp
+	ori	BUT1_M<<8|BUT1_M|BUT3_M,a0
+	move	a0,*a11
+ybvanojmp
+;ÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ
+
+	rets
+
+
+ybvamdsk_t					;Mode switch max seek time
+	.word	50,50,50,50,50		;Up 15-11
+	.word	50,50,40,40,40		;10-6
+	.word	33,25,22,18,16		;5-1
+	.word	14			;Even score
+	.word	10,8,6,4,4		;Dn 1-5
+	.word	4,3,3,3,2		;6-10
+	.word	2,2,2,2,1		;11-15
+
+ybvaskt_t					;Max seek time
+	.word	50,50,45,45,45
+	.word	40,40,30,30,22
+	.word	20,17,16,15,15
+	.word	15
+	.word	15,14,14,13,13
+	.word	12,12,12,12,12
+	.word	11,11,11,10,10
+
+
+*******************************
+* Push stick to move drone towards his seek position
+
+ SUBRP	drone_seek
+
+	move	*a13(plyr_d_seekx),a0
+	move	*a13(plyr_d_seeky),a1
+
+*******************************
+* Push stick to move drone towards an XZ location
+* A0 = X to seek
+* A1 = Z
+* A8 = *Obj
+* A11= *Ctrl bits
+*0A0H = Joy bits set or 0 (Pass CC)
+* Trashes scratch
+
+ SUBRP	drone_seekxy
+
+	move	a2,b0
+
+	move	*a8(OXPOS),a2
+	move	*a8(OXANI+16),a14
+	add	a14,a2
+	sub	a0,a2
+
+	clr	a0
+
+	move	a2,a14
+	abs	a2
+	subk	10,a2
+	jrle	hzfoonx
+	move	a14,a14
+	jrlt	hzfonolft
+	subk	4,a0			;Left
+
+hzfonolft	addk	8,a0			;Rgt
+hzfoonx
+	move	*a8(OZPOS),a2
+
+	sub	a1,a2
+	move	a2,a14
+	abs	a2
+	subk	10,a2
+	jrle	hzfoonz
+	move	a14,a14
+	jrlt	hzfonoup
+	subk	1,a0			;Up
+
+hzfonoup	addk	2,a0			;Dn
+hzfoonz
+	move	a0,*a11
+
+	move	b0,a2
+	move	a0,a0
+	rets
+
+
+*******************************
+* Get the current skill offset
+*0A0H = Offset (0-30) *16
+* Trashes scratch
+
+ SUBRP	drone_getcurskillo
+
+	move	*a13(plyr_ptsdown),a0
+	move	*a13(plyr_d_skill),a14
+	add	a14,a0
+
+
+	move	*a13(plyr_num),a1
+	move	@dronesmrt,a14
+	btst	a1,a14
+	jrz	mbafnosmrt			;Normal?
+	addk	5,a0
+mbafnosmrt
+
+
+	move	@ballnumscored,a1
+	subk	ONFIRE_MINCNT-1,a1
+	jrlt	mbafnoheat			;None heating up?
+
+	addk	2,a0			;Get tougher
+
+	move	@ballpnumscored,a1
+	move	*a13(plyr_num),a14
+	cmp	a1,a14
+	jrne	mbafnoheat			;Not me?
+
+	addk	6,a0			;Get tougher
+mbafnoheat
+
+	subk	15,a0
+	jrle	mbafmxdnok
+	clr	a0
+mbafmxdnok
+	addk	15+15,a0
+	jrge	mbafdnok
+	clr	a0
+mbafdnok
+	sll	4,a0			;Ptsdn+skill for indexing (*16)
+
+	rets
+
+
+
+*******************************
+* Adjust all drone abilities (at every minute dec of game clock)
+* A0 = Game clock minute count before dec (0-2)
+* Trashes scratch
+
+ SUBR	drone_adjskill
+
+	PUSH	a2,a3,a4,a5,a6
+
+	move	a0,a5
+	subk	2,a5
+	abs	a5
+	move	@gmqrtr,a1
+	cmpi	3,a1
+	jrls	shqvqok
+	movk	3,a1			;Overtime
+shqvqok
+	movk	3,a0
+	mpyu	a0,a1
+	add	a1,a5			;A5=Quarter+minute index (0-11)
+
+
+	movk	ADJDIFF,a0		;Get difficulty level
+	calla	GET_ADJ			;1-5
+	subk	4,a0			;-3 to 1
+	move	a0,a6
+	sll	1,a0			;*2
+	add	a0,a6			;A6=Difficulty adj (-9,-6,-3,0,3)
+
+
+	movi	plyrproc_t,a4
+	movk	4,b0
+shqvlp
+	move	*a4+,a3,L
+
+	move	*a3(plyr_d_skill),a2
+
+	move	*a3(plyr_ptsdown),a14
+	subk	15,a14
+	jrle	shqvmxdnok
+	clr	a14
+shqvmxdnok
+	addk	15+15,a14		;0-30
+	jrge	shqvdnok
+	clr	a14
+shqvdnok
+	sll	4,a14
+	addi	shqvadj_t,a14
+	move	*a14,a14
+	add	a14,a2			;Modify skill
+
+	move	a5,a14			;0CHhk minute minimum
+	sll	3,a14
+	addi	shqvmin_t,a14
+	movb	*a14,a14
+	add	a6,a14
+	cmp	a14,a2
+	jrge	shqvminok			;Min OK?
+	move	a14,a2
+shqvminok
+
+	move	*a3(plyr_num),a1
+	XORK	1,a1
+	move	@PSTATUS,a14
+	btst	a1,a14
+	jrnz	shqvdone			;Teammate is human?
+
+
+	move	@team1,a1		;0CHhk team minimum
+	cmpi	3,b0
+	jrge	shqvt1
+	move	@team2,a1
+shqvt1
+	cmpi	29,a1
+	jrlo	shqvtnumok
+	movk	1,a1
+shqvtnumok
+	movk	12,a0
+	mpyu	a0,a1
+
+	add	a5,a1
+	sll	3,a1			;*8
+	addi	shqvtdmin_t,a1
+	movb	*a1,a14
+	add	a6,a14
+	cmp	a14,a2
+	jrge	shqvtminok
+	move	a14,a2
+shqvtminok
+	addk	8,a14			;Max
+	cmp	a14,a2
+	jrle	shqvtmaxok
+	move	a14,a2
+shqvtmaxok
+shqvdone
+	move	a2,*a3(plyr_d_skill)
+
+	dsj	b0,shqvlp
+
+
+	PULL	a2,a3,a4,a5,a6
+	rets
+
+
+shqvadj_t
+	.word	-5,-5,-5,-5,-5
+	.word	-5,-5,-5,-4,-3
+	.word	-2,-1,-1, 0, 0
+	.word	 0
+	.word	 0, 1, 1, 2, 2
+	.word	 3, 3, 4, 4, 5
+	.word	 5, 6, 6, 6, 7
+
+;DJT Start
+shqvmin_t	.byte	-13,-10,-8, -7,-7,-6, -6,-5,-5, -5,-5,-5
+
+TMDIFF	.macro
+;DJT Start
+	.byte	-6,-6,-5, -5,-4,-4, -4,-3,-3, -2,-2,-1	;DJT settled on this one..
+;	.byte	-8,-7,-6, -6,-5,-5, -5,-4,-4, -4,-3,-4 	;DJT was testing this one..
+;DJT End
+;;	.byte	-10,-9,-8, -8,-7,-7, -6,-6,-5, -5,-5,-5
+	.endm
+shqvtdmin_t
+	.byte	5, 0, 0,  0, 1, 1,  1, 2, 2,  2, 3, 2	;ATL 11
+	TMDIFF						;BOS   21
+	.byte	5,-3,-3, -3,-2,-2, -2,-1,-1, -1, 0,-1	;CHA 16
+	.byte	12,9,10, 12,10,11, 12,13,14, 16,16,16 	;CHI 1
+	.byte	 6, 1, 1,  1, 2, 2,  2, 2, 3,  3, 3, 3	;CLE 10
+	TMDIFF						;DAL   25
+	.byte	5,-5,-4, -4,-4,-3, -3,-3,-3, -2,-2,-2	;DEN 20
+	.byte	5,-1, 0,  0, 0, 1,  1, 1, 2,  2, 2, 1	;DET 12
+	.byte	5,-4,-4, -4,-4,-3, -3,-3,-2, -2,-2,-1	;GOL 19
+	.byte	 5, 2, 2,  2, 3, 3,  3, 4, 4,  4, 5, 4	;HOU 8
+	.byte	 5, 3, 3,  3, 4, 4,  4, 5, 5,  5, 6, 5	;IND 7
+	TMDIFF						;LAC   23
+	.byte	 5, 3, 4,  4, 4, 5,  5, 5, 6,  6, 7, 6	;LAL 6
+	.byte	5,-2,-2, -1,-1, 0,  0, 0, 1,  1, 1, 0	;MI  14
+	TMDIFF						;MIL   26
+	TMDIFF						;MIN   24
+	TMDIFF						;NJ    22
+	.byte	 5, 1, 2,  2, 2, 2,  2, 3, 3,  3, 4, 3	;NY  9
+	.byte	 8, 6, 6,  7, 7, 7,  8, 8, 9,  9,10, 9	;ORL 3
+	TMDIFF						;PHI   28
+	.byte	5,-3,-2, -2,-1,-1, -1, 0, 0,  0, 1, 0	;PHX 15
+	.byte	5,-2,-1, -1, 0, 0,  0, 1, 1,  1, 2, 2	;POR 13
+	.byte	5,-4,-4, -4,-3,-3, -3,-2,-2, -2,-1,-1	;SAC 18
+	.byte	 4, 5, 5,  5, 6, 6,  6, 7, 7,  8, 8, 7	;SAN 4
+	.byte	 7, 7, 8,  8, 8, 9,  9, 9,10, 10,11,10	;SEA 2
+	TMDIFF						;TOR   27
+	.byte	 8, 4, 4,  5, 5, 5,  6, 6, 6,  7, 7, 6	;UTA 5
+	TMDIFF						;VAN   29
+	.byte	4,-4,-3, -3,-3,-2, -2,-2,-1, -1,-1,-1	;WAS 17
+
+;AMM Start
+old_shqvadj_t
+	.word	-5,-5,-5,-5,-5
+	.word	-5,-5,-5,-4,-3
+	.word	-2,-1,-1,0,0
+	.word	0
+	.word	0,1,1,2,2
+	.word	3,3,4,4,5
+	.word	5,6,6,6,7
+;AMM End
+
+old_shqvmin_t	.byte	-15,-12,-10, -9,-8,-7, -7,-6,-6, -6,-6,-6
+
+TMDIFF	.macro
+	.byte	-10,-9,-8, -8,-7,-7, -6,-6,-5, -5,-5,-5
+	.endm
+old_shqvtdmin_t
+	.byte	6,-3,-1, -3,-2,-3, -2,-2,-2, -1, 0,-1	;ATL 11
+	TMDIFF						;BOS   21
+	.byte	-7,-7,-6, -6,-5,-5, -4,-4,-3, -3,-2,-3	;CHA 16
+	.byte	 6, 7, 7,  8, 9, 9, 10,10,11, 11,13,12	;CHI 1
+	.byte	-6,-5,-5, -4,-3,-3, -2,-2,-2, -1, 0,-1	;CLE 10
+	TMDIFF						;DAL   25
+	.byte	-9,-8,-8, -7,-7,-6, -6,-5,-4, -4,-3,-4	;DEN 20
+	.byte	-6,-5,-5, -4,-3,-3, -2,-2,-2, -2,-1,-2	;DET 12
+	.byte	-9,-8,-8, -7,-7,-6, -6,-5,-4, -4,-3,-4	;GOL 19
+	.byte	-1,-1, 0,  1, 1, 1,  2, 2, 2,  3, 4, 3	;HOU 8
+	.byte	-4,-3,-3, -2,-1,-1,  0, 0, 0,  1, 2, 1	;IND 7
+	TMDIFF						;LAC   23
+	.byte	-5,-4,-4, -3,-2,-2, -1,-1,-1,  0, 1, 0	;LAL 6
+	.byte	-8,-8,-7, -7,-6,-6, -5,-4,-3, -3,-2,-3	;MI  14
+	TMDIFF						;MIL   26
+	TMDIFF						;MIN   24
+	TMDIFF						;NJ    22
+	.byte	-3,-2,-2, -1, 0, 0,  1, 1, 1,  2, 3, 2	;NY  9
+	.byte	 4, 4, 4,  4, 4, 5,  5, 5, 7,  7, 8, 7	;ORL 3
+	TMDIFF						;PHI   28
+	.byte	-8,-8,-7, -7,-6,-6, -5,-4,-3, -3,-2,-3	;PHX 15
+	.byte	-7,-7,-6, -6,-5,-5, -4,-4,-3, -3,-2,-3	;POR 13
+	.byte	-6,-5,-5, -4,-3,-3, -3,-2,-2, -2,-1,-2	;SAC 18
+	.byte	 1, 1, 1,  2, 2, 2,  3, 3, 3,  4, 5, 4	;SAN 4
+	.byte	 4, 4, 5,  5, 6, 6,  7, 7, 7,  7, 9, 8	;SEA 2
+	TMDIFF						;TOR   27
+	.byte	 2, 2, 2,  3, 3, 3,  4, 4, 4,  5, 6, 5	;UTA 5
+	TMDIFF						;VAN   29
+	.byte	-9,-8,-8, -7,-7,-6, -6,-5,-4, -4,-3,-4	;WAS 17
+;DJT End
+	.even
+
+
+********************************
+* Get random # with mask
+* A0 = Mask
+*0A0H = Rnd # (Pass CC)
+* Trashes scratch
+
+ SUBRP	rnd
+
+	move	@RAND,a1,L
+	rl	a1,a1
+	move	@HCOUNT,a14
+	rl	a14,a1
+	add	sp,a1
+	move	a1,@RAND,L
+
+	and	a1,a0
+	rets
+
+
+********************************
+* Quickly produce a random # in range 0-X
+* A0 = X
+*0A0H = Random # (0 to A0) (No CC)
+* Trashes scratch
+
+ SUBRP	rndrng0
+
+	move	@RAND,a1,L
+	rl	a1,a1
+	move	@HCOUNT,a14
+	rl	a14,a1
+	add	sp,a1
+	move	a1,@RAND,L
+
+	addk	1,a0
+	mpyu	a1,a0		;Condition codes not valid!
+
+	rets
+
+
+
+********************************
+
+	.end
+
+
