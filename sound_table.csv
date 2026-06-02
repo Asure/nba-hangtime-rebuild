@@ -1,0 +1,1307 @@
+source,table,label,priority_channel,duration,snd_nbr,comment
+sounds,,select_snd1,00201H,05,0310H,select option sound
+sounds,,select_snd2,00202H,05,0311H,
+sounds,,select_snd3,00203H,05,0312H,
+sounds,,select_snd4,00204H,05,0313H,
+sounds,,cursor_snd1,00101H,09,030cH,cursor movement
+sounds,,cursor_snd2,00102H,09,030dH,
+sounds,,cursor_snd3,00103H,09,030eH,
+sounds,,cursor_snd4,00104H,09,030fH,
+sounds,,win_snd,02504H,75,0172H,Winner snd/Suckup credits
+sounds,,bounce_snd,00001H,27,0260H,Ball bounce
+sounds,,plaque_fall1,02501H,91,01f6H,
+sounds,,plaque_fall2,02502H,91,01f7H,
+sounds,,plaque_fall3,02503H,91,01f8H,
+sounds,,plaque_fall4,02504H,91,01f9H,
+sounds,,plaque_land1,02601H,99,03a3H,
+sounds,,plaque_land2,02602H,99,03a4H,
+sounds,,plaque_land3,02603H,99,03a5H,
+sounds,,plaque_land4,02604H,99,03a6H,
+sounds,,opt_scr_cur,01501H,54,01bdH,option screen
+sounds,,opt_scr_sel,01501H,30,03fdH,397 (PUT ON TRACK 5)
+sounds,,combo_lock1,01101H,45,03fdH,
+sounds,,combo_lock2,01102H,45,03feH,
+sounds,,combo_lock3,01103H,45,03ffH,
+sounds,,combo_lock4,01104H,45,0400H,
+sounds,,adv_stats,01001H,15,0260H,
+sounds,,coin_snd,0ff04H,35,0255H,coin in melody snd
+sounds,,beep2_snd,00001H,5,0280H,beep tone for diagnostics
+sounds,,cntdown_snd,01505H,50,020aH,buyin cntdwn clang
+sounds,,horn_snd,04001H,120,02fbH,horn
+sounds,,atrib_snd1,00101H,10,03bbH,
+sounds,,atrib_snd2,00101H,10,03bfH,
+sounds,,atrib_snd3,00101H,10,03c3H,
+sounds,,atrib_snd4,00101H,10,03c7H,
+sounds,,atrib_snd5,00101H,10,03cbH,
+sounds,,atrib_snd6,00101H,10,03cfH,
+sounds,,atrib_snd7,00101H,10,03d3H,
+sounds,,atrib_snd8,00101H,10,03d7H,
+sounds,,atrib_snd9,00101H,10,03dbH,
+sounds,,atrib_snd10,00101H,10,03dfH,
+sounds,,yes_no_cur1,01501H,15,033bH,
+sounds,,yes_no_cur2,01502H,15,033cH,
+sounds,,yes_no_cur3,01503H,15,033dH,
+sounds,,yes_no_cur4,01504H,15,033eH,
+sounds,,yes_no_sel1,01501H,20,0268H,
+sounds,,yes_no_sel2,01502H,20,0269H,
+sounds,,yes_no_sel3,01503H,20,026aH,
+sounds,,yes_no_sel4,01504H,20,026bH,
+sounds,,butn_press,00103H,15,0399H,
+sounds,,butn_press2,00103H,15,0399H,
+sounds,,cursor_up,00101H,10,01bdH,
+sounds,,cursor_dwn,00101H,10,01beH,
+sounds,,cursor_lft,00101H,10,033bH,
+sounds,,cursor_rgt,00101H,10,033bH,
+sounds,,chkmrk0_snd,00103H,20,0371H,
+sounds,,unchkmrk_snd,00103H,20,0371H,
+sounds,,chkmrk_snd,01501H,20,036fH,
+sounds,,chkmrk_snd2,01502H,20,0370H,
+sounds,,chkmrk_snd3,01503H,20,0371H,
+sounds,,chkmrk_snd4,01504H,20,0372H,
+sounds,,cursor_up2,00101H,15,033bH,
+sounds,,cursor_dwn2,00101H,15,033bH,
+sounds,,cursor_lft2,00101H,25,033bH,
+sounds,,cursor_rgt2,00101H,25,033bH,
+sounds,,cursor_up3,00101H,25,033bH,
+sounds,,cursor_dwn3,00101H,25,033bH,
+sounds,,whitsle_snd,01504H,45,02f3H,
+sounds,,homeaway_cur,00101H,20,027cH,
+sounds,,bx_slide_snd,00001H,28,01f6H,
+sounds,,diag_cursor,00501H,20,027cH,
+sounds,,diag_select,00501H,20,0280H,
+sounds,,update_adj,00501H,18,0278H,
+sounds,,adj_menu_ext,00501H,20,0280H,
+sounds,,error_found,00501H,20,0260H,367 ?
+sounds,,tm_sel_cur1,01501H,36,033bH,
+sounds,,tm_sel_cur2,01502H,36,033cH,
+sounds,,tm_sel_hd_l1,01501H,47,032bH,
+sounds,,tm_sel_hd_r1,01501H,47,032bH,
+sounds,,tm_sel_hd_l2,01502H,47,032cH,
+sounds,,tm_sel_hd_r2,01502H,47,032cH,
+sounds,,tm_sel_sel1,03201H,65,03fdH,397
+sounds,,tm_sel_sel2,03202H,65,03feH,398
+sounds,,tm_sel_ran1,03001H,116,03f9H,
+sounds,,tm_sel_ran2,03002H,116,03faH,
+sounds,,sel_rndmend1,03101H,45,03a3H,
+sounds,,sel_rndmend2,03102H,45,03a4H,
+sounds,,tm_sel_stats,00001H,27,0260H,
+sounds,,combo_but1,01001H,32,036bH,
+sounds,,combo_but2,01002H,32,036cH,
+sounds,,combo_but3,01003H,32,036dH,
+sounds,,combo_but4,01004H,32,036eH,
+sounds,,powrup_awrd1,02501H,45,0222H,
+sounds,,powrup_awrd2,02501H,45,0222H,no track two
+sounds,,powrup_awrd3,02503H,45,0224H,
+sounds,,powrup_awrd4,02504H,45,0225H,
+sounds,,tick_snd,01504H,20,01fdH,
+sounds,,warn_snd,01504H,25,0283H,1fd
+sounds,,tfire_tcksnd,01504H,35,0176H,27f
+sounds,,tfire_outsnd,01504H,70,0400H,
+sounds,,alert_snd,02704H,50,015eH,
+sounds,,ot_alert_snd,02504H,50,03b6H,
+sounds,,infoex_snd,00501H,18,0260H,
+sounds,,sqk1_snd,00103H,25,08bH,Sneaker squeek
+sounds,,sqk2_snd,00103H,25,08dH,
+sounds,,sqk3_snd,00103H,25,090H,
+sounds,,sqk4_snd,00103H,25,093H,
+sounds,,sqk5_snd,00103H,25,097H,
+sounds,,sqk6_snd,00103H,25,09aH,
+sounds,,scuf1_snd,00103H,25,0b5H,
+sounds,,scuf2_snd,00103H,25,0b6H,
+sounds,,scuf3_snd,00103H,25,0b7H,
+sounds,,scuf4_snd,00103H,25,0b8H,
+sounds,,fball_snd,01903H,104,02e2H,
+sounds,,fpass_snd,01903H,85,0c9H,fire ball pass sound
+sounds,,rim_fire_snd,0350BH,90,0ccH,
+sounds,,netmush_snd,03503H,80,0ceH,
+sounds,,aly_pass_snd,01903H,104,02e2H,
+sounds,,aly_rcv_snd,0200CH,20,09bH,
+sounds,,pass_snd,01204H,20,0bbH,147
+sounds,,swipe_snd,01401H,20,0130H,
+sounds,,elbow1_snd,01601H,35,0180H,
+sounds,,elbow2_snd,01601H,35,0186H,
+sounds,,push1_snd,01101H,30,0183H,
+sounds,,flail_snd,01501H,30,0180H,
+sounds,,fall1_snd,01501H,26,0183H,
+sounds,,land_snd,01401H,15,0a2H,(a4-tr3)
+sounds,,yell_snd,01201H,100,0198H,
+sounds,,flsh1_snd,00501H,19,0177H,
+sounds,,flsh3_snd,00503H,19,0179H,
+sounds,,flsh4_snd,00504H,19,017aH,
+sounds,,boo_snd,01204H,179,01ddH,e6
+sounds,,boo1_snd,01204H,179,01ddH,e6
+sounds,,tip_snd,0200CH,23,09eH,19f	;9b
+sounds,,eat_snd,08501H,10,037bH,**
+sounds,,organ1_snd,00504H,75,01a6H,
+sounds,,organ2_snd,00504H,60,01a8H,
+sounds,,organ3_snd,00504H,50,01aaH,
+sounds,,organ8_snd,00504H,135,01b4H,
+sounds,,organ9_snd,00504H,98,01b6H,
+sounds,,organ10_snd,00504H,100,01b8H,
+sounds,outdr_snd_tbl,car_pass_snd,01504H,90,01c7H,
+sounds,outdr_snd_tbl,siren_snd,01504H,145,01c9H,** TURN UP **
+sounds,outdr_snd_tbl,prop_ple_snd,01504H,100,020cH,
+sounds,outdr_snd_tbl,chrch_bel_sp,01504H,140,0210H,
+sounds,outdr_snd_tbl,car_pas2_snd,01504H,130,0212H,
+sounds,outdr_snd_tbl,ambulne_snd,01504H,120,0214H,
+sounds,outdr_snd_tbl,ambulne2_snd,01504H,120,0216H,
+sounds,outdr_snd_tbl,fire_trk_snd,01504H,120,0218H,
+sounds,,crwd_blchrs,01504H,182,01e5H,ed
+sounds,,crwd_go_team,01504H,101,01f5H,f4
+sounds,,crwd_defence,01504H,186,01e1H,eb
+sounds,,swish_snd1,0310BH,27,083H,regular net
+sounds,,swish_snd2,0310BH,27,084H,
+sounds,,swish_snd3,0310BH,27,086H,
+sounds,,swish_snd4,0310BH,32,0afH,chain net (outdoor court)
+sounds,,swish_snd5,0310BH,32,0b0H,
+sounds,,swish_snd6,0310BH,32,0afH,
+sounds,,dunk_snd1,0320BH,58,066H,
+sounds,,dunk_snd2,0320BH,54,066H,
+sounds,,dunk_snd3,0320BH,56,066H,
+sounds,,dunk_snd4,0320BH,48,06cH,
+sounds,,dunk_snd5,0320BH,53,0adH,outdoor court
+sounds,,spn_mv_snd,01503H,30,010fH,
+sounds,,miss1_snd,03103H,32,074H,
+sounds,,miss2_snd,03103H,21,075H,
+sounds,,miss3_snd,03103H,23,077H,
+sounds,,miss4_snd,03103H,23,077H,
+sounds,,miss5_snd,03103H,25,0aeH,outdoor court
+sounds,,missd1_snd,03103H,77,011fH,
+sounds,,hitbkbd_snd,01503H,20,070H,
+sounds,,hitbkbd2_snd,01503H,20,082H,outdoor court
+sounds,,stealsb,0200CH,20,09bH,
+sounds,,swat_snd,0200CH,20,09bH,a3	;slap ball sound
+sounds,,intercept,03003H,33,0169H,16a
+sounds,,steal_snd,03003H,33,0169H,16a	;flash ball sound
+sounds,,dribble_snd,01003H,20,06dH,64
+sounds,,dribble2_snd,01004H,23,0bfH,
+sounds,,dribble3_snd,01003H,20,06eH,
+sounds,,trns1_snd,00501H,29,0130H,
+sounds,,trns2_snd,00502H,29,0139H,
+sounds,,trns3_snd,00503H,29,013eH,
+sounds,,trns4_snd,00504H,29,0137H,
+sounds,,trnd1_snd,00601H,30,0397H,
+sounds,,trnd2_snd,00602H,30,0398H,
+sounds,,trnd3_snd,00603H,30,0399H,
+sounds,,trnd4_snd,00604H,30,039aH,
+sounds,,untrns1_snd,00901H,29,0130H,
+sounds,,untrns2_snd,00902H,29,0139H,
+sounds,,untrns3_snd,00903H,29,013eH,
+sounds,,untrns4_snd,00904H,29,0137H,
+sounds,,robo_1_snd,03401H,204,0bb0H,End wave snd
+sounds,,robo_2_snd,03403H,109,0ba2H,Effect 1 - storm cloud on
+sounds,,robo_3_snd,03401H,109,0b90H,flash ABA ball white
+sounds,,hs_shot_snd,01803H,50,0b92H,take a hotspot shot
+sounds,,helicptr_snd,01603H,90,0a6H,
+sounds,dunk_fx_tbl,jet4_snd,01603H,70,02f9H,
+sounds,dunk_fx_tbl,jet1_snd,01603H,80,0108H,
+sounds,dunk_fx_tbl,jet2_snd,01603H,80,0128H,
+sounds,dunk_fx_tbl,jet3_snd,01603H,80,0126H,
+sounds,dunk_fx_tbl,tarzan,01603H,70,0123H,
+sounds,,shatter_snd,01402H,76,07bdH,Breaking glass		Chan 2
+sounds,,shattero_snd,01402H,76,0410H,Breaking wood		Chan 2
+sounds,,mk1_snd,01403H,76,0b55H,A wild Shang appears!  Chan 3
+sounds,,mk3_snd,01404H,76,040DH,A wild Forden appears! Chan 4
+sounds,,mk3_fatal,00100h,76,040FH,Fatality!
+sounds,,tm_fire_tune,00100H,100,25,
+sounds,,buyin_tune,00100H,100,11,
+sounds,,pregame_tune,00100H,100,13,1
+sounds,,tunegc_snd,00100H,100,3,Grand champion play tune
+sounds,,tuneq1_snd,00100H,100,5,
+sounds,,tuneq1ed_snd,00100H,100,51,
+sounds,,tuneq2_snd,00100H,100,14,
+sounds,,tuneq2ed_snd,00100H,100,53,
+sounds,,tuneq3_snd,00100H,100,5,
+sounds,,tuneq3ed_snd,00100H,100,51,
+sounds,,tuneq4_snd,00100H,100,14,
+sounds,,tuneq4ed_snd,00100H,100,51,
+sounds,,tuneot_snd,00100H,100,5,
+sounds,,tuneoted_snd,00100H,100,51,
+sounds,,tune_wingame,00100H,100,24,
+sounds,,tune_gmovr,00100H,100,18,
+sounds,,hangtime_snd,00100H,100,19,
+sounds,,tunehalf_snd,00100H,100,39,halftime tune
+sounds,,tune_cap_snd,00100H,100,7,create-a-player tune
+sounds,,tuneend_snd,00100H,100,0,kill any tune
+speech,ball_loose_sp_tbl,cheer_snd,01004H,110,01cdH,
+speech,ball_loose_sp_tbl,cheer1_snd,01004H,110,01d1H,
+speech,ball_loose_sp_tbl,cheer2_snd,01004H,110,01d5H,
+speech,,cheer3_snd,01004H,110,01d9H,
+speech,,cheer4_snd,01004H,110,01d5H,
+speech,,crwdbed_kill,07102H,25,0dcH,
+speech,,crwdbed_tune,07002H,799,0ddH,
+speech,,crwdbd2_tune,07002H,799,0dbH,
+speech,,crwd_arbl_sp,02404H,135,01edH,f0
+speech,,midway_sp,0200DH,67,0b00H,
+speech,,max_hngtm_sp,0200DH,93,07beH,"""Super Maximum Hangtime"""
+speech,,at_hlftme_sp,0150DH,61,0adcH,
+speech,,gm_undrwy_sp,0150DH,70,0adbH,
+speech,,heres_tip_sp,0150DH,61,0b20H,
+speech,,overtime_sp,0200DH,60,0addH,
+speech,,showtm,0250DH,75,0a9bH,
+speech,,tst_triva_sp,0100DH,76,0afdH,
+speech,,has_sp,0100DH,20,0af1H,
+speech,anc_scr_lngw_tbl,with_sp,0100DH,16,0aefH,
+speech,anc_scr_win_tbl,leadng_by_sp,0100DH,56,084eH,
+speech,anc_scr_win_tbl,leads_by_sp,0100DH,51,084bH,
+speech,anc_scr_win_tbl,lead_by_sp,0100DH,41,0849H,
+speech,anc_scr_take_tbl,out_front_sp,0100DH,48,0850H,
+speech,anc_scr_win_tbl,by_sp,0100DH,18,0851H,
+speech,anc_scr_win_tbl|anc_scr_take_tbl,have_lead_sp,0100DH,57,084fH,
+speech,anc_scr_take_tbl,take_lead_sp,0100DH,49,084cH,
+speech,anc_scr_take_tbl,taks_lead_sp,0100DH,56,084dH,
+speech,,longway_sp,0100DH,73,086eH,
+speech,anc_scr_lose_tbl,downby_sp,0100DH,36,0845H,
+speech,anc_scr_lose_tbl,behind_by_sp,0100DH,49,0853H,
+speech,anc_scr_lose_tbl,catchg_up_sp,0100DH,41,0873H,
+speech,anc_scr_tied_tbl,tiegm_sp,0100DH,44,0864H,
+speech,anc_scr_tied_tbl,tiethegm_sp,0100DH,51,0869H,
+speech,anc_scr_tied_tbl,tied_at_sp,0100DH,69,0866H,
+speech,,minute_sp,0100DH,59,0ab4H,
+speech,,vs_sp,0100DH,47,0509H,
+speech,,wingame_sp,0200DH,45,0863H,
+speech,sht_clck_sp_tbl,baddec_sp,0100DH,56,09ebH,
+speech,desptab,ohmy,0100DH,62,096fH,
+speech,laytab,fancy,0100DH,51,0ae6H,
+speech,,matchup_sp,0100DH,65,0ab1H,
+speech,wide_opn_tbl,wideopen_sp,0100DH,41,0939H,
+speech,wide_opn_tbl,no_prsure_sp,0100DH,48,0a3dH,
+speech,wide_opn_tbl,opn_for_3_sp,0100DH,69,0b0aH,
+speech,wide_opn_tbl,all_alone_sp,0100DH,42,091cH,
+speech,desptab|longtab|3ptab,its_good_sp,0130DH,61,0819H,
+speech,,it_is_sp,0100DH,65,0816H,
+speech,,off_in_time,0100DH,93,0814H,
+speech,2ptab_near|hooktab_near,shrt_rng_sp,0100DH,56,07ebH,
+speech,hooktab_near|layup_sp_tbl|fngr_roll_sp_tbl,finese_it_sp,0100DH,47,080fH,
+speech,2ptab_med|hooktab_near,frm_post_sp,0100DH,41,07e4H,
+speech,hooktab_near,baby_hook_sp,0100DH,47,0802H,
+speech,hooktab_near,half_hook_sp,0100DH,46,0804H,
+speech,hooktab_near|hooktab_far,hook_shot_sp,0100DH,41,0805H,
+speech,hooktab_far,sky_hook_sp,0100DH,74,083fH,
+speech,hooktab_far,sky_hook2_sp,0100DH,72,0b09H,
+speech,hooktab_far,rgt_hndr_sp,0100DH,69,0830H,
+speech,hooktab_far,lft_hndr_sp,0100DH,67,0831H,
+speech,2ptab_near|2ptab_med|2ptab_far|hooktab_far,for_two_sp,0100DH,40,0b08H,
+speech,2ptab_med,from_15_sp,0100DH,45,0b0dH,
+speech,2ptab_far,from_18_sp,0100DH,45,0b0eH,
+speech,2ptab_far,from_20_sp,0100DH,35,0b0fH,
+speech,2ptab_near|2ptab_med|2ptab_far|hooktab_near|hooktab_far,shoots1_sp,0100DH,37,083cH,**
+speech,2ptab_near|2ptab_med|2ptab_far|3ptab|hooktab_near,shoots2_sp,0100DH,42,083cH,
+speech,2ptab_near|2ptab_med|hooktab_near|fngr_roll_sp_tbl,shoots3_sp,0100DH,33,083dH,
+speech,3ptab,from_arc_sp,0100DH,40,07e1H,
+speech,2ptab_far,tp_circle_sp,0100DH,63,0b1cH,
+speech,3ptab,fm_3pline_sp,0100DH,80,07e5H,
+speech,3ptab,for_thre1_sp,0100DH,47,07e6H,
+speech,longtab|3ptab,frm_dwntn_sp,0100DH,67,07e9H,
+speech,3ptab,bhd_3_arc_sp,0100DH,69,0825H,
+speech,3ptab,frm_3_arc_sp,0100DH,65,0826H,
+speech,3ptab,for_thre2_sp,0100DH,45,082aH,
+speech,3ptab,for_thre3_sp,0100DH,51,0839H,
+speech,3ptab,frm_outsd_sp,0100DH,63,083bH,
+speech,desptab|longtab,unlod_one_sp,0100DH,68,07ffH,
+speech,longtab|3ptab,frm_l_rng_sp,0100DH,63,0801H,
+speech,desptab,hail_mary_sp,0100DH,59,0a22H,
+speech,,agn_shoot_sp,0100DH,55,080dH,
+speech,,it_culdbe_sp,0100DH,60,080cH,
+speech,,could_tie_sp,0100DH,77,0b04H,
+speech,desptab|longtab,outof_rng_sp,0100DH,84,09b9H,
+speech,desptab,outof_rg2_sp,0100DH,84,09b9H,
+speech,desptab|longtab,out_cntrl_sp,0100DH,58,09bdH,
+speech,,rainbow_sp,0110DH,70,09f2H,
+speech,inface_sp_tbl|desptab|longtab,difficult_sp,0100DH,56,09afH,
+speech,,swith_hnd_sp,0110DH,53,0823H,
+speech,,spn_shtup_sp,0110DH,56,07fdH,
+speech,,a_fngr_rl_sp,0110DH,55,0902H,
+speech,inface_sp_tbl,hnd_face_sp,0100DH,67,0b24H,
+speech,desptab,ill_shot_sp,0100DH,60,0b25H,
+speech,inface_sp_tbl,frcd_shot_sp,0100DH,56,0b2dH,
+speech,desptab|longtab,wild_shot_sp,0100DH,56,0b2eH,9bb
+speech,desptab,lfts_wild_sp,0100DH,87,09bbH,
+speech,alleyoop_tab,alley_oop_sp,0100DH,63,0a18H,
+speech,,alyoop_ps_sp,0100DH,63,0a1aH,
+speech,alleyoop_tab,thr_tmwrk_sp,0100DH,61,0a9dH,
+speech,alleyoop_tab,thr_smkn_sp,0100DH,57,0af5H,
+speech,alleyoop_tab,thr_zone_sp,0100DH,65,0b05H,
+speech,alleyoop_tab,whta_show_sp,0100DH,57,0958H,AMM: Unused
+speech,lob_spch_tbl,dble_dnk_sp,0120DH,55,0b3aH,
+speech,lob_spch_tbl,dble_dnk2_sp,0120DH,78,0b38H,
+speech,lob_spch_tbl,lob_pass_sp,0120DH,55,0a1cH,
+speech,lob_spch_tbl,scp_tmate_sp,0120DH,85,0b3bH,
+speech,lob_spch_tbl,the_scoop_sp,0120DH,51,0b3cH,
+speech,lob_spch_tbl,lev_tmate_sp,0120DH,83,0b3dH,
+speech,,got_hspot_sp,0140DH,76,0b40H,
+speech,brick_sp_tbl,cantbuy_sp,0100DH,68,09ecH,
+speech,,rtle_arnd_sp,0100DH,77,09d2H,
+speech,,ugly_shot_sp,0100DH,71,09e6H,
+speech,,putup_brk_sp,0100DH,66,09b2H,
+speech,,look_out_sp,0100DH,41,0a6fH,
+speech,nogood_sp_tbl|brick_sp_tbl,nogood_sp,0130DH,31,09d4H,
+speech,nogood_sp_tbl|brick_sp_tbl,mis_fires_sp,0100DH,56,09d8H,
+speech,brick_sp_tbl,what_was_sp,0100DH,66,0b2bH,
+speech,brick_sp_tbl,there_brk_sp,0100DH,66,09b5H,
+speech,nogood_sp_tbl,dwn_luck_sp,0100DH,54,0ac9H,
+speech,nogood_sp_tbl|brick_sp_tbl,missed_sp,0100DH,30,09d6H,
+speech,,mised_agn_sp,0100DH,59,09d7H,unused
+speech,,he_misagn_sp,0100DH,65,09b7H,he missed again
+speech,nogood_sp_tbl,hita_barn_sp,0100DH,124,0a98H,
+speech,sht_clck_sp_tbl,wht_thnk2_sp,0100DH,88,09edH,
+speech,bckbd_hit_sp_tbl,wht_distr_sp,0100DH,73,0aa8H,
+speech,,at_buzzer_sp,0100DH,57,07e8H,
+speech,,sht_ball_sp,0100DH,53,0aadH,
+speech,nogood_sp_tbl,off_rim_sp,0100DH,46,09bfH,
+speech,nogood_sp_tbl,off_frnt_sp,0100DH,54,09c9H,
+speech,nogood_sp_tbl,holes_out_sp,0100DH,58,09adH,
+speech,nogood_sp_tbl,bnce_out_sp,0100DH,42,09d0H,
+speech,nogood_sp_tbl,bnce_away_sp,0100DH,54,09d1H,
+speech,nogood_sp_tbl,away_side_sp,0100DH,56,09c7H,
+speech,,spins_out_sp,0100DH,45,09cbH,
+speech,nogood_sp_tbl|brick_sp_tbl,side_rim_sp,0100DH,61,09c5H,
+speech,,off_heel_sp,0100DH,54,09c3H,AMM
+speech,,no_sp,0100DH,30,09ccH,
+speech,laytab|fingtab|alleyoop_tab,nicly_dne_sp,0100DH,69,0a49H,
+speech,laytab|fingtab,got_skilz_sp,0100DH,67,0a97H,
+speech,,misd_evry_sp,0100DH,66,09e2H,never heard it.
+speech,,way_shrt_sp,0100DH,57,09dfH,unused?
+speech,,misd_mile_sp,0100DH,72,09e3H,AMM
+speech,,teribl_sh_sp,0100DH,57,09baH,
+speech,,airball_sp,0100DH,56,09daH,unused?
+speech,,cannonbal_sp,0110DH,58,095bH,
+speech,,sumrslts_sp,0110DH,90,096aH,
+speech,dnk_high_sp_tbl,goes_flyg_sp,0110DH,68,0acdH,
+speech,dnk_high_sp_tbl,hiabv_rim_sp,0110DH,49,0ad4H,
+speech,dnk_high_sp_tbl,flies_air_sp,0110DH,100,096cH,
+speech,dnk_high_sp_tbl,gldes_air_sp,0110DH,99,096dH,
+speech,dnk_low_sp_tbl,raises_up_sp,0110DH,45,082dH,
+speech,dnk_high_sp_tbl,serious_h_sp,0110DH,79,0b03H,
+speech,great_tab,learn_tht_sp,0110DH,54,097aH,
+speech,dnk_low_sp_tbl,goes_up_sp,00905H,37,0951H,
+speech,dnk_high_sp_tbl|dnk_low_sp_tbl,goes_hoop_sp,0110DH,59,095fH,
+speech,dnk_low_sp_tbl,tks2_hoop_sp,0110DH,51,0a36H,
+speech,,fly_1hdnr_sp,0110DH,76,096eH,AMM
+speech,great_tab,didnt_knw_sp,0110DH,77,097fH,
+speech,,haning_sp,0110DH,34,0a0fH,"AMM ""Hangin!"""
+speech,,ooooooh_sp,0110DH,65,0af7H,
+speech,,ooooooh2_sp,0110DH,40,0af7H,
+speech,dnk_high_sp_tbl,thrgh_air_sp,0110DH,50,096bH,
+speech,dnk_high_sp_tbl,way_upair_sp,0110DH,75,0974H,
+speech,dnk_high_sp_tbl,lch_atbkt_sp,0110DH,100,0b03H,serious hangtime
+speech,dnk_low_sp_tbl,catapults_sp,0110DH,49,09abH,
+speech,,tomahk_dk_sp,0110DH,66,0965H,
+speech,,tomahk_hm_sp,0110DH,79,0966H,
+speech,ball_loose_sp_tbl,shuld_pas_sp,0100DH,75,0a6eH,
+speech,ball_loose_sp_tbl,he_lst_bl_sp,0100DH,75,0a74H,
+speech,ball_loose_sp_tbl,he_lostit_sp,0100DH,75,0a77H,
+speech,ball_loose_sp_tbl,bal_loose_sp,0100DH,75,0a7dH,
+speech,,fades_sp,0100DH,21,0b10H,
+speech,,fadeaway_sp,0100DH,80,0b11H,
+speech,,leans_bck_sp,0100DH,80,0b17H,
+speech,,leans_sp,0100DH,21,0b14H,
+speech,,leans_in_sp,0100DH,80,0b16H,
+speech,,pull_jmpr_sp,0100DH,80,0838H,
+speech,,bslne_lnr_sp,0100DH,45,0b30H,
+speech,,getslkbnc_sp,0100DH,60,092eH,gets a lucky bounce (longer)
+speech,lucky_bnce_tbl,luky_bnce_sp,0100DH,58,092fH,a lucky bounce
+speech,desptab|longtab|lucky_bnce_tbl,per_luck_sp,0100DH,64,0946H,AMM
+speech,desptab,luky_bskt_sp,0100DH,82,0948H,"AMM ""There's a lucky basket"""
+speech,desptab|great_tab,kakaboom_sp,0100DH,69,091bH,
+speech,easy_tab|med_tab|good_tab|great_tab,kaboom1_sp,0100DH,38,0b2aH,91a
+speech,easy_tab|med_tab|good_tab|great_tab,kaboom2_sp,0100DH,34,091aH,
+speech,great_tab,isit_shoe_sp,0100DH,62,091eH,
+speech,facial_sp_tbl,facial_sp,0100DH,80,0b42H,
+speech,desptab|longtab,unbelieve_sp,0100DH,53,0931H,
+speech,good_tab|great_tab,u_c_that_sp,0100DH,65,0932H,
+speech,good_tab|great_tab,oh_man_sp,0100DH,52,0934H,
+speech,good_tab|facial_sp_tbl,no_stopng_sp,0100DH,75,0942H,
+speech,good_tab,postr_jam_sp,0100DH,67,0956H,
+speech,easy_tab|med_tab|good_tab,jam_it_in_sp,0100DH,83,095aH,AMM
+speech,good_tab,thndr_dnk_sp,0100DH,60,0960H,AMM
+speech,med_tab,throws_it_sp,0100DH,66,0963H,
+speech,good_tab,pounds_it_sp,0100DH,62,0964H,
+speech,desptab|laytab|med_tab|good_tab,incredble_sp,0100DH,49,0970H,
+speech,,superdunk_sp,0100DH,75,0971H,"AMM - unused ""A Super Dunk!"""
+speech,longtab,incrd_sht_sp,0100DH,75,090eH,
+speech,3ptab|good_tab|great_tab,outstndng_sp,0100DH,67,0aaaH,AMM
+speech,longtab|3ptab|great_tab,amazing_sp,0100DH,57,0912H,
+speech,easy_tab|med_tab,he_dnk_it_sp,0100DH,33,0961H,
+speech,easy_tab,dunks_it_sp,0100DH,24,0962H,
+speech,easy_tab,jams_it_sp,0100DH,35,097cH,
+speech,good_tab|great_tab,spect_dnk_sp,0100DH,81,0988H,
+speech,easy_tab,slam_dunk_sp,0100DH,51,0989H,"AMM Unused? ""Slam Dunk"""
+speech,easy_tab|med_tab,he_slams_sp,0100DH,42,098bH,
+speech,easy_tab|med_tab|great_tab,with_ajam_sp,0100DH,65,0997H,"AMM Unused ""finishes with a jam"""
+speech,,with_aja2_sp,0100DH,49,0998H,
+speech,med_tab|great_tab,powr_jams_sp,0100DH,73,09a6H,
+speech,head_fake_sp_tbl,head_fake_sp,0050DH,24,0a8eH,
+speech,head_fake_sp_tbl,the_fake_sp,0050DH,26,0a8fH,
+speech,head_fake_sp_tbl,pump_fake_sp,0050DH,30,0a91H,
+speech,2tab,hits_jmpr_sp,0100DH,25,0906H,
+speech,2tab,good_4two_sp,0100DH,50,090aH,
+speech,3ptab,a_trey_sp,0100DH,42,082bH,
+speech,longtab|3ptab,he_scores_sp,0100DH,56,093bH,
+speech,longtab|2bkbdhit_tab|2tab|3ptab,scores_sp,0100DH,37,07deH,
+speech,longtab|2bkbdhit_tab|2tab|3ptab,scores2_sp,0100DH,52,07dfH,
+speech,,score_agn_sp,0100DH,70,07f3H,
+speech,,good_agn_sp,0100DH,47,07f4H,
+speech,2tab|3ptab,yes_sp,0100DH,33,0b33H,
+speech,3ptab,goooood_sp,0100DH,42,0818H,
+speech,2tab|3ptab,goooood2_sp,0100DH,42,0903H,
+speech,3ptab,money_bnk_sp,0100DH,33,0b33H,
+speech,2tab|3ptab,chk_it_up_sp,0100DH,56,093bH,
+speech,3ptab,good_4_3_sp,0100DH,69,0929H,
+speech,,for_3_sp,0100DH,58,092aH,AMM - For threeee
+speech,3ptab,thats_3_sp,0100DH,58,092bH,
+speech,good_tab,fantastic_sp,0100DH,73,0a99H,
+speech,3ptab,drains_it_sp,0100DH,38,093fH,
+speech,2tab|lucky_bnce_tbl,it_falls_sp,0100DH,42,090dH,
+speech,lucky_bnce_tbl,falls_in_sp,0100DH,48,091fH,
+speech,2tab,kncks_dwn_sp,0100DH,54,092cH,
+speech,2tab,and_drops_sp,0100DH,56,0943H,
+speech,2tab|3ptab,dwn_well_sp,0100DH,90,094bH,
+speech,med_tab|good_tab|great_tab|alleyoop_tab,bomshakalaka,0100DH,56,0afcH,
+speech,med_tab|good_tab|great_tab,rama_dong_sp,0100DH,80,0b47H,
+speech,,hlftm_ldr_sp,0160DH,73,0ae9H,
+speech,,gmevr_ldr_sp,0160DH,73,0aeaH,
+speech,,spin_mv1_sp,0100DH,60,07f7H,
+speech,,spin_mv2_sp,0100DH,60,0991H,
+speech,,spin_mv3_sp,0100DH,60,0993H,
+speech,2tab|3ptab,chalk_it_sp,0100DH,38,0b48H,
+speech,2tab,book_it_sp,0100DH,28,08ffH,
+speech,2tab|3ptab,count_it_sp,0100DH,39,090bH,
+speech,2tab|3ptab,bingo_sp,0100DH,41,0ae2H,
+speech,,ever_miss_sp,0100DH,77,0a95H,
+speech,,hot_hand_sp,0100DH,70,093dH,
+speech,,on_fire_sp,0150DH,83,0972H,
+speech,,heatup_sp,0130DH,54,0b1eH,
+speech,,lightn_up_sp,0120DH,68,0aa4H,
+speech,2tab|3ptab|med_tab,smokin_sp,0100DH,40,0af6H,
+speech,,swish_sp,0100DH,37,0917H,
+speech,,swish2_sp,0100DH,43,0b29H,
+speech,,rgt_thrgh_sp,0100DH,53,0b4aH,
+speech,,botm_net_sp,0100DH,67,0b4cH,
+speech,,ngbut_net_sp,0100DH,85,0b4bH,
+speech,longtab|3ptab,whata_sht_sp,0100DH,47,0937H,
+speech,longtab|2tab,great_sht_sp,0100DH,54,0935H,
+speech,longtab|2tab,greatshot_sp,0100DH,47,090fH,
+speech,2tab,good_sht_sp,0100DH,36,0938H,
+speech,,he_uncon_sp,0100DH,61,0914H,
+speech,2bkbdhit_tab,banked_it_sp,0100DH,27,0829H,
+speech,2bkbdhit_tab,a_banker_sp,0100DH,33,0811H,
+speech,,soft_glas_sp,0100DH,95,0810H,
+speech,bckbd_hit_sp_tbl|2bkbdhit_tab,off_bkbrd_sp,0100DH,80,0827H,
+speech,bckbd_hit_sp_tbl|2bkbdhit_tab,off_glass_sp,0100DH,80,083aH,
+speech,bckbd_hit_sp_tbl,kild_smne_sp,0100DH,110,09eeH,
+speech,bckbd_hit_sp_tbl|nogood_sp_tbl,off_trgt_sp,0100DH,80,09e1H,
+speech,bckbd_hit_sp_tbl,sht_stunk_sp,0100DH,97,09e8H,
+speech,bckbd_hit_sp_tbl,wht_thnkg_sp,0100DH,88,09edH,
+speech,2ptab_far,fr_thw_ln_sp,0100DH,65,0837H,
+speech,2ptab_far,top_key_sp,0100DH,70,0807H,
+speech,2ptab_near,frm_paint_sp,0100DH,40,07edH,
+speech,2ptab_med,frm_wing_sp,0100DH,38,07e7H,
+speech,2ptab_far,lnch_jmpr_sp,0100DH,59,083eH,
+speech,2ptab_med|2ptab_far,stp_n_pop_sp,0100DH,75,0832H,
+speech,2ptab_near|2ptab_med|2ptab_far|fngr_roll_sp_tbl,fires_jumpr,0100DH,55,082eH,
+speech,2ptab_near,ltle_jmpr_sp,0100DH,48,07f2H,
+speech,fngr_roll_sp_tbl,fingr_rol_sp,0100DH,46,080eH,
+speech,fngr_roll_sp_tbl|fingtab,figr_itin_sp,0100DH,90,0901H,
+speech,layup_sp_tbl|fngr_roll_sp_tbl,fingr_rl2_sp,0100DH,46,080eH,
+speech,layup_sp_tbl|fngr_roll_sp_tbl,lay_it_up_sp,0100DH,45,081bH,
+speech,layup_sp_tbl|fngr_roll_sp_tbl,layup_sp,0100DH,41,081cH,
+speech,layup_sp_tbl,he_layup_sp,0100DH,58,081eH,
+speech,,drv_layup_sp,0100DH,61,0b19H,
+speech,desptab,whyyyy_sp,0100DH,41,0ae3H,
+speech,,blowout_sp,0100DH,85,0859H,it's a blowout
+speech,no_chnce_win_sp_tbl,whoomp_sp,0100DH,72,085aH,"Whoomp, there it is"
+speech,,debacle_sp,0100DH,66,0a92H,
+speech,no_chnce_win_sp_tbl,its_hstry_sp,0100DH,47,085fH,
+speech,no_chnce_win_sp_tbl,strike_up_sp,0100DH,122,0b4dH,
+speech,no_chnce_win_sp_tbl,fnl_strw_sp,0100DH,90,0b4eH,
+speech,no_chnce_win_sp_tbl,fat_sing_sp,0100DH,115,0858H,
+speech,,needshot_sp,0100DH,72,0ab2H,
+speech,,run_out_sp,0100DH,55,0876H,
+speech,,just_secs_sp,0100DH,84,0ab3H,AMM
+speech,lob_spch_tbl|pass_spch_near_tbl,passes_sp,0070DH,33,09f4H,
+speech,pass_spch_near_tbl|pass_spch_far_tbl,he_passes_sp,0070DH,43,09f6H,
+speech,pass_spch_near_tbl,a_pass_sp,0070DH,33,09fbH,
+speech,lob_spch_tbl|pass_spch_near_tbl,tosses_it_sp,0070DH,39,09fcH,
+speech,pass_spch_near_tbl,guns_it_sp,0070DH,43,0a13H,
+speech,pass_spch_far_tbl,cros_crt_sp,0070DH,37,0a16H,
+speech,pass_spch_far_tbl,downcourt_sp,0070DH,37,0a0aH,down court
+speech,pass_spch_far_tbl,downcrt2_sp,0070DH,39,0a1eH,
+speech,pass_spch_far_tbl,lngpss_dc_sp,0070DH,84,0a0bH,
+speech,pass_spch_far_tbl,hev_dncrt_sp,0070DH,69,0a1dH,
+speech,,bnce_pass_sp,0070DH,41,0a20H,
+speech,,dumps_it_sp,0070DH,27,09feH,
+speech,,long_pass_sp,0070DH,85,0a0bH,long pass down court
+speech,pass_spch_far_tbl,pas_outsd_sp,0070DH,58,09f8H,
+speech,,goal_tend_sp,0120DH,47,0a4bH,SUX
+speech,,rebounds_sp,0100DH,60,0af3H,
+speech,rebnd_near_hoop_tbl|rebnd_nme_tbl,tks_rbnd2_sp,0100DH,73,0a4fH,
+speech,rebnd_near_hoop_tbl,tks_rbnd3_sp,0100DH,96,0a5bH,
+speech,rebnd_nme_tbl|rebnd_no_nme_tbl,grab_rock_sp,0100DH,61,0a52H,
+speech,rebnd_nme_tbl,has_rebnd_sp,0100DH,64,0a55H,
+speech,inair_spch_tbl|rebnd_nme_tbl,grab_ball_sp,0100DH,64,0a56H,
+speech,rebnd_near_hoop_tbl|rebnd_no_nme_tbl,tks_rebnd_sp,0100DH,81,0a57H,
+speech,,posession_sp,0100DH,57,0a58H,
+speech,,off_rebnd_sp,0100DH,89,0a5aH,
+speech,rebnd_near_hoop_tbl,pulls_off_sp,0100DH,87,0a5bH,
+speech,rebnd_near_hoop_tbl|rebnd_no_nme_tbl,with_bord_sp,0100DH,77,0a5cH,
+speech,rebnd_no_nme_tbl,grbs_rbnd_sp,0100DH,80,0a5dH,
+speech,rebnd_near_hoop_tbl,ynk_rim_sp,0100DH,80,0a5fH,
+speech,rebnd_no_nme_tbl,da_rebnd_sp,0100DH,45,0a60H,
+speech,rebnd_no_nme_tbl,rip_rebnd_sp,0100DH,87,0a50H,
+speech,,rbnd_miss_sp,0100DH,97,0a64H,
+speech,deflt_spch_tab,its_blckd_sp,0130DH,47,0a66H,
+speech,inair_spch_tbl|deflt_spch_tab,outa_here_sp,0130DH,63,0a67H,
+speech,,blckd_it_sp,0130DH,29,0a68H,
+speech,,no_way_sp,0130DH,47,0a69H,
+speech,deflt_spch_tab,rejected_sp,0130DH,46,0a6aH,
+speech,deflt_spch_tab,deflected_sp,0130DH,38,0a6cH,
+speech,inair_spch_tbl,stolen_sp,0130DH,35,0a72H,
+speech,,the_steal_sp,0130DH,39,0a73H,
+speech,,turnover_sp,0130DH,48,0a75H,
+speech,,trnd_over_sp,0130DH,61,0a76H,
+speech,inair_spch_tbl|rebnd_no_nme_tbl,quck_hnds_sp,0130DH,46,0a79H,
+speech,,intrceptd_sp,0130DH,48,0a7fH,
+speech,,stripped_sp,0130DH,29,0a84H,
+speech,,clean_pck_sp,0130DH,48,0a83H,
+speech,,bad_pass_sp,0130DH,56,0a82H,
+speech,,flagrant_sp,0090DH,37,0abbH,
+speech,,to_floor_sp,0090DH,43,0ac6H,
+speech,,to_deck_sp,0090DH,37,0ac7H,
+speech,,tookm_out_sp,0090DH,48,0abeH,
+speech,,hamerd_hm_sp,0090DH,35,0ad1H,
+speech,,into_stnd_sp,0050DH,96,0ac4H,
+speech,,fr_basel_sp,0100DH,41,0a29H,Unused - From the baseline
+speech,,fr_base2_sp,0100DH,61,0a2aH,Unused - From the baseline - longer
+speech,,grtmove_sp,0100DH,41,0a3aH,Unused - Great move!
+speech,,tm_onfire_sp,0140DH,76,0b3eH,Unused - The Team is on fire!
+speech,,zigzag_sp,0100DH,75,095ch,"AMM - unused ""zigzag!"""
+speech,,jams_it2_sp,0100DH,65,0986H,"AMM Unused ""jams it with two hands"""
+speech,,intzone_sp,0100DH,61,0915H,"AMM - ""In the zone!"""
+speech,,wit_a_flr_sp,0100DH,60,099cH,"AMM Unused ""with a flourish"""
+speech,,wit_a_fl2_sp,0100DH,65,099bH,"AMM Unused ""finishes with a flourish"""
+speech,nickname_spch_tbl,nick_nme1,0100DH,23,0760H,
+speech,nickname_spch_tbl,nick_nme2,0100DH,23,08c6H,
+speech,nickname_spch_tbl,nick_nme3,0100DH,35,0758H,
+speech,nickname_spch_tbl,nick_nme4,0100DH,25,0774H,
+speech,nickname_spch_tbl,nick_nme5,0100DH,36,0784H,
+speech,nickname_spch_tbl,nick_nme6,0100DH,20,075cH,
+speech,nickname_spch_tbl,nick_nme7,0100DH,24,075eH,
+speech,nickname_spch_tbl,nick_nme8,0100DH,37,08ccH,
+speech,nickname_spch_tbl,nick_nme9,0100DH,25,08d8H,
+speech,nickname_spch_tbl,nick_nme10,0100DH,24,078eH,
+speech,nickname_spch_tbl,nick_nme11,0100DH,32,08b8H,
+speech,nickname_spch_tbl,nick_nme12,0100DH,37,0766H,
+speech,nickname_spch_tbl,nick_nme13,0100DH,25,08d4H,
+speech,nickname_spch_tbl,nick_nme14,0100DH,46,08bcH,
+speech,nickname_spch_tbl,nick_nme15,0100DH,20,0768H,
+speech,nickname_spch_tbl,nick_nme16,0100DH,37,0796H,
+speech,nickname_spch_tbl,nick_nme17,0100DH,25,076aH,
+speech,nickname_spch_tbl,nick_nme18,0100DH,31,076cH,
+speech,nickname_spch_tbl,nick_nme19,0100DH,27,076eH,
+speech,nickname_spch_tbl,nick_nme20,0100DH,20,0798H,
+speech,nickname_spch_tbl,nick_nme21,0100DH,36,079aH,
+speech,nickname_spch_tbl,nick_nme22,0100DH,40,0776H,
+speech,nickname_spch_tbl,nick_nme23,0100DH,46,08beH,
+speech,nickname_spch_tbl,nick_nme24,0100DH,31,08caH,
+speech,nickname_spch_tbl,nick_nme26,0100DH,28,08ceH,
+speech,nickname_spch_tbl,nick_nme27,0100DH,32,077cH,
+speech,nickname_spch_tbl,nick_nme28,0100DH,28,077eH,
+speech,nickname_spch_tbl,nick_nme29,0100DH,21,0780H,
+speech,nickname_spch_tbl,nick_nme30,0100DH,31,0782H,
+speech,nickname_spch_tbl,nick_nme31,0100DH,27,0786H,
+speech,nickname_spch_tbl,nick_nme32,0100DH,24,0788H,
+speech,nickname_spch_tbl,nick_nme33,0100DH,29,078aH,
+speech,nickname_spch_tbl,nick_nme34,0100DH,36,078cH,
+speech,nickname_spch_tbl,nick_nme35,0100DH,21,0790H,
+speech,nickname_spch_tbl,nick_nme36,0100DH,23,0792H,
+speech,nickname_spch_tbl,to_nck_nme1,0100DH,60,0761H,
+speech,nickname_spch_tbl,to_nck_nme2,0100DH,60,08c7H,
+speech,nickname_spch_tbl,to_nck_nme3,0100DH,60,0759H,
+speech,nickname_spch_tbl,to_nck_nme4,0100DH,60,0775H,
+speech,nickname_spch_tbl,to_nck_nme5,0100DH,60,0785H,
+speech,nickname_spch_tbl,to_nck_nme6,0100DH,60,075dH,
+speech,nickname_spch_tbl,to_nck_nme7,0100DH,60,075fH,
+speech,nickname_spch_tbl,to_nck_nme8,0100DH,60,08cdH,
+speech,nickname_spch_tbl,to_nck_nme9,0100DH,60,08d9H,
+speech,nickname_spch_tbl,to_nck_nme10,0100DH,60,078fH,
+speech,nickname_spch_tbl,to_nck_nme11,0100DH,60,08b9H,
+speech,nickname_spch_tbl,to_nck_nme12,0100DH,60,0767H,
+speech,nickname_spch_tbl,to_nck_nme13,0100DH,60,08d5H,
+speech,nickname_spch_tbl,to_nck_nme14,0100DH,60,08bdH,
+speech,nickname_spch_tbl,to_nck_nme15,0100DH,60,0769H,
+speech,nickname_spch_tbl,to_nck_nme16,0100DH,60,0797H,
+speech,nickname_spch_tbl,to_nck_nme17,0100DH,60,076bH,
+speech,nickname_spch_tbl,to_nck_nme18,0100DH,60,076dH,
+speech,nickname_spch_tbl,to_nck_nme19,0100DH,60,076fH,
+speech,nickname_spch_tbl,to_nck_nme20,0100DH,60,0799H,
+speech,nickname_spch_tbl,to_nck_nme21,0100DH,60,079bH,
+speech,nickname_spch_tbl,to_nck_nme22,0100DH,60,0777H,
+speech,nickname_spch_tbl,to_nck_nme23,0100DH,60,08bfH,
+speech,nickname_spch_tbl,to_nck_nme24,0100DH,60,08cbH,
+speech,nickname_spch_tbl,to_nck_nme26,0100DH,60,08cfH,
+speech,nickname_spch_tbl,to_nck_nme27,0100DH,60,077dH,
+speech,nickname_spch_tbl,to_nck_nme28,0100DH,60,077fH,
+speech,nickname_spch_tbl,to_nck_nme29,0100DH,60,0781H,
+speech,nickname_spch_tbl,to_nck_nme30,0100DH,60,0783H,
+speech,nickname_spch_tbl,to_nck_nme31,0100DH,60,0787H,
+speech,nickname_spch_tbl,to_nck_nme32,0100DH,60,0789H,
+speech,nickname_spch_tbl,to_nck_nme33,0100DH,60,078bH,
+speech,nickname_spch_tbl,to_nck_nme34,0100DH,60,078dH,
+speech,nickname_spch_tbl,to_nck_nme35,0100DH,60,0791H,
+speech,nickname_spch_tbl,to_nck_nme36,0100DH,60,0793H,
+SELECT2.axx,team_snds,,03505H,32,2290,0  JEFF JOHNSON
+SELECT2.axx,team_snds,,03505H,31,2276,1  SAL DIVITA
+SELECT2.axx,team_snds,,03505H,32,2272,2  TURMELL
+SELECT2.axx,team_snds,,03505H,28,2286,3  THOMPSON
+SELECT2.axx,team_snds,,03505H,22,2278,4  GEER
+SELECT2.axx,team_snds,,03505H,33,2288,5  CARLTON
+SELECT2.axx,team_snds,,03505H,28,2280,6  HEDRICK
+SELECT2.axx,team_snds,,03505H,23,2274,7  JOHN HEY
+SELECT2.axx,team_snds,,03505H,43,2266,8  AIR MORRIS
+SELECT2.axx,team_snds,,03505H,30,2268,9  STEVE BARDO
+SELECT2.axx,team_snds,,03505H,35,2270,10 MINIFEE
+SELECT2.axx,team_snds,,03505H,41,2282,11 MARTINEZ
+SELECT2.axx,team_snds,,03505H,36,2284,12 PESINA
+SELECT2.axx,team_snds,,03505H,36,2250,13 LIPTAK
+SELECT2.axx,team_snds,,03505H,46,1910,14 EDDIE
+SELECT2.axx,team_snds,,03505H,26,1920,15 MIKE V
+SELECT2.axx,team_snds,,03505H,37,2867,16 JAMIE R.
+SELECT2.axx,team_snds,,03505H,37,2867,17 NICK E.
+SELECT2.axx,team_snds,,03505H,37,2867,18 J. ROOT
+SELECT2.axx,team_snds,,03505H,37,2867,19 MEDNICK
+SELECT2.axx,team_snds,,03505H,37,2867,20 DAN R.
+SELECT2.axx,team_snds,,03505H,37,2867,21 PAT F.
+SELECT2.axx,team_snds,,03505H,37,2867,22 ED BOON
+SELECT2.axx,team_snds,,03505H,37,2867,23 J. TOBIAS
+SELECT2.axx,team_snds,,03505H,37,2867,24 OURSLER
+SELECT2.axx,team_snds,,03505H,37,2867,25 JASON S.
+SELECT2.axx,team_snds,,03505H,37,2867,26 QUINN
+SELECT2.axx,team_snds,,03505H,37,2867,27 M. PERRY
+SELECT2.axx,team_snds,,03505H,37,2867,28 N. FUNK
+SELECT2.axx,team_snds,,03505H,37,2867,29 MDOC
+SELECT2.axx,team_snds,,03505H,37,2867,30 BUD
+SELECT2.axx,team_snds,,03505H,54,1877,31 MARIUS
+SELECT2.axx,team_snds,,03505H,37,2867,32 MUNDAY
+SELECT2.axx,team_snds,,03505H,37,2867,33 NORTH
+SELECT2.axx,team_snds,,03505H,37,2867,34 AMRICH
+SELECT2.axx,team_snds,,03505H,37,2867,35 JIGGETS
+SELECT2.axx,team_snds,,03505H,37,2867,36 ZIRIN
+SELECT2.axx,team_snds,,03505H,37,2867,37 HEITH BETTLEMAN
+SELECT2.axx,team_snds,,03505H,37,2867,38 MATT BETTLEMAN
+SELECT2.axx,team_snds,,03505H,43,2787,39 KEVIN DAY
+SELECT2.axx,team_snds,,0100DH,72,1360,"PIPPEN,      scottie"
+SELECT2.axx,team_snds,,0100DH,60,1364,"RODMAN,      dennis"
+SELECT2.axx,team_snds,,0100DH,74,1344,"JOHNSON,     larry"
+SELECT2.axx,team_snds,,0100DH,65,1348,"RICE,        glen"
+SELECT2.axx,team_snds,,0100DH,68,1404,"KIDD,        jason"
+SELECT2.axx,team_snds,,0100DH,103,1424,"MUTUMBO,     dekembe"
+SELECT2.axx,team_snds,,0100DH,63,1444,"HILL,        grant"
+SELECT2.axx,team_snds,,0100DH,118,1480,"OLAJUWAN,    hakeem"
+SELECT2.axx,team_snds,,0100DH,85,1500,"MILLER,      reggie"
+SELECT2.axx,team_snds,,0100DH,71,1508,"SMITS,       rik"
+SELECT2.axx,team_snds,,0100DH,97,1560,"MOURNING,    alonzo"
+SELECT2.axx,team_snds,,0100DH,93,1584,"ROBINSON,    glen"
+SELECT2.axx,team_snds,,0100DH,82,1640,"EWING,       patrick"
+SELECT2.axx,team_snds,,0100DH,70,1656,"STARKS,      john"
+SELECT2.axx,team_snds,,0100DH,95,1660,"HARDAWAY,    anfernee"
+SELECT2.axx,team_snds,,0100DH,76,1664,"GRANT,       horace"
+SELECT2.axx,team_snds,,0100DH,96,1680,"STACKHOUSE,  jerry"
+SELECT2.axx,team_snds,,0100DH,94,1724,"ROBINSON,    cliff"
+SELECT2.axx,team_snds,,0100DH,92,1764,"ROBINSON,    david"
+SELECT2.axx,team_snds,,0100DH,69,1760,"ELLIOTT,     sean"
+SELECT2.axx,team_snds,,0100DH,64,1780,"KEMP,        shawn"
+SELECT2.axx,team_snds,,0100DH,68,1824,"MALONE,      karl"
+SELECT2.axx,team_snds,,0100DH,53,1864,"WEBBER,      chris"
+SELECT2.axx,team_snds,,0100DH,92,1876,"MURESAN,     gheorge"
+SELECT2.axx,team_snds,,0100DH,84,1416,"McCLOUD,     george"
+SELECT2.axx,team_snds,,0100DH,76,1448,"MILLS,       terry"
+SELECT2.axx,team_snds,,0100DH,64,1496,"SMITH,       kenny"
+SELECT2.axx,team_snds,,0100DH,77,1512,"McKEE,       derek"
+SELECT2.axx,team_snds,,0100DH,60,1961,"CHAPMAN,     rex"
+SELECT2.axx,team_snds,,0100DH,69,1592,"BENJAMIN,    benoit"
+SELECT2.axx,team_snds,,0100DH,69,1596,"DOUGLAS,     sherman"
+SELECT2.axx,team_snds,,0100DH,61,1964,"WEBB,        spud"
+SELECT2.axx,team_snds,,0100DH,54,1628,"GILLIAM,     armon"
+SELECT2.axx,team_snds,,0100DH,60,1636,"EDWARDS,     kevin"
+SELECT2.axx,team_snds,,0100DH,81,1652,"OAKLEY,      charles"
+SELECT2.axx,team_snds,,0100DH,64,1967,"RUFFIN,      trevor"
+SELECT2.axx,team_snds,,0100DH,77,1712,"PERSON,      wesley"
+SELECT2.axx,team_snds,,0100DH,95,1716,"FINLEY,      michael"
+SELECT2.axx,team_snds,,0100DH,73,1732,"WILLIAMS,    buck"
+SELECT2.axx,team_snds,,0100DH,71,1772,"PERSON,      chuck"
+SELECT2.axx,team_snds,,0100DH,61,1952,"ROBERTSON,   alvin"
+SELECT2.axx,team_snds,,0100DH,67,1812,"MILLER,      oliver"
+SELECT2.axx,team_snds,,0100DH,53,1816,"MURRAY,      tracy"
+SELECT2.axx,team_snds,,0100DH,95,0b50h,Raiden
+SELECT2.axx,team_snds,,0100DH,95,0b52h,Scorpion
+SELECT2.axx,team_snds,,0100DH,95,0b53h,Subzero
+SELECT2.axx,team_snds,,0100DH,95,0b51h,Reptile
+SELECT2.axx,team_snds,,0100DH,95,0b54h,Smoke
+SELECT2.axx,team_snds,,0100DH,95,0bb8h,Jordan
+SELECT2.axx,team_snds,,0100DH,95,0403h,Magic
+SELECT2.axx,team_snds,,0100DH,95,0406h,Bird
+SELECT2.axx,team_snds,,0100DH,95,0409h,Arnold
+SELECT2.axx,team_snds,,0100DH,95,040bh,Terminator
+SPEECH.axx,full_name_speech,,0100DH,83,1304,"BLAYLOCK,    mookie		( ALTANTA HAWKS )"
+SPEECH.axx,full_name_speech,,0100DH,103,1424,"MUTUMBO,     dekembe"
+SPEECH.axx,full_name_speech,,0100DH,71,1604,"LAETNER,     christian"
+SPEECH.axx,full_name_speech,,0100DH,64,1308,"SMITH,       steve"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,59,1336,"FOX,         rick			( BOSTON )"
+SPEECH.axx,full_name_speech,,0100DH,57,0bbeh,"WALKER,      antoine"
+SPEECH.axx,full_name_speech,,0100DH,66,1332,"RADJA,       dino"
+SPEECH.axx,full_name_speech,,0100DH,66,1324,"BARROS,      dana"
+SPEECH.axx,full_name_speech,,0100DH,61,1320,"BROWN,       dee"
+SPEECH.axx,full_name_speech,,0100DH,65,1348,"RICE,        glen			( CHARLOTTE )"
+SPEECH.axx,full_name_speech,,0100DH,80,1644,"MASON,       anthony"
+SPEECH.axx,full_name_speech,,0100DH,78,1544,"DIVAC,       vlade"
+SPEECH.axx,full_name_speech,,0100DH,58,1356,"CURRY,       del"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,68,0bb8h,"JORDAN,      michael		( CHICAGO )"
+SPEECH.axx,full_name_speech,,0100DH,72,1360,"PIPPEN,      scottie"
+SPEECH.axx,full_name_speech,,0100DH,60,1364,"RODMAN,      dennis"
+SPEECH.axx,full_name_speech,,0100DH,70,1368,"KUKOC,       toni"
+SPEECH.axx,full_name_speech,,0100DH,78,1372,"LONGLEY,     luke"
+SPEECH.axx,full_name_speech,,0100DH,69,1392,"BRANDON,     terrell		( CLEVELAND )"
+SPEECH.axx,full_name_speech,,0100DH,76,1384,"MILLS,       chris"
+SPEECH.axx,full_name_speech,,0100DH,70,1388,"PHILLS,      bobby"
+SPEECH.axx,full_name_speech,,0100DH,75,1380,"HILL,        tyrone"
+SPEECH.axx,full_name_speech,,0100DH,65,1396,"FERRY,       danny"
+SPEECH.axx,full_name_speech,,0100DH,95,1716,"FINLEY,      michael		( DALLAS )"
+SPEECH.axx,full_name_speech,,0100DH,81,1624,"BRADLEY,     shawn"
+SPEECH.axx,full_name_speech,,0100DH,84,1572,"DANILOVIC,   sasha"
+SPEECH.axx,full_name_speech,,0100DH,70,1872,"PACK,        robert"
+SPEECH.axx,full_name_speech,,0100DH,71,1648,"HARPER,      derek"
+SPEECH.axx,full_name_speech,,0100DH,78,040Eh,"ELLIS,       alphonso		( DENVER )"
+SPEECH.axx,full_name_speech,,0100DH,64,1436,"ELLIS,       dale"
+SPEECH.axx,full_name_speech,,0100DH,96,1428,"McDYESS,     antonio"
+SPEECH.axx,full_name_speech,,0100DH,100,1752,"MARCIULIONIS,sarunas"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,63,1444,"HILL,        grant			( DETROIT )"
+SPEECH.axx,full_name_speech,,0100DH,74,1440,"DUMARS,      joe"
+SPEECH.axx,full_name_speech,,0100DH,56,1452,"THORPE,      otis"
+SPEECH.axx,full_name_speech,,0100DH,76,1448,"MILLS,       terry"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,76,1464,"SPREWELL,    latrell		( GOLDEN STATE )"
+SPEECH.axx,full_name_speech,,0100DH,77,1476,"MULLIN,      chris"
+SPEECH.axx,full_name_speech,,0100DH,65,1472,"SMITH,       joe"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,118,1480,"OLAJUWAN,    hakeem 		( HOUSTON )"
+SPEECH.axx,full_name_speech,,0100DH,66,0bc0h,"BARKLEY,     charles"
+SPEECH.axx,full_name_speech,,0100DH,80,1484,"DREXLER,     clyde"
+SPEECH.axx,full_name_speech,,0100DH,61,1568,"WILLIS,      kevin"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,85,1500,"MILLER,      reggie		( INDIANA )"
+SPEECH.axx,full_name_speech,,0100DH,78,1516,"JACKSON,     mark"
+SPEECH.axx,full_name_speech,,0100DH,71,1508,"SMITS,       rik"
+SPEECH.axx,full_name_speech,,0100DH,71,1504,"DAVIS,       dale"
+SPEECH.axx,full_name_speech,,0100DH,70,1432,"ROSE,        jalen"
+SPEECH.axx,full_name_speech,,0100DH,45,1520,"VAUGHT,      loy			( CLIPPERS )"
+SPEECH.axx,full_name_speech,,0100DH,64,1524,"ROGERS,      rodney"
+SPEECH.axx,full_name_speech,,0100DH,72,1536,"BARRY,       brent"
+SPEECH.axx,full_name_speech,,0100DH,75,1532,"RICHARDSON,  pooh"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,68,0bbch,"ONEAL,       shaquille		( LAKERS )"
+SPEECH.axx,full_name_speech,,0100DH,68,1556,"JONES,       eddie"
+SPEECH.axx,full_name_speech,,0100DH,76,1540,"VAN EXEL,    nick"
+SPEECH.axx,full_name_speech,,0100DH,56,0bbah,"BRYANT,      kobe"
+SPEECH.axx,full_name_speech,,0100DH,80,1488,"HORRY,       robert"
+SPEECH.axx,full_name_speech,,0100DH,80,1460,"HARDAWAY,    tim			( MIAMI )"
+SPEECH.axx,full_name_speech,,0100DH,97,1560,"MOURNING,    alonzo"
+SPEECH.axx,full_name_speech,,0100DH,88,1408,"MASHBURN,    jamal"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,70,1580,"BAKER,       vin			( MILWAUKEE )"
+SPEECH.axx,full_name_speech,,0100DH,93,1584,"ROBINSON,    glen"
+SPEECH.axx,full_name_speech,,0100DH,60,2930,"ALLEN,       ray"
+SPEECH.axx,full_name_speech,,0100DH,71,1596,"DOUGLAS,     sherman"
+SPEECH.axx,full_name_speech,,0100DH,54,1628,"GILLIAM,     armen"
+SPEECH.axx,full_name_speech,,0100DH,72,1616,"GARNETT,     kevin			( MINNESOTTA )"
+SPEECH.axx,full_name_speech,,0100DH,73,1612,"GUGLIOTTA,   tom"
+SPEECH.axx,full_name_speech,,0100DH,75,2951,"MARBURY,     stephon"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,68,1340,"GILL,        kendall		( NEW JERSEY )"
+SPEECH.axx,full_name_speech,,0100DH,52,2903,"KITTLES,     kerry"
+SPEECH.axx,full_name_speech,,0100DH,70,1492,"CASSELL,     sam"
+SPEECH.axx,full_name_speech,,0100DH,84,1400,"JACKSON,     jim"
+SPEECH.axx,full_name_speech,,0100DH,79,1328,"MONTROSS,    eric"
+SPEECH.axx,full_name_speech,,0100DH,82,1640,"EWING,       patrick		( NEW YORK )"
+SPEECH.axx,full_name_speech,,0100DH,74,1344,"JOHNSON,     larry"
+SPEECH.axx,full_name_speech,,0100DH,76,1456,"HOUSTON,     allan"
+SPEECH.axx,full_name_speech,,0100DH,70,1656,"STARKS,      john"
+SPEECH.axx,full_name_speech,,0100DH,81,1652,"OAKLEY,      charles"
+SPEECH.axx,full_name_speech,,0100DH,95,1660,"HARDAWAY,    anfernee		( ORLANDO )"
+SPEECH.axx,full_name_speech,,0100DH,76,1664,"GRANT,       horace"
+SPEECH.axx,full_name_speech,,0100DH,65,1668,"ANDERSON,    nick"
+SPEECH.axx,full_name_speech,,0100DH,84,1468,"SEIKALY,     rony"
+SPEECH.axx,full_name_speech,,0100DH,67,1672,"SCOTT,       dennis"
+SPEECH.axx,full_name_speech,,0100DH,72,2942,"IVERSON,     allen			( PHILADELPHIA )"
+SPEECH.axx,full_name_speech,,0100DH,71,1684,"COLEMAN,     derrick"
+SPEECH.axx,full_name_speech,,0100DH,96,1680,"STACKHOUSE,  jerry"
+SPEECH.axx,full_name_speech,,0100DH,113,1688,"WEATHERSPOON,clarence"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,69,1700,"JOHNSON,     kevin			( PHOENIX )"
+SPEECH.axx,full_name_speech,,0100DH,68,1404,"KIDD,        jason"
+SPEECH.axx,full_name_speech,,0100DH,77,1712,"PERSON,      wesley"
+SPEECH.axx,full_name_speech,,0100DH,66,1708,"MANNING,     danny"
+SPEECH.axx,full_name_speech,,0100DH,83,1548,"CEBALLOS,    cedric"
+SPEECH.axx,full_name_speech,,0100DH,93,1728,"SABONIS,     arvydas		( PORTLAND )"
+SPEECH.axx,full_name_speech,,0100DH,64,1620,"ANDERSON,    kenny"
+SPEECH.axx,full_name_speech,,0100DH,94,1724,"ROBINSON,    cliff"
+SPEECH.axx,full_name_speech,,0100DH,94,1600,"RIDER,       isaiah"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,82,1744,"RICHMOND,    mitch			( SACRAMENTO )"
+SPEECH.axx,full_name_speech,,0100DH,74,1564,"OWENS,       billy"
+SPEECH.axx,full_name_speech,,0100DH,89,1420,"ABDUL-RAUF,  mahmoud"
+SPEECH.axx,full_name_speech,,0100DH,50,1756,"EDNEY,       tyus"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,92,1764,"ROBINSON,    david			( SAN ANTONIO )"
+SPEECH.axx,full_name_speech,,0100DH,69,1760,"ELLIOTT,     sean"
+SPEECH.axx,full_name_speech,,0100DH,74,1768,"JOHNSON,     avery"
+SPEECH.axx,full_name_speech,,0100DH,82,1776,"DEL NEGRO,   vinny"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,74,1784,"PAYTON,      gary			( SEATTLE )"
+SPEECH.axx,full_name_speech,,0100DH,64,1780,"KEMP,        shawn"
+SPEECH.axx,full_name_speech,,0100DH,59,1792,"HAWKINS,     hersey"
+SPEECH.axx,full_name_speech,,0100DH,57,1788,"SCHREMPF,    detlef"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,92,1804,"STOUDAMIRE,  damon			( TORONTO )"
+SPEECH.axx,full_name_speech,,0100DH,78,1740,"WILLIAMS,    walt"
+SPEECH.axx,full_name_speech,,0100DH,72,2927,"CAMBY,       marcus"
+SPEECH.axx,full_name_speech,,0100DH,74,1412,"JONES,       popeye"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,68,1824,"MALONE,      karl			( UTAH )"
+SPEECH.axx,full_name_speech,,0100DH,79,1820,"STOCKTON,    john"
+SPEECH.axx,full_name_speech,,0100DH,70,1828,"HORNACEK,    jeff"
+SPEECH.axx,full_name_speech,,0100DH,64,1836,"MORRIS,      chris"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,74,1852,"REEVES,      bryant		( VANCOUVER )"
+SPEECH.axx,full_name_speech,,0100DH,78,1840,"ANTHONY,     greg"
+SPEECH.axx,full_name_speech,,0100DH,66,1844,"EDWARDS,     blue"
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0,0,0,
+SPEECH.axx,full_name_speech,,0100DH,53,1864,"WEBBER,      chris			( WASHINGTON )"
+SPEECH.axx,full_name_speech,,0100DH,77,1720,"STRICKLAND,  rod"
+SPEECH.axx,full_name_speech,,0100DH,74,1860,"HOWARD,      juwan"
+SPEECH.axx,full_name_speech,,0100DH,92,1876,"MURESAN,     gheorge"
+SPEECH.axx,full_name_speech,,0100DH,53,1816,"MURRAY,      tracy"
+SPEECH.axx,pass_speech,,0100DH,54,1307,"to BLAYLOCK,    mookie		( ALTANTA HAWKS )"
+SPEECH.axx,pass_speech,,0100DH,67,1427,"to MUTUMBO,     dekembe"
+SPEECH.axx,pass_speech,,0100DH,43,1607,"to LAETNER,     christian"
+SPEECH.axx,pass_speech,,0100DH,43,1311,"to SMITH,       steve"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,43,1339,"to FOX,         rick		( BOSTON )"
+SPEECH.axx,pass_speech,,0100DH,35,07C2h,"to WALKER,      antoine"
+SPEECH.axx,pass_speech,,0100DH,44,1335,"to RADJA,       dino"
+SPEECH.axx,pass_speech,,0100DH,40,1327,"to BARROS,      dana"
+SPEECH.axx,pass_speech,,0100DH,42,1323,"to BROWN,       dee"
+SPEECH.axx,pass_speech,,0100DH,42,1351,"to RICE,        glen		( CHARLOTTE )"
+SPEECH.axx,pass_speech,,0100DH,60,1647,"to MASON,       anthony"
+SPEECH.axx,pass_speech,,0100DH,49,1547,"to DIVAC,       vlade"
+SPEECH.axx,pass_speech,,0100DH,36,1359,"to CURRY,       del"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,44,07bfh,"to JORDAN,      michael	( CHICAGO )"
+SPEECH.axx,pass_speech,,0100DH,41,1363,"to PIPPEN,      scottie"
+SPEECH.axx,pass_speech,,0100DH,38,1367,"to RODMAN,      dennis"
+SPEECH.axx,pass_speech,,0100DH,47,1371,"to KUKOC,       toni"
+SPEECH.axx,pass_speech,,0100DH,56,1375,"to LONGLEY,     luke"
+SPEECH.axx,pass_speech,,0100DH,39,1395,"to BRANDON,     terrell	( CLEVELAND )"
+SPEECH.axx,pass_speech,,0100DH,51,1387,"to MILLS,       chris"
+SPEECH.axx,pass_speech,,0100DH,44,1391,"to PHILLS,      bobby"
+SPEECH.axx,pass_speech,,0100DH,42,1383,"to HILL,        tyrone"
+SPEECH.axx,pass_speech,,0100DH,38,1399,"to FERRY,       danny"
+SPEECH.axx,pass_speech,,0100DH,40,1719,"to FINLEY,      michael	( DALLAS )"
+SPEECH.axx,pass_speech,,0100DH,53,1627,"to BRADLEY,     shawn"
+SPEECH.axx,pass_speech,,0100DH,58,1575,"to DANILOVIC,   sasha"
+SPEECH.axx,pass_speech,,0100DH,41,1875,"to PACK,        robert"
+SPEECH.axx,pass_speech,,0100DH,46,1651,"to HARPER,      derek"
+SPEECH.axx,pass_speech,,0100DH,57,1439,"to ELLIS,     	 alphonso	( DENVER )"
+SPEECH.axx,pass_speech,,0100DH,38,1439,"to ELLIS,       dale"
+SPEECH.axx,pass_speech,,0100DH,58,1431,"to McDYESS,     antonio"
+SPEECH.axx,pass_speech,,0100DH,58,1755,"to MARCIULIONIS,sarunas"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,42,1447,"to HILL,        grant		( DETROIT )"
+SPEECH.axx,pass_speech,,0100DH,61,1443,"to DUMARS,      joe"
+SPEECH.axx,pass_speech,,0100DH,34,1455,"to THORPE,      otis"
+SPEECH.axx,pass_speech,,0100DH,40,1451,"to MILLS,       terry"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,52,1467,"to SPREWELL,    latrell	( GOLDEN STATE )"
+SPEECH.axx,pass_speech,,0100DH,52,1479,"to MULLIN,      chris"
+SPEECH.axx,pass_speech,,0100DH,43,1475,"to SMITH,       joe"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,64,1483,"to OLAJUWAN,    hakeem 	( HOUSTON )"
+SPEECH.axx,pass_speech,,0100DH,45,07C3h,"to BARKLEY,  	 charles"
+SPEECH.axx,pass_speech,,0100DH,51,1487,"to DREXLER,     clyde"
+SPEECH.axx,pass_speech,,0100DH,40,1571,"to WILLIS,      kevin"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,48,1503,"to MILLER,      reggie		( INDIANA )"
+SPEECH.axx,pass_speech,,0100DH,57,1519,"to JACKSON,     mark"
+SPEECH.axx,pass_speech,,0100DH,55,1511,"to SMITS,       rik"
+SPEECH.axx,pass_speech,,0100DH,43,1507,"to DAVIS,       dale"
+SPEECH.axx,pass_speech,,0100DH,38,1435,"to ROSE,        jalen"
+SPEECH.axx,pass_speech,,0100DH,36,1523,"to VAUGHT,      loy		( CLIPPERS )"
+SPEECH.axx,pass_speech,,0100DH,43,1527,"to ROGERS,      rodney"
+SPEECH.axx,pass_speech,,0100DH,43,1539,"to BARRY,       brent"
+SPEECH.axx,pass_speech,,0100DH,54,1535,"to RICHARDSON,  pooh"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,49,07C1h,"to ONEAL,       shaquille	( LAKERS )"
+SPEECH.axx,pass_speech,,0100DH,49,1559,"to JONES,       eddie"
+SPEECH.axx,pass_speech,,0100DH,54,1543,"to VAN EXEL,    nick"
+SPEECH.axx,pass_speech,,0100DH,40,07C0h,"to BRYANT,      kobe"
+SPEECH.axx,pass_speech,,0100DH,51,1491,"to HORRY,       robert"
+SPEECH.axx,pass_speech,,0100DH,56,1463,"to HARDAWAY,    tim		( MIAMI )"
+SPEECH.axx,pass_speech,,0100DH,44,1563,"to MOURNING,    alonzo"
+SPEECH.axx,pass_speech,,0100DH,59,1411,"to MASHBURN,    jamal"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,49,1583,"to BAKER,       vin		( MILWAUKEE )"
+SPEECH.axx,pass_speech,,0100DH,70,1587,"to ROBINSON,    glen"
+SPEECH.axx,pass_speech,,0100DH,44,2932,"to ALLEN,       ray"
+SPEECH.axx,pass_speech,,0100DH,40,1599,"to DOUGLAS,     sherman"
+SPEECH.axx,pass_speech,,0100DH,40,1631,"to GILLIAM,     armen"
+SPEECH.axx,pass_speech,,0100DH,50,1619,"to GARNETT,     kevin		( MINNESOTTA )"
+SPEECH.axx,pass_speech,,0100DH,52,1615,"to GUGLIOTTA,   tom"
+SPEECH.axx,pass_speech,,0100DH,40,2953,"to MARBURY,     stephon"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,40,1343,"to GILL,        kendall	( NEW JERSEY )"
+SPEECH.axx,pass_speech,,0100DH,41,2905,"to KITTLES,     kerry"
+SPEECH.axx,pass_speech,,0100DH,48,1495,"to CASSELL,     sam"
+SPEECH.axx,pass_speech,,0100DH,57,1403,"to JACKSON,     jim"
+SPEECH.axx,pass_speech,,0100DH,62,1331,"to MONTROSS,    eric"
+SPEECH.axx,pass_speech,,0100DH,43,1643,"to EWING,       patrick	( NEW YORK )"
+SPEECH.axx,pass_speech,,0100DH,48,1347,"to JOHNSON,     larry"
+SPEECH.axx,pass_speech,,0100DH,54,1459,"to HOUSTON,     allan"
+SPEECH.axx,pass_speech,,0100DH,45,1659,"to STARKS,      john"
+SPEECH.axx,pass_speech,,0100DH,40,1655,"to OAKLEY,      charles"
+SPEECH.axx,pass_speech,,0100DH,56,1663,"to HARDAWAY,    anfernee	( ORLANDO )"
+SPEECH.axx,pass_speech,,0100DH,43,1667,"to GRANT,       horace"
+SPEECH.axx,pass_speech,,0100DH,43,1671,"to ANDERSON,    nick"
+SPEECH.axx,pass_speech,,0100DH,55,1471,"to SEIKALY,     rony"
+SPEECH.axx,pass_speech,,0100DH,45,1675,"to SCOTT,       dennis"
+SPEECH.axx,pass_speech,,0100DH,53,2944,"to IVERSON,     allen		( PHILADELPHIA )"
+SPEECH.axx,pass_speech,,0100DH,46,1687,"to COLEMAN,     derrick"
+SPEECH.axx,pass_speech,,0100DH,69,1683,"to STACKHOUSE,  jerry"
+SPEECH.axx,pass_speech,,0100DH,75,1691,"to WEATHERSPOON,clarence"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,48,1703,"to JOHNSON,     kevin		( PHOENIX )"
+SPEECH.axx,pass_speech,,0100DH,41,1407,"to KIDD,        jason"
+SPEECH.axx,pass_speech,,0100DH,40,1715,"to PERSON,      wesley"
+SPEECH.axx,pass_speech,,0100DH,38,1711,"to MANNING,     danny"
+SPEECH.axx,pass_speech,,0100DH,54,1551,"to CEBALLOS,    cedric"
+SPEECH.axx,pass_speech,,0100DH,49,1731,"to SABONIS,     arvydas	( PORTLAND )"
+SPEECH.axx,pass_speech,,0100DH,43,1623,"to ANDERSON,    kenny"
+SPEECH.axx,pass_speech,,0100DH,70,1727,"to ROBINSON,    cliff"
+SPEECH.axx,pass_speech,,0100DH,53,1603,"to RIDER,       isaiah"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,51,1747,"to RICHMOND,    mitch		( SACRAMENTO )"
+SPEECH.axx,pass_speech,,0100DH,51,1567,"to OWENS,       billy"
+SPEECH.axx,pass_speech,,0100DH,61,1423,"to ABDUL-RAUF,  mahmoud"
+SPEECH.axx,pass_speech,,0100DH,36,1759,"to EDNEY,       tyus"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,70,1767,"to ROBINSON,    david		( SAN ANTONIO )"
+SPEECH.axx,pass_speech,,0100DH,41,1763,"to ELLIOTT,     sean"
+SPEECH.axx,pass_speech,,0100DH,48,1771,"to JOHNSON,     avery"
+SPEECH.axx,pass_speech,,0100DH,54,1779,"to DEL NEGRO,   vinny"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,43,1787,"to PAYTON,      gary		( SEATTLE )"
+SPEECH.axx,pass_speech,,0100DH,37,1783,"to KEMP,        shawn"
+SPEECH.axx,pass_speech,,0100DH,44,1795,"to HAWKINS,     hersey"
+SPEECH.axx,pass_speech,,0100DH,41,1791,"to SCHREMPF,    detlef"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,63,1807,"to STOUDAMIRE,  damon		( TORONTO )"
+SPEECH.axx,pass_speech,,0100DH,45,1743,"to WILLIAMS,    walt"
+SPEECH.axx,pass_speech,,0100DH,45,2929,"to CAMBY,       marcus"
+SPEECH.axx,pass_speech,,0100DH,49,1415,"to JONES,       popeye"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,51,1827,"to MALONE,      karl		( UTAH )"
+SPEECH.axx,pass_speech,,0100DH,53,1823,"to STOCKTON,    john"
+SPEECH.axx,pass_speech,,0100DH,49,1831,"to HORNACEK,    jeff"
+SPEECH.axx,pass_speech,,0100DH,39,1839,"to MORRIS,      chris"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,48,1855,"to REEVES,      bryant		( VANCOUVER )"
+SPEECH.axx,pass_speech,,0100DH,40,1843,"to ANTHONY,     greg"
+SPEECH.axx,pass_speech,,0100DH,38,1847,"to EDWARDS,     blue"
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0,0,0,
+SPEECH.axx,pass_speech,,0100DH,28,1867,"to WEBBER,      chris		( WASHINGTON )"
+SPEECH.axx,pass_speech,,0100DH,51,1723,"to STRICKLAND,  rod"
+SPEECH.axx,pass_speech,,0100DH,43,1863,"to HOWARD,      juwan"
+SPEECH.axx,pass_speech,,0100DH,63,1879,"to MURESAN,     gheorge"
+SPEECH.axx,pass_speech,,0100DH,40,1819,"to MURRAY,      tracy"
+SPEECH.axx,name_speech,,0100DH,44,1305,"BLAYLOCK,    mookie		( ALTANTA HAWKS )"
+SPEECH.axx,name_speech,,0100DH,58,1425,"MUTUMBO,     dekembe"
+SPEECH.axx,name_speech,,0100DH,33,1605,"LAETNER,     christian"
+SPEECH.axx,name_speech,,0100DH,33,1309,"SMITH,       steve"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,33,1337,"FOX,         rick			( BOSTON )"
+SPEECH.axx,name_speech,,0100DH,26,0bbdh,"WALKER,      antoine"
+SPEECH.axx,name_speech,,0100DH,35,1333,"RADJA,       dino"
+SPEECH.axx,name_speech,,0100DH,31,1325,"BARROS,      dana"
+SPEECH.axx,name_speech,,0100DH,36,1321,"BROWN,       dee"
+SPEECH.axx,name_speech,,0100DH,33,1349,"RICE,        glen			( CHARLOTTE )"
+SPEECH.axx,name_speech,,0100DH,51,1645,"MASON,       anthony"
+SPEECH.axx,name_speech,,0100DH,39,1545,"DIVAC,       vlade"
+SPEECH.axx,name_speech,,0100DH,27,1357,"CURRY,       del"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,35,0B56h,"JORDAN,      michael		( CHICAGO )"
+SPEECH.axx,name_speech,,0100DH,31,1361,"PIPPEN,      scottie"
+SPEECH.axx,name_speech,,0100DH,28,1365,"RODMAN,      dennis"
+SPEECH.axx,name_speech,,0100DH,38,1369,"KUKOC,       toni"
+SPEECH.axx,name_speech,,0100DH,47,1373,"LONGLEY,     luke"
+SPEECH.axx,name_speech,,0100DH,30,1393,"BRANDON,     terrell		( CLEVELAND )"
+SPEECH.axx,name_speech,,0100DH,42,1385,"MILLS,       chris"
+SPEECH.axx,name_speech,,0100DH,35,1389,"PHILLS,      bobby"
+SPEECH.axx,name_speech,,0100DH,33,1381,"HILL,        tyrone"
+SPEECH.axx,name_speech,,0100DH,28,1397,"FERRY,       danny"
+SPEECH.axx,name_speech,,0100DH,40,1717,"FINLEY,      michael		( DALLAS )"
+SPEECH.axx,name_speech,,0100DH,43,1625,"BRADLEY,     shawn"
+SPEECH.axx,name_speech,,0100DH,49,1573,"DANILOVIC,   sasha"
+SPEECH.axx,name_speech,,0100DH,32,1873,"PACK,        robert"
+SPEECH.axx,name_speech,,0100DH,37,1649,"HARPER,      derek"
+SPEECH.axx,name_speech,,0100DH,48,1437,"ELLIS,       alphonso		( DENVER )"
+SPEECH.axx,name_speech,,0100DH,28,1437,"ELLIS,       dale"
+SPEECH.axx,name_speech,,0100DH,49,1429,"McDYESS,     antonio"
+SPEECH.axx,name_speech,,0100DH,49,1753,"MARCIULIONIS,sarunas"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,33,1445,"HILL,        grant			( DETROIT )"
+SPEECH.axx,name_speech,,0100DH,46,1441,"DUMARS,      joe"
+SPEECH.axx,name_speech,,0100DH,25,1453,"THORPE,      otis"
+SPEECH.axx,name_speech,,0100DH,40,1449,"MILLS,       terry"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,43,1465,"SPREWELL,    latrell		( GOLDEN STATE )"
+SPEECH.axx,name_speech,,0100DH,43,1477,"MULLIN,      chris"
+SPEECH.axx,name_speech,,0100DH,33,1473,"SMITH,       joe"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,55,1482,"OLAJUWAN,    hakeem		( HOUSTON )"
+SPEECH.axx,name_speech,,0100DH,36,0bbfh,"BARKLEY,     charles"
+SPEECH.axx,name_speech,,0100DH,41,1485,"DREXLER,     clyde"
+SPEECH.axx,name_speech,,0100DH,31,1569,"WILLIS,      kevin"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,39,1501,"MILLER,      reggie		( INDIANA )"
+SPEECH.axx,name_speech,,0100DH,48,1517,"JACKSON,     mark"
+SPEECH.axx,name_speech,,0100DH,46,1509,"SMITS,       rik"
+SPEECH.axx,name_speech,,0100DH,34,1505,"DAVIS,       dale"
+SPEECH.axx,name_speech,,0100DH,29,1433,"ROSE,        jalen"
+SPEECH.axx,name_speech,,0100DH,27,1521,"VAUGHT,      loy			( CLIPPERS )"
+SPEECH.axx,name_speech,,0100DH,34,1525,"ROGERS,      rodney"
+SPEECH.axx,name_speech,,0100DH,33,1537,"BARRY,       brent"
+SPEECH.axx,name_speech,,0100DH,44,1533,"RICHARDSON,  pooh"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,40,0bbbh,"ONEAL,       shaquille		( LAKERS )"
+SPEECH.axx,name_speech,,0100DH,40,1557,"JONES,       eddie"
+SPEECH.axx,name_speech,,0100DH,44,1541,"VAN EXEL,    nick"
+SPEECH.axx,name_speech,,0100DH,32,0bb9h,"BRYANT,      kobe"
+SPEECH.axx,name_speech,,0100DH,42,1489,"HORRY,       robert"
+SPEECH.axx,name_speech,,0100DH,47,1461,"HARDAWAY,    tim			( MIAMI )"
+SPEECH.axx,name_speech,,0100DH,35,1561,"MOURNING,    alonzo"
+SPEECH.axx,name_speech,,0100DH,50,1409,"MASHBURN,    jamal"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,39,1581,"BAKER,       vin			( MILWAUKEE )"
+SPEECH.axx,name_speech,,0100DH,61,1585,"ROBINSON,    glen"
+SPEECH.axx,name_speech,,0100DH,35,2931,"ALLEN,       ray"
+SPEECH.axx,name_speech,,0100DH,29,1597,"DOUGLAS,     sherman"
+SPEECH.axx,name_speech,,0100DH,29,1629,"GILLIAM,     armen"
+SPEECH.axx,name_speech,,0100DH,41,1617,"GARNETT,     kevin			( MINNESOTTA )"
+SPEECH.axx,name_speech,,0100DH,43,1613,"GUGLIOTTA,   tom"
+SPEECH.axx,name_speech,,0100DH,31,2952,"MARBURY,     stephon"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,31,1341,"GILL,        kendall		( NEW JERSEY )"
+SPEECH.axx,name_speech,,0100DH,32,2904,"KITTLES,     kerry"
+SPEECH.axx,name_speech,,0100DH,38,1493,"CASSELL,     sam"
+SPEECH.axx,name_speech,,0100DH,48,1401,"JACKSON,     jim"
+SPEECH.axx,name_speech,,0100DH,53,1329,"MONTROSS,    eric"
+SPEECH.axx,name_speech,,0100DH,42,1641,"EWING,       patrick		( NEW YORK )"
+SPEECH.axx,name_speech,,0100DH,38,1345,"JOHNSON,     larry"
+SPEECH.axx,name_speech,,0100DH,44,1457,"HOUSTON,     allan"
+SPEECH.axx,name_speech,,0100DH,36,1657,"STARKS,      john"
+SPEECH.axx,name_speech,,0100DH,34,1653,"OAKLEY,      charles"
+SPEECH.axx,name_speech,,0100DH,47,1661,"HARDAWAY,    anfernee		( ORLANDO )"
+SPEECH.axx,name_speech,,0100DH,34,1665,"GRANT,       horace"
+SPEECH.axx,name_speech,,0100DH,33,1669,"ANDERSON,    nick"
+SPEECH.axx,name_speech,,0100DH,46,1469,"SEIKALY,     rony"
+SPEECH.axx,name_speech,,0100DH,36,1673,"SCOTT,       dennis"
+SPEECH.axx,name_speech,,0100DH,44,2943,"IVERSON,     allen			( PHILADELPHIA )"
+SPEECH.axx,name_speech,,0100DH,37,1685,"COLEMAN,     derrick"
+SPEECH.axx,name_speech,,0100DH,59,1681,"STACKHOUSE,  jerry"
+SPEECH.axx,name_speech,,0100DH,66,1689,"WEATHERSPOON,clarence"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,38,1701,"JOHNSON,     kevin			( PHOENIX )"
+SPEECH.axx,name_speech,,0100DH,32,1405,"KIDD,        jason"
+SPEECH.axx,name_speech,,0100DH,34,1713,"PERSON,      wesley"
+SPEECH.axx,name_speech,,0100DH,28,1709,"MANNING,     danny"
+SPEECH.axx,name_speech,,0100DH,44,1549,"CEBALLOS,    cedric"
+SPEECH.axx,name_speech,,0100DH,40,1729,"SABONIS,     arvydas		( PORTLAND )"
+SPEECH.axx,name_speech,,0100DH,33,1621,"ANDERSON,    kenny"
+SPEECH.axx,name_speech,,0100DH,61,1725,"ROBINSON,    cliff"
+SPEECH.axx,name_speech,,0100DH,43,1601,"RIDER,       isaiah"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,41,1745,"RICHMOND,    mitch			( SACRAMENTO )"
+SPEECH.axx,name_speech,,0100DH,41,1565,"OWENS,       billy"
+SPEECH.axx,name_speech,,0100DH,51,1421,"ABDUL-RAUF,  mahmoud"
+SPEECH.axx,name_speech,,0100DH,27,1757,"EDNEY,       tyus"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,61,1765,"ROBINSON,    david			( SAN ANTONIO )"
+SPEECH.axx,name_speech,,0100DH,32,1761,"ELLIOTT,     sean"
+SPEECH.axx,name_speech,,0100DH,38,1769,"JOHNSON,     avery"
+SPEECH.axx,name_speech,,0100DH,45,1777,"DEL NEGRO,   vinny"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,33,1785,"PAYTON,      gary			( SEATTLE )"
+SPEECH.axx,name_speech,,0100DH,28,1781,"KEMP,        shawn"
+SPEECH.axx,name_speech,,0100DH,35,1793,"HAWKINS,     hersey"
+SPEECH.axx,name_speech,,0100DH,32,1789,"SCHREMPF,    detlef"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,54,1805,"STOUDAMIRE,  damon			( TORONTO )"
+SPEECH.axx,name_speech,,0100DH,36,1741,"WILLIAMS,    walt"
+SPEECH.axx,name_speech,,0100DH,36,2928,"CAMBY,       marcus"
+SPEECH.axx,name_speech,,0100DH,40,1413,"JONES,       popeye"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,42,1825,"MALONE,      karl			( UTAH )"
+SPEECH.axx,name_speech,,0100DH,44,1821,"STOCKTON,    john"
+SPEECH.axx,name_speech,,0100DH,40,1829,"HORNACEK,    jeff"
+SPEECH.axx,name_speech,,0100DH,30,1837,"MORRIS,      chris"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,39,1853,"REEVES,      bryant		( VANCOUVER )"
+SPEECH.axx,name_speech,,0100DH,31,1841,"ANTHONY,     greg"
+SPEECH.axx,name_speech,,0100DH,29,1845,"EDWARDS,     blue"
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0,0,0,
+SPEECH.axx,name_speech,,0100DH,18,1865,"WEBBER,      chris			( WASHINGTON )"
+SPEECH.axx,name_speech,,0100DH,42,1721,"STRICKLAND,  rod"
+SPEECH.axx,name_speech,,0100DH,34,1861,"HOWARD,      juwan"
+SPEECH.axx,name_speech,,0100DH,54,1877,"MURESAN,     gheorge"
+SPEECH.axx,name_speech,,0100DH,29,1817,"MURRAY,      tracy"
+SPEECH.axx,tm_name_spch_tbl,,0100DH,25,04b2H,"00 ATLANTA		""Hawks"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,33,04b5H,"01 BOSTON		""Celtics"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,22,04b8H,"02 CHARLOTTE		""Hornets"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,25,04bbH,"03 CHICAGO		""Bulls"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,41,04beH,"04 CLEVELAND		""Cavaliers"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,29,04c1H,"05 DALLAS		""Maverick"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,24,04c4H,"06 DENVER		""Nuggets"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,37,04c7H,"07 DETROIT		""Pistons"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,39,04caH,"08 GOLDEN STATE	""Warriors"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,28,04cdH,"09 HOUSTON		""Rockets"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,37,04d0H,"10 INDIANA		""Pacers"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,28,04d3H,"11 L.A. CLIPPERS	""Clippers"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,36,04d6H,"12 L.A. LAKERS		""Lakers"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,20,04d9H,"13 MIAMI		""Heat"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,24,04dcH,"14 MILWAUKEE		""Bucks"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,45,04dfH,"15 MINNESOTTA		""Timberwolves"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,22,04e2H,"16 NEW JERSEY		""Nets"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,27,04e5H,"17 NEW YORK		""Knicks"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,28,04e8H,"18 ORLANDO		""Magic"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,64,04ebH,"19 PHILADELPHIA	""Sixers"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,31,04eeH,"20 PHOENIX		""Suns"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,52,04f1H,"21 PORTLAND		""Blazers"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,36,04f4H,"22 SACRAMENTO		""Kings"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,40,04f7H,"23 SAN ANTONIO		""Spurs"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,52,04faH,"24 SEATTLE		""Supersonics"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,39,04fdH,"26 TORONTO		""Raptors"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,33,0500H,"26 UTAH		""Jazz"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,39,0503H,"27 VANCOUVER		""Grizzlies"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,22,0506H,"28 WASHINGTON		""Bullets"""
+SPEECH.axx,tm_name_spch_tbl,,0100DH,42,0818H,GOOD!!!
+SPEECH.axx,tm_name_spch_tbl,,0100DH,42,0818H,GOOD!!!
+SPEECH.axx,tm_city_spch_tbl,,0100DH,39,04b1H,00 ATLANTA
+SPEECH.axx,tm_city_spch_tbl,,0100DH,30,04b4H,01 BOSTON
+SPEECH.axx,tm_city_spch_tbl,,0100DH,31,04b7H,02 CHARLOTTE
+SPEECH.axx,tm_city_spch_tbl,,0100DH,41,04baH,03 CHICAGO
+SPEECH.axx,tm_city_spch_tbl,,0100DH,28,04bdH,04 CLEVELAND
+SPEECH.axx,tm_city_spch_tbl,,0100DH,27,04c0H,05 DALLAS
+SPEECH.axx,tm_city_spch_tbl,,0100DH,25,04c3H,06 DENVER
+SPEECH.axx,tm_city_spch_tbl,,0100DH,36,04c6H,07 DETROIT
+SPEECH.axx,tm_city_spch_tbl,,0100DH,51,04c9H,08 GOLDEN STATE
+SPEECH.axx,tm_city_spch_tbl,,0100DH,32,04ccH,09 HOUSTON
+SPEECH.axx,tm_city_spch_tbl,,0100DH,39,04cfH,10 INDIANA
+SPEECH.axx,tm_city_spch_tbl,,0100DH,49,04d2H,11 L.A. CLIPPERS
+SPEECH.axx,tm_city_spch_tbl,,0100DH,49,04d5H,12 L.A. LAKERS
+SPEECH.axx,tm_city_spch_tbl,,0100DH,37,04d8H,13 MIAMI
+SPEECH.axx,tm_city_spch_tbl,,0100DH,39,04dbH,14 MILWAUKEE
+SPEECH.axx,tm_city_spch_tbl,,0100DH,39,04deH,15 MINNESOTTA
+SPEECH.axx,tm_city_spch_tbl,,0100DH,38,04e1H,16 NEW JERSEY
+SPEECH.axx,tm_city_spch_tbl,,0100DH,37,04e4H,17 NEW YORK
+SPEECH.axx,tm_city_spch_tbl,,0100DH,41,04e7H,18 ORLANDO
+SPEECH.axx,tm_city_spch_tbl,,0100DH,44,04eaH,19 PHILADELPHIA
+SPEECH.axx,tm_city_spch_tbl,,0100DH,31,04edH,20 PHOENIX
+SPEECH.axx,tm_city_spch_tbl,,0100DH,29,04f0H,21 PORTLAND
+SPEECH.axx,tm_city_spch_tbl,,0100DH,48,04f3H,22 SACRAMENTO
+SPEECH.axx,tm_city_spch_tbl,,0100DH,57,04f6H,23 SAN ANTONIO
+SPEECH.axx,tm_city_spch_tbl,,0100DH,34,04f9H,24 SEATTLE
+SPEECH.axx,tm_city_spch_tbl,,0100DH,40,04fcH,26 TORONTO
+SPEECH.axx,tm_city_spch_tbl,,0100DH,32,04ffH,26 UTAH
+SPEECH.axx,tm_city_spch_tbl,,0100DH,38,0502H,27 VANCOUVER
+SPEECH.axx,tm_city_spch_tbl,,0100DH,44,0505H,28 WASHINGTON
+SPEECH.axx,tm_city_spch_tbl,,0100DH,42,0818H,GOOD!!!
+SPEECH.axx,tm_city_spch_tbl,,0100DH,42,0818H,GOOD!!!
+SPEECH.axx,full_tm_name_spch_tbl,,0100DH,101,04c8H,"08 GOLDEN STATE	""Warriors"""
+SPEECH.axx,full_tm_name_spch_tbl,,0100DH,117,04e9H,"19 PHILADELPHIA	""Sixers"""
+SPEECH.axx,full_tm_name_spch_tbl,,0100DH,100,04f5H,"23 SAN ANTONIO		""Spurs"""
+SPEECH.axx,full_tm_name_spch_tbl,,0100DH,100,04f8H,"24 SEATTLE		""Supersonics"""
+SPEECH.axx,full_tm_name_spch_tbl,,0100DH,104,0501H,"27 VANCOUVER		""Grizzlies"""
+SPEECH.axx,scr_nbr_tbl,,0110DH,23,087cH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,16,087dH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,17,087eH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,15,087fH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,20,0880H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,22,0881H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,21,0882H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,20,0883H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,20,0884H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,24,0885H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,22,0886H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0887H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0888H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,26,0889H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,29,088aH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,26,088bH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,088cH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,32,088dH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,28,088eH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,29,088fH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,19,0890H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0891H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0892H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0893H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0894H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0895H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0896H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0897H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0898H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,25,0899H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,089aH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,089bH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,089cH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,089dH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,089eH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,089fH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,08a0H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,08a1H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,08a2H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,37,08a3H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08a4H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08a5H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08a6H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08a7H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08a8H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08a9H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08aaH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08abH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08acH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,38,08adH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08aeH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08afH,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b0H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b1H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b2H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b3H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b4H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b5H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b6H,
+SPEECH.axx,scr_nbr_tbl,,0110DH,34,08b7H,
