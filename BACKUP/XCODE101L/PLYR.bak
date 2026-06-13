@@ -435,7 +435,6 @@
 	.ref	swith_hnd_sp,spn_shtup_sp
 	.ref	dronesmrt
 ;symbols defined in this file
-	.def	zmnqlp
 
 
 ;uninitialized ram definitions
@@ -495,7 +494,6 @@
 	BSSX	pup_noassistance,16	;1=turn help off
 	BSSX	pup_aba		,16	;0=regular ball, !0=ABA ball
 	BSSX	fatality	,16	;Fatality 0,1,2, or 3 for both teams
-	BSSX	fatcheck	,16	;Temporary holder for the fatality.
 	BSSX	pup_court	,16	;0=indoor, !0=outdoor
 	BSSX	pup_showhotspots,16	;Bit 0-3 on = show plyr 0-3 hotspots
 
@@ -555,7 +553,6 @@ IBZ_DEF2	.equ	CZMID+70
 
 	clr	a0
 	move	a0,@fatality
-	move	a0,@fatcheck
 	move	a0,@pup_lockcombo
 	move	a0,@pup_bighead
 	move	a0,@pup_hugehead
@@ -1312,8 +1309,28 @@ zmnqlp
 	move	@HALT,a0
 	jrnz	zmnqhalted
 
-	clr	a2
-	move	a2,@fatcheck
+	clr	a9			;needed for fire pushes, breaks drone logic!
+
+	.if	IMGVIEW
+	move	*a13(plyr_num),a0
+	cmpi	0,a0
+	jrz	zmnqyesx
+	cmpi	3,a0
+	jrne	zmnqhalted
+zmnqyesx
+	movk	1,a2			;+=Me
+	jruc	zmnqnobl2
+	.endif
+;
+;This could be a dipswitch setting for our home games
+;FIX
+;	move	@DIPSWITCH,a0
+;	btst	0,a0			;UJ2 switch 8
+;	jrnz	zmnqnotfair		;OFF?
+;	clr	a0
+;	move	a0,*a13(plyr_ptsdown)
+;zmnqnotfair
+;
 
 ;--------------------
 ; Plyr ball-ownership handling
@@ -1541,14 +1558,10 @@ zmnqnocol
 	subk	15,a2			;stupid K!!!
 	jrle	zmnqnostag
 
-
 	move	*a13(plyr_seq),a14
 	subk	30-15,a2		;stupid K!!!
 	jrle	zmnqchkstag		;Chk stag?
 
-; Fire Fall code - disable for now
-
-	.if	0
 	move	@plyr_onfire,a1
 	jrz	zmnqnoflm1
 	move	@fatality,a2		;bit 0=tm1, bit 1=tm2
@@ -1566,29 +1579,23 @@ zmnqnocol
 	calla	RNDPER
 	jrls	zmnqnoflm1
 ;Yes, this will be a flaming fall!
-yesfatal
-	movk	1,a2			;not a9, this breaks drone logic. Can't use a9 here!
-	move	a2,@fatcheck
-	.endif
-
+	movk	1,a9
 zmnqnoflm1
 
 	move	*a13(plyr_seq),a14
 
 	movi	FLYBACK_SEQ,a0
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm2
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm2
+	move	a9,a9
+	jrz	zmnqnoflm2
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm2
 	cmp	a0,a14
 	jreq	zmnqcstag
 
-;	cmpi	FALL_SEQ,a14
-;	jrge	zmnqcstag
-;	cmpi	FFLYBACKWB2_SEQ,a14
-;	jrgt	zmnqcstag
+	cmpi	FALL_SEQ,a14
+	jrge	zmnqcstag
+	cmpi	FFLYBACKWB2_SEQ,a14
+	jrgt	zmnqcstag
 
 	cmpi	FLYBACKWB_SEQ,a14
 	jreq	zmnqcstag
@@ -1606,13 +1613,11 @@ zmnqnoflm1
 	sub	a1,a2
 	abs	a2
 
-;	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm3
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm3
+	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
+	move	a9,a9
+	jrz	zmnqnoflm3
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm3
 	cmpi	1,a2
 	jrle	zmnqfall
 	
@@ -1623,12 +1628,10 @@ zmnqnoflm1
 	calla	RNDPER
 	PULL	a14
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm4
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm4
+	move	a9,a9
+	jrz	zmnqnoflm4
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm4
 
 ; Will this work?
 	jrls	zmnqfall
@@ -1640,12 +1643,10 @@ zmnqhaveball
 ;normal flyback and never keep ball!
 
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm5
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm5
+	move	a9,a9
+	jrz	zmnqnoflm5
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm5
 
 	move	*a8(OZPOS),a1
 	cmpi	CZMIN+40,a1		;stupid K!!!
@@ -1656,7 +1657,6 @@ zmnqhaveball
 zmnqnot_rear
 	move	@pushing_delay,a1
 	jrnz	zmnqkeepball
-
 ;DJT Start
 ;	move	@pup_strongmen,a1
 ;	jrz	zmnqnotchamp		; br=no grand champs in game
@@ -1728,12 +1728,10 @@ zmnqkeepball
 	calla	pushed_speech
 
 	movi	FLYBACKWB_SEQ,a0	;If similar power, always do flyback
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm6
-;	movi	FFLYBACKWB_SEQ,a0
-;zmnqnoflm6
+	move	a9,a9
+	jrz	zmnqnoflm6
+	movi	FFLYBACKWB_SEQ,a0
+zmnqnoflm6
 
 	move	*a13(plyr_seqflgs),a14
 	btst	DUNK_B,a14
@@ -1773,12 +1771,10 @@ zmnqi5050
 	jrhi	zmnqnofall
 
 	movi	FLYBACKWB_SEQ,a0	;If similar power, always do flyback
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm7
-;	movi	FFLYBACKWB_SEQ,a0
-;zmnqnoflm7
+	move	a9,a9
+	jrz	zmnqnoflm7
+	movi	FFLYBACKWB_SEQ,a0
+zmnqnoflm7
 	jruc	zmnqfall
 zmnqnofall
 
@@ -1798,12 +1794,10 @@ zmnqflail	move	*a8(OZVEL),a0,L
 	move	a0,*a8(OXVEL),L
 
 	movi	FLYBACKWB2_SEQ,a0	;If similar power, always do flyback
-;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm8
-;	movi	FFLYBACKWB2_SEQ,a0
-;zmnqnoflm8
+	move	a9,a9
+	jrz	zmnqnoflm8
+	movi	FFLYBACKWB2_SEQ,a0
+zmnqnoflm8
 	jruc	zmnqfall
 
 zmnqfb
@@ -1813,12 +1807,10 @@ zmnqfb
 ;What else?
 	calla	pushed_speech
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm9
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm9
+	move	a9,a9
+	jrz	zmnqnoflm9
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm9
 
 	move	*a13(plyr_seqflgs),a14
 	btst	DUNK_B,a14
@@ -1835,11 +1827,9 @@ zmnqfb
 	jrgt	zmnqnorm5
 
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm10
-;	movi	FFLYBACK_SEQ,a0
+	move	a9,a9
+	jrz	zmnqnoflm10
+	movi	FFLYBACK_SEQ,a0
 zmnqnoflm10
 
 	jruc	zmnqfall
@@ -1868,12 +1858,10 @@ zmnqflyout
 	jrhi	zmnqfly_short
 
 	movi	FLYBACK_SEQ,a0		;If similar power, always do flyback
-;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm11
-;	movi	FFLYBACK_SEQ,a0
-;zmnqnoflm11
+	move	a9,a9
+	jrz	zmnqnoflm11
+	movi	FFLYBACK_SEQ,a0
+zmnqnoflm11
 	jruc	zmnqfall
 
 zmnqfly_short
@@ -1888,12 +1876,10 @@ zmnqfly_short
 	move	a0,*a8(OXVEL),L
 
 	movi	FLYBACK2_SEQ,a0		;If similar power, always do flyback
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm12
-;	movi	FFLYBACK2_SEQ,a0
-;zmnqnoflm12
+	move	a9,a9
+	jrz	zmnqnoflm12
+	movi	FFLYBACK2_SEQ,a0
+zmnqnoflm12
 
 	jruc	zmnqfall
 
@@ -1902,12 +1888,10 @@ zmnqchkstag
 	jrz	zmnqstag			;On gnd?
 
 	movi	FALL_SEQ,a0		;If similar power, always do flyback
-;;	move	a9,a9
-;	move	@fatcheck,a2
-;	move	a2,a2
-;	jrz	zmnqnoflm13
-;	movi	FFALL_SEQ,a0
-;zmnqnoflm13
+	move	a9,a9
+	jrz	zmnqnoflm13
+	movi	FFALL_SEQ,a0
+zmnqnoflm13
 
 	cmp	a14,a0
 	jrne	zmnqfall
