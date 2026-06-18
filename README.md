@@ -11,6 +11,8 @@
 - **Sound table** — structured CSV for all game sounds
 - **Kitzrow samples** — groundwork for commentary audio
 - **Build system** — pure Python build scripts (no `srec_cat`/`fsutil`/PowerShell needed)
+- **Updated rosters** - teams have been updated to the final 1996-97 rosters
+- **Updated uniforms** - every teams' uniforms reflect their team colors for the 1996-97 season
 
 ## Requirements
 
