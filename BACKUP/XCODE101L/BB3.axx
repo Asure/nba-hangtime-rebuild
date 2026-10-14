@@ -3870,15 +3870,14 @@ fatalp
 ;	or	a1,a0
 ;	move	a0,@fatality
 
-	move    @fatality,a0     ; load current fatality value
-	cmpi    2,a9             ; is a9 >= 2?
-	jrlt    add1             ; if a9 < 2, add 1
-	addk    2,a0             ; a9 is 2 or 3, add 2
-	jruc    store
-add1
-   	addk    1,a0             ; a9 is 0 or 1, add 1
-store:
-	move    a0,@fatality     ; store updated value
+	move	@fatality,a0	;bit 0=tm1, bit 1=tm2
+	movk	1,a1
+	cmpi	2,a9		;plyr 0,1 = tm1; 2,3 = tm2
+	jrlt	fattm1
+	movk	2,a1
+fattm1
+	or	a1,a0		;OR, not add: safe if teammate/repeat enters combo
+	move	a0,@fatality
 
 
 ;DJT Start
