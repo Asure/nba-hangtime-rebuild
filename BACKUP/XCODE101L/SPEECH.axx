@@ -122,535 +122,529 @@
  SX	crwdbd2_tune,07002H,799,0dbH
  SX	crwd_arbl_sp,02404H,135,01edH	;f0
 
- SX	midway_sp,   0200DH,67, 0b00H
+ SX	midway_sp,   0200DH,67, 0b00H	;"Midway Presents"
 ;DJT Start
- SX	max_hngtm_sp,0200DH,93, 07beH ;"Super Maximum Hangtime"
-; SX	max_hngtm_sp,0200DH,93, 0b8fH ;"maximum hangtime"
-; SX	nba_hngtm_sp,0200DH,99, 0b02H ;"nba hangtime"
+ SX	max_hngtm_sp,0200DH,93, 07beH	;"Super Maximum Hangtime"
+; SX	max_hngtm_sp,0200DH,93, 0b8fH	;"maximum hangtime"
+; SX	nba_hngtm_sp,0200DH,99, 0b02H	;"nba hangtime"
 ;DJT End
- SX	at_hlftme_sp,0150DH,61, 0adcH
- SX	gm_undrwy_sp,0150DH,70, 0adbH
- SX	heres_tip_sp,0150DH,61, 0b20H
- SX	overtime_sp, 0200DH,60, 0addH
- SX	showtm,      0250DH,75, 0a9bH
- SX	tst_triva_sp,0100DH,76, 0afdH
+ SX	at_hlftme_sp,0150DH,61, 0adcH   ;"We're at halftime!"
+ SX	gm_undrwy_sp,0150DH,70, 0adbH	;"And this game is underway!"
+ SX	heres_tip_sp,0150DH,61, 0b20H	;"Here's the tip"
+ SX	overtime_sp, 0200DH,60, 0addH	;"Overtime!"
+ SX	showtm,      0250DH,75, 0a9bH	;"Showtime!"
+ SX	tst_triva_sp,0100DH,76, 0afdH	;"Test your trivia knowledge"
 
 
- SX	has_sp,      0100DH,20, 0af1H
+ SX	has_sp,      0100DH,20, 0af1H	;"Has"
 ;DJT Start
- SX	with_sp,     0100DH,16, 0aefH
- SX	leadng_by_sp,0100DH,56, 084eH
- SX	leads_by_sp, 0100DH,51, 084bH
- SX	lead_by_sp,  0100DH,41, 0849H
- SX	out_front_sp,0100DH,48, 0850H
- SX	by_sp,       0100DH,18, 0851H
+ SX	with_sp,     0100DH,16, 0aefH	;"With"
+ SX	leadng_by_sp,0100DH,56, 084eH   ;"Leading by"
+ SX	leads_by_sp, 0100DH,51, 084bH   ;"Leads by"
+ SX	lead_by_sp,  0100DH,41, 0849H   ;"Lead by"
+ SX	out_front_sp,0100DH,48, 0850H   ;"Out in front" 
+ SX	by_sp,       0100DH,18, 0851H   ;"By"
 ;DJT End
- SX	have_lead_sp,0100DH,57, 084fH
- SX	take_lead_sp,0100DH,49, 084cH
- SX	taks_lead_sp,0100DH,56, 084dH
+ SX	have_lead_sp,0100DH,57, 084fH   ;"Have the lead"
+ SX	take_lead_sp,0100DH,49, 084cH	;"take the lead"
+ SX	taks_lead_sp,0100DH,56, 084dH	;"takes the lead"
 
 ;DJT Start
- SX	longway_sp,  0100DH,73, 086eH
- SX	downby_sp,   0100DH,36, 0845H
- SX	behind_by_sp,0100DH,49, 0853H
- SX	catchg_up_sp,0100DH,41, 0873H
+ SX	longway_sp,  0100DH,73, 086eH	;"A long way to go"
+ SX	downby_sp,   0100DH,36, 0845H	;"Down by"
+ SX	behind_by_sp,0100DH,49, 0853H	;"Behind by"
+ SX	catchg_up_sp,0100DH,41, 0873H	;"Catching up"
 
- SX	tiegm_sp,    0100DH,44, 0864H
- SX	tiethegm_sp, 0100DH,51, 0869H
- SX	tied_at_sp,  0100DH,69, 0866H
+ SX	tiegm_sp,    0100DH,44, 0864H	;"Tie game"
+ SX	tiethegm_sp, 0100DH,51, 0869H	;"Tie the game"
+ SX	tied_at_sp,  0100DH,69, 0866H	;"tied at"
 ;DJT End
- SX	minute_sp,   0100DH,59, 0ab4H
+ SX	minute_sp,   0100DH,59, 0ab4H	;"One minute to go"
 
- SX     vs_sp,       0100DH,47, 0509H
- SX	wingame_sp,  0200DH,45, 0863H
- SX	baddec_sp,   0100DH,56, 09ebH
- SX	ohmy,  	     0100DH,62, 096fH
- SX	fancy,	     0100DH,51, 0ae6H
- SX	matchup_sp,  0100DH,65, 0ab1H
- SX	wideopen_sp, 0100DH,41, 0939H
- SX	no_prsure_sp,0100DH,48, 0a3dH
- SX	opn_for_3_sp,0100DH,69, 0b0aH
- SX	all_alone_sp,0100DH,42, 091cH
- SX	its_good_sp, 0130DH,61, 0819H
- SX	it_is_sp,    0100DH,65, 0816H
- SX	off_in_time, 0100DH,93, 0814H
- SX	shrt_rng_sp, 0100DH,56, 07ebH
- SX	finese_it_sp,0100DH,47, 080fH
- SX	frm_post_sp, 0100DH,41, 07e4H
- SX	baby_hook_sp,0100DH,47, 0802H
- SX	half_hook_sp,0100DH,46, 0804H
- SX	hook_shot_sp,0100DH,41, 0805H
- SX	sky_hook_sp, 0100DH,74, 083fH
- SX	sky_hook2_sp,0100DH,72, 0b09H
- SX	rgt_hndr_sp, 0100DH,69, 0830H
- SX	lft_hndr_sp, 0100DH,67, 0831H
- SX	for_two_sp,  0100DH,40, 0b08H
- SX	from_15_sp,  0100DH,45, 0b0dH
- SX	from_18_sp,  0100DH,45, 0b0eH
- SX	from_20_sp,  0100DH,35, 0b0fH
- SX	shoots1_sp,  0100DH,37, 083cH	;**
- SX	shoots2_sp,  0100DH,42, 083cH
- SX	shoots3_sp,  0100DH,33, 083dH
- SX	from_arc_sp, 0100DH,40, 07e1H
+ SX     vs_sp,       0100DH,47, 0509H	;"Versus"
+ SX	wingame_sp,  0200DH,45, 0863H	;"Win the game!"
+ SX	baddec_sp,   0100DH,56, 09ebH	;"Bad decision!"
+ SX	ohmy,  	     0100DH,62, 096fH	;"Oh My!"
+ SX	fancy,	     0100DH,51, 0ae6H	;"Fancy Footwork!"
+ SX	matchup_sp,  0100DH,65, 0ab1H	;"Tonight's matchup"
+ SX	wideopen_sp, 0100DH,41, 0939H	;"Wide open!"
+ SX	no_prsure_sp,0100DH,48, 0a3dH	;"No pressure"
+ SX	opn_for_3_sp,0100DH,69, 0b0aH	;"Open for three!"
+ SX	all_alone_sp,0100DH,42, 091cH	;"All alone.."
+ SX	its_good_sp, 0130DH,61, 0819H	;"It's good!"
+ SX	it_is_sp,    0100DH,65, 0816H	;"It is.."
+ SX	off_in_time, 0100DH,93, 0814H	;"Got it away in time"
+ SX	shrt_rng_sp, 0100DH,56, 07ebH	;"From short range"
+ SX	finese_it_sp,0100DH,47, 080fH	;"Finesses it!"
+ SX	frm_post_sp, 0100DH,41, 07e4H	;"From the post"
+ SX	baby_hook_sp,0100DH,47, 0802H	;"A baby hook!"
+ SX	half_hook_sp,0100DH,46, 0804H	;"A half hook"
+ SX	hook_shot_sp,0100DH,41, 0805H	;"A hook shot"
+ SX	sky_hook_sp, 0100DH,74, 083fH	;"Launches a sky hook"
+ SX	sky_hook2_sp,0100DH,72, 0b09H	;"With the sky hook!"
+ SX	rgt_hndr_sp, 0100DH,69, 0830H	;"A running right hander"
+ SX	lft_hndr_sp, 0100DH,67, 0831H	;"A running left hander"
+ SX	for_two_sp,  0100DH,40, 0b08H	;"For two!"
+ SX	from_15_sp,  0100DH,45, 0b0dH	;"From fifteen!"
+ SX	from_18_sp,  0100DH,45, 0b0eH	;"From eighteen!"
+ SX	from_20_sp,  0100DH,35, 0b0fH	;"From twenty!"
+ SX	shoots1_sp,  0100DH,37, 083cH	;"He shoots!"
+ SX	shoots2_sp,  0100DH,42, 083cH	;"He shoots!"
+ SX	shoots3_sp,  0100DH,33, 083dH	;"Shoots!"
+ SX	from_arc_sp, 0100DH,40, 07e1H	;"From the arc!"
 ;DJT Start
- SX	tp_circle_sp,0100DH,63, 0b1cH
- SX	fm_3pline_sp,0100DH,80, 07e5H
+ SX	tp_circle_sp,0100DH,63, 0b1cH	;"From the top of the circle"
+ SX	fm_3pline_sp,0100DH,80, 07e5H	;"From the three point line"
 ;DJT End
- SX	for_thre1_sp,0100DH,47, 07e6H
- SX	frm_dwntn_sp,0100DH,67, 07e9H
- SX	bhd_3_arc_sp,0100DH,69, 0825H
- SX	frm_3_arc_sp,0100DH,65, 0826H
- SX	for_thre2_sp,0100DH,45, 082aH
- SX	for_thre3_sp,0100DH,51, 0839H
- SX	frm_outsd_sp,0100DH,63, 083bH
- SX	unlod_one_sp,0100DH,68, 07ffH
- SX	frm_l_rng_sp,0100DH,63, 0801H
- SX	hail_mary_sp,0100DH,59, 0a22H
- SX	agn_shoot_sp,0100DH,55, 080dH
- SX	it_culdbe_sp,0100DH,60, 080cH
- SX	could_tie_sp,0100DH,77, 0b04H
- SX	outof_rng_sp,0100DH,84, 09b9H
- SX	outof_rg2_sp,0100DH,84, 09b9H
- SX	out_cntrl_sp,0100DH,58, 09bdH
- SX	rainbow_sp,  0110DH,70, 09f2H
- SX	difficult_sp,0100DH,56, 09afH
+ SX	for_thre1_sp,0100DH,47, 07e6H	;"For three!"
+ SX	frm_dwntn_sp,0100DH,67, 07e9H	;"From down town"
+ SX	bhd_3_arc_sp,0100DH,69, 0825H	;"Behind the three point arc"
+ SX	frm_3_arc_sp,0100DH,65, 0826H	;"From the three point arc"
+ SX	for_thre2_sp,0100DH,45, 082aH	;"For three!"
+ SX	for_thre3_sp,0100DH,51, 0839H	;"For three!"
+ SX	frm_outsd_sp,0100DH,63, 083bH	;"From outside!"
+ SX	unlod_one_sp,0100DH,68, 07ffH	;"He unload one!"
+ SX	frm_l_rng_sp,0100DH,63, 0801H	;"From long range"
+ SX	hail_mary_sp,0100DH,59, 0a22H	;"A hail mary"
+ SX	agn_shoot_sp,0100DH,55, 080dH	;"Again with a shot"
+ SX	it_culdbe_sp,0100DH,60, 080cH	;"It could be.."
+ SX	could_tie_sp,0100DH,77, 0b04H	;"This could tie the game!"
+ SX	outof_rng_sp,0100DH,84, 09b9H	;"Way out of his range"
+ SX	outof_rg2_sp,0100DH,84, 09b9H	;"Way out of his range"
+ SX	out_cntrl_sp,0100DH,58, 09bdH	;"He's out of control!"
+ SX	rainbow_sp,  0110DH,70, 09f2H	;"With the rainbow"
+ SX	difficult_sp,0100DH,56, 09afH	;"Difficult shot.."
 
- SX	swith_hnd_sp,0110DH,53, 0823H
- SX	spn_shtup_sp,0110DH,56, 07fdH
- SX	a_fngr_rl_sp,0110DH,55, 0902H
+ SX	swith_hnd_sp,0110DH,53, 0823H	;"He switches hands!"
+ SX	spn_shtup_sp,0110DH,56, 07fdH	;"He spins a shot off"
+ SX	a_fngr_rl_sp,0110DH,55, 0902H	;"A finger roll"
                                                              
- SX	hnd_face_sp, 0100DH,67, 0b24H
- SX	ill_shot_sp, 0100DH,60, 0b25H
- SX	frcd_shot_sp,0100DH,56, 0b2dH
- SX	wild_shot_sp,0100DH,56, 0b2eH	;9bb
+ SX	hnd_face_sp, 0100DH,67, 0b24H	;"With a hand in his face"
+ SX	ill_shot_sp, 0100DH,60, 0b25H	;"Ill advised shot"
+ SX	frcd_shot_sp,0100DH,56, 0b2dH	;"Forced a shot off"
+ SX	wild_shot_sp,0100DH,56, 0b2eH	;"Wild Shot!"
 ;DJT Start
- SX	lfts_wild_sp,0100DH,87, 09bbH
+ SX	lfts_wild_sp,0100DH,87, 09bbH	;"He lifts a wild shot"
 ;DJT End
 
- SX	alley_oop_sp,0100DH,63, 0a18H
- SX	alyoop_ps_sp,0100DH,63, 0a1aH
- SX	thr_tmwrk_sp,0100DH,61, 0a9dH
- SX	thr_smkn_sp, 0100DH,57, 0af5H
- SX	thr_zone_sp, 0100DH,65, 0b05H
- SX	whta_show_sp,0100DH,57, 0958H		;AMM: Unused
+ SX	alley_oop_sp,0100DH,63, 0a18H	;"There's the alley-oop!"
+ SX	alyoop_ps_sp,0100DH,63, 0a1aH	;"Alley-oop pass"
+ SX	thr_tmwrk_sp,0100DH,61, 0a9dH	;"There's teamwork!"
+ SX	thr_smkn_sp, 0100DH,57, 0af5H	;"They are smoking!"
+ SX	thr_zone_sp, 0100DH,65, 0b05H	;"They're in the zone!"
+ SX	whta_show_sp,0100DH,57, 0958H	;"What a show!"
 
-;AMM New Alleyoop stuff from showtime
- SX	alleyoop2_sp,0100DH,63, 1004H
- SX	alleyoop3_sp,0100DH,63, 1005H
- SX	alleyoop4_sp,0100DH,63, 1006H
- SX	alleyoop6_sp,0100DH,63, 1007H
- SX	alleyoop7_sp,0100DH,63, 1008H
- SX	alleyoop8_sp,0100DH,63, 1009H
-
- SX	dble_dnk_sp, 0120DH,55, 0b3aH
- SX	dble_dnk2_sp,0120DH,78, 0b38H
- SX	lob_pass_sp, 0120DH,55, 0a1cH
- SX	scp_tmate_sp,0120DH,85, 0b3bH
+ SX	dble_dnk_sp, 0120DH,55, 0b3aH	;"Double dunk!"				x
+ SX	dble_dnk2_sp,0120DH,78, 0b38H	;"It's a double dunk!"			x
+ SX	lob_pass_sp, 0120DH,55, 0a1cH	;"A lob pass"
+ SX	scp_tmate_sp,0120DH,85, 0b3bH	;"He scoops to his teammate!"
 ;DJT Start
- SX	the_scoop_sp,0120DH,51, 0b3cH
+ SX	the_scoop_sp,0120DH,51, 0b3cH	;"The scoop!"
 ;DJT End
- SX	lev_tmate_sp,0120DH,83, 0b3dH
+ SX	lev_tmate_sp,0120DH,83, 0b3dH	;"Scoops it to his teammate!"
 ;DJT Start
- SX	is_legal_sp ,00F0DH,65, 0b21H
+ SX	is_legal_sp ,00F0DH,65, 0b21H	;"Is that legal!?"
 ;DJT End
 
 ;DJT Start
- SX	got_hspot_sp,0140DH,76, 0b40H
+ SX	got_hspot_sp,0140DH,76, 0b40H	;"He's got a hotspot"
 ;DJT End
 
- SX	cantbuy_sp,  0100DH,68, 09ecH
- SX	rtle_arnd_sp,0100DH,77, 09d2H
- SX	ugly_shot_sp,0100DH,71, 09e6H
- SX	putup_brk_sp,0100DH,66, 09b2H
+ SX	cantbuy_sp,  0100DH,68, 09ecH	;"Can't buy a bucket"
+ SX	rtle_arnd_sp,0100DH,77, 09d2H	;"Rattles around and rolls out"
+ SX	ugly_shot_sp,0100DH,71, 09e6H	;"Ugly shot!"
+ SX	putup_brk_sp,0100DH,66, 09b2H	;"Puts up a brick!"
 ;DJT Start
- SX	look_out_sp, 0100DH,41, 0a6fH
+ SX	look_out_sp, 0100DH,41, 0a6fH	;"Look out!"
 ;DJT End
- SX	nogood_sp,   0130DH,31, 09d4H
- SX	mis_fires_sp,0100DH,56, 09d8H
+ SX	nogood_sp,   0130DH,31, 09d4H	;"No good!"
+ SX	mis_fires_sp,0100DH,56, 09d8H	;"He misfired"
 ;DJT Start
- SX	what_was_sp, 0100DH,66, 0b2bH
+ SX	what_was_sp, 0100DH,66, 0b2bH	;"What was that!"
 ;DJT End
- SX	there_brk_sp,0100DH,66, 09b5H
- SX	dwn_luck_sp, 0100DH,54, 0ac9H
- SX	missed_sp,   0100DH,30, 09d6H
- SX	mised_agn_sp,0100DH,59, 09d7H		;unused
- SX	he_misagn_sp,0100DH,65, 09b7H		;he missed again
- SX	hita_barn_sp,0100DH,124,0a98H
- SX	wht_thnk2_sp,0100DH,88, 09edH
- SX	wht_distr_sp,0100DH,73, 0aa8H
- SX	at_buzzer_sp,0100DH,57, 07e8H
- SX	sht_ball_sp, 0100DH,53, 0aadH
+ SX	there_brk_sp,0100DH,66, 09b5H	;"There's a brick!"
+ SX	dwn_luck_sp, 0100DH,54, 0ac9H	;"Down on his luck!"
+ SX	missed_sp,   0100DH,30, 09d6H	;"Missed!"
+ SX	mised_agn_sp,0100DH,59, 09d7H	;"Missed again!"
+ SX	he_misagn_sp,0100DH,65, 09b7H	;"He missed again!"
+ SX	hita_barn_sp,0100DH,124,0a98H	;"He couldn't hit the back side of a barn!"
+ SX	wht_thnk2_sp,0100DH,88, 09edH	;"What was he thinking?"
+ SX	wht_distr_sp,0100DH,73, 0aa8H	;"What a disaster!"
+ SX	at_buzzer_sp,0100DH,57, 07e8H	;"At the buzzer"
+ SX	sht_ball_sp, 0100DH,53, 0aadH	;"Shoot the ball!"
 
- SX	off_rim_sp,  0100DH,46, 09bfH
- SX	off_frnt_sp, 0100DH,54, 09c9H
- SX	holes_out_sp,0100DH,58, 09adH
- SX	bnce_out_sp, 0100DH,42, 09d0H
- SX	bnce_away_sp,0100DH,54, 09d1H
- SX	away_side_sp,0100DH,56, 09c7H
- SX	spins_out_sp,0100DH,45, 09cbH
- SX	side_rim_sp, 0100DH,61, 09c5H
- SX	off_heel_sp, 0100DH,54, 09c3H		;AMM
- SX	no_sp,       0100DH,30, 09ccH
- SX	nicly_dne_sp,0100DH,69, 0a49H
- SX	got_skilz_sp,0100DH,67, 0a97H
+ SX	off_rim_sp,  0100DH,46, 09bfH	;"Off the rim"
+ SX	off_frnt_sp, 0100DH,54, 09c9H	;"Off the front of the rim"
+ SX	holes_out_sp,0100DH,58, 09adH	;"And it holes out"
+ SX	bnce_out_sp, 0100DH,42, 09d0H	;"Bounces out"
+ SX	bnce_away_sp,0100DH,54, 09d1H	;"Bounces away"
+ SX	away_side_sp,0100DH,56, 09c7H	;"Away to the side"
+ SX	spins_out_sp,0100DH,45, 09cbH	;"Spins out"
+ SX	side_rim_sp, 0100DH,61, 09c5H	;"Off the side of the rim"
+ SX	off_heel_sp, 0100DH,54, 09c3H	;"Off the heel of the rim"
+ SX	no_sp,       0100DH,30, 09ccH	;"Nooo!"
+ SX	nicly_dne_sp,0100DH,69, 0a49H	;"Nicely done!"
+ SX	got_skilz_sp,0100DH,67, 0a97H	;"He's got skills!"
 
- SX	misd_evry_sp,0100DH,66, 09e2H		;never heard it.
- SX	way_shrt_sp, 0100DH,57, 09dfH		;unused?
- SX	misd_mile_sp,0100DH,72, 09e3H		;AMM
- SX	teribl_sh_sp,0100DH,57, 09baH
- SX	airball_sp,  0100DH,56, 09daH		;unused?
+ SX	misd_evry_sp,0100DH,66, 09e2H	;"He missed everything!"
+ SX	way_shrt_sp, 0100DH,57, 09dfH	;"Way short!"
+ SX	misd_mile_sp,0100DH,72, 09e3H	;"Missed by a mile!"
+ SX	teribl_sh_sp,0100DH,57, 09baH	;"Terrible shot!"
+ SX	airball_sp,  0100DH,56, 09daH	;"Airball!"
 
- SX	cannonbal_sp,0110DH,58, 095bH
- SX	sumrslts_sp, 0110DH,90, 096aH
- SX	goes_flyg_sp,0110DH,68, 0acdH
- SX	hiabv_rim_sp,0110DH,49, 0ad4H
- SX	flies_air_sp,0110DH,100,096cH
- SX	gldes_air_sp,0110DH,99, 096dH
- SX	raises_up_sp,0110DH,45, 082dH
- SX	serious_h_sp,0110DH,79, 0b03H
- SX	learn_tht_sp,0110DH,54, 097aH
- SX	goes_up_sp,  00905H,37, 0951H
- SX	goes_hoop_sp,0110DH,59, 095fH
- SX	tks2_hoop_sp,0110DH,51, 0a36H
- SX	fly_1hdnr_sp,0110DH,76, 096eH		;AMM
- SX	didnt_knw_sp,0110DH,77, 097fH
- SX	haning_sp,   0110DH,34, 0a0fH		;AMM "Hangin!"
- SX	ooooooh_sp,  0110DH,65, 0af7H
- SX	ooooooh2_sp, 0110DH,40, 0af7H
- SX	thrgh_air_sp,0110DH,50, 096bH
- SX	way_upair_sp,0110DH,75, 0974H
+ SX	cannonbal_sp,0110DH,58, 095bH	;"The cannonball!"
+ SX	sumrslts_sp, 0110DH,90, 096aH	;"Summersaults through the air"
+ SX	goes_flyg_sp,0110DH,68, 0acdH	;"He goes flying"
+ SX	hiabv_rim_sp,0110DH,49, 0ad4H	;"High above the rim"
+ SX	flies_air_sp,0110DH,100,096cH	;"He flies through the air"
+ SX	gldes_air_sp,0110DH,99, 096dH	;"He glides through the air"
+ SX	raises_up_sp,0110DH,45, 082dH	;"Raises up"
+ SX	serious_h_sp,0110DH,79, 0b03H	;"Serious hangtime"
+ SX	learn_tht_sp,0110DH,54, 097aH	;"Where did he learn that!"
+ SX	goes_up_sp,  00905H,37, 0951H	;"Goes up!"
+ SX	goes_hoop_sp,0110DH,59, 095fH	;"He goes to the hoop!"
+ SX	tks2_hoop_sp,0110DH,51, 0a36H	;"Takes it to the hoop!"
+ SX	fly_1hdnr_sp,0110DH,76, 096eH	;"A Flying One Hander"
+ SX	didnt_knw_sp,0110DH,77, 097fH	;"Didn't know he could do that!"
+ SX	haning_sp,   0110DH,34, 0a0fH	;"Hanging!"
+ SX	ooooooh_sp,  0110DH,65, 0af7H	;"Oooooooh!"
+ SX	ooooooh2_sp, 0110DH,40, 0af7H	;"Oooooooh!"
+ SX	thrgh_air_sp,0110DH,50, 096bH	;"Through the air"
+ SX	way_upair_sp,0110DH,75, 0974H	;"Way up in the air!"
 ;DJT Start
- SX	lch_atbkt_sp,0110DH,100,0b03H		;serious hangtime
+ SX	lch_atbkt_sp,0110DH,100,0b03H	;"Serious hangtime"
 ;DJT End
- SX	catapults_sp,0110DH,49, 09abH
- SX	tomahk_dk_sp,0110DH,66, 0965H
- SX	tomahk_hm_sp,0110DH,79, 0966H
+ SX	catapults_sp,0110DH,49, 09abH	;"He catapults!"
+ SX	tomahk_dk_sp,0110DH,66, 0965H	;"A tomahawk!"
+ SX	tomahk_hm_sp,0110DH,79, 0966H	;"Tomahawks it home!"
 
- SX	shuld_pas_sp,0100DH,75, 0a6eH
- SX	he_lst_bl_sp,0100DH,75, 0a74H
- SX	he_lostit_sp,0100DH,75, 0a77H
- SX	bal_loose_sp,0100DH,75, 0a7dH
+ SX	shuld_pas_sp,0100DH,75, 0a6eH	;"He should have passed"
+ SX	he_lst_bl_sp,0100DH,75, 0a74H	;"He lost the ball"
+ SX	he_lostit_sp,0100DH,75, 0a77H	;"He looses it"
+ SX	bal_loose_sp,0100DH,75, 0a7dH	;"The ball is loose"
 
- SX	fades_sp,    0100DH,21, 0b10H
- SX	fadeaway_sp, 0100DH,80, 0b11H
- SX	leans_bck_sp,0100DH,80, 0b17H
- SX	leans_sp,    0100DH,21, 0b14H
- SX	leans_in_sp, 0100DH,80, 0b16H
- SX	pull_jmpr_sp,0100DH,80, 0838H
- SX	bslne_lnr_sp,0100DH,45, 0b30H
- SX	getslkbnc_sp,0100DH,60, 092eH		;gets a lucky bounce (longer)
- SX	luky_bnce_sp,0100DH,58, 092fH		;a lucky bounce
- SX	per_luck_sp, 0100DH,64, 0946H		;AMM
+ SX	fades_sp,    0100DH,21, 0b10H	;"Fades!"
+ SX	fadeaway_sp, 0100DH,80, 0b11H	;"Fades away!"
+ SX	leans_bck_sp,0100DH,80, 0b17H	;"Leans away!"
+ SX	leans_sp,    0100DH,21, 0b14H	;"Leans"
+ SX	leans_in_sp, 0100DH,80, 0b16H	;"Leans in"
+ SX	pull_jmpr_sp,0100DH,80, 0838H	;"A pullup jumper"
+ SX	bslne_lnr_sp,0100DH,45, 0b30H	;"Baseline leaner"
+ SX	getslkbnc_sp,0100DH,60, 092eH	;"Gets a lucky bounce"
+ SX	luky_bnce_sp,0100DH,58, 092fH	;"A lucky bounce"
+ SX	per_luck_sp, 0100DH,64, 0946H	;"That was pure luck"
 ;DJT Start
- SX	luky_bskt_sp,0100DH,82, 0948H		;AMM "There's a lucky basket"
+ SX	luky_bskt_sp,0100DH,82, 0948H	;"That's a lucky basket!"
 ;DJT End
 	
 ;DJT Start
- SX	kakaboom_sp, 0100DH,69, 091bH
- SX	kaboom1_sp,  0100DH,38, 0b2aH	;91a
- SX	kaboom2_sp,  0100DH,34, 091aH
+ SX	kakaboom_sp, 0100DH,69, 091bH	;"Ka Ka Kaboom!"
+ SX	kaboom1_sp,  0100DH,38, 0b2aH	;"Kaboom!"
+ SX	kaboom2_sp,  0100DH,34, 091aH	;"Kaboooom!"
 ;DJT End
- SX	isit_shoe_sp,0100DH,62, 091eH
+ SX	isit_shoe_sp,0100DH,62, 091eH	;"Is it the shoes?"
 
- SX	facial_sp,   0100DH,80, 0b42H
+ SX	facial_sp,   0100DH,80, 0b42H	;"Up close and personal"
 
- SX	unbelieve_sp,0100DH,53, 0931H
- SX	u_c_that_sp, 0100DH,65, 0932H
- SX	oh_man_sp,   0100DH,52, 0934H
- SX	no_stopng_sp,0100DH,75, 0942H
- SX	postr_jam_sp,0100DH,67, 0956H
- SX	jam_it_in_sp,0100DH,83, 095aH		;AMM
- SX	thndr_dnk_sp,0100DH,60, 0960H		;AMM
+ SX	unbelieve_sp,0100DH,53, 0931H	;"Unbelievable"
+ SX	u_c_that_sp, 0100DH,65, 0932H	;"Did you see that?"
+ SX	oh_man_sp,   0100DH,52, 0934H	;"Oh man!"
+ SX	no_stopng_sp,0100DH,75, 0942H	;"There's no stopping him!"
+ SX	postr_jam_sp,0100DH,67, 0956H	;"The poster jam!"
+ SX	jam_it_in_sp,0100DH,83, 095aH	;"He jams it in!"
+ SX	thndr_dnk_sp,0100DH,60, 0960H	;"Thunderous dunk!"
 ;DJT Start
- SX	throws_it_sp,0100DH,66, 0963H
- SX	pounds_it_sp,0100DH,62, 0964H
- SX	incredble_sp,0100DH,49, 0970H
- SX	superdunk_sp,0100DH,75, 0971H		;AMM - unused "A Super Dunk!"
- SX	incrd_sht_sp,0100DH,75, 090eH
+ SX	throws_it_sp,0100DH,66, 0963H	;"Throws it down!"
+ SX	pounds_it_sp,0100DH,62, 0964H	;"Pounds it home!"
+ SX	incredble_sp,0100DH,49, 0970H	;"Incredible!"
+ SX	superdunk_sp,0100DH,75, 0971H	;"A Super Dunk!"
+ SX	incrd_sht_sp,0100DH,75, 090eH	;"Incredible shot!"
 ; SX	supr_dnk_sp, 0100DH,61, 0971H	;**
 ; SX	mnstr_jam_sp,0100DH,70, 0971H
- SX	outstndng_sp,0100DH,67, 0aaaH		;AMM
+ SX	outstndng_sp,0100DH,67, 0aaaH	;"Outstanding!"
 ;DJT End
- SX	amazing_sp,  0100DH,57, 0912H
- SX	he_dnk_it_sp,0100DH,33, 0961H
- SX	dunks_it_sp, 0100DH,24, 0962H
- SX	jams_it_sp,  0100DH,35, 097cH
+ SX	amazing_sp,  0100DH,57, 0912H	;"Amazing!"
+ SX	he_dnk_it_sp,0100DH,33, 0961H	;"He dunks it!"
+ SX	dunks_it_sp, 0100DH,24, 0962H	;"Dunks it!"
+ SX	jams_it_sp,  0100DH,35, 097cH	;"Jams it!"
 
- SX	spect_dnk_sp,0100DH,81, 0988H
- SX	slam_dunk_sp,0100DH,51, 0989H		;AMM Unused? "Slam Dunk"
- SX	he_slams_sp, 0100DH,42, 098bH
- SX	with_ajam_sp,0100DH,65, 0997H		;AMM Unused "finishes with a jam"
- SX	with_aja2_sp,0100DH,49, 0998H
- SX	powr_jams_sp,0100DH,73, 09a6H
+ SX	spect_dnk_sp,0100DH,81, 0988H	;"Spectacular dunk!
+ SX	slam_dunk_sp,0100DH,51, 0989H	;"Slam Dunk"
+ SX	he_slams_sp, 0100DH,42, 098bH	;"He Slams!"
+ SX	with_ajam_sp,0100DH,65, 0997H	;"Finishes with a jam"
+ SX	with_aja2_sp,0100DH,49, 0998H	;"With a jam"
+ SX	powr_jams_sp,0100DH,73, 09a6H	;"He powerjams"
 
- SX	head_fake_sp,0050DH,24, 0a8eH
- SX	the_fake_sp, 0050DH,26, 0a8fH
- SX	pump_fake_sp,0050DH,30, 0a91H
+ SX	head_fake_sp,0050DH,24, 0a8eH	;"Headfake"
+ SX	the_fake_sp, 0050DH,26, 0a8fH	;"The fake"
+ SX	pump_fake_sp,0050DH,30, 0a91H	;"Pump fake"
 
- SX	hits_jmpr_sp,0100DH,25, 0906H
- SX	good_4two_sp,0100DH,50, 090aH
- SX	a_trey_sp,   0100DH,42, 082bH
- SX	he_scores_sp,0100DH,56, 093bH
- SX	scores_sp,   0100DH,37, 07deH
+ SX	hits_jmpr_sp,0100DH,25, 0906H	;"Hits the jumper"
+ SX	good_4two_sp,0100DH,50, 090aH	;"Good for two!"
+ SX	a_trey_sp,   0100DH,42, 082bH	;"A tray"
+ SX	he_scores_sp,0100DH,56, 093bH	;"He scores!"
+ SX	scores_sp,   0100DH,37, 07deH	;"Scores!"
 ;DJT Start
- SX	scores2_sp,  0100DH,52, 07dfH
+ SX	scores2_sp,  0100DH,52, 07dfH	;"Scoores!"
 ;DJT End
- SX	score_agn_sp,0100DH,70, 07f3H
- SX	good_agn_sp, 0100DH,47, 07f4H
- SX	yes_sp,      0100DH,33, 0b33H
- SX	goooood_sp,  0100DH,42, 0818H
- SX	goooood2_sp, 0100DH,42, 0903H
- SX	money_bnk_sp,0100DH,33, 0b33H
- SX	chk_it_up_sp,0100DH,56, 093bH
- SX	good_4_3_sp, 0100DH,69, 0929H
- SX	for_3_sp,    0100DH,58, 092aH	;AMM - For threeee
- SX	thats_3_sp,  0100DH,58, 092bH
- SX	fantastic_sp,0100DH,73, 0a99H
- SX	drains_it_sp,0100DH,38, 093fH
- SX	it_falls_sp, 0100DH,42, 090dH
- SX	falls_in_sp, 0100DH,48, 091fH
- SX	kncks_dwn_sp,0100DH,54, 092cH
+ SX	score_agn_sp,0100DH,70, 07f3H	;"Scores again!"
+ SX	good_agn_sp, 0100DH,47, 07f4H	;"Good again!"
+ SX	yes_sp,      0100DH,33, 0b33H	;"Yes!"
+ SX	goooood_sp,  0100DH,42, 0818H	;"Good!"
+ SX	goooood2_sp, 0100DH,42, 0903H	;"Good!"
+ SX	money_bnk_sp,0100DH,33, 0b33H	;"Yes!"
+ SX	chk_it_up_sp,0100DH,56, 093bH	;"he scores!"
+ SX	good_4_3_sp, 0100DH,69, 0929H	;"Good for three!"
+ SX	for_3_sp,    0100DH,58, 092aH	;"For threeee!"
+ SX	thats_3_sp,  0100DH,58, 092bH	;"That's a three!"
+ SX	fantastic_sp,0100DH,73, 0a99H	;"Fantastic!"
+ SX	drains_it_sp,0100DH,38, 093fH	;"He drains it!"
+ SX	it_falls_sp, 0100DH,42, 090dH	;"It falls"
+ SX	falls_in_sp, 0100DH,48, 091fH	;"Fals in"
+ SX	kncks_dwn_sp,0100DH,54, 092cH	;"Knocks it down!"
 ;DJT Start
- SX	and_drops_sp,0100DH,56, 0943H
+ SX	and_drops_sp,0100DH,56, 0943H	;"And it drops in"
 ;DJT End
- SX	dwn_well_sp, 0100DH,90, 094bH
- SX	bomshakalaka,0100DH,56, 0afcH
- SX	rama_dong_sp,0100DH,80, 0b47H
+ SX	dwn_well_sp, 0100DH,90, 094bH	;"And down the well it goes!"
+ SX	bomshakalaka,0100DH,56, 0afcH	;"Boom Shaka Laka!"
+ SX	rama_dong_sp,0100DH,80, 0b47H	;"Rama Lama Ding Dong!"
 
- SX	hlftm_ldr_sp,0160DH,73, 0ae9H
- SX	gmevr_ldr_sp,0160DH,73, 0aeaH
+ SX	hlftm_ldr_sp,0160DH,73, 0ae9H	;"The half time leader is.."
+ SX	gmevr_ldr_sp,0160DH,73, 0aeaH	;"The player of the game is.."
 
- SX	spin_mv1_sp, 0100DH,60, 07f7H
- SX	spin_mv2_sp, 0100DH,60, 0991H
- SX	spin_mv3_sp, 0100DH,60, 0993H
+ SX	spin_mv1_sp, 0100DH,60, 07f7H	;"Reeling and dealing"
+ SX	spin_mv2_sp, 0100DH,60, 0991H	;"A spin and a drive"
+ SX	spin_mv3_sp, 0100DH,60, 0993H	;"Spinning to the hole"
 
 ;DJT Start
- SX	chalk_it_sp, 0100DH,38, 0b48H
+ SX	chalk_it_sp, 0100DH,38, 0b48H	;"Chalk it up!"
 ;DJT End
- SX	book_it_sp,  0100DH,28, 08ffH
- SX	count_it_sp, 0100DH,39, 090bH
- SX	bingo_sp,    0100DH,41, 0ae2H
+ SX	book_it_sp,  0100DH,28, 08ffH	;"Book it!"
+ SX	count_it_sp, 0100DH,39, 090bH	;"Count it!"
+ SX	bingo_sp,    0100DH,41, 0ae2H	;"Bingo!"
 
- SX	ever_miss_sp,0100DH,77, 0a95H
- SX	hot_hand_sp, 0100DH,70, 093dH
- SX	on_fire_sp,  0150DH,83, 0972H
- SX	heatup_sp,   0130DH,54, 0b1eH
- SX	lightn_up_sp,0120DH,68, 0aa4H
- SX	smokin_sp,   0100DH,40, 0af6H
+ SX	ever_miss_sp,0100DH,77, 0a95H	;"Will he ever miss?"
+ SX	hot_hand_sp, 0100DH,70, 093dH	;"He's got a hot hand!"
+ SX	on_fire_sp,  0150DH,83, 0972H	;"He's on fire!"
+ SX	heatup_sp,   0130DH,54, 0b1eH	;"He's heating up"
+ SX	lightn_up_sp,0120DH,68, 0aa4H	;"He's lighting it up"
+ SX	smokin_sp,   0100DH,40, 0af6H	;"Smoking!"
 
- SX	swish_sp,    0100DH,37, 0917H
+ SX	swish_sp,    0100DH,37, 0917H	;"Swish!"
 ;DJT Start
- SX	swish2_sp,   0100DH,43, 0b29H
+ SX	swish2_sp,   0100DH,43, 0b29H	;"Swiss!"
 ;DJT End
- SX	rgt_thrgh_sp,0100DH,53, 0b4aH
- SX	botm_net_sp, 0100DH,67, 0b4cH
- SX	ngbut_net_sp,0100DH,85, 0b4bH
- SX	whata_sht_sp,0100DH,47, 0937H
- SX	great_sht_sp,0100DH,54, 0935H
+ SX	rgt_thrgh_sp,0100DH,53, 0b4aH	;"Right through the net"
+ SX	botm_net_sp, 0100DH,67, 0b4cH	;"Nothing but the bottom of the net"
+ SX	ngbut_net_sp,0100DH,85, 0b4bH	;"All net and nothing else"
+ SX	whata_sht_sp,0100DH,47, 0937H	;"What a shot!"
+ SX	great_sht_sp,0100DH,54, 0935H	;"Great shot!"
 ;DJT Start
- SX	greatshot_sp,0100DH,47, 090fH
+ SX	greatshot_sp,0100DH,47, 090fH	;"Great shot!"
 ;DJT End
- SX	good_sht_sp, 0100DH,36, 0938H
- SX	he_uncon_sp, 0100DH,61, 0914H
+ SX	good_sht_sp, 0100DH,36, 0938H	;"Good shot!"
+ SX	he_uncon_sp, 0100DH,61, 0914H	;"He's unconcious!"
 
- SX	banked_it_sp,0100DH,27, 0829H
- SX	a_banker_sp, 0100DH,33, 0811H
- SX	soft_glas_sp,0100DH,95, 0810H
+ SX	banked_it_sp,0100DH,27, 0829H	;"Banks it!"
+ SX	a_banker_sp, 0100DH,33, 0811H	;"A Bank Shot!"
+ SX	soft_glas_sp,0100DH,95, 0810H	;"Softly off the glass"
 
- SX	off_bkbrd_sp,0100DH,80, 0827H
- SX	off_glass_sp,0100DH,80, 083aH
- SX	kild_smne_sp,0100DH,110,09eeH
- SX	off_trgt_sp, 0100DH,80, 09e1H
- SX	sht_stunk_sp,0100DH,97, 09e8H
- SX	wht_thnkg_sp,0100DH,88, 09edH
+ SX	off_bkbrd_sp,0100DH,80, 0827H	;"Off the backboard"
+ SX	off_glass_sp,0100DH,80, 083aH	;"Off the glass"
+ SX	kild_smne_sp,0100DH,110,09eeH	;"That shot could have killed somebody"
+ SX	off_trgt_sp, 0100DH,80, 09e1H	;"Way off target"
+ SX	sht_stunk_sp,0100DH,97, 09e8H	;"That shot stunk"
+ SX	wht_thnkg_sp,0100DH,88, 09edH	;"What was he thinking?"
 
- SX	fr_thw_ln_sp,0100DH,65, 0837H
- SX	top_key_sp,  0100DH,70, 0807H
- SX	frm_paint_sp,0100DH,40, 07edH
- SX	frm_wing_sp, 0100DH,38, 07e7H
- SX	lnch_jmpr_sp,0100DH,59, 083eH
- SX	stp_n_pop_sp,0100DH,75, 0832H
- SX	fires_jumpr, 0100DH,55, 082eH
- SX	ltle_jmpr_sp,0100DH,48, 07f2H
+ SX	fr_thw_ln_sp,0100DH,65, 0837H	;"From the free throw line"
+ SX	top_key_sp,  0100DH,70, 0807H	;"From the top of the key"
+ SX	frm_paint_sp,0100DH,40, 07edH	;"From the paint"
+ SX	frm_wing_sp, 0100DH,38, 07e7H	;"From the wing"
+ SX	lnch_jmpr_sp,0100DH,59, 083eH	;"Launces the jumper"
+ SX	stp_n_pop_sp,0100DH,75, 0832H	;"Stops and pops"
+ SX	fires_jumpr, 0100DH,55, 082eH	;"Fires the jumper"
+ SX	ltle_jmpr_sp,0100DH,48, 07f2H	;"A little jumper"
 
- SX	fingr_rol_sp,0100DH,46, 080eH
- SX	figr_itin_sp,0100DH,90, 0901H
- SX	fingr_rl2_sp,0100DH,46, 080eH
- SX	lay_it_up_sp,0100DH,45, 081bH
- SX	layup_sp,    0100DH,41, 081cH
- SX	he_layup_sp, 0100DH,58, 081eH
- SX	drv_layup_sp,0100DH,61, 0b19H
+ SX	fingr_rol_sp,0100DH,46, 080eH	;"Finger rolling"
+ SX	figr_itin_sp,0100DH,90, 0901H	;"Finger rolls it in"
+ SX	fingr_rl2_sp,0100DH,46, 080eH	;"Finger roll"
+ SX	lay_it_up_sp,0100DH,45, 081bH	;"Lays it up"
+ SX	layup_sp,    0100DH,41, 081cH	;"With a layup"
+ SX	he_layup_sp, 0100DH,58, 081eH	;"He lays is up"
+ SX	drv_layup_sp,0100DH,61, 0b19H	;"A driving layup"
 
- SX	whyyyy_sp,   0100DH,41, 0ae3H
- SX	blowout_sp,  0100DH,85, 0859H		;it's a blowout
- SX	whoomp_sp,   0100DH,72, 085aH		;Whoomp, there it is
+ SX	whyyyy_sp,   0100DH,41, 0ae3H	;"Why??"
+ SX	blowout_sp,  0100DH,85, 0859H	;"It's a blowout"
+ SX	whoomp_sp,   0100DH,72, 085aH	;"Whoomp, there it is!"
 ;DJT Start
- SX	debacle_sp,  0100DH,66, 0a92H
- SX	its_hstry_sp,0100DH,47, 085fH
- SX	strike_up_sp,0100DH,122,0b4dH
+ SX	debacle_sp,  0100DH,66, 0a92H	;"What a debacle"
+ SX	its_hstry_sp,0100DH,47, 085fH	;"This game is history"
+ SX	strike_up_sp,0100DH,122,0b4dH	;"Strike up the band, it's almost over!"
 ;DJT End
- SX	fnl_strw_sp, 0100DH,90, 0b4eH
- SX	fat_sing_sp, 0100DH,115,0858H
- SX	needshot_sp, 0100DH,72, 0ab2H
- SX	run_out_sp,  0100DH,55, 0876H
+ SX	fnl_strw_sp, 0100DH,90, 0b4eH	;"There's the final straw!"
+ SX	fat_sing_sp, 0100DH,115,0858H	;"The fat lady is singing!"
+ SX	needshot_sp, 0100DH,72, 0ab2H	;"They need a shot here!"
+ SX	run_out_sp,  0100DH,55, 0876H	;"Time running out"
 ;DJT Start
- SX	just_secs_sp,0100DH,84, 0ab3H		;AMM
+ SX	just_secs_sp,0100DH,84, 0ab3H	;"Just seconds left!"
 ;DJT End
 
- SX	passes_sp,   0070DH,33, 09f4H
- SX	he_passes_sp,0070DH,43, 09f6H
- SX	a_pass_sp,   0070DH,33, 09fbH
- SX	tosses_it_sp,0070DH,39, 09fcH
- SX	guns_it_sp,  0070DH,43, 0a13H
+ SX	passes_sp,   0070DH,33, 09f4H	;"Passes"
+ SX	he_passes_sp,0070DH,43, 09f6H	;"He passes it"
+ SX	a_pass_sp,   0070DH,33, 09fbH	;"Pass"
+ SX	tosses_it_sp,0070DH,39, 09fcH	;"Tosses it"
+ SX	guns_it_sp,  0070DH,43, 0a13H	;"He guns it"
 
- SX	cros_crt_sp, 0070DH,37, 0a16H
- SX	downcourt_sp,0070DH,37, 0a0aH		;down court
+ SX	cros_crt_sp, 0070DH,37, 0a16H	;"Cross court"
+ SX	downcourt_sp,0070DH,37, 0a0aH	;"Down court"
 ;DJT Start
- SX	downcrt2_sp, 0070DH,39, 0a1eH
- SX	lngpss_dc_sp,0070DH,84, 0a0bH
+ SX	downcrt2_sp, 0070DH,39, 0a1eH	;"Down court"
+ SX	lngpss_dc_sp,0070DH,84, 0a0bH	;"Long pass down court"
 ;DJT End
- SX	hev_dncrt_sp,0070DH,69, 0a1dH
- SX	bnce_pass_sp,0070DH,41, 0a20H
- SX	dumps_it_sp, 0070DH,27, 09feH
- SX	long_pass_sp,0070DH,85, 0a0bH		;long pass down court
- SX	pas_outsd_sp,0070DH,58, 09f8H
+ SX	hev_dncrt_sp,0070DH,69, 0a1dH	;"Heaves it down court"
+ SX	bnce_pass_sp,0070DH,41, 0a20H	;"Bounce pass"
+ SX	dumps_it_sp, 0070DH,27, 09feH	;"Dumps it"
+ SX	long_pass_sp,0070DH,85, 0a0bH	;"Long pass down court"
+ SX	pas_outsd_sp,0070DH,58, 09f8H	;"A pass outside"
 
- SX	goal_tend_sp,0120DH,47, 0a4bH	;SUX
+ SX	goal_tend_sp,0120DH,47, 0a4bH	;"Goal tending"
 
- SX	rebounds_sp, 0100DH,60, 0af3H
- SX	tks_rbnd2_sp,0100DH,73, 0a4fH
+ SX	rebounds_sp, 0100DH,60, 0af3H	;"Rebounds"
+ SX	tks_rbnd2_sp,0100DH,73, 0a4fH	;"Takes it off the glass"
 ;DJT Start
- SX	tks_rbnd3_sp,0100DH,96, 0a5bH
+ SX	tks_rbnd3_sp,0100DH,96, 0a5bH	;"He pulls one off the rim"
 ;DJT End
- SX	grab_rock_sp,0100DH,61, 0a52H
- SX	has_rebnd_sp,0100DH,64, 0a55H
- SX	grab_ball_sp,0100DH,64, 0a56H
- SX	tks_rebnd_sp,0100DH,81, 0a57H
- SX	posession_sp,0100DH,57, 0a58H
- SX	off_rebnd_sp,0100DH,89, 0a5aH
- SX	pulls_off_sp,0100DH,87, 0a5bH
- SX	with_bord_sp,0100DH,77, 0a5cH
- SX	grbs_rbnd_sp,0100DH,80, 0a5dH
- SX	ynk_rim_sp,  0100DH,80, 0a5fH
- SX	da_rebnd_sp, 0100DH,45, 0a60H
- SX	rip_rebnd_sp,0100DH,87, 0a50H
- SX	rbnd_miss_sp,0100DH,97, 0a64H
+ SX	grab_rock_sp,0100DH,61, 0a52H	;"Grabs the rock"
+ SX	has_rebnd_sp,0100DH,64, 0a55H	;"Has the rebound"
+ SX	grab_ball_sp,0100DH,64, 0a56H	;"Grabs the ball"
+ SX	tks_rebnd_sp,0100DH,81, 0a57H	;"Takes the rebound"
+ SX	posession_sp,0100DH,57, 0a58H	;"Has posession"
+ SX	off_rebnd_sp,0100DH,89, 0a5aH	;"Offensive rebound"
+ SX	pulls_off_sp,0100DH,87, 0a5bH	;"He pulls one off the rim"
+ SX	with_bord_sp,0100DH,77, 0a5cH	;"He comes up with the board"
+ SX	grbs_rbnd_sp,0100DH,80, 0a5dH	;"He grabs the rebound"
+ SX	ynk_rim_sp,  0100DH,80, 0a5fH	;"He yanks it off the rim"
+ SX	da_rebnd_sp, 0100DH,45, 0a60H	;"Rebound!"
+ SX	rip_rebnd_sp,0100DH,87, 0a50H	;"Rips down the rebound"
+ SX	rbnd_miss_sp,0100DH,97, 0a64H	;"Rebound missed!"
 
- SX	its_blckd_sp,0130DH,47, 0a66H
- SX	outa_here_sp,0130DH,63, 0a67H
- SX	blckd_it_sp, 0130DH,29, 0a68H
- SX	no_way_sp,   0130DH,47, 0a69H
- SX	rejected_sp, 0130DH,46, 0a6aH
- SX	deflected_sp,0130DH,38, 0a6cH
+ SX	its_blckd_sp,0130DH,47, 0a66H	;"Get that shit outta here!"
+ SX	outa_here_sp,0130DH,63, 0a67H	;"Get that outta here!"
+ SX	blckd_it_sp, 0130DH,29, 0a68H	;"Blocked it"
+ SX	no_way_sp,   0130DH,47, 0a69H	;"No way!"
+ SX	rejected_sp, 0130DH,46, 0a6aH	;"Rejected"
+ SX	deflected_sp,0130DH,38, 0a6cH	;"Deflected"
 ;DJT look_out_sp line moved
 
- SX	stolen_sp,   0130DH,35, 0a72H
- SX	the_steal_sp,0130DH,39, 0a73H
- SX	turnover_sp, 0130DH,48, 0a75H
- SX	trnd_over_sp,0130DH,61, 0a76H
- SX	quck_hnds_sp,0130DH,46, 0a79H
- SX	intrceptd_sp,0130DH,48, 0a7fH
- SX	stripped_sp, 0130DH,29, 0a84H
- SX	clean_pck_sp,0130DH,48, 0a83H
- SX	bad_pass_sp, 0130DH,56, 0a82H
+ SX	stolen_sp,   0130DH,35, 0a72H	;"Stolen!"
+ SX	the_steal_sp,0130DH,39, 0a73H	;"The steal!"
+ SX	turnover_sp, 0130DH,48, 0a75H	;"The turnover!"
+ SX	trnd_over_sp,0130DH,61, 0a76H	;"He turned it over!"
+ SX	quck_hnds_sp,0130DH,46, 0a79H	;"Quick hands!"
+ SX	intrceptd_sp,0130DH,48, 0a7fH	;"Intercepted!"
+ SX	stripped_sp, 0130DH,29, 0a84H	;"Stripped!"
+ SX	clean_pck_sp,0130DH,48, 0a83H	;"Clean pick!"
+ SX	bad_pass_sp, 0130DH,56, 0a82H	;"Bad pass!"
 
- SX	flagrant_sp, 0090DH,37, 0abbH
- SX	to_floor_sp, 0090DH,43, 0ac6H
- SX	to_deck_sp,  0090DH,37, 0ac7H
+ SX	flagrant_sp, 0090DH,37, 0abbH	;"Flagrant!"
+ SX	to_floor_sp, 0090DH,43, 0ac6H	;"Pushed to the floor!"
+ SX	to_deck_sp,  0090DH,37, 0ac7H	;"Knocked to the deck!"
 ;DJT Start
 ; SX	shvd_asde_sp,0090DH,67, 0acaH
 ;DJT End
- SX	tookm_out_sp,0090DH,48, 0abeH
- SX	hamerd_hm_sp,0090DH,35, 0ad1H
- SX	into_stnd_sp,0050DH,96, 0ac4H
+ SX	tookm_out_sp,0090DH,48, 0abeH	;"Took him out!"
+ SX	hamerd_hm_sp,0090DH,35, 0ad1H	;"Hammered him!"
+ SX	into_stnd_sp,0050DH,96, 0ac4H	;"Into the stands!"
 ;AMM More unused sounds here:
 ; 0ae7 'a three sixty' 360
- SX	fr_basel_sp, 0100DH,41, 0a29H ;Unused - From the baseline
- SX	fr_base2_sp, 0100DH,61, 0a2aH ;Unused - From the baseline - longer
- SX	grtmove_sp,  0100DH,41, 0a3aH ;Unused - Great move!
- SX	tm_onfire_sp,0140DH,76, 0b3eH ;Unused - The Team is on fire!
- SX	zigzag_sp,   0100DH,75, 095ch ;AMM - unused "zigzag!"
- SX	jams_it2_sp, 0100DH,65, 0986H		;AMM Unused "jams it with two hands"
- SX	intzone_sp,  0100DH,61, 0915H		;AMM - "In the zone!"
- SX	wit_a_flr_sp,0100DH,60, 099cH		;AMM Unused "with a flourish"
- SX	wit_a_fl2_sp,0100DH,65, 099bH		;AMM Unused "finishes with a flourish"
+;Below is mostly unused.
+ SX	treesixty_sp,0100DH,41, 0ae7H	;"A threesixty!"
+ SX	fr_basel_sp, 0100DH,41, 0a29H	;"From the baseline"
+ SX	fr_base2_sp, 0100DH,61, 0a2aH	;"From the base line"
+ SX	grtmove_sp,  0100DH,41, 0a3aH	;"Great move!"
+ SX	tm_onfire_sp,0140DH,76, 0b3eH	;"The Team is on fire!"
+ SX	zigzag_sp,   0100DH,75, 095cH	;"Zig Zag!"
+ SX	jams_it2_sp, 0100DH,65, 0986H	;"Jams it with two hands"
+ SX	intzone_sp,  0100DH,61, 0915H	;"In the zone!"
+ SX	wit_a_flr_sp,0100DH,60, 099cH	;"With a flourish"
+ SX	wit_a_fl2_sp,0100DH,65, 099bH	;"Finishes with a flourish"
 
  
 
-
- SX	nick_nme1,   0100DH,23, 0760H
- SX	nick_nme2,   0100DH,23, 08c6H
- SX	nick_nme3,   0100DH,35, 0758H
- SX	nick_nme4,   0100DH,25, 0774H
- SX	nick_nme5,   0100DH,36, 0784H
- SX	nick_nme6,   0100DH,20, 075cH
- SX	nick_nme7,   0100DH,24, 075eH
- SX	nick_nme8,   0100DH,37, 08ccH
- SX	nick_nme9,   0100DH,25, 08d8H
- SX	nick_nme10,  0100DH,24, 078eH
- SX	nick_nme11,  0100DH,32, 08b8H
- SX	nick_nme12,  0100DH,37, 0766H
- SX	nick_nme13,  0100DH,25, 08d4H
- SX	nick_nme14,  0100DH,46, 08bcH
- SX	nick_nme15,  0100DH,20, 0768H
- SX	nick_nme16,  0100DH,37, 0796H
- SX	nick_nme17,  0100DH,25, 076aH
- SX	nick_nme18,  0100DH,31, 076cH
- SX	nick_nme19,  0100DH,27, 076eH
- SX	nick_nme20,  0100DH,20, 0798H
- SX	nick_nme21,  0100DH,36, 079aH
- SX	nick_nme22,  0100DH,40, 0776H
- SX	nick_nme23,  0100DH,46, 08beH
- SX	nick_nme24,  0100DH,31, 08caH
+;Player custom nicknames
+ SX	nick_nme1,   0100DH,23, 0760H	;"Ace"
+ SX	nick_nme2,   0100DH,23, 08c6H	;"Bertha"
+ SX	nick_nme3,   0100DH,35, 0758H	;"Big Daddy"
+ SX	nick_nme4,   0100DH,25, 0774H	;"Bigfoot"
+ SX	nick_nme5,   0100DH,36, 0784H	;"Boogeyman"
+ SX	nick_nme6,   0100DH,20, 075cH	;"Bubba"
+ SX	nick_nme7,   0100DH,24, 075eH	;"Chilly"
+ SX	nick_nme8,   0100DH,37, 08ccH	;"Cornelius"
+ SX	nick_nme9,   0100DH,25, 08d8H	;"Kookoo"
+ SX	nick_nme10,  0100DH,24, 078eH	;"Dingbat"
+ SX	nick_nme11,  0100DH,32, 08b8H	;"Fat boy"
+ SX	nick_nme12,  0100DH,37, 0766H	;"Flash"
+ SX	nick_nme13,  0100DH,25, 08d4H	;"Frankie"
+ SX	nick_nme14,  0100DH,46, 08bcH	;"Frankencow"
+ SX	nick_nme15,  0100DH,20, 0768H	;"Gator"
+ SX	nick_nme16,  0100DH,37, 0796H	;"Grandpa"
+ SX	nick_nme17,  0100DH,25, 076aH	;"Hammer"
+ SX	nick_nme18,  0100DH,31, 076cH	;"Hawkeye"
+ SX	nick_nme19,  0100DH,27, 076eH	;"Homeboy"
+ SX	nick_nme20,  0100DH,20, 0798H	;"Joker"
+ SX	nick_nme21,  0100DH,36, 079aH	;"Loverboy"
+ SX	nick_nme22,  0100DH,40, 0776H	;"Mad Dog"
+ SX	nick_nme23,  0100DH,46, 08beH	;"Large Marge"
+ SX	nick_nme24,  0100DH,31, 08caH	;"Merlin"
 ; SX	nick_nme25,  0100DH,28, 08c0H
- SX	nick_nme26,  0100DH,28, 08ceH
- SX	nick_nme27,  0100DH,32, 077cH
- SX	nick_nme28,  0100DH,28, 077eH
- SX	nick_nme29,  0100DH,21, 0780H
- SX	nick_nme30,  0100DH,31, 0782H
- SX	nick_nme31,  0100DH,27, 0786H
- SX	nick_nme32,  0100DH,24, 0788H
- SX	nick_nme33,  0100DH,29, 078aH
- SX	nick_nme34,  0100DH,36, 078cH
- SX	nick_nme35,  0100DH,21, 0790H
- SX	nick_nme36,  0100DH,23, 0792H
+ SX	nick_nme26,  0100DH,28, 08ceH	;"Pongo"
+ SX	nick_nme27,  0100DH,32, 077cH	;"Shadow"
+ SX	nick_nme28,  0100DH,28, 077eH	;"Slim"
+ SX	nick_nme29,  0100DH,21, 0780H	;"Snake"
+ SX	nick_nme30,  0100DH,31, 0782H	;"Spanky"
+ SX	nick_nme31,  0100DH,27, 0786H	;"Spider"
+ SX	nick_nme32,  0100DH,24, 0788H	;"Spike"
+ SX	nick_nme33,  0100DH,29, 078aH	;"Top Gun"
+ SX	nick_nme34,  0100DH,36, 078cH	;"T. Rex"
+ SX	nick_nme35,  0100DH,21, 0790H	;"Viper"
+ SX	nick_nme36,  0100DH,23, 0792H	;"Zippy"
 
- SX	to_nck_nme1, 0100DH,60, 0761H
- SX	to_nck_nme2, 0100DH,60, 08c7H
- SX	to_nck_nme3, 0100DH,60, 0759H
- SX	to_nck_nme4, 0100DH,60, 0775H
- SX	to_nck_nme5, 0100DH,60, 0785H
- SX	to_nck_nme6, 0100DH,60, 075dH
- SX	to_nck_nme7, 0100DH,60, 075fH
- SX	to_nck_nme8, 0100DH,60, 08cdH
- SX	to_nck_nme9, 0100DH,60, 08d9H
- SX	to_nck_nme10,0100DH,60, 078fH
- SX	to_nck_nme11,0100DH,60, 08b9H
- SX	to_nck_nme12,0100DH,60, 0767H
- SX	to_nck_nme13,0100DH,60, 08d5H
- SX	to_nck_nme14,0100DH,60, 08bdH
- SX	to_nck_nme15,0100DH,60, 0769H
- SX	to_nck_nme16,0100DH,60, 0797H
- SX	to_nck_nme17,0100DH,60, 076bH
- SX	to_nck_nme18,0100DH,60, 076dH
- SX	to_nck_nme19,0100DH,60, 076fH
- SX	to_nck_nme20,0100DH,60, 0799H
- SX	to_nck_nme21,0100DH,60, 079bH
- SX	to_nck_nme22,0100DH,60, 0777H
- SX	to_nck_nme23,0100DH,60, 08bfH
- SX	to_nck_nme24,0100DH,60, 08cbH
+ SX	to_nck_nme1, 0100DH,60, 0761H	;"To Ace"
+ SX	to_nck_nme2, 0100DH,60, 08c7H	;"To Bertha"
+ SX	to_nck_nme3, 0100DH,60, 0759H	;"To Big Daddy"
+ SX	to_nck_nme4, 0100DH,60, 0775H	;"To Bigfoot"
+ SX	to_nck_nme5, 0100DH,60, 0785H	;"To Boogeyman"
+ SX	to_nck_nme6, 0100DH,60, 075dH	;"To Bubba"
+ SX	to_nck_nme7, 0100DH,60, 075fH	;"To Chilly"
+ SX	to_nck_nme8, 0100DH,60, 08cdH	;"To Cornelius"
+ SX	to_nck_nme9, 0100DH,60, 08d9H	;"To Kookoo
+ SX	to_nck_nme10,0100DH,60, 078fH	;"To Dingbat
+ SX	to_nck_nme11,0100DH,60, 08b9H	;"To Fat boy"
+ SX	to_nck_nme12,0100DH,60, 0767H	;"To Flash"
+ SX	to_nck_nme13,0100DH,60, 08d5H	;"To Frankie"
+ SX	to_nck_nme14,0100DH,60, 08bdH	;"To Frankencow"
+ SX	to_nck_nme15,0100DH,60, 0769H	;"To Gator
+ SX	to_nck_nme16,0100DH,60, 0797H	;"To Grandpa"
+ SX	to_nck_nme17,0100DH,60, 076bH	;"To Hammer"
+ SX	to_nck_nme18,0100DH,60, 076dH	;"To Hawkeye"
+ SX	to_nck_nme19,0100DH,60, 076fH	;"To Homeboy"
+ SX	to_nck_nme20,0100DH,60, 0799H	;"To Joker"
+ SX	to_nck_nme21,0100DH,60, 079bH	;"To Loverboy"
+ SX	to_nck_nme22,0100DH,60, 0777H	;"To Mad Dog"
+ SX	to_nck_nme23,0100DH,60, 08bfH	;"To Large Marge"
+ SX	to_nck_nme24,0100DH,60, 08cbH	;"To Merlin"
 ; SX	to_nck_nme25,0100DH,60, 08c1H
- SX	to_nck_nme26,0100DH,60, 08cfH
- SX	to_nck_nme27,0100DH,60, 077dH
- SX	to_nck_nme28,0100DH,60, 077fH
- SX	to_nck_nme29,0100DH,60, 0781H
- SX	to_nck_nme30,0100DH,60, 0783H
- SX	to_nck_nme31,0100DH,60, 0787H
- SX	to_nck_nme32,0100DH,60, 0789H
- SX	to_nck_nme33,0100DH,60, 078bH
- SX	to_nck_nme34,0100DH,60, 078dH
- SX	to_nck_nme35,0100DH,60, 0791H
- SX	to_nck_nme36,0100DH,60, 0793H
+ SX	to_nck_nme26,0100DH,60, 08cfH	;"To Pongo"
+ SX	to_nck_nme27,0100DH,60, 077dH	;"To Shadow"
+ SX	to_nck_nme28,0100DH,60, 077fH	;"To Slim"
+ SX	to_nck_nme29,0100DH,60, 0781H	;"To Snake"
+ SX	to_nck_nme30,0100DH,60, 0783H	;"To Spanky"
+ SX	to_nck_nme31,0100DH,60, 0787H	;"To Spider"
+ SX	to_nck_nme32,0100DH,60, 0789H	;"To Spike"
+ SX	to_nck_nme33,0100DH,60, 078bH	;"To Top Gun"
+ SX	to_nck_nme34,0100DH,60, 078dH	;"To T. Rex"
+ SX	to_nck_nme35,0100DH,60, 0791H	;"To Viper"
+ SX	to_nck_nme36,0100DH,60, 0793H	;"To Zippy"
 
 ;
 ; Speech scripts
@@ -2814,28 +2808,16 @@ jkaialleyoop_jam
 
 
 jkaialleyoop_tab
-;	.long	alley_oop_sp
-;	.long	bomshakalaka
-;	.long	thr_tmwrk_sp
-;	.long	alley_oop_sp
-;	.long	thr_smkn_sp
-;	.long	alley_oop_sp
-;	.long	nicly_dne_sp
-;	.long	alley_oop_sp
+	.long	alley_oop_sp
+	.long	bomshakalaka
+	.long	thr_tmwrk_sp
+	.long	alley_oop_sp
+	.long	thr_smkn_sp
+	.long	alley_oop_sp
+	.long	nicly_dne_sp
+	.long	alley_oop_sp
 ;	.long	thr_zone_sp
 ;	.long	whta_show_sp
-
-	.long	alley_oop_sp
-	.long	alleyoop2_sp
-	.long	alleyoop3_sp
-	.long	alleyoop4_sp
-	.long	alleyoop6_sp
-	.long	alleyoop7_sp
-	.long	alleyoop8_sp
-	.long	alleyoop2_sp
-	.long	alleyoop7_sp
-	.long	alleyoop3_sp
-
 
 
 ****************
